@@ -1,0 +1,32 @@
+# ARC 3133 — Architectural Visualization Methods 1
+# Built on P2PU Course in a Box
+
+baseurl:
+markdown: kramdown
+permalink: /:categories/:title/
+
+exclude: [Gemfile, Gemfile.lock, README.md]
+
+defaults:
+  -
+    scope:
+      path: "modules"
+    values:
+      layout: "course_page"
+
+prose:
+  media: img
+  ignore:
+    - /_includes
+    - /_layouts
+    - /_sass
+    - /fonts
+    - /js
+    - /css
+
+# neobrutalist palette — matches the class decks
+jumbotron_color: "#0E0E0E"
+jumbotron_background_image:
+jumbotron_image:
+
+theme: jekyll-theme-minimal

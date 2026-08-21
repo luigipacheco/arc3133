@@ -1,0 +1,393 @@
+// ============================================================
+//  NEOBRUTALIST OVERRIDES  —  ARC 3133
+//  Loaded last. Everything above this is P2PU / Bootstrap.
+//  Hard edges, thick black rules, offset solid shadows.
+//  No gradients, no blur, no rounded corners.
+// ============================================================
+
+$nb-ink:    #000000;
+$nb-paper:  #FFFDF7;
+$nb-yellow: #FFE500;
+$nb-pink:   #FF4D8D;
+$nb-cyan:   #00D9E1;
+$nb-lime:   #C6F035;
+$nb-grey:   #6B6B6B;
+$nb-line:   #E2E2DA;
+
+$nb-head: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$nb-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$nb-mono: "Courier New", Courier, monospace;
+
+$nb-border: 2.5px;
+$nb-offset: 5px;
+
+@mixin nb-block($fill: $nb-paper, $shadow: $nb-ink) {
+  background: $fill;
+  border: $nb-border solid $nb-ink;
+  border-radius: 0 !important;
+  box-shadow: $nb-offset $nb-offset 0 0 $shadow;
+}
+
+// ---------- reset the softness out of bootstrap ----------
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+  text-shadow: none !important;
+}
+
+body {
+  background: $nb-paper;
+  color: $nb-ink;
+  font-family: $nb-body;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+// ---------- type ----------
+h1, h2, h3, h4, h5, h6 {
+  font-family: $nb-head;
+  font-weight: 700;
+  color: $nb-ink;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.6em; text-transform: uppercase; }
+
+h2 {
+  font-size: 1.7em;
+  text-transform: uppercase;
+  border-top: 4px solid $nb-ink;
+  padding-top: 0.45em;
+  margin-top: 2.2em;
+}
+
+h3 { font-size: 1.25em; margin-top: 1.8em; }
+h4 { font-size: 1.05em; text-transform: uppercase; letter-spacing: 0.04em; }
+
+p { margin-bottom: 1.1em; }
+
+a {
+  color: $nb-ink;
+  text-decoration: none;
+  border-bottom: 2px solid $nb-pink;
+  transition: none;
+
+  &:hover,
+  &:focus {
+    background: $nb-yellow;
+    color: $nb-ink;
+    border-bottom-color: $nb-ink;
+    text-decoration: none;
+  }
+}
+
+strong { font-weight: 700; }
+
+hr {
+  border: 0;
+  border-top: 3px solid $nb-ink;
+  margin: 2.2em 0;
+}
+
+// ---------- blockquote: the pull-quote treatment ----------
+blockquote {
+  @include nb-block($nb-yellow, $nb-ink);
+  padding: 1.1em 1.3em;
+  margin: 1.8em 0;
+  font-size: 1.15em;
+  font-weight: 700;
+  font-family: $nb-head;
+  line-height: 1.4;
+  color: $nb-ink;
+
+  p { margin: 0; }
+  p:last-child { margin: 0; }
+}
+
+// ---------- code ----------
+code {
+  font-family: $nb-mono;
+  background: $nb-lime;
+  color: $nb-ink;
+  border: 1.5px solid $nb-ink;
+  padding: 0.05em 0.35em;
+  font-size: 0.9em;
+}
+
+pre {
+  @include nb-block(#F4F4EE, $nb-cyan);
+  font-family: $nb-mono;
+  font-size: 0.86em;
+  line-height: 1.55;
+  padding: 1.1em 1.2em;
+  margin: 1.6em 0;
+  color: $nb-ink;
+  overflow-x: auto;
+
+  code {
+    background: none;
+    border: 0;
+    padding: 0;
+    font-size: 1em;
+  }
+}
+
+// ---------- tables: the workhorse element on this site ----------
+table {
+  width: 100%;
+  margin: 1.8em 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: $nb-border solid $nb-ink;
+  box-shadow: $nb-offset $nb-offset 0 0 $nb-ink;
+  background: $nb-paper;
+  font-size: 0.93em;
+
+  th {
+    background: $nb-cyan;
+    color: $nb-ink;
+    font-family: $nb-head;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.82em;
+    letter-spacing: 0.06em;
+    padding: 0.7em 0.85em;
+    border-bottom: $nb-border solid $nb-ink;
+    text-align: left;
+  }
+
+  td {
+    padding: 0.65em 0.85em;
+    border-bottom: 1.5px solid $nb-line;
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: 0; }
+
+  // first column reads as a label
+  td:first-child { font-weight: 700; }
+
+  code { font-size: 0.88em; }
+}
+
+// ---------- lists ----------
+.content ul,
+.content ol {
+  padding-left: 1.3em;
+  margin-bottom: 1.3em;
+
+  li { margin-bottom: 0.42em; }
+}
+
+.content ul li::marker { color: $nb-pink; }
+
+// ---------- landing banner ----------
+.jumbotron {
+  background: $nb-ink !important;
+  background-image: none !important;
+  color: $nb-paper;
+  border-bottom: 5px solid $nb-yellow;
+  padding: 4.5em 0 3.8em;
+  margin-bottom: 0;
+
+  header h1 {
+    font-family: $nb-head;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    color: $nb-paper;
+    font-size: 3.4em;
+    line-height: 1.05;
+  }
+
+  a { color: $nb-yellow; border-bottom: 0; }
+}
+
+.jumbotron .btn,
+.btn-danger,
+.btn-primary,
+.btn-default {
+  @include nb-block($nb-yellow, $nb-paper);
+  color: $nb-ink !important;
+  font-family: $nb-head;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.9em;
+  padding: 0.75em 1.6em;
+  background-image: none;
+
+  &:hover,
+  &:focus {
+    background: $nb-cyan;
+    box-shadow: 2px 2px 0 0 $nb-paper;
+    transform: translate(3px, 3px);
+  }
+}
+
+// ---------- nav ----------
+.navbar,
+.navbar-default {
+  background: $nb-ink !important;
+  background-image: none !important;
+  border: 0;
+  border-bottom: 4px solid $nb-yellow;
+  border-radius: 0 !important;
+  margin-bottom: 0;
+  min-height: 0;
+
+  .navbar-nav > li > a {
+    color: $nb-paper !important;
+    font-family: $nb-head;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.82em;
+    padding: 1.15em 1.35em;
+    border-bottom: 0;
+
+    &:hover,
+    &:focus {
+      background: $nb-yellow !important;
+      color: $nb-ink !important;
+    }
+  }
+
+  .navbar-nav > li.active > a {
+    background: $nb-cyan !important;
+    color: $nb-ink !important;
+  }
+
+  .navbar-toggle { border: 2px solid $nb-paper; }
+  .navbar-toggle i { color: $nb-paper; }
+}
+
+// ---------- sidebar ----------
+.sidebar {
+  background: $nb-paper;
+  border-right: 3px solid $nb-ink;
+  padding-top: 2.2em;
+  padding-bottom: 2.2em;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2em;
+  }
+
+  li {
+    margin-bottom: 0.42em;
+
+    a {
+      display: block;
+      padding: 0.55em 0.8em;
+      border: 2px solid $nb-ink;
+      border-bottom: 2px solid $nb-ink;
+      background: $nb-paper;
+      font-family: $nb-head;
+      font-size: 0.83em;
+      font-weight: 700;
+      line-height: 1.3;
+      color: $nb-ink;
+      box-shadow: 3px 3px 0 0 $nb-ink;
+
+      &:hover {
+        background: $nb-yellow;
+        box-shadow: 1px 1px 0 0 $nb-ink;
+        transform: translate(2px, 2px);
+      }
+    }
+  }
+
+  li.active a {
+    background: $nb-cyan;
+    box-shadow: 3px 3px 0 0 $nb-pink;
+  }
+
+  .pagination-section .title {
+    font-family: $nb-head;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $nb-grey;
+    margin-bottom: 0.3em;
+  }
+}
+
+.background-white { background: $nb-paper; }
+
+// ---------- content column ----------
+.content {
+  padding-top: 2.4em;
+  padding-bottom: 3em;
+
+  > h1:first-child,
+  > h2:first-child {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  img {
+    max-width: 100%;
+    border: $nb-border solid $nb-ink;
+    box-shadow: $nb-offset $nb-offset 0 0 $nb-cyan;
+    margin: 1.4em 0;
+  }
+}
+
+// ---------- prev / next ----------
+.pagination-section {
+  margin: 1.6em 0;
+
+  .title {
+    font-family: $nb-head;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $nb-grey;
+  }
+
+  a {
+    display: inline-block;
+    @include nb-block($nb-lime, $nb-ink);
+    padding: 0.55em 1em;
+    font-family: $nb-head;
+    font-weight: 700;
+    font-size: 0.85em;
+    border-bottom: $nb-border solid $nb-ink;
+
+    &:hover {
+      background: $nb-yellow;
+      box-shadow: 2px 2px 0 0 $nb-ink;
+      transform: translate(3px, 3px);
+    }
+  }
+}
+
+// ---------- footer ----------
+.p2pu-footer {
+  background: $nb-ink;
+  border-top: 5px solid $nb-yellow;
+  color: $nb-paper;
+  padding: 2.4em 0;
+  margin-top: 0;
+
+  p { color: $nb-paper; font-size: 0.85em; }
+  a { color: $nb-yellow; border-bottom-color: $nb-yellow; }
+  a:hover { background: $nb-yellow; color: $nb-ink; }
+}
+
+// ---------- responsive ----------
+@media (max-width: 991px) {
+  .sidebar {
+    border-right: 0;
+    border-bottom: 3px solid $nb-ink;
+  }
+  .jumbotron header h1 { font-size: 2.2em; }
+  h1 { font-size: 1.9em; }
+  table { font-size: 0.85em; }
+}

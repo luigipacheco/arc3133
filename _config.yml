@@ -5,6 +5,9 @@ baseurl:
 markdown: kramdown
 permalink: /:categories/:title/
 
+sass:
+  sass_dir: _sass
+
 exclude: [Gemfile, Gemfile.lock, README.md]
 
 defaults:
@@ -28,5 +31,3 @@ prose:
 jumbotron_color: "#0E0E0E"
 jumbotron_background_image:
 jumbotron_image:
-
-theme: jekyll-theme-minimal

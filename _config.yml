@@ -8,7 +8,7 @@ permalink: /:categories/:title/
 sass:
   sass_dir: _sass
 
-exclude: [Gemfile, Gemfile.lock, README.md]
+exclude: [Gemfile, Gemfile.lock, README.md, syllabus, reference, code, slides/src]
 
 defaults:
   -

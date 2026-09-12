@@ -1,0 +1,134 @@
+{
+  "lesson": "fabrication",
+  "file": "C:\\Users\\luigi\\Documents\\arc3133\\files\\blender\\09-final-project\\Final-Project-Fabrication.blend",
+  "blender": "5.2.1 LTS",
+  "scenes": {
+    "01 - Print orientation": {
+      "vertices": 16,
+      "edges": 24,
+      "faces": 10,
+      "nonmanifold_edges": 0,
+      "volume": 26531.99515485787,
+      "bounds": [
+        [
+          -22.5,
+          22.5
+        ],
+        [
+          -17.999998092651367,
+          17.999998092651367
+        ],
+        [
+          0.0,
+          22.0
+        ]
+      ]
+    },
+    "02 - Fit coupon": {
+      "vertices": 212,
+      "edges": 324,
+      "faces": 108,
+      "nonmanifold_edges": 0,
+      "volume": 787.3295062246291,
+      "bounds": [
+        [
+          -12.0,
+          12.0
+        ],
+        [
+          -6.0,
+          6.0
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    },
+    "03 - Modular print": {
+      "vertices": 1056,
+      "edges": 1632,
+      "faces": 576,
+      "nonmanifold_edges": 0,
+      "volume": 9287.619369777269,
+      "bounds": [
+        [
+          -10.0,
+          65.5
+        ],
+        [
+          -10.0,
+          65.5
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    },
+    "04 - Registered sections": {
+      "vertices": 4622,
+      "edges": 9994,
+      "faces": 5348,
+      "nonmanifold_edges": 0,
+      "volume": 96452.00975203044,
+      "bounds": [
+        [
+          -35.499046325683594,
+          35.85226821899414
+        ],
+        [
+          -36.022098541259766,
+          35.89647674560547
+        ],
+        [
+          0.0,
+          69.0
+        ]
+      ]
+    },
+    "05 - Cutting layout": {
+      "vertices": 4622,
+      "edges": 9994,
+      "faces": 5348,
+      "nonmanifold_edges": 0,
+      "volume": 96452.01141656835,
+      "bounds": [
+        [
+          5.317268371582031,
+          314.6778869628906
+        ],
+        [
+          7.587955474853516,
+          232.67596435546875
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    },
+    "06 - Spacer rings": {
+      "vertices": 2816,
+      "edges": 4312,
+      "faces": 1496,
+      "nonmanifold_edges": 0,
+      "volume": 1293.2608899412444,
+      "bounds": [
+        [
+          12.0,
+          118.0
+        ],
+        [
+          262.0,
+          278.0
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ]
+    }
+  },
+  "complete": true
+}

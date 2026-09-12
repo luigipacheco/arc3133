@@ -1,0 +1,92 @@
+{
+  "lesson": "attractors",
+  "file": "C:\\Users\\luigi\\Documents\\arc3133\\files\\blender\\04-attractors\\Attractors.blend",
+  "blender": "5.2.1 LTS",
+  "scenes": {
+    "01 - Read the field": {
+      "vertices": 1681,
+      "edges": 3280,
+      "faces": 1600,
+      "nonmanifold_edges": 160,
+      "volume": 0.0,
+      "bounds": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "02 - One point": {
+      "vertices": 1445,
+      "edges": 2312,
+      "faces": 1445,
+      "nonmanifold_edges": 0,
+      "volume": 4.829407612605742,
+      "bounds": [
+        [
+          -4.0,
+          4.28000020980835
+        ],
+        [
+          -4.0,
+          4.28000020980835
+        ],
+        [
+          0.0,
+          2.0763750076293945
+        ]
+      ]
+    },
+    "03 - Multiple points": {
+      "vertices": 1445,
+      "edges": 2312,
+      "faces": 1445,
+      "nonmanifold_edges": 0,
+      "volume": 8.25129851781805,
+      "bounds": [
+        [
+          -4.0,
+          4.28000020980835
+        ],
+        [
+          -4.0,
+          4.28000020980835
+        ],
+        [
+          0.0,
+          2.0999999046325684
+        ]
+      ]
+    },
+    "04 - Curve attractor": {
+      "vertices": 1445,
+      "edges": 2312,
+      "faces": 1445,
+      "nonmanifold_edges": 0,
+      "volume": 9.504713574637575,
+      "bounds": [
+        [
+          -4.0,
+          4.28000020980835
+        ],
+        [
+          -4.0,
+          4.28000020980835
+        ],
+        [
+          0.0,
+          2.0999999046325684
+        ]
+      ]
+    }
+  },
+  "complete": true
+}

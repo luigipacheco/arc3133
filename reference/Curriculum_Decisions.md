@@ -11,7 +11,7 @@
 - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
-- Establish one source of curriculum information before preparing the remaining Blender class files.
+- Maintain one source of curriculum information and a separate Blender file for each teaching session.
 - Start with short assignments that build into four projects: geometry, arrays/attractors, tessellation/lattices, and point clouds/volumes/sections.
 
 ### Working proposals

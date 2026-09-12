@@ -1,0 +1,455 @@
+[
+  {
+    "session": "S01",
+    "file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
+    "scenes": {
+      "01 - Start": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "closed": true
+      },
+      "02 - Translation": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "closed": true
+      },
+      "03 - Rotation": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "closed": true
+      },
+      "04 - Scale": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "closed": true
+      },
+      "05 - Order": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "closed": true
+      },
+      "06 - Union": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 174,
+        "edges": 261,
+        "faces": 89,
+        "closed": true
+      },
+      "07 - Difference": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 78,
+        "edges": 117,
+        "faces": 41,
+        "closed": true
+      },
+      "08 - Intersect": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 70,
+        "edges": 105,
+        "faces": 37,
+        "closed": true
+      },
+      "09 - Massing exercise": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 16,
+        "edges": 24,
+        "faces": 10,
+        "closed": true
+      }
+    },
+    "sha256": "f69e7918f1d16271c0b76375c62e0a652e34de2aa271b2621876f878d2679283",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S02",
+    "file": "files/blender/geometry101/GEOMETRY101-class-ready.blend",
+    "scenes": {
+      "01 - Point": {
+        "points": 1,
+        "curves": 0,
+        "vertices": 0,
+        "edges": 0,
+        "faces": 0
+      },
+      "02 - Line": {
+        "points": 0,
+        "curves": 1,
+        "vertices": 0,
+        "edges": 0,
+        "faces": 0
+      },
+      "03 - Edge": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 2,
+        "edges": 1,
+        "faces": 0
+      },
+      "04 - Face": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 3,
+        "edges": 3,
+        "faces": 1,
+        "closed": false
+      },
+      "05 - Solid": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 5,
+        "edges": 8,
+        "faces": 5,
+        "closed": true
+      },
+      "06 - Boolean": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 16,
+        "edges": 28,
+        "faces": 12,
+        "closed": true
+      }
+    },
+    "sha256": "c6cb88ed68b5de72908691be61a813203bec58a1c5cde434e29afbca0feb7b57",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S03",
+    "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
+    "scenes": {
+      "01 - Linear loop": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 40,
+        "edges": 64,
+        "faces": 40,
+        "closed": true
+      },
+      "02 - Nested grid": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 125,
+        "edges": 200,
+        "faces": 125,
+        "closed": true
+      }
+    },
+    "sha256": "e89ffd80394eacdf243f2e246575fadfbd574b7bf063914e443d4c21abc87bca",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S04",
+    "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+    "scenes": {
+      "03 - Hexagonal array": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 125,
+        "edges": 200,
+        "faces": 125,
+        "closed": true
+      },
+      "04 - Radial array": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 80,
+        "edges": 128,
+        "faces": 80,
+        "closed": true
+      },
+      "05 - If and range": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 605,
+        "edges": 968,
+        "faces": 605,
+        "closed": true
+      },
+      "06 - Sine curve": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 640,
+        "edges": 1272,
+        "faces": 634,
+        "closed": true
+      }
+    },
+    "sha256": "9f946b892e09478038ffeefb0795b1b34cb8494499c83151196d3fc6b3629d71",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S05",
+    "file": "files/blender/04-attractors/Attractors.blend",
+    "scenes": {
+      "01 - Read the field": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 1681,
+        "edges": 3280,
+        "faces": 1600,
+        "closed": false
+      },
+      "02 - One point": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 1445,
+        "edges": 2312,
+        "faces": 1445,
+        "closed": true
+      },
+      "03 - Multiple points": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 1445,
+        "edges": 2312,
+        "faces": 1445,
+        "closed": true
+      },
+      "04 - Curve attractor": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 1445,
+        "edges": 2312,
+        "faces": 1445,
+        "closed": true
+      }
+    },
+    "sha256": "595f8ad57572fadc1023ec1a89aea0715c566410c5cf5f63fca9562e309c368a",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S06",
+    "file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
+    "scenes": {
+      "01 - Tessellation": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 288,
+        "edges": 432,
+        "faces": 216,
+        "closed": true
+      },
+      "02 - Lattice": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 1680,
+        "edges": 2520,
+        "faces": 1050,
+        "closed": true
+      },
+      "03 - Attractor lattice": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 1680,
+        "edges": 2520,
+        "faces": 1050,
+        "closed": true
+      }
+    },
+    "sha256": "e5ad35a606c4366dd147f5606ae0c632c297d31a8ecd87f5b8df346fa3959ab5",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S07",
+    "file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
+    "scenes": {
+      "01 - Import points": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 21672,
+        "edges": 54180,
+        "faces": 36120,
+        "closed": true
+      },
+      "02 - Analyze points": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 11676,
+        "edges": 29190,
+        "faces": 19460,
+        "closed": true
+      },
+      "03 - Points to volume": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 9558,
+        "edges": 19092,
+        "faces": 9546,
+        "closed": true
+      }
+    },
+    "sha256": "224a5cfbfd08a61492964b1e6fb6bbe718ae25d4c322feae2b5f259fa5167ad0",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S08",
+    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
+    "scenes": {
+      "01 - Mesh to SDF": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 1712,
+        "edges": 3420,
+        "faces": 1710,
+        "closed": true
+      },
+      "02 - Signed distance": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 4784,
+        "edges": 9564,
+        "faces": 4782,
+        "closed": true
+      },
+      "03 - SDF Boolean": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 4664,
+        "edges": 9324,
+        "faces": 4662,
+        "closed": true
+      }
+    },
+    "sha256": "698606df7be6999d0d1217a05eee7f90aa08133759ae469b749df66eadc99704",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S09",
+    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
+    "scenes": {
+      "04 - Noise field": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 5030,
+        "edges": 10056,
+        "faces": 5028,
+        "closed": true
+      }
+    },
+    "sha256": "50744b4f708bf39e23d779c60330d58d61ffe460d69ced0edf8d61534e439e1d",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S10",
+    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
+    "scenes": {
+      "01 - One contour": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 1224,
+        "edges": 2448,
+        "faces": 1224,
+        "closed": true
+      },
+      "02 - Contour stack": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 10464,
+        "edges": 20928,
+        "faces": 10464,
+        "closed": true
+      }
+    },
+    "sha256": "0e9ac9b5010a72049bb7f7194a4703a1ff4d8b8d625b0237cf4330b941b1b91c",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S11",
+    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
+    "scenes": {
+      "03 - Section parts": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 2616,
+        "edges": 6486,
+        "faces": 3888,
+        "closed": true
+      },
+      "04 - Laid out parts": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 2616,
+        "edges": 6486,
+        "faces": 3888,
+        "closed": true
+      }
+    },
+    "sha256": "dc5f0edaec8bffc836c7439f6a2ddf7047d4d4cc20acc7e6b1a5759d7f3b5c40",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S12",
+    "file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
+    "scenes": {
+      "01 - Print orientation": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 16,
+        "edges": 24,
+        "faces": 10,
+        "closed": true
+      },
+      "02 - Fit coupon": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 212,
+        "edges": 324,
+        "faces": 108,
+        "closed": true
+      },
+      "03 - Modular print": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 1056,
+        "edges": 1632,
+        "faces": 576,
+        "closed": true
+      },
+      "04 - Registered sections": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 4622,
+        "edges": 9994,
+        "faces": 5348,
+        "closed": true
+      },
+      "05 - Cutting layout": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 4622,
+        "edges": 9994,
+        "faces": 5348,
+        "closed": true
+      },
+      "06 - Spacer rings": {
+        "points": 0,
+        "curves": 0,
+        "vertices": 2816,
+        "edges": 4312,
+        "faces": 1496,
+        "closed": true
+      }
+    },
+    "sha256": "25ec16d4744de9bd8e724d481d3855e58c40d33f79cdcda72c36bbee907534b2",
+    "fresh_open_verified": true
+  }
+]

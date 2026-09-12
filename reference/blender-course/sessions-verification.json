@@ -1,0 +1,338 @@
+[
+  {
+    "file": "files\\blender\\03-arrays-lists\\Arrays-Lists-Session-1.blend",
+    "session": 1,
+    "scenes": {
+      "01 - Linear loop": {
+        "vertices": 40,
+        "edges": 64,
+        "faces": 40,
+        "nonmanifold_edges": 0,
+        "volume": 0.14634670241514788,
+        "bounds": [
+          [
+            0.0,
+            5.880000114440918
+          ],
+          [
+            0.0,
+            0.2800000011920929
+          ],
+          [
+            0.0,
+            0.699999988079071
+          ]
+        ]
+      },
+      "02 - Nested grid": {
+        "vertices": 125,
+        "edges": 200,
+        "faces": 125,
+        "nonmanifold_edges": 0,
+        "volume": 0.4573332904974635,
+        "bounds": [
+          [
+            0.0,
+            3.4800000190734863
+          ],
+          [
+            0.0,
+            3.4800000190734863
+          ],
+          [
+            0.0,
+            0.699999988079071
+          ]
+        ]
+      }
+    },
+    "fresh_open_verified": true
+  },
+  {
+    "file": "files\\blender\\03-arrays-lists\\Arrays-Lists-Session-2.blend",
+    "session": 2,
+    "scenes": {
+      "03 - Hexagonal array": {
+        "vertices": 125,
+        "edges": 200,
+        "faces": 125,
+        "nonmanifold_edges": 0,
+        "volume": 0.45733326323827517,
+        "bounds": [
+          [
+            0.0,
+            3.880000114440918
+          ],
+          [
+            0.0,
+            3.051281213760376
+          ],
+          [
+            0.0,
+            0.699999988079071
+          ]
+        ]
+      },
+      "04 - Radial array": {
+        "vertices": 80,
+        "edges": 128,
+        "faces": 80,
+        "nonmanifold_edges": 0,
+        "volume": 0.29269327632268327,
+        "bounds": [
+          [
+            -3.0,
+            3.2799999713897705
+          ],
+          [
+            -3.0,
+            3.2799999713897705
+          ],
+          [
+            0.0,
+            0.699999988079071
+          ]
+        ]
+      },
+      "05 - If and range": {
+        "vertices": 605,
+        "edges": 968,
+        "faces": 605,
+        "nonmanifold_edges": 0,
+        "volume": 2.213493468694686,
+        "bounds": [
+          [
+            -4.0,
+            4.28000020980835
+          ],
+          [
+            -4.0,
+            4.28000020980835
+          ],
+          [
+            0.0,
+            2.200000047683716
+          ]
+        ]
+      },
+      "06 - Sine curve": {
+        "vertices": 640,
+        "edges": 1272,
+        "faces": 634,
+        "nonmanifold_edges": 0,
+        "volume": 0.04042255188527694,
+        "bounds": [
+          [
+            -0.029644250869750977,
+            7.929670810699463
+          ],
+          [
+            -0.03500000014901161,
+            0.03500000014901161
+          ],
+          [
+            -1.0339288711547852,
+            1.0348938703536987
+          ]
+        ]
+      }
+    },
+    "fresh_open_verified": true
+  },
+  {
+    "file": "files\\blender\\07-advanced-volumes\\Advanced-Volumes-Session-1.blend",
+    "session": 1,
+    "scenes": {
+      "01 - Mesh to SDF": {
+        "vertices": 1712,
+        "edges": 3420,
+        "faces": 1710,
+        "nonmanifold_edges": 0,
+        "volume": 7.6805306314175725,
+        "bounds": [
+          [
+            -1.2000001668930054,
+            1.2000001668930054
+          ],
+          [
+            -0.9000000953674316,
+            0.9000000953674316
+          ],
+          [
+            -0.9000000953674316,
+            0.9000000953674316
+          ]
+        ]
+      },
+      "02 - Signed distance": {
+        "vertices": 4784,
+        "edges": 9564,
+        "faces": 4782,
+        "nonmanifold_edges": 0,
+        "volume": 7.205817139936251,
+        "bounds": [
+          [
+            -1.2000000476837158,
+            1.2000000476837158
+          ],
+          [
+            -1.2000000476837158,
+            1.2000000476837158
+          ],
+          [
+            -1.2000000476837158,
+            1.2000000476837158
+          ]
+        ]
+      },
+      "03 - SDF Boolean": {
+        "vertices": 4664,
+        "edges": 9324,
+        "faces": 4662,
+        "nonmanifold_edges": 0,
+        "volume": 4.7334199197721425,
+        "bounds": [
+          [
+            -1.3000000715255737,
+            1.3000000715255737
+          ],
+          [
+            -0.9000000953674316,
+            0.9000000953674316
+          ],
+          [
+            -0.9000000953674316,
+            0.9000000953674316
+          ]
+        ]
+      }
+    },
+    "fresh_open_verified": true
+  },
+  {
+    "file": "files\\blender\\07-advanced-volumes\\Advanced-Volumes-Session-2.blend",
+    "session": 2,
+    "scenes": {
+      "04 - Noise field": {
+        "vertices": 5030,
+        "edges": 10056,
+        "faces": 5028,
+        "nonmanifold_edges": 0,
+        "volume": 7.22305441761552,
+        "bounds": [
+          [
+            -1.2032488584518433,
+            1.2081639766693115
+          ],
+          [
+            -1.223108172416687,
+            1.2153123617172241
+          ],
+          [
+            -1.226717233657837,
+            1.222916603088379
+          ]
+        ]
+      }
+    },
+    "fresh_open_verified": true
+  },
+  {
+    "file": "files\\blender\\08-discretizing-geometry\\Discretizing-Geometry-Session-1.blend",
+    "session": 1,
+    "scenes": {
+      "01 - One contour": {
+        "vertices": 1224,
+        "edges": 2448,
+        "faces": 1224,
+        "nonmanifold_edges": 0,
+        "volume": 0.003078021488523165,
+        "bounds": [
+          [
+            -1.1916613578796387,
+            1.2137759923934937
+          ],
+          [
+            -1.2268338203430176,
+            1.218445897102356
+          ],
+          [
+            -0.012000000104308128,
+            0.012000000104308128
+          ]
+        ]
+      },
+      "02 - Contour stack": {
+        "vertices": 10464,
+        "edges": 20928,
+        "faces": 10464,
+        "nonmanifold_edges": 0,
+        "volume": 0.02430739988078143,
+        "bounds": [
+          [
+            -1.1916613578796387,
+            1.2137759923934937
+          ],
+          [
+            -1.2268338203430176,
+            1.2187360525131226
+          ],
+          [
+            -0.892000138759613,
+            0.892000138759613
+          ]
+        ]
+      }
+    },
+    "fresh_open_verified": true
+  },
+  {
+    "file": "files\\blender\\08-discretizing-geometry\\Discretizing-Geometry-Session-2.blend",
+    "session": 2,
+    "scenes": {
+      "03 - Section parts": {
+        "vertices": 2616,
+        "edges": 6486,
+        "faces": 3888,
+        "nonmanifold_edges": 0,
+        "volume": 1.8802715555940674,
+        "bounds": [
+          [
+            -1.1796643733978271,
+            1.2017793655395508
+          ],
+          [
+            -1.2148566246032715,
+            1.2068043947219849
+          ],
+          [
+            -0.8799999952316284,
+            0.9399999976158142
+          ]
+        ]
+      },
+      "04 - Laid out parts": {
+        "vertices": 2616,
+        "edges": 6486,
+        "faces": 3888,
+        "nonmanifold_edges": 0,
+        "volume": 1.8802714603243156,
+        "bounds": [
+          [
+            -1.16346275806427,
+            6.768270969390869
+          ],
+          [
+            -1.1010663509368896,
+            6.7344818115234375
+          ],
+          [
+            0.0,
+            0.05999999865889549
+          ]
+        ]
+      }
+    },
+    "fresh_open_verified": true
+  }
+]

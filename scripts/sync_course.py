@@ -83,6 +83,7 @@ class Course:
             assert all(u in self.units for u in p["units"])
         for u in self.units.values():
             assert all(isinstance(x, str) for x in u['steps']), f"Invalid step in {u['id']}"
+            assert isinstance(u.get("pseudocode", ""), str), f"Invalid pseudocode in {u['id']}"
             if "file" in u:
                 assert (ROOT / u["file"]).is_file(), f"Missing lesson asset: {u['file']}"
         assert re.search(r"\*\*5% of the final grade", self.policy), "Reconcile attendance policy and grading"
@@ -166,6 +167,9 @@ class Course:
         out += "**Vocabulary:** " + ", ".join(u["vocabulary"]) + ".\n\n"
         out += "\n".join(f"{i}. {step}" for i, step in enumerate(u["steps"], 1)) + "\n\n"
         out += "**Small exercise:** " + u["exercise"] + "\n\n**Connection:** " + u["connection"] + "\n\n"
+        if "pseudocode" in u:
+            out += "**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.\n\n"
+            out += "```python\n" + u["pseudocode"].rstrip() + "\n```\n\n"
         if "teaching_note" in u:
             out += "**Teaching note:** " + u["teaching_note"] + "\n\n"
         if "file" in u:
@@ -174,6 +178,16 @@ class Course:
         else:
             out += "**Lesson file:** To be prepared and verified.\n\n"
         out += "**Recording / revised slides:** Not yet linked; this is the lesson outline.\n\n"
+        return out
+
+    def translation(self, web=False):
+        out = self.data["translation"] + "\n\n"
+        for u in self.units.values():
+            if "pseudocode" not in u:
+                continue
+            out += f"### {u['id']} — {u['title']}\n\n"
+            out += "```python\n" + u["pseudocode"].rstrip() + "\n```\n\n"
+            out += self.link("Back to the unit", self.unit_url(u).replace(BASE, "") if web else self.unit_url(u)) + "\n\n"
         return out
 
     def decisions(self):
@@ -250,12 +264,14 @@ class Course:
             out += "## Related lessons\n\n" + bullets([self.link(u + " — " + self.units[u]["title"], self.unit_url(self.units[u])) for u in p["units"]])
             out += "\n" + self.link("Shared submission standards and grading", "/assignments/overview/") + "\n"
             self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{p['id'].lower()}-{slug(p['title'])}.md", out)
-        for a, i in [(self.by_id["VIM"],1), (self.by_id["MID"],6), (self.by_id["BOOK"],7)]:
+        for a, i in [(self.by_id["GSM"],1), (self.by_id["MID"],6), (self.by_id["BOOK"],7)]:
             self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{a['id'].lower()}-{slug(a['title'])}.md", front(a["id"] + " · " + a["title"], categories=["assignments"]) + self.banner() + self.assignment(a, "##") + "\n" + self.link("Shared submission standards and grading", "/assignments/overview/"))
         self.emit("modules/tutorials/_posts/1999-12-31-how-tutorials-work.md", front("How the lessons work", categories=["tutorials"]) + self.banner() + self.data["format"] + "\n" + self.data["pacing"] + "\n" + self.data["materials_status"])
         self.emit("modules/tutorials/_posts/2000-01-01-the-notation.md", front("Vocabulary · what the operations mean", categories=["tutorials"]) + self.banner() + self.data["presentation"].split("\n\n")[1] + "\n\n" + table(["Term", "Meaning", "Example / distinction"], self.data["vocabulary"]))
         for i,u in enumerate(self.units.values(), 2):
             self.emit(f"modules/tutorials/_posts/2000-01-{i:02d}-{u['id'].lower()}-{slug(u['title'])}.md", front(u["id"] + " · " + u["title"], categories=["tutorials"]) + self.banner() + self.unit(u, True))
+        self.emit(f"modules/tutorials/_posts/2000-01-{len(self.units)+2:02d}-translation-what-you-have-been-reading.md",
+                  front("Translation · what you have been reading", categories=["tutorials"]) + self.banner() + self.translation(True))
         self.emit("modules/resources/_posts/2000-01-01-reading.md", front("Reading and documentation", categories=["resources"]) + self.references())
         self.emit("modules/resources/_posts/2000-01-02-references.md", front("Visual precedents", categories=["resources"]) + table(["Reference", "Use"], [[f"[{a}]({b})", c] for a,b,c in self.data["references"]["precedents"]]) + "\nFor each example, identify the geometric element, how it is organized, what varies, and how the image communicates those decisions. Attribute precedents and develop your own interpretation.\n")
         self.emit("modules/resources/_posts/2000-01-03-software.md", front("Software and materials", categories=["resources"]) + self.banner() + self.data["software"] + "\n" + self.data["fabrication"] + "\n" + self.data["materials_status"])

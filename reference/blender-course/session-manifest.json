@@ -1,0 +1,155 @@
+[
+  {
+    "id": "S01",
+    "unit": "U02",
+    "title": "Intro to Geometry Nodes — transformations and CSG",
+    "file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
+    "scenes": [
+      "01 - Start",
+      "02 - Translation",
+      "03 - Rotation",
+      "04 - Scale",
+      "05 - Order",
+      "06 - Union",
+      "07 - Difference",
+      "08 - Intersect",
+      "09 - Massing exercise"
+    ],
+    "note": "Begin with Cube and Group Output. Change one transformation at a time, compare all three Booleans, then develop a massing study."
+  },
+  {
+    "id": "S02",
+    "unit": "U03",
+    "title": "Geometry Fundamentals",
+    "file": "files/blender/geometry101/GEOMETRY101-class-ready.blend",
+    "scenes": [
+      "01 - Point",
+      "02 - Line",
+      "03 - Edge",
+      "04 - Face",
+      "05 - Solid",
+      "06 - Boolean"
+    ],
+    "note": "The existing lesson is preserved. Point → Line → Edge → Face → Solid → Boolean; pyramid Width, Depth and Height remain exposed."
+  },
+  {
+    "id": "S03",
+    "unit": "U04",
+    "title": "Arrays and Lists I — linear and nested grid",
+    "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
+    "scenes": [
+      "01 - Linear loop",
+      "02 - Nested grid"
+    ],
+    "note": "Use Repeat Zones with small counts, then repeat a row inside a second loop to make a grid."
+  },
+  {
+    "id": "S04",
+    "unit": "U04",
+    "title": "Arrays and Lists II — arrangements and rules",
+    "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+    "scenes": [
+      "03 - Hexagonal array",
+      "04 - Radial array",
+      "05 - If and range",
+      "06 - Sine curve"
+    ],
+    "note": "Stagger rows, place points around a circle, select an index range and control a curve with sine."
+  },
+  {
+    "id": "S05",
+    "unit": "U05",
+    "title": "Attractors",
+    "file": "files/blender/04-attractors/Attractors.blend",
+    "scenes": [
+      "01 - Read the field",
+      "02 - One point",
+      "03 - Multiple points",
+      "04 - Curve attractor"
+    ],
+    "note": "Read a distance field, remap it, and compare one point, multiple points and a curve."
+  },
+  {
+    "id": "S06",
+    "unit": "U06",
+    "title": "Tessellation and Lattices",
+    "file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
+    "scenes": [
+      "01 - Tessellation",
+      "02 - Lattice",
+      "03 - Attractor lattice"
+    ],
+    "note": "Compare cells covering a surface with a spatial network. Lattice struts overlap at joints; resolve connections before fabrication."
+  },
+  {
+    "id": "S07",
+    "unit": "U07",
+    "title": "Point Clouds and Volumes",
+    "file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
+    "scenes": [
+      "01 - Import points",
+      "02 - Analyze points",
+      "03 - Points to volume"
+    ],
+    "note": "Keep teaching-courtyard.ply beside the Blender file. The bundled synthetic dataset includes source, units and license information."
+  },
+  {
+    "id": "S08",
+    "unit": "U08",
+    "title": "Advanced Volumes I — signed distance and Boolean",
+    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
+    "scenes": [
+      "01 - Mesh to SDF",
+      "02 - Signed distance",
+      "03 - SDF Boolean"
+    ],
+    "note": "Compare a mesh, a sampled signed distance grid, an analytic sphere field and a volumetric difference."
+  },
+  {
+    "id": "S09",
+    "unit": "U08",
+    "title": "Advanced Volumes II — noise and surface extraction",
+    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
+    "scenes": [
+      "04 - Noise field"
+    ],
+    "note": "Control a scalar field with noise and extract its zero surface. The modified field is not necessarily exact signed distance."
+  },
+  {
+    "id": "S10",
+    "unit": "U09",
+    "title": "Discretizing Geometry I — contours",
+    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
+    "scenes": [
+      "01 - One contour",
+      "02 - Contour stack"
+    ],
+    "note": "Make one true section curve, then repeat it with a controlled start height, count and interval."
+  },
+  {
+    "id": "S11",
+    "unit": "U09",
+    "title": "Discretizing Geometry II — physical parts",
+    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
+    "scenes": [
+      "03 - Section parts",
+      "04 - Laid out parts"
+    ],
+    "note": "Fill and thicken the profiles, compare the stack with separate parts, then lay them out in a grid."
+  },
+  {
+    "id": "S12",
+    "unit": "U09",
+    "title": "Final Project — fabrication and assembly",
+    "file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
+    "scenes": [
+      "01 - Print orientation",
+      "02 - Fit coupon",
+      "03 - Modular print",
+      "04 - Registered sections",
+      "05 - Cutting layout",
+      "06 - Spacer rings"
+    ],
+    "note": "Millimeter examples with STL snapshots and a labeled SVG cutting layout. Test actual stock, joints, fit and kerf before production."
+  }
+]

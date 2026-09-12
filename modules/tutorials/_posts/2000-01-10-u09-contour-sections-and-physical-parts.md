@@ -25,8 +25,26 @@ Translate a volumetric design into ordered curves and a buildable set of parts.
 
 **Connection:** Bring the digital studies, physical result and process documentation together in the final booklet.
 
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+sections = []
+for k in range(count):
+    z = z0 + k * interval
+    sections.append(slice(volume, z))      # ordered, and order matters
+
+for i, s in enumerate(sections):
+    s = offset(s, kerf / 2)                # the blade has width
+    label(s, i)
+    nest(s, sheet)
+```
+
 **Teaching note:** Designed section parts are distinct from the layers a printer slicer generates. Decide which curves are part boundaries before assigning thickness or sending machine files.
 
-**Lesson file:** To be prepared and verified.
+**Separate session files:**
+
+- [S10 — Discretizing Geometry I — contours]({{ site.baseurl }}/files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend). Make one true section curve, then repeat it with a controlled start height, count and interval.
+- [S11 — Discretizing Geometry II — physical parts]({{ site.baseurl }}/files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend). Fill and thicken the profiles, compare the stack with separate parts, then lay them out in a grid.
+- [S12 — Final Project — fabrication and assembly]({{ site.baseurl }}/files/blender/09-final-project/Final-Project-Fabrication.blend). Millimeter examples with STL snapshots and a labeled SVG cutting layout. Test actual stock, joints, fit and kerf before production.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.

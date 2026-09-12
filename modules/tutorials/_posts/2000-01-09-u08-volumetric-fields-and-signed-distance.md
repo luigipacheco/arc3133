@@ -26,8 +26,23 @@ Describe a shape through values in space and control the boundary those values d
 
 **Connection:** Reuse the chosen volume for contour sections and fabrication; graphic textures alone do not change geometry.
 
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+def field(p):                              # a shape as a function
+    a = sphere_sdf(p, center_a, r_a)
+    b = box_sdf(p, center_b, size_b)
+    return smooth_min(a, b, k)             # the blend comes free
+
+grid    = sample(field, bounds, resolution)
+surface = extract(grid, iso=0.0)           # where the field is zero
+```
+
 **Teaching note:** A noise-modified implicit field is not automatically an exact signed distance field. Keep the distinction visible and introduce specialized groups only when their inputs and outputs can be explained.
 
-**Lesson file:** To be prepared and verified.
+**Separate session files:**
+
+- [S08 — Advanced Volumes I — signed distance and Boolean]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend). Compare a mesh, a sampled signed distance grid, an analytic sphere field and a volumetric difference.
+- [S09 — Advanced Volumes II — noise and surface extraction]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend). Control a scalar field with noise and extract its zero surface. The modified field is not necessarily exact signed distance.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.

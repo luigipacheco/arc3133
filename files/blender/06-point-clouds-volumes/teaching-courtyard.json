@@ -1,0 +1,16 @@
+{
+  "name": "Synthetic teaching courtyard",
+  "source": "Generated from three sampled box surfaces for ARC 3133. Not measured site data.",
+  "license": "CC BY-SA 4.0, matching the course materials",
+  "units": "model units; treated as meters for this exercise",
+  "origin": [
+    0,
+    0,
+    0
+  ],
+  "point_count": 1806,
+  "edges": 0,
+  "faces": 0,
+  "decimation": "none; 11 by 11 samples per box face, duplicate coordinates removed",
+  "purpose": "Practice import, sample analysis and volume conversion without an external service."
+}

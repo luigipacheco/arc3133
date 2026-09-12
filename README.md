@@ -45,6 +45,8 @@ Change the source first, then regenerate. Check mode fails for drift, an invalid
 
 ## Teaching files and history
 
+[Blender session index](files/blender/README.md) lists a separate file for each session. [Download the complete set](files/blender/ARC3133-Blender-Sessions.zip), including point-cloud data and fabrication examples.
+
 [Geometry 101](files/blender/geometry101/README.md) is the existing Week 3 lesson: Point → Line → Edge → Face → Solid → Boolean. The pyramid retains exposed Width, Depth and Height. [Instructor materials](reference/geometry101/README.md) preserve its preparation history.
 
 Earlier course plans, site pages and slide decks are preserved in the [dated snapshot](reference/archive/2026-09-12-before-sequence/ARCHIVE_README.md). The existing `slides/` and `code/` directories are historical materials awaiting alignment; they do not define current requirements. They and the source/planning directories are excluded from the published course.

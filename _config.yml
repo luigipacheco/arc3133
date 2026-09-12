@@ -28,6 +28,6 @@ prose:
     - /css
 
 # neobrutalist palette — matches the class decks
-jumbotron_color: "#0E0E0E"
+jumbotron_color: "#000000"
 jumbotron_background_image:
 jumbotron_image:

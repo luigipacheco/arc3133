@@ -11,12 +11,18 @@ $nb-yellow: #FFE500;
 $nb-pink:   #FF4D8D;
 $nb-cyan:   #00D9E1;
 $nb-lime:   #C6F035;
-$nb-grey:   #6B6B6B;
-$nb-line:   #E2E2DA;
+$nb-grey:   #6B6B6B;   // quiet text on a light ground
+$nb-mute:   #B4B4AC;   // quiet text on a dark ground
+$nb-line:   #E2E2DA;   // hairline rules inside a block
 
 $nb-head: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $nb-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $nb-mono: "Courier New", Courier, monospace;
+
+// The decks use Calibri for body text because it is PowerPoint's native face.
+// Calibri is not on macOS and is not a webfont, so the web stack stays Helvetica.
+// Both read as a neutral grotesque under Arial headings. If they ever need to be
+// identical, Carlito is metric-compatible with Calibri and open-licensed.
 
 $nb-border: 2.5px;
 $nb-offset: 5px;
@@ -202,6 +208,8 @@ table {
   }
 
   a { color: $nb-yellow; border-bottom: 0; }
+
+  p { color: $nb-mute; }
 }
 
 .jumbotron .btn,

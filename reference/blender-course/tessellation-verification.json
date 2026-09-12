@@ -1,0 +1,71 @@
+{
+  "lesson": "tessellation",
+  "file": "C:\\Users\\luigi\\Documents\\arc3133\\files\\blender\\05-tessellation-lattices\\Tessellation-and-Lattices.blend",
+  "blender": "5.2.1 LTS",
+  "scenes": {
+    "01 - Tessellation": {
+      "vertices": 288,
+      "edges": 432,
+      "faces": 216,
+      "nonmanifold_edges": 0,
+      "volume": 2.764800020599362,
+      "bounds": [
+        [
+          -2.4000000953674316,
+          2.4000000953674316
+        ],
+        [
+          -2.4000000953674316,
+          2.4000000953674316
+        ],
+        [
+          -0.05999999865889549,
+          0.05999999865889549
+        ]
+      ]
+    },
+    "02 - Lattice": {
+      "vertices": 1680,
+      "edges": 2520,
+      "faces": 1050,
+      "nonmanifold_edges": 0,
+      "volume": 0.6586700973655266,
+      "bounds": [
+        [
+          -2.0450000762939453,
+          2.0450000762939453
+        ],
+        [
+          -2.0450000762939453,
+          2.0450000762939453
+        ],
+        [
+          -0.04500000178813934,
+          1.4449999332427979
+        ]
+      ]
+    },
+    "03 - Attractor lattice": {
+      "vertices": 1680,
+      "edges": 2520,
+      "faces": 1050,
+      "nonmanifold_edges": 0,
+      "volume": 0.6590931798005265,
+      "bounds": [
+        [
+          -2.0450000762939453,
+          2.0450000762939453
+        ],
+        [
+          -2.0450000762939453,
+          2.0450000762939453
+        ],
+        [
+          -0.04500000178813934,
+          2.4164490699768066
+        ]
+      ]
+    }
+  },
+  "complete": true
+}

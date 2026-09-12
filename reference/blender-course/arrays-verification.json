@@ -1,0 +1,134 @@
+{
+  "lesson": "arrays",
+  "file": "C:\\Users\\luigi\\Documents\\arc3133\\reference\\blender-course\\lesson-masters\\Arrays-and-Lists.blend",
+  "blender": "5.2.1 LTS",
+  "scenes": {
+    "01 - Linear loop": {
+      "vertices": 40,
+      "edges": 64,
+      "faces": 40,
+      "nonmanifold_edges": 0,
+      "volume": 0.14634670241514788,
+      "bounds": [
+        [
+          0.0,
+          5.880000114440918
+        ],
+        [
+          0.0,
+          0.2800000011920929
+        ],
+        [
+          0.0,
+          0.699999988079071
+        ]
+      ]
+    },
+    "02 - Nested grid": {
+      "vertices": 125,
+      "edges": 200,
+      "faces": 125,
+      "nonmanifold_edges": 0,
+      "volume": 0.4573332904974635,
+      "bounds": [
+        [
+          0.0,
+          3.4800000190734863
+        ],
+        [
+          0.0,
+          3.4800000190734863
+        ],
+        [
+          0.0,
+          0.699999988079071
+        ]
+      ]
+    },
+    "03 - Hexagonal array": {
+      "vertices": 125,
+      "edges": 200,
+      "faces": 125,
+      "nonmanifold_edges": 0,
+      "volume": 0.45733326323827517,
+      "bounds": [
+        [
+          0.0,
+          3.880000114440918
+        ],
+        [
+          0.0,
+          3.051281213760376
+        ],
+        [
+          0.0,
+          0.699999988079071
+        ]
+      ]
+    },
+    "04 - Radial array": {
+      "vertices": 80,
+      "edges": 128,
+      "faces": 80,
+      "nonmanifold_edges": 0,
+      "volume": 0.29269327632268327,
+      "bounds": [
+        [
+          -3.0,
+          3.2799999713897705
+        ],
+        [
+          -3.0,
+          3.2799999713897705
+        ],
+        [
+          0.0,
+          0.699999988079071
+        ]
+      ]
+    },
+    "05 - If and range": {
+      "vertices": 605,
+      "edges": 968,
+      "faces": 605,
+      "nonmanifold_edges": 0,
+      "volume": 2.213493468694686,
+      "bounds": [
+        [
+          -4.0,
+          4.28000020980835
+        ],
+        [
+          -4.0,
+          4.28000020980835
+        ],
+        [
+          0.0,
+          2.200000047683716
+        ]
+      ]
+    },
+    "06 - Sine curve": {
+      "vertices": 640,
+      "edges": 1272,
+      "faces": 634,
+      "nonmanifold_edges": 0,
+      "volume": 0.04042255188527694,
+      "bounds": [
+        [
+          -0.029644250869750977,
+          7.929670810699463
+        ],
+        [
+          -0.03500000014901161,
+          0.03500000014901161
+        ],
+        [
+          -1.0339288711547852,
+          1.0348938703536987
+        ]
+      ]
+    }
+  },
+  "complete": true
+}

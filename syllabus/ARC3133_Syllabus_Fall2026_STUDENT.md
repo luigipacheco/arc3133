@@ -386,9 +386,11 @@ No required textbook is assigned in this draft. These references are retained or
 
 ## Material availability
 
-The geometry-from-scratch unit has an existing Blender lesson with six scenes. It keeps the pyramid parameters exposed and ends with cube-minus-pyramid. Its teaching notes remain with the file.
+Twelve separate Blender session files cover the geometry sequence through fabrication. Arrays, advanced volumes and discretization each have two files. Session identifiers describe the order of the files, not fixed teaching weeks; extend a session when needed. The Visual Identity Manual uses graphic and layout tools rather than a Blender lesson.
 
-The other unit descriptions are preparation briefs. Remaining Blender files, recordings and revised slide decks will be made and checked in the next phase. Earlier slide decks and Python/Sverchok scripts are historical teaching resources, not the current weekly instructions. The material register distinguishes an existing lesson from a file still to be prepared.
+The files were prepared and evaluated in Blender 5.2.1 LTS. Native node names are retained, explanations are in Frames, and useful controls are exposed. Geometry Fundamentals preserves the original pyramid lesson. Point-cloud data and fabrication export examples accompany their session files. Physical fabrication fit has not been machine tested.
+
+The Blender file index and teaching material register list the current downloads. Recordings and revised slide decks are not linked here yet. Earlier resources do not replace the current unit briefs or assignment requirements.
 
 ## Decisions before issue
 
@@ -399,7 +401,7 @@ The other unit descriptions are preparation briefs. Remaining Blender files, rec
 - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
-- Establish one source of curriculum information before preparing the remaining Blender class files.
+- Maintain one source of curriculum information and a separate Blender file for each teaching session.
 - Start with short assignments that build into four projects: geometry, arrays/attractors, tessellation/lattices, and point clouds/volumes/sections.
 
 ### Working proposals

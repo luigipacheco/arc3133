@@ -7,9 +7,14 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.oxml.ns import qn
 import math
 
-BLACK = "000000"; INK = "1C1C1C"; CREAM = "FFFDF7"
+# Palette — must stay identical to _sass/_neobrutal.scss.
+# One black. Four greys, each with one job.
+BLACK = "000000"; CREAM = "FFFDF7"
 LIME = "C6F035"; PINK = "FF4D8D"; CYAN = "00D9E1"; YELLOW = "FFE500"
-GREY = "6B6B6B"; MUTE = "B4B4AC"; PAPER = "F4F4EE"
+GREY = "6B6B6B"      # quiet text on a light ground
+MUTE = "B4B4AC"      # quiet text on a dark ground, and guide marks
+LINE = "E2E2DA"      # hairline rules inside a card
+PAPER = "F4F4EE"     # the one step down from CREAM
 
 SHADOW = 0.075
 BORDER = Pt(2.75)
@@ -70,7 +75,7 @@ class S:
     def __init__(self, slide, bg):
         self.s = slide
         self.bg = bg
-        self.dark = bg in (BLACK, INK)
+        self.dark = bg == BLACK
         self.fg = CREAM if self.dark else BLACK
 
     # ---------- primitives ----------

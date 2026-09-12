@@ -28,8 +28,25 @@ Generate positions in an ordered collection, then control selected positions wit
 
 **Connection:** The next unit replaces an index-based rule with a measurement from an external object.
 
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+points = []
+
+for j in range(rows):                      # nested loop = grid
+    offset = spacing / 2 if j % 2 else 0   # odd/even stagger
+    for i in range(cols):
+        z = amplitude * sin(i * frequency + phase)
+        if 3 <= i <= 5:                    # Compare + Switch
+            z = z + lift
+        points.append([i * spacing + offset, j * row_gap, z])
+```
+
 **Teaching note:** Split this unit across sessions. A field evaluated across elements is not itself a Repeat Zone; show explicit iteration first, then compare with an efficient field-based construction. Keep Grasshopper data-tree terminology distinct from Blender field evaluation.
 
-**Lesson file:** To be prepared and verified.
+**Separate session files:**
+
+- [S03 — Arrays and Lists I — linear and nested grid]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend). Use Repeat Zones with small counts, then repeat a row inside a second loop to make a grid.
+- [S04 — Arrays and Lists II — arrangements and rules]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend). Stagger rows, place points around a circle, select an index range and control a curve with sine.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.

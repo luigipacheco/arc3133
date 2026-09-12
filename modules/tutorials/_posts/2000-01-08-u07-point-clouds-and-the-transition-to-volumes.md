@@ -25,6 +25,23 @@ Read measured or imported points as data and explain how a volume is inferred fr
 
 **Connection:** A point cloud is discrete data. The next unit studies the volumetric field used to reconstruct or design continuous form.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+cloud = load("site.ply")
+print(len(cloud))                          # state this before
+
+cloud = decimate(cloud, keep=0.05)
+print(len(cloud))                          # and after
+
+for p in cloud:
+    p.density = len(within(cloud, p, radius))
+
+volume = voxelize(cloud, size=0.5)
+```
+
+**Separate session files:**
+
+- [S07 — Point Clouds and Volumes]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend). Keep teaching-courtyard.ply beside the Blender file. The bundled synthetic dataset includes source, units and license information.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.

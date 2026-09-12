@@ -25,6 +25,22 @@ Describe a solid as an editable sequence of operations.
 
 **Connection:** In the next unit, replace a primitive Boolean cutter with geometry built from points and faces.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+base  = box(6, 4, 3)
+tower = box(2, 2, 6)
+tower = move(tower, 2, 0, 3)
+
+void  = cylinder(r=1, h=5)
+void  = move(void, -1.5, 0, 0)
+
+mass   = union(base, tower)
+result = difference(mass, void)    # not difference(void, mass)
+```
+
+**Separate session files:**
+
+- [S01 — Intro to Geometry Nodes — transformations and CSG]({{ site.baseurl }}/files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend). Begin with Cube and Group Output. Change one transformation at a time, compare all three Booleans, then develop a massing study.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.

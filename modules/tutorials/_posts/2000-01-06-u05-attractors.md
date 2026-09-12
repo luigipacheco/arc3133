@@ -25,6 +25,20 @@ Vary a parameter in response to an external condition.
 
 **Connection:** Use the same measurement-and-remapping logic to vary a lattice and later to analyze an imported point cloud.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+for p in points:
+    d = distance(p, attractor)             # or min(...) over several
+    t = (d - d_min) / (d_max - d_min)      # remap
+    t = clamp(t, 0, 1)
+    t = falloff(t)                         # linear, inverse, smooth, step
+    size = out_min + t * (out_max - out_min)
+    place(component, p, scale=size)
+```
+
+**Separate session files:**
+
+- [S05 — Attractors]({{ site.baseurl }}/files/blender/04-attractors/Attractors.blend). Read a distance field, remap it, and compare one point, multiple points and a curve.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.

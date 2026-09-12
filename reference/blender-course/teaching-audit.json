@@ -1,0 +1,498 @@
+[
+  {
+    "session": "S01",
+    "graphs": [
+      {
+        "scene": "01 - Start",
+        "nodes": 2,
+        "span": 530,
+        "groups_to_enter": [],
+        "annotation_crowding": []
+      },
+      {
+        "scene": "02 - Translation",
+        "nodes": 4,
+        "span": 1060,
+        "groups_to_enter": [],
+        "annotation_crowding": []
+      },
+      {
+        "scene": "03 - Rotation",
+        "nodes": 4,
+        "span": 1060,
+        "groups_to_enter": [],
+        "annotation_crowding": []
+      },
+      {
+        "scene": "04 - Scale",
+        "nodes": 4,
+        "span": 1060,
+        "groups_to_enter": [],
+        "annotation_crowding": []
+      },
+      {
+        "scene": "05 - Order",
+        "nodes": 4,
+        "span": 960,
+        "groups_to_enter": [],
+        "annotation_crowding": []
+      },
+      {
+        "scene": "06 - Union",
+        "nodes": 6,
+        "span": 1360,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "UNION | A OR B"
+        ]
+      },
+      {
+        "scene": "07 - Difference",
+        "nodes": 6,
+        "span": 1360,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "DIFFERENCE | A MINUS B"
+        ]
+      },
+      {
+        "scene": "08 - Intersect",
+        "nodes": 6,
+        "span": 1360,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "INTERSECTION | A AND B"
+        ]
+      },
+      {
+        "scene": "09 - Massing exercise",
+        "nodes": 6,
+        "span": 1400,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "ONE PARAMETRIC MASSING STUDY"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S02",
+    "graphs": [
+      {
+        "scene": "01 - Point",
+        "nodes": 4,
+        "span": 980,
+        "groups_to_enter": [],
+        "annotation_crowding": []
+      },
+      {
+        "scene": "02 - Line",
+        "nodes": 7,
+        "span": 1035,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "RESULT | 1 curve / 2 control points"
+        ]
+      },
+      {
+        "scene": "03 - Edge",
+        "nodes": 8,
+        "span": 1215,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "RESULT | 2 vertices / 1 edge / 0 faces"
+        ]
+      },
+      {
+        "scene": "04 - Face",
+        "nodes": 10,
+        "span": 1215,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "RESULT | 3 vertices / 3 edges / 1 face"
+        ]
+      },
+      {
+        "scene": "05 - Solid",
+        "nodes": 28,
+        "span": 2047,
+        "groups_to_enter": [
+          "MAKEFACE",
+          "MAKEFACE",
+          "MAKEFACE",
+          "MAKEFACE"
+        ],
+        "annotation_crowding": [
+          "WHY A BOTTOM FACE?"
+        ]
+      },
+      {
+        "scene": "06 - Boolean",
+        "nodes": 6,
+        "span": 1140,
+        "groups_to_enter": [
+          "002-point in middle"
+        ],
+        "annotation_crowding": [
+          "REUSE OUR PYRAMID"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S03",
+    "graphs": [
+      {
+        "scene": "01 - Linear loop",
+        "nodes": 11,
+        "span": 2440,
+        "groups_to_enter": [
+          "002-point in middle"
+        ],
+        "annotation_crowding": [
+          "COUNT, INDEX, REPEAT"
+        ]
+      },
+      {
+        "scene": "02 - Nested grid",
+        "nodes": 6,
+        "span": 1520,
+        "groups_to_enter": [
+          "Nested Grid",
+          "002-point in middle"
+        ],
+        "annotation_crowding": []
+      }
+    ]
+  },
+  {
+    "session": "S04",
+    "graphs": [
+      {
+        "scene": "03 - Hexagonal array",
+        "nodes": 6,
+        "span": 1520,
+        "groups_to_enter": [
+          "Hexagonal Grid",
+          "002-point in middle"
+        ],
+        "annotation_crowding": []
+      },
+      {
+        "scene": "04 - Radial array",
+        "nodes": 16,
+        "span": 2960,
+        "groups_to_enter": [
+          "002-point in middle"
+        ],
+        "annotation_crowding": [
+          "REPEAT AROUND A CIRCLE"
+        ]
+      },
+      {
+        "scene": "05 - If and range",
+        "nodes": 13,
+        "span": 2560,
+        "groups_to_enter": [
+          "002-point in middle"
+        ],
+        "annotation_crowding": [
+          "IF THE INDEX IS IN THIS RANGE, MOVE IT"
+        ]
+      },
+      {
+        "scene": "06 - Sine curve",
+        "nodes": 14,
+        "span": 2680,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "A FUNCTION CONTROLS THE CURVE"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S05",
+    "graphs": [
+      {
+        "scene": "01 - Read the field",
+        "nodes": 9,
+        "span": 2050,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "READ THE FIELD"
+        ]
+      },
+      {
+        "scene": "02 - One point",
+        "nodes": 11,
+        "span": 2520,
+        "groups_to_enter": [
+          "002-point in middle"
+        ],
+        "annotation_crowding": [
+          "ONE POINT"
+        ]
+      },
+      {
+        "scene": "03 - Multiple points",
+        "nodes": 10,
+        "span": 2520,
+        "groups_to_enter": [
+          "002-point in middle"
+        ],
+        "annotation_crowding": [
+          "MULTIPLE POINTS"
+        ]
+      },
+      {
+        "scene": "04 - Curve attractor",
+        "nodes": 11,
+        "span": 2520,
+        "groups_to_enter": [
+          "002-point in middle"
+        ],
+        "annotation_crowding": [
+          "CURVE ATTRACTOR"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S06",
+    "graphs": [
+      {
+        "scene": "01 - Tessellation",
+        "nodes": 10,
+        "span": 1680,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "A CELL COVERS A SURFACE"
+        ]
+      },
+      {
+        "scene": "02 - Lattice",
+        "nodes": 14,
+        "span": 3230,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "LATTICE"
+        ]
+      },
+      {
+        "scene": "03 - Attractor lattice",
+        "nodes": 18,
+        "span": 3230,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "ATTRACTOR LATTICE"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S07",
+    "graphs": [
+      {
+        "scene": "01 - Import points",
+        "nodes": 7,
+        "span": 1840,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "IMPORT SAMPLES, NOT FACES"
+        ]
+      },
+      {
+        "scene": "02 - Analyze points",
+        "nodes": 12,
+        "span": 2320,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "USE AN EXTERNAL CONDITION TO FILTER THE CLOUD"
+        ]
+      },
+      {
+        "scene": "03 - Points to volume",
+        "nodes": 6,
+        "span": 1700,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "SAMPLES BECOME A SAMPLED DENSITY VOLUME"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S08",
+    "graphs": [
+      {
+        "scene": "01 - Mesh to SDF",
+        "nodes": 5,
+        "span": 1300,
+        "groups_to_enter": [],
+        "annotation_crowding": []
+      },
+      {
+        "scene": "02 - Signed distance",
+        "nodes": 9,
+        "span": 2540,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "SIGNED DISTANCE"
+        ]
+      },
+      {
+        "scene": "03 - SDF Boolean",
+        "nodes": 9,
+        "span": 1810,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "BOOLEAN OPERATIONS ON DISTANCE GRIDS"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S09",
+    "graphs": [
+      {
+        "scene": "04 - Noise field",
+        "nodes": 13,
+        "span": 2540,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "NOISE FIELD"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S10",
+    "graphs": [
+      {
+        "scene": "01 - One contour",
+        "nodes": 6,
+        "span": 1590,
+        "groups_to_enter": [
+          "04 - Noise field",
+          "Contour at Height"
+        ],
+        "annotation_crowding": [
+          "A VOLUME MEETS ONE PLANE"
+        ]
+      },
+      {
+        "scene": "02 - Contour stack",
+        "nodes": 11,
+        "span": 4190,
+        "groups_to_enter": [
+          "04 - Noise field",
+          "Contour at Height"
+        ],
+        "annotation_crowding": [
+          "CONTOUR STACK"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S11",
+    "graphs": [
+      {
+        "scene": "03 - Section parts",
+        "nodes": 15,
+        "span": 3660,
+        "groups_to_enter": [
+          "04 - Noise field",
+          "Contour at Height",
+          "Profile to Solid"
+        ],
+        "annotation_crowding": [
+          "SECTION PARTS"
+        ]
+      },
+      {
+        "scene": "04 - Laid out parts",
+        "nodes": 20,
+        "span": 3660,
+        "groups_to_enter": [
+          "04 - Noise field",
+          "Contour at Height",
+          "Profile to Solid"
+        ],
+        "annotation_crowding": [
+          "LAID OUT PARTS"
+        ]
+      }
+    ]
+  },
+  {
+    "session": "S12",
+    "graphs": [
+      {
+        "scene": "01 - Print orientation",
+        "nodes": 8,
+        "span": 1810,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "ORIENT THE MASSING STUDY FOR A SMALL PRINT"
+        ]
+      },
+      {
+        "scene": "02 - Fit coupon",
+        "nodes": 14,
+        "span": 1840,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "TEST THE FIT BEFORE THE BATCH"
+        ]
+      },
+      {
+        "scene": "03 - Modular print",
+        "nodes": 16,
+        "span": 3440,
+        "groups_to_enter": [
+          "Modular Cell"
+        ],
+        "annotation_crowding": [
+          "NINE RELATED PARTS | TEST ONE CONNECTION"
+        ]
+      },
+      {
+        "scene": "04 - Registered sections",
+        "nodes": 21,
+        "span": 4250,
+        "groups_to_enter": [
+          "04 - Noise field",
+          "Contour at Height",
+          "Registered Profile to Solid"
+        ],
+        "annotation_crowding": [
+          "REGISTERED SECTION ASSEMBLY"
+        ]
+      },
+      {
+        "scene": "05 - Cutting layout",
+        "nodes": 26,
+        "span": 4250,
+        "groups_to_enter": [
+          "04 - Noise field",
+          "Contour at Height",
+          "Registered Profile to Solid"
+        ],
+        "annotation_crowding": [
+          "CUTTING LAYOUT"
+        ]
+      },
+      {
+        "scene": "06 - Spacer rings",
+        "nodes": 15,
+        "span": 2300,
+        "groups_to_enter": [],
+        "annotation_crowding": [
+          "SPACERS PRESERVE THE SECTION INTERVAL"
+        ]
+      }
+    ]
+  }
+]

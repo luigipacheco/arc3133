@@ -371,7 +371,21 @@ Establish the graphic system used to communicate all later work.
 
 **Connection:** Apply and revise this identity in every project and in the final booklet.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+SHEET   = (17, 11)                 # inches
+MARGIN  = 0.75
+COLUMNS = 6
+
+TYPE    = {"title": 24, "heading": 14, "body": 9}
+WEIGHTS = [0.13, 0.35, 0.70]       # thin, medium, heavy
+PALETTE = ["#0E0E0E", "#FFFDF7", "#C6F035"]
+
+# every sheet this semester reads these six values
+```
+
+**Lesson file:** Use your graphic and layout files for the Visual Identity Manual.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -390,7 +404,23 @@ Describe a solid as an editable sequence of operations.
 
 **Connection:** In the next unit, replace a primitive Boolean cutter with geometry built from points and faces.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+base  = box(6, 4, 3)
+tower = box(2, 2, 6)
+tower = move(tower, 2, 0, 3)
+
+void  = cylinder(r=1, h=5)
+void  = move(void, -1.5, 0, 0)
+
+mass   = union(base, tower)
+result = difference(mass, void)    # not difference(void, mass)
+```
+
+**Separate session files:**
+
+- [S01 — Intro to Geometry Nodes — transformations and CSG](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend). Begin with Cube and Group Output. Change one transformation at a time, compare all three Booleans, then develop a massing study.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -411,7 +441,26 @@ Explain the structure behind geometry and build a parametric solid from its part
 
 **Connection:** Save a reusable parametric object for arrays and later attractor controls.
 
-**Lesson file:** [Open the Blender lesson](../files/blender/geometry101/GEOMETRY101-class-ready.blend). Existing six-scene lesson. Native node names are retained and explanations are in Frames. It is a model-units lesson, not a fabrication export.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+verts = [[-w, -d, 0],              # 0
+         [ w, -d, 0],              # 1
+         [ w,  d, 0],              # 2
+         [-w,  d, 0],              # 3
+         [ 0,  0, h]]              # 4  apex
+
+faces = [[0, 1, 4], [1, 2, 4],
+         [2, 3, 4], [3, 0, 4],
+         [0, 3, 2, 1]]             # the base — do not forget it
+
+pyramid = mesh(verts, faces)
+result  = difference(cube, pyramid)
+```
+
+**Separate session files:**
+
+- [S02 — Geometry Fundamentals](../files/blender/geometry101/GEOMETRY101-class-ready.blend). The existing lesson is preserved. Point → Line → Edge → Face → Solid → Boolean; pyramid Width, Depth and Height remain exposed.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -433,9 +482,26 @@ Generate positions in an ordered collection, then control selected positions wit
 
 **Connection:** The next unit replaces an index-based rule with a measurement from an external object.
 
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+points = []
+
+for j in range(rows):                      # nested loop = grid
+    offset = spacing / 2 if j % 2 else 0   # odd/even stagger
+    for i in range(cols):
+        z = amplitude * sin(i * frequency + phase)
+        if 3 <= i <= 5:                    # Compare + Switch
+            z = z + lift
+        points.append([i * spacing + offset, j * row_gap, z])
+```
+
 **Teaching note:** Split this unit across sessions. A field evaluated across elements is not itself a Repeat Zone; show explicit iteration first, then compare with an efficient field-based construction. Keep Grasshopper data-tree terminology distinct from Blender field evaluation.
 
-**Lesson file:** To be prepared and verified.
+**Separate session files:**
+
+- [S03 — Arrays and Lists I — linear and nested grid](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend). Use Repeat Zones with small counts, then repeat a row inside a second loop to make a grid.
+- [S04 — Arrays and Lists II — arrangements and rules](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend). Stagger rows, place points around a circle, select an index range and control a curve with sine.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -454,7 +520,21 @@ Vary a parameter in response to an external condition.
 
 **Connection:** Use the same measurement-and-remapping logic to vary a lattice and later to analyze an imported point cloud.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+for p in points:
+    d = distance(p, attractor)             # or min(...) over several
+    t = (d - d_min) / (d_max - d_min)      # remap
+    t = clamp(t, 0, 1)
+    t = falloff(t)                         # linear, inverse, smooth, step
+    size = out_min + t * (out_max - out_min)
+    place(component, p, scale=size)
+```
+
+**Separate session files:**
+
+- [S05 — Attractors](../files/blender/04-attractors/Attractors.blend). Read a distance field, remap it, and compare one point, multiple points and a curve.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -473,7 +553,20 @@ Turn repetition into a connected surface or spatial system.
 
 **Connection:** Carry the visual study into the modular fabrication milestone; preserve the parametric relationships.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+for cell in subdivide(surface, u, v):
+    panel = morph(component, cell)         # component into the cell
+    d = distance(center(cell), attractor)
+    panel.aperture = remap(d, d_min, d_max, 0.1, 0.9)
+    panel.depth    = remap(d, d_min, d_max, 2.0, 12.0)
+    keep(panel)
+```
+
+**Separate session files:**
+
+- [S06 — Tessellation and Lattices](../files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend). Compare cells covering a surface with a spatial network. Lattice struts overlap at joints; resolve connections before fabrication.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -492,7 +585,24 @@ Read measured or imported points as data and explain how a volume is inferred fr
 
 **Connection:** A point cloud is discrete data. The next unit studies the volumetric field used to reconstruct or design continuous form.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+cloud = load("site.ply")
+print(len(cloud))                          # state this before
+
+cloud = decimate(cloud, keep=0.05)
+print(len(cloud))                          # and after
+
+for p in cloud:
+    p.density = len(within(cloud, p, radius))
+
+volume = voxelize(cloud, size=0.5)
+```
+
+**Separate session files:**
+
+- [S07 — Point Clouds and Volumes](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend). Keep teaching-courtyard.ply beside the Blender file. The bundled synthetic dataset includes source, units and license information.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -512,9 +622,24 @@ Describe a shape through values in space and control the boundary those values d
 
 **Connection:** Reuse the chosen volume for contour sections and fabrication; graphic textures alone do not change geometry.
 
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+def field(p):                              # a shape as a function
+    a = sphere_sdf(p, center_a, r_a)
+    b = box_sdf(p, center_b, size_b)
+    return smooth_min(a, b, k)             # the blend comes free
+
+grid    = sample(field, bounds, resolution)
+surface = extract(grid, iso=0.0)           # where the field is zero
+```
+
 **Teaching note:** A noise-modified implicit field is not automatically an exact signed distance field. Keep the distinction visible and introduce specialized groups only when their inputs and outputs can be explained.
 
-**Lesson file:** To be prepared and verified.
+**Separate session files:**
+
+- [S08 — Advanced Volumes I — signed distance and Boolean](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend). Compare a mesh, a sampled signed distance grid, an analytic sphere field and a volumetric difference.
+- [S09 — Advanced Volumes II — noise and surface extraction](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend). Control a scalar field with noise and extract its zero surface. The modified field is not necessarily exact signed distance.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -533,9 +658,27 @@ Translate a volumetric design into ordered curves and a buildable set of parts.
 
 **Connection:** Bring the digital studies, physical result and process documentation together in the final booklet.
 
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+sections = []
+for k in range(count):
+    z = z0 + k * interval
+    sections.append(slice(volume, z))      # ordered, and order matters
+
+for i, s in enumerate(sections):
+    s = offset(s, kerf / 2)                # the blade has width
+    label(s, i)
+    nest(s, sheet)
+```
+
 **Teaching note:** Designed section parts are distinct from the layers a printer slicer generates. Decide which curves are part boundaries before assigning thickness or sending machine files.
 
-**Lesson file:** To be prepared and verified.
+**Separate session files:**
+
+- [S10 — Discretizing Geometry I — contours](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend). Make one true section curve, then repeat it with a controlled start height, count and interval.
+- [S11 — Discretizing Geometry II — physical parts](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend). Fill and thicken the profiles, compare the stack with separate parts, then lay them out in a grid.
+- [S12 — Final Project — fabrication and assembly](../files/blender/09-final-project/Final-Project-Fabrication.blend). Millimeter examples with STL snapshots and a labeled SVG cutting layout. Test actual stock, joints, fit and kerf before production.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -596,9 +739,11 @@ No required textbook is assigned in this draft. These references are retained or
 
 ## Material availability
 
-The geometry-from-scratch unit has an existing Blender lesson with six scenes. It keeps the pyramid parameters exposed and ends with cube-minus-pyramid. Its teaching notes remain with the file.
+Twelve separate Blender session files cover the geometry sequence through fabrication. Arrays, advanced volumes and discretization each have two files. Session identifiers describe the order of the files, not fixed teaching weeks; extend a session when needed. The Visual Identity Manual uses graphic and layout tools rather than a Blender lesson.
 
-The other unit descriptions are preparation briefs. Remaining Blender files, recordings and revised slide decks will be made and checked in the next phase. Earlier slide decks and Python/Sverchok scripts are historical teaching resources, not the current weekly instructions. The material register distinguishes an existing lesson from a file still to be prepared.
+The files were prepared and evaluated in Blender 5.2.1 LTS. Native node names are retained, explanations are in Frames, and useful controls are exposed. Geometry Fundamentals preserves the original pyramid lesson. Point-cloud data and fabrication export examples accompany their session files. Physical fabrication fit has not been machine tested.
+
+The Blender file index and teaching material register list the current downloads. Recordings and revised slide decks are not linked here yet. Earlier resources do not replace the current unit briefs or assignment requirements.
 
 ## Decisions before issue
 
@@ -609,7 +754,7 @@ The other unit descriptions are preparation briefs. Remaining Blender files, rec
 - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
-- Establish one source of curriculum information before preparing the remaining Blender class files.
+- Maintain one source of curriculum information and a separate Blender file for each teaching session.
 - Start with short assignments that build into four projects: geometry, arrays/attractors, tessellation/lattices, and point clouds/volumes/sections.
 
 ### Working proposals

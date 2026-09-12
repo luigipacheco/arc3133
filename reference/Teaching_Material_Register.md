@@ -2,21 +2,23 @@
 
 # Teaching material register
 
-The geometry-from-scratch unit has an existing Blender lesson with six scenes. It keeps the pyramid parameters exposed and ends with cube-minus-pyramid. Its teaching notes remain with the file.
+Twelve separate Blender session files cover the geometry sequence through fabrication. Arrays, advanced volumes and discretization each have two files. Session identifiers describe the order of the files, not fixed teaching weeks; extend a session when needed. The Visual Identity Manual uses graphic and layout tools rather than a Blender lesson.
 
-The other unit descriptions are preparation briefs. Remaining Blender files, recordings and revised slide decks will be made and checked in the next phase. Earlier slide decks and Python/Sverchok scripts are historical teaching resources, not the current weekly instructions. The material register distinguishes an existing lesson from a file still to be prepared.
+The files were prepared and evaluated in Blender 5.2.1 LTS. Native node names are retained, explanations are in Frames, and useful controls are exposed. Geometry Fundamentals preserves the original pyramid lesson. Point-cloud data and fabrication export examples accompany their session files. Physical fabrication fit has not been machine tested.
+
+The Blender file index and teaching material register list the current downloads. Recordings and revised slide decks are not linked here yet. Earlier resources do not replace the current unit briefs or assignment requirements.
 
 | Unit | Topic | Blender file | Recording / revised slides |
 | --- | --- | --- | --- |
-| U01 | Visual Identity Manual | To prepare | Not linked / to prepare |
-| U02 | Transformations and CSG | To prepare | Not linked / to prepare |
-| U03 | Geometry from scratch | [Existing Blender lesson](../files/blender/geometry101/GEOMETRY101-class-ready.blend) | Not linked / to prepare |
-| U04 | Arrays and lists | To prepare | Not linked / to prepare |
-| U05 | Attractors | To prepare | Not linked / to prepare |
-| U06 | Tessellation and lattices | To prepare | Not linked / to prepare |
-| U07 | Point clouds and the transition to volumes | To prepare | Not linked / to prepare |
-| U08 | Volumetric fields and signed distance | To prepare | Not linked / to prepare |
-| U09 | Contour sections and physical parts | To prepare | Not linked / to prepare |
+| U01 | Visual Identity Manual | Graphic/layout files; no Blender lesson | Not linked / to prepare |
+| U02 | Transformations and CSG | [S01 — Intro to Geometry Nodes — transformations and CSG](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | Not linked / to prepare |
+| U03 | Geometry from scratch | [S02 — Geometry Fundamentals](../files/blender/geometry101/GEOMETRY101-class-ready.blend) | Not linked / to prepare |
+| U04 | Arrays and lists | [S03 — Arrays and Lists I — linear and nested grid](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)<br>[S04 — Arrays and Lists II — arrangements and rules](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend) | Not linked / to prepare |
+| U05 | Attractors | [S05 — Attractors](../files/blender/04-attractors/Attractors.blend) | Not linked / to prepare |
+| U06 | Tessellation and lattices | [S06 — Tessellation and Lattices](../files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend) | Not linked / to prepare |
+| U07 | Point clouds and the transition to volumes | [S07 — Point Clouds and Volumes](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Not linked / to prepare |
+| U08 | Volumetric fields and signed distance | [S08 — Advanced Volumes I — signed distance and Boolean](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend)<br>[S09 — Advanced Volumes II — noise and surface extraction](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Not linked / to prepare |
+| U09 | Contour sections and physical parts | [S10 — Discretizing Geometry I — contours](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend)<br>[S11 — Discretizing Geometry II — physical parts](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend)<br>[S12 — Final Project — fabrication and assembly](../files/blender/09-final-project/Final-Project-Fabrication.blend) | Not linked / to prepare |
 
 The earlier materials disagreed about module numbering, due dates, project weights, the role of Python and the placement of point clouds, tessellation and sections. Their original versions are preserved in the dated archive. This revision uses unit identifiers for topics and project identifiers for assessment so that extending a topic does not require renumbering the entire course.
 

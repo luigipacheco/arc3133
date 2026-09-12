@@ -25,6 +25,19 @@ Turn repetition into a connected surface or spatial system.
 
 **Connection:** Carry the visual study into the modular fabrication milestone; preserve the parametric relationships.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+for cell in subdivide(surface, u, v):
+    panel = morph(component, cell)         # component into the cell
+    d = distance(center(cell), attractor)
+    panel.aperture = remap(d, d_min, d_max, 0.1, 0.9)
+    panel.depth    = remap(d, d_min, d_max, 2.0, 12.0)
+    keep(panel)
+```
+
+**Separate session files:**
+
+- [S06 — Tessellation and Lattices]({{ site.baseurl }}/files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend). Compare cells covering a surface with a spatial network. Lattice struts overlap at joints; resolve connections before fabrication.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.

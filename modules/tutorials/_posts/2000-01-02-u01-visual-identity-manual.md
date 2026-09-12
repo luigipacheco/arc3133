@@ -24,6 +24,20 @@ Establish the graphic system used to communicate all later work.
 
 **Connection:** Apply and revise this identity in every project and in the final booklet.
 
-**Lesson file:** To be prepared and verified.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+SHEET   = (17, 11)                 # inches
+MARGIN  = 0.75
+COLUMNS = 6
+
+TYPE    = {"title": 24, "heading": 14, "body": 9}
+WEIGHTS = [0.13, 0.35, 0.70]       # thin, medium, heavy
+PALETTE = ["#0E0E0E", "#FFFDF7", "#C6F035"]
+
+# every sheet this semester reads these six values
+```
+
+**Lesson file:** Use your graphic and layout files for the Visual Identity Manual.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.

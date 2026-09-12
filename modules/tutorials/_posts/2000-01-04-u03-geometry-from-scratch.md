@@ -27,6 +27,25 @@ Explain the structure behind geometry and build a parametric solid from its part
 
 **Connection:** Save a reusable parametric object for arrays and later attractor controls.
 
-**Lesson file:** [Open the Blender lesson]({{ site.baseurl }}/files/blender/geometry101/GEOMETRY101-class-ready.blend). Existing six-scene lesson. Native node names are retained and explanations are in Frames. It is a model-units lesson, not a fabrication export.
+**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
+
+```python
+verts = [[-w, -d, 0],              # 0
+         [ w, -d, 0],              # 1
+         [ w,  d, 0],              # 2
+         [-w,  d, 0],              # 3
+         [ 0,  0, h]]              # 4  apex
+
+faces = [[0, 1, 4], [1, 2, 4],
+         [2, 3, 4], [3, 0, 4],
+         [0, 3, 2, 1]]             # the base — do not forget it
+
+pyramid = mesh(verts, faces)
+result  = difference(cube, pyramid)
+```
+
+**Separate session files:**
+
+- [S02 — Geometry Fundamentals]({{ site.baseurl }}/files/blender/geometry101/GEOMETRY101-class-ready.blend). The existing lesson is preserved. Point → Line → Edge → Face → Solid → Boolean; pyramid Width, Depth and Height remain exposed.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.

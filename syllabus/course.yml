@@ -3,6 +3,12 @@
 # University and standing course policy wording is in policies.md.
 revision: '2026-09-12'
 status: Working draft for instructor discussion
+# Two audiences, two notices. The instructor one rides on the syllabus and the
+# reference documents; the student one is what appears on the public course
+# pages. Leave student_notice blank to show no banner to students at all.
+student_notice: >-
+  The teaching sequence is flexible — a topic may take more than one class. Deadlines
+  are firm, and any change is announced in class and on Canvas before this page changes.
 course:
   code: ARC 3133-001
   title: Architectural Visualization Methods 1
@@ -12,10 +18,19 @@ course:
   credits: 3
   meeting: Tuesday, 5:00 PM–7:50 PM
   location: FAU/BC Higher Ed Complex FTL — room to be confirmed
-  instructor: Luis Pacheco Alcala
-  email: lpachecoalcala@fau.edu
-  office: '712'
-  office_hours: By appointment
+  # Both instructors are listed on every generated view. The two sections share
+  # this syllabus, the assignment sequence and the tutorial set, so the source
+  # is one file and neither name is section-specific.
+  # Any field left blank renders as "to be confirmed" rather than disappearing.
+  instructors:
+    - name: Luis Pacheco Alcala
+      email: lpachecoalcala@fau.edu
+      office: '712'
+      office_hours: By appointment
+    - name: Christine Khouri Sader
+      email:
+      office:
+      office_hours: By appointment
   ta: None assigned
   prerequisites: ARC 1301, ARC 1302, ARC 2303 and ARC 2304, each with a minimum grade of C
   final_window: December 10–16, 2026; exact review slot to be confirmed
@@ -598,6 +613,40 @@ instructor_notes: |
 # A project is released whole: listing P2 posts P2a and P2b with it. The
 # assignment overview page is always posted — it is the index, and its table is
 # how students see what is still coming.
+# ─────────────────────────────────────────────────────────────────────────────
+# HOME PAGE — the landing page students actually read.
+#
+# Narrative first, tables second. The four projects are the spine; the nine
+# units are how the spine is taught. Everything here is prose you can edit
+# freely — the tables underneath are generated from the sequence itself.
+home:
+  tagline: >-
+    A course on computational design for architectural representation —
+    describing geometry as operations and rules, varying it with data, and
+    making the result physical.
+  teaching: |
+    Students build systems as graphs, where the flow of data is visible: you can
+    see where a value comes from, what transforms it, and where it goes.
+
+    Code is not absent. Every lesson carries the same task written out as a few
+    lines of Python, beside the nodes that perform it. You are not asked to type
+    it. You are asked to read it, and to check that it says what you just built.
+    In the last week those blocks are collected onto a single page, and the
+    language you have been reading turns out to be one you can already follow.
+
+    Bring the editable file to every class, and be able to change one input and
+    predict what changes. That, rather than a finished image, is what a review
+    is looking for.
+  making: |
+    Every project ends in something physical. Fabrication runs through two modes
+    of computer-controlled making — additive and cutting — introduced at object
+    scale with a first small print, and returning at system scale as a modular
+    assembly and a set of cut sections.
+
+    The FabLab Safety Orientation comes before any machine use. Preparation,
+    test pieces and documentation are part of the work rather than an
+    afterthought at the end of it.
+
 release:
   classes: [1, 2, 3, 4, 5, 6]
   tutorials: [U01, U02, U03, U04, U05]

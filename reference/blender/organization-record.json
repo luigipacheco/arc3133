@@ -1,0 +1,634 @@
+[
+  {
+    "files": [
+      {
+        "sha256": "b460a3addb4c6065d3eea549b5baf3e9c68b0743a5fd9902d8cea4031623e05d",
+        "path": "reference/blender-course/capture_session_images.py"
+      }
+    ],
+    "from": "reference/blender-course/capture_session_images.py",
+    "to": "scripts/blender/capture_images.py"
+  },
+  {
+    "files": [
+      {
+        "sha256": "2566db1f541f63cf1b3d73461e4dca33409ea71c675f6ec3eddc8c2f44f8fecf",
+        "path": "scripts/finalize_blender_images.py"
+      }
+    ],
+    "from": "scripts/finalize_blender_images.py",
+    "to": "scripts/blender/package_images.py"
+  },
+  {
+    "files": [
+      {
+        "sha256": "f6133b2964bd64fbd016554fef2da3cb79b40df46555946cfd45d338a6328486",
+        "path": "scripts/package_blender_sessions.py"
+      }
+    ],
+    "from": "scripts/package_blender_sessions.py",
+    "to": "scripts/blender/package_sessions.py"
+  },
+  {
+    "files": [
+      {
+        "sha256": "27e02a15b5ab2e264a63eec941d04535fcbd452dfffefc80d1e7c80037647dec",
+        "path": "reference/blender-course/all-sessions-verification.json"
+      },
+      {
+        "sha256": "c727bdb30574cd9725b2846212bc5b0e372c4cd7bcd433861c7943207ae1f586",
+        "path": "reference/blender-course/apply_teaching_review.py"
+      },
+      {
+        "sha256": "9dfb59002edcfcec3dcaee6f66047f206856b37d59b33e1eaedd5c5f6b83f80b",
+        "path": "reference/blender-course/arrays-verification.json"
+      },
+      {
+        "sha256": "e1df4aa003bda9b00afbf01b3ba3dc774a243f927b6c3e27ae732e43289aa010",
+        "path": "reference/blender-course/attractors-verification.json"
+      },
+      {
+        "sha256": "79dbe3fb9b4193a3a2c20eef78ced455624aae675653c6942954b9437a0f91c9",
+        "path": "reference/blender-course/build_lessons.py"
+      },
+      {
+        "sha256": "69198e28a8e32f95878ef1efc245eb365889d0686614ef1e6a33311432887fd0",
+        "path": "reference/blender-course/capture-all-status.json"
+      },
+      {
+        "sha256": "56ec535619afe77f2839e2b7f2e3e1745cf1e881a6b403396002ade92cf76652",
+        "path": "reference/blender-course/capture-status.json"
+      },
+      {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "path": "reference/blender-course/capture-stderr.log"
+      },
+      {
+        "sha256": "684460f290a5a293b0d90ff6e559812a980d9582b90f9fa2f40d38dfadacffab",
+        "path": "reference/blender-course/capture-stdout.log"
+      },
+      {
+        "sha256": "1123f72646ece4937d7012a43505f11a99d28d9b4d75f872444a2d6354b646c1",
+        "path": "reference/blender-course/clouds-verification.json"
+      },
+      {
+        "sha256": "250135af16018d4517ec47f89aa79c311316059e5f166d788a060906939262a0",
+        "path": "reference/blender-course/discretization-verification.json"
+      },
+      {
+        "sha256": "b69d74f7849457d2e0c9f9ac24af2c72e67405c3fe0f6e7beb58b02e457abb16",
+        "path": "reference/blender-course/fabrication-verification.json"
+      },
+      {
+        "sha256": "b7723c40568e178aefa5f4da52a07d586da52ac8cac2ce535fc761878ea75bb9",
+        "path": "reference/blender-course/finalize_sessions.py"
+      },
+      {
+        "sha256": "8cbbe300a390c9db83993d5c6f19b34b2ee29fac9ee8b25b75a52cdb6d5a36f1",
+        "path": "reference/blender-course/inspect_capture_api.py"
+      },
+      {
+        "sha256": "af5cb9b15f0955a053571936263ac274f31976ca68ca57b7f64dec374b9bfe20",
+        "path": "reference/blender-course/intro-verification.json"
+      },
+      {
+        "sha256": "cb5b96e5b195d97791767e30cf673200c68f9b5b66c5a6d2d5a42bcdb6508ebb",
+        "path": "reference/blender-course/live-intro-view-fixed.png"
+      },
+      {
+        "sha256": "cb2565f45091b1af77a0ba8e7f8e293f4b0f8a21b9e29323bcc75cb2fee54197",
+        "path": "reference/blender-course/live-intro-view.png"
+      },
+      {
+        "sha256": "773228f2fff0132e33b63bac045b90c9b40c77a09c16f1be764d77979256081f",
+        "path": "reference/blender-course/package-verification.json"
+      },
+      {
+        "sha256": "009948972cc0b2b048fb8fffabf41e91304acae02f20d17156b8a6f83eeece1d",
+        "path": "reference/blender-course/review_lessons.py"
+      },
+      {
+        "sha256": "60ec473eeacd2a8b3b1ea93092ab22d95ad140659ac7eda73bbee42fa6b54d11",
+        "path": "reference/blender-course/session-manifest.json"
+      },
+      {
+        "sha256": "5a8b0c9793be39dde82bc03b6eff4eeecaf59ea9c61b8aee83b432ee8e8ccde9",
+        "path": "reference/blender-course/sessions-verification.json"
+      },
+      {
+        "sha256": "529a0d0cf06931c5d465451bfd627b4e85c12828f55df57f09f61fa0eeae008d",
+        "path": "reference/blender-course/split_sessions.py"
+      },
+      {
+        "sha256": "4099cbb6dd4aa155473cb6b66183cb4958964f4843c9594f9277eb89069f8e0d",
+        "path": "reference/blender-course/teaching-audit.json"
+      },
+      {
+        "sha256": "02f29b49f2db619b722fb699a5639f4c67f8ac1fea3aeca54bf22b5c87a8fc71",
+        "path": "reference/blender-course/TEACHING-REVIEW.md"
+      },
+      {
+        "sha256": "af1ace0d2f87d1eb5b6fbb3a779c873a216ec39a21c2b1227e58950074778a78",
+        "path": "reference/blender-course/tessellation-verification.json"
+      },
+      {
+        "sha256": "cfc684e2a64790a4b7a821aa4b45e56ed098f7546dabf8b73f8065dd4d606fdc",
+        "path": "reference/blender-course/volumes-verification.json"
+      },
+      {
+        "sha256": "c32abe3de40534b7bd89ab06dfa6aa10c8e8d9993ef04da1945f633c378fe80e",
+        "path": "reference/blender-course/lesson-masters/Advanced-Volumes.blend"
+      },
+      {
+        "sha256": "68315ed24b0d7f0b73ccc2ff2a9ffe00d1d719de0a0e5780d1c0be20beb83eed",
+        "path": "reference/blender-course/lesson-masters/Arrays-and-Lists.blend"
+      },
+      {
+        "sha256": "1b81863ab00982b14e1f1c049df6cbacf28df5a936042f56310630da146c9b15",
+        "path": "reference/blender-course/lesson-masters/Discretizing-Geometry.blend"
+      },
+      {
+        "sha256": "2171fbcbeb5b2bfb1de27e7e07df7b0be45702686fe1fbe7e42d69f845977c2a",
+        "path": "reference/blender-course/preparation-archive/before-new-lessons.blend"
+      },
+      {
+        "sha256": "133acf1755b8bcb61e79d01ca6a6613aedc32c2882a0010a0b724f5554cc3447",
+        "path": "reference/blender-course/preparation-archive/before-screenshot-session.blend"
+      },
+      {
+        "sha256": "d57b986117ab23188ccde04c21c6d39372b1905f4ba7e454437c4d6d3d38e061",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Advanced-Volumes-Session-1.blend"
+      },
+      {
+        "sha256": "b351a32463bf68d862a5f24c07b4a27802f9c2b9a0368bef47ddaa9c4d6b9dd9",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Advanced-Volumes-Session-2.blend"
+      },
+      {
+        "sha256": "9a270be74e5178a04fbd3c9e5459607b9b22baece5dafe4c2f008ebc060ead68",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Arrays-Lists-Session-1.blend"
+      },
+      {
+        "sha256": "7c4f69bff370b7b30cc7bdeba1fd49302dc57b0532e0428070447d56ac1d77c4",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Arrays-Lists-Session-2.blend"
+      },
+      {
+        "sha256": "429cb3e1dc984aca9492d56209f13e25f222762f0b8d7a16aa00d70043870486",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Attractors.blend"
+      },
+      {
+        "sha256": "46e96e0b736ee18be82530c4b4b940d006234fd00bcf74d9399795cee9c15e05",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Discretizing-Geometry-Session-1.blend"
+      },
+      {
+        "sha256": "3c0de08b7ab6c542351ce54e842e9c5787f226bfe7561983380a75c2f2543d47",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Discretizing-Geometry-Session-2.blend"
+      },
+      {
+        "sha256": "80785f4b51c896ee630a8cc9e88d127c7ab9f0fdabc750afcb3df189b92f0edc",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Final-Project-Fabrication.blend"
+      },
+      {
+        "sha256": "e2ab35205ac09442c8cebbf8cb89ce09287092676389942ecb1a8318fdbadba1",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Intro-Geometry-Nodes.blend"
+      },
+      {
+        "sha256": "04d3d24b6dbbc42c7765c79ed3e624d0630f57b45b72752490fed98977455834",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Point-Clouds-and-Volumes.blend"
+      },
+      {
+        "sha256": "b8129aed648628c63ea43fde4387e5ed3d63aca18d9bf5f520ec5acfe3688893",
+        "path": "reference/blender-course/preparation-archive/before-teaching-review/Tessellation-and-Lattices.blend"
+      },
+      {
+        "sha256": "613be4d4be1bfb6a212a4e84d549f776a651baa0d489290710aa68ed356d4d45",
+        "path": "reference/blender-course/preparation-archive/combined-before-session-split/Advanced-Volumes.blend"
+      },
+      {
+        "sha256": "843e4c3306008998fa35e03ddc4905defd29830e02bd6e789f7bfa2a834f3861",
+        "path": "reference/blender-course/preparation-archive/combined-before-session-split/Arrays-and-Lists.blend"
+      },
+      {
+        "sha256": "5b51743b145cc7e32d880ef043555bcce070bc2a7961b44d3c953e61685970e3",
+        "path": "reference/blender-course/preparation-archive/combined-before-session-split/Discretizing-Geometry.blend"
+      },
+      {
+        "sha256": "2202943a3d42dd50d50626abd42011ae2ad3eb0d68b7bff1359b02c94af55567",
+        "path": "reference/blender-course/preparation-archive/fabrication/01-Final-Project-Fabrication.blend"
+      },
+      {
+        "sha256": "423cc64a3ea99010337011836bc5227669e3d25032eeea27a50944b36f93d123",
+        "path": "reference/blender-course/preparation-archive/intro/01-Intro-Geometry-Nodes.blend"
+      },
+      {
+        "sha256": "f612ae6e3c9f691547b4401b6481cc8dab98254eb62b837dc61ffb3f3a57311e",
+        "path": "reference/blender-course/preparation-archive/tessellation/01-Tessellation-and-Lattices.blend"
+      },
+      {
+        "sha256": "efe1606bb76b113a6f504bfb19479f06b82ff5f4939ea3bb2aa42f786a870c2e",
+        "path": "reference/blender-course/__pycache__/build_lessons.cpython-313.pyc"
+      }
+    ],
+    "from": "reference/blender-course",
+    "to": "reference/archive/blender-course-preparation"
+  },
+  {
+    "files": [
+      {
+        "sha256": "c7a3c42c2df60504d44db3210494570a02123d6c09c5077d2b02e648271f9fc2",
+        "path": "reference/geometry101/Geometry101-teaching-notes.txt"
+      },
+      {
+        "sha256": "6ed863ccbb5baf431e916d1b08682feaee3e6f08cd1ab6e5b9e331053495d46f",
+        "path": "reference/geometry101/migration-record.json"
+      },
+      {
+        "sha256": "b13dac6cd57b1c59d4d9911aacb5ba35eb5b060005927c8c67daff4d808e4afa",
+        "path": "reference/geometry101/README.md"
+      },
+      {
+        "sha256": "1610d4d53fb65a2ccc3b0e27b08d9ba6cc7c92a93eb00b72aff9b0b3a838e624",
+        "path": "reference/geometry101/six-step-class-ready.png"
+      },
+      {
+        "sha256": "9ccfa777f64c2680c243adda88dcff9cfa62584fe766254528312446519f6150",
+        "path": "reference/geometry101/preparation-archive/add_final_exercises.py"
+      },
+      {
+        "sha256": "130264733727a42b11e5f4613b7e27a1add0c45c843473f9edd6cb5c39aab44f",
+        "path": "reference/geometry101/preparation-archive/before.png"
+      },
+      {
+        "sha256": "dc9e2a5267be9ae326af13d4231f8eeea3170719c85782bf0cd65b0d9e5e70e0",
+        "path": "reference/geometry101/preparation-archive/boolean-review.png"
+      },
+      {
+        "sha256": "37a7277abfc1c5d2f1cf25ffeac571e203cf7f114cde96132b84ee86e76dc9af",
+        "path": "reference/geometry101/preparation-archive/boolean-verification.json"
+      },
+      {
+        "sha256": "5b1be551cd3920bbc4d015e80195e827242c3dd6b52054e24531550051ad7960",
+        "path": "reference/geometry101/preparation-archive/class-ready.png"
+      },
+      {
+        "sha256": "15d7a14b72ea81c491cfcb00f69b8ab5678c3d57a9bf9521d49ffe047440322f",
+        "path": "reference/geometry101/preparation-archive/expose_pyramid_parameters.py"
+      },
+      {
+        "sha256": "399641722161f373b998d6fcfe8b6b603879c9063700edbd6ca82c470c663559",
+        "path": "reference/geometry101/preparation-archive/face-review.png"
+      },
+      {
+        "sha256": "8a63d42ece6e8f1b4a5e107dc155f0a85b7efbebb93e5aede6bf0754c9d4c64c",
+        "path": "reference/geometry101/preparation-archive/GEOMETRY101-before-boolean.blend"
+      },
+      {
+        "sha256": "f7424083dee7e7ce1a1c77038ea521e69777f70c6df46f62e06ec6637feef8f3",
+        "path": "reference/geometry101/preparation-archive/GEOMETRY101-before-class-prep.blend"
+      },
+      {
+        "sha256": "246dadf65836e9b360ae6aaacc5b7fe1d7e0234c92f7bff30c2c9676f0633054",
+        "path": "reference/geometry101/preparation-archive/GEOMETRY101-before-course-save.blend"
+      },
+      {
+        "sha256": "2b24591a5c239747c311ef79529e73dd5f0f0d0d269aa3dc3bc29d3d4e087279",
+        "path": "reference/geometry101/preparation-archive/GEOMETRY101-before-pyramid-revision.blend"
+      },
+      {
+        "sha256": "12348a1dff390b7b960724373628284fbccd4d83437a9e10a56914b0b936c3b7",
+        "path": "reference/geometry101/preparation-archive/GEOMETRY101-class-ready.blend1"
+      },
+      {
+        "sha256": "90a8be29cae0716ca144426978f8e8949d7b974234df9c135fc67478233ad804",
+        "path": "reference/geometry101/preparation-archive/line-review.png"
+      },
+      {
+        "sha256": "87f46648c064112627c9585cdd902ec8aa7273f453f997bc06c937e402601c87",
+        "path": "reference/geometry101/preparation-archive/original-node-record.json"
+      },
+      {
+        "sha256": "6f4fa4b9c6e682e9e0a6d131ff90c7592cc8f67b15c899fd5a567449aa917925",
+        "path": "reference/geometry101/preparation-archive/point-review.png"
+      },
+      {
+        "sha256": "cae6a01516a8f03032f1f1a285dc8c98c25b492bc34621d3f5bffef7cffff1ce",
+        "path": "reference/geometry101/preparation-archive/prepare_lesson.py"
+      },
+      {
+        "sha256": "11b6080027b63049a31c2d0577bfb6ef4c3ca51d095bf3bd132ac58493cbf076",
+        "path": "reference/geometry101/preparation-archive/pyramid-boolean-review.png"
+      },
+      {
+        "sha256": "fc3434cceb7b3b3862d19fd7be8465d64673ca5b888635399aa2d0fd29cc4ac8",
+        "path": "reference/geometry101/preparation-archive/pyramid-sequence-verification.json"
+      },
+      {
+        "sha256": "1c6b67fe6ae9be8cad5d58d8d8526277e13addd9361b1ad5481b6914ef7a8e09",
+        "path": "reference/geometry101/preparation-archive/README.md"
+      },
+      {
+        "sha256": "5677e469615c2934210f19600712231c9e4ed788482c06c685046490c8062429",
+        "path": "reference/geometry101/preparation-archive/revise_pyramid_sequence.py"
+      },
+      {
+        "sha256": "61abdc43720a9420fa30e3d81fd4ec4dbf9f48725b8f54ed2f2a33a0b65b41dd",
+        "path": "reference/geometry101/preparation-archive/verification.json"
+      },
+      {
+        "sha256": "a8aa403d3159165bd306f263983f5ac959e57d7c6a2b6498200c12da98de2f21",
+        "path": "reference/geometry101/preparation-archive/verify_boolean.py"
+      },
+      {
+        "sha256": "36aaf9c3e9260020adef4de89a7349b169ed00736a99302902ce962fe850066d",
+        "path": "reference/geometry101/preparation-archive/verify_lesson.py"
+      },
+      {
+        "sha256": "96a16d42cd9a33d0ff3b176d76a295417986826ad6fb09d104fb8efbbfa3315c",
+        "path": "reference/geometry101/preparation-archive/verify_pyramid_sequence.py"
+      }
+    ],
+    "from": "reference/geometry101",
+    "to": "reference/archive/geometry101-preparation"
+  },
+  {
+    "files": [
+      {
+        "sha256": "4974e33b1e7dfce498bb5a2715cf293eb36f4a5977d08a73bfa9f53b07c576db",
+        "path": "code/README.md"
+      },
+      {
+        "sha256": "c5c202c725e5aa0dd62cd21ff60f4d3977a89af29eccaef6289779ca4cdaebf3",
+        "path": "code/blender/01_a_point_is_three_numbers.py"
+      },
+      {
+        "sha256": "801c72752fa28a30339535d307cdadf218675636c1741b5073ac8a43565881b3",
+        "path": "code/blender/02_random_points.py"
+      },
+      {
+        "sha256": "ffc81cbe08f11ccdb3b80fa566a75a89042b8e3f51539caeb26487a86655848a",
+        "path": "code/blender/03_for_loop_and_edges.py"
+      },
+      {
+        "sha256": "3637001237d84a6725b73ede4f12d9a731317002957f150663f0ddf4e80d75a6",
+        "path": "code/blender/04_zigzag_if_statement.py"
+      },
+      {
+        "sha256": "69b5bf12cf3d0d67d5fab540500917b486c9ee2073a9ce6832f4576a4faccbde",
+        "path": "code/blender/05_sinusoidal_line.py"
+      },
+      {
+        "sha256": "4a8dec040ffd655d4f0f2021131b994f0a77c4df203c1d08310767648a774142",
+        "path": "code/blender/06_rectangular_array.py"
+      },
+      {
+        "sha256": "7fa29caa01a2045d8188963b9ce8b10ee0f12c2282fec4d437eff440c4145044",
+        "path": "code/blender/07_radial_array.py"
+      },
+      {
+        "sha256": "1415b00efdd424fbf7d5b0f380d63af06c7c9ab87ed3563365256805f1bc3306",
+        "path": "code/blender/08_hexagonal_array.py"
+      },
+      {
+        "sha256": "88bf404fb7d895113452431c6c773ccf63dfecb6941d77a2093f53f60efd7be7",
+        "path": "code/blender/09_distance.py"
+      },
+      {
+        "sha256": "91ebe68bac150f74c900f02b93ca751cd25a8aac4f8de52c715d2b3c1df7e8ef",
+        "path": "code/blender/10_remap.py"
+      },
+      {
+        "sha256": "ebcf016a84cc6a112865804990634300fd8f85558e094ad96746c7b71580ee43",
+        "path": "code/blender/11_single_attractor.py"
+      },
+      {
+        "sha256": "2ef6e22f31a477c022311d43eb4e0e6d7bbbefec7e875bcf3ef7022692917fda",
+        "path": "code/blender/12_multiple_attractors.py"
+      },
+      {
+        "sha256": "86506e058ad46c888c13c6c4ad2890a4344594c853fd6574dcbd5714f9fada0c",
+        "path": "code/blender/13_curve_attractor.py"
+      },
+      {
+        "sha256": "eec72720c18ff2144279b75464e98ed2c547fd7b71df52e6db86659ebc44bc97",
+        "path": "code/blender/14_instancing.py"
+      },
+      {
+        "sha256": "d0d8138fc7ae3b896d41c52304b0f49b3616ad11efcf333e814598efd05bfa10",
+        "path": "code/blender/sverchok/sv_01_point.py"
+      },
+      {
+        "sha256": "ff3cdb3a2029493aff5fd93bc61eb03796b53519ca74c5420aac2c3305f57784",
+        "path": "code/blender/sverchok/sv_02_random_points.py"
+      },
+      {
+        "sha256": "af858678617c815f424d52f0a4a719d97ef442bcc926c25a4bdcb7c841a9eac9",
+        "path": "code/blender/sverchok/sv_03_loop_edges.py"
+      },
+      {
+        "sha256": "ad25462b83cb185d668d9e600da9591a1bba9a115de144d69bc4da8c2cdeffb6",
+        "path": "code/blender/sverchok/sv_04_zigzag.py"
+      },
+      {
+        "sha256": "bc6aa114f70ce713017f018378f9562dfc8131626df4b2e6c2146779f7305d23",
+        "path": "code/blender/sverchok/sv_06_rect_array.py"
+      },
+      {
+        "sha256": "0b38354fd49249bd056098b96ce0eda5151b74f72ed2eafa3c475af5106ac356",
+        "path": "code/blender/sverchok/sv_07_radial_array.py"
+      },
+      {
+        "sha256": "d3dad64ee4125514ca5c8bad1ac1793b8c0a880db3720b5bfbd778d838e568c2",
+        "path": "code/blender/sverchok/sv_08_hex_array.py"
+      },
+      {
+        "sha256": "f34a8a4c1d055e61946a45c64fa3ba07adad255034692ba671a653ffe2be04b8",
+        "path": "code/blender/sverchok/sv_09_distance.py"
+      },
+      {
+        "sha256": "91901d39a3cf85d2b37bce601f7281460f99c5a17ce3503b6f13a3a845e0211d",
+        "path": "code/blender/sverchok/sv_10_remap.py"
+      },
+      {
+        "sha256": "dc86ebf2888a4add11ec9e9ffa3962105796710ae4b62ef1287ff15b81cffa6d",
+        "path": "code/blender/sverchok/sv_11_single_attractor.py"
+      },
+      {
+        "sha256": "ffaccbb38f68cae2bd719c83d330dae656976c0575a5769f1e89bab8502ea54d",
+        "path": "code/blender/sverchok/sv_12_multi_attractors.py"
+      },
+      {
+        "sha256": "06d5ca7b03a1f26f0ca2bed7164145ed5cc1a7a44cf81e808937176236566949",
+        "path": "code/blender/sverchok/sv_13_curve_attractor.py"
+      },
+      {
+        "sha256": "e1d4ebd12113fd1026de5b93f3de449c3f246b7853daa042503408e75cdf965c",
+        "path": "code/blender/sverchok/sv_14_boxes.py"
+      }
+    ],
+    "from": "code",
+    "to": "reference/archive/legacy-code"
+  },
+  {
+    "files": [
+      {
+        "sha256": "c6cb88ed68b5de72908691be61a813203bec58a1c5cde434e29afbca0feb7b57",
+        "path": "files/blender/geometry101/GEOMETRY101-class-ready.blend1"
+      }
+    ],
+    "from": "files/blender/geometry101/GEOMETRY101-class-ready.blend1",
+    "to": "reference/archive/geometry101-preparation/latest-save-backup.blend1"
+  },
+  {
+    "files": [
+      {
+        "sha256": "b225463ad29177dea48d4657cefb0877c3506b274cd0f1dfb3a2c80f0db680e9",
+        "path": "files/blender/geometry101/GEOMETRY101-class-ready.blend"
+      },
+      {
+        "sha256": "9306638475f9abc5ecfa4e6e7b78acdcc4baf00ef5d0bee8b22ada7e8218b431",
+        "path": "files/blender/geometry101/README.md"
+      }
+    ],
+    "from": "files/blender/geometry101",
+    "to": "files/blender/02-geometry-fundamentals"
+  },
+  {
+    "files": [
+      {
+        "sha256": "9b21ccf798491323fd99b42d6a06b6b4fddb10f620d59243aed541b8a39b1bca",
+        "path": "files/csgblender.blend"
+      }
+    ],
+    "from": "files/csgblender.blend",
+    "to": "reference/archive/2026-09-12-csg-replacement/csg-from-files.blend"
+  },
+  {
+    "files": [
+      {
+        "sha256": "10d1df1c07e03e49dbd2822e66f6fb3b020fd8e09b9b0fe442d48502594ae2a6",
+        "path": "files/blender/01-intro-geometry-nodes/csgblender.blend"
+      }
+    ],
+    "from": "files/blender/01-intro-geometry-nodes/csgblender.blend",
+    "to": "reference/archive/2026-09-12-csg-replacement/csg-from-session-folder.blend"
+  },
+  {
+    "files": [
+      {
+        "sha256": "9b21ccf798491323fd99b42d6a06b6b4fddb10f620d59243aed541b8a39b1bca",
+        "path": "files/blender/01-intro-geometry-nodes/csgblender.blend1"
+      }
+    ],
+    "from": "files/blender/01-intro-geometry-nodes/csgblender.blend1",
+    "to": "reference/archive/2026-09-12-csg-replacement/csg-save-backup.blend1"
+  },
+  {
+    "files": [
+      {
+        "sha256": "865391159a7f425f46240f3a4541c9fae28bdd6050eaf886643e735dc93cd488",
+        "path": "files/blender/blender python.blend"
+      }
+    ],
+    "from": "files/blender/blender python.blend",
+    "to": "reference/archive/legacy-code/blender-python.blend"
+  },
+  {
+    "files": [
+      {
+        "sha256": "bda8ee722b869761e7aa5dd2d807edd7d0d5d7590e06adfbbfbd209fd1600c80",
+        "path": "images/blender/s01-difference-geonodes.png"
+      }
+    ],
+    "from": "images/blender/s01-difference-geonodes.png",
+    "to": "reference/archive/2026-09-12-csg-replacement/previous-geonodes.png"
+  },
+  {
+    "files": [
+      {
+        "sha256": "3b1ffeac22f13604045e3ccb04238854dfafb1d5e1a7a4f8f1ae0c9a5f38974d",
+        "path": "images/blender/s01-difference-viewport.png"
+      }
+    ],
+    "from": "images/blender/s01-difference-viewport.png",
+    "to": "reference/archive/2026-09-12-csg-replacement/previous-viewport.png"
+  },
+  {
+    "files": [
+      {
+        "sha256": "bb72c0936d6ab1b3b7b0bb5f0d1facf43e7a1cd8def8851f2404a377df864d15",
+        "path": "files/blender/01-intro-geometry-nodes/preview.png"
+      }
+    ],
+    "from": "files\\blender\\01-intro-geometry-nodes\\preview.png",
+    "to": "reference/archive/blender-course-preparation/previews/01-intro-geometry-nodes.png"
+  },
+  {
+    "files": [
+      {
+        "sha256": "2382904321d66207ad67313c00e2ed435b8a4dc76e0e8888e621542d2479b681",
+        "path": "files/blender/03-arrays-lists/preview.png"
+      }
+    ],
+    "from": "files\\blender\\03-arrays-lists\\preview.png",
+    "to": "reference/archive/blender-course-preparation/previews/03-arrays-lists.png"
+  },
+  {
+    "files": [
+      {
+        "sha256": "7f41d43241fcc4dddd7dc0934adfc17214a185ecfe6044b0a555575408ecace5",
+        "path": "files/blender/04-attractors/preview.png"
+      }
+    ],
+    "from": "files\\blender\\04-attractors\\preview.png",
+    "to": "reference/archive/blender-course-preparation/previews/04-attractors.png"
+  },
+  {
+    "files": [
+      {
+        "sha256": "2306bef69d93cbd123a9056313ca7c52ffaa2c23f587437c0d469959106ef65e",
+        "path": "files/blender/05-tessellation-lattices/preview.png"
+      }
+    ],
+    "from": "files\\blender\\05-tessellation-lattices\\preview.png",
+    "to": "reference/archive/blender-course-preparation/previews/05-tessellation-lattices.png"
+  },
+  {
+    "files": [
+      {
+        "sha256": "20732fa38dd35b768541b85bd7525455e88988873b5a9f647d4fda03025d8a36",
+        "path": "files/blender/06-point-clouds-volumes/preview.png"
+      }
+    ],
+    "from": "files\\blender\\06-point-clouds-volumes\\preview.png",
+    "to": "reference/archive/blender-course-preparation/previews/06-point-clouds-volumes.png"
+  },
+  {
+    "files": [
+      {
+        "sha256": "7e555c2349b5478889befdce3a9dc0299193115ed271c73331991786f1bc19b6",
+        "path": "files/blender/07-advanced-volumes/preview.png"
+      }
+    ],
+    "from": "files\\blender\\07-advanced-volumes\\preview.png",
+    "to": "reference/archive/blender-course-preparation/previews/07-advanced-volumes.png"
+  },
+  {
+    "files": [
+      {
+        "sha256": "bf9f736aeab6c4ff455100b82509674f238f57fc339a26c6b4407a20e4edfbfa",
+        "path": "files/blender/08-discretizing-geometry/preview.png"
+      }
+    ],
+    "from": "files\\blender\\08-discretizing-geometry\\preview.png",
+    "to": "reference/archive/blender-course-preparation/previews/08-discretizing-geometry.png"
+  },
+  {
+    "files": [
+      {
+        "sha256": "fa935d298f9ed3c8c82c5b410db529e78ad2f110564f3af1d4e9f05ecc1da411",
+        "path": "files/blender/09-final-project/preview.png"
+      }
+    ],
+    "from": "files\\blender\\09-final-project\\preview.png",
+    "to": "reference/archive/blender-course-preparation/previews/09-final-project.png"
+  }
+]

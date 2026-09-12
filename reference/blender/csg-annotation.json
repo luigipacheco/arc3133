@@ -1,0 +1,20 @@
+{
+  "session": "S01",
+  "file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
+  "scene": "01 - CSG example",
+  "group": "Geometry Nodes",
+  "geometry_unchanged": true,
+  "geometry_sha256": "e582b091dcdf025357edd11ac7339ede17643bb6305b232f8fa795cd31c7be27",
+  "counts": {
+    "vertices": 687,
+    "edges": 1123,
+    "faces": 428
+  },
+  "native_names_preserved": true,
+  "frames": 5,
+  "removed_disconnected_nodes": [
+    "Group Input",
+    "UV Sphere"
+  ],
+  "sha256": "7dbcdf5015d70d343c79a01d04f5847135c7c939db117692fb75815bf0c5db2c"
+}

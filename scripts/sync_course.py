@@ -56,7 +56,6 @@ class Course:
         self.by_id = {x["id"]: x for x in self.assessments}
         self.policy = (ROOT / "syllabus/policies.md").read_text(encoding="utf-8").strip()
         self.blender = self.data.get("blender", {})
-        self.blender_images = json.loads((ROOT / "_data/blender_images.json").read_text(encoding="utf-8"))
         self.sessions = self.blender.get("sessions", [])
         self.unit_sessions = {}
         for s in self.sessions:
@@ -111,6 +110,10 @@ class Course:
         return False
 
     def validate(self):
+        people = self.meta.get("instructors")
+        assert isinstance(people, list) and people, "course.instructors must list at least one instructor"
+        assert all(p.get("name") for p in people), "Every entry in course.instructors needs a name"
+        assert "instructor" not in self.meta, "Retired: use the course.instructors list, not course.instructor"
         for group, items in self.data['decisions'].items():
             assert all(isinstance(x, str) for x in items), f"Quote colon-containing text in decisions.{group}"
         assert list(self.weeks) == list(range(1, 16)), "Expected 15 ordered weeks"
@@ -165,7 +168,15 @@ class Course:
         return f"Week {value} — {d.strftime('%b')} {d.day}"
 
     def banner(self):
-        return f"> **{self.data['status']} · {self.data['revision']}.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.\n\n"
+        """The instructor-facing notice. Syllabus and reference documents only."""
+        return (f"> **{self.data['status']} · {self.data['revision']}.** The teaching sequence is "
+                "flexible. Dates and weights below are a coordinated draft; outstanding instructor "
+                "and administrative decisions are listed in the syllabus.\n\n")
+
+    def notice(self):
+        """What students see. A different audience deserves a different sentence."""
+        text = (self.data.get("student_notice") or "").strip()
+        return f"> {text}\n\n" if text else ""
 
     def project_url(self, p):
         p = self.projects[p] if isinstance(p, str) else p
@@ -243,9 +254,6 @@ class Course:
             out += "**Teaching note:** " + u["teaching_note"] + "\n\n"
         out += self.blender_files(u, web)
         out += "**Recording / revised slides:** Not yet linked; this is the lesson outline.\n\n"
-        if web and any(i["unit"] == u["id"] for i in self.blender_images):
-            out += '## Examples from the class files\n\nSelect an image to inspect the original screenshot at full resolution.\n\n'
-            out += '{% include blender_screenshots.html unit="' + u["id"] + '" %}\n\n'
         return out
 
     def asset(self, path, web):
@@ -296,6 +304,84 @@ class Course:
             return ""
         return " · ".join(self.link(label, url) for label, url in found)
 
+    def project_spine(self):
+        """The four projects as the course's spine: what you do, what it ends in."""
+        rows = []
+        for p in self.projects.values():
+            title = self.link(p["id"] + " — " + p["title"], self.project_url(p))
+            ends = p["milestones"][-1]["title"]
+            rows.append([title, p["description"].strip().rstrip("."),
+                         ends, str(sum(a["weight"] for a in p["milestones"])) + "%"])
+        return table(["Project", "What you do", "Ends in", "Weight"], rows)
+
+    def sequence_table(self):
+        """The nine units, each shown against the project it feeds."""
+        owner = {u: p["id"] for p in self.projects.values() for u in p["units"]}
+        rows = []
+        for u in self.units.values():
+            open_now = u["id"] in self.open_units
+            name = self.link(u["id"] + " — " + u["title"], self.unit_url(u)) if open_now \
+                else u["id"] + " — " + u["title"]
+            weeks = [str(w["week"]) for w in self.weeks.values() if u["id"] in w["units"]]
+            rows.append([name, ", ".join(weeks) or "—", owner.get(u["id"], "—"),
+                         "Posted" if open_now else "With the class"])
+        return table(["Lesson", "Week", "Feeds", "Status"], rows)
+
+    def latest_class(self):
+        """A one-line pointer to the most recent posted class."""
+        if not self.open_weeks:
+            return ""
+        n = max(self.open_weeks)
+        w = self.weeks[n]
+        return ("**Most recently posted:** "
+                + self.link(f"Class {n:02d} — {w['title']}", self.class_url(n))
+                + f" · {self.when(n)}\n\n")
+
+    def whats_next(self):
+        """The next few deadlines, instead of the whole 16-row calendar.
+
+        'Next' is measured from the most recently posted class, which is the only
+        notion of 'now' this generator has. The full calendar keeps its home on
+        the syllabus page, which is linked underneath.
+        """
+        now = max(self.open_weeks) if self.open_weeks else 0
+        upcoming = sorted((a for a in self.assessments
+                           if isinstance(a["due"], int) and a["due"] >= now),
+                          key=lambda a: a["due"])[:4]
+        out = "## What is next\n\n"
+        if upcoming:
+            rows = [[self.link(a["id"] + " — " + a["title"], self.assignment_url(a)),
+                     self.when(a["due"]), f"{a['weight']}%"] for a in upcoming]
+            out += table(["Next due", "Date", "Weight"], rows) + "\n"
+        else:
+            out += "No dated submissions remain; the final review closes the course.\n\n"
+        out += (self.link("The full teaching calendar", "/resources/course-policies/")
+                + " lists all fifteen weeks with every deadline and the reserved review windows.\n\n")
+        return out
+
+    def home(self):
+        m, h = self.meta, self.data["home"]
+        out = front(m["title"], "index") + self.notice()
+        out += f"**{m['code'].split('-')[0].strip()} · {m['institution']}**\n\n"
+        out += h["tagline"].strip() + "\n\n"
+        out += self.latest_class()
+        out += "## Four projects\n\n"
+        out += ("The course is one continuous piece of work in four stages. Each project takes the "
+                "geometry and the knowledge of the one before it rather than starting over on an "
+                "unrelated object.\n\n")
+        out += self.project_spine() + "\n"
+        out += "## The sequence\n\n"
+        out += ("Nine teaching units build those four projects. They are units, not weeks — a class "
+                "may continue the previous topic when that is what the work needs.\n\n")
+        out += self.sequence_table() + "\n"
+        out += "## How it is taught\n\n" + h["teaching"].strip() + "\n\n"
+        out += "## Making\n\n" + h["making"].strip() + "\n\n"
+        out += self.whats_next()
+        out += (self.link("Assignments and grading", "/assignments/overview/")
+                + " · " + self.link("How the lessons work", "/tutorials/how-tutorials-work/")
+                + " · " + self.link("Course syllabus and policies", "/resources/course-policies/") + "\n")
+        return out
+
     def release_note(self):
         """Explain the unlinked rows, so a held brief reads as timing, not an omission."""
         held = [p["id"] + " — " + p["title"] for p in self.projects.values() if p["id"] not in self.open_work]
@@ -334,8 +420,22 @@ class Course:
         return (f"# {m['institution']}\n\n## {m['code']} — {m['title']}\n\n### {m['subtitle']}\n\n"
                 f"**Term:** {m['term']} · **Credits:** {m['credits']}\n\n"
                 f"**Meeting:** {m['meeting']} · **Location:** {m['location']}\n\n"
-                f"**Instructor:** {m['instructor']} · {m['email']} · Office {m['office']} · {m['office_hours']}\n\n"
+                + self.instructors() +
                 f"**TA:** {m['ta']}\n\n**Prerequisites:** {m['prerequisites']}\n\n")
+
+    def instructors(self):
+        """Both instructors, on every view. A blank field says so rather than vanishing."""
+        people = self.meta["instructors"]
+        label = "**Instructor:**" if len(people) == 1 else "**Instructors:**"
+        lines = []
+        for p in people:
+            parts = [p["name"], p.get("email") or "email to be confirmed"]
+            parts.append(f"Office {p['office']}" if p.get("office") else "office to be confirmed")
+            parts.append(p.get("office_hours") or "office hours to be confirmed")
+            lines.append(" · ".join(parts))
+        if len(lines) == 1:
+            return f"{label} {lines[0]}\n\n"
+        return label + "\n\n" + bullets(lines) + "\n"
 
     def references(self):
         refs = self.data["references"]
@@ -343,8 +443,8 @@ class Course:
                 "\n### Visual precedents\n\n" + table(["Reference", "Use"], [[f"[{a}]({b})", c] for a,b,c in refs["precedents"]]) +
                 "\n### Technical documentation\n\n" + bullets([f"[{a}]({b}) — {c}" for a,b,c in refs["documentation"]]))
 
-    def syllabus(self, full):
-        out = MARKER + "\n\n" + self.metadata() + self.banner()
+    def syllabus(self, full, student=False):
+        out = MARKER + "\n\n" + self.metadata() + (self.notice() if student else self.banner())
         out += "## Course description\n\n" + self.data["description"] + "\n"
         out += "## Learning outcomes\n\n" + bullets(self.data["outcomes"]) + "\n"
         out += "## Learning pace and class format\n\n" + self.data["pacing"] + "\n" + self.data["format"] + "\n"
@@ -372,10 +472,10 @@ class Course:
 
     def build(self):
         self.emit("syllabus/ARC3133_Syllabus_Fall2026.md", self.syllabus(True))
-        self.emit("syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md", self.syllabus(False))
-        self.emit("index.md", front(self.meta["title"], "index") + self.banner() + "## " + self.meta["title"] + "\n\n" + self.data["description"] + "\n## Four developing projects\n\n" + self.project_table(True) + "\n## Target teaching calendar\n\n" + self.calendar(True) + "\n" + self.data["pacing"] + "\n" + self.link("Assignments and grading", "/assignments/overview/") + " · " + self.link("Course syllabus and policies", "/resources/course-policies/") + "\n\n" + self.data["materials_status"])
+        self.emit("syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md", self.syllabus(False, student=True))
+        self.emit("index.md", self.home())
         for w in self.weeks.values():
-            out = front(f"{w['week']:02d} · {w['title']}", categories=["classes"]) + self.banner()
+            out = front(f"{w['week']:02d} · {w['title']}", categories=["classes"]) + self.notice()
             out += f"**Target session:** {self.when(w['week'])}\n\n{w['focus']}\n\n"
             if w["units"]:
                 out += "## Learning sequence\n\n" + bullets([self.link(u + " — " + self.units[u]["title"], self.unit_url(self.units[u])) for u in w["units"]]) + "\n"
@@ -394,10 +494,10 @@ class Course:
             out += "## Prepare for the next session\n\nBring the current editable file, a small test and one question about its behavior. Check the linked unit outline; watch a recording only when a link has been posted. The next dated topic is a target, and the instructor may continue current work.\n"
             if w["week"] in self.open_weeks:
                 self.emit(f"modules/classes/_posts/2000-01-{w['week']:02d}-class-{w['week']:02d}.md", out)
-        overview = front("Assignments · overview", categories=["assignments"]) + self.banner() + self.data["assessment_notes"] + "\n" + self.release_note() + self.project_table(True) + "\n" + self.assessment_table(True) + "\n## Shared standards\n\n" + self.data["presentation"] + "\n" + self.link("Fabrication, AI and standing policies", "/resources/course-policies/")
+        overview = front("Assignments · overview", categories=["assignments"]) + self.notice() + self.data["assessment_notes"] + "\n" + self.release_note() + self.project_table(True) + "\n" + self.assessment_table(True) + "\n## Shared standards\n\n" + self.data["presentation"] + "\n" + self.link("Fabrication, AI and standing policies", "/resources/course-policies/")
         self.emit("modules/assignments/_posts/1999-12-31-overview.md", overview)
         for i,p in enumerate(self.projects.values(), 2):
-            out = front(p["id"] + " · " + p["title"], categories=["assignments"]) + self.banner() + p["description"] + "\n\n"
+            out = front(p["id"] + " · " + p["title"], categories=["assignments"]) + self.notice() + p["description"] + "\n\n"
             out += "Complete the short assignments below in order. Combine and revise them as one project for the booklet; the combined project carries no additional grade.\n\n"
             out += "".join(self.assignment(a, "##") for a in p["milestones"])
             out += "## Related lessons\n\n" + bullets([self.link(u + " — " + self.units[u]["title"], self.unit_url(self.units[u])) for u in p["units"]])
@@ -407,28 +507,21 @@ class Course:
         for a, i in [(self.by_id["GSM"],1), (self.by_id["MID"],6), (self.by_id["BOOK"],7)]:
             if a["id"] not in self.open_work:
                 continue
-            self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{a['id'].lower()}-{slug(a['title'])}.md", front(a["id"] + " · " + a["title"], categories=["assignments"]) + self.banner() + self.assignment(a, "##") + "\n" + self.link("Shared submission standards and grading", "/assignments/overview/"))
-        self.emit("modules/tutorials/_posts/1999-12-31-how-tutorials-work.md", front("How the lessons work", categories=["tutorials"]) + self.banner() + self.data["format"] + "\n" + self.data["pacing"] + "\n" + self.roster() + "\n" + self.data["materials_status"])
-        self.emit("modules/tutorials/_posts/2000-01-01-the-notation.md", front("Vocabulary · what the operations mean", categories=["tutorials"]) + self.banner() + self.data["presentation"].split("\n\n")[1] + "\n\n" + table(["Term", "Meaning", "Example / distinction"], self.data["vocabulary"]))
+            self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{a['id'].lower()}-{slug(a['title'])}.md", front(a["id"] + " · " + a["title"], categories=["assignments"]) + self.notice() + self.assignment(a, "##") + "\n" + self.link("Shared submission standards and grading", "/assignments/overview/"))
+        self.emit("modules/tutorials/_posts/1999-12-31-how-tutorials-work.md", front("How the lessons work", categories=["tutorials"]) + self.notice() + self.data["format"] + "\n" + self.data["pacing"] + "\n" + self.roster() + "\n" + self.data["materials_status"])
+        self.emit("modules/tutorials/_posts/2000-01-01-the-notation.md", front("Vocabulary · what the operations mean", categories=["tutorials"]) + self.notice() + self.data["presentation"].split("\n\n")[1] + "\n\n" + table(["Term", "Meaning", "Example / distinction"], self.data["vocabulary"]))
         for i,u in enumerate(self.units.values(), 2):
             if u["id"] not in self.open_units:
                 continue
-            self.emit(f"modules/tutorials/_posts/2000-01-{i:02d}-{u['id'].lower()}-{slug(u['title'])}.md", front(u["id"] + " · " + u["title"], categories=["tutorials"]) + self.banner() + self.unit(u, True))
+            self.emit(f"modules/tutorials/_posts/2000-01-{i:02d}-{u['id'].lower()}-{slug(u['title'])}.md", front(u["id"] + " · " + u["title"], categories=["tutorials"]) + self.notice() + self.unit(u, True))
         if "TRANSLATION" in self.open_units:
             self.emit(f"modules/tutorials/_posts/2000-01-{len(self.units)+2:02d}-translation-what-you-have-been-reading.md",
-                      front("Translation · what you have been reading", categories=["tutorials"]) + self.banner() + self.translation(True))
+                      front("Translation · what you have been reading", categories=["tutorials"]) + self.notice() + self.translation(True))
         self.emit("modules/resources/_posts/2000-01-01-reading.md", front("Reading and documentation", categories=["resources"]) + self.references())
         self.emit("modules/resources/_posts/2000-01-02-references.md", front("Visual precedents", categories=["resources"]) + table(["Reference", "Use"], [[f"[{a}]({b})", c] for a,b,c in self.data["references"]["precedents"]]) + "\nFor each example, identify the geometric element, how it is organized, what varies, and how the image communicates those decisions. Attribute precedents and develop your own interpretation.\n")
-        self.emit("modules/resources/_posts/2000-01-03-software.md", front("Software and materials", categories=["resources"]) + self.banner() + self.data["software"] + "\n" + self.data["fabrication"] + "\n" + self.data["materials_status"])
-        policy = front("Course syllabus and policies", categories=["resources"], permalink="/resources/course-policies/") + self.banner() + self.syllabus(False).replace(MARKER + "\n\n", "", 1)
+        self.emit("modules/resources/_posts/2000-01-03-software.md", front("Software and materials", categories=["resources"]) + self.notice() + self.data["software"] + "\n" + self.data["fabrication"] + "\n" + self.data["materials_status"])
+        policy = front("Course syllabus and policies", categories=["resources"], permalink="/resources/course-policies/") + self.syllabus(False, student=True).replace(MARKER + "\n\n", "", 1)
         self.emit("modules/resources/_posts/2000-01-04-course-policies.md", policy)
-        visible_captures = [i for i in self.blender_images if i["unit"] in self.open_units]
-        if visible_captures:
-            gallery = front("Blender screenshots", categories=["resources"], permalink="/resources/blender-screenshots/", capture_units=sorted(self.open_units)) + self.banner()
-            gallery += "# Blender screenshots\n\nGeometry Nodes setups and matching 3D viewport screenshots from the separate class files. Select an image for full resolution, or download the PNG for your own notes and presentations.\n\n"
-            gallery += table(["Session", "Example"], [[i["session"], f"[{i['title']}](#capture-{i['session'].lower()})"] for i in visible_captures])
-            gallery += '\n{% include blender_screenshots.html released_only=true %}\n'
-            self.emit("modules/resources/_posts/2000-01-05-blender-screenshots.md", gallery)
         self.build_reference()
         self.build_redirects()
 
@@ -444,9 +537,8 @@ class Course:
                   "- [Teaching material register](reference/Teaching_Material_Register.md)\n\n"
                   "## Teaching structure\n\n" + self.data["description"] + "\n" + self.project_table() + "\n" + self.data["pacing"] +
                   "\n## Update and verify\n\n"
-                  "```text\nbundle install\npython -m pip install -r scripts/requirements.txt\npython scripts/sync_course.py\nbundle exec jekyll build\npython scripts/verify_course.py\n```\n\n"
-                  "Change the source first, then regenerate. Verification checks course drift, grading, dates, links, screenshots and publication paths. "
-                  "[GitHub Pages setup](reference/GITHUB-PAGES.md) explains the one-time repository setting and automatic checked deployments."
+                  "```text\npython -m pip install -r scripts/requirements.txt\npython scripts/sync_course.py\npython scripts/sync_course.py --check\nbundle exec jekyll build\n```\n\n"
+                  "Change the source first, then regenerate. Check mode fails for drift, an invalid grading total, inconsistent dates or submissions in reserved review weeks. "
                   "\n\n### Releasing a class\n\n"
                   "Classes, lessons and assignment briefs are published one at a time so students follow along rather than read ahead. "
                   "The `release:` block in [syllabus/course.yml](syllabus/course.yml) is the switch: a page not listed there is not written to the site, "
@@ -459,15 +551,13 @@ class Course:
                   "or the held-back pages go live.\n\n"
                   "Blender session files are listed once under `blender:` in the same source and linked from every lesson that uses them. "
                   "A session is only linked when its `.blend` is actually present, and [files/blender/README.md](files/blender/README.md) is generated from the same list.\n\n"
-                  "[Blender screenshots](images/blender/README.md) contains 12 pairs of original Geometry Nodes and viewport PNGs, named by session and example, plus a ZIP for slide preparation. "
-                  "The matching lesson pages and Resources gallery show the released sessions. Image captions and source details are generated from the capture records with `python scripts/finalize_blender_images.py`; then regenerate the site views as usual.\n\n"
                   "The site uses Jekyll and P2PU Course in a Box. Post filename dates control navigation order; actual class dates come from the curriculum source.\n\n"
                   "## Teaching files and history\n\n"
                   "[Geometry 101](files/blender/geometry101/README.md) is the existing Week 3 lesson: Point → Line → Edge → Face → Solid → Boolean. "
                   "The pyramid retains exposed Width, Depth and Height. [Instructor materials](reference/geometry101/README.md) preserve its preparation history.\n\n"
                   "Earlier course plans, site pages and slide decks are preserved in the [dated snapshot](reference/archive/2026-09-12-before-sequence/ARCHIVE_README.md). "
-                  "Earlier slide decks remain available where explicitly linked; they do not define current requirements. "
-                  "The source/planning directories, earlier code exercises and `slides/src` are excluded from the published course.\n\n"
+                  "The existing `slides/` and `code/` directories are historical materials awaiting alignment; they do not define current requirements. "
+                  "They and the source/planning directories are excluded from the published course.\n\n"
                   "## License\n\nCourse content CC BY-SA 4.0 unless noted. Template © P2PU.\n")
         self.emit("README.md", readme)
         self.emit("reference/Curriculum_Decisions.md", MARKER + "\n\n# Curriculum decisions\n\n" + self.banner() + self.decisions() + "\n## Why the sequence changed\n\n" + self.data["instructor_notes"])
@@ -483,7 +573,7 @@ class Course:
         self.emit("reference/ARC3133_Vocabulary_Spine.md", MARKER + "\n\n# ARC 3133 — vocabulary\n\n" + table(["Term", "Meaning", "Example / distinction"], self.data["vocabulary"]) + "\n" + self.data["presentation"].split("\n\n")[1] + "\n")
         for name in ["ARC3133_Module_Structure_v2.md", "ARC3133_Course_Materials_Brief.md", "ATLV_Audit_vs_ARC3133.md", "ARC3133_Course_Review_2026-09-12.md"]:
             self.emit("reference/" + name, MARKER + f"\n\n# Historical planning document\n\nThis plan has been superseded. Use the [current syllabus](../syllabus/ARC3133_Syllabus_Fall2026.md) and [curriculum source](../syllabus/course.yml).\n\nThe [original document](archive/2026-09-12-before-sequence/reference/{name}) is preserved for historical reference.\n")
-        self.emit("slides/README.md", MARKER + "\n\n# Earlier slide decks\n\nThese decks predate the revised learning sequence. They remain available where explicitly linked. Their source files in `slides/src` are excluded from the course site. They are not current weekly briefs or assignment instructions.\n\nUse the [teaching material register](../reference/Teaching_Material_Register.md) to see what is ready and the [curriculum source](../syllabus/course.yml) before preparing new decks. The numbered files may not match the revised teaching weeks.\n")
+        self.emit("slides/README.md", MARKER + "\n\n# Earlier slide decks\n\nThese decks predate the revised learning sequence. They are retained as historical source material and are excluded from the course site. They are not current weekly briefs or assignment instructions.\n\nUse the [teaching material register](../reference/Teaching_Material_Register.md) to see what is ready and the [curriculum source](../syllabus/course.yml) before preparing new decks. The numbered files may not match the revised teaching weeks.\n")
         self.emit("code/README.md", MARKER + "\n\n# Earlier code exercises\n\nThese Blender Python and Sverchok examples are retained teaching references. They are not the current class sequence and do not create a required coding final.\n\nCurrent requirements are in the [syllabus](../syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md); future class files follow the [material register](../reference/Teaching_Material_Register.md).\n")
 
     def blender_index(self):

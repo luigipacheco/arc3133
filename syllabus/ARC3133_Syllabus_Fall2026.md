@@ -10,7 +10,10 @@
 
 **Meeting:** Tuesday, 5:00 PM–7:50 PM · **Location:** FAU/BC Higher Ed Complex FTL — room to be confirmed
 
-**Instructor:** Luis Pacheco Alcala · lpachecoalcala@fau.edu · Office 712 · By appointment
+**Instructors:**
+
+- Luis Pacheco Alcala · lpachecoalcala@fau.edu · Office 712 · By appointment
+- Christine Khouri Sader · email to be confirmed · office to be confirmed · By appointment
 
 **TA:** None assigned
 
@@ -418,15 +421,7 @@ mass   = union(base, tower)
 result = difference(mass, void)    # not difference(void, mass)
 ```
 
-### Blender files for this lesson
-
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
-
-**S01 — [Intro to Geometry Nodes — transformations and CSG](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend)**
-
-Scenes in this file: Start, Translation, Rotation, Scale, Order, Union, Difference, Intersect, Massing exercise. Open them in the order listed.
-
-Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
+**Lesson file:** To be prepared and verified.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -474,8 +469,6 @@ Scenes in this file: Point, Line, Edge, Face, Solid, Boolean. Open them in the o
 
 The existing six-scene lesson. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
 
-Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
-
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
 ## U04 — Arrays and lists
@@ -512,19 +505,7 @@ for j in range(rows):                      # nested loop = grid
 
 **Teaching note:** Split this unit across sessions. A field evaluated across elements is not itself a Repeat Zone; show explicit iteration first, then compare with an efficient field-based construction. Keep Grasshopper data-tree terminology distinct from Blender field evaluation.
 
-### Blender files for this lesson
-
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
-
-**S03 — [Arrays and Lists I — linear and nested grid](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
-
-Scenes in this file: Linear loop, Nested grid. Open them in the order listed.
-
-**S04 — [Arrays and Lists II — arrangements and rules](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend)**
-
-Scenes in this file: Hexagonal array, Radial array, If and range, Sine curve. Open them in the order listed.
-
-Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
+**Lesson file:** To be prepared and verified.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -555,15 +536,7 @@ for p in points:
     place(component, p, scale=size)
 ```
 
-### Blender files for this lesson
-
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
-
-**S05 — [Attractors](../files/blender/04-attractors/Attractors.blend)**
-
-Scenes in this file: Read the field, One point, Multiple points, Curve attractor. Open them in the order listed.
-
-Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
+**Lesson file:** To be prepared and verified.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -593,15 +566,7 @@ for cell in subdivide(surface, u, v):
     keep(panel)
 ```
 
-### Blender files for this lesson
-
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
-
-**S06 — [Tessellation and Lattices](../files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend)**
-
-Scenes in this file: Tessellation, Lattice, Attractor lattice. Open them in the order listed.
-
-Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
+**Lesson file:** To be prepared and verified.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -635,19 +600,7 @@ for p in cloud:
 volume = voxelize(cloud, size=0.5)
 ```
 
-### Blender files for this lesson
-
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
-
-**S07 — [Point Clouds and Volumes](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)**
-
-Scenes in this file: Import points, Analyze points, Points to volume. Open them in the order listed.
-
-Keep the data folder together — the file reads teaching-courtyard.ply from beside it. It is a synthetic teaching cloud, not a survey.
-
-Supporting files: [Teaching point cloud](../files/blender/06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](../files/blender/06-point-clouds-volumes/teaching-courtyard.json).
-
-Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
+**Lesson file:** To be prepared and verified.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -681,19 +634,7 @@ surface = extract(grid, iso=0.0)           # where the field is zero
 
 **Teaching note:** A noise-modified implicit field is not automatically an exact signed distance field. Keep the distinction visible and introduce specialized groups only when their inputs and outputs can be explained.
 
-### Blender files for this lesson
-
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
-
-**S08 — [Advanced Volumes I — signed distance and Boolean](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend)**
-
-Scenes in this file: Mesh to SDF, Signed distance, SDF Boolean. Open them in the order listed.
-
-**S09 — [Advanced Volumes II — noise and surface extraction](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend)**
-
-Scenes in this file: Noise field. Open them in the order listed.
-
-Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
+**Lesson file:** To be prepared and verified.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -728,27 +669,7 @@ for i, s in enumerate(sections):
 
 **Teaching note:** Designed section parts are distinct from the layers a printer slicer generates. Decide which curves are part boundaries before assigning thickness or sending machine files.
 
-### Blender files for this lesson
-
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
-
-**S10 — [Discretizing Geometry I — contours](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend)**
-
-Scenes in this file: One contour, Contour stack. Open them in the order listed.
-
-**S11 — [Discretizing Geometry II — physical parts](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend)**
-
-Scenes in this file: Section parts, Laid out parts. Open them in the order listed.
-
-**S12 — [Final Project — fabrication and assembly](../files/blender/09-final-project/Final-Project-Fabrication.blend)**
-
-Scenes in this file: Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings. Open them in the order listed.
-
-The exported files are default-parameter snapshots in millimetres. Regenerate them after edits and test physical fit before production.
-
-Supporting files: [Fabrication notes and dimensions](../files/blender/09-final-project/FABRICATION-NOTES.md), [Small print STL](../files/blender/09-final-project/small-print-mm.stl), [Fit coupon STL](../files/blender/09-final-project/fit-coupon-mm.stl), [Modular parts STL](../files/blender/09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](../files/blender/09-final-project/section-parts-and-spacers-mm.svg).
-
-Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
+**Lesson file:** To be prepared and verified.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 

@@ -22,8 +22,8 @@ Visual quality remains central: composition, hierarchy, line weight, color, rend
 | --- | --- | --- |
 | [P1 — Geometry — from operations to construction]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/) | CSG massing sequence → Mesh from scratch → First print | 21% |
 | [P2 — Repetition and response — arrays to attractors]({{ site.baseurl }}/modules/assignments/p2-repetition-and-response-arrays-to-attractors/) | Arrays and conditional control → Attractor field study | 14% |
-| [P3 — Connected systems — tessellation and lattices]({{ site.baseurl }}/modules/assignments/p3-connected-systems-tessellation-and-lattices/) | Tessellation and lattice study → Modular print assembly | 14% |
-| [P4 — Samples, fields and sections]({{ site.baseurl }}/modules/assignments/p4-samples-fields-and-sections/) | Point-cloud analysis → Volume, section and light → Sectional fabrication | 21% |
+| P3 — Connected systems — tessellation and lattices — *not yet released* | Tessellation and lattice study → Modular print assembly | 14% |
+| P4 — Samples, fields and sections — *not yet released* | Point-cloud analysis → Volume, section and light → Sectional fabrication | 21% |
 
 ## Target teaching calendar
 
@@ -36,15 +36,15 @@ Visual quality remains central: composition, hierarchy, line weight, color, rend
 | 5 | Sep 22 | Arrays and lists II | [P1b — Mesh from scratch]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/#p1b) |
 | 6 | Sep 29 | Attractors | — |
 | 7 | Oct 6 | Tessellation and lattices I | No graded submission |
-| 8 | Oct 13 | Midterm and connected-system review | [P1c — First print]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/#p1c); [P2a — Arrays and conditional control]({{ site.baseurl }}/modules/assignments/p2-repetition-and-response-arrays-to-attractors/#p2a); [VIM — Visual Identity Manual]({{ site.baseurl }}/modules/assignments/vim-visual-identity-manual/); [MID — Midterm review]({{ site.baseurl }}/modules/assignments/mid-midterm-review/) |
+| 8 | Oct 13 | Midterm and connected-system review | [P1c — First print]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/#p1c); [P2a — Arrays and conditional control]({{ site.baseurl }}/modules/assignments/p2-repetition-and-response-arrays-to-attractors/#p2a); [GSM — Graphic Standards Manual]({{ site.baseurl }}/modules/assignments/gsm-graphic-standards-manual/); [MID — Midterm review]({{ site.baseurl }}/modules/assignments/mid-midterm-review/) |
 | 9 | Oct 20 | Point clouds and volume conversion | [P2b — Attractor field study]({{ site.baseurl }}/modules/assignments/p2-repetition-and-response-arrays-to-attractors/#p2b) |
-| 10 | Oct 27 | Volumetric fields I | [P3a — Tessellation and lattice study]({{ site.baseurl }}/modules/assignments/p3-connected-systems-tessellation-and-lattices/#p3a) |
-| 11 | Nov 3 | Volumetric fields II | [P4a — Point-cloud analysis]({{ site.baseurl }}/modules/assignments/p4-samples-fields-and-sections/#p4a) |
+| 10 | Oct 27 | Volumetric fields I | P3a — Tessellation and lattice study — *not yet released* |
+| 11 | Nov 3 | Volumetric fields II | P4a — Point-cloud analysis — *not yet released* |
 | 12 | Nov 10 | Contours and sections I | — |
-| 13 | Nov 17 | Contours and sections II | [P3b — Modular print assembly]({{ site.baseurl }}/modules/assignments/p3-connected-systems-tessellation-and-lattices/#p3b) |
-| 14 | Nov 24 | Fabrication and visual refinement | [P4b — Volume, section and light]({{ site.baseurl }}/modules/assignments/p4-samples-fields-and-sections/#p4b) |
+| 13 | Nov 17 | Contours and sections II | P3b — Modular print assembly — *not yet released* |
+| 14 | Nov 24 | Fabrication and visual refinement | P4b — Volume, section and light — *not yet released* |
 | 15 | Dec 1 | Final working critique and booklet | No graded submission |
-| Final | December 10–16, 2026; exact review slot to be confirmed | Final review | P4c — Sectional fabrication; BOOK — Final booklet and review; revised VIM |
+| Final | December 10–16, 2026; exact review slot to be confirmed | Final review | P4c — Sectional fabrication; BOOK — Final booklet and review; revised GSM |
 
 The dated schedule is a target. Arrays, volumetric fields and slicing have additional sessions in the current draft. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
 
@@ -52,8 +52,6 @@ Assignment deadlines are listed separately from the teaching sequence. If teachi
 
 [Assignments and grading]({{ site.baseurl }}/modules/assignments/overview/) · [Course syllabus and policies]({{ site.baseurl }}/resources/course-policies/)
 
-Twelve separate Blender session files cover the geometry sequence through fabrication. Arrays, advanced volumes and discretization each have two files. Session identifiers describe the order of the files, not fixed teaching weeks; extend a session when needed. The Visual Identity Manual uses graphic and layout tools rather than a Blender lesson.
+The geometry-from-scratch unit has an existing Blender lesson with six scenes. It keeps the pyramid parameters exposed and ends with cube-minus-pyramid. Its teaching notes remain with the file.
 
-The files were prepared and evaluated in Blender 5.2.1 LTS. Native node names are retained, explanations are in Frames, and useful controls are exposed. Geometry Fundamentals preserves the original pyramid lesson. Point-cloud data and fabrication export examples accompany their session files. Physical fabrication fit has not been machine tested.
-
-The Blender file index and teaching material register list the current downloads. Recordings and revised slide decks are not linked here yet. Earlier resources do not replace the current unit briefs or assignment requirements.
+The other unit descriptions are preparation briefs. Remaining Blender files, recordings and revised slide decks will be made and checked in the next phase. Earlier slide decks and Python/Sverchok scripts are historical teaching resources, not the current weekly instructions. The material register distinguishes an existing lesson from a file still to be prepared.

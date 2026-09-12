@@ -3,7 +3,11 @@ from hashlib import sha256
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import struct
 from urllib.parse import unquote, urlsplit
+from zipfile import ZipFile
+
+import yaml
 
 from sync_course import Course, ROOT
 
@@ -25,15 +29,52 @@ class Links(HTMLParser):
                 self.links.append(attrs[attr])
 
 
+def verify_screenshots(course, site, documents):
+    captures = course.blender_images
+    sessions = {s["id"]: s for s in course.sessions}
+    assert {i["session"] for i in captures} == set(sessions), "Missing or duplicate session screenshots"
+    assert len(captures) == len(sessions)
+    assert captures == json.loads((ROOT / "images/blender/manifest.json").read_text(encoding="utf-8"))
+    for item in captures:
+        assert item["source_file"] == sessions[item["session"]]["path"]
+        assert item["unit"] in sessions[item["session"]]["units"]
+        assert sha256((ROOT / item["source_file"]).read_bytes()).hexdigest() == item["source_sha256"], f"Recapture changed Blender file: {item['session']}"
+        for kind in ("geonodes", "viewport"):
+            asset = item[kind]
+            payload = (site / asset["file"]).read_bytes()
+            assert sha256(payload).hexdigest() == asset["sha256"], asset["file"]
+            assert payload[:8] == b"\x89PNG\r\n\x1a\n"
+            assert struct.unpack(">II", payload[16:24]) == (asset["width"], asset["height"])
+    with ZipFile(site / "images/blender/ARC3133-Blender-Screenshots.zip") as archive:
+        assert archive.testzip() is None
+        for item in captures:
+            for kind in ("geonodes", "viewport"):
+                asset = item[kind]
+                assert sha256(archive.read(Path(asset["file"]).name)).hexdigest() == asset["sha256"]
+    expected = {"capture-" + i["session"].lower() for i in captures if i["unit"] in course.open_units}
+    gallery = documents.get((site / "resources/blender-screenshots/index.html").resolve())
+    assert gallery is not None or not expected, "Screenshot gallery disappeared"
+    if gallery:
+        assert {i for i in gallery.ids if i.startswith("capture-")} == expected, "Gallery does not match released lessons"
+    for uid in course.open_units & set(course.units):
+        page = documents[(site / ("modules" + course.unit_url(course.units[uid])).lstrip("/") / "index.html").resolve()]
+        expected = {"capture-" + i["session"].lower() for i in captures if i["unit"] == uid}
+        assert {i for i in page.ids if i.startswith("capture-")} == expected, f"Lesson screenshots missing: {uid}"
+
+
 def main():
-    if Course().sync(True):
+    course = Course()
+    if course.sync(True):
         raise SystemExit(1)
     archive = ROOT / "reference/archive/2026-09-12-before-sequence"
     manifest = json.loads((archive / "manifest.json").read_text(encoding="utf-8"))
     for item in manifest:
         assert sha256((archive / item["path"]).read_bytes()).hexdigest() == item["sha256"], item["path"]
     site = ROOT / "_site"
+    config = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))
+    baseurl = config.get("baseurl", "").rstrip("/")
     assert (site / "index.html").is_file(), "Build the course site first"
+    built_files = {p.relative_to(site).as_posix() for p in site.rglob("*") if p.is_file()}
     documents = {}
     for path in site.rglob("*.html"):
         parser = Links()
@@ -47,7 +88,13 @@ def main():
             if target.scheme or target.netloc or link in ("#", ""):
                 continue
             if target.path.startswith("/"):
-                resolved = site / unquote(target.path).lstrip("/")
+                local_path = unquote(target.path)
+                if baseurl and (local_path == baseurl or local_path.startswith(baseurl + "/")):
+                    local_path = local_path[len(baseurl):]
+                elif baseurl:
+                    errors.add(f"Missing project prefix: {path.relative_to(site)} → {link}")
+                    continue
+                resolved = site / local_path.lstrip("/")
             elif target.path:
                 resolved = path.parent / unquote(target.path)
             else:
@@ -58,13 +105,19 @@ def main():
             if not resolved.is_file():
                 errors.add(f"{path.relative_to(site)} → {link}")
                 continue
+            if not resolved.is_relative_to(site) or resolved.relative_to(site).as_posix() not in built_files:
+                errors.add(f"Path or filename case mismatch: {path.relative_to(site)} → {link}")
+                continue
             if target.fragment and resolved in documents and unquote(target.fragment) not in documents[resolved].ids:
                 errors.add(f"Missing anchor: {path.relative_to(site)} → {link}")
             checked += 1
     assert not errors, "Broken local links:\n" + "\n".join(sorted(errors))
-    for excluded in ("reference", "syllabus", "slides", "scripts", "code"):
+    for excluded in ("reference", "syllabus", "slides/src", "scripts", "code", "vendor", ".bundle", ".github", ".git"):
         assert not (site / excluded).exists(), f"Historical/source directory leaked into site: {excluded}"
-    print(f"Verified {len(manifest)} archived originals and {checked} local links across {len(documents)} built pages. Historical and source directories are excluded.")
+    verify_screenshots(course, site, documents)
+    size = sum((site / name).stat().st_size for name in built_files)
+    assert size < 1_000_000_000, "Site exceeds the GitHub Pages 1 GB site limit"
+    print(f"Verified {len(manifest)} archived originals, {checked} local links, and {len(course.blender_images) * 2} screenshots across {len(documents)} built pages. Site size: {size / 1_000_000:.1f} MB. Sources are excluded; release settings and project paths match.")
 
 
 if __name__ == "__main__":

@@ -11,13 +11,13 @@
 - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
-- Maintain one source of curriculum information and a separate Blender file for each teaching session.
+- Establish one source of curriculum information before preparing the remaining Blender class files.
 - Start with short assignments that build into four projects: geometry, arrays/attractors, tessellation/lattices, and point clouds/volumes/sections.
 
 ### Working proposals
 
 - Retain the existing 15-week semester and midterm/final review windows, with additional time for arrays, volumes and slicing.
-- Retain the calendar's grading total: ten project milestones at 7% each, VIM 7%, midterm 7%, booklet 11% and participation 5%.
+- Retain the calendar's grading total: ten project milestones at 7% each, GSM 7%, midterm 7%, booklet 11% and participation 5%.
 - Focus the required final on the developed visual work, physical work and booklet. The previous Python/AI final and extra-credit scheme are awaiting an instructor decision and are not assigned in this draft.
 - Keep three fabrication outputs: an introductory print, a small modular print assembly and a sectional assembly. A plotter demonstration is optional and carries no separate grade.
 

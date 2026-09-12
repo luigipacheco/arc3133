@@ -37,8 +37,20 @@ for p in points:
     place(component, p, scale=size)
 ```
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S05 — Attractors]({{ site.baseurl }}/files/blender/04-attractors/Attractors.blend). Read a distance field, remap it, and compare one point, multiple points and a curve.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S05 — [Attractors]({{ site.baseurl }}/files/blender/04-attractors/Attractors.blend)**
+
+Scenes in this file: Read the field, One point, Multiple points, Curve attractor. Open them in the order listed.
+
+Prefer one download? [Every session in one ZIP]({{ site.baseurl }}/files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
+
+## Examples from the class files
+
+Select an image to inspect the original screenshot at full resolution.
+
+{% include blender_screenshots.html unit="U05" %}

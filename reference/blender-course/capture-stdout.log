@@ -1,0 +1,8 @@
+00:05.641  blend            | Read blend: "C:\Users\luigi\Documents\arc3133\files\blender\01-intro-geometry-nodes\Intro-Geometry-Nodes.blend"
+Traceback (most recent call last):
+  File "C:\Users\luigi\Documents\arc3133\reference\blender-course\capture_session_images.py", line 105, in tick
+    space.show_region_asset_shelf=False
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: bpy_struct: attribute "show_region_asset_shelf" from "SpaceNodeEditor" is read-only
+
+00:07.250  blend            | Saved session recovery to "C:\Users\luigi\AppData\Local\Temp\quit.blend"

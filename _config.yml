@@ -1,14 +1,18 @@
 # ARC 3133 — Architectural Visualization Methods 1
 # Built on P2PU Course in a Box
 
-baseurl:
+# Project page: the site is served from https://<user>.github.io/arc3133/
+# Serve locally at the same paths with:  bundle exec jekyll serve
+baseurl: /arc3133
+url: https://luigipacheco.github.io
+repository: luigipacheco/arc3133
 markdown: kramdown
 permalink: /:categories/:title/
 
 sass:
   sass_dir: _sass
 
-exclude: [Gemfile, Gemfile.lock, README.md, syllabus, reference, code, slides, scripts]
+exclude: [Gemfile, Gemfile.lock, README.md, "**/README.md", syllabus, reference, code, slides/src, scripts, vendor, .bundle]
 
 defaults:
   -

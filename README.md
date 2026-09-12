@@ -35,21 +35,43 @@ Assignment deadlines are listed separately from the teaching sequence. If teachi
 ## Update and verify
 
 ```text
+bundle install
 python -m pip install -r scripts/requirements.txt
 python scripts/sync_course.py
-python scripts/sync_course.py --check
 bundle exec jekyll build
+python scripts/verify_course.py
 ```
 
-Change the source first, then regenerate. Check mode fails for drift, an invalid grading total, inconsistent dates or submissions in reserved review weeks. The site uses Jekyll and P2PU Course in a Box. Post filename dates control navigation order; actual class dates come from the curriculum source.
+Change the source first, then regenerate. Verification checks course drift, grading, dates, links, screenshots and publication paths. [GitHub Pages setup](reference/GITHUB-PAGES.md) explains the one-time repository setting and automatic checked deployments.
+
+### Releasing a class
+
+Classes, lessons and assignment briefs are published one at a time so students follow along rather than read ahead. The `release:` block in [syllabus/course.yml](syllabus/course.yml) is the switch: a page not listed there is not written to the site, and every link to it becomes plain text marked *not yet released*. The calendar, the lesson list and the assignment table still show every row with its date, so nothing looks missing.
+
+The weekly move is one edit — add the week number, the unit ids and any newly briefed assignment, then regenerate:
+
+```text
+release:
+  classes: [1, 2, 3, 4, 5, 6]
+  tutorials: [U01, U02, U03, U04, U05]
+  assignments: [GSM, MID, BOOK, P1, P2]
+```
+
+Assignments take the project id — listing `P2` posts P2a and P2b with it. The assignment overview page is always posted; it is the index.
+
+Use `all` on either line to publish everything. To preview the finished site locally without editing the source, run `SYNC_RELEASE=all python scripts/sync_course.py` — then run it again without the variable before committing, or the held-back pages go live.
+
+Blender session files are listed once under `blender:` in the same source and linked from every lesson that uses them. A session is only linked when its `.blend` is actually present, and [files/blender/README.md](files/blender/README.md) is generated from the same list.
+
+[Blender screenshots](images/blender/README.md) contains 12 pairs of original Geometry Nodes and viewport PNGs, named by session and example, plus a ZIP for slide preparation. The matching lesson pages and Resources gallery show the released sessions. Image captions and source details are generated from the capture records with `python scripts/finalize_blender_images.py`; then regenerate the site views as usual.
+
+The site uses Jekyll and P2PU Course in a Box. Post filename dates control navigation order; actual class dates come from the curriculum source.
 
 ## Teaching files and history
 
-[Blender session index](files/blender/README.md) lists a separate file for each session. [Download the complete set](files/blender/ARC3133-Blender-Sessions.zip), including point-cloud data and fabrication examples.
-
 [Geometry 101](files/blender/geometry101/README.md) is the existing Week 3 lesson: Point → Line → Edge → Face → Solid → Boolean. The pyramid retains exposed Width, Depth and Height. [Instructor materials](reference/geometry101/README.md) preserve its preparation history.
 
-Earlier course plans, site pages and slide decks are preserved in the [dated snapshot](reference/archive/2026-09-12-before-sequence/ARCHIVE_README.md). The existing `slides/` and `code/` directories are historical materials awaiting alignment; they do not define current requirements. They and the source/planning directories are excluded from the published course.
+Earlier course plans, site pages and slide decks are preserved in the [dated snapshot](reference/archive/2026-09-12-before-sequence/ARCHIVE_README.md). Earlier slide decks remain available where explicitly linked; they do not define current requirements. The source/planning directories, earlier code exercises and `slides/src` are excluded from the published course.
 
 ## License
 

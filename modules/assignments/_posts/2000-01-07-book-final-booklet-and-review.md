@@ -18,7 +18,7 @@ categories:
 
 - Compile the four projects and all ten milestones in their revised form, using 17 × 11 inch pages and the visual identity.
 - Include photographs, process diagrams and captions for the three fabricated outputs and identify substantive revisions after critique.
-- Submit the booklet PDF, a separate revised VIM PDF, editable project files and their dependencies, and required fabrication files.
+- Submit the booklet PDF, a separate revised GSM PDF, editable project files and their dependencies, and required fabrication files.
 - Present the sectional assembly and the earlier fabricated work or its review documentation as directed. The exact final review slot remains to be confirmed.
 
 **Preparation / revision checkpoints** (not extra graded assignments):

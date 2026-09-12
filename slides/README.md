@@ -2,6 +2,6 @@
 
 # Earlier slide decks
 
-These decks predate the revised learning sequence. They are retained as historical source material and are excluded from the course site. They are not current weekly briefs or assignment instructions.
+These decks predate the revised learning sequence. They remain available where explicitly linked. Their source files in `slides/src` are excluded from the course site. They are not current weekly briefs or assignment instructions.
 
 Use the [teaching material register](../reference/Teaching_Material_Register.md) to see what is ready and the [curriculum source](../syllabus/course.yml) before preparing new decks. The numbered files may not match the revised teaching weeks.

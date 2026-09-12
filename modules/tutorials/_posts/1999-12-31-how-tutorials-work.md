@@ -20,8 +20,22 @@ The dated schedule is a target. Arrays, volumetric fields and slicing have addit
 
 Assignment deadlines are listed separately from the teaching sequence. If teaching moves, the instructor will announce an updated deadline in class and Canvas and update this source before regenerating the course pages. A changed lesson pace does not silently change a deadline. No new graded submission is scheduled in the retained studio-review windows: October 5–9 and December 1–4.
 
-Twelve separate Blender session files cover the geometry sequence through fabrication. Arrays, advanced volumes and discretization each have two files. Session identifiers describe the order of the files, not fixed teaching weeks; extend a session when needed. The Visual Identity Manual uses graphic and layout tools rather than a Blender lesson.
+## Lesson list
 
-The files were prepared and evaluated in Blender 5.2.1 LTS. Native node names are retained, explanations are in Frames, and useful controls are exposed. Geometry Fundamentals preserves the original pyramid lesson. Point-cloud data and fabrication export examples accompany their session files. Physical fabrication fit has not been machine tested.
+Lessons are posted as the course reaches them, so you follow along in class rather than read ahead. The whole list is below; the ones still to come are marked.
 
-The Blender file index and teaching material register list the current downloads. Recordings and revised slide decks are not linked here yet. Earlier resources do not replace the current unit briefs or assignment requirements.
+| Lesson | Target week | Status |
+| --- | --- | --- |
+| [U01 — Graphic Standards Manual]({{ site.baseurl }}/modules/tutorials/u01-graphic-standards-manual/) | Week 1 | Posted |
+| [U02 — Transformations and CSG]({{ site.baseurl }}/modules/tutorials/u02-transformations-and-csg/) | Week 2 | Posted |
+| [U03 — Geometry from scratch]({{ site.baseurl }}/modules/tutorials/u03-geometry-from-scratch/) | Week 3 | Posted |
+| [U04 — Arrays and lists]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 4, 5 | Posted |
+| [U05 — Attractors]({{ site.baseurl }}/modules/tutorials/u05-attractors/) | Week 6 | Posted |
+| U06 — Tessellation and lattices | Weeks 7, 8 | Posted after the class |
+| U07 — Point clouds and the transition to volumes | Week 9 | Posted after the class |
+| U08 — Volumetric fields and signed distance | Weeks 10, 11 | Posted after the class |
+| U09 — Contour sections and physical parts | Weeks 12, 13, 14 | Posted after the class |
+
+The geometry-from-scratch unit has an existing Blender lesson with six scenes. It keeps the pyramid parameters exposed and ends with cube-minus-pyramid. Its teaching notes remain with the file.
+
+The other unit descriptions are preparation briefs. Remaining Blender files, recordings and revised slide decks will be made and checked in the next phase. Earlier slide decks and Python/Sverchok scripts are historical teaching resources, not the current weekly instructions. The material register distinguishes an existing lesson from a file still to be prepared.

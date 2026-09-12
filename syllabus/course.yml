@@ -212,8 +212,6 @@ units:
 
       pyramid = mesh(verts, faces)
       result  = difference(cube, pyramid)
-    file: files/blender/geometry101/GEOMETRY101-class-ready.blend
-    file_note: Existing six-scene lesson. Native node names are retained and explanations are in Frames. It is a model-units lesson, not a fabrication export.
   - id: U04
     title: Arrays and lists
     vocabulary: [list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase]
@@ -579,3 +577,129 @@ instructor_notes: |
   The midterm is a review of completed foundations and arrays, with developing attractor and tessellation work. Avoid also requiring those two later studies to be finished for the same review. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
 
   Keep institutional policy text separate from curriculum edits. The School's accreditation mapping remains unconfirmed; do not present the earlier mixed 2014/2020 criteria table as a verified current requirement.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# RELEASE CONTROL — what students can actually open.
+#
+# A page listed here is built and linked. Everything else is held back: the
+# page is not written to the site at all, and every link pointing at it turns
+# into plain text marked "not yet released". The row stays visible in the
+# calendar and the index, so students can see what is coming without being
+# able to run ahead.
+#
+# The weekly move is one edit: add the week number and the unit ids the
+# morning of the class, then run  python scripts/sync_course.py
+#
+# Use the word  all  on either line to publish everything.
+# To preview the whole site locally without editing this file:
+#     SYNC_RELEASE=all python scripts/sync_course.py
+#
+# assignments takes project ids (P1…P4) and the standalone ones (GSM, MID, BOOK).
+# A project is released whole: listing P2 posts P2a and P2b with it. The
+# assignment overview page is always posted — it is the index, and its table is
+# how students see what is still coming.
+release:
+  classes: [1, 2, 3, 4, 5, 6]
+  tutorials: [U01, U02, U03, U04, U05]
+  assignments: [GSM, MID, BOOK, P1, P2]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# BLENDER SESSION LIBRARY — one file per session, linked from each lesson page.
+#
+# Sessions are lesson stages, not fixed weeks: a session may run over more than
+# one class, and a unit may draw on more than one session. `units` is what wires
+# a session to the lesson pages that link it.
+#
+# A session is only ever linked when its .blend is actually present on disk.
+# No file, no claim — the same rule the slide links follow.
+blender:
+  version: Blender 5.2.1 LTS
+  version_note: >-
+    Earlier Blender versions may lack the volume nodes used in the later
+    sessions.
+  zip: files/blender/ARC3133-Blender-Sessions.zip
+  how_to_use: >-
+    Select the lesson object, change the exposed controls in the GeometryNodes
+    modifier, and press Home over the node editor to fit the graph.
+    Explanations are in Frames and native node names are retained. Save your
+    own working copy before you change anything.
+  sessions:
+    - id: S01
+      title: Intro to Geometry Nodes — transformations and CSG
+      path: files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend
+      units: [U02]
+      scenes: [Start, Translation, Rotation, Scale, Order, Union, Difference, Intersect, Massing exercise]
+    - id: S02
+      title: Geometry Fundamentals
+      path: files/blender/geometry101/GEOMETRY101-class-ready.blend
+      units: [U03]
+      scenes: [Point, Line, Edge, Face, Solid, Boolean]
+      note: >-
+        The existing six-scene lesson. The pyramid keeps Width, Depth and Height
+        exposed and the file ends with cube-minus-pyramid. This is a model-units
+        lesson, not a fabrication export.
+    - id: S03
+      title: Arrays and Lists I — linear and nested grid
+      path: files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend
+      units: [U04]
+      scenes: [Linear loop, Nested grid]
+    - id: S04
+      title: Arrays and Lists II — arrangements and rules
+      path: files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend
+      units: [U04]
+      scenes: [Hexagonal array, Radial array, If and range, Sine curve]
+    - id: S05
+      title: Attractors
+      path: files/blender/04-attractors/Attractors.blend
+      units: [U05]
+      scenes: [Read the field, One point, Multiple points, Curve attractor]
+    - id: S06
+      title: Tessellation and Lattices
+      path: files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend
+      units: [U06]
+      scenes: [Tessellation, Lattice, Attractor lattice]
+    - id: S07
+      title: Point Clouds and Volumes
+      path: files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend
+      units: [U07]
+      scenes: [Import points, Analyze points, Points to volume]
+      extras:
+        - [Teaching point cloud, files/blender/06-point-clouds-volumes/teaching-courtyard.ply]
+        - [Dataset source and units, files/blender/06-point-clouds-volumes/teaching-courtyard.json]
+      note: >-
+        Keep the data folder together — the file reads teaching-courtyard.ply
+        from beside it. It is a synthetic teaching cloud, not a survey.
+    - id: S08
+      title: Advanced Volumes I — signed distance and Boolean
+      path: files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend
+      units: [U08]
+      scenes: [Mesh to SDF, Signed distance, SDF Boolean]
+    - id: S09
+      title: Advanced Volumes II — noise and surface extraction
+      path: files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend
+      units: [U08]
+      scenes: [Noise field]
+    - id: S10
+      title: Discretizing Geometry I — contours
+      path: files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend
+      units: [U09]
+      scenes: [One contour, Contour stack]
+    - id: S11
+      title: Discretizing Geometry II — physical parts
+      path: files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend
+      units: [U09]
+      scenes: [Section parts, Laid out parts]
+    - id: S12
+      title: Final Project — fabrication and assembly
+      path: files/blender/09-final-project/Final-Project-Fabrication.blend
+      units: [U09]
+      scenes: [Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings]
+      extras:
+        - [Fabrication notes and dimensions, files/blender/09-final-project/FABRICATION-NOTES.md]
+        - [Small print STL, files/blender/09-final-project/small-print-mm.stl]
+        - [Fit coupon STL, files/blender/09-final-project/fit-coupon-mm.stl]
+        - [Modular parts STL, files/blender/09-final-project/modular-parts-mm.stl]
+        - [Section parts and spacers SVG, files/blender/09-final-project/section-parts-and-spacers-mm.svg]
+      note: >-
+        The exported files are default-parameter snapshots in millimetres.
+        Regenerate them after edits and test physical fit before production.

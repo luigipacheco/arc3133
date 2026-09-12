@@ -1,0 +1,22 @@
+{% assign captures = site.data.blender_images %}
+{% if include.unit %}{% assign captures = captures | where: "unit", include.unit %}{% endif %}
+{% for capture in captures %}
+{% if include.released_only %}{% unless page.capture_units contains capture.unit %}{% continue %}{% endunless %}{% endif %}
+<section class="blender-capture" id="capture-{{ capture.session | downcase }}">
+  <h3>{{ capture.session }} · {{ capture.example | escape }}</h3>
+  <p class="capture-description">{{ capture.caption | escape }}</p>
+  <figure>
+    <a href="{{ site.baseurl }}/{{ capture.viewport.file }}" aria-label="Open full-resolution viewport: {{ capture.scene | escape }}">
+      <img src="{{ site.baseurl }}/{{ capture.viewport.file }}" width="{{ capture.viewport.width }}" height="{{ capture.viewport.height }}" loading="lazy" decoding="async" alt="3D viewport: {{ capture.viewport_alt | escape }}">
+    </a>
+    <figcaption>3D viewport · <a href="{{ site.baseurl }}/{{ capture.viewport.file }}" download>Download PNG</a></figcaption>
+  </figure>
+  <figure>
+    <a href="{{ site.baseurl }}/{{ capture.geonodes.file }}" aria-label="Open full-resolution Geometry Nodes setup: {{ capture.node_group | escape }}">
+      <img src="{{ site.baseurl }}/{{ capture.geonodes.file }}" width="{{ capture.geonodes.width }}" height="{{ capture.geonodes.height }}" loading="lazy" decoding="async" alt="Geometry Nodes setup: {{ capture.node_group | escape }}. {{ capture.nodes_alt | escape }}">
+    </a>
+    <figcaption>Geometry Nodes · <a href="{{ site.baseurl }}/{{ capture.geonodes.file }}" download>Download PNG</a></figcaption>
+  </figure>
+  <p class="capture-source"><a href="{{ site.baseurl }}/{{ capture.source_file }}">Open this session’s Blender file</a> · Scene: {{ capture.scene | escape }}</p>
+</section>
+{% endfor %}

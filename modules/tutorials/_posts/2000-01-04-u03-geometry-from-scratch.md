@@ -44,8 +44,22 @@ pyramid = mesh(verts, faces)
 result  = difference(cube, pyramid)
 ```
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S02 — Geometry Fundamentals]({{ site.baseurl }}/files/blender/geometry101/GEOMETRY101-class-ready.blend). The existing lesson is preserved. Point → Line → Edge → Face → Solid → Boolean; pyramid Width, Depth and Height remain exposed.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S02 — [Geometry Fundamentals]({{ site.baseurl }}/files/blender/geometry101/GEOMETRY101-class-ready.blend)**
+
+Scenes in this file: Point, Line, Edge, Face, Solid, Boolean. Open them in the order listed.
+
+The existing six-scene lesson. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
+
+Prefer one download? [Every session in one ZIP]({{ site.baseurl }}/files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
+
+## Examples from the class files
+
+Select an image to inspect the original screenshot at full resolution.
+
+{% include blender_screenshots.html unit="U03" %}

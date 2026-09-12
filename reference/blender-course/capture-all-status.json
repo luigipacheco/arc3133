@@ -1,0 +1,297 @@
+{
+  "stage": "load",
+  "index": 12,
+  "total": 12,
+  "results": [
+    {
+      "session": "S01",
+      "unit": "U02",
+      "title": "Intro to Geometry Nodes \u2014 transformations and CSG",
+      "source_file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
+      "source_sha256": "f69e7918f1d16271c0b76375c62e0a652e34de2aa271b2621876f878d2679283",
+      "scene": "07 - Difference",
+      "node_group": "07 - Difference",
+      "object": "07 - Difference",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s01-difference-geonodes.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "bda8ee722b869761e7aa5dd2d807edd7d0d5d7590e06adfbbfbd209fd1600c80"
+      },
+      "viewport": {
+        "file": "images/blender/s01-difference-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "3b1ffeac22f13604045e3ccb04238854dfafb1d5e1a7a4f8f1ae0c9a5f38974d"
+      }
+    },
+    {
+      "session": "S02",
+      "unit": "U03",
+      "title": "Geometry Fundamentals",
+      "source_file": "files/blender/geometry101/GEOMETRY101-class-ready.blend",
+      "source_sha256": "b225463ad29177dea48d4657cefb0877c3506b274cd0f1dfb3a2c80f0db680e9",
+      "scene": "05 - Solid",
+      "node_group": "002-point in middle",
+      "object": "Cube",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s02-parametric-pyramid-geonodes.png",
+        "width": 2579,
+        "height": 1041,
+        "sha256": "76ed24abccaf5e5bec6ed91ed7e618c647cb539054d6247542f057ed4cc26719"
+      },
+      "viewport": {
+        "file": "images/blender/s02-parametric-pyramid-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "317a74ec8c47e6d1d566d14fe64e6bab6720ea9443c827e4011b8efa7e6131b4"
+      }
+    },
+    {
+      "session": "S03",
+      "unit": "U04",
+      "title": "Arrays and Lists I \u2014 linear and nested grid",
+      "source_file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
+      "source_sha256": "e89ffd80394eacdf243f2e246575fadfbd574b7bf063914e443d4c21abc87bca",
+      "scene": "02 - Nested grid",
+      "node_group": "02 - Nested grid",
+      "object": "02 - Nested grid",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s03-nested-grid-geonodes.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "4d147038f90a89eb67bddfffd5c54d01092a2efccf2252583ef045a6759a1b0c"
+      },
+      "viewport": {
+        "file": "images/blender/s03-nested-grid-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "adc3d566a00eb046f20566aed40d84780e6e53aeee5f2028e00b11079479874d"
+      }
+    },
+    {
+      "session": "S04",
+      "unit": "U04",
+      "title": "Arrays and Lists II \u2014 arrangements and rules",
+      "source_file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+      "source_sha256": "9f946b892e09478038ffeefb0795b1b34cb8494499c83151196d3fc6b3629d71",
+      "scene": "05 - If and range",
+      "node_group": "05 - If and range",
+      "object": "05 - If and range",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s04-index-range-geonodes.png",
+        "width": 2724,
+        "height": 1041,
+        "sha256": "41da07714cfcdbcf3c1bd24b120d79db38db5d7f65d87a0396ee8b756e046775"
+      },
+      "viewport": {
+        "file": "images/blender/s04-index-range-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "7520042ff3cf508fe866fe516b3701ccdb0c9b0096dc26901883aa02320e4575"
+      }
+    },
+    {
+      "session": "S05",
+      "unit": "U05",
+      "title": "Attractors",
+      "source_file": "files/blender/04-attractors/Attractors.blend",
+      "source_sha256": "595f8ad57572fadc1023ec1a89aea0715c566410c5cf5f63fca9562e309c368a",
+      "scene": "04 - Curve attractor",
+      "node_group": "04 - Curve attractor",
+      "object": "04 - Curve attractor",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s05-curve-attractor-geonodes.png",
+        "width": 2684,
+        "height": 1041,
+        "sha256": "0b30d2e584ab80f414bf57b2eb485687fd84a1a2005f47ae6aa0b26c80b2fa6d"
+      },
+      "viewport": {
+        "file": "images/blender/s05-curve-attractor-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "dd402e332c90f138339ce01d00891649723d1bbf851b3a7a0ec7cce0e290c497"
+      }
+    },
+    {
+      "session": "S06",
+      "unit": "U06",
+      "title": "Tessellation and Lattices",
+      "source_file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
+      "source_sha256": "e5ad35a606c4366dd147f5606ae0c632c297d31a8ecd87f5b8df346fa3959ab5",
+      "scene": "03 - Attractor lattice",
+      "node_group": "03 - Attractor lattice",
+      "object": "03 - Attractor lattice",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s06-attractor-lattice-geonodes.png",
+        "width": 3394,
+        "height": 1041,
+        "sha256": "33b14c8d8dc852e40a1d819ad05de48334b684dc5d497c14a821dd1dd3b246d7"
+      },
+      "viewport": {
+        "file": "images/blender/s06-attractor-lattice-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "65bcafe9859f4a184938d120afa4a96eb9afb139aec6be17070b8a01d802e092"
+      }
+    },
+    {
+      "session": "S07",
+      "unit": "U07",
+      "title": "Point Clouds and Volumes",
+      "source_file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
+      "source_sha256": "224a5cfbfd08a61492964b1e6fb6bbe718ae25d4c322feae2b5f259fa5167ad0",
+      "scene": "03 - Points to volume",
+      "node_group": "03 - Points to volume",
+      "object": "03 - Points to volume",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s07-points-to-volume-geonodes.png",
+        "width": 1964,
+        "height": 1041,
+        "sha256": "6c422cb9e56341b6f31b88e4f40d7dbe8aaa649dc85dca5f6b560c0f76b297ea"
+      },
+      "viewport": {
+        "file": "images/blender/s07-points-to-volume-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "0f95c9b0b0285befeb03becda211151ddc6d7d20593d748e5b5b8a7badfae900"
+      }
+    },
+    {
+      "session": "S08",
+      "unit": "U08",
+      "title": "Advanced Volumes I \u2014 signed distance and Boolean",
+      "source_file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
+      "source_sha256": "698606df7be6999d0d1217a05eee7f90aa08133759ae469b749df66eadc99704",
+      "scene": "03 - SDF Boolean",
+      "node_group": "03 - SDF Boolean",
+      "object": "03 - SDF Boolean",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s08-sdf-boolean-geonodes.png",
+        "width": 2264,
+        "height": 1041,
+        "sha256": "b35cc373cba19bf9c8d7c1e07bf184b0db59283c92aa677bfd5b2127b8e195d1"
+      },
+      "viewport": {
+        "file": "images/blender/s08-sdf-boolean-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "8f2c181f5e91c9858d2bc898d66b63d4e1cb160e5a6eae8cb9baf8b11b210179"
+      }
+    },
+    {
+      "session": "S09",
+      "unit": "U08",
+      "title": "Advanced Volumes II \u2014 noise and surface extraction",
+      "source_file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
+      "source_sha256": "50744b4f708bf39e23d779c60330d58d61ffe460d69ced0edf8d61534e439e1d",
+      "scene": "04 - Noise field",
+      "node_group": "04 - Noise field",
+      "object": "04 - Noise field",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s09-noise-field-geonodes.png",
+        "width": 2704,
+        "height": 1041,
+        "sha256": "71b9eb70ef342352b7ce8b5805293bea80bb685bad02f8c92f0376f6e945c885"
+      },
+      "viewport": {
+        "file": "images/blender/s09-noise-field-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "f46314f74afec688e78f4f34e2de9dbe7a8b830e12d458040372c6772eb4bbb1"
+      }
+    },
+    {
+      "session": "S10",
+      "unit": "U09",
+      "title": "Discretizing Geometry I \u2014 contours",
+      "source_file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
+      "source_sha256": "0e9ac9b5010a72049bb7f7194a4703a1ff4d8b8d625b0237cf4330b941b1b91c",
+      "scene": "02 - Contour stack",
+      "node_group": "02 - Contour stack",
+      "object": "02 - Contour stack",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s10-contour-stack-geonodes.png",
+        "width": 2654,
+        "height": 1041,
+        "sha256": "2be4dfb9aab9efe28de72150f8349d7b93ad71f337b8c14929ebf6a6da8e24a8"
+      },
+      "viewport": {
+        "file": "images/blender/s10-contour-stack-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "dfc4cc409227b5abb147b72665eaef792e7fae6753e97c35142bfdcce255b643"
+      }
+    },
+    {
+      "session": "S11",
+      "unit": "U09",
+      "title": "Discretizing Geometry II \u2014 physical parts",
+      "source_file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
+      "source_sha256": "dc5f0edaec8bffc836c7439f6a2ddf7047d4d4cc20acc7e6b1a5759d7f3b5c40",
+      "scene": "04 - Laid out parts",
+      "node_group": "04 - Laid out parts",
+      "object": "04 - Laid out parts",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s11-section-parts-layout-geonodes.png",
+        "width": 3824,
+        "height": 1041,
+        "sha256": "e74faa4cd46d23e6995b4425a478644f0ba1670b01b84ef644dea126c14ebac5"
+      },
+      "viewport": {
+        "file": "images/blender/s11-section-parts-layout-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "503ae828be6f6a9354d2ed9e87b6aaa4d28120d08923ad3281821082e70853c5"
+      }
+    },
+    {
+      "session": "S12",
+      "unit": "U09",
+      "title": "Final Project \u2014 fabrication and assembly",
+      "source_file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
+      "source_sha256": "25ec16d4744de9bd8e724d481d3855e58c40d33f79cdcda72c36bbee907534b2",
+      "scene": "04 - Registered sections",
+      "node_group": "04 - Registered sections",
+      "object": "04 - Registered sections",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s12-registered-sections-geonodes.png",
+        "width": 3824,
+        "height": 1041,
+        "sha256": "2df6f25e48af25e938d03aabd8478764c2e32b56edf9244f5026d399189bc71f"
+      },
+      "viewport": {
+        "file": "images/blender/s12-registered-sections-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "8e20775e9fef033b9badd5a280b7e755622da04533a8465c3fad8f60de7abb6a"
+      }
+    }
+  ],
+  "complete": true,
+  "error": null
+}

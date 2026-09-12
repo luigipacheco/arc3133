@@ -44,9 +44,24 @@ for j in range(rows):                      # nested loop = grid
 
 **Teaching note:** Split this unit across sessions. A field evaluated across elements is not itself a Repeat Zone; show explicit iteration first, then compare with an efficient field-based construction. Keep Grasshopper data-tree terminology distinct from Blender field evaluation.
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S03 — Arrays and Lists I — linear and nested grid]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend). Use Repeat Zones with small counts, then repeat a row inside a second loop to make a grid.
-- [S04 — Arrays and Lists II — arrangements and rules]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend). Stagger rows, place points around a circle, select an index range and control a curve with sine.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S03 — [Arrays and Lists I — linear and nested grid]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
+
+Scenes in this file: Linear loop, Nested grid. Open them in the order listed.
+
+**S04 — [Arrays and Lists II — arrangements and rules]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend)**
+
+Scenes in this file: Hexagonal array, Radial array, If and range, Sine curve. Open them in the order listed.
+
+Prefer one download? [Every session in one ZIP]({{ site.baseurl }}/files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
+
+## Examples from the class files
+
+Select an image to inspect the original screenshot at full resolution.
+
+{% include blender_screenshots.html unit="U04" %}

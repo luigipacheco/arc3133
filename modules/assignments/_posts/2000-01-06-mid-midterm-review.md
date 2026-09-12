@@ -16,7 +16,7 @@ categories:
 
 **Introduced:** Week 1 — Aug 25 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
 
-- Print and present the VIM, revised CSG and mesh sheets, the first print and its documentation, and the array study.
+- Print and present the GSM, revised CSG and mesh sheets, the first print and its documentation, and the array study.
 - Bring attractor and tessellation work in progress for feedback; these are not additional completed submissions at midterm.
 - Bring the editable file for a brief live parameter change and explanation. The review assesses the assembled body of work without re-grading earlier milestones.
 

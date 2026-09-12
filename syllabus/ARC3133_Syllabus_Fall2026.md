@@ -71,7 +71,7 @@ This is an in-person course with scheduled FabLab work. Students should plan for
 | 5 | Sep 22 | Arrays and lists II | P1b — Mesh from scratch |
 | 6 | Sep 29 | Attractors | — |
 | 7 | Oct 6 | Tessellation and lattices I | No graded submission |
-| 8 | Oct 13 | Midterm and connected-system review | P1c — First print; P2a — Arrays and conditional control; VIM — Visual Identity Manual; MID — Midterm review |
+| 8 | Oct 13 | Midterm and connected-system review | P1c — First print; P2a — Arrays and conditional control; GSM — Graphic Standards Manual; MID — Midterm review |
 | 9 | Oct 20 | Point clouds and volume conversion | P2b — Attractor field study |
 | 10 | Oct 27 | Volumetric fields I | P3a — Tessellation and lattice study |
 | 11 | Nov 3 | Volumetric fields II | P4a — Point-cloud analysis |
@@ -79,15 +79,15 @@ This is an in-person course with scheduled FabLab work. Students should plan for
 | 13 | Nov 17 | Contours and sections II | P3b — Modular print assembly |
 | 14 | Nov 24 | Fabrication and visual refinement | P4b — Volume, section and light |
 | 15 | Dec 1 | Final working critique and booklet | No graded submission |
-| Final | December 10–16, 2026; exact review slot to be confirmed | Final review | P4c — Sectional fabrication; BOOK — Final booklet and review; revised VIM |
+| Final | December 10–16, 2026; exact review slot to be confirmed | Final review | P4c — Sectional fabrication; BOOK — Final booklet and review; revised GSM |
 
 ## Assignments and grading
 
-Ten short assignments build into four projects. The draft retains 7% for each short assignment. Students first complete a small, focused exercise, then combine and revise that work within its project. The assembled project does not add a second grade on top of its assignments. Together with the Visual Identity Manual, midterm, booklet and participation, the total is 100%.
+Ten short assignments build into four projects. The draft retains 7% for each short assignment. Students first complete a small, focused exercise, then combine and revise that work within its project. The assembled project does not add a second grade on top of its assignments. Together with the Graphic Standards Manual, midterm, booklet and participation, the total is 100%.
 
 Digital project milestones: visual quality 35%, computational understanding 25%, technical execution 20%, experimentation 10%, requirements and visual identity 10%. Fabrication milestones: visual documentation 20%, computational understanding 20%, technical execution 15%, fabrication quality 30%, experimentation 5%, requirements and visual identity 10%.
 
-The Visual Identity Manual is assessed for visual quality and hierarchy (40%), consistency and usability of the system (30%), tested applications (20%) and completeness (10%). It does not require a computational graph.
+The Graphic Standards Manual is assessed for visual quality and hierarchy (40%), consistency and usability of the system (30%), tested applications (20%) and completeness (10%). It does not require a computational graph.
 
 Midterm: evidence of revision 40%, coherence across the set 30%, and print/layout/documentation quality 30%. Booklet: substantive revision 40%, documentation 35%, and consistency of the visual identity 25%. These reviews do not replace grades earned at earlier deadlines. The standing late-work and revision policy is retained below.
 
@@ -103,7 +103,7 @@ Midterm: evidence of revision 40%, coherence across the set 30%, and print/layou
 | P4a — Point-cloud analysis | Week 9 — Oct 20 | Week 11 — Nov 3 | 7% |
 | P4b — Volume, section and light | Week 10 — Oct 27 | Week 14 — Nov 24 | 7% |
 | P4c — Sectional fabrication | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 7% |
-| VIM — Visual Identity Manual | Week 1 — Aug 25 | Week 8 — Oct 13 | 7% |
+| GSM — Graphic Standards Manual | Week 1 — Aug 25 | Week 8 — Oct 13 | 7% |
 | MID — Midterm review | Week 1 — Aug 25 | Week 8 — Oct 13 | 7% |
 | BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 10–16, 2026; exact review slot to be confirmed | 11% |
 | PART — Attendance and participation | Week 1 — Aug 25 | Throughout the semester | 5% |
@@ -248,9 +248,9 @@ Analyze a point cloud, develop a volumetric interpretation or design, and discre
 
 ## Visual identity and course reviews
 
-<a id="vim"></a>
+<a id="gsm"></a>
 
-### VIM — Visual Identity Manual
+### GSM — Graphic Standards Manual
 
 **Introduced:** Week 1 — Aug 25 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
 
@@ -270,7 +270,7 @@ Analyze a point cloud, develop a volumetric interpretation or design, and discre
 
 **Introduced:** Week 1 — Aug 25 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
 
-- Print and present the VIM, revised CSG and mesh sheets, the first print and its documentation, and the array study.
+- Print and present the GSM, revised CSG and mesh sheets, the first print and its documentation, and the array study.
 - Bring attractor and tessellation work in progress for feedback; these are not additional completed submissions at midterm.
 - Bring the editable file for a brief live parameter change and explanation. The review assesses the assembled body of work without re-grading earlier milestones.
 
@@ -282,7 +282,7 @@ Analyze a point cloud, develop a volumetric interpretation or design, and discre
 
 - Compile the four projects and all ten milestones in their revised form, using 17 × 11 inch pages and the visual identity.
 - Include photographs, process diagrams and captions for the three fabricated outputs and identify substantive revisions after critique.
-- Submit the booklet PDF, a separate revised VIM PDF, editable project files and their dependencies, and required fabrication files.
+- Submit the booklet PDF, a separate revised GSM PDF, editable project files and their dependencies, and required fabrication files.
 - Present the sectional assembly and the earlier fabricated work or its review documentation as directed. The exact final review slot remains to be confirmed.
 
 **Preparation / revision checkpoints** (not extra graded assignments):
@@ -300,7 +300,7 @@ Analyze a point cloud, develop a volumetric interpretation or design, and discre
 
 ## Submission and presentation standards
 
-Use **17 × 11 inch** sheets and booklet pages, following the Visual Identity Manual. Submit a PDF and the editable computational file for each visual milestone. Include a clear result, a diagram of the procedure, the relevant parameter values and a concise explanation of the design decision. Source attribution belongs on the sheet or its documentation page.
+Use **17 × 11 inch** sheets and booklet pages, following the Graphic Standards Manual. Submit a PDF and the editable computational file for each visual milestone. Include a clear result, a diagram of the procedure, the relevant parameter values and a concise explanation of the design decision. Source attribution belongs on the sheet or its documentation page.
 
 Keep native node names visible. Use Frames for short explanations and name exposed input parameters clearly. Students may name their own reusable groups, but custom labels must not conceal which native node is being taught. Small readable graphs are preferred to unnecessary complexity.
 
@@ -312,7 +312,7 @@ Before each submission, open the file from a clean folder, confirm dependencies 
 
 Use Illustrator, Photoshop, InDesign, Inkscape, GIMP, Scribus or an equivalent vector/raster/layout editor for visual work. Use the FabLab-specified slicer and cutting preparation workflow for production.
 
-Template-based design tools may not produce the sheets, Visual Identity Manual or booklet. The grid, typography, hierarchy and composition are student design work. Retain the earlier restriction on Canva, Adobe Express, template-based Figma work, PowerPoint, Google Slides and similar template-driven production.
+Template-based design tools may not produce the sheets, Graphic Standards Manual or booklet. The grid, typography, hierarchy and composition are student design work. Retain the earlier restriction on Canva, Adobe Express, template-based Figma work, PowerPoint, Google Slides and similar template-driven production.
 
 Import a supplied or properly attributed point-cloud dataset for the point-cloud unit. A paid capture service, personal API key or particular importer is not required by this draft. Record source, permission or license, units and processing. An imported surface sampled into points must be identified as a derived point cloud.
 
@@ -357,7 +357,7 @@ Generative image production, generative fill, AI upscaling, and AI generation of
 
 # Teaching unit outlines
 
-## U01 — Visual Identity Manual
+## U01 — Graphic Standards Manual
 
 Establish the graphic system used to communicate all later work.
 
@@ -380,12 +380,12 @@ COLUMNS = 6
 
 TYPE    = {"title": 24, "heading": 14, "body": 9}
 WEIGHTS = [0.13, 0.35, 0.70]       # thin, medium, heavy
-PALETTE = ["#0E0E0E", "#FFFDF7", "#C6F035"]
+PALETTE = ["#000000", "#FFFDF7", "#C6F035"]
 
 # every sheet this semester reads these six values
 ```
 
-**Lesson file:** Use your graphic and layout files for the Visual Identity Manual.
+**Lesson file:** To be prepared and verified.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -418,9 +418,15 @@ mass   = union(base, tower)
 result = difference(mass, void)    # not difference(void, mass)
 ```
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S01 — Intro to Geometry Nodes — transformations and CSG](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend). Begin with Cube and Group Output. Change one transformation at a time, compare all three Booleans, then develop a massing study.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S01 — [Intro to Geometry Nodes — transformations and CSG](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend)**
+
+Scenes in this file: Start, Translation, Rotation, Scale, Order, Union, Difference, Intersect, Massing exercise. Open them in the order listed.
+
+Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -458,9 +464,17 @@ pyramid = mesh(verts, faces)
 result  = difference(cube, pyramid)
 ```
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S02 — Geometry Fundamentals](../files/blender/geometry101/GEOMETRY101-class-ready.blend). The existing lesson is preserved. Point → Line → Edge → Face → Solid → Boolean; pyramid Width, Depth and Height remain exposed.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S02 — [Geometry Fundamentals](../files/blender/geometry101/GEOMETRY101-class-ready.blend)**
+
+Scenes in this file: Point, Line, Edge, Face, Solid, Boolean. Open them in the order listed.
+
+The existing six-scene lesson. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
+
+Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -498,10 +512,19 @@ for j in range(rows):                      # nested loop = grid
 
 **Teaching note:** Split this unit across sessions. A field evaluated across elements is not itself a Repeat Zone; show explicit iteration first, then compare with an efficient field-based construction. Keep Grasshopper data-tree terminology distinct from Blender field evaluation.
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S03 — Arrays and Lists I — linear and nested grid](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend). Use Repeat Zones with small counts, then repeat a row inside a second loop to make a grid.
-- [S04 — Arrays and Lists II — arrangements and rules](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend). Stagger rows, place points around a circle, select an index range and control a curve with sine.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S03 — [Arrays and Lists I — linear and nested grid](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
+
+Scenes in this file: Linear loop, Nested grid. Open them in the order listed.
+
+**S04 — [Arrays and Lists II — arrangements and rules](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend)**
+
+Scenes in this file: Hexagonal array, Radial array, If and range, Sine curve. Open them in the order listed.
+
+Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -532,9 +555,15 @@ for p in points:
     place(component, p, scale=size)
 ```
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S05 — Attractors](../files/blender/04-attractors/Attractors.blend). Read a distance field, remap it, and compare one point, multiple points and a curve.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S05 — [Attractors](../files/blender/04-attractors/Attractors.blend)**
+
+Scenes in this file: Read the field, One point, Multiple points, Curve attractor. Open them in the order listed.
+
+Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -564,9 +593,15 @@ for cell in subdivide(surface, u, v):
     keep(panel)
 ```
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S06 — Tessellation and Lattices](../files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend). Compare cells covering a surface with a spatial network. Lattice struts overlap at joints; resolve connections before fabrication.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S06 — [Tessellation and Lattices](../files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend)**
+
+Scenes in this file: Tessellation, Lattice, Attractor lattice. Open them in the order listed.
+
+Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -600,9 +635,19 @@ for p in cloud:
 volume = voxelize(cloud, size=0.5)
 ```
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S07 — Point Clouds and Volumes](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend). Keep teaching-courtyard.ply beside the Blender file. The bundled synthetic dataset includes source, units and license information.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S07 — [Point Clouds and Volumes](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)**
+
+Scenes in this file: Import points, Analyze points, Points to volume. Open them in the order listed.
+
+Keep the data folder together — the file reads teaching-courtyard.ply from beside it. It is a synthetic teaching cloud, not a survey.
+
+Supporting files: [Teaching point cloud](../files/blender/06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](../files/blender/06-point-clouds-volumes/teaching-courtyard.json).
+
+Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -636,10 +681,19 @@ surface = extract(grid, iso=0.0)           # where the field is zero
 
 **Teaching note:** A noise-modified implicit field is not automatically an exact signed distance field. Keep the distinction visible and introduce specialized groups only when their inputs and outputs can be explained.
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S08 — Advanced Volumes I — signed distance and Boolean](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend). Compare a mesh, a sampled signed distance grid, an analytic sphere field and a volumetric difference.
-- [S09 — Advanced Volumes II — noise and surface extraction](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend). Control a scalar field with noise and extract its zero surface. The modified field is not necessarily exact signed distance.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S08 — [Advanced Volumes I — signed distance and Boolean](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend)**
+
+Scenes in this file: Mesh to SDF, Signed distance, SDF Boolean. Open them in the order listed.
+
+**S09 — [Advanced Volumes II — noise and surface extraction](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend)**
+
+Scenes in this file: Noise field. Open them in the order listed.
+
+Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -674,11 +728,27 @@ for i, s in enumerate(sections):
 
 **Teaching note:** Designed section parts are distinct from the layers a printer slicer generates. Decide which curves are part boundaries before assigning thickness or sending machine files.
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S10 — Discretizing Geometry I — contours](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend). Make one true section curve, then repeat it with a controlled start height, count and interval.
-- [S11 — Discretizing Geometry II — physical parts](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend). Fill and thicken the profiles, compare the stack with separate parts, then lay them out in a grid.
-- [S12 — Final Project — fabrication and assembly](../files/blender/09-final-project/Final-Project-Fabrication.blend). Millimeter examples with STL snapshots and a labeled SVG cutting layout. Test actual stock, joints, fit and kerf before production.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S10 — [Discretizing Geometry I — contours](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend)**
+
+Scenes in this file: One contour, Contour stack. Open them in the order listed.
+
+**S11 — [Discretizing Geometry II — physical parts](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend)**
+
+Scenes in this file: Section parts, Laid out parts. Open them in the order listed.
+
+**S12 — [Final Project — fabrication and assembly](../files/blender/09-final-project/Final-Project-Fabrication.blend)**
+
+Scenes in this file: Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings. Open them in the order listed.
+
+The exported files are default-parameter snapshots in millimetres. Regenerate them after edits and test physical fit before production.
+
+Supporting files: [Fabrication notes and dimensions](../files/blender/09-final-project/FABRICATION-NOTES.md), [Small print STL](../files/blender/09-final-project/small-print-mm.stl), [Fit coupon STL](../files/blender/09-final-project/fit-coupon-mm.stl), [Modular parts STL](../files/blender/09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](../files/blender/09-final-project/section-parts-and-spacers-mm.svg).
+
+Prefer one download? [Every session in one ZIP](../files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
 
@@ -739,11 +809,9 @@ No required textbook is assigned in this draft. These references are retained or
 
 ## Material availability
 
-Twelve separate Blender session files cover the geometry sequence through fabrication. Arrays, advanced volumes and discretization each have two files. Session identifiers describe the order of the files, not fixed teaching weeks; extend a session when needed. The Visual Identity Manual uses graphic and layout tools rather than a Blender lesson.
+The geometry-from-scratch unit has an existing Blender lesson with six scenes. It keeps the pyramid parameters exposed and ends with cube-minus-pyramid. Its teaching notes remain with the file.
 
-The files were prepared and evaluated in Blender 5.2.1 LTS. Native node names are retained, explanations are in Frames, and useful controls are exposed. Geometry Fundamentals preserves the original pyramid lesson. Point-cloud data and fabrication export examples accompany their session files. Physical fabrication fit has not been machine tested.
-
-The Blender file index and teaching material register list the current downloads. Recordings and revised slide decks are not linked here yet. Earlier resources do not replace the current unit briefs or assignment requirements.
+The other unit descriptions are preparation briefs. Remaining Blender files, recordings and revised slide decks will be made and checked in the next phase. Earlier slide decks and Python/Sverchok scripts are historical teaching resources, not the current weekly instructions. The material register distinguishes an existing lesson from a file still to be prepared.
 
 ## Decisions before issue
 
@@ -754,13 +822,13 @@ The Blender file index and teaching material register list the current downloads
 - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
-- Maintain one source of curriculum information and a separate Blender file for each teaching session.
+- Establish one source of curriculum information before preparing the remaining Blender class files.
 - Start with short assignments that build into four projects: geometry, arrays/attractors, tessellation/lattices, and point clouds/volumes/sections.
 
 ### Working proposals
 
 - Retain the existing 15-week semester and midterm/final review windows, with additional time for arrays, volumes and slicing.
-- Retain the calendar's grading total: ten project milestones at 7% each, VIM 7%, midterm 7%, booklet 11% and participation 5%.
+- Retain the calendar's grading total: ten project milestones at 7% each, GSM 7%, midterm 7%, booklet 11% and participation 5%.
 - Focus the required final on the developed visual work, physical work and booklet. The previous Python/AI final and extra-credit scheme are awaiting an instructor decision and are not assigned in this draft.
 - Keep three fabrication outputs: an introductory print, a small modular print assembly and a sectional assembly. A plotter demonstration is optional and carries no separate grade.
 

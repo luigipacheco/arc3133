@@ -1,0 +1,81 @@
+{
+  "stage": "load",
+  "index": 3,
+  "total": 3,
+  "results": [
+    {
+      "session": "S02",
+      "unit": "U03",
+      "title": "Geometry Fundamentals",
+      "source_file": "files/blender/geometry101/GEOMETRY101-class-ready.blend",
+      "source_sha256": "b225463ad29177dea48d4657cefb0877c3506b274cd0f1dfb3a2c80f0db680e9",
+      "scene": "05 - Solid",
+      "node_group": "002-point in middle",
+      "object": "Cube",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s02-parametric-pyramid-geonodes.png",
+        "width": 2579,
+        "height": 1041,
+        "sha256": "76ed24abccaf5e5bec6ed91ed7e618c647cb539054d6247542f057ed4cc26719"
+      },
+      "viewport": {
+        "file": "images/blender/s02-parametric-pyramid-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "69a0e9a852ba7966cdde299522fd54e5aae62dc246d909bdc8bf0544faa20170"
+      }
+    },
+    {
+      "session": "S11",
+      "unit": "U09",
+      "title": "Discretizing Geometry II \u2014 physical parts",
+      "source_file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
+      "source_sha256": "dc5f0edaec8bffc836c7439f6a2ddf7047d4d4cc20acc7e6b1a5759d7f3b5c40",
+      "scene": "04 - Laid out parts",
+      "node_group": "04 - Laid out parts",
+      "object": "04 - Laid out parts",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s11-section-parts-layout-geonodes.png",
+        "width": 3824,
+        "height": 1041,
+        "sha256": "e74faa4cd46d23e6995b4425a478644f0ba1670b01b84ef644dea126c14ebac5"
+      },
+      "viewport": {
+        "file": "images/blender/s11-section-parts-layout-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "503ae828be6f6a9354d2ed9e87b6aaa4d28120d08923ad3281821082e70853c5"
+      }
+    },
+    {
+      "session": "S12",
+      "unit": "U09",
+      "title": "Final Project \u2014 fabrication and assembly",
+      "source_file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
+      "source_sha256": "25ec16d4744de9bd8e724d481d3855e58c40d33f79cdcda72c36bbee907534b2",
+      "scene": "04 - Registered sections",
+      "node_group": "04 - Registered sections",
+      "object": "04 - Registered sections",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s12-registered-sections-geonodes.png",
+        "width": 3824,
+        "height": 1041,
+        "sha256": "2df6f25e48af25e938d03aabd8478764c2e32b56edf9244f5026d399189bc71f"
+      },
+      "viewport": {
+        "file": "images/blender/s12-registered-sections-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "8e20775e9fef033b9badd5a280b7e755622da04533a8465c3fad8f60de7abb6a"
+      }
+    }
+  ],
+  "complete": true,
+  "error": null
+}

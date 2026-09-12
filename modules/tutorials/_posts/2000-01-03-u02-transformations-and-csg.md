@@ -39,8 +39,20 @@ mass   = union(base, tower)
 result = difference(mass, void)    # not difference(void, mass)
 ```
 
-**Separate session files:**
+### Blender files for this lesson
 
-- [S01 — Intro to Geometry Nodes — transformations and CSG]({{ site.baseurl }}/files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend). Begin with Cube and Group Output. Change one transformation at a time, compare all three Booleans, then develop a massing study.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
+
+**S01 — [Intro to Geometry Nodes — transformations and CSG]({{ site.baseurl }}/files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend)**
+
+Scenes in this file: Start, Translation, Rotation, Scale, Order, Union, Difference, Intersect, Massing exercise. Open them in the order listed.
+
+Prefer one download? [Every session in one ZIP]({{ site.baseurl }}/files/blender/ARC3133-Blender-Sessions.zip) — extract it before opening a lesson, and keep each folder together.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
+
+## Examples from the class files
+
+Select an image to inspect the original screenshot at full resolution.
+
+{% include blender_screenshots.html unit="U02" %}

@@ -4,29 +4,31 @@
 
 **One separate Blender file for each session.** These are lesson stages, not fixed weeks; continue a file for another class when needed.
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used later in the course.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions.
 
 [Download all 12 sessions and supporting files](ARC3133-Blender-Sessions.zip). Extract the ZIP before opening a lesson.
 
-Choose scenes in the order listed. Select the lesson object, change exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames; native node names are retained. Save your own working copy.
+Select the lesson object, change the exposed controls in the GeometryNodes modifier, and press Home over the node editor to fit the graph. Explanations are in Frames and native node names are retained. Save your own working copy before you change anything.
 
-| Session | Open file | Scenes in this file |
-| --- | --- | --- |
-| S01 | [Intro to Geometry Nodes — transformations and CSG](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | Start, Translation, Rotation, Scale, Order, Union, Difference, Intersect, Massing exercise |
-| S02 | [Geometry Fundamentals](geometry101/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean |
-| S03 | [Arrays and Lists I — linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid |
-| S04 | [Arrays and Lists II — arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | Hexagonal array, Radial array, If and range, Sine curve |
-| S05 | [Attractors](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor |
-| S06 | [Tessellation and Lattices](05-tessellation-lattices/Tessellation-and-Lattices.blend) | Tessellation, Lattice, Attractor lattice |
-| S07 | [Point Clouds and Volumes](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume |
-| S08 | [Advanced Volumes I — signed distance and Boolean](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean |
-| S09 | [Advanced Volumes II — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field |
-| S10 | [Discretizing Geometry I — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack |
-| S11 | [Discretizing Geometry II — physical parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts |
-| S12 | [Final Project — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings |
+| Session | Open file | Scenes in this file | Lesson |
+| --- | --- | --- | --- |
+| S01 | [Intro to Geometry Nodes — transformations and CSG](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | Start, Translation, Rotation, Scale, Order, Union, Difference, Intersect, Massing exercise | U02 Transformations and CSG |
+| S02 | [Geometry Fundamentals](geometry101/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Geometry from scratch |
+| S03 | [Arrays and Lists I — linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid | U04 Arrays and lists |
+| S04 | [Arrays and Lists II — arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays and lists |
+| S05 | [Attractors](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractors |
+| S06 | [Tessellation and Lattices](05-tessellation-lattices/Tessellation-and-Lattices.blend) | Tessellation, Lattice, Attractor lattice | U06 Tessellation and lattices |
+| S07 | [Point Clouds and Volumes](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Point clouds and the transition to volumes |
+| S08 | [Advanced Volumes I — signed distance and Boolean](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U08 Volumetric fields and signed distance |
+| S09 | [Advanced Volumes II — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U08 Volumetric fields and signed distance |
+| S10 | [Discretizing Geometry I — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Contour sections and physical parts |
+| S11 | [Discretizing Geometry II — physical parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Contour sections and physical parts |
+| S12 | [Final Project — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U09 Contour sections and physical parts |
 
-**Keep the data folder together.** The point-cloud file reads `teaching-courtyard.ply` beside it. [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json). It is a synthetic teaching cloud, not a survey.
+**S02 — Geometry Fundamentals.** The existing six-scene lesson. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
 
-**Fabrication examples:** [notes and dimensions](09-final-project/FABRICATION-NOTES.md), [small print STL](09-final-project/small-print-mm.stl), [fit coupon STL](09-final-project/fit-coupon-mm.stl), [modular parts STL](09-final-project/modular-parts-mm.stl), and [section parts and spacers SVG](09-final-project/section-parts-and-spacers-mm.svg). These are saved default-parameter snapshots in millimeters; regenerate after edits and test physical fit before production.
+**S07 — Point Clouds and Volumes.** Keep the data folder together — the file reads teaching-courtyard.ply from beside it. It is a synthetic teaching cloud, not a survey. Supporting files: [Teaching point cloud](06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json).
 
-The Visual Identity Manual and final booklet use graphic/layout files. Assignment requirements and the flexible teaching calendar remain in the [current syllabus](../../syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md).
+**S12 — Final Project — fabrication and assembly.** The exported files are default-parameter snapshots in millimetres. Regenerate them after edits and test physical fit before production. Supporting files: [Fabrication notes and dimensions](09-final-project/FABRICATION-NOTES.md), [Small print STL](09-final-project/small-print-mm.stl), [Fit coupon STL](09-final-project/fit-coupon-mm.stl), [Modular parts STL](09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](09-final-project/section-parts-and-spacers-mm.svg).
+
+The Graphic Standards Manual and the final booklet use graphic and layout files rather than Blender scenes. Assignment requirements and the flexible teaching calendar are in the [current syllabus](../../syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md).

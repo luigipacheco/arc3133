@@ -1,0 +1,282 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "7476070a45bf68920fda890a12e3a1bdc3eb3b809c002f272291609dad0dadaa"
+  },
+  {
+    "path": "index.md",
+    "sha256": "098aa4dad4b322193ce55caf410b86c9a67e28a124077875f236e611f01c702e"
+  },
+  {
+    "path": "_config.yml",
+    "sha256": "39daa7f9339b9178aeb445442c44344dbabe503bafa612da2e97279b89a0aed3"
+  },
+  {
+    "path": "syllabus/ARC3133_Syllabus_Fall2026.md",
+    "sha256": "cce7000086756c1b34c69c4406f15b236433cbc284e65052b7577b526d4dd7a3"
+  },
+  {
+    "path": "syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md",
+    "sha256": "de6d2beaa6bb1f696aa77a086bc96af07a9fc807c0b14b37f1cd337eb913d3e3"
+  },
+  {
+    "path": "reference/ARC3133_Course_Materials_Brief.md",
+    "sha256": "aa4c3acdf6b6a1567a5918048406ebdd0f66644409aed6f7fff8432ca5f8cabd"
+  },
+  {
+    "path": "reference/ARC3133_Course_Review_2026-09-12.md",
+    "sha256": "3c6a7bf80f026b1c2e895c6b07830d0a5aa39f8442fccd176ea6bd8afcfa36e9"
+  },
+  {
+    "path": "reference/ARC3133_Module_Structure_v2.md",
+    "sha256": "c4acb56d9a129899c125764df46be66b05bab15034e31891959efa287bd2ff24"
+  },
+  {
+    "path": "reference/ARC3133_Vocabulary_Spine.md",
+    "sha256": "924d490335d117a28dc56e9100bcd103c634da86f335c1502cab2e4f70956fce"
+  },
+  {
+    "path": "reference/ATLV_Audit_vs_ARC3133.md",
+    "sha256": "2e907489875f2c82661921d26fd32892ce2711bc9009108a48b5b19d83296dcd"
+  },
+  {
+    "path": "modules/assignments/_posts/1999-12-31-overview.md",
+    "sha256": "f909f475f47fa0c9fa521004900d3503da006b64ab9710fd7258cc65a60f8052"
+  },
+  {
+    "path": "modules/assignments/_posts/2000-01-01-0-1-procedure.md",
+    "sha256": "e19ceed1ea9b91bf7a2613db9ea1bf465d9a9c6faff095804a355f99b22f5f92"
+  },
+  {
+    "path": "modules/assignments/_posts/2000-01-02-0-2-visual-identity-manual.md",
+    "sha256": "0f3145a4f6a9a37af74705990e0ac3fc9686665b8e5ae0cc344a4d296ca740ce"
+  },
+  {
+    "path": "modules/assignments/_posts/2000-01-03-1-1-arrays-attractors.md",
+    "sha256": "7a72947b35a738f49403ea5437cbbae63e1ddbc27932ddefe6de365c91e75ca5"
+  },
+  {
+    "path": "modules/assignments/_posts/2000-01-04-2-1-section-direction.md",
+    "sha256": "34fdd7c41c7b8a2be2d121353db7613f596d43544221028ba21feed7ab376781"
+  },
+  {
+    "path": "modules/assignments/_posts/2000-01-05-2-2-section-fabrication.md",
+    "sha256": "ae45681cfe699f1ba12d4674d01573e98377fd6774925d6a2562fa45229eae6c"
+  },
+  {
+    "path": "modules/assignments/_posts/2000-01-06-3-1-surface-filtering.md",
+    "sha256": "975394f850b3773cec17a7f988f473cf3dfb1473617ddcb74196cc51e12d4db5"
+  },
+  {
+    "path": "modules/assignments/_posts/2000-01-07-3-2-additive-fabrication.md",
+    "sha256": "1250727b937485ffb5b8337bf1339c718fe70bcf2f56c4d0a7e800faa93c4d62"
+  },
+  {
+    "path": "modules/assignments/_posts/2000-01-08-final-generative-tool.md",
+    "sha256": "f00afb82813608c3ce7dc112517f7acdac1eb13a478893450eaf86c4d6431973"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-01-class-01.md",
+    "sha256": "c09b6b9d05cc1aec25886a5ee761a32e82bed9632fa4eb34c5c8dea09d21ebc9"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-02-class-02.md",
+    "sha256": "b674976f49c41ff904b06c7484b37655cb5d69ab0e655fbaa7f6861ae08beeb9"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-03-class-03.md",
+    "sha256": "99da961a52a8a864d3839287b64e309d924b0b98c3a77b612a3f9140b72f133e"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-04-class-04.md",
+    "sha256": "b21316332403f85e4fc039c95d83231e943adff7c857813e8a5337ce8891fca7"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-05-class-05.md",
+    "sha256": "e52d9bae33f1bedda6f5d4402062ba94d91bd8f2d1e4d0eea64b539c8e4af4a6"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-06-class-06.md",
+    "sha256": "5466c7d04bd46947c4dadb371019f8eee23270bbc631b8ecb43b9c9b2110168c"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-07-class-07.md",
+    "sha256": "4ca48f0a97a91e6b72becb852afc00972bef27e767ed9920708f06ac59067499"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-08-class-08.md",
+    "sha256": "ec75a4620bcc62c01bb3bd3d5e9563cdf440463f0b9384bb1cc41c172bf6d7f3"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-09-class-09.md",
+    "sha256": "379bcadf8dc5207e61392445f57ed4d818937cc226b6683aafca5bca10d50d2d"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-10-class-10.md",
+    "sha256": "658908c012cf6d46f0e6d0b992e0e0c2f635700f6201c7517c3eb0f784f32013"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-11-class-11.md",
+    "sha256": "5bec839e7a78e03801f52e0f2fe287aa0e477b722b547526838f202731d5f21c"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-12-class-12.md",
+    "sha256": "aec3c8860b50c6aa9f7ea30e2324657ffc15582905fc8dcce5dcd2436b2978aa"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-13-class-13.md",
+    "sha256": "e1cf21e30f868265e0f65d93abede831139408dbf5d50962a60da97fcd0770ed"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-14-class-14.md",
+    "sha256": "c52d8e1e817ef4ad342c954cce67464041d2e651f813a5162291c81bda62fb41"
+  },
+  {
+    "path": "modules/classes/_posts/2000-01-15-class-15.md",
+    "sha256": "0a38b2476dc58f44de09f499f020af5e9fd1e5dcbc167a41b1fc3bde7b3a9533"
+  },
+  {
+    "path": "modules/resources/_posts/2000-01-01-reading.md",
+    "sha256": "54187354a61968859afa37b63cd2583b9a2f1fab3ad7e68ef35772c751aa7eb8"
+  },
+  {
+    "path": "modules/resources/_posts/2000-01-02-references.md",
+    "sha256": "4b4fb4ec08da83ea68b58bdbfc30281ccc0d52eaa7da7ad50ed68bbc3977a83f"
+  },
+  {
+    "path": "modules/resources/_posts/2000-01-03-software.md",
+    "sha256": "b73a05f7f608d114f5d7ab195f0a44597bca8a4da550c9bb39c83d28eda8da70"
+  },
+  {
+    "path": "modules/tutorials/_posts/1999-12-31-how-tutorials-work.md",
+    "sha256": "409926ca1754e9b4740048dc547b8e3620e6e294d7deb715df7d9019d29c9664"
+  },
+  {
+    "path": "modules/tutorials/_posts/2000-01-01-the-notation.md",
+    "sha256": "4a4ff25e67306e15b1b4d2dbe1edb4dee2d107d0e8519ad461252e9d4850f885"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-08-25-t1-1-parametric-modeling-and-booleans.md",
+    "sha256": "132c36eb02d686532ced2eec76c3e33a0aab0b279c8b36f373ccc609ed1d3e0e"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-09-01-t1-2-3d-printing-basics.md",
+    "sha256": "e07d1e6ef4574511e5e41df2668fad17b747e3a6a8ef1f11688897180e2422a3"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-09-08-t2-1-points-lists-and-data-structures.md",
+    "sha256": "41b62b305b33f6c9494d8396aeba9efd11658db5a04ceef3e0218010bcf8330d"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-09-15-t2-2-building-a-mesh-from-lists.md",
+    "sha256": "21938d7028c8369dcde1ab7a1c890e4af88b91bdf341b46c2e46570c96627eb7"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-09-22-t2-3-arrays.md",
+    "sha256": "a9cb2fdfef0411927d1714955a9c7c8ea9bcb9a51cf1df8b10229fc2974598d5"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-09-29-t3-1-fields-and-attractors.md",
+    "sha256": "267cf53423c5512c973f2d6e2cb93bda5f33b2c02363840f5919e50c6db85e7a"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-10-06-t3-2-ordering-geometry-for-the-machine.md",
+    "sha256": "89d7dca66b3f393b07093097477fd7db9e7557c6a0ed7b919b5bb879fcdf5005"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-10-07-t3-3-point-clouds-and-site-data.md",
+    "sha256": "04558a57b72042ec2acae0eef6a5335f92eb59007a673ec806944e674c574ea5"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-10-27-t4-1-tessellation-modularity-and-variation.md",
+    "sha256": "f98892e4853d26f9c1756890d65a34cac5eb9c720c45721024472c04d8694949"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-11-03-t4-2-additive-fabrication-strategies.md",
+    "sha256": "a2752c8302d65a741444086ee51b881c54eef139303654a67a5da12e245214da"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-11-10-t5-1-sdf-and-volumetric-modeling.md",
+    "sha256": "d4692dc6ec18fe7a77b6405d3e4ca1fc8add3fbe493a0cdcea4d8e5e051ef327"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-11-17-t5-2-sectioning-sequence-and-light.md",
+    "sha256": "abb3a924b1800043e8ca13b2567a6ca1f2952a3f7bbd92ea9787f9f35830c7a2"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-11-24-t5-3-laser-cutting.md",
+    "sha256": "b881852e8a25587eaca86330ce8ff517ae3b06795edae00192815c67f8a8b659"
+  },
+  {
+    "path": "modules/tutorials/_posts/2026-12-01-tx-translation-the-graph-written-out.md",
+    "sha256": "430f3563ee04f20c1f61070e2a1018354bf1022846ee5ffd01c4c09184cca900"
+  },
+  {
+    "path": "slides/ARC3133_Class01.pdf",
+    "sha256": "bbd9698483d4ba504a70f8cf1a8cbf7c7084199f6e3cb3075c3d57eabcb17208"
+  },
+  {
+    "path": "slides/ARC3133_Class01.pptx",
+    "sha256": "747b3feb14809d7ddfe76ce002a8bf5227241db2b1b23b1259bf4dc3a60e56ba"
+  },
+  {
+    "path": "slides/ARC3133_Class01_CKS.pptx",
+    "sha256": "e25014f4699e8b28ee1bcf1cbf1fc9d408589dc477a8d7c0acbe987abf7f02a8"
+  },
+  {
+    "path": "slides/ARC3133_Class02-CKS.pptx",
+    "sha256": "17898957172ff7ea831e6c8d0ba9cb018a316405edeae54f125d70f90be7e79d"
+  },
+  {
+    "path": "slides/ARC3133_Class02.pdf",
+    "sha256": "adf852187cbddbdf189d678c15335d31a2433355dc2ee89f3405e4fd5de5ca97"
+  },
+  {
+    "path": "slides/ARC3133_Class02.pptx",
+    "sha256": "fbddf2d242a94808cc60db15fc2ca270842cad8e946d8838e31679e8dab9c2a7"
+  },
+  {
+    "path": "slides/ARC3133_Class03.pdf",
+    "sha256": "85a5c8ffeec3e7c264e310eb73bc1a6df1c09b31d7217f62a43e35bdccf4d2da"
+  },
+  {
+    "path": "slides/ARC3133_Class03.pptx",
+    "sha256": "d1b90021a78e02276fb0d0b4b93070028121662f84ef3c87f5927bb1f83ff455"
+  },
+  {
+    "path": "slides/ARC3133_Class04.pdf",
+    "sha256": "03d5cfb9396cb36067215707e519424719f2c3d6601b39bf643571d6f199625c"
+  },
+  {
+    "path": "slides/ARC3133_Class04.pptx",
+    "sha256": "01fc53759890f5da0c64191b934370f70df96d0d63b78c4393e7579d4ae63e73"
+  },
+  {
+    "path": "slides/ARC3133_Class05.pdf",
+    "sha256": "1e2f22be727b363021f570ac7621f586040a1c7223f42e6330ce9efdda600117"
+  },
+  {
+    "path": "slides/ARC3133_Class05.pptx",
+    "sha256": "ebe43cd89a1d7bd68a95c589db5a1ac2530c51409e80e1e61449ebc7425e95a8"
+  },
+  {
+    "path": "slides/src/class03_patch.py",
+    "sha256": "9dea4ae55c7bcf22181c9b75d3c6a73e2118c229d5a2eee902a11ca584bcc432"
+  },
+  {
+    "path": "slides/src/class04.py",
+    "sha256": "545b7fec402ba130c753b8051dfe9c6f7009ce90fcdd73802bde91acde3915b4"
+  },
+  {
+    "path": "slides/src/class05.py",
+    "sha256": "197b94d0102111384e798e80c3ab9bd0f568cfac6c3ca450bd043cc7b2d5262a"
+  },
+  {
+    "path": "slides/src/nb.py",
+    "sha256": "4c026d8c8911fd98b406b5ffc9334a85c7251431d2db5730e4519dc0a49b98b5"
+  },
+  {
+    "path": "slides/src/base/ARC3133_Class03_base.pptx",
+    "sha256": "4e66b6259970f0f64540ffd46dadbaa89c34e044fa1b87f63cbb62c8c38f4a9d"
+  }
+]

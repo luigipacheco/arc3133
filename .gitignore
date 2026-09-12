@@ -4,3 +4,7 @@ _site/*
 
 # helper scripts
 _*.py
+
+# Curriculum generation helpers
+__pycache__/
+*.py[cod]

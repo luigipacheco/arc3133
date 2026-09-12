@@ -1,0 +1,78 @@
+GEOMETRY 101 - FROM A POINT TO A BOOLEAN
+
+Use the Scene selector at the top right:
+01 - Point -> 02 - Line -> 03 - Edge -> 04 - Face -> 05 - Solid -> 06 - Boolean.
+The captions are Frames. Actual nodes keep their original Blender names.
+Home fits the node graph. Use the wheel to zoom. Ctrl+Space maximizes an editor.
+
+WORDS
+Parameter: a value we can change to control a result.
+Vector: an (X, Y, Z) quantity with direction and magnitude (size).
+Here a position vector locates a point relative to the object's origin.
+Point: a location. A mathematical point has no size.
+Line: a geometric idea; here a straight segment represented as a Blender curve.
+Vertex: a point belonging to a mesh. Plural: vertices.
+Edge: a connection between two mesh vertices.
+Face: a surface bounded by edges.
+Solid: a shape enclosing a volume; here represented by a closed mesh surface.
+Boolean Difference: remove the overlapping volume of solid B from solid A.
+
+01 - POINT
+Value -> Combine XYZ -> Points -> Group Output.
+Try Value = 1, then 2. One point moves along X. Radius makes it visible.
+The output is a point cloud, not yet a mesh. Spreadsheet: Point Cloud > Point.
+
+02 - LINE
+Two points: A=(0,0,0), B=(2,0,0).
+Join Geometry collects them. Points to Curves connects them into one curve.
+Try B's X=3. Spreadsheet: Curve > Control Point, 2 points; Curve > Spline, 1.
+A straight Blender curve represents the line. This output has no mesh edges.
+
+03 - EDGE
+Add Curve to Mesh after Points to Curves. Leave Profile Curve empty.
+The shape looks the same, but the data is now a mesh: 2 vertices, 1 edge, 0 faces.
+Spreadsheet: Mesh > Vertex, Edge, Face. A vertex is a mesh point.
+
+04 - FACE
+Add C=(0,2,0). Fill Curve closes and fills a triangle in the XY plane.
+Keep Z=0. Result: 3 vertices, 3 edges, 1 face. It has no enclosed volume.
+Try changing C's Y. If C lies on AB, the triangle has zero area.
+
+05 - SOLID / A PYRAMID FROM SCRATCH
+Use the original 002-point in middle group.
+The exposed Width, Depth, and Height inputs control X, Y, and Z.
+Change them in the GeometryNodes modifier (wrench tab). Group Input feeds the nodes.
+Defaults: X=1.1, Y=1.2, Z=1.2.
+The four corners are (0,0,0), (0,Y,0), (X,Y,0), and (X,0,0).
+Divide by 2 puts the apex at (X/2,Y/2,Z).
+The existing four MAKEFACE groups each form a triangular side.
+The new bottom branch joins the four corners, makes a curve, and fills its face.
+Flip Faces points the bottom outward, downward. Merge by Distance welds corners.
+Four side faces plus one bottom face close the mesh and enclose volume.
+Result: 5 vertices, 8 edges, 5 faces. Volume = X * Y * Z / 3.
+Try height Z=0.9, 1.2, then 1.6. Restore 1.2 for the saved starting example.
+The Boolean reuses this same pyramid node-group definition with its own input values.
+
+06 - BOOLEAN / CUBE MINUS PYRAMID
+A: Cube -> Transform Geometry. B: the shared 002-point in middle group.
+Mesh Boolean uses Difference: Mesh 1 minus Mesh 2.
+Cube Size=(1.5,1.6,0.45); Translation=(0.55,0.6,0.4).
+The cube crosses the pyramid, leaving a tapered square through-opening.
+Select the pyramid group and press Tab to inspect its point/face construction.
+Width, Depth, and Height are exposed on the pyramid group and on this modifier.
+The Solid and Boolean exercises share the construction; their input values are independent.
+Keep positive pyramid dimensions. For the starting cube, try pyramid heights
+0.9 to 1.6 to compare the opening sizes. The cube remains a fixed reference.
+
+LATER - ARRAYS AND ATTRACTORS
+Repeat the cut block in a grid. Vary pyramid height to vary the opening size.
+Attractor distance can determine that height for each generated module.
+Identical instances share geometry: different cuts require generating variants
+or generating each module with its own height. Scaling an instance scales the
+whole block and is not the same as changing only its pyramid cutter.
+This file prepares the single module; arrays and attractors are the next lesson.
+
+CLASS ROUTINE
+Predict -> change one parameter -> observe -> explain -> restore.
+Ask: What changed between line and edge? When does a mesh become a solid?
+Why does the pyramid need a bottom face before it is used as a Boolean solid?

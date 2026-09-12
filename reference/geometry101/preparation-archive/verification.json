@@ -1,0 +1,182 @@
+{
+  "01 - Point": {
+    "points": 1,
+    "point_positions": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "vertices": 0,
+    "edges": 0,
+    "faces": 0,
+    "positions": [],
+    "area": 0
+  },
+  "02 - Line": {
+    "points": 0,
+    "point_positions": [],
+    "vertices": 2,
+    "edges": 1,
+    "faces": 0,
+    "positions": [
+      [
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "area": 0
+  },
+  "03 - Face": {
+    "points": 0,
+    "point_positions": [],
+    "vertices": 3,
+    "edges": 3,
+    "faces": 1,
+    "positions": [
+      [
+        0.0,
+        2.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "area": 2.0
+  },
+  "Scene": {
+    "points": 0,
+    "point_positions": [],
+    "vertices": 5,
+    "edges": 8,
+    "faces": 4,
+    "positions": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.2000000476837158,
+        0.0
+      ],
+      [
+        0.550000011920929,
+        0.6000000238418579,
+        0.20000000298023224
+      ],
+      [
+        1.100000023841858,
+        1.2000000476837158,
+        0.0
+      ],
+      [
+        1.100000023841858,
+        0.0,
+        0.0
+      ]
+    ],
+    "area": 1.3979831337928772
+  },
+  "point_parameter_test": {
+    "points": 1,
+    "point_positions": [
+      [
+        2.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "vertices": 0,
+    "edges": 0,
+    "faces": 0,
+    "positions": [],
+    "area": 0
+  },
+  "line_parameter_test": {
+    "points": 0,
+    "point_positions": [],
+    "vertices": 2,
+    "edges": 1,
+    "faces": 0,
+    "positions": [
+      [
+        3.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "area": 0
+  },
+  "face_parameter_test": {
+    "points": 0,
+    "point_positions": [],
+    "vertices": 3,
+    "edges": 3,
+    "faces": 1,
+    "positions": [
+      [
+        0.0,
+        3.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "area": 3.0
+  },
+  "collinear_test": {
+    "points": 0,
+    "point_positions": [],
+    "vertices": 3,
+    "edges": 2,
+    "faces": 0,
+    "positions": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "area": 0
+  }
+}

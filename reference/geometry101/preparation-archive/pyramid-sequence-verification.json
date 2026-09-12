@@ -1,0 +1,166 @@
+{
+  "01 - Point": {
+    "points": 1,
+    "curves": 0,
+    "curve_points": 0,
+    "vertices": 0,
+    "edges": 0,
+    "faces": 0
+  },
+  "02 - Line": {
+    "points": 0,
+    "curves": 1,
+    "curve_points": 2,
+    "vertices": 0,
+    "edges": 0,
+    "faces": 0
+  },
+  "03 - Edge": {
+    "points": 0,
+    "curves": 0,
+    "curve_points": 0,
+    "vertices": 2,
+    "edges": 1,
+    "faces": 0
+  },
+  "04 - Face": {
+    "points": 0,
+    "curves": 0,
+    "curve_points": 0,
+    "vertices": 3,
+    "edges": 3,
+    "faces": 1,
+    "volume": 0.0,
+    "non_manifold_edges": 3,
+    "inconsistent_edges": 3,
+    "center_ray_clear": false
+  },
+  "05 - Solid": {
+    "points": 0,
+    "curves": 0,
+    "curve_points": 0,
+    "vertices": 5,
+    "edges": 8,
+    "faces": 5,
+    "volume": 0.5280000534057634,
+    "non_manifold_edges": 0,
+    "inconsistent_edges": 0,
+    "center_ray_clear": false
+  },
+  "06 - Boolean": {
+    "points": 0,
+    "curves": 0,
+    "curve_points": 0,
+    "vertices": 16,
+    "edges": 28,
+    "faces": 12,
+    "volume": 0.8090390152682831,
+    "non_manifold_edges": 0,
+    "inconsistent_edges": 0,
+    "center_ray_clear": true
+  },
+  "width": {
+    "solid": {
+      "points": 0,
+      "curves": 0,
+      "curve_points": 0,
+      "vertices": 5,
+      "edges": 8,
+      "faces": 5,
+      "volume": 0.62400002670288,
+      "non_manifold_edges": 0,
+      "inconsistent_edges": 0,
+      "center_ray_clear": false
+    },
+    "boolean": {
+      "points": 0,
+      "curves": 0,
+      "curve_points": 0,
+      "vertices": 16,
+      "edges": 28,
+      "faces": 12,
+      "volume": 0.7597734092508113,
+      "non_manifold_edges": 0,
+      "inconsistent_edges": 0,
+      "center_ray_clear": true
+    }
+  },
+  "depth": {
+    "solid": {
+      "points": 0,
+      "curves": 0,
+      "curve_points": 0,
+      "vertices": 5,
+      "edges": 8,
+      "faces": 5,
+      "volume": 0.6160000273386637,
+      "non_manifold_edges": 0,
+      "inconsistent_edges": 0,
+      "center_ray_clear": false
+    },
+    "boolean": {
+      "points": 0,
+      "curves": 0,
+      "curve_points": 0,
+      "vertices": 16,
+      "edges": 28,
+      "faces": 12,
+      "volume": 0.7638788672919722,
+      "non_manifold_edges": 0,
+      "inconsistent_edges": 0,
+      "center_ray_clear": true
+    }
+  },
+  "height_0.9": {
+    "solid": {
+      "points": 0,
+      "curves": 0,
+      "curve_points": 0,
+      "vertices": 5,
+      "edges": 8,
+      "faces": 5,
+      "volume": 0.3960000138282773,
+      "non_manifold_edges": 0,
+      "inconsistent_edges": 0,
+      "center_ray_clear": false
+    },
+    "boolean": {
+      "points": 0,
+      "curves": 0,
+      "curve_points": 0,
+      "vertices": 16,
+      "edges": 28,
+      "faces": 12,
+      "volume": 0.8842916548225522,
+      "non_manifold_edges": 0,
+      "inconsistent_edges": 0,
+      "center_ray_clear": true
+    }
+  },
+  "height_1.6": {
+    "solid": {
+      "points": 0,
+      "curves": 0,
+      "curve_points": 0,
+      "vertices": 5,
+      "edges": 8,
+      "faces": 5,
+      "volume": 0.7040000537236544,
+      "non_manifold_edges": 0,
+      "inconsistent_edges": 0,
+      "center_ray_clear": false
+    },
+    "boolean": {
+      "points": 0,
+      "curves": 0,
+      "curve_points": 0,
+      "vertices": 16,
+      "edges": 28,
+      "faces": 12,
+      "volume": 0.7419594266834295,
+      "non_manifold_edges": 0,
+      "inconsistent_edges": 0,
+      "center_ray_clear": true
+    }
+  }
+}

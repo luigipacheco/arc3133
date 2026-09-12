@@ -1,0 +1,81 @@
+{
+  "radius_0.4": {
+    "vertices": 728,
+    "edges": 1408,
+    "faces": 680,
+    "non_manifold_edges": 0,
+    "volume": 3.2125128332284896,
+    "euler": 0,
+    "center_ray_clear": true,
+    "rim_ray_hit": true,
+    "thickness": 0.6000000238418579
+  },
+  "radius_0.65": {
+    "vertices": 440,
+    "edges": 832,
+    "faces": 392,
+    "non_manifold_edges": 0,
+    "volume": 2.7205746680059777,
+    "euler": 0,
+    "center_ray_clear": true,
+    "rim_ray_hit": true,
+    "thickness": 0.6000000238418579
+  },
+  "radius_0.95": {
+    "vertices": 344,
+    "edges": 640,
+    "faces": 296,
+    "non_manifold_edges": 0,
+    "volume": 1.820868909514613,
+    "euler": 0,
+    "center_ray_clear": true,
+    "rim_ray_hit": true,
+    "thickness": 0.6000000238418579
+  },
+  "radius_1.05": {
+    "vertices": 344,
+    "edges": 640,
+    "faces": 296,
+    "non_manifold_edges": 0,
+    "volume": 1.4458170206901535,
+    "euler": 0,
+    "center_ray_clear": true,
+    "rim_ray_hit": true,
+    "thickness": 0.6000000238418579
+  },
+  "radius_1.1": {
+    "vertices": 344,
+    "edges": 640,
+    "faces": 296,
+    "non_manifold_edges": 0,
+    "volume": 1.2443571021758157,
+    "euler": 0,
+    "center_ray_clear": true,
+    "rim_ray_hit": true,
+    "thickness": 0.6000000238418579
+  },
+  "thickness_0.3": {
+    "vertices": 248,
+    "edges": 448,
+    "faces": 200,
+    "non_manifold_edges": 0,
+    "volume": 0.8891189857210081,
+    "euler": 0,
+    "center_ray_clear": true,
+    "rim_ray_hit": true,
+    "thickness": 0.30000001192092896
+  },
+  "final": {
+    "vertices": 344,
+    "edges": 640,
+    "faces": 296,
+    "non_manifold_edges": 0,
+    "volume": 1.820868909514613,
+    "euler": 0,
+    "center_ray_clear": true,
+    "rim_ray_hit": true,
+    "thickness": 0.6000000238418579
+  },
+  "original_graphs_preserved": true,
+  "tested_operation": "DIFFERENCE"
+}

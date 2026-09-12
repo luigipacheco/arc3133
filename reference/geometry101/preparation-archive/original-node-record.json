@@ -1,0 +1,424 @@
+{
+  "002-point in middle": {
+    "nodes": {
+      "Group Input": {
+        "type": "NodeGroupInput",
+        "label": ""
+      },
+      "Group Output": {
+        "type": "NodeGroupOutput",
+        "label": ""
+      },
+      "Combine XYZ": {
+        "type": "ShaderNodeCombineXYZ",
+        "label": ""
+      },
+      "Combine XYZ.001": {
+        "type": "ShaderNodeCombineXYZ",
+        "label": ""
+      },
+      "Points": {
+        "type": "GeometryNodePoints",
+        "label": ""
+      },
+      "Points.001": {
+        "type": "GeometryNodePoints",
+        "label": ""
+      },
+      "Join Geometry": {
+        "type": "GeometryNodeJoinGeometry",
+        "label": ""
+      },
+      "Combine XYZ.002": {
+        "type": "ShaderNodeCombineXYZ",
+        "label": ""
+      },
+      "Points.003": {
+        "type": "GeometryNodePoints",
+        "label": ""
+      },
+      "Combine XYZ.003": {
+        "type": "ShaderNodeCombineXYZ",
+        "label": ""
+      },
+      "Points.004": {
+        "type": "GeometryNodePoints",
+        "label": ""
+      },
+      "Value": {
+        "type": "ShaderNodeValue",
+        "label": ""
+      },
+      "Value.001": {
+        "type": "ShaderNodeValue",
+        "label": ""
+      },
+      "Combine XYZ.004": {
+        "type": "ShaderNodeCombineXYZ",
+        "label": ""
+      },
+      "Points.002": {
+        "type": "GeometryNodePoints",
+        "label": ""
+      },
+      "Math": {
+        "type": "ShaderNodeMath",
+        "label": ""
+      },
+      "Math.001": {
+        "type": "ShaderNodeMath",
+        "label": ""
+      },
+      "Join Geometry.001": {
+        "type": "GeometryNodeJoinGeometry",
+        "label": ""
+      },
+      "Value.002": {
+        "type": "ShaderNodeValue",
+        "label": ""
+      },
+      "Join Geometry.002": {
+        "type": "GeometryNodeJoinGeometry",
+        "label": ""
+      },
+      "Join Geometry.003": {
+        "type": "GeometryNodeJoinGeometry",
+        "label": ""
+      },
+      "Group": {
+        "type": "GeometryNodeGroup",
+        "label": ""
+      },
+      "Group.001": {
+        "type": "GeometryNodeGroup",
+        "label": ""
+      },
+      "Group.002": {
+        "type": "GeometryNodeGroup",
+        "label": ""
+      },
+      "Group.003": {
+        "type": "GeometryNodeGroup",
+        "label": ""
+      },
+      "Join Geometry.004": {
+        "type": "GeometryNodeJoinGeometry",
+        "label": ""
+      },
+      "Merge by Distance": {
+        "type": "GeometryNodeMergeByDistance",
+        "label": ""
+      }
+    },
+    "links": [
+      [
+        "Combine XYZ",
+        "Vector",
+        "Points",
+        "Position"
+      ],
+      [
+        "Combine XYZ.001",
+        "Vector",
+        "Points.001",
+        "Position"
+      ],
+      [
+        "Combine XYZ.002",
+        "Vector",
+        "Points.003",
+        "Position"
+      ],
+      [
+        "Combine XYZ.003",
+        "Vector",
+        "Points.004",
+        "Position"
+      ],
+      [
+        "Combine XYZ.004",
+        "Vector",
+        "Points.002",
+        "Position"
+      ],
+      [
+        "Group",
+        "Socket_1",
+        "Join Geometry.004",
+        "Geometry"
+      ],
+      [
+        "Group.001",
+        "Socket_1",
+        "Join Geometry.004",
+        "Geometry"
+      ],
+      [
+        "Group.002",
+        "Socket_1",
+        "Join Geometry.004",
+        "Geometry"
+      ],
+      [
+        "Group.003",
+        "Socket_1",
+        "Join Geometry.004",
+        "Geometry"
+      ],
+      [
+        "Join Geometry",
+        "Geometry",
+        "Group",
+        "Socket_0"
+      ],
+      [
+        "Join Geometry.001",
+        "Geometry",
+        "Group.001",
+        "Socket_0"
+      ],
+      [
+        "Join Geometry.002",
+        "Geometry",
+        "Group.002",
+        "Socket_0"
+      ],
+      [
+        "Join Geometry.003",
+        "Geometry",
+        "Group.003",
+        "Socket_0"
+      ],
+      [
+        "Join Geometry.004",
+        "Geometry",
+        "Merge by Distance",
+        "Geometry"
+      ],
+      [
+        "Math",
+        "Value",
+        "Combine XYZ.004",
+        "X"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Combine XYZ.004",
+        "Y"
+      ],
+      [
+        "Merge by Distance",
+        "Geometry",
+        "Group Output",
+        "Socket_1"
+      ],
+      [
+        "Points",
+        "Geometry",
+        "Join Geometry",
+        "Geometry"
+      ],
+      [
+        "Points",
+        "Geometry",
+        "Join Geometry.003",
+        "Geometry"
+      ],
+      [
+        "Points.001",
+        "Geometry",
+        "Join Geometry",
+        "Geometry"
+      ],
+      [
+        "Points.001",
+        "Geometry",
+        "Join Geometry.001",
+        "Geometry"
+      ],
+      [
+        "Points.002",
+        "Geometry",
+        "Join Geometry",
+        "Geometry"
+      ],
+      [
+        "Points.002",
+        "Geometry",
+        "Join Geometry.001",
+        "Geometry"
+      ],
+      [
+        "Points.002",
+        "Geometry",
+        "Join Geometry.002",
+        "Geometry"
+      ],
+      [
+        "Points.002",
+        "Geometry",
+        "Join Geometry.003",
+        "Geometry"
+      ],
+      [
+        "Points.003",
+        "Geometry",
+        "Join Geometry.001",
+        "Geometry"
+      ],
+      [
+        "Points.003",
+        "Geometry",
+        "Join Geometry.002",
+        "Geometry"
+      ],
+      [
+        "Points.004",
+        "Geometry",
+        "Join Geometry.002",
+        "Geometry"
+      ],
+      [
+        "Points.004",
+        "Geometry",
+        "Join Geometry.003",
+        "Geometry"
+      ],
+      [
+        "Value",
+        "Value",
+        "Combine XYZ.002",
+        "X"
+      ],
+      [
+        "Value",
+        "Value",
+        "Combine XYZ.003",
+        "X"
+      ],
+      [
+        "Value",
+        "Value",
+        "Math",
+        "Value"
+      ],
+      [
+        "Value.001",
+        "Value",
+        "Combine XYZ.001",
+        "Y"
+      ],
+      [
+        "Value.001",
+        "Value",
+        "Combine XYZ.002",
+        "Y"
+      ],
+      [
+        "Value.001",
+        "Value",
+        "Math.001",
+        "Value"
+      ],
+      [
+        "Value.002",
+        "Value",
+        "Combine XYZ.004",
+        "Z"
+      ]
+    ],
+    "values": {
+      "Value": 1.100000023841858,
+      "Value.001": 1.2000000476837158,
+      "Value.002": 0.20000000298023224
+    }
+  },
+  "MAKEFACE": {
+    "nodes": {
+      "Points to Curves": {
+        "type": "GeometryNodePointsToCurves",
+        "label": ""
+      },
+      "Fill Curve": {
+        "type": "GeometryNodeFillCurve",
+        "label": ""
+      },
+      "Sample Index": {
+        "type": "GeometryNodeSampleIndex",
+        "label": ""
+      },
+      "Index": {
+        "type": "GeometryNodeInputIndex",
+        "label": ""
+      },
+      "Position": {
+        "type": "GeometryNodeInputPosition",
+        "label": ""
+      },
+      "Set Position": {
+        "type": "GeometryNodeSetPosition",
+        "label": ""
+      },
+      "Group Output": {
+        "type": "NodeGroupOutput",
+        "label": ""
+      },
+      "Group Input": {
+        "type": "NodeGroupInput",
+        "label": ""
+      }
+    },
+    "links": [
+      [
+        "Fill Curve",
+        "Mesh",
+        "Set Position",
+        "Geometry"
+      ],
+      [
+        "Group Input",
+        "Socket_0",
+        "Points to Curves",
+        "Points"
+      ],
+      [
+        "Group Input",
+        "Socket_0",
+        "Sample Index",
+        "Geometry"
+      ],
+      [
+        "Index",
+        "Index",
+        "Sample Index",
+        "Index"
+      ],
+      [
+        "Points to Curves",
+        "Curves",
+        "Fill Curve",
+        "Curve"
+      ],
+      [
+        "Position",
+        "Position",
+        "Sample Index",
+        "Value"
+      ],
+      [
+        "Sample Index",
+        "Value",
+        "Set Position",
+        "Position"
+      ],
+      [
+        "Set Position",
+        "Geometry",
+        "Group Output",
+        "Socket_1"
+      ]
+    ],
+    "values": {}
+  }
+}

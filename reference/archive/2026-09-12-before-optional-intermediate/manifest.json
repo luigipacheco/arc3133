@@ -1,0 +1,17 @@
+[
+  {
+    "source": "syllabus/course.yml",
+    "archived": "course.yml",
+    "sha256": "54c2907b781b5b740d4401871fbd1c9a07139465fc368936b6649f84a8d427ed"
+  },
+  {
+    "source": "syllabus/ARC3133_Syllabus_Fall2026.md",
+    "archived": "ARC3133_Syllabus_Fall2026.md",
+    "sha256": "23987df660f5ba0e4151e2e8dbf5df37aa1eabcd4cb627598906ed3be96487d6"
+  },
+  {
+    "source": "syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md",
+    "archived": "ARC3133_Syllabus_Fall2026_STUDENT.md",
+    "sha256": "f502d4d5ad7f2c491b0da18f8fa557c3927e36be41907d4ef390b0d47a86514a"
+  }
+]

@@ -10,6 +10,7 @@ from zipfile import ZipFile
 import yaml
 
 from sync_course import Course, ROOT
+import session_pages
 
 
 class Links(HTMLParser):
@@ -17,9 +18,20 @@ class Links(HTMLParser):
         super().__init__()
         self.links = []
         self.ids = set()
+        self.text = []
+        self.tables = []
+        self._table = None
+        self._row = None
+        self._cell = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'table':
+            self._table = []
+        elif tag == 'tr':
+            self._row = []
+        elif tag in ('th', 'td'):
+            self._cell = []
         if attrs.get("id"):
             self.ids.add(attrs["id"])
         if tag == "a" and attrs.get("name"):
@@ -27,6 +39,68 @@ class Links(HTMLParser):
         for attr in ("href", "src"):
             if attrs.get(attr):
                 self.links.append(attrs[attr])
+
+    def handle_data(self, data):
+        self.text.append(data)
+        if self._cell is not None:
+            self._cell.append(data)
+
+    def handle_endtag(self, tag):
+        if tag in ('th', 'td') and self._cell is not None:
+            self._row.append(' '.join(''.join(self._cell).split()))
+            self._cell = None
+        elif tag == 'tr' and self._table is not None:
+            self._table.append(self._row)
+            self._row = None
+        elif tag == 'table' and self._table is not None:
+            self.tables.append(self._table)
+            self._table = None
+
+
+def verify_sequence(course, site, documents, baseurl):
+    expected = [[session_pages.weeks(b), b['focus']] for b in course.sequence]
+    for path in ('index.html', 'sessions/index.html', 'resources/course-policies/index.html'):
+        page = documents[(site / path).resolve()]
+        tables = [t for t in page.tables if t and t[0][:2] == ['Target weeks', 'Focus']]
+        assert len(tables) == 1 and [row[:2] for row in tables[0][1:]] == expected, f'Teaching sequence drift: {path}'
+    index = documents[(site / 'sessions/index.html').resolve()]
+    assert {b['id'].lower() for b in course.sequence} <= index.ids
+    assert {b['id'].lower() for b in course.optional_classes} <= index.ids
+    optional_units = {u for b in course.optional_classes for u in b['units']}
+    assert not optional_units & {u for b in course.sequence for u in b['units']}, 'Optional topics returned to the required sequence'
+    for number, block in course.week_blocks.items():
+        path = (site / ('modules' + course.class_url(number)).lstrip('/') / 'index.html').resolve()
+        if number not in course.open_weeks:
+            # Archived bookmarks may keep a redirect, but never a held class brief.
+            assert path not in documents or 'Course material has moved' in ''.join(documents[path].text), f'Unreleased class page: {number}'
+            continue
+        page = documents[path]
+        assert block['focus'] in ''.join(page.text), f'Class focus drift: {number}'
+        for sid in course.weeks[number]['sessions']:
+            session = next(s for s in course.sessions if s['id'] == sid)
+            if session_pages.available(course, session):
+                assert baseurl + session_pages.url(session, course) in page.links, f'Class session missing: {number}, {sid}'
+    for session in course.sessions:
+        path = (site / session_pages.url(session, course).lstrip('/') / 'index.html').resolve()
+        if not session_pages.available(course, session):
+            assert path not in documents, f'Unreleased session page: {session["id"]}'
+            continue
+        page = documents[path]
+        expected_captures = {'capture-' + s['id'].lower() for s in session_pages.members(course, session)}
+        assert {i for i in page.ids if i.startswith('capture-')} == expected_captures, f'Wrong session screenshots: {session["id"]}'
+        assert baseurl + '/' + session['path'] in page.links
+        assert baseurl + '/sessions/#' + course.session_blocks[session['id']]['id'].lower() in page.links
+    examples = documents[(site / 'resources/example-files/index.html').resolve()]
+    if course.optional_classes:
+        assert 'possible-intermediate-class' in examples.ids, 'Optional downloads are not separated'
+    for s in course.sessions:
+        assert baseurl + '/' + s['path'] in examples.links, f'Missing individual download: {s["id"]}'
+        for _, extra in s.get('extras', []):
+            assert baseurl + '/' + extra in examples.links, f'Missing supporting download: {extra}'
+    assert not list((site / 'files/blender').rglob('*.zip')), 'A bundled session ZIP was published'
+    assert not any('/files/blender/' in link and '.zip' in link for page in documents.values() for link in page.links), 'Bundled session ZIP link remains'
+    assert baseurl + '/sessions/s04/' not in index.links, 'Arrays still appears as a second session'
+    assert course.blender['reference_note'] in ' '.join(''.join(examples.text).split()), 'Reference-only instructions missing'
 
 
 def verify_screenshots(course, site, documents):
@@ -115,6 +189,7 @@ def main():
     for excluded in ("reference", "syllabus", "slides/src", "scripts", "code", "vendor", ".bundle", ".github", ".git"):
         assert not (site / excluded).exists(), f"Historical/source directory leaked into site: {excluded}"
     verify_screenshots(course, site, documents)
+    verify_sequence(course, site, documents, baseurl)
     size = sum((site / name).stat().st_size for name in built_files)
     assert size < 1_000_000_000, "Site exceeds the GitHub Pages 1 GB site limit"
     print(f"Verified {len(manifest)} archived originals, {checked} local links, and {len(course.blender_images) * 2} screenshots across {len(documents)} built pages. Site size: {size / 1_000_000:.1f} MB. Sources are excluded; release settings and project paths match.")

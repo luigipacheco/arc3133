@@ -16,17 +16,20 @@ Generate positions in an ordered collection, then control selected positions wit
 
 **Vocabulary:** list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase.
 
+**Session and tutorial video:** One teaching session and one tutorial video cover both example files. Use the second target week for practice if needed. The video has not yet been posted.
+
 1. Start with a small linear array. Show the list, count and index, then construct repetition with Repeat Input and Repeat Output in a Repeat Zone.
 2. Use Compare and Switch to express an if condition; compare the result at two counts.
 3. Nest repetition to make a grid. Identify the row and column and predict the total count.
-4. Build a hexagonal array by staggering alternate rows and using consistent row spacing; explain the odd/even test.
-5. Build a radial array from radius, count and angular step.
-6. Select a range of indices with comparisons and move only those points up or down.
-7. Use Math set to Sine to control height; vary amplitude, frequency and phase and connect the ordered points into a curve.
+4. Extend the grid into a 3D cube array before hexagonal arrays. Repeat the grid in Z to make layers, predict Count cubed and distinguish cube instances from a sampled volume.
+5. Build a hexagonal array by staggering alternate rows and using consistent row spacing; explain the odd/even test.
+6. Build a radial array from radius, count and angular step.
+7. Select a range of indices with comparisons and move only those points up or down.
+8. End with the 3D curve array. Use Math set to Sine to control height along X, repeat in Z and Y, then use a second sine relationship along Y to shape the volume. Explain amplitude, frequency and phase.
 
-**Small exercise:** Reuse one component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation.
+**Small exercise:** Reuse one component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation. Include the 3D cube array before hexagonal arrays and compare counts of 3, 4 and 5 per axis.
 
-**Connection:** The next unit replaces an index-based rule with a measurement from an external object.
+**Connection:** The next unit replaces an index-based rule with a measurement from an external object. The XYZ array introduces the 3D sampling locations used later for volumes.
 
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 
@@ -42,8 +45,32 @@ for j in range(rows):                      # nested loop = grid
         points.append([i * spacing + offset, j * row_gap, z])
 ```
 
-**Teaching note:** Split this unit across sessions. A field evaluated across elements is not itself a Repeat Zone; show explicit iteration first, then compare with an efficient field-based construction. Keep Grasshopper data-tree terminology distinct from Blender field evaluation.
+**Teaching note:** Teach both example files together. A field evaluated across elements is not itself a Repeat Zone; show explicit iteration first, then compare with an efficient field-based construction. In the revised sine example, cubes follow the displaced line and a second Instance on Points repeats the whole row. Keep Grasshopper data-tree terminology distinct from Blender field evaluation.
 
-**Lesson file:** To be prepared and verified.
+### Blender files for this lesson
+
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object and change parameters on the nodes or, where provided, in the GeometryNodes modifier. Press Home over the node editor. Explanations are in Frames and native node names are retained. Build the exercise in a new file of your own, following each step in order.
+
+Use these example files only as a reference if you are struggling with a step. Build your own file and follow the process one step at a time. Compare the example to understand where you are stuck, then return to your own work. The supplied examples are not files to submit as your assignment.
+
+**S03 — [Arrays and Lists — Part 1: linear and nested grid]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
+
+[Open the session page: file, exercise and screenshots]({{ site.baseurl }}/sessions/s03/)
+
+Scenes in this file: Linear loop, Nested grid. Open them in the order listed.
+
+**S04 — [Arrays and Lists — Part 2: arrangements and rules]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend)**
+
+[Open the session page: file, exercise and screenshots]({{ site.baseurl }}/sessions/s03/)
+
+Scenes in this file: 3D array, Hexagonal array, Radial array, If and range, Sine curve. Open them in the order listed.
+
+Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
+
+## Examples from the class files
+
+Select an image to inspect the original screenshot at full resolution.
+
+{% include blender_screenshots.html unit="U04" %}

@@ -1,0 +1,168 @@
+{
+  "downloads": [
+    {
+      "file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
+      "bytes": 105662,
+      "sha256": "5ecf02396f1aed628a6ae4be25d290baaf67c82034814f24210475ffa61081fb"
+    },
+    {
+      "file": "files/blender/01-intro-geometry-nodes/README.md",
+      "bytes": 1250,
+      "sha256": "ce866b9806a70e7165f18f7a7e76003129bdba9efaf78803b6b452e7bf065599"
+    },
+    {
+      "file": "files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend",
+      "bytes": 251787,
+      "sha256": "b225463ad29177dea48d4657cefb0877c3506b274cd0f1dfb3a2c80f0db680e9"
+    },
+    {
+      "file": "files/blender/02-geometry-fundamentals/README.md",
+      "bytes": 1199,
+      "sha256": "51bdf58def37eeab4196b0aba98dc8d1971e97d0abd46e2ce83da9ce9b99a784"
+    },
+    {
+      "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
+      "bytes": 113035,
+      "sha256": "e89ffd80394eacdf243f2e246575fadfbd574b7bf063914e443d4c21abc87bca"
+    },
+    {
+      "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+      "bytes": 132390,
+      "sha256": "abbb67293cfc20c13a992f4117bf4fba84770e5b2d101a55352e17f7450fd836"
+    },
+    {
+      "file": "files/blender/03-arrays-lists/README.md",
+      "bytes": 1946,
+      "sha256": "ed07fde9aa6f5e66793f737fee7d828fcce7965ef4917df183bd08e4552f5cce"
+    },
+    {
+      "file": "files/blender/04-attractors/Attractors.blend",
+      "bytes": 126595,
+      "sha256": "595f8ad57572fadc1023ec1a89aea0715c566410c5cf5f63fca9562e309c368a"
+    },
+    {
+      "file": "files/blender/04-attractors/README.md",
+      "bytes": 738,
+      "sha256": "7d3dc2121a48ed1c3929d32db46504aed4e9ef535b573632e907dca55feea15e"
+    },
+    {
+      "file": "files/blender/05-tessellation-lattices/README.md",
+      "bytes": 1038,
+      "sha256": "f3a3be045beed115b7cc04a480f49ef366e0ebdd60757a8b5aedc2c780976bcb"
+    },
+    {
+      "file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
+      "bytes": 113985,
+      "sha256": "e5ad35a606c4366dd147f5606ae0c632c297d31a8ecd87f5b8df346fa3959ab5"
+    },
+    {
+      "file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
+      "bytes": 110182,
+      "sha256": "224a5cfbfd08a61492964b1e6fb6bbe718ae25d4c322feae2b5f259fa5167ad0"
+    },
+    {
+      "file": "files/blender/06-point-clouds-volumes/README.md",
+      "bytes": 1408,
+      "sha256": "5f0e7a66fbc8894704352a15c4ae7be23e184891ae7844521a6db942e41c7a6c"
+    },
+    {
+      "file": "files/blender/06-point-clouds-volumes/teaching-courtyard.json",
+      "bytes": 555,
+      "sha256": "dcf11275129c67607f75842b88c916de0764944b35e6a751ec926e2489a36e17"
+    },
+    {
+      "file": "files/blender/06-point-clouds-volumes/teaching-courtyard.ply",
+      "bytes": 28330,
+      "sha256": "8161b54a54bc98d2656f05a4687fae26bd6afec60cdb7cbb234162a824794f23"
+    },
+    {
+      "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
+      "bytes": 105469,
+      "sha256": "698606df7be6999d0d1217a05eee7f90aa08133759ae469b749df66eadc99704"
+    },
+    {
+      "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
+      "bytes": 102275,
+      "sha256": "50744b4f708bf39e23d779c60330d58d61ffe460d69ced0edf8d61534e439e1d"
+    },
+    {
+      "file": "files/blender/07-advanced-volumes/README.md",
+      "bytes": 951,
+      "sha256": "41c694de0d71c10b4f6259a26571c7d49c5d18a5af7a016c05bba0849e519b40"
+    },
+    {
+      "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
+      "bytes": 109051,
+      "sha256": "0e9ac9b5010a72049bb7f7194a4703a1ff4d8b8d625b0237cf4330b941b1b91c"
+    },
+    {
+      "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
+      "bytes": 115084,
+      "sha256": "dc5f0edaec8bffc836c7439f6a2ddf7047d4d4cc20acc7e6b1a5759d7f3b5c40"
+    },
+    {
+      "file": "files/blender/08-discretizing-geometry/README.md",
+      "bytes": 945,
+      "sha256": "5a328c77955fd6b2d11b456827d8507121b75d735631c017fe4dcca42f73f30a"
+    },
+    {
+      "file": "files/blender/09-final-project/FABRICATION-NOTES.md",
+      "bytes": 1890,
+      "sha256": "7039446e4b7637c97a2f6a1b86c3df94c2076e45d2b462b8ac080983935716fc"
+    },
+    {
+      "file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
+      "bytes": 139063,
+      "sha256": "25ec16d4744de9bd8e724d481d3855e58c40d33f79cdcda72c36bbee907534b2"
+    },
+    {
+      "file": "files/blender/09-final-project/fit-coupon-mm.stl",
+      "bytes": 21684,
+      "sha256": "0100e27a6c2ffc106428107a13bd3ae08ef687d9951d63255734f3a7faa5bf3e"
+    },
+    {
+      "file": "files/blender/09-final-project/modular-parts-mm.stl",
+      "bytes": 105684,
+      "sha256": "4d1291faec0e29437e53e7bca16554250a5f4aab0db4dea095a54ea0cb201fbb"
+    },
+    {
+      "file": "files/blender/09-final-project/README.md",
+      "bytes": 1362,
+      "sha256": "af3ccb1525ddb7730d62bc5df6262e0f3e964e80495d0bd6fe98f7b2932003d6"
+    },
+    {
+      "file": "files/blender/09-final-project/section-parts-and-spacers-mm.svg",
+      "bytes": 80602,
+      "sha256": "645b5b2657daa2fd949f5e70dd58989c61b753805e92d13b33d2eddac601eb83"
+    },
+    {
+      "file": "files/blender/09-final-project/small-print-mm.stl",
+      "bytes": 1484,
+      "sha256": "424384d5a4152ed13b8f1946e72f47602f8030c0042cd3c7deda0f8d3ca3808d"
+    },
+    {
+      "file": "files/blender/README.md",
+      "bytes": 5902,
+      "sha256": "0229e64a0f322e0059f33526556157cfbe27eec3a6efbe474a19d816fb9c9592"
+    }
+  ],
+  "blender_files": 12,
+  "stl_dimensions_mm": {
+    "small-print-mm.stl": [
+      45.0,
+      35.999996185302734,
+      22.0
+    ],
+    "fit-coupon-mm.stl": [
+      24.0,
+      12.0,
+      3.0
+    ],
+    "modular-parts-mm.stl": [
+      75.5,
+      75.5,
+      3.0
+    ]
+  },
+  "closed_svg_cut_paths": 80
+}

@@ -25,7 +25,9 @@
 
 Architectural Visualization Methods 1 develops computational methods for architectural representation and digital fabrication. Students make a visual identity, describe geometry with parameters, repeat and vary it, work with sampled and volumetric data, and translate that work into drawings and physical parts.
 
-The learning sequence is **visual identity → CSG → geometry from scratch → arrays and lists → attractors → tessellation and lattices → point clouds → volumetric fields → sections and fabrication**. These are teaching units, not a promise to finish one unit every week.
+The learning sequence is **graphic standards → CSG → geometry from scratch → arrays and lists → attractors → point clouds → volumetric fields → sections and fabrication**. Arrays progresses from a row to a grid and an XYZ cube array before hexagonal and radial arrangements, introducing 3D sampling locations for later volume lessons. These are teaching units, not a promise to finish one unit every week.
+
+Tessellation, panelization, lattices and simulation are possible intermediate topics, offered if time and the developing work make them useful. They are outside the required sequence and carry no separate required submission.
 
 Visual quality remains central: composition, hierarchy, line weight, color, rendering, photography and clear explanation of spatial ideas. A working graph supports those decisions. Each project carries geometry and knowledge into the next rather than starting with an unrelated object.
 
@@ -36,7 +38,7 @@ Visual quality remains central: composition, hierarchy, line weight, color, rend
 - Build a non-destructive graph using translation, rotation, scale and Boolean operations, with useful inputs exposed.
 - Use lists, indices, repetition, nested repetition and conditional selection to organize geometry.
 - Measure and remap distances to single-point, multiple-point and curve attractors, and explain the resulting variation.
-- Build a tessellation or lattice, distinguish surface repetition from a spatial network, and control local variation.
+- Extend a row into a grid and a 3D array, explain Count cubed, and connect discrete XYZ locations to later volume sampling.
 - Import and document a point cloud, analyze its samples and explain the choices involved in converting them into a volume.
 - Distinguish a mesh, sampled density and a signed distance field; control an implicit volume and extract a surface or sections.
 - Prepare and assemble fabricated parts while accounting for units, material, thickness, tolerance, orientation and machine constraints.
@@ -44,7 +46,7 @@ Visual quality remains central: composition, hierarchy, line weight, color, rend
 
 ## Learning pace and class format
 
-The dated schedule is a target. Arrays, volumetric fields and slicing have additional sessions in the current draft. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
+The dated schedule is a target. Arrays uses one teaching session and one tutorial video, with the second target week available for practice. Volumetric fields and slicing retain additional sessions. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
 
 Assignment deadlines are listed separately from the teaching sequence. If teaching moves, the instructor will announce an updated deadline in class and Canvas and update this source before regenerating the course pages. A changed lesson pace does not silently change a deadline. No new graded submission is scheduled in the retained studio-review windows: October 5–9 and December 1–4.
 
@@ -54,34 +56,53 @@ Students bring the editable file and explain one relationship between an input a
 
 This is an in-person course with scheduled FabLab work. Students should plan for at least six hours of work outside class each week. Fabrication preparation, testing and documentation are part of that work.
 
+## Teaching sequence
+
+| Target weeks | Focus | Practical sessions |
+|---|---|---|
+| 1 | Graphic Standards Manual | Manual and sample sheet |
+| 2 | Transformations and CSG | S01 |
+| 3 | Point → Line → Edge → Face → Solid → Boolean | S02 |
+| 4–5 | Arrays, lists, loops, conditionals and sine | One arrays session |
+| 6 | Point, multiple-point and curve attractors | S05 |
+| 7–8 | 3D arrays, review and midterm | Review and practice |
+| 9 | Point clouds and conversion to volumes | S07 |
+| 10–11 | Volumetric fields, SDFs, noise and Booleans | S08, S09 |
+| 12–13 | Contours, sections and physical parts | S10, S11 |
+| 14–15 | Fabrication, revision and booklet | S12 |
+
+## Possible intermediate class
+
+**Tessellation, panelization, lattices and simulation.** A possible intermediate class after arrays or attractors, if time allows. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
+
 ## Four projects built through short assignments
 
 | Developing project | Short assignments that build it | Combined weight |
 | --- | --- | --- |
 | P1 — Geometry — from operations to construction | CSG massing sequence → Mesh from scratch → First print | 21% |
 | P2 — Repetition and response — arrays to attractors | Arrays and conditional control → Attractor field study | 14% |
-| P3 — Connected systems — tessellation and lattices | Tessellation and lattice study → Modular print assembly | 14% |
+| P3 — Spatial arrays and assembly | 3D array and connection study → Modular print assembly | 14% |
 | P4 — Samples, fields and sections | Point-cloud analysis → Volume, section and light → Sectional fabrication | 21% |
 
 ## Target teaching calendar
 
 | Target week | Date | Teaching focus (may extend) | Draft graded submissions |
 | --- | --- | --- | --- |
-| 1 | Aug 25 | Visual identity and course introduction | — |
+| 1 | Aug 25 | Graphic Standards Manual | — |
 | 2 | Sep 1 | Transformations and CSG | — |
-| 3 | Sep 8 | Geometry from scratch | — |
-| 4 | Sep 15 | Arrays and lists I | P1a — CSG massing sequence |
-| 5 | Sep 22 | Arrays and lists II | P1b — Mesh from scratch |
-| 6 | Sep 29 | Attractors | — |
-| 7 | Oct 6 | Tessellation and lattices I | No graded submission |
-| 8 | Oct 13 | Midterm and connected-system review | P1c — First print; P2a — Arrays and conditional control; GSM — Graphic Standards Manual; MID — Midterm review |
-| 9 | Oct 20 | Point clouds and volume conversion | P2b — Attractor field study |
-| 10 | Oct 27 | Volumetric fields I | P3a — Tessellation and lattice study |
-| 11 | Nov 3 | Volumetric fields II | P4a — Point-cloud analysis |
-| 12 | Nov 10 | Contours and sections I | — |
-| 13 | Nov 17 | Contours and sections II | P3b — Modular print assembly |
-| 14 | Nov 24 | Fabrication and visual refinement | P4b — Volume, section and light |
-| 15 | Dec 1 | Final working critique and booklet | No graded submission |
+| 3 | Sep 8 | Point → Line → Edge → Face → Solid → Boolean | — |
+| 4 | Sep 15 | Arrays, lists, loops, conditionals and sine | P1a — CSG massing sequence |
+| 5 | Sep 22 | Arrays, lists, loops, conditionals and sine | P1b — Mesh from scratch |
+| 6 | Sep 29 | Point, multiple-point and curve attractors | — |
+| 7 | Oct 6 | 3D arrays, review and midterm | No graded submission |
+| 8 | Oct 13 | 3D arrays, review and midterm | P1c — First print; P2a — Arrays and conditional control; GSM — Graphic Standards Manual; MID — Midterm review |
+| 9 | Oct 20 | Point clouds and conversion to volumes | P2b — Attractor field study |
+| 10 | Oct 27 | Volumetric fields, SDFs, noise and Booleans | P3a — 3D array and connection study |
+| 11 | Nov 3 | Volumetric fields, SDFs, noise and Booleans | P4a — Point-cloud analysis |
+| 12 | Nov 10 | Contours, sections and physical parts | — |
+| 13 | Nov 17 | Contours, sections and physical parts | P3b — Modular print assembly |
+| 14 | Nov 24 | Fabrication, revision and booklet | P4b — Volume, section and light |
+| 15 | Dec 1 | Fabrication, revision and booklet | No graded submission |
 | Final | December 10–16, 2026; exact review slot to be confirmed | Final review | P4c — Sectional fabrication; BOOK — Final booklet and review; revised GSM |
 
 ## Assignments and grading
@@ -101,7 +122,7 @@ Midterm: evidence of revision 40%, coherence across the set 30%, and print/layou
 | P1c — First print | Week 3 — Sep 8 | Week 8 — Oct 13 | 7% |
 | P2a — Arrays and conditional control | Week 4 — Sep 15 | Week 8 — Oct 13 | 7% |
 | P2b — Attractor field study | Week 6 — Sep 29 | Week 9 — Oct 20 | 7% |
-| P3a — Tessellation and lattice study | Week 7 — Oct 6 | Week 10 — Oct 27 | 7% |
+| P3a — 3D array and connection study | Week 7 — Oct 6 | Week 10 — Oct 27 | 7% |
 | P3b — Modular print assembly | Week 7 — Oct 6 | Week 13 — Nov 17 | 7% |
 | P4a — Point-cloud analysis | Week 9 — Oct 20 | Week 11 — Nov 3 | 7% |
 | P4b — Volume, section and light | Week 10 — Oct 27 | Week 14 — Nov 24 | 7% |
@@ -179,19 +200,19 @@ Use the geometry project as a component. First design its arrangement, then vary
 
 - Week 8 — Oct 13: Bring the grayscale field and a first geometric response to midterm as work in progress.
 
-## P3 — Connected systems — tessellation and lattices
+## P3 — Spatial arrays and assembly
 
-Develop the repeated component into a tessellated surface or lattice and test how its connections make a physical system.
+Extend the array into XYZ space, apply controlled variation and develop a small connected assembly. Use the same discrete positions to introduce later volume sampling.
 
 <a id="p3a"></a>
 
-### P3a — Tessellation and lattice study
+### P3a — 3D array and connection study
 
 **Introduced:** Week 7 — Oct 6 · **Draft due:** Week 10 — Oct 27 · **Weight:** 7%
 
-- Compare a basic tessellation and lattice, then develop one as a surface, screen or spatial fragment on up to two sheets.
-- Show a uniform state and at least two controlled variants; vary two relevant parameters such as aperture, depth or strut thickness.
-- Explain shared boundaries or connections and show how the attractor logic changes the system.
+- Show the progression from row to grid to 3D cube array on up to two sheets. Explain how count on each axis determines the total number of components.
+- Show a uniform state and at least two controlled variants using count, spacing, component size or attractor-driven variation.
+- Develop one component connection for the modular assembly. Tessellation, panelization, lattices and simulation are optional methods, not requirements.
 
 <a id="p3b"></a>
 
@@ -274,7 +295,7 @@ Analyze a point cloud, develop a volumetric interpretation or design, and discre
 **Introduced:** Week 1 — Aug 25 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
 
 - Print and present the GSM, revised CSG and mesh sheets, the first print and its documentation, and the array study.
-- Bring attractor and tessellation work in progress for feedback; these are not additional completed submissions at midterm.
+- Bring attractor and 3D array work in progress for feedback; these are not additional completed submissions at midterm.
 - Bring the editable file for a brief live parameter change and explanation. The review assesses the assembled body of work without re-grading earlier milestones.
 
 <a id="book"></a>
@@ -397,13 +418,14 @@ The other unit descriptions are preparation briefs. Remaining Blender files, rec
 
 ### Confirmed direction
 
-- Follow the instructor's sequence from visual identity through geometry, repetition, attractors, tessellation, point clouds, volumes and sections.
+- Follow the instructor's sequence from graphic standards through geometry, repetition, attractors, point clouds, volumes and sections.
+- Keep tessellation, panelization, lattices and simulation as a possible intermediate class outside the required sequence.
 - The sequence is a guide. A topic may take more than one class; understanding and working files determine the pace.
 - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
 - Establish one source of curriculum information before preparing the remaining Blender class files.
-- Start with short assignments that build into four projects: geometry, arrays/attractors, tessellation/lattices, and point clouds/volumes/sections.
+- Start with short assignments that build into four projects: geometry, arrays/attractors, spatial arrays/assembly, and point clouds/volumes/sections.
 
 ### Working proposals
 

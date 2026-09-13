@@ -21,24 +21,41 @@ Describe a solid as an editable sequence of operations.
 3. Compare union, difference and intersection between two solids, including reversing the subtraction.
 4. Expose useful inputs and compose a short massing sequence.
 
-**Small exercise:** Show three variants of one graph and diagram the ordered operations.
+**Small exercise:** Show three variants of the instructor's CSG graph and diagram the ordered operations. Change one parameter at a time.
 
 **Connection:** In the next unit, replace a primitive Boolean cutter with geometry built from points and faces.
 
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 
 ```python
-base  = box(6, 4, 3)
-tower = box(2, 2, 6)
-tower = move(tower, 2, 0, 3)
-
-void  = cylinder(r=1, h=5)
-void  = move(void, -1.5, 0, 0)
-
-mass   = union(base, tower)
-result = difference(mass, void)    # not difference(void, mass)
+solid = intersection(box(1, 1, 1), sphere(r=0.65))
+z_cut = cylinder(r=0.30, h=2)
+y_cut = rotate(z_cut, x=90)        # degrees
+x_cut = rotate(z_cut, y=90)
+cutters = union(z_cut, y_cut, x_cut)
+result = difference(solid, cutters)
 ```
 
-**Lesson file:** To be prepared and verified.
+**Teaching note:** In the class file, intersect a cube and sphere, union three perpendicular cylinders, then subtract the cylinders. Parameters remain visible on the native nodes. Join Geometry is an optional comparison, not the final output.
+
+### Blender files for this lesson
+
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object and change parameters on the nodes or, where provided, in the GeometryNodes modifier. Press Home over the node editor. Explanations are in Frames and native node names are retained. Build the exercise in a new file of your own, following each step in order.
+
+Use these example files only as a reference if you are struggling with a step. Build your own file and follow the process one step at a time. Compare the example to understand where you are stuck, then return to your own work. The supplied examples are not files to submit as your assignment.
+
+**S01 — [Intro to Geometry Nodes — transformations and CSG]({{ site.baseurl }}/files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend)**
+
+[Open the session page: file, exercise and screenshots]({{ site.baseurl }}/sessions/s01/)
+
+Scenes in this file: 01 - CSG example. Open them in the order listed.
+
+The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the native nodes; these controls are not in the modifier.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
+
+## Examples from the class files
+
+Select an image to inspect the original screenshot at full resolution.
+
+{% include blender_screenshots.html unit="U02" %}

@@ -31,4 +31,6 @@ For a local preview, run `bundle exec jekyll serve` and open `http://127.0.0.1:4
 
 The gallery follows the tutorial release list. Release controls determine which lesson pages and navigation entries appear; they are not access controls for the repository or downloadable assets. All 24 screenshot PNGs are available in `images/blender`, including the ZIP for preparing slides.
 
+Resources offers individual Blender downloads and the supporting point-cloud data. Do not restore the old all-session ZIP; it is retained under `reference/archive` and excluded from the site. Arrays has one session page and one planned tutorial video, with two separate reference files.
+
 The build excludes syllabus sources, instructor references, scripts, earlier code exercises, `slides/src` and dependency folders. Earlier slide decks remain available where linked from the course.

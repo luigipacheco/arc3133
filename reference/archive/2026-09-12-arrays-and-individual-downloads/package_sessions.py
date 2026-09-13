@@ -8,15 +8,15 @@ import xml.etree.ElementTree as ET
 from zipfile import ZipFile, ZIP_DEFLATED
 import yaml
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 data = yaml.safe_load((ROOT/'syllabus/course.yml').read_text(encoding='utf-8'))
-sessions = data['blender_sessions']
+sessions = data['blender']['sessions']
 assert len(sessions) == 12
-verified = {r['file']: r for r in json.loads((ROOT/'reference/blender-course/all-sessions-verification.json').read_text())}
+verified = {r['file']: r for r in json.loads((ROOT/'reference/blender/sessions-verification.json').read_text())}
 assets = {ROOT/'files/blender/README.md'}
 for session in sessions:
-    path = ROOT/session['file']
-    assert sha256(path.read_bytes()).hexdigest() == verified[session['file']]['sha256'], 'Revalidate changed Blender file'
+    path = ROOT/session['path']
+    assert sha256(path.read_bytes()).hexdigest() == verified[session['path']]['sha256'], 'Revalidate changed Blender file'
     assets.add(path)
     assets.update(p for p in path.parent.iterdir() if p.is_file() and p.suffix.lower() in ('.md','.png','.ply','.json','.stl','.svg'))
 assets.update((ROOT/'syllabus').glob('*.md'))
@@ -51,7 +51,7 @@ for path in sorted(assets):
     contents[name] = path.read_bytes()
 contents['START-HERE.md'] = b'# ARC 3133 Blender sessions\n\nOpen [the session index](files/blender/README.md), then choose the file for this class. Extract the complete folder first and keep the point-cloud data beside its Blender file.\n\nPrepared in Blender 5.2.1 LTS. Native node names are retained. Save a separate working copy.\n'
 index = contents['files/blender/README.md'].decode('utf-8')
-index = re.sub(r'\[Download all 12 sessions and supporting files\]\(ARC3133-Blender-Sessions.zip\)\. Extract the ZIP before opening a lesson\.', 'This extracted folder contains all 12 session files and their supporting data.', index)
+index = re.sub(r'\[([^\]]+)\]\(ARC3133-Blender-Sessions.zip\)', 'All sessions are included in this extracted folder', index)
 contents['files/blender/README.md'] = index.encode('utf-8')
 hashes = {name:sha256(payload).hexdigest() for name,payload in contents.items()}
 contents['CONTENTS-SHA256.json'] = (json.dumps(hashes,indent=2)+'\n').encode('utf-8')
@@ -66,5 +66,5 @@ with ZipFile(target) as archive:
 report = {'archive':target.relative_to(ROOT).as_posix(),'session_count':12,'files':len(contents),
           'bytes':target.stat().st_size,'sha256':sha256(target.read_bytes()).hexdigest(),
           'stl_dimensions_mm':stl_bounds,'closed_svg_cut_paths':len(paths)}
-(ROOT/'reference/blender-course/package-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+(ROOT/'reference/blender/package-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,indent=2))

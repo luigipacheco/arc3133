@@ -36,13 +36,14 @@ course:
   final_window: December 10–16, 2026; exact review slot to be confirmed
 decisions:
   confirmed:
-    - Follow the instructor's sequence from visual identity through geometry, repetition, attractors, tessellation, point clouds, volumes and sections.
+    - Follow the instructor's sequence from graphic standards through geometry, repetition, attractors, point clouds, volumes and sections.
+    - Keep tessellation, panelization, lattices and simulation as a possible intermediate class outside the required sequence.
     - The sequence is a guide. A topic may take more than one class; understanding and working files determine the pace.
     - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
     - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
     - Align visual assignments and fabrication with the same developing geometry.
     - Establish one source of curriculum information before preparing the remaining Blender class files.
-    - 'Start with short assignments that build into four projects: geometry, arrays/attractors, tessellation/lattices, and point clouds/volumes/sections.'
+    - 'Start with short assignments that build into four projects: geometry, arrays/attractors, spatial arrays/assembly, and point clouds/volumes/sections.'
   proposed:
     - Retain the existing 15-week semester and midterm/final review windows, with additional time for arrays, volumes and slicing.
     - 'Retain the calendar''s grading total: ten project milestones at 7% each, GSM 7%, midterm 7%, booklet 11% and participation 5%.'
@@ -56,11 +57,13 @@ decisions:
 description: |
   Architectural Visualization Methods 1 develops computational methods for architectural representation and digital fabrication. Students make a visual identity, describe geometry with parameters, repeat and vary it, work with sampled and volumetric data, and translate that work into drawings and physical parts.
 
-  The learning sequence is **visual identity → CSG → geometry from scratch → arrays and lists → attractors → tessellation and lattices → point clouds → volumetric fields → sections and fabrication**. These are teaching units, not a promise to finish one unit every week.
+  The learning sequence is **graphic standards → CSG → geometry from scratch → arrays and lists → attractors → point clouds → volumetric fields → sections and fabrication**. Arrays progresses from a row to a grid and an XYZ cube array before hexagonal and radial arrangements, introducing 3D sampling locations for later volume lessons. These are teaching units, not a promise to finish one unit every week.
+
+  Tessellation, panelization, lattices and simulation are possible intermediate topics, offered if time and the developing work make them useful. They are outside the required sequence and carry no separate required submission.
 
   Visual quality remains central: composition, hierarchy, line weight, color, rendering, photography and clear explanation of spatial ideas. A working graph supports those decisions. Each project carries geometry and knowledge into the next rather than starting with an unrelated object.
 pacing: |
-  The dated schedule is a target. Arrays, volumetric fields and slicing have additional sessions in the current draft. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
+  The dated schedule is a target. Arrays uses one teaching session and one tutorial video, with the second target week available for practice. Volumetric fields and slicing retain additional sessions. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
 
   Assignment deadlines are listed separately from the teaching sequence. If teaching moves, the instructor will announce an updated deadline in class and Canvas and update this source before regenerating the course pages. A changed lesson pace does not silently change a deadline. No new graded submission is scheduled in the retained studio-review windows: October 5–9 and December 1–4.
 format: |
@@ -75,7 +78,7 @@ outcomes:
   - Build a non-destructive graph using translation, rotation, scale and Boolean operations, with useful inputs exposed.
   - Use lists, indices, repetition, nested repetition and conditional selection to organize geometry.
   - Measure and remap distances to single-point, multiple-point and curve attractors, and explain the resulting variation.
-  - Build a tessellation or lattice, distinguish surface repetition from a spatial network, and control local variation.
+  - Extend a row into a grid and a 3D array, explain Count cubed, and connect discrete XYZ locations to later volume sampling.
   - Import and document a point cloud, analyze its samples and explain the choices involved in converting them into a volume.
   - Distinguish a mesh, sampled density and a signed distance field; control an implicit volume and extract a surface or sections.
   - Prepare and assemble fabricated parts while accounting for units, material, thickness, tolerance, orientation and machine constraints.
@@ -162,6 +165,7 @@ translation: |
 units:
   - id: U01
     title: Graphic Standards Manual
+    url_slug: graphic-standards-manual
     vocabulary: [composition, grid, hierarchy, typography, line weight, palette]
     goal: Establish the graphic system used to communicate all later work.
     steps:
@@ -189,18 +193,19 @@ units:
       - Move, rotate and scale procedurally; change the order and compare the result.
       - Compare union, difference and intersection between two solids, including reversing the subtraction.
       - Expose useful inputs and compose a short massing sequence.
-    exercise: Show three variants of one graph and diagram the ordered operations.
+    exercise: Show three variants of the instructor's CSG graph and diagram the ordered operations. Change one parameter at a time.
     connection: In the next unit, replace a primitive Boolean cutter with geometry built from points and faces.
+    teaching_note: >-
+      In the class file, intersect a cube and sphere, union three perpendicular
+      cylinders, then subtract the cylinders. Parameters remain visible on the
+      native nodes. Join Geometry is an optional comparison, not the final output.
     pseudocode: |
-      base  = box(6, 4, 3)
-      tower = box(2, 2, 6)
-      tower = move(tower, 2, 0, 3)
-
-      void  = cylinder(r=1, h=5)
-      void  = move(void, -1.5, 0, 0)
-
-      mass   = union(base, tower)
-      result = difference(mass, void)    # not difference(void, mass)
+      solid = intersection(box(1, 1, 1), sphere(r=0.65))
+      z_cut = cylinder(r=0.30, h=2)
+      y_cut = rotate(z_cut, x=90)        # degrees
+      x_cut = rotate(z_cut, y=90)
+      cutters = union(z_cut, y_cut, x_cut)
+      result = difference(solid, cutters)
   - id: U03
     title: Geometry from scratch
     vocabulary: [point, vector, parameter, vertex, line, edge, face, mesh, solid, normal]
@@ -235,12 +240,13 @@ units:
       - Start with a small linear array. Show the list, count and index, then construct repetition with Repeat Input and Repeat Output in a Repeat Zone.
       - Use Compare and Switch to express an if condition; compare the result at two counts.
       - Nest repetition to make a grid. Identify the row and column and predict the total count.
+      - Extend the grid into a 3D cube array before hexagonal arrays. Repeat the grid in Z to make layers, predict Count cubed and distinguish cube instances from a sampled volume.
       - Build a hexagonal array by staggering alternate rows and using consistent row spacing; explain the odd/even test.
       - Build a radial array from radius, count and angular step.
       - Select a range of indices with comparisons and move only those points up or down.
-      - Use Math set to Sine to control height; vary amplitude, frequency and phase and connect the ordered points into a curve.
-    exercise: Reuse one component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation.
-    connection: The next unit replaces an index-based rule with a measurement from an external object.
+      - End with the 3D curve array. Use Math set to Sine to control height along X, repeat in Z and Y, then use a second sine relationship along Y to shape the volume. Explain amplitude, frequency and phase.
+    exercise: Reuse one component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation. Include the 3D cube array before hexagonal arrays and compare counts of 3, 4 and 5 per axis.
+    connection: The next unit replaces an index-based rule with a measurement from an external object. The XYZ array introduces the 3D sampling locations used later for volumes.
     pseudocode: |
       points = []
 
@@ -251,7 +257,7 @@ units:
               if 3 <= i <= 5:                    # Compare + Switch
                   z = z + lift
               points.append([i * spacing + offset, j * row_gap, z])
-    teaching_note: Split this unit across sessions. A field evaluated across elements is not itself a Repeat Zone; show explicit iteration first, then compare with an efficient field-based construction. Keep Grasshopper data-tree terminology distinct from Blender field evaluation.
+    teaching_note: Teach both example files together. A field evaluated across elements is not itself a Repeat Zone; show explicit iteration first, then compare with an efficient field-based construction. In the revised sine example, cubes follow the displaced line and a second Instance on Points repeats the whole row. Keep Grasshopper data-tree terminology distinct from Blender field evaluation.
   - id: U05
     title: Attractors
     vocabulary: [distance, external condition, field, remap, clamp, falloff, nearest]
@@ -262,7 +268,7 @@ units:
       - Compare a single-point attractor, multiple points using the nearest distance, and the nearest location on a curve.
       - Drive size, height or rotation, holding the array and component constant while comparing the three attractor types.
     exercise: Show the field, the mapping and the resulting form. Move the attractor and explain the response.
-    connection: Use the same measurement-and-remapping logic to vary a lattice and later to analyze an imported point cloud.
+    connection: Use the same measurement-and-remapping logic to analyze an imported point cloud and later vary a volumetric field.
     pseudocode: |
       for p in points:
           d = distance(p, attractor)             # or min(...) over several
@@ -272,16 +278,19 @@ units:
           size = out_min + t * (out_max - out_min)
           place(component, p, scale=size)
   - id: U06
-    title: Tessellation and lattices
-    vocabulary: [cell, adjacency, tessellation, lattice, node, strut, aperture, thickness]
-    goal: Turn repetition into a connected surface or spatial system.
+    title: Tessellation, panelization, lattices and simulation
+    url_slug: tessellation-and-lattices
+    optional: true
+    vocabulary: [cell, adjacency, tessellation, panelization, lattice, simulation, strut, aperture, thickness]
+    goal: Explore possible intermediate methods for subdividing surfaces, arranging panels, connecting elements and studying change.
     steps:
       - Distinguish a tessellation covering a surface from a lattice formed by connected nodes and struts.
       - Begin with a small repeated cell; inspect shared boundaries, gaps and connectivity.
       - Vary aperture, depth or strut thickness with the previous attractor logic.
-      - Test one physical connection, then plan a small modular assembly and its print orientations.
+      - As time permits, discuss panelization and simulation as extensions; these demonstrations are not yet prepared in the supplied file.
     exercise: Compare a uniform system with a controlled variation, then make one connection or cell test before a batch.
-    connection: Carry the visual study into the modular fabrication milestone; preserve the parametric relationships.
+    connection: Optional exploration after arrays or attractors. The required course continues from points to volumetric fields without depending on these methods.
+    teaching_note: Possible intermediate class, not a required lesson or graded submission. The existing example covers tessellation and lattices; panelization and simulation remain possible additions.
     pseudocode: |
       for cell in subdivide(surface, u, v):
           panel = morph(component, cell)         # component into the cell
@@ -419,20 +428,20 @@ projects:
           - Show the measured field before the geometric result. State source and target ranges, clamping and falloff.
           - Develop one spatial or architectural intention and demonstrate a live change to the attractor or mapping.
   - id: P3
-    title: Connected systems — tessellation and lattices
-    units: [U06]
-    description: Develop the repeated component into a tessellated surface or lattice and test how its connections make a physical system.
+    title: Spatial arrays and assembly
+    units: [U04, U05]
+    description: Extend the array into XYZ space, apply controlled variation and develop a small connected assembly. Use the same discrete positions to introduce later volume sampling.
     milestones:
       - id: P3a
-        title: Tessellation and lattice study
+        title: 3D array and connection study
         kind: visual
         release: 7
         due: 10
         weight: 7
         requirements:
-          - Compare a basic tessellation and lattice, then develop one as a surface, screen or spatial fragment on up to two sheets.
-          - Show a uniform state and at least two controlled variants; vary two relevant parameters such as aperture, depth or strut thickness.
-          - Explain shared boundaries or connections and show how the attractor logic changes the system.
+          - Show the progression from row to grid to 3D cube array on up to two sheets. Explain how count on each axis determines the total number of components.
+          - Show a uniform state and at least two controlled variants using count, spacing, component size or attractor-driven variation.
+          - Develop one component connection for the modular assembly. Tessellation, panelization, lattices and simulation are optional methods, not requirements.
       - id: P3b
         title: Modular print assembly
         kind: fabrication
@@ -484,6 +493,7 @@ projects:
 assessments:
   - id: GSM
     title: Graphic Standards Manual
+    url_slug: graphic-standards-manual
     release: 1
     due: 8
     weight: 7
@@ -500,7 +510,7 @@ assessments:
     weight: 7
     requirements:
       - Print and present the GSM, revised CSG and mesh sheets, the first print and its documentation, and the array study.
-      - Bring attractor and tessellation work in progress for feedback; these are not additional completed submissions at midterm.
+      - Bring attractor and 3D array work in progress for feedback; these are not additional completed submissions at midterm.
       - Bring the editable file for a brief live parameter change and explanation. The review assesses the assembled body of work without re-grading earlier milestones.
   - id: BOOK
     title: Final booklet and review
@@ -522,21 +532,21 @@ assessments:
       - Participate in demonstrations, working sessions and critique and bring the current editable file.
       - Attendance and absence terms are stated in the retained course policies.
 weeks:
-  - {week: 1, date: '2026-08-25', title: Visual identity and course introduction, units: [U01], focus: 'Begin the manual and test a sample sheet. Establish file organization and the class workflow.'}
-  - {week: 2, date: '2026-09-01', title: Transformations and CSG, units: [U02], focus: 'Move, rotate and scale procedurally. Compare solid Boolean operators and begin the massing study.'}
-  - {week: 3, date: '2026-09-08', title: Geometry from scratch, units: [U03], focus: 'Point → Line → Edge → Face → Solid → Boolean. Build the parametric pyramid and reconnect to the CSG project.'}
-  - {week: 4, date: '2026-09-15', title: Arrays and lists I, units: [U04], focus: 'Linear repetition, count/index, Compare and Switch, and a nested grid. Inspect small collections before increasing count.'}
-  - {week: 5, date: '2026-09-22', title: Arrays and lists II, units: [U04], focus: 'Hexagonal and radial arrangements; conditional range displacement and sine control. Continue unfinished loop exercises.'}
-  - {week: 6, date: '2026-09-29', title: Attractors, units: [U05], focus: 'One point, multiple points and a curve. Read the measured field, then remap it into geometric variation.'}
-  - {week: 7, date: '2026-10-06', title: Tessellation and lattices I, units: [U06], focus: 'Cells, connections and controlled variation. Working session; no graded submissions during the retained studio-review window.', no_due: true}
-  - {week: 8, date: '2026-10-13', title: Midterm and connected-system review, units: [U06], focus: 'Review the visual identity, geometry, arrays and first print. Discuss attractor and tessellation work in progress; continue connections as time allows.'}
-  - {week: 9, date: '2026-10-20', title: Point clouds and volume conversion, units: [U07], focus: 'Import, document and analyze samples using attractor logic. Compare the points with a volume conversion.'}
-  - {week: 10, date: '2026-10-27', title: Volumetric fields I, units: [U08], focus: 'Mesh versus field, density versus signed distance, and Boolean combinations. Review the modular connection test and production plan.'}
-  - {week: 11, date: '2026-11-03', title: Volumetric fields II, units: [U08], focus: 'Noise, textures and external controls; compare resolution and surface extraction. Continue point-cloud work where needed.'}
-  - {week: 12, date: '2026-11-10', title: Contours and sections I, units: [U09], focus: 'Section direction, interval and order. Translate the chosen volume into curves and compare light and material effects.'}
-  - {week: 13, date: '2026-11-17', title: Contours and sections II, units: [U09], focus: 'Thickness, registration, fit, kerf, labels and nesting. Review the modular assembly and test section parts.'}
-  - {week: 14, date: '2026-11-24', title: Fabrication and visual refinement, units: [U09], focus: 'Fabricate and assemble sections within lab availability. Photograph physical work and refine the volume/section sheets.'}
-  - {week: 15, date: '2026-12-01', title: Final working critique and booklet, units: [], focus: 'Assembly follow-through, documentation, booklet and file checks. No graded submissions during the retained final studio-review window.', no_due: true}
+  - {week: 1, date: '2026-08-25', focus: 'Begin the manual and test a sample sheet. Establish file organization and the class workflow.'}
+  - {week: 2, date: '2026-09-01', focus: 'Move, rotate and scale procedurally. Compare solid Boolean operators and begin the massing study.'}
+  - {week: 3, date: '2026-09-08', focus: 'Point → Line → Edge → Face → Solid → Boolean. Build the parametric pyramid and reconnect to the CSG project.'}
+  - {week: 4, date: '2026-09-15', focus: 'One arrays session covers both example files: linear and nested grid repetition, hexagonal and radial arrangements, conditionals and sine. Develop the XYZ cube array before hexagonal arrays to introduce later volume sampling.'}
+  - {week: 5, date: '2026-09-22', focus: 'Practice and extend the arrays lesson where needed. Rebuild the steps in your own file and develop the assignment; no separate second arrays tutorial is planned.'}
+  - {week: 6, date: '2026-09-29', focus: 'One point, multiple points and a curve. Read the measured field, then remap it into geometric variation.'}
+  - {week: 7, date: '2026-10-06', focus: 'Consolidate the point-to-3D-array sequence, apply attractor controls and test a component connection. Working session; no graded submissions during the retained studio-review window.', no_due: true}
+  - {week: 8, date: '2026-10-13', focus: 'Review graphic standards, geometry, arrays and the first print. Discuss attractor and 3D array work in progress, then prepare for imported point clouds and volumes.'}
+  - {week: 9, date: '2026-10-20', focus: 'Import, document and analyze samples using attractor logic. Compare the points with a volume conversion.'}
+  - {week: 10, date: '2026-10-27', focus: 'Mesh versus field, density versus signed distance, and Boolean combinations. Review the modular connection test and production plan.'}
+  - {week: 11, date: '2026-11-03', focus: 'Noise, textures and external controls; compare resolution and surface extraction. Continue point-cloud work where needed.'}
+  - {week: 12, date: '2026-11-10', focus: 'Section direction, interval and order. Translate the chosen volume into curves and compare light and material effects.'}
+  - {week: 13, date: '2026-11-17', focus: 'Thickness, registration, fit, kerf, labels and nesting. Review the modular assembly and test section parts.'}
+  - {week: 14, date: '2026-11-24', focus: 'Fabricate and assemble sections within lab availability. Photograph physical work and refine the volume/section sheets.'}
+  - {week: 15, date: '2026-12-01', focus: 'Assembly follow-through, documentation, booklet and file checks. No graded submissions during the retained final studio-review window.', no_due: true}
 vocabulary:
   - [parameter, 'An input you can change that controls a relationship or result.', 'Width, Depth and Height on the pyramid.']
   - [vector, 'An ordered set of components representing direction and magnitude; XYZ values can also specify a position relative to an origin.', 'A displacement of (0, 0, 1) moves a point upward one model unit.']
@@ -585,11 +595,11 @@ references:
 instructor_notes: |
   The earlier materials disagreed about module numbering, due dates, project weights, the role of Python and the placement of point clouds, tessellation and sections. Their original versions are preserved in the dated archive. This revision uses unit identifiers for topics and project identifiers for assessment so that extending a topic does not require renumbering the entire course.
 
-  The main pacing risk is arrays: linear, nested grid, hexagonal and radial construction, conditionals and sine control are several lessons. Use the two-session allocation as a starting point, revisit individual operations through attractors, and extend guided practice when students cannot explain index order or predict a count. Use small examples; large element counts are not evidence of understanding.
+  Arrays follows linear, nested grid, 3D cube, hexagonal, radial and conditional construction, ending with the math-driven 3D curve array in one teaching session and one tutorial video. Keep the second target week for practice where needed. Revisit operations through attractors and extend guided practice when students cannot explain index order or predict a count. Use small examples; large element counts are not evidence of understanding.
 
-  Attractors introduce measurement rather than another arrangement. Tessellation and lattices add connectivity. Point clouds introduce data the student did not author. Volumes introduce a new representation, and sections translate that representation into buildable parts. Make each transition explicit and retain a before/after comparison.
+  Attractors introduce measurement rather than another arrangement. The XYZ array establishes discrete locations in 3D. Point clouds introduce data the student did not author. Volumes introduce a new representation, and sections translate that representation into buildable parts. Make each transition explicit and retain a before/after comparison. Tessellation, panelization, lattices and simulation are possible intermediate topics and must not interrupt or become prerequisites for this route.
 
-  The midterm is a review of completed foundations and arrays, with developing attractor and tessellation work. Avoid also requiring those two later studies to be finished for the same review. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
+  The midterm is a review of completed foundations and arrays, with developing attractor and spatial-array work. P3 now develops those arrays into the retained modular assembly, so its brief does not require the optional intermediate methods. Its existing weights and dates are retained. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
 
   Keep institutional policy text separate from curriculum edits. The School's accreditation mapping remains unconfirmed; do not present the earlier mixed 2014/2020 criteria table as a verified current requirement.
 
@@ -647,17 +657,83 @@ home:
     test pieces and documentation are part of the work rather than an
     afterthought at the end of it.
 
+# Authoritative teaching sequence. Class titles, topic membership and session
+# placement derive from these blocks; dated weeks only add dates and class notes.
+teaching_sequence:
+  - id: B01
+    weeks: [1]
+    focus: Graphic Standards Manual
+    units: [U01]
+    sessions: []
+  - id: B02
+    weeks: [2]
+    focus: Transformations and CSG
+    units: [U02]
+    sessions: [S01]
+  - id: B03
+    weeks: [3]
+    focus: Point → Line → Edge → Face → Solid → Boolean
+    units: [U03]
+    sessions: [S02]
+  - id: B04
+    weeks: [4, 5]
+    focus: Arrays, lists, loops, conditionals and sine
+    units: [U04]
+    sessions: [S03, S04]
+    combine_sessions: true
+    delivery: One teaching session and one tutorial video cover both example files. Use the second target week for practice if needed. The video has not yet been posted.
+  - id: B05
+    weeks: [6]
+    focus: Point, multiple-point and curve attractors
+    units: [U05]
+    sessions: [S05]
+  - id: B06
+    weeks: [7, 8]
+    focus: 3D arrays, review and midterm
+    units: [U04, U05]
+    sessions: []
+    activity: Review and practice
+  - id: B07
+    weeks: [9]
+    focus: Point clouds and conversion to volumes
+    units: [U07]
+    sessions: [S07]
+  - id: B08
+    weeks: [10, 11]
+    focus: Volumetric fields, SDFs, noise and Booleans
+    units: [U08]
+    sessions: [S08, S09]
+  - id: B09
+    weeks: [12, 13]
+    focus: Contours, sections and physical parts
+    units: [U09]
+    sessions: [S10, S11]
+  - id: B10
+    weeks: [14, 15]
+    focus: Fabrication, revision and booklet
+    units: [U09]
+    sessions: [S12]
+
+optional_classes:
+  - id: O01
+    weeks: []
+    focus: Tessellation, panelization, lattices and simulation
+    units: [U06]
+    sessions: [S06]
+    optional: true
+    description: A possible intermediate class after arrays or attractors, if time allows. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
+
 release:
   classes: [1, 2, 3, 4, 5, 6]
   tutorials: [U01, U02, U03, U04, U05]
   assignments: [GSM, MID, BOOK, P1, P2]
 
 # ─────────────────────────────────────────────────────────────────────────────
-# BLENDER SESSION LIBRARY — one file per session, linked from each lesson page.
+# BLENDER EXAMPLE LIBRARY — individual files linked from each teaching session.
 #
 # Sessions are lesson stages, not fixed weeks: a session may run over more than
-# one class, and a unit may draw on more than one session. `units` is what wires
-# a session to the lesson pages that link it.
+# one class, and a unit may draw on more than one session. Teaching blocks above
+# assign sessions to weeks and lesson notes; this list defines file contents.
 #
 # A session is only ever linked when its .blend is actually present on disk.
 # No file, no claim — the same rule the slide links follow.
@@ -666,51 +742,68 @@ blender:
   version_note: >-
     Earlier Blender versions may lack the volume nodes used in the later
     sessions.
-  zip: files/blender/ARC3133-Blender-Sessions.zip
+  reference_note: >-
+    Use these example files only as a reference if you are struggling with a step.
+    Build your own file and follow the process one step at a time. Compare the
+    example to understand where you are stuck, then return to your own work.
+    The supplied examples are not files to submit as your assignment.
   how_to_use: >-
-    Select the lesson object, change the exposed controls in the GeometryNodes
-    modifier, and press Home over the node editor to fit the graph.
-    Explanations are in Frames and native node names are retained. Save your
-    own working copy before you change anything.
+    Select the lesson object and change parameters on the nodes or, where
+    provided, in the GeometryNodes modifier. Press Home over the node editor.
+    Explanations are in Frames and native node names are retained. Build the
+    exercise in a new file of your own, following each step in order.
   sessions:
     - id: S01
       title: Intro to Geometry Nodes — transformations and CSG
       path: files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend
-      units: [U02]
-      scenes: [Start, Translation, Rotation, Scale, Order, Union, Difference, Intersect, Massing exercise]
+      focus: Build the instructor's three-operation CSG example from native primitives and rotated cylinders.
+      exercise: Make three variants by changing one parameter at a time. Diagram Intersection, Union and Difference in the order used.
+      scenes: [01 - CSG example]
+      note: >-
+        The instructor's graph uses Intersection, rotated cylinders, Union and
+        Difference. Read the Frames in order. Change Radius, Size, Translation,
+        Rotation or Scale on the native nodes; these controls are not in the modifier.
     - id: S02
       title: Geometry Fundamentals
-      path: files/blender/geometry101/GEOMETRY101-class-ready.blend
-      units: [U03]
+      path: files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend
+      focus: Build geometry from coordinates, then use the parametric pyramid as a Boolean cutter.
+      exercise: Show a point, line, edge, face, solid pyramid and cube-minus-pyramid result. Keep Width, Depth and Height exposed; include a mesh with multiple faces.
       scenes: [Point, Line, Edge, Face, Solid, Boolean]
       note: >-
-        The existing six-scene lesson. The pyramid keeps Width, Depth and Height
+        Follow the six main teaching scenes. Original reference scenes remain in the file. The pyramid keeps Width, Depth and Height
         exposed and the file ends with cube-minus-pyramid. This is a model-units
         lesson, not a fabrication export.
     - id: S03
-      title: Arrays and Lists I — linear and nested grid
+      title: 'Arrays and Lists — Part 1: linear and nested grid'
       path: files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend
-      units: [U04]
+      focus: Begin with a linear array, then nest a loop to build a grid.
+      exercise: Repeat the previous geometry along a line and across a grid. Compare two counts and two spacings.
       scenes: [Linear loop, Nested grid]
     - id: S04
-      title: Arrays and Lists II — arrangements and rules
+      title: 'Arrays and Lists — Part 2: arrangements and rules'
       path: files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend
-      units: [U04]
-      scenes: [Hexagonal array, Radial array, If and range, Sine curve]
+      focus: Begin with the simple 3D cube array, then compare hexagonal and radial arrangements and select index ranges. End with the 3D curve array to show how math can shape a volume.
+      exercise: Build the XYZ array and predict Count cubed. Then make one hexagonal or radial arrangement and one conditional range change. End with a 3D curve-array volume shaped by sine relationships.
+      scenes: [3D array, Hexagonal array, Radial array, If and range, Sine curve]
+      note: Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
     - id: S05
       title: Attractors
       path: files/blender/04-attractors/Attractors.blend
-      units: [U05]
+      focus: Vary parameters using distance to one point, multiple points and a curve.
+      exercise: Compare all three attractor types on the same array and show how moving an attractor changes the result.
       scenes: [Read the field, One point, Multiple points, Curve attractor]
     - id: S06
-      title: Tessellation and Lattices
+      title: Optional — Tessellation and Lattices
       path: files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend
-      units: [U06]
+      focus: Optional intermediate exploration of tessellated surfaces and lattices after arrays or attractors.
+      exercise: If this optional class is offered, compare a tessellation and a lattice from the earlier component. This exploration is not a required graded submission.
+      note: The existing file covers tessellation and lattices. Panelization and simulation are possible additions to this intermediate class and are not yet demonstrated here.
       scenes: [Tessellation, Lattice, Attractor lattice]
     - id: S07
       title: Point Clouds and Volumes
       path: files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend
-      units: [U07]
+      focus: Import points, analyze their relationship to an attractor and convert the samples into a volume.
+      exercise: Show the imported samples, an attractor-based analysis and the resulting volume at two resolutions.
       scenes: [Import points, Analyze points, Points to volume]
       extras:
         - [Teaching point cloud, files/blender/06-point-clouds-volumes/teaching-courtyard.ply]
@@ -721,27 +814,32 @@ blender:
     - id: S08
       title: Advanced Volumes I — signed distance and Boolean
       path: files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend
-      units: [U08]
+      focus: Read signed distance values and compare Boolean combinations of volumetric fields.
+      exercise: Compare union, intersection and difference of the same two fields and explain the zero boundary.
       scenes: [Mesh to SDF, Signed distance, SDF Boolean]
     - id: S09
       title: Advanced Volumes II — noise and surface extraction
       path: files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend
-      units: [U08]
+      focus: Use noise to vary a volumetric field and extract its surface.
+      exercise: Make two controlled noise variations and compare sampling resolutions. Select one volume for the contour sessions.
       scenes: [Noise field]
     - id: S10
       title: Discretizing Geometry I — contours
       path: files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend
-      units: [U09]
+      focus: Slice the chosen form into ordered contour curves.
+      exercise: Compare two section intervals or directions and show how the curves describe the continuous form.
       scenes: [One contour, Contour stack]
     - id: S11
       title: Discretizing Geometry II — physical parts
       path: files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend
-      units: [U09]
+      focus: Convert section profiles into numbered physical parts and a cutting layout.
+      exercise: Assign material thickness, test registration and arrange a small set of parts for a fit test.
       scenes: [Section parts, Laid out parts]
     - id: S12
       title: Final Project — fabrication and assembly
       path: files/blender/09-final-project/Final-Project-Fabrication.blend
-      units: [U09]
+      focus: Fabricate, test and revise the selected system, then assemble its documentation into the booklet.
+      exercise: Produce one fabrication test, document the revision it requires, and prepare the digital files, photographs and diagrams for the final booklet.
       scenes: [Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings]
       extras:
         - [Fabrication notes and dimensions, files/blender/09-final-project/FABRICATION-NOTES.md]

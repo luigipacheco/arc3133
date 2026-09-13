@@ -1,5 +1,6 @@
 {% assign captures = site.data.blender_images %}
 {% if include.unit %}{% assign captures = captures | where: "unit", include.unit %}{% endif %}
+{% if include.session %}{% assign captures = captures | where: "session", include.session %}{% endif %}
 {% for capture in captures %}
 {% if include.released_only %}{% unless page.capture_units contains capture.unit %}{% continue %}{% endunless %}{% endif %}
 <section class="blender-capture" id="capture-{{ capture.session | downcase }}">

@@ -17,4 +17,4 @@ Use Blender's **Scene selector at the top right** to follow the lesson:
 
 Actual node names remain unchanged; explanations are in Frames. Press **Home** over the node editor to fit the graph, and **Ctrl+Space** to temporarily maximize an editor.
 
-This is a geometry lesson in model units. It is not a prepared print file. Instructor notes and preparation history are kept in `reference/geometry101/`, outside the generated course site.
+This is a geometry lesson in model units. It is not a prepared print file. Instructor notes and preparation history are kept in `reference/archive/geometry101-preparation/`, outside the generated course site.

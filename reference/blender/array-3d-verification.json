@@ -1,0 +1,24 @@
+{
+  "file": "C:\\Users\\luigi\\Documents\\arc3133\\files\\blender\\03-arrays-lists\\Arrays-Lists-Session-2.blend",
+  "scene": "03 - 3D array",
+  "tests": [
+    {
+      "count_per_axis": 3,
+      "cubes": 27
+    },
+    {
+      "count_per_axis": 4,
+      "cubes": 64
+    },
+    {
+      "count_per_axis": 5,
+      "cubes": 125
+    }
+  ],
+  "controls": [
+    "Count",
+    "Spacing",
+    "Cube Size"
+  ],
+  "source_sha256": "2c290f01af7246b386815dbd9b89bdf6f7ee5f261877d13f7a00474b2f490fa9"
+}

@@ -1,0 +1,33 @@
+{
+  "stage": "load",
+  "index": 1,
+  "total": 1,
+  "results": [
+    {
+      "session": "S04",
+      "unit": "U04",
+      "title": "Arrays and Lists \u2014 Part 2: arrangements and rules",
+      "source_file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+      "source_sha256": "abbb67293cfc20c13a992f4117bf4fba84770e5b2d101a55352e17f7450fd836",
+      "scene": "07 - Sine curve",
+      "node_group": "06 - Sine curve",
+      "object": "06 - Sine curve",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s04-math-volume-array-geonodes.png",
+        "width": 3726,
+        "height": 1061,
+        "sha256": "da8f259bf6c5b6653f031949eed1c4226ac3c9d988adb9e97855c355e36c26e8"
+      },
+      "viewport": {
+        "file": "images/blender/s04-math-volume-array-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "080ba7f0b63f54a80be38484f0ae09da5cbbd1205e2a55cd65f3f7e50a13976c"
+      }
+    }
+  ],
+  "complete": true,
+  "error": null
+}

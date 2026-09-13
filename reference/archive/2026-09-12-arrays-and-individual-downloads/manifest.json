@@ -1,0 +1,42 @@
+[
+  {
+    "sha256": "e5a4762f96906aa0b35fdb1ecc4aae5bec162755ff0c6b0b70602b9272aa5903",
+    "archived": "arrays-2-user-update.blend",
+    "source": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend"
+  },
+  {
+    "sha256": "9f946b892e09478038ffeefb0795b1b34cb8494499c83151196d3fc6b3629d71",
+    "archived": "arrays-2-previous.blend1",
+    "source": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend1"
+  },
+  {
+    "sha256": "41da07714cfcdbcf3c1bd24b120d79db38db5d7f65d87a0396ee8b756e046775",
+    "archived": "s04-index-range-geonodes.png",
+    "source": "images/blender/s04-index-range-geonodes.png"
+  },
+  {
+    "sha256": "7520042ff3cf508fe866fe516b3701ccdb0c9b0096dc26901883aa02320e4575",
+    "archived": "s04-index-range-viewport.png",
+    "source": "images/blender/s04-index-range-viewport.png"
+  },
+  {
+    "sha256": "18080f4c382d76790834da23a7239132e936cc054b9a61fab564ffa865890f44",
+    "archived": "previous-arrays-2-page.md",
+    "source": "modules/sessions/_posts/2000-01-04-s04.md"
+  },
+  {
+    "sha256": "b5aed7966df2cf31141a9fe33fe0919686c24e82e66c2532dfa89b9ed2d24014",
+    "archived": "ARC3133-Blender-Sessions.zip",
+    "source": "files/blender/ARC3133-Blender-Sessions.zip"
+  },
+  {
+    "sha256": "6ae666cc1036e692c789cf57981cf869eb9797763c65a6b25ab9f2f25666dd36",
+    "archived": "package_sessions.py",
+    "source": "scripts/blender/package_sessions.py"
+  },
+  {
+    "sha256": "30a979c4d1b7e1033d6b6bd24150f1ec8b1258ce448e2be67a4027f31380bff2",
+    "archived": "package-verification.json",
+    "source": "reference/blender/package-verification.json"
+  }
+]

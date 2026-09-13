@@ -21,11 +21,11 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--only',default='')
 parser.add_argument('--live',action='store_true')
 args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
-sessions=json.loads((ROOT/'reference/blender-course/session-manifest.json').read_text(encoding='utf-8'))
-choices={'S01':('07 - Difference','difference'),
+sessions=json.loads((ROOT/'reference/blender/session-manifest.json').read_text(encoding='utf-8'))
+choices={'S01':('01 - CSG example','csg-example'),
          'S02':('05 - Solid','parametric-pyramid'),
          'S03':('02 - Nested grid','nested-grid'),
-         'S04':('05 - If and range','index-range'),
+         'S04':('07 - Sine curve','math-volume-array'),
          'S05':('04 - Curve attractor','curve-attractor'),
          'S06':('03 - Attractor lattice','attractor-lattice'),
          'S07':('03 - Points to volume','points-to-volume'),
@@ -36,7 +36,11 @@ choices={'S01':('07 - Difference','difference'),
          'S12':('04 - Registered sections','registered-sections')}
 jobs=[s for s in sessions if not args.only or s['id'] in args.only.split(',')]
 state={'index':0,'stage':'load','results':[],'area':None,'original_hash':None}
-STATUS=ROOT/'reference/blender-course/capture-status.json'
+if args.live:
+    assert bpy.data.filepath and not bpy.data.is_dirty, 'Save current work before a capture changes the editor view'
+    state['return_file']=bpy.data.filepath
+    state['return_scene']=bpy.context.scene.name
+STATUS=ROOT/'reference/blender/capture-status.json'
 
 def write_status(error=None,complete=False):
     STATUS.write_text(json.dumps({'stage':state['stage'],'index':state['index'],'total':len(jobs),
@@ -52,7 +56,10 @@ def finish():
     if 'show_tooltips' in state:
         bpy.context.preferences.view.show_tooltips=state['show_tooltips']
     if args.live:
-        bpy.ops.wm.open_mainfile(filepath=str(ROOT/sessions[0]['file']),load_ui=True)
+        bpy.ops.wm.open_mainfile(filepath=state['return_file'],load_ui=True)
+        window=bpy.context.window_manager.windows[0]
+        if window.scene.name!=state['return_scene']:
+            window.scene=bpy.data.scenes[state['return_scene']]
         if state.get('restore_window'):
             state['restore_window']()
     else:
@@ -116,7 +123,7 @@ def tick():
             group=next(m.node_group for m in window.scene.view_layers[0].objects.active.modifiers if m.type=='NODES')
             if state.get('resize_window'):
                 span=max(n.location.x+n.width for n in group.nodes)-min(n.location.x for n in group.nodes)
-                state['resize_window'](min(3840,max(1920,int(span+180))))
+                state['resize_window'](min(3840,max(2560,int(span+180))),1440)
             for node in group.nodes:
                 node.select=False
             area.tag_redraw()
@@ -163,6 +170,16 @@ def tick():
                     mesh=ev.to_mesh()
                     if mesh:points.extend(ev.matrix_world@v.co for v in mesh.vertices)
                     ev.to_mesh_clear()
+            # Instance-only examples still have visible geometry in the viewport.
+            for instance in deps.object_instances:
+                if not instance.is_instance:
+                    continue
+                obj=instance.object
+                if obj.type not in ('MESH','CURVE','SURFACE'):
+                    continue
+                mesh=obj.to_mesh()
+                if mesh:points.extend(instance.matrix_world@v.co for v in mesh.vertices)
+                obj.to_mesh_clear()
             assert points,'No visible evaluated geometry'
             state['view_points']=points
             state['framing_pass']=0
@@ -247,8 +264,8 @@ if args.live:
         placement=WINDOWPLACEMENT();placement.length=ctypes.sizeof(placement)
         user32.GetWindowPlacement(hwnd,ctypes.byref(placement))
         user32.ShowWindow(hwnd,9)
-        def resize_window(width):
-            user32.SetWindowPos(hwnd,None,0,0,width,1080,0x14)
+        def resize_window(width,height=1080):
+            user32.SetWindowPos(hwnd,None,0,0,width,height,0x14)
         resize_window(1920)
         state['resize_window']=resize_window
         def restore_window():

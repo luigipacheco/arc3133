@@ -64,12 +64,12 @@ def note(title, body, location, width, height, color):
     frame.shrink = False
     frame.location = location
     frame.width = width
-    frame.height = height
+    frame.height = max(height, 100 + 40 * len(body.splitlines()))
     frame.use_custom_color = True
     frame.color = color
     text = bpy.data.texts.get('S01 - ' + title) or bpy.data.texts.new('S01 - ' + title)
     text.clear()
-    text.write(body)
+    text.write(body + '\n')
     frame.text = text
     return frame
 

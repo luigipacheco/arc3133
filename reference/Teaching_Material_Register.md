@@ -10,20 +10,20 @@ The other unit descriptions are preparation briefs. Remaining Blender files, rec
 | --- | --- | --- | --- | --- |
 | U01 | Graphic Standards Manual | To prepare | Posted | Not linked / to prepare |
 | U02 | Transformations and CSG | [S01](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | Posted | Not linked / to prepare |
-| U03 | Geometry from scratch | [S02](../files/blender/geometry101/GEOMETRY101-class-ready.blend) | Posted | Not linked / to prepare |
+| U03 | Geometry from scratch | [S02](../files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Posted | Not linked / to prepare |
 | U04 | Arrays and lists | [S03](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend), [S04](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend) | Posted | Not linked / to prepare |
 | U05 | Attractors | [S05](../files/blender/04-attractors/Attractors.blend) | Posted | Not linked / to prepare |
-| U06 | Tessellation and lattices | [S06](../files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend) | Held until the class | Not linked / to prepare |
+| U06 | Tessellation, panelization, lattices and simulation | [S06](../files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend) | Held until the class | Not linked / to prepare |
 | U07 | Point clouds and the transition to volumes | [S07](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Held until the class | Not linked / to prepare |
 | U08 | Volumetric fields and signed distance | [S08](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend), [S09](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Held until the class | Not linked / to prepare |
 | U09 | Contour sections and physical parts | [S10](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend), [S11](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend), [S12](../files/blender/09-final-project/Final-Project-Fabrication.blend) | Held until the class | Not linked / to prepare |
 
 The earlier materials disagreed about module numbering, due dates, project weights, the role of Python and the placement of point clouds, tessellation and sections. Their original versions are preserved in the dated archive. This revision uses unit identifiers for topics and project identifiers for assessment so that extending a topic does not require renumbering the entire course.
 
-The main pacing risk is arrays: linear, nested grid, hexagonal and radial construction, conditionals and sine control are several lessons. Use the two-session allocation as a starting point, revisit individual operations through attractors, and extend guided practice when students cannot explain index order or predict a count. Use small examples; large element counts are not evidence of understanding.
+Arrays follows linear, nested grid, 3D cube, hexagonal, radial and conditional construction, ending with the math-driven 3D curve array in one teaching session and one tutorial video. Keep the second target week for practice where needed. Revisit operations through attractors and extend guided practice when students cannot explain index order or predict a count. Use small examples; large element counts are not evidence of understanding.
 
-Attractors introduce measurement rather than another arrangement. Tessellation and lattices add connectivity. Point clouds introduce data the student did not author. Volumes introduce a new representation, and sections translate that representation into buildable parts. Make each transition explicit and retain a before/after comparison.
+Attractors introduce measurement rather than another arrangement. The XYZ array establishes discrete locations in 3D. Point clouds introduce data the student did not author. Volumes introduce a new representation, and sections translate that representation into buildable parts. Make each transition explicit and retain a before/after comparison. Tessellation, panelization, lattices and simulation are possible intermediate topics and must not interrupt or become prerequisites for this route.
 
-The midterm is a review of completed foundations and arrays, with developing attractor and tessellation work. Avoid also requiring those two later studies to be finished for the same review. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
+The midterm is a review of completed foundations and arrays, with developing attractor and spatial-array work. P3 now develops those arrays into the retained modular assembly, so its brief does not require the optional intermediate methods. Its existing weights and dates are retained. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
 
 Keep institutional policy text separate from curriculum edits. The School's accreditation mapping remains unconfirmed; do not present the earlier mixed 2014/2020 criteria table as a verified current requirement.

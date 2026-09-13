@@ -4,34 +4,34 @@
     "unit": "U02",
     "title": "Intro to Geometry Nodes — transformations and CSG",
     "source_file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
-    "source_sha256": "f69e7918f1d16271c0b76375c62e0a652e34de2aa271b2621876f878d2679283",
-    "scene": "07 - Difference",
-    "node_group": "07 - Difference",
-    "object": "07 - Difference",
+    "source_sha256": "5ecf02396f1aed628a6ae4be25d290baaf67c82034814f24210475ffa61081fb",
+    "scene": "01 - CSG example",
+    "node_group": "Geometry Nodes",
+    "object": "geomery nodes",
     "capture": "Blender native editor screenshots",
     "blender_version": "5.2.1 LTS",
     "geonodes": {
-      "file": "images/blender/s01-difference-geonodes.png",
-      "width": 1904,
-      "height": 1041,
-      "sha256": "bda8ee722b869761e7aa5dd2d807edd7d0d5d7590e06adfbbfbd209fd1600c80"
+      "file": "images/blender/s01-csg-example-geonodes.png",
+      "width": 1920,
+      "height": 1009,
+      "sha256": "2b6e0b3d6da8a27b921d8eab53e01713d42ac3493704f3a8fac4f6436b1a4f46"
     },
     "viewport": {
-      "file": "images/blender/s01-difference-viewport.png",
-      "width": 1904,
-      "height": 1041,
-      "sha256": "3b1ffeac22f13604045e3ccb04238854dfafb1d5e1a7a4f8f1ae0c9a5f38974d"
+      "file": "images/blender/s01-csg-example-viewport.png",
+      "width": 1920,
+      "height": 1009,
+      "sha256": "e6cc506334dc27a8f11526eb7c63123e605c231b752805a00ae9e0aacc30815a"
     },
-    "example": "Difference",
-    "caption": "Subtracting a cylinder from a block creates a parametric opening.",
-    "viewport_alt": "a block with a cylindrical cutout",
-    "nodes_alt": "Cube, Cylinder, Transform Geometry and Mesh Boolean set to Difference."
+    "example": "CSG example",
+    "caption": "Intersect a cube and sphere, union three perpendicular cylinders, then subtract the cylinders.",
+    "viewport_alt": "a cube clipped by a sphere with three perpendicular cylindrical openings",
+    "nodes_alt": "Cube, UV Sphere, Cylinder, Transform Geometry and Mesh Boolean show Intersection, Union and Difference."
   },
   {
     "session": "S02",
     "unit": "U03",
     "title": "Geometry Fundamentals",
-    "source_file": "files/blender/geometry101/GEOMETRY101-class-ready.blend",
+    "source_file": "files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend",
     "source_sha256": "b225463ad29177dea48d4657cefb0877c3506b274cd0f1dfb3a2c80f0db680e9",
     "scene": "05 - Solid",
     "node_group": "002-point in middle",
@@ -58,7 +58,7 @@
   {
     "session": "S03",
     "unit": "U04",
-    "title": "Arrays and Lists I — linear and nested grid",
+    "title": "Arrays and Lists — Part 1: linear and nested grid",
     "source_file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
     "source_sha256": "e89ffd80394eacdf243f2e246575fadfbd574b7bf063914e443d4c21abc87bca",
     "scene": "02 - Nested grid",
@@ -86,30 +86,30 @@
   {
     "session": "S04",
     "unit": "U04",
-    "title": "Arrays and Lists II — arrangements and rules",
+    "title": "Arrays and Lists — Part 2: arrangements and rules",
     "source_file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
-    "source_sha256": "9f946b892e09478038ffeefb0795b1b34cb8494499c83151196d3fc6b3629d71",
-    "scene": "05 - If and range",
-    "node_group": "05 - If and range",
-    "object": "05 - If and range",
+    "source_sha256": "abbb67293cfc20c13a992f4117bf4fba84770e5b2d101a55352e17f7450fd836",
+    "scene": "07 - Sine curve",
+    "node_group": "06 - Sine curve",
+    "object": "06 - Sine curve",
     "capture": "Blender native editor screenshots",
     "blender_version": "5.2.1 LTS",
     "geonodes": {
-      "file": "images/blender/s04-index-range-geonodes.png",
-      "width": 2724,
-      "height": 1041,
-      "sha256": "41da07714cfcdbcf3c1bd24b120d79db38db5d7f65d87a0396ee8b756e046775"
+      "file": "images/blender/s04-math-volume-array-geonodes.png",
+      "width": 3726,
+      "height": 1061,
+      "sha256": "da8f259bf6c5b6653f031949eed1c4226ac3c9d988adb9e97855c355e36c26e8"
     },
     "viewport": {
-      "file": "images/blender/s04-index-range-viewport.png",
+      "file": "images/blender/s04-math-volume-array-viewport.png",
       "width": 1904,
       "height": 1041,
-      "sha256": "7520042ff3cf508fe866fe516b3701ccdb0c9b0096dc26901883aa02320e4575"
+      "sha256": "080ba7f0b63f54a80be38484f0ae09da5cbbd1205e2a55cd65f3f7e50a13976c"
     },
-    "example": "If and range",
-    "caption": "Two comparisons select an index range; Switch controls its vertical displacement.",
-    "viewport_alt": "a grid of pyramids with a raised band",
-    "nodes_alt": "Index, Compare, Boolean Math, Switch and Set Position control the selected range."
+    "example": "Sine curve",
+    "caption": "Sine relationships along X and Y shape a three-dimensional array of cubes, introducing how math can describe a volume.",
+    "viewport_alt": "a volume-shaped array of small cubes with sine-driven height variation",
+    "nodes_alt": "Mesh Line, Separate XYZ, Math set to Sine, Set Position and nested Instance on Points shape the arrangement across X, Y and Z."
   },
   {
     "session": "S05",
@@ -142,7 +142,7 @@
   {
     "session": "S06",
     "unit": "U06",
-    "title": "Tessellation and Lattices",
+    "title": "Optional — Tessellation and Lattices",
     "source_file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
     "source_sha256": "e5ad35a606c4366dd147f5606ae0c632c297d31a8ecd87f5b8df346fa3959ab5",
     "scene": "03 - Attractor lattice",

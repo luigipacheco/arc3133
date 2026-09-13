@@ -1,0 +1,33 @@
+{
+  "stage": "load",
+  "index": 1,
+  "total": 1,
+  "results": [
+    {
+      "session": "S04",
+      "unit": "U04",
+      "title": "Arrays and Lists \u2014 Part 2: arrangements and rules",
+      "source_file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+      "source_sha256": "222c61c1d96c25f2dc72e8b0e145334e63a7c8ed7c0d6bc6099330aafd4ce3a3",
+      "scene": "06 - Sine curve",
+      "node_group": "06 - Sine curve",
+      "object": "06 - Sine curve",
+      "capture": "Blender native editor screenshots",
+      "blender_version": "5.2.1 LTS",
+      "geonodes": {
+        "file": "images/blender/s04-sine-array-geonodes.png",
+        "width": 2950,
+        "height": 1061,
+        "sha256": "ed45920f5c0cdc60fa8bbd8ce7bbbdf883bf7754f632727949e765c0fb9a2585"
+      },
+      "viewport": {
+        "file": "images/blender/s04-sine-array-viewport.png",
+        "width": 1904,
+        "height": 1041,
+        "sha256": "8da6e2f98922cdf6cac82016eece7aeab061733b586150d00092c93ad308a7d1"
+      }
+    }
+  ],
+  "complete": false,
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\luigi\\Documents\\arc3133\\scripts\\blender\\capture_images.py\", line 84, in tick\n    finish()\n    ~~~~~~^^\n  File \"C:\\Users\\luigi\\Documents\\arc3133\\scripts\\blender\\capture_images.py\", line 60, in finish\n    bpy.context.window.scene=bpy.data.scenes[state['return_scene']]\n    ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'scene' and no __dict__ for setting new attributes\n"
+}

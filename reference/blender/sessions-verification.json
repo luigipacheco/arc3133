@@ -1,0 +1,600 @@
+[
+  {
+    "session": "S01",
+    "file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
+    "scenes": {
+      "01 - CSG example": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 687,
+        "edges": 1123,
+        "faces": 428,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.34979179341800776
+      }
+    },
+    "sha256": "5ecf02396f1aed628a6ae4be25d290baaf67c82034814f24210475ffa61081fb",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S02",
+    "file": "files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend",
+    "scenes": {
+      "01 - Point": {
+        "points": 1,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 0,
+        "edges": 0,
+        "faces": 0
+      },
+      "02 - Line": {
+        "points": 0,
+        "instances": 0,
+        "curves": 1,
+        "vertices": 0,
+        "edges": 0,
+        "faces": 0
+      },
+      "03 - Edge": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 2,
+        "edges": 1,
+        "faces": 0
+      },
+      "04 - Face": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 3,
+        "edges": 3,
+        "faces": 1,
+        "nonmanifold_edges": 3,
+        "closed": false,
+        "volume": 0.0
+      },
+      "05 - Solid": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 5,
+        "edges": 8,
+        "faces": 5,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.5280000534057634
+      },
+      "06 - Boolean": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 16,
+        "edges": 28,
+        "faces": 12,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.8090390152682831
+      },
+      "Intro 01 - Start": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 1.7280000486373888
+      },
+      "Intro 02 - Translation": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 1.7279998769760136
+      },
+      "Intro 03 - Rotation": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 1.7280000549704153
+      },
+      "Intro 04 - Scale": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 1.65888015655518
+      },
+      "Intro 05 - Order": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 8,
+        "edges": 12,
+        "faces": 6,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.5200001589730144
+      },
+      "Intro 06 - Union": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 174,
+        "edges": 261,
+        "faces": 89,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 10.162309671880397
+      },
+      "Intro 07 - Difference": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 78,
+        "edges": 117,
+        "faces": 41,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 5.580840544638443
+      },
+      "Intro 08 - Intersect": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 70,
+        "edges": 105,
+        "faces": 37,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 2.4191595745708474
+      },
+      "Intro 09 - Massing exercise": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 16,
+        "edges": 24,
+        "faces": 10,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 5.792826821541974
+      }
+    },
+    "sha256": "b225463ad29177dea48d4657cefb0877c3506b274cd0f1dfb3a2c80f0db680e9",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S03",
+    "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
+    "scenes": {
+      "01 - Linear loop": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 40,
+        "edges": 64,
+        "faces": 40,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.14634670241514788
+      },
+      "02 - Nested grid": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 125,
+        "edges": 200,
+        "faces": 125,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.4573332904974635
+      }
+    },
+    "sha256": "e89ffd80394eacdf243f2e246575fadfbd574b7bf063914e443d4c21abc87bca",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S04",
+    "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+    "scenes": {
+      "03 - 3D array": {
+        "points": 0,
+        "instances": 4,
+        "curves": 0,
+        "vertices": 0,
+        "edges": 0,
+        "faces": 0
+      },
+      "04 - Hexagonal array": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 125,
+        "edges": 200,
+        "faces": 125,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.45733326323827517
+      },
+      "05 - Radial array": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 55,
+        "edges": 88,
+        "faces": 55,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.201226635746957
+      },
+      "06 - If and range": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 605,
+        "edges": 968,
+        "faces": 605,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 2.213493468694686
+      },
+      "07 - Sine curve": {
+        "points": 0,
+        "instances": 20,
+        "curves": 0,
+        "vertices": 0,
+        "edges": 0,
+        "faces": 0
+      }
+    },
+    "sha256": "abbb67293cfc20c13a992f4117bf4fba84770e5b2d101a55352e17f7450fd836",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S05",
+    "file": "files/blender/04-attractors/Attractors.blend",
+    "scenes": {
+      "01 - Read the field": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 1681,
+        "edges": 3280,
+        "faces": 1600,
+        "nonmanifold_edges": 160,
+        "closed": false,
+        "volume": 0.0
+      },
+      "02 - One point": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 1445,
+        "edges": 2312,
+        "faces": 1445,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 4.829407612605742
+      },
+      "03 - Multiple points": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 1445,
+        "edges": 2312,
+        "faces": 1445,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 8.25129851781805
+      },
+      "04 - Curve attractor": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 1445,
+        "edges": 2312,
+        "faces": 1445,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 9.504713574637575
+      }
+    },
+    "sha256": "595f8ad57572fadc1023ec1a89aea0715c566410c5cf5f63fca9562e309c368a",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S06",
+    "file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
+    "scenes": {
+      "01 - Tessellation": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 288,
+        "edges": 432,
+        "faces": 216,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 2.764800020599362
+      },
+      "02 - Lattice": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 1680,
+        "edges": 2520,
+        "faces": 1050,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.6586700973655266
+      },
+      "03 - Attractor lattice": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 1680,
+        "edges": 2520,
+        "faces": 1050,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.6590931798005265
+      }
+    },
+    "sha256": "e5ad35a606c4366dd147f5606ae0c632c297d31a8ecd87f5b8df346fa3959ab5",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S07",
+    "file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
+    "scenes": {
+      "01 - Import points": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 21672,
+        "edges": 54180,
+        "faces": 36120,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.071565477890283
+      },
+      "02 - Analyze points": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 11676,
+        "edges": 29190,
+        "faces": 19460,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.06662580425460483
+      },
+      "03 - Points to volume": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 9558,
+        "edges": 19092,
+        "faces": 9546,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 14.983281459369966
+      }
+    },
+    "sha256": "224a5cfbfd08a61492964b1e6fb6bbe718ae25d4c322feae2b5f259fa5167ad0",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S08",
+    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
+    "scenes": {
+      "01 - Mesh to SDF": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 1712,
+        "edges": 3420,
+        "faces": 1710,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 7.6805306314175725
+      },
+      "02 - Signed distance": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 4784,
+        "edges": 9564,
+        "faces": 4782,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 7.205817139936251
+      },
+      "03 - SDF Boolean": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 4664,
+        "edges": 9324,
+        "faces": 4662,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 4.7334199197721425
+      }
+    },
+    "sha256": "698606df7be6999d0d1217a05eee7f90aa08133759ae469b749df66eadc99704",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S09",
+    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
+    "scenes": {
+      "04 - Noise field": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 5030,
+        "edges": 10056,
+        "faces": 5028,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 7.22305441761552
+      }
+    },
+    "sha256": "50744b4f708bf39e23d779c60330d58d61ffe460d69ced0edf8d61534e439e1d",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S10",
+    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
+    "scenes": {
+      "01 - One contour": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 1224,
+        "edges": 2448,
+        "faces": 1224,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.003078021488523165
+      },
+      "02 - Contour stack": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 10464,
+        "edges": 20928,
+        "faces": 10464,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 0.02430739988078143
+      }
+    },
+    "sha256": "0e9ac9b5010a72049bb7f7194a4703a1ff4d8b8d625b0237cf4330b941b1b91c",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S11",
+    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
+    "scenes": {
+      "03 - Section parts": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 2616,
+        "edges": 6486,
+        "faces": 3888,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 1.8802715555940674
+      },
+      "04 - Laid out parts": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 2616,
+        "edges": 6486,
+        "faces": 3888,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 1.8802714603243156
+      }
+    },
+    "sha256": "dc5f0edaec8bffc836c7439f6a2ddf7047d4d4cc20acc7e6b1a5759d7f3b5c40",
+    "fresh_open_verified": true
+  },
+  {
+    "session": "S12",
+    "file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
+    "scenes": {
+      "01 - Print orientation": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 16,
+        "edges": 24,
+        "faces": 10,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 26531.99515485787
+      },
+      "02 - Fit coupon": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 212,
+        "edges": 324,
+        "faces": 108,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 787.3295062246291
+      },
+      "03 - Modular print": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 1056,
+        "edges": 1632,
+        "faces": 576,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 9287.619369777269
+      },
+      "04 - Registered sections": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 4622,
+        "edges": 9994,
+        "faces": 5348,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 96452.00975203044
+      },
+      "05 - Cutting layout": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 4622,
+        "edges": 9994,
+        "faces": 5348,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 96452.01141656835
+      },
+      "06 - Spacer rings": {
+        "points": 0,
+        "instances": 0,
+        "curves": 0,
+        "vertices": 2816,
+        "edges": 4312,
+        "faces": 1496,
+        "nonmanifold_edges": 0,
+        "closed": true,
+        "volume": 1293.2608899412444
+      }
+    },
+    "sha256": "25ec16d4744de9bd8e724d481d3855e58c40d33f79cdcda72c36bbee907534b2",
+    "fresh_open_verified": true
+  }
+]

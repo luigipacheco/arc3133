@@ -12,3 +12,7 @@ _*.py
 # Curriculum generation helpers
 __pycache__/
 *.py[cod]
+
+# Blender creates local recovery copies beside the working file.
+*.blend[0-9]
+!reference/archive/**/*.blend[0-9]

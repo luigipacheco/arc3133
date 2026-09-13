@@ -1,0 +1,9 @@
+{
+  "leaf_cube_instances": 6500,
+  "rows": 20,
+  "Y_driven_height_range": [
+    -0.30592891573905945,
+    0.4997867941856384
+  ],
+  "scene": "07 - Sine curve"
+}

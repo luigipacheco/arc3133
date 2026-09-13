@@ -12,7 +12,30 @@ published: true
 
 A course on computational design for architectural representation — describing geometry as operations and rules, varying it with data, and making the result physical.
 
-**Most recently posted:** [Class 06 — Attractors]({{ site.baseurl }}/modules/classes/class-06/) · Week 6 — Sep 29
+**Most recently posted:** [Class 06 — Point, multiple-point and curve attractors]({{ site.baseurl }}/modules/classes/class-06/) · Week 6 — Sep 29
+
+## Teaching sequence
+
+Follow these ten teaching blocks in order. Target weeks are a guide; a topic may take longer. Download reference files individually. Arrays uses two files in one session and one tutorial video.
+
+| Target weeks | Focus | Practical sessions |
+|---|---|---|
+| 1 | Graphic Standards Manual | [Manual and sample sheet]({{ site.baseurl }}/modules/tutorials/u01-graphic-standards-manual/) |
+| 2 | Transformations and CSG | [S01]({{ site.baseurl }}/sessions/s01/) |
+| 3 | Point → Line → Edge → Face → Solid → Boolean | [S02]({{ site.baseurl }}/sessions/s02/) |
+| 4–5 | Arrays, lists, loops, conditionals and sine | [One arrays session]({{ site.baseurl }}/sessions/s03/) |
+| 6 | Point, multiple-point and curve attractors | [S05]({{ site.baseurl }}/sessions/s05/) |
+| 7–8 | 3D arrays, review and midterm | [Review and practice]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) |
+| 9 | Point clouds and conversion to volumes | S07 |
+| 10–11 | Volumetric fields, SDFs, noise and Booleans | S08, S09 |
+| 12–13 | Contours, sections and physical parts | S10, S11 |
+| 14–15 | Fabrication, revision and booklet | S12 |
+
+[Open the session guide]({{ site.baseurl }}/sessions/)
+
+## Possible intermediate class
+
+**Tessellation, panelization, lattices and simulation.** A possible intermediate class after arrays or attractors, if time allows. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
 
 ## Four projects
 
@@ -22,24 +45,8 @@ The course is one continuous piece of work in four stages. Each project takes th
 | --- | --- | --- | --- |
 | [P1 — Geometry — from operations to construction]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/) | Build a parametric massing study, reconstruct its cutter from basic geometry, and develop a small printable variant | First print | 21% |
 | [P2 — Repetition and response — arrays to attractors]({{ site.baseurl }}/modules/assignments/p2-repetition-and-response-arrays-to-attractors/) | Use the geometry project as a component. First design its arrangement, then vary it through external measurements | Attractor field study | 14% |
-| P3 — Connected systems — tessellation and lattices — *not yet released* | Develop the repeated component into a tessellated surface or lattice and test how its connections make a physical system | Modular print assembly | 14% |
+| P3 — Spatial arrays and assembly — *not yet released* | Extend the array into XYZ space, apply controlled variation and develop a small connected assembly. Use the same discrete positions to introduce later volume sampling | Modular print assembly | 14% |
 | P4 — Samples, fields and sections — *not yet released* | Analyze a point cloud, develop a volumetric interpretation or design, and discretize the selected volume into physical sections | Sectional fabrication | 21% |
-
-## The sequence
-
-Nine teaching units build those four projects. They are units, not weeks — a class may continue the previous topic when that is what the work needs.
-
-| Lesson | Week | Feeds | Status |
-| --- | --- | --- | --- |
-| [U01 — Graphic Standards Manual]({{ site.baseurl }}/modules/tutorials/u01-graphic-standards-manual/) | 1 | — | Posted |
-| [U02 — Transformations and CSG]({{ site.baseurl }}/modules/tutorials/u02-transformations-and-csg/) | 2 | P1 | Posted |
-| [U03 — Geometry from scratch]({{ site.baseurl }}/modules/tutorials/u03-geometry-from-scratch/) | 3 | P1 | Posted |
-| [U04 — Arrays and lists]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | 4, 5 | P2 | Posted |
-| [U05 — Attractors]({{ site.baseurl }}/modules/tutorials/u05-attractors/) | 6 | P2 | Posted |
-| U06 — Tessellation and lattices | 7, 8 | P3 | With the class |
-| U07 — Point clouds and the transition to volumes | 9 | P4 | With the class |
-| U08 — Volumetric fields and signed distance | 10, 11 | P4 | With the class |
-| U09 — Contour sections and physical parts | 12, 13, 14 | P4 | With the class |
 
 ## How it is taught
 

@@ -8,6 +8,8 @@
 
 Edit [syllabus/course.yml](syllabus/course.yml) for the teaching sequence, short assignments, project connections, calendar and grading. Standing policy wording is maintained only in [syllabus/policies.md](syllabus/policies.md). The readable syllabi and current course pages are generated from those sources.
 
+The `teaching_sequence` block is authoritative: its ten blocks determine the required order, target weeks, lesson membership and session placement. `optional_classes` holds possible intermediate classes outside that route. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise.
+
 - [Student syllabus](syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md)
 - [Full syllabus and instructor notes](syllabus/ARC3133_Syllabus_Fall2026.md)
 - [Decisions for discussion](reference/Curriculum_Decisions.md)
@@ -15,9 +17,24 @@ Edit [syllabus/course.yml](syllabus/course.yml) for the teaching sequence, short
 
 ## Teaching structure
 
+| Target weeks | Focus | Practical sessions |
+|---|---|---|
+| 1 | Graphic Standards Manual | Manual and sample sheet |
+| 2 | Transformations and CSG | S01 |
+| 3 | Point → Line → Edge → Face → Solid → Boolean | S02 |
+| 4–5 | Arrays, lists, loops, conditionals and sine | One arrays session |
+| 6 | Point, multiple-point and curve attractors | S05 |
+| 7–8 | 3D arrays, review and midterm | Review and practice |
+| 9 | Point clouds and conversion to volumes | S07 |
+| 10–11 | Volumetric fields, SDFs, noise and Booleans | S08, S09 |
+| 12–13 | Contours, sections and physical parts | S10, S11 |
+| 14–15 | Fabrication, revision and booklet | S12 |
+
 Architectural Visualization Methods 1 develops computational methods for architectural representation and digital fabrication. Students make a visual identity, describe geometry with parameters, repeat and vary it, work with sampled and volumetric data, and translate that work into drawings and physical parts.
 
-The learning sequence is **visual identity → CSG → geometry from scratch → arrays and lists → attractors → tessellation and lattices → point clouds → volumetric fields → sections and fabrication**. These are teaching units, not a promise to finish one unit every week.
+The learning sequence is **graphic standards → CSG → geometry from scratch → arrays and lists → attractors → point clouds → volumetric fields → sections and fabrication**. Arrays progresses from a row to a grid and an XYZ cube array before hexagonal and radial arrangements, introducing 3D sampling locations for later volume lessons. These are teaching units, not a promise to finish one unit every week.
+
+Tessellation, panelization, lattices and simulation are possible intermediate topics, offered if time and the developing work make them useful. They are outside the required sequence and carry no separate required submission.
 
 Visual quality remains central: composition, hierarchy, line weight, color, rendering, photography and clear explanation of spatial ideas. A working graph supports those decisions. Each project carries geometry and knowledge into the next rather than starting with an unrelated object.
 
@@ -25,24 +42,23 @@ Visual quality remains central: composition, hierarchy, line weight, color, rend
 | --- | --- | --- |
 | P1 — Geometry — from operations to construction | CSG massing sequence → Mesh from scratch → First print | 21% |
 | P2 — Repetition and response — arrays to attractors | Arrays and conditional control → Attractor field study | 14% |
-| P3 — Connected systems — tessellation and lattices | Tessellation and lattice study → Modular print assembly | 14% |
+| P3 — Spatial arrays and assembly | 3D array and connection study → Modular print assembly | 14% |
 | P4 — Samples, fields and sections | Point-cloud analysis → Volume, section and light → Sectional fabrication | 21% |
 
-The dated schedule is a target. Arrays, volumetric fields and slicing have additional sessions in the current draft. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
+The dated schedule is a target. Arrays uses one teaching session and one tutorial video, with the second target week available for practice. Volumetric fields and slicing retain additional sessions. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
 
 Assignment deadlines are listed separately from the teaching sequence. If teaching moves, the instructor will announce an updated deadline in class and Canvas and update this source before regenerating the course pages. A changed lesson pace does not silently change a deadline. No new graded submission is scheduled in the retained studio-review windows: October 5–9 and December 1–4.
 
 ## Update and verify
 
 ```text
-bundle install
 python -m pip install -r scripts/requirements.txt
 python scripts/sync_course.py
 bundle exec jekyll build
 python scripts/verify_course.py
 ```
 
-Change the source first, then regenerate. Verification checks course drift, grading, dates, links, screenshots and publication paths. [GitHub Pages setup](reference/GITHUB-PAGES.md) explains the one-time repository setting and automatic checked deployments.
+Change the source first, then regenerate. Verification checks course drift, grading, dates, links, screenshots and publication paths. [GitHub Pages setup](reference/GITHUB-PAGES.md) explains the repository setting and checked deployments.
 
 ### Releasing a class
 
@@ -63,15 +79,28 @@ Use `all` on either line to publish everything. To preview the finished site loc
 
 Blender session files are listed once under `blender:` in the same source and linked from every lesson that uses them. A session is only linked when its `.blend` is actually present, and [files/blender/README.md](files/blender/README.md) is generated from the same list.
 
-[Blender screenshots](images/blender/README.md) contains 12 pairs of original Geometry Nodes and viewport PNGs, named by session and example, plus a ZIP for slide preparation. The matching lesson pages and Resources gallery show the released sessions. Image captions and source details are generated from the capture records with `python scripts/finalize_blender_images.py`; then regenerate the site views as usual.
+[Blender screenshots](images/blender/README.md) contains a Geometry Nodes and viewport pair for every session, plus a ZIP for preparing slides. The lesson pages and gallery follow the release list.
 
 The site uses Jekyll and P2PU Course in a Box. Post filename dates control navigation order; actual class dates come from the curriculum source.
 
 ## Teaching files and history
 
-[Geometry 101](files/blender/geometry101/README.md) is the existing Week 3 lesson: Point → Line → Edge → Face → Solid → Boolean. The pyramid retains exposed Width, Depth and Height. [Instructor materials](reference/geometry101/README.md) preserve its preparation history.
+| Location | Contents |
+|---|---|
+| `syllabus/` | Course source and generated readable syllabi |
+| `files/blender/` | Current individual example files and supporting data |
+| `files/grasshopper/` | Grasshopper class files |
+| `images/blender/` | Current screenshots and the image ZIP |
+| `slides/` | Presentation decks |
+| `scripts/` | Course maintenance; Blender tools in `scripts/blender/` |
+| `reference/blender/` | Current verification and capture records |
+| `reference/archive/` | Superseded files, preparation scripts and older code |
 
-Earlier course plans, site pages and slide decks are preserved in the [dated snapshot](reference/archive/2026-09-12-before-sequence/ARCHIVE_README.md). Earlier slide decks remain available where explicitly linked; they do not define current requirements. The source/planning directories, earlier code exercises and `slides/src` are excluded from the published course.
+[Maintenance tools](scripts/README.md) explains the update sequence. Website templates, styles, scripts and icons remain in the standard Jekyll folders.
+
+[Geometry Fundamentals](files/blender/02-geometry-fundamentals/README.md) follows Point → Line → Edge → Face → Solid → Boolean. The pyramid retains exposed Width, Depth and Height. [Instructor materials](reference/archive/geometry101-preparation/README.md) preserve its preparation history.
+
+Earlier course plans, site pages and slide decks are preserved in the [dated snapshot](reference/archive/2026-09-12-before-sequence/ARCHIVE_README.md). Earlier Python and Sverchok exercises are in `reference/archive/legacy-code/`. Earlier slide decks remain available where linked. Sources, archives, maintenance scripts and `slides/src` are excluded from the published course.
 
 ## License
 

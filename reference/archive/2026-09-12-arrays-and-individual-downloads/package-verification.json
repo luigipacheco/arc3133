@@ -1,0 +1,25 @@
+{
+  "archive": "files/blender/ARC3133-Blender-Sessions.zip",
+  "session_count": 12,
+  "files": 35,
+  "bytes": 1642637,
+  "sha256": "b5aed7966df2cf31141a9fe33fe0919686c24e82e66c2532dfa89b9ed2d24014",
+  "stl_dimensions_mm": {
+    "small-print-mm.stl": [
+      45.0,
+      35.999996185302734,
+      22.0
+    ],
+    "fit-coupon-mm.stl": [
+      24.0,
+      12.0,
+      3.0
+    ],
+    "modular-parts-mm.stl": [
+      75.5,
+      75.5,
+      3.0
+    ]
+  },
+  "closed_svg_cut_paths": 80
+}

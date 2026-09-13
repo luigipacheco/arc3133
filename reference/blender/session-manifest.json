@@ -1,0 +1,136 @@
+[
+  {
+    "id": "S01",
+    "unit": "U02",
+    "title": "Intro to Geometry Nodes — transformations and CSG",
+    "file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
+    "scenes": [
+      "01 - CSG example"
+    ]
+  },
+  {
+    "id": "S02",
+    "unit": "U03",
+    "title": "Geometry Fundamentals",
+    "file": "files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend",
+    "scenes": [
+      "Point",
+      "Line",
+      "Edge",
+      "Face",
+      "Solid",
+      "Boolean"
+    ]
+  },
+  {
+    "id": "S03",
+    "unit": "U04",
+    "title": "Arrays and Lists — Part 1: linear and nested grid",
+    "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
+    "scenes": [
+      "Linear loop",
+      "Nested grid"
+    ]
+  },
+  {
+    "id": "S04",
+    "unit": "U04",
+    "title": "Arrays and Lists — Part 2: arrangements and rules",
+    "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+    "scenes": [
+      "3D array",
+      "Hexagonal array",
+      "Radial array",
+      "If and range",
+      "Sine curve"
+    ]
+  },
+  {
+    "id": "S05",
+    "unit": "U05",
+    "title": "Attractors",
+    "file": "files/blender/04-attractors/Attractors.blend",
+    "scenes": [
+      "Read the field",
+      "One point",
+      "Multiple points",
+      "Curve attractor"
+    ]
+  },
+  {
+    "id": "S06",
+    "unit": "U06",
+    "title": "Optional — Tessellation and Lattices",
+    "file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
+    "scenes": [
+      "Tessellation",
+      "Lattice",
+      "Attractor lattice"
+    ]
+  },
+  {
+    "id": "S07",
+    "unit": "U07",
+    "title": "Point Clouds and Volumes",
+    "file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
+    "scenes": [
+      "Import points",
+      "Analyze points",
+      "Points to volume"
+    ]
+  },
+  {
+    "id": "S08",
+    "unit": "U08",
+    "title": "Advanced Volumes I — signed distance and Boolean",
+    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
+    "scenes": [
+      "Mesh to SDF",
+      "Signed distance",
+      "SDF Boolean"
+    ]
+  },
+  {
+    "id": "S09",
+    "unit": "U08",
+    "title": "Advanced Volumes II — noise and surface extraction",
+    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
+    "scenes": [
+      "Noise field"
+    ]
+  },
+  {
+    "id": "S10",
+    "unit": "U09",
+    "title": "Discretizing Geometry I — contours",
+    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
+    "scenes": [
+      "One contour",
+      "Contour stack"
+    ]
+  },
+  {
+    "id": "S11",
+    "unit": "U09",
+    "title": "Discretizing Geometry II — physical parts",
+    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
+    "scenes": [
+      "Section parts",
+      "Laid out parts"
+    ]
+  },
+  {
+    "id": "S12",
+    "unit": "U09",
+    "title": "Final Project — fabrication and assembly",
+    "file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
+    "scenes": [
+      "Print orientation",
+      "Fit coupon",
+      "Modular print",
+      "Registered sections",
+      "Cutting layout",
+      "Spacer rings"
+    ]
+  }
+]

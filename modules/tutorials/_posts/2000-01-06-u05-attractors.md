@@ -23,7 +23,7 @@ Vary a parameter in response to an external condition.
 
 **Small exercise:** Show the field, the mapping and the resulting form. Move the attractor and explain the response.
 
-**Connection:** Use the same measurement-and-remapping logic to vary a lattice and later to analyze an imported point cloud.
+**Connection:** Use the same measurement-and-remapping logic to analyze an imported point cloud and later vary a volumetric field.
 
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 
@@ -37,6 +37,22 @@ for p in points:
     place(component, p, scale=size)
 ```
 
-**Lesson file:** To be prepared and verified.
+### Blender files for this lesson
+
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions. Select the lesson object and change parameters on the nodes or, where provided, in the GeometryNodes modifier. Press Home over the node editor. Explanations are in Frames and native node names are retained. Build the exercise in a new file of your own, following each step in order.
+
+Use these example files only as a reference if you are struggling with a step. Build your own file and follow the process one step at a time. Compare the example to understand where you are stuck, then return to your own work. The supplied examples are not files to submit as your assignment.
+
+**S05 — [Attractors]({{ site.baseurl }}/files/blender/04-attractors/Attractors.blend)**
+
+[Open the session page: file, exercise and screenshots]({{ site.baseurl }}/sessions/s05/)
+
+Scenes in this file: Read the field, One point, Multiple points, Curve attractor. Open them in the order listed.
 
 **Recording / revised slides:** Not yet linked; this is the lesson outline.
+
+## Examples from the class files
+
+Select an image to inspect the original screenshot at full resolution.
+
+{% include blender_screenshots.html unit="U05" %}

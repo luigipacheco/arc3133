@@ -6,13 +6,14 @@
 
 ### Confirmed direction
 
-- Follow the instructor's sequence from visual identity through geometry, repetition, attractors, tessellation, point clouds, volumes and sections.
+- Follow the instructor's sequence from graphic standards through geometry, repetition, attractors, point clouds, volumes and sections.
+- Keep tessellation, panelization, lattices and simulation as a possible intermediate class outside the required sequence.
 - The sequence is a guide. A topic may take more than one class; understanding and working files determine the pace.
 - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
 - Establish one source of curriculum information before preparing the remaining Blender class files.
-- Start with short assignments that build into four projects: geometry, arrays/attractors, tessellation/lattices, and point clouds/volumes/sections.
+- Start with short assignments that build into four projects: geometry, arrays/attractors, spatial arrays/assembly, and point clouds/volumes/sections.
 
 ### Working proposals
 
@@ -32,10 +33,10 @@
 
 The earlier materials disagreed about module numbering, due dates, project weights, the role of Python and the placement of point clouds, tessellation and sections. Their original versions are preserved in the dated archive. This revision uses unit identifiers for topics and project identifiers for assessment so that extending a topic does not require renumbering the entire course.
 
-The main pacing risk is arrays: linear, nested grid, hexagonal and radial construction, conditionals and sine control are several lessons. Use the two-session allocation as a starting point, revisit individual operations through attractors, and extend guided practice when students cannot explain index order or predict a count. Use small examples; large element counts are not evidence of understanding.
+Arrays follows linear, nested grid, 3D cube, hexagonal, radial and conditional construction, ending with the math-driven 3D curve array in one teaching session and one tutorial video. Keep the second target week for practice where needed. Revisit operations through attractors and extend guided practice when students cannot explain index order or predict a count. Use small examples; large element counts are not evidence of understanding.
 
-Attractors introduce measurement rather than another arrangement. Tessellation and lattices add connectivity. Point clouds introduce data the student did not author. Volumes introduce a new representation, and sections translate that representation into buildable parts. Make each transition explicit and retain a before/after comparison.
+Attractors introduce measurement rather than another arrangement. The XYZ array establishes discrete locations in 3D. Point clouds introduce data the student did not author. Volumes introduce a new representation, and sections translate that representation into buildable parts. Make each transition explicit and retain a before/after comparison. Tessellation, panelization, lattices and simulation are possible intermediate topics and must not interrupt or become prerequisites for this route.
 
-The midterm is a review of completed foundations and arrays, with developing attractor and tessellation work. Avoid also requiring those two later studies to be finished for the same review. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
+The midterm is a review of completed foundations and arrays, with developing attractor and spatial-array work. P3 now develops those arrays into the retained modular assembly, so its brief does not require the optional intermediate methods. Its existing weights and dates are retained. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
 
 Keep institutional policy text separate from curriculum edits. The School's accreditation mapping remains unconfirmed; do not present the earlier mixed 2014/2020 criteria table as a verified current requirement.

@@ -1,21 +1,17 @@
-# 01 · Intro to Geometry Nodes
+# 01 · Transformations and CSG
 
-Open [Intro-Geometry-Nodes.blend](Intro-Geometry-Nodes.blend) in Blender 5.2.1 LTS or a compatible newer version.
+Open [Intro-Geometry-Nodes.blend](Intro-Geometry-Nodes.blend), scene **01 - CSG example**. This is the instructor's example with short Frame annotations.
 
-Use the Scene selector in numbered order. Select the lesson object to see its Geometry Nodes. Change the exposed parameters in the modifier; press Home over the node editor to fit the graph.
+1. **Intersection:** keep the volume shared by a cube and sphere.
+2. **Rotation and Union:** rotate copies of one cylinder 90 degrees about X and Y. Union the three cylinders.
+3. **Difference:** subtract the cylinders from the first solid.
 
-| Scene | Exercise |
-|---|---|
-| 01 - Start | A NODE GRAPH MAKES GEOMETRY |
-| 02 - Translation | TRANSLATION |
-| 03 - Rotation | ROTATION |
-| 04 - Scale | SCALE |
-| 05 - Order | ORDER CHANGES THE RESULT |
-| 06 - Union | UNION — A OR B |
-| 07 - Difference | DIFFERENCE — A MINUS B |
-| 08 - Intersect | INTERSECTION — A AND B |
-| 09 - Massing exercise | ONE PARAMETRIC MASSING STUDY |
+A **parameter** is a value you can change, such as Radius. A **vector** has three components: X, Y and Z. Transform Geometry controls Translation, Rotation and Scale.
 
-Native node names are retained. Short explanations and things to try are in Frames. Save your own working copy.
+Change Cylinder Radius first. Undo, then change Cube Size or Sphere Radius. Predict what each change will do. Make three variants and diagram the order of operations.
 
-[Course file index](../README.md) · [Current syllabus](../../../syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md)
+Parameters are on the native nodes in this example, not exposed in the modifier. Native node names and the instructor's final geometry are preserved. Press **Home** over the node editor to fit the graph.
+
+**Optional comparison:** connect Join Geometry to Group Output. It collects both meshes without calculating a solid union. Reconnect the final Mesh Boolean to return to the assignment result.
+
+[Session index](../README.md) · [Screenshot index](../../../images/blender/README.md)

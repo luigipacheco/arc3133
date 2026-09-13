@@ -6,6 +6,11 @@
 baseurl: /arc3133
 url: https://luigipacheco.github.io
 repository: luigipacheco/arc3133
+
+# Page metadata is set here rather than read from the GitHub API.
+# jekyll-github-metadata resolves site.github.* over the network, and the
+# Pages build token has no `pages` scope, so that call 403s and fails the build.
+author: Luis Pacheco Alcala and Christine Khouri Sader
 markdown: kramdown
 permalink: /:categories/:title/
 

@@ -2,7 +2,7 @@
   {
     "session": "S01",
     "unit": "U02",
-    "title": "Intro to Geometry Nodes — transformations and CSG",
+    "title": "Constructive Solid Geometry",
     "source_file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
     "source_sha256": "5ecf02396f1aed628a6ae4be25d290baaf67c82034814f24210475ffa61081fb",
     "scene": "01 - CSG example",
@@ -30,7 +30,7 @@
   {
     "session": "S02",
     "unit": "U03",
-    "title": "Geometry Fundamentals",
+    "title": "Descriptive Geometry",
     "source_file": "files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend",
     "source_sha256": "b225463ad29177dea48d4657cefb0877c3506b274cd0f1dfb3a2c80f0db680e9",
     "scene": "05 - Solid",
@@ -58,7 +58,7 @@
   {
     "session": "S03",
     "unit": "U04",
-    "title": "Arrays and Lists — Part 1: linear and nested grid",
+    "title": "Arrays — Part 1: linear and nested grid",
     "source_file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
     "source_sha256": "e89ffd80394eacdf243f2e246575fadfbd574b7bf063914e443d4c21abc87bca",
     "scene": "02 - Nested grid",
@@ -86,7 +86,7 @@
   {
     "session": "S04",
     "unit": "U04",
-    "title": "Arrays and Lists — Part 2: arrangements and rules",
+    "title": "Arrays — Part 2: arrangements and rules",
     "source_file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
     "source_sha256": "abbb67293cfc20c13a992f4117bf4fba84770e5b2d101a55352e17f7450fd836",
     "scene": "07 - Sine curve",
@@ -114,7 +114,7 @@
   {
     "session": "S05",
     "unit": "U05",
-    "title": "Attractors",
+    "title": "Attractor",
     "source_file": "files/blender/04-attractors/Attractors.blend",
     "source_sha256": "595f8ad57572fadc1023ec1a89aea0715c566410c5cf5f63fca9562e309c368a",
     "scene": "04 - Curve attractor",
@@ -170,7 +170,7 @@
   {
     "session": "S07",
     "unit": "U07",
-    "title": "Point Clouds and Volumes",
+    "title": "Volumetric Data and Fields — point clouds",
     "source_file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
     "source_sha256": "224a5cfbfd08a61492964b1e6fb6bbe718ae25d4c322feae2b5f259fa5167ad0",
     "scene": "03 - Points to volume",
@@ -197,8 +197,8 @@
   },
   {
     "session": "S08",
-    "unit": "U08",
-    "title": "Advanced Volumes I — signed distance and Boolean",
+    "unit": "U07",
+    "title": "Volumetric Data and Fields — signed distance and Booleans",
     "source_file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
     "source_sha256": "698606df7be6999d0d1217a05eee7f90aa08133759ae469b749df66eadc99704",
     "scene": "03 - SDF Boolean",
@@ -225,8 +225,8 @@
   },
   {
     "session": "S09",
-    "unit": "U08",
-    "title": "Advanced Volumes II — noise and surface extraction",
+    "unit": "U07",
+    "title": "Volumetric Data and Fields — noise and surface extraction",
     "source_file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
     "source_sha256": "50744b4f708bf39e23d779c60330d58d61ffe460d69ced0edf8d61534e439e1d",
     "scene": "04 - Noise field",
@@ -254,7 +254,7 @@
   {
     "session": "S10",
     "unit": "U09",
-    "title": "Discretizing Geometry I — contours",
+    "title": "Discretizing Geometry — contours",
     "source_file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
     "source_sha256": "0e9ac9b5010a72049bb7f7194a4703a1ff4d8b8d625b0237cf4330b941b1b91c",
     "scene": "02 - Contour stack",
@@ -282,7 +282,7 @@
   {
     "session": "S11",
     "unit": "U09",
-    "title": "Discretizing Geometry II — physical parts",
+    "title": "Discretizing Geometry — section parts",
     "source_file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
     "source_sha256": "dc5f0edaec8bffc836c7439f6a2ddf7047d4d4cc20acc7e6b1a5759d7f3b5c40",
     "scene": "04 - Laid out parts",
@@ -309,8 +309,8 @@
   },
   {
     "session": "S12",
-    "unit": "U09",
-    "title": "Final Project — fabrication and assembly",
+    "unit": "U10",
+    "title": "Final — fabrication and assembly",
     "source_file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
     "source_sha256": "25ec16d4744de9bd8e724d481d3855e58c40d33f79cdcda72c36bbee907534b2",
     "scene": "04 - Registered sections",

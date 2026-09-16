@@ -1,168 +1,302 @@
 # -*- coding: utf-8 -*-
-"""Class 03 — Geometry from scratch (U03). P1b + P1c issued."""
-import os, math
+"""Class 03 — CSG continued + 3D printing (U02). P2b issued."""
+import os
 from nb import *
 from slidekit import *
 import coursedata as C
-import diagrams as G
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
-from pptx.util import Pt
+from pptx.util import Pt, Inches
 
 OUT = os.environ.get("DECK_OUT", "/home/claude/out")
 d = Deck()
 WK = 3
 
+
+def poly(sl, pts, fill, line=BLACK, lw=THIN):
+    """Closed polygon from (x, y) points in inches."""
+    ff = sl.s.shapes.build_freeform(Inches(pts[0][0]), Inches(pts[0][1]), scale=1.0)
+    ff.add_line_segments([(Inches(px), Inches(py)) for px, py in pts[1:]], close=True)
+    sh = ff.convert_to_shape()
+    sh.shadow.inherit = False
+    sh.fill.solid(); sh.fill.fore_color.rgb = rgb(fill)
+    sh.line.color.rgb = rgb(line); sh.line.width = lw
+    return sh
+
+
+def layers(sl, x, y, w, n, lh, step, fill=LIME):
+    """n printed layers, bottom one at y; each layer shifted `step` to the right."""
+    for k in range(n):
+        sl.rect(x + k * step, y - (k + 1) * lh, w, lh, fill=fill, lw=HAIR)
+
+
 # 1 ── TITLE
-title_slide(d, WK, ["GEOMETRY", "FROM SCRATCH"],
-            "P1 CONTINUES — WHAT A SOLID IS MADE OF, UNDERNEATH", bg=YELLOW, lfill=CYAN, rfill=LIME)
+title_slide(d, WK, ["CSG CONTINUED", "+ 3D PRINTING"],
+            "GEOMETRY THAT SURVIVES CONTACT WITH A MACHINE", bg=YELLOW, lfill=PINK, rfill=CYAN)
 
-# 2 ── THE LADDER
+# 2 ── CSG, CONTINUED
 s = d.slide(BLACK)
-s.header("POINT → LINE → EDGE → FACE → SOLID",
-         "Five steps, and each one is a list of the thing before it.")
-rungs = [("POINT", CYAN, "three numbers", "[x, y, z]"),
-         ("LINE", LIME, "two positions", "[p1, p2]"),
-         ("EDGE", YELLOW, "two vertices", "[v1, v2]"),
-         ("FACE", PINK, "ordered corners", "[v1, v2, v3]"),
-         ("MESH", CYAN, "many faces", "[f1, f2, f3…]")]
+s.header("CSG, CONTINUED",
+         "Finish the graph before it goes anywhere near a printer.")
+pan = [("EXPOSE THE INPUTS", LIME,
+        ["Pick the two or three numbers that change the design.",
+         "Expose them. Name them.",
+         "Change one, predict the result, then look."]),
+       ("CHECK IT IS CLOSED", CYAN,
+        ["Every difference and intersection must leave a closed solid.",
+         "Look for open edges, stray faces, parts that only touch at an edge.",
+         "Fix it in the graph, not on the mesh."]),
+       ("FINISH THE P2a DIAGRAM", PINK,
+        ["One frame per operation, same view, one verb each.",
+         "Mark the kept and the removed solid.",
+         "Draw the last frame at building scale."])]
 x = L
-wd = (W - 0.2 * 4) / 5
-for nm, col, sub, code in rungs:
-    s.chip(x, 2.1, wd, 0.5, nm, fill=col, size=13)
-    s.card(x, 2.7, wd, 1.9, fill=CREAM)
-    s.t(x + 0.2, 2.95, wd - 0.4, 0.5, [s.Cb(sub, 12.5)], align=PP_ALIGN.CENTER)
-    s.t(x + 0.2, 3.6, wd - 0.4, 0.5, [s.Mb(code, 11.5)], align=PP_ALIGN.CENTER)
-    x += wd + 0.2
-s.banner(4.95, "A POSITION IS NOT A DISPLACEMENT. THE SAME THREE NUMBERS MEAN DIFFERENT THINGS "
-              "DEPENDING ON WHICH ONE YOU MEANT.", fill=YELLOW, h=0.68, align=PP_ALIGN.CENTER)
-s.t(L, 5.9, W, 0.9, [s.C("Nothing here is new geometry. It is the same collection, read at a "
-                         "different level: a face is a list of vertices, a mesh is a list of faces, "
-                         "and next week an array will be a list of copies.", 13.5, MUTE)], ls=1.3)
+for ttl, col, lines in pan:
+    s.panel(x, 2.05, 3.85, 3.3, ttl, headfill=col, tsize=13.5)
+    s.t(x + 0.28, 2.8, 3.3, 2.4, [s.Cb(l, 13.5) for l in lines], ls=1.25, space=8)
+    x += 4.08
+s.banner(5.75, "ONE GRAPH, TWO ASSIGNMENTS: P2a DRAWS IT, P2b PRINTS IT. KEEP THE HISTORY INTACT.",
+         fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
 
-# 3 ── A FACE IS AN ORDERED LIST
+# 3 ── WHAT THE MACHINE DOES
 s = d.slide(CREAM)
-s.header("A FACE IS AN ORDERED LIST OF CORNERS",
-         "Same three vertices, two different faces. The order is the difference.")
-s.panel(L, 1.95, 6.0, 3.4, "WINDING ORDER", headfill=CYAN)
-cx0, cy0 = L + 1.4, 3.6
-tri = [(cx0, cy0 - 0.7), (cx0 - 0.75, cy0 + 0.55), (cx0 + 0.75, cy0 + 0.55)]
-for i, (px, py) in enumerate(tri):
-    s.dot(px, py, d=0.16, fill=BLACK)
-    s.t(px - 0.35, py - 0.42, 0.7, 0.3, [s.Mb("v%d" % i, 11)], align=PP_ALIGN.CENTER)
-s.t(L + 3.0, 2.75, 2.8, 2.3, [
-    s.Mb("f = [v0, v1, v2]", 12, bold=True),
-    s.Mb("  normal → toward you", 11),
-    s.Mb(" ", 8),
-    s.Mb("f = [v0, v2, v1]", 12, bold=True),
-    s.Mb("  normal → away", 11)], ls=1.4)
-s.panel(7.0, 1.95, 5.65, 3.4, "WHY IT MATTERS LATER", headfill=PINK, tsize=14.5)
-s.t(7.3, 2.72, 5.05, 2.4, [
-    s.Cb("A flipped face tells a renderer the inside is the outside.", 14),
-    s.Cb(" ", 7),
-    s.Cb("It tells a slicer there is nothing to fill.", 14),
-    s.Cb(" ", 7),
-    s.Cb("Most failed prints this semester will start here, not at the printer.", 14)], ls=1.3)
-s.banner(5.65, "CLOSED MEANS EVERY EDGE IS SHARED BY EXACTLY TWO FACES. CHECK IT BEFORE YOU BELIEVE IT.",
-         fill=LIME, h=0.72, align=PP_ALIGN.CENTER)
+s.header("WHAT THE MACHINE DOES",
+         "One thing, repeatedly. Everything else follows from this.")
+s.card(L, 1.95, 4.9, 4.2, fill=PAPER)
+bx, by = L + 0.6, 5.35
+s.rect(bx - 0.25, by, 3.9, 0.22, fill=BLACK, line=None)                 # bed
+layers(s, bx + 0.6, by, 2.2, 8, 0.2, 0.0)
+s.rect(bx + 1.35, by - 8 * 0.2 - 0.9, 0.7, 0.55, fill=MUTE, lw=THIN)    # hot end
+nz = s.rect(bx + 1.5, by - 8 * 0.2 - 0.36, 0.4, 0.3, fill=PINK, lw=THIN,
+            shape=MSO_SHAPE.ISOSCELES_TRIANGLE)
+nz.rotation = 180
+s.t(bx + 2.25, by - 8 * 0.2 - 0.82, 1.5, 0.3, [s.C("nozzle", 12.5, GREY)])
+s.t(bx + 3.0, by - 1.0, 1.0, 0.3, [s.C("layers", 12.5, GREY)])
+s.t(bx - 0.25, by + 0.3, 1.5, 0.3, [s.C("bed", 12.5, GREY)])
+facts = [("01", "IT BUILDS UPWARD, NEVER SIDEWAYS",
+          "Material can only go on material that is already there."),
+         ("02", "LAYERS ARE THE WEAK DIRECTION",
+          "A print snaps between layers long before it snaps across one."),
+         ("03", "EVERY DECISION IS A TIME COST",
+          "Finer layers, more material, more supports: all of it is hours on a shared machine.")]
+y = 1.95
+for n, ttl, body in facts:
+    s.chip(5.85, y, 0.8, 1.15, n, fill=ACCENTS[int(n) - 1], size=16)
+    s.card(6.95, y, 5.7, 1.15, fill=CREAM)
+    s.t(7.2, y + 0.14, 5.25, 0.32, [s.Ab(ttl, 13.5)])
+    s.t(7.2, y + 0.5, 5.25, 0.6, [s.Cb(body, 12.5)], ls=1.2)
+    y += 1.35
+s.banner(6.4, "A NOZZLE DRAWS ONE FLAT LAYER. THE BED DROPS. IT DRAWS THE NEXT.",
+         fill=BLACK, color=YELLOW, h=0.62, align=PP_ALIGN.CENTER)
 
-# 4 ── THE PYRAMID
+# 4 ── MANIFOLD
 s = d.slide(BLACK)
-s.header("THE PYRAMID", "Five vertices, eight edges, five faces. Built by hand, driven by three numbers.")
-s.panel(L, 2.05, 6.2, 3.3, "WHAT YOU ASSEMBLE", headfill=LIME)
-counts = [("5", "VERTICES", "four base corners and an apex"),
-          ("8", "EDGES", "four around the base, four to the apex"),
-          ("5", "FACES", "four triangular sides and the base")]
-y = 2.85
-for n, nm, body in counts:
-    s.chip(L + 0.35, y, 0.75, 0.62, n, fill=CYAN, size=17)
-    s.t(L + 1.35, y, 4.6, 0.3, [s.Ab(nm, 12.5)])
-    s.t(L + 1.35, y + 0.3, 4.6, 0.3, [s.Cb(body, 11.5)])
-    y += 0.78
-s.panel(7.15, 2.05, 5.5, 3.3, "EXPOSED INPUTS", headfill=YELLOW)
-s.t(7.45, 2.85, 4.9, 2.2, [
-    s.Mb("Width", 14, bold=True), s.Mb("Depth", 14, bold=True), s.Mb("Height", 14, bold=True),
-    s.Mb(" ", 8),
-    s.Cb("Three numbers, and the whole solid rebuilds. That is the entire point of the exercise.", 13)], ls=1.4)
-s.banner(5.7, "DO NOT FORGET THE BASE FACE. A PYRAMID WITH FOUR SIDES AND NO BOTTOM IS NOT A SOLID.",
-         fill=PINK, h=0.7, align=PP_ALIGN.CENTER)
-
-# 5 ── IT BECOMES THE CUTTER
-s = d.slide(CREAM)
-s.header("AND THEN IT GOES BACK INTO LAST WEEK'S FILE",
-         "The pyramid is not an exercise. It is the cutter for the study you already built.")
-flow = [("01", "BUILD IT", CYAN, "Five vertices, five faces, closed, with Width / Depth / Height exposed."),
-        ("02", "SUBTRACT IT", LIME, "Cube minus pyramid. The same Boolean from Week 2, with your own solid."),
-        ("03", "DRIVE IT", YELLOW, "Change the three inputs and show at least three settings of the result."),
-        ("04", "EXPLAIN IT", PINK, "Face order, normals, closure — why it cuts cleanly instead of failing.")]
+s.header("MANIFOLD OR IT DOES NOT PRINT",
+         "A model can look perfect on screen and mean nothing to a slicer.")
+mf = [("WATERTIGHT", CYAN,
+       "No gaps. Every edge is shared by exactly two faces. If water could leak out, it is not a solid."),
+      ("NO SELF-INTERSECTION", LIME,
+       "A shape that passes through itself has no clear inside. The slicer cannot decide what to fill."),
+      ("NORMALS OUTWARD", PINK,
+       "Every face has a front and a back. A flipped face tells the slicer that outside is inside.")]
 x = L
-wd = (W - 0.23 * 3) / 4
-for n, ttl, col, body in flow:
-    s.chip(x, 1.95, wd, 0.5, n + "   " + ttl, fill=col, size=12.5)
-    s.card(x, 2.55, wd, 2.2, fill=CREAM)
-    s.t(x + 0.25, 2.55, wd - 0.5, 2.2, [s.Cb(body, 13)], ls=1.3, anchor=MSO_ANCHOR.MIDDLE)
-    x += wd + 0.23
-s.banner(5.05, "THIS IS WHY P1 IS ONE PROJECT AND NOT THREE ASSIGNMENTS.",
-         fill=BLACK, color=CYAN, h=0.68, align=PP_ALIGN.CENTER)
-s.t(L, 5.95, W, 0.8, [s.C("Every project in this course does the same thing — the geometry you make "
-                          "in one milestone becomes the input to the next. You will never start from "
-                          "an unrelated object.", 13.5, GREY)], ls=1.3)
+for ttl, col, body in mf:
+    s.panel(x, 2.05, 3.85, 3.0, ttl, headfill=col, tsize=14)
+    s.t(x + 0.28, 2.85, 3.3, 2.0, [s.Cb(body, 14.5)], ls=1.3)
+    x += 4.08
+s.banner(5.45, "CHECK BEFORE YOU SLICE. A BOOLEAN THAT LEFT AN OPEN EDGE IS THE MOST COMMON CAUSE "
+              "OF A FAILED FILE.", fill=YELLOW, h=0.72, align=PP_ALIGN.CENTER)
+s.t(L, 6.5, W, 0.4, [s.C("This is the closure check from the CSG slide, seen from the machine's side.",
+                         13, MUTE)])
 
-pseudocode_slide(d, "U03",
-                 sub="A mesh is two lists. That is the entire idea, and it fits on one slide.",
-                 note="verts IS A LIST OF POSITIONS. faces IS A LIST OF INDICES INTO IT.")
+# 5 ── OVERHANGS AND THE LETTER TEST
+s = d.slide(CREAM)
+s.header("OVERHANGS AND THE LETTER TEST",
+         "Each layer needs something under it. How much is the whole question.")
+oh = [("VERTICAL", LIME, 0.0, "Every layer sits fully on the one below."),
+      ("45°", YELLOW, 0.2, "Each layer steps out as far as it is tall. About the limit."),
+      ("STEEP", PINK, 0.28, "Most of the layer hangs in air. It droops or fails.")]
+x = L
+for ttl, col, step, body in oh:
+    s.card(x, 1.95, 3.85, 1.75, fill=CREAM)
+    s.rule(x + 0.2, 3.42, 2.0, lw=Pt(3), color=BLACK)
+    layers(s, x + 0.3, 3.4, 0.45, 6, 0.2, step, fill=col)
+    s.t(x + 2.3, 2.15, 1.4, 0.3, [s.Ab(ttl, 14)])
+    s.t(x + 2.3, 2.55, 1.4, 1.1, [s.Cb(body, 12)], ls=1.15)
+    x += 4.08
+lt = [("H", "BRIDGE", "PRINTS FINE", LIME,
+       "The crossbar spans two legs that already exist. Anchored at both ends."),
+      ("V", "SLOPE", "FINE TO 45°", CYAN,
+       "Each layer steps out a little. Past about 45° it starts to droop."),
+      ("T", "CANTILEVER", "DROOPS", PINK,
+       "The arms start in mid-air, anchored at one end only."),
+      ("Y", "FORK", "CHECK THE ANGLE", YELLOW,
+       "Two slopes grow from one stem. Steep arms print; flat arms droop.")]
+cw = (W - 0.23 * 3) / 4
+x = L
+for letter, kind, verdict, col, body in lt:
+    s.card(x, 3.95, cw, 2.05, fill=CREAM)
+    s.t(x + 0.2, 3.98, 0.9, 0.95, [s.Ab(letter, 44)])
+    s.t(x + 1.05, 4.12, cw - 1.2, 0.3, [s.Ab(kind, 12.5)])
+    s.chip(x + 1.05, 4.47, cw - 1.25, 0.36, verdict, fill=col, size=10, shadow=False)
+    s.t(x + 0.2, 5.0, cw - 0.4, 0.95, [s.Cb(body, 12)], ls=1.2)
+    x += cw + 0.23
+s.banner(6.22, "THE 45° RULE: PAST ABOUT 45° FROM VERTICAL, A SURFACE NEEDS SUPPORT — OR A "
+              "DIFFERENT ORIENTATION.", fill=BLACK, color=YELLOW, h=0.56, size=12,
+         align=PP_ALIGN.CENTER)
+s.t(L, 6.97, W, 0.3, [s.C("An island, a part that starts with nothing under it, cannot print "
+                          "without support. Find all four conditions in your own model.", 12, GREY)])
 
-# 6 ── ISSUED — P1b
-issued_slide(d, "P1b",
-             blurb="Find a panel in a building you like, keep it simple, and build it out of two lists - "
-                   "points and faces. It is the component you will array in P2 and the object you will "
-                   "print, so choose something that tiles.",
-             cards=[("FIND", "A PANEL", "One precedent, simple. It has to sit beside itself and close."),
-                    ("DECIDE", "WHAT MOVES", "The parameters, first. One has to change its shape, not its box."),
-                    ("BUILD", "FROM TWO LISTS", "Every point an expression of those numbers. Never a typed coordinate."),
-                    ("SHOW", "THE RANGE", "Low, middle, high - still closing, still tiling. P2b drives it.")])
+# 6 ── ORIENTATION
+s = d.slide(CREAM)
+s.header("ORIENTATION IS YOUR ONLY LEVER",
+         "Same geometry. Two ways to place it. Very different prints.")
+for i, (ttl, col) in enumerate([("AS MODELLED", PINK), ("ROTATED", LIME)]):
+    px = L + i * 6.15
+    s.panel(px, 1.95, 5.85, 3.85, ttl, headfill=col)
+    s.card(px + 0.3, 2.75, 2.6, 2.75, fill=PAPER, shadow=False, lw=THIN)
+    gx, gy = px + 0.5, 5.15
+    s.rect(gx - 0.05, gy, 2.3, 0.14, fill=BLACK, line=None)               # bed
+    t = 0.38
+    if i == 0:   # Γ: stem on the bed, arm hanging out at the top
+        s.rect(gx + t + 0.02, gy - 1.6 + t, 1.4 - t - 0.04, 1.6 - t, fill=PINK, line=BLACK,
+               lw=HAIR)
+        s.t(gx + t + 0.1, gy - 0.75, 1.1, 0.3, [s.Cb("support", 11.5, bold=True)])
+        poly(s, [(gx, gy), (gx + t, gy), (gx + t, gy - 1.6 + t), (gx + 1.4, gy - 1.6 + t),
+                 (gx + 1.4, gy - 1.6), (gx, gy - 1.6)], CYAN)
+        body = ("The arm overhangs. It needs support, which costs material and time, and "
+                "scars the surface where it is removed.")
+    else:        # L: the same part turned over, the arm lies on the bed
+        poly(s, [(gx, gy), (gx + 1.4, gy), (gx + 1.4, gy - 1.6), (gx + 1.4 - t, gy - 1.6),
+                 (gx + 1.4 - t, gy - t), (gx, gy - t)], CYAN)
+        body = ("The arm now lies on the bed. No support, faster, a cleaner face, and "
+                "stronger: the load no longer runs across a layer line.")
+    s.t(px + 3.1, 2.8, 2.5, 2.8, [s.Cb(body, 13.5)], ls=1.3)
+s.banner(6.1, "NO SUPPORTS ARE ALLOWED ON P2b. IF NO ORIENTATION WORKS, CHANGE THE GEOMETRY "
+              "AND EXPLAIN THE CHANGE ON THE PROCESS SHEET.", fill=YELLOW, h=0.72,
+         align=PP_ALIGN.CENTER)
 
-# 7 ── REQUIREMENTS P1b
-requirements_slide(d, "P1b",
-                   sub="Visual quality 35% · computational understanding 25% · technical execution 20% "
-                       "· experimentation 10% · requirements and identity 10%.")
+# 7 ── THE SLICER AND FOUR SETTINGS
+s = d.slide(BLACK)
+s.header("WHAT THE SLICER DOES",
+         "It turns a solid into a list of moves. You will do the same by hand in Week 12, "
+         "%s." % C.week(12)["title"])
+steps_ = [("01", "CUT INTO LAYERS", "A stack of horizontal planes cuts the solid."),
+          ("02", "OUTLINE EACH LAYER", "Each cut becomes a closed perimeter."),
+          ("03", "FILL THE INSIDE", "An infill pattern, usually sparse."),
+          ("04", "ORDER THE MOVES", "Perimeters, infill, travel, written as G-code.")]
+cw = (W - 0.23 * 3) / 4
+x = L
+for i, (n, ttl, body) in enumerate(steps_):
+    s.chip(x, 1.95, cw, 0.45, n + "   " + ttl, fill=ACCENTS[i], size=11)
+    s.card(x, 2.5, cw, 0.95, fill=CREAM)
+    s.t(x + 0.2, 2.5, cw - 0.4, 0.95, [s.Cb(body, 12.5)], ls=1.2, anchor=MSO_ANCHOR.MIDDLE)
+    x += cw + 0.23
+s.t(L, 3.78, W, 0.35, [s.A("FOUR SETTINGS — LEAVE EVERYTHING ELSE AT DEFAULT", 14, YELLOW)])
+sets = [("LAYER HEIGHT", "0.2–0.3 mm", "Finer looks better and takes longer. Draft is fine here."),
+        ("INFILL", "10–40%", "A lattice inside a shell. Solid is almost never needed."),
+        ("WALLS", "2–3", "Perimeters, not infill, make a print feel solid."),
+        ("SUPPORTS", "OFF", "Not allowed on P2b. Solve it with orientation.")]
+x = L
+for i, (ttl, val, body) in enumerate(sets):
+    s.card(x, 4.25, cw, 1.75, fill=CREAM)
+    s.t(x + 0.2, 4.38, cw - 0.4, 0.3, [s.Ab(ttl, 12, GREY)])
+    s.t(x + 0.2, 4.68, cw - 0.4, 0.5, [s.Ab(val, 22)])
+    s.t(x + 0.2, 5.25, cw - 0.4, 0.7, [s.Cb(body, 11.5)], ls=1.15)
+    x += cw + 0.23
+s.banner(6.3, "LIVE NOW — WE SLICE ONE OBJECT TOGETHER AND READ THE PREVIEW: LAYER COUNT, PRINT TIME, "
+              "MATERIAL.", fill=PINK, h=0.62, size=12, align=PP_ALIGN.CENTER)
 
-# 8 ── ALSO ISSUED — P1c
-issued_slide(d, "P1c", badge="ALSO ISSUED", badgefill=PINK,
-             blurb="The same geometry, made real. A printable variant of the project you have been "
-                   "building for two weeks — presented as a physical object at the midterm.",
-             cards=[("LIMIT", "60 MM, 200 G", "Each axis within 60 mm. The allocation includes failures."),
-                    ("RULE", "NO SUPPORTS", "Orientation is your only lever. Change the geometry if you must."),
-                    ("DUE", "AT THE MIDTERM", "The queue has latency the two-week cycle does not.")])
+# 8 ── PRINT IT OR CUT IT
+s = d.slide(CREAM)
+s.header("PRINT IT OR CUT IT",
+         "Printing is not the default. It is the expensive option.")
+cols = [("CUT IT", CYAN, ["Prismatic: one profile, extruded", "Flat, or made of flat pieces",
+                          "Repeated many times", "Larger than your hand"],
+         "Minutes per sheet. Many parts at once."),
+        ("PRINT IT", PINK, ["Doubly curved: a vault, a shell", "Undercuts a blade cannot reach",
+                            "Detail in all three axes at once", "Small and intricate"],
+         "Hours per object. One at a time.")]
+for i, (ttl, col, items, foot) in enumerate(cols):
+    px = L + i * 6.15
+    s.panel(px, 1.95, 5.85, 3.55, ttl, headfill=col)
+    s.t(px + 0.35, 2.75, 5.2, 2.0, [s.Cb("—  " + it, 14.5) for it in items], ls=1.45)
+    s.rule(px + 0.35, 4.72, 5.15, lw=Pt(1.5), color=MUTE)
+    s.t(px + 0.35, 4.88, 5.15, 0.4, [s.Cb(foot, 13.5, bold=True)])
+s.banner(5.85, "THE TEST: CAN IT BE DESCRIBED AS A STACK OF FLAT PROFILES, OR ONE PROFILE EXTRUDED? "
+              "THEN CUT IT. A SIMPLE BOX, PRINTED, IS A BOX YOU WAITED HOURS FOR.",
+         fill=YELLOW, h=0.8, align=PP_ALIGN.CENTER)
+s.t(L, 6.85, W, 0.35, [s.C("P2b is printed on purpose. The laser cutter comes back in Project 4.",
+                           12.5, GREY)])
 
-# 9 ── REQUIREMENTS P1c
-requirements_slide(d, "P1c",
-                   sub="Fabrication milestone — visual documentation 20% · computational understanding 20% "
-                       "· technical execution 15% · fabrication quality 30% · experimentation 5% · "
-                       "requirements 10%.")
+# 9 ── FAILURES AND FABLAB RULES
+s = d.slide(CREAM)
+s.header("SIX WAYS IT GOES WRONG",
+         "Learn to name the failure. Naming it is most of the diagnosis.")
+fails = [("WARPING", "Corners lift; the base curves.", "Clean bed, a brim, no drafts."),
+         ("ELEPHANT'S FOOT", "The bottom layers bulge out.", "Slicer setting, or chamfer the base."),
+         ("STRINGING", "Fine hairs between parts.", "Retraction on. Fewer travel moves."),
+         ("LAYER SEPARATION", "It splits along a layer line.", "Reorient so the load runs along layers."),
+         ("DROOP", "An overhang sags into the air.", "Reorient. If that fails, change the geometry."),
+         ("SPAGHETTI", "A nest of filament in mid-air.", "Adhesion. Watch the first layer.")]
+for k, (ttl, sym, fix) in enumerate(fails):
+    fx = L + (k % 3) * 4.08
+    fy = 1.95 + (k // 3) * 1.42
+    s.card(fx, fy, 3.85, 1.25, fill=CREAM)
+    s.rect(fx, fy, 3.85, 0.42, fill=ACCENTS[k % 4], lw=BORDER)
+    s.t(fx + 0.2, fy, 3.45, 0.42, [s.Ab(ttl, 12)], anchor=MSO_ANCHOR.MIDDLE)
+    s.t(fx + 0.2, fy + 0.5, 3.45, 0.7,
+        [[s.Cb(sym, 12)], [s.Cb("FIX  ", 11, bold=True), s.Cb(fix, 12)]], ls=1.15)
+s.card(L, 4.95, W, 1.8, fill=BLACK)
+s.t(L + 0.35, 5.07, 5.0, 0.35, [s.A("FABLAB RULES", 14, YELLOW)])
+rules = ["Finish the FabLab safety orientation first. No orientation, no machine.",
+         "Never touch the hot end. The nozzle runs at about 200–250 °C and the bed is hot.",
+         "Never restart someone else's print. If a job looks wrong, tell staff.",
+         "The queue is first come. A print that starts at the deadline does not finish."]
+for k, r in enumerate(rules):
+    rx = L + 0.35 + (k % 2) * 5.85
+    ry = 5.5 + (k // 2) * 0.55
+    s.t(rx, ry, 5.55, 0.5, [s.C(r, 12, CREAM)], ls=1.1)
+s.t(L, 7.0, W, 0.3, [s.C("Booking, file naming, pick-up and material allocation: follow the "
+                         "procedure posted by FabLab staff.", 11.5, GREY)])
 
-# 10 ── NOW
-now_slide(d, "NOW — BUILD THE PYRAMID",
-          "Rest of the session: from a single point to a closed solid that cuts.",
-          ["One point placed from an XYZ vector, and you can say why it is a position",
-           "Four base corners and an apex, with Width / Depth / Height exposed",
-           "All five faces joined — four sides and the base",
-           "Closure checked: every edge shared by exactly two faces",
-           "Cube minus pyramid working, off the same three inputs",
-           "Your own panel named, and the numbers that will drive it written down"],
-          closer="LEAVE WITH A SOLID THAT CUTS. THE SHEET IS THE EASY PART.",
+# 10 ── ISSUED TODAY — P2b
+issued_slide(d, "P2b",
+             blurb="Print a variant of the CSG object you are diagramming for P2a. Small, "
+                   "unsupported and documented: the orientation, the slicer settings and a "
+                   "photograph go on one process sheet.",
+             cards=[("SIZE", "60 mm, 200 g", "Within 60 mm on each axis, inside the 200 g allocation."),
+                    ("SUPPORTS", "NONE", "Orientation is the lever. Change geometry only if you must, and say why."),
+                    ("SHEET", "ONE PAGE", "Orientation and a photograph. Brought to the midterm with the print.")])
+
+# 11 ── REQUIREMENTS
+s = requirements_slide(d, "P2b", sub="")
+s.t(L, 1.38, W, 0.34, [s.C("Visual documentation 20% · computational understanding 20% · technical "
+                           "execution 15% · fabrication quality 30% · experimentation 5% · "
+                           "requirements and identity 10%.", 12, GREY)])
+
+# 12 ── NOW
+now_slide(d, "NOW — PREPARE YOUR PRINT",
+          "Rest of the class: take your CSG object from graph to sliced file, with help in the room.",
+          ["Solid checked — closed, no self-intersection, normals outward",
+           "Scaled to fit within 60 mm on each axis, units confirmed in the slicer",
+           "Oriented — no overhang past about 45°, supports off",
+           "Sliced — layer count, print time and material written down",
+           "Orientation, settings and any geometry change noted for the P2b sheet"],
+          closer="LEAVE WITH A SLICED FILE AND ITS NUMBERS WRITTEN DOWN.",
           bg=CYAN)
 
-# 11 ── BEFORE NEXT CLASS
+# 13 ── BEFORE NEXT CLASS
+p2a, p2b = C.milestone("P2a"), C.milestone("P2b")
+cp_wk, cp_txt = C.checkpoints("P2b")[0]
 before_next_slide(d, [
-    ("WATCH", "U04 — Arrays and lists. Repeat Zone, Compare and Switch, and the nested grid. "
-              "We start small and inspectable before anything scales up."),
-    ("FINISH", "P1a is due next class: eight or nine numbered diagrams, the last one developed at "
-               "building scale with a figure and planting, and the sequence written as pseudocode."),
-    ("FIND", "The panel. One building, one repeating component, simple enough to write as two "
-             "lists, and it has to sit beside itself without a gap. Name the building and your "
-             "source, and bring its point and face lists started - next week it gets repeated."),
-    ("CHECK", "Your FabLab orientation, before you need the machine rather than after."),
+    ("NEXT", "%s. %s: point, line, edge, face, solid, Boolean. P3a is issued."
+             % (C.date_long(4), C.week(4)["title"])),
+    ("DUE", "P2a, the CSG process sheet, is due next class, %s." % C.date_long(p2a["due"])),
+    ("PRINT", "P2b print checkpoint %s: %s P2b is due at the midterm, %s."
+              % (C.date_long(cp_wk), cp_txt, C.date_long(p2b["due"]))),
+    ("FABLAB", "Complete the FabLab safety orientation before the checkpoint. "
+               "No orientation, no machine access."),
 ])
 
 d.save(os.path.join(OUT, "ARC3133_Class03.pptx"))

@@ -12,4 +12,4 @@ Match Count, Sheet Thickness and Hole Radius in the registered-section, cutting-
 
 The original curved volume extends beyond the first and last sampled planes. The section model is a finite, cropped interpretation of that volume. Compare it with the source rather than claiming an exact reconstruction.
 
-The print and cutting examples are starting points for the final project. Follow the assignment brief for design development, physical testing, documentation and the final booklet.
+The required physical outputs are the CSG print (P2b) and laser-cut volume (P4b). The modular print is an optional reference. The small-print STL demonstrates orientation and export; students fabricate their own CSG object. Use the cutting example to understand registration and layout, then generate slices from the chosen P4a volume. Follow the current briefs for design development, physical testing, documentation and the final booklet.

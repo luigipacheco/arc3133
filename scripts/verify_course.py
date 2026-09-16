@@ -58,38 +58,35 @@ class Links(HTMLParser):
 
 
 def verify_sequence(course, site, documents, baseurl):
+    """Classes are the sessions: one page per class carries its slides and files."""
     expected = [[session_pages.weeks(b), b['focus']] for b in course.sequence]
-    for path in ('index.html', 'sessions/index.html', 'resources/course-policies/index.html'):
+    overview_path = 'modules' + session_pages.OVERVIEW + 'index.html'
+    for path in ('index.html', overview_path, 'resources/course-policies/index.html'):
         page = documents[(site / path).resolve()]
-        tables = [t for t in page.tables if t and t[0][:2] == ['Target weeks', 'Focus']]
+        tables = [t for t in page.tables if t and t[0][:2] == ['Weeks', 'Topic']]
         assert len(tables) == 1 and [row[:2] for row in tables[0][1:]] == expected, f'Teaching sequence drift: {path}'
-    index = documents[(site / 'sessions/index.html').resolve()]
+    index = documents[(site / overview_path).resolve()]
     assert {b['id'].lower() for b in course.sequence} <= index.ids
-    assert {b['id'].lower() for b in course.optional_classes} <= index.ids
     optional_units = {u for b in course.optional_classes for u in b['units']}
     assert not optional_units & {u for b in course.sequence for u in b['units']}, 'Optional topics returned to the required sequence'
+    assert not (site / 'modules/sessions').exists(), 'The retired sessions section was published'
     for number, block in course.week_blocks.items():
         path = (site / ('modules' + course.class_url(number)).lstrip('/') / 'index.html').resolve()
         if number not in course.open_weeks:
-            # Archived bookmarks may keep a redirect, but never a held class brief.
             assert path not in documents or 'Course material has moved' in ''.join(documents[path].text), f'Unreleased class page: {number}'
             continue
         page = documents[path]
         assert block['focus'] in ''.join(page.text), f'Class focus drift: {number}'
+        stem = f'/slides/ARC3133_Class{number:02d}'
+        assert baseurl + stem + '.pdf' in page.links and baseurl + stem + '.pptx' in page.links, f'Class slides missing: {number}'
         for sid in course.weeks[number]['sessions']:
             session = next(s for s in course.sessions if s['id'] == sid)
             if session_pages.available(course, session):
-                assert baseurl + session_pages.url(session, course) in page.links, f'Class session missing: {number}, {sid}'
+                assert baseurl + '/' + session['path'] in page.links, f'Class file missing: {number}, {sid}'
+                assert 'capture-' + sid.lower() in page.ids, f'Class screenshots missing: {number}, {sid}'
     for session in course.sessions:
-        path = (site / session_pages.url(session, course).lstrip('/') / 'index.html').resolve()
-        if not session_pages.available(course, session):
-            assert path not in documents, f'Unreleased session page: {session["id"]}'
-            continue
-        page = documents[path]
-        expected_captures = {'capture-' + s['id'].lower() for s in session_pages.members(course, session)}
-        assert {i for i in page.ids if i.startswith('capture-')} == expected_captures, f'Wrong session screenshots: {session["id"]}'
-        assert baseurl + '/' + session['path'] in page.links
-        assert baseurl + '/sessions/#' + course.session_blocks[session['id']]['id'].lower() in page.links
+        path = (site / 'sessions' / session['id'].lower() / 'index.html').resolve()
+        assert path in documents and 'sessions and classes are now the same' in ''.join(documents[path].text), f'Missing redirect: {session["id"]}'
     examples = documents[(site / 'resources/example-files/index.html').resolve()]
     if course.optional_classes:
         assert 'possible-intermediate-class' in examples.ids, 'Optional downloads are not separated'
@@ -99,7 +96,6 @@ def verify_sequence(course, site, documents, baseurl):
             assert baseurl + '/' + extra in examples.links, f'Missing supporting download: {extra}'
     assert not list((site / 'files/blender').rglob('*.zip')), 'A bundled session ZIP was published'
     assert not any('/files/blender/' in link and '.zip' in link for page in documents.values() for link in page.links), 'Bundled session ZIP link remains'
-    assert baseurl + '/sessions/s04/' not in index.links, 'Arrays still appears as a second session'
     assert course.blender['reference_note'] in ' '.join(''.join(examples.text).split()), 'Reference-only instructions missing'
 
 

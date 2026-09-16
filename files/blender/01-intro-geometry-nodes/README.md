@@ -1,4 +1,4 @@
-# 01 · Transformations and CSG
+# 01 · Constructive Solid Geometry
 
 Open [Intro-Geometry-Nodes.blend](Intro-Geometry-Nodes.blend), scene **01 - CSG example**. This is the instructor's example with short Frame annotations.
 

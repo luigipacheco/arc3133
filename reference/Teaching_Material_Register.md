@@ -2,28 +2,52 @@
 
 # Teaching material register
 
-The geometry-from-scratch unit has an existing Blender lesson with six scenes. It keeps the pyramid parameters exposed and ends with cube-minus-pyramid. Its teaching notes remain with the file.
+Posted lessons link their Blender examples and screenshots. Use each file as a reference while building your own work. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
 
-The other unit descriptions are preparation briefs. Remaining Blender files, recordings and revised slide decks will be made and checked in the next phase. Earlier slide decks and Python/Sverchok scripts are historical teaching resources, not the current weekly instructions. The material register distinguishes an existing lesson from a file still to be prepared.
+**Site analysis:** students pick their own site and use the Mixtli add-on for Blender. The add-on and install notes will be posted before Week 8.
 
 | Unit | Topic | Blender session | Released | Recording / revised slides |
 | --- | --- | --- | --- | --- |
 | U01 | Graphic Standards Manual | To prepare | Posted | Not linked / to prepare |
-| U02 | Transformations and CSG | [S01](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | Posted | Not linked / to prepare |
-| U03 | Geometry from scratch | [S02](../files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Posted | Not linked / to prepare |
-| U04 | Arrays and lists | [S03](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend), [S04](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend) | Posted | Not linked / to prepare |
-| U05 | Attractors | [S05](../files/blender/04-attractors/Attractors.blend) | Posted | Not linked / to prepare |
+| U02 | Constructive Solid Geometry | [S01](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | Posted | Not linked / to prepare |
+| U03 | Descriptive Geometry | [S02](../files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Posted | Not linked / to prepare |
+| U04 | Arrays | [S03](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend), [S04](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend) | Posted | Not linked / to prepare |
+| U05 | Attractor | [S05](../files/blender/04-attractors/Attractors.blend) | Posted | Not linked / to prepare |
 | U06 | Tessellation, panelization, lattices and simulation | [S06](../files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend) | Held until the class | Not linked / to prepare |
-| U07 | Point clouds and the transition to volumes | [S07](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Held until the class | Not linked / to prepare |
-| U08 | Volumetric fields and signed distance | [S08](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend), [S09](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Held until the class | Not linked / to prepare |
-| U09 | Contour sections and physical parts | [S10](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend), [S11](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend), [S12](../files/blender/09-final-project/Final-Project-Fabrication.blend) | Held until the class | Not linked / to prepare |
+| U07 | Volumetric Data and Fields | [S07](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend), [S08](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend), [S09](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Held until the class | Not linked / to prepare |
+| U09 | Discretizing Geometry | [S10](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend), [S11](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Held until the class | Not linked / to prepare |
+| U10 | Final | [S12](../files/blender/09-final-project/Final-Project-Fabrication.blend) | Held until the class | Not linked / to prepare |
 
-The earlier materials disagreed about module numbering, due dates, project weights, the role of Python and the placement of point clouds, tessellation and sections. Their original versions are preserved in the dated archive. This revision uses unit identifiers for topics and project identifiers for assessment so that extending a topic does not require renumbering the entire course.
+## Teaching presentations
 
-Arrays follows linear, nested grid, 3D cube, hexagonal, radial and conditional construction, ending with the math-driven 3D curve array in one teaching session and one tutorial video. Keep the second target week for practice where needed. Revisit operations through attractors and extend guided practice when students cannot explain index order or predict a count. Use small examples; large element counts are not evidence of understanding.
+Every class has one deck, built with the course slide kit from `slides/src` and reviewed September 16, 2026. Decks appear on a class page when the class is released.
 
-Attractors introduce measurement rather than another arrangement. The XYZ array establishes discrete locations in 3D. Point clouds introduce data the student did not author. Volumes introduce a new representation, and sections translate that representation into buildable parts. Make each transition explicit and retain a before/after comparison. Tessellation, panelization, lattices and simulation are possible intermediate topics and must not interrupt or become prerequisites for this route.
+| Week | Topic | Files | Status | Contents |
+| --- | --- | --- | --- | --- |
+| 1 | Graphic Standards Manual | [PPTX](../slides/ARC3133_Class01.pptx) / [PDF](../slides/ARC3133_Class01.pdf) | Current | GSM brief; four projects / nine assignments; three manuals to study. |
+| 2 | Constructive Solid Geometry | [PPTX](../slides/ARC3133_Class02.pptx) / [PDF](../slides/ARC3133_Class02.pdf) | Current | CSG; BIG-style process diagram; P2a issued. |
+| 3 | Constructive Solid Geometry | [PPTX](../slides/ARC3133_Class03.pptx) / [PDF](../slides/ARC3133_Class03.pdf) | Current | CSG continued + 3D printing: machine, manifold, overhangs, orientation, slicer, settings, failures, FabLab; P2b issued. |
+| 4 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class04.pptx) / [PDF](../slides/ARC3133_Class04.pdf) | Current | Descriptive geometry: point to solid, pyramid, Boolean; P2a due; P3a issued. |
+| 5 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class05.pptx) / [PDF](../slides/ARC3133_Class05.pdf) | Current | Your own module: parameters, points, faces, tiling; one material and lighting for the P3a sheet. |
+| 6 | Arrays | [PPTX](../slides/ARC3133_Class06.pptx) / [PDF](../slides/ARC3133_Class06.pdf) | Current | Arrays 1D, 2D, 3D (P3b sheet 1); P3a due; P3b issued; P2b print checkpoint. |
+| 7 | Arrays | [PPTX](../slides/ARC3133_Class07.pptx) / [PDF](../slides/ARC3133_Class07.pdf) | Current | Arrays hexagonal, radial, curve (P3b sheet 2); studio-review week, nothing due. |
+| 8 | Attractor | [PPTX](../slides/ARC3133_Class08.pptx) / [PDF](../slides/ARC3133_Class08.pdf) | Current | Attractors: distance, 2D field, remap, falloff; P3b due; P3c plotter and P3d Mixtli issued. |
+| 9 | Attractor | [PPTX](../slides/ARC3133_Class09.pptx) / [PDF](../slides/ARC3133_Class09.pdf) | Current | Plotter workflow, Mixtli working review, midterm checklist. |
+| 10 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class10.pptx) / [PDF](../slides/ARC3133_Class10.pdf) | Current | Midterm review of Projects 1-3, then SDF introduction; P4a issued. |
+| 11 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class11.pptx) / [PDF](../slides/ARC3133_Class11.pdf) | Current | SDF volume studio work; P4a checkpoint. |
+| 12 | Discretizing Geometry | [PPTX](../slides/ARC3133_Class12.pptx) / [PDF](../slides/ARC3133_Class12.pdf) | Current | Discretizing geometry; P4a due; P4b issued; booklet checkpoint. |
+| 13 | Discretizing Geometry | [PPTX](../slides/ARC3133_Class13.pptx) / [PDF](../slides/ARC3133_Class13.pdf) | Current | Parts for the laser cutter: thickness, registration, kerf, nesting; P4b checkpoint. |
+| 14 | Final | [PPTX](../slides/ARC3133_Class14.pptx) / [PDF](../slides/ARC3133_Class14.pdf) | Current | Final production, assembly, photography, booklet. |
+| 15 | Final | [PPTX](../slides/ARC3133_Class15.pptx) / [PDF](../slides/ARC3133_Class15.pdf) | Current | Documentation and booklet; review week, nothing due. |
 
-The midterm (Week 10) is a review of completed foundations, arrays and attractors. P3 now develops those arrays into the retained modular assembly, so its brief does not require the optional intermediate methods. Its existing weights and dates are retained. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
+[Detailed project and materials audit](ARC3133_Project_and_Materials_Audit_2026-09-16.md)
 
-Keep institutional policy text separate from curriculum edits. The School's accreditation mapping remains unconfirmed; do not present the earlier mixed 2014/2020 criteria table as a verified current requirement.
+The four projects are GSM, CSG, Paneling and Volumetric Data. Projects 1-3 finish at the Week 10 midterm. Paneling includes four separate assignments: the module, arrays, the 2D field plotter drawing and the Mixtli site analysis. The two array sheets form one assignment; the two attractor sheets form two assignments.
+
+Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 9 is a working review of both attractor assignments. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
+
+Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
+
+Draft weights use 7% per assignment in Projects 1-3 and 14% for each Project 4 assignment. The fabricated outputs are the CSG print, the plotter drawing and the sliced volume. Review machine capacity and the later schedule at midterm.
+
+Every class now has a deck generated from slides/src that reads dates and briefs from this file; rebuild the decks after any calendar or brief change. Video tutorials exist for CSG and Descriptive Geometry (Blender and Rhino + Grasshopper); record the others as time allows. Keep institutional policies separate from curriculum edits.

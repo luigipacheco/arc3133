@@ -11,23 +11,23 @@ permalink: /resources/example-files/
 
 # Example files
 
-Use these example files only as a reference if you are struggling with a step. Build your own file and follow the process one step at a time. Compare the example to understand where you are stuck, then return to your own work. The supplied examples are not files to submit as your assignment.
+Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files.
 
-Download only the example for the lesson you are working on. Arrays has two separate files for one teaching session and one tutorial video.
+Download only the example for the class you are working on. Arrays uses two files across two classes.
 
 | Example | Individual downloads |
 | --- | --- |
-| Intro to Geometry Nodes — transformations and CSG | [Download .blend]({{ site.baseurl }}/files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) |
-| Geometry Fundamentals | [Download .blend]({{ site.baseurl }}/files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend) |
-| Arrays and Lists — Part 1: linear and nested grid | [Download .blend]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend) |
-| Arrays and Lists — Part 2: arrangements and rules | [Download .blend]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend) |
-| Attractors | [Download .blend]({{ site.baseurl }}/files/blender/04-attractors/Attractors.blend) |
-| Point Clouds and Volumes | [Download .blend]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)<br>[Teaching point cloud]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.ply)<br>[Dataset source and units]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.json) |
-| Advanced Volumes I — signed distance and Boolean | [Download .blend]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend) |
-| Advanced Volumes II — noise and surface extraction | [Download .blend]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend) |
-| Discretizing Geometry I — contours | [Download .blend]({{ site.baseurl }}/files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) |
-| Discretizing Geometry II — physical parts | [Download .blend]({{ site.baseurl }}/files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) |
-| Final Project — fabrication and assembly | [Download .blend]({{ site.baseurl }}/files/blender/09-final-project/Final-Project-Fabrication.blend)<br>[Fabrication notes and dimensions]({{ site.baseurl }}/files/blender/09-final-project/FABRICATION-NOTES.md)<br>[Small print STL]({{ site.baseurl }}/files/blender/09-final-project/small-print-mm.stl)<br>[Fit coupon STL]({{ site.baseurl }}/files/blender/09-final-project/fit-coupon-mm.stl)<br>[Modular parts STL]({{ site.baseurl }}/files/blender/09-final-project/modular-parts-mm.stl)<br>[Section parts and spacers SVG]({{ site.baseurl }}/files/blender/09-final-project/section-parts-and-spacers-mm.svg) |
+| Constructive Solid Geometry | [Download .blend]({{ site.baseurl }}/files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) |
+| Descriptive Geometry | [Download .blend]({{ site.baseurl }}/files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend) |
+| Arrays — Part 1: linear and nested grid | [Download .blend]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend) |
+| Arrays — Part 2: arrangements and rules | [Download .blend]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend) |
+| Attractor | [Download .blend]({{ site.baseurl }}/files/blender/04-attractors/Attractors.blend) |
+| Volumetric Data and Fields — point clouds | [Download .blend]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)<br>[Teaching point cloud]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.ply)<br>[Dataset source and units]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.json) |
+| Volumetric Data and Fields — signed distance and Booleans | [Download .blend]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend) |
+| Volumetric Data and Fields — noise and surface extraction | [Download .blend]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend) |
+| Discretizing Geometry — contours | [Download .blend]({{ site.baseurl }}/files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) |
+| Discretizing Geometry — section parts | [Download .blend]({{ site.baseurl }}/files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) |
+| Final — fabrication and assembly | [Download .blend]({{ site.baseurl }}/files/blender/09-final-project/Final-Project-Fabrication.blend)<br>[Fabrication notes and dimensions]({{ site.baseurl }}/files/blender/09-final-project/FABRICATION-NOTES.md)<br>[Small print STL]({{ site.baseurl }}/files/blender/09-final-project/small-print-mm.stl)<br>[Fit coupon STL]({{ site.baseurl }}/files/blender/09-final-project/fit-coupon-mm.stl)<br>[Modular parts STL]({{ site.baseurl }}/files/blender/09-final-project/modular-parts-mm.stl)<br>[Section parts and spacers SVG]({{ site.baseurl }}/files/blender/09-final-project/section-parts-and-spacers-mm.svg) |
 
 ## Possible intermediate class
 
@@ -39,6 +39,6 @@ Optional reference files; these are outside the required sequence.
 
 For Point Clouds and Volumes, also download the teaching point cloud and keep the PLY beside its Blender file. The dataset note records its source and units.
 
-Prepared in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions.
+Prepared in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes.
 
-[Find your session in the teaching sequence]({{ site.baseurl }}/sessions/)
+[Find the class that uses each file]({{ site.baseurl }}/modules/classes/overview/)

@@ -19,17 +19,15 @@
 
 **Prerequisites:** ARC 1301, ARC 1302, ARC 2303 and ARC 2304, each with a minimum grade of C
 
-> The teaching sequence is flexible — a topic may take more than one class. Deadlines are firm, and any change is announced in class and on Canvas before this page changes.
-
 ## Course description
 
-Architectural Visualization Methods 1 develops computational methods for architectural representation and digital fabrication. Students make a visual identity, describe geometry with parameters, repeat and vary it, work with sampled and volumetric data, and translate that work into drawings and physical parts.
+Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain your design decisions through clear visual work.
 
-The learning sequence is **graphic standards → CSG → geometry from scratch → arrays and lists → attractors → point clouds → volumetric fields → sections and fabrication**. Arrays progresses from a row to a grid and an XYZ cube array before hexagonal and radial arrangements, introducing 3D sampling locations for later volume lessons. These are teaching units, not a promise to finish one unit every week.
+**Through midterm:** Graphic Standards Manual → Constructive Solid Geometry → Descriptive Geometry → Arrays → Attractor. Diagram and 3D print a CSG object, build a module from points and faces, array it in 1D, 2D and 3D and along hexagonal, radial and curve patterns, then plot a 2D attractor field and analyze a site with the Mixtli add-on. 3D printing is introduced in Week 3; the print is presented at midterm.
 
-Tessellation, panelization, lattices and simulation are possible intermediate topics, offered if time and the developing work make them useful. They are outside the required sequence and carry no separate required submission.
+**After midterm:** Volumetric Data and Fields → Discretizing Geometry → Final. Model a volume with signed distance fields, slice it into sections, then laser-cut and assemble the final work. The later schedule will be confirmed at midterm. Tessellation, panelization, lattices and simulation are optional, with no separate required submission.
 
-Visual quality remains central: composition, hierarchy, line weight, color, rendering, photography and clear explanation of spatial ideas. A working graph supports those decisions. Each project carries geometry and knowledge into the next rather than starting with an unrelated object.
+Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
 
 ## Learning outcomes
 
@@ -46,275 +44,282 @@ Visual quality remains central: composition, hierarchy, line weight, color, rend
 
 ## Learning pace and class format
 
-The dated schedule is a target. Each teaching block is budgeted at two classes — a demonstration class and a practice class — and each short assignment at two weeks from brief to deadline. Arrays uses one teaching session and one tutorial video, with the second week for practice. Everything up to and including attractors is covered before the Week 10 midterm. The blocks after the midterm are provisional: their order is set, but their pace and deadlines will be confirmed at the midterm and announced before they change. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
+**Complete attractors by the Week 10 midterm.** After the Week 1 introduction, each topic has two classes for demonstration and practice. The CSG sheet, module and arrays each have two weeks from brief to deadline. Both attractor assignments run through Weeks 8-9; the manual and CSG print develop alongside them. Arrays runs over two classes: 1D, 2D and 3D arrays in Week 6, then hexagonal, radial and curve arrays in Week 7.
 
-Assignment deadlines are listed separately from the teaching sequence. If teaching moves, the instructor will announce an updated deadline in class and Canvas and update this source before regenerating the course pages. A changed lesson pace does not silently change a deadline. No new graded submission is scheduled in the retained studio-review windows: October 5–9 and December 1–4.
+Later teaching dates and deadlines are provisional and will be confirmed at midterm. Until a change is announced in class and on Canvas, use the listed deadlines. October 5–9 and December 1–4 are reserved for studio reviews, with no graded submissions for this course.
 
-Each class combines review of work, a short demonstration or tutorial discussion, guided practice and a working critique. Recordings may support preparation when they are posted. Tutorial outlines in this repository are not evidence that a recording already exists.
+Each class combines a short demonstration, guided practice and critique. Start with a small example, check how it works, then increase its complexity. Watch the video tutorial for the topic where one is posted.
 
-Students bring the editable file and explain one relationship between an input and its result. From the first geometry review, they should be able to change a parameter and predict what changes. At the midterm and subsequent reviews, a brief live modification and explanation of a node or supplied group assess computational understanding.
+Bring your editable file to every class. Be ready to change an input, predict the result and explain the relevant nodes. Reviews assess both the visual work and your understanding of the process.
 
-This is an in-person course with scheduled FabLab work. Students should plan for at least six hours of work outside class each week. Fabrication preparation, testing and documentation are part of that work.
+Plan for at least six hours outside class each week, including fabrication preparation, tests and documentation. Classes and scheduled FabLab work meet in person.
 
 ## Teaching sequence
 
-| Target weeks | Focus | Practical sessions |
-|---|---|---|
-| 1 | Graphic Standards Manual | Manual and sample sheet |
-| 2–3 | Transformations and CSG | S01 |
-| 4–5 | Point → Line → Edge → Face → Solid → Boolean | S02 |
-| 6–7 | Arrays, lists, loops, conditionals and sine | One arrays session |
-| 8–9 | Point, multiple-point and curve attractors | S05 |
-| 10–11 | Point clouds and conversion to volumes | S07 |
-| 12–13 | Volumetric fields, SDFs, noise and Booleans | S08, S09 |
-| 14–15 | Contours, sections, fabrication and booklet | S10, S11, S12 |
+| Weeks | Topic | Classes | Video tutorials |
+|---|---|---|---|
+| 1 | Graphic Standards Manual | Class 01 | — |
+| 2–3 | Constructive Solid Geometry | Class 02 · Class 03 | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
+| 4–5 | Descriptive Geometry | Class 04 · Class 05 | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
+| 6–7 | Arrays | Class 06 · Class 07 | — |
+| 8–9 | Attractor | Class 08 · Class 09 | — |
+| 10–11 | Volumetric Data and Fields | Class 10 · Class 11 | — |
+| 12–13 | Discretizing Geometry | Class 12 · Class 13 | — |
+| 14–15 | Final | Class 14 · Class 15 | — |
 
 ## Possible intermediate class
 
-**Tessellation, panelization, lattices and simulation.** A possible intermediate class after arrays or attractors, only if the two-week blocks run ahead of schedule — the current calendar has no spare week for it. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
+**Tessellation, panelization, lattices and simulation.** Offered only if time allows after arrays or attractors; no separate submission. The file covers tessellation and lattices. Panelization and simulation are possible additions.
 
 ## Four projects built through short assignments
 
-| Developing project | Short assignments that build it | Combined weight |
+| Project | Assignments | Weight |
 | --- | --- | --- |
-| P1 — Geometry — from operations to construction | CSG massing sequence → Panel from scratch → First print | 21% |
-| P2 — Repetition and response — arrays to attractors | Arrays and conditional control → Attractor field study | 14% |
-| P3 — Spatial arrays and assembly | 3D array and connection study → Modular print assembly | 14% |
-| P4 — Samples, fields and sections | Point-cloud analysis → Volume, section and light → Sectional fabrication | 21% |
+| P1 — GSM | Graphic Standards Manual | 7% |
+| P2 — CSG | CSG process and instructions → CSG 3D printed object | 14% |
+| P3 — Paneling | Descriptive geometry module — material and lighting → Arrays → Attractor: 2D field plotter drawing → Attractor: site analysis with Mixtli | 28% |
+| P4 — Volumetric Data | SDF volume → Discretizing and laser-cut fabrication | 28% |
 
 ## Target teaching calendar
 
-| Target week | Date | Teaching focus (may extend) | Draft graded submissions |
+| Week | Date | Teaching focus | Submissions |
 | --- | --- | --- | --- |
 | 1 | Aug 25 | Graphic Standards Manual | — |
-| 2 | Sep 1 | Transformations and CSG | — |
-| 3 | Sep 8 | Transformations and CSG | — |
-| 4 | Sep 15 | Point → Line → Edge → Face → Solid → Boolean | P1a — CSG massing sequence |
-| 5 | Sep 22 | Point → Line → Edge → Face → Solid → Boolean | — |
-| 6 | Sep 29 | Arrays, lists, loops, conditionals and sine | P1b — Panel from scratch |
-| 7 | Oct 6 | Arrays, lists, loops, conditionals and sine | No graded submission |
-| 8 | Oct 13 | Point, multiple-point and curve attractors | P2a — Arrays and conditional control |
-| 9 | Oct 20 | Point, multiple-point and curve attractors | — |
-| 10 | Oct 27 | Point clouds and conversion to volumes | P1c — First print; P2b — Attractor field study; GSM — Graphic Standards Manual; MID — Midterm review |
-| 11 | Nov 3 | Point clouds and conversion to volumes | — |
-| 12 | Nov 10 | Volumetric fields, SDFs, noise and Booleans | P3a — 3D array and connection study |
-| 13 | Nov 17 | Volumetric fields, SDFs, noise and Booleans | P4a — Point-cloud analysis |
-| 14 | Nov 24 | Contours, sections, fabrication and booklet | P3b — Modular print assembly; P4b — Volume, section and light |
-| 15 | Dec 1 | Contours, sections, fabrication and booklet | No graded submission |
-| Final | December 10–16, 2026; exact review slot to be confirmed | Final review | P4c — Sectional fabrication; BOOK — Final booklet and review; revised GSM |
+| 2 | Sep 1 | Constructive Solid Geometry | — |
+| 3 | Sep 8 | Constructive Solid Geometry | — |
+| 4 | Sep 15 | Descriptive Geometry | P2a — CSG process and instructions |
+| 5 | Sep 22 | Descriptive Geometry | — |
+| 6 | Sep 29 | Arrays | P3a — Descriptive geometry module — material and lighting |
+| 7 | Oct 6 | Arrays | No graded submission |
+| 8 | Oct 13 | Attractor | P3b — Arrays |
+| 9 | Oct 20 | Attractor | — |
+| 10 | Oct 27 | Midterm review; then volumetric Data and Fields | GSM — Graphic Standards Manual; P2b — CSG 3D printed object; P3c — Attractor: 2D field plotter drawing; P3d — Attractor: site analysis with Mixtli; MID — Midterm review |
+| 11 | Nov 3 | Volumetric Data and Fields | — |
+| 12 | Nov 10 | Discretizing Geometry | P4a — SDF volume |
+| 13 | Nov 17 | Discretizing Geometry | — |
+| 14 | Nov 24 | Final | — |
+| 15 | Dec 1 | Final | No graded submission |
+| Final | December 10–16, 2026; exact review slot to be confirmed | Final review | P4b — Discretizing and laser-cut fabrication; BOOK — Final booklet and review; revised GSM |
 
 ## Assignments and grading
 
-Ten short assignments build into four projects. The draft retains 7% for each short assignment. Students first complete a small, focused exercise, then combine and revise that work within its project. The assembled project does not add a second grade on top of its assignments. Together with the Graphic Standards Manual, midterm, booklet and participation, the total is 100%.
+The course has four projects made of nine assignments. Each assignment is graded once; a project is the set of its assignments, not an extra grade.
 
-Digital project milestones: visual quality 35%, computational understanding 25%, technical execution 20%, experimentation 10%, requirements and visual identity 10%. Fabrication milestones: visual documentation 20%, computational understanding 20%, technical execution 15%, fabrication quality 30%, experimentation 5%, requirements and visual identity 10%.
+Digital assignments: visual quality 35%, computational understanding 25%, technical execution 20%, experimentation 10%, requirements and visual identity 10%. Fabrication assignments: visual documentation 20%, computational understanding 20%, technical execution 15%, fabrication quality 30%, experimentation 5%, requirements and visual identity 10%.
 
-The Graphic Standards Manual is assessed for visual quality and hierarchy (40%), consistency and usability of the system (30%), tested applications (20%) and completeness (10%). It does not require a computational graph.
+GSM: visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%. The manual does not require a computational graph.
 
-Midterm: evidence of revision 40%, coherence across the set 30%, and print/layout/documentation quality 30%. Booklet: substantive revision 40%, documentation 35%, and consistency of the visual identity 25%. These reviews do not replace grades earned at earlier deadlines. The standing late-work and revision policy is retained below.
+Midterm: revision 40%, coherence across the set 30%, print/layout/documentation quality 30%. Booklet: substantive revision 40%, documentation 35%, visual identity 25%. Reviews do not replace earlier assignment grades. Standing late-work and revision policies apply.
 
-| Assignment / review | Introduced | Draft due date | Weight |
+| Assignment / review | Introduced | Due | Weight |
 | --- | --- | --- | --- |
-| P1a — CSG massing sequence | Week 2 — Sep 1 | Week 4 — Sep 15 | 7% |
-| P1b — Panel from scratch | Week 4 — Sep 15 | Week 6 — Sep 29 | 7% |
-| P1c — First print | Week 4 — Sep 15 | Week 10 — Oct 27 | 7% |
-| P2a — Arrays and conditional control | Week 6 — Sep 29 | Week 8 — Oct 13 | 7% |
-| P2b — Attractor field study | Week 8 — Oct 13 | Week 10 — Oct 27 | 7% |
-| P3a — 3D array and connection study | Week 10 — Oct 27 | Week 12 — Nov 10 | 7% |
-| P3b — Modular print assembly | Week 10 — Oct 27 | Week 14 — Nov 24 | 7% |
-| P4a — Point-cloud analysis | Week 11 — Nov 3 | Week 13 — Nov 17 | 7% |
-| P4b — Volume, section and light | Week 12 — Nov 10 | Week 14 — Nov 24 | 7% |
-| P4c — Sectional fabrication | Week 14 — Nov 24 | Final review — December 10–16, 2026; exact review slot to be confirmed | 7% |
 | GSM — Graphic Standards Manual | Week 1 — Aug 25 | Week 10 — Oct 27 | 7% |
+| P2a — CSG process and instructions | Week 2 — Sep 1 | Week 4 — Sep 15 | 7% |
+| P2b — CSG 3D printed object | Week 3 — Sep 8 | Week 10 — Oct 27 | 7% |
+| P3a — Descriptive geometry module — material and lighting | Week 4 — Sep 15 | Week 6 — Sep 29 | 7% |
+| P3b — Arrays | Week 6 — Sep 29 | Week 8 — Oct 13 | 7% |
+| P3c — Attractor: 2D field plotter drawing | Week 8 — Oct 13 | Week 10 — Oct 27 | 7% |
+| P3d — Attractor: site analysis with Mixtli | Week 8 — Oct 13 | Week 10 — Oct 27 | 7% |
+| P4a — SDF volume | Week 10 — Oct 27 | Week 12 — Nov 10 | 14% |
+| P4b — Discretizing and laser-cut fabrication | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 14% |
 | MID — Midterm review | Week 1 — Aug 25 | Week 10 — Oct 27 | 7% |
 | BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 10–16, 2026; exact review slot to be confirmed | 11% |
 | PART — Attendance and participation | Week 1 — Aug 25 | Throughout the semester | 5% |
 | Total |  |  | 100% |
 
-## P1 — Geometry — from operations to construction
+## P1 — GSM
 
-Build a parametric massing study, then build a repeating panel from its own points and faces and develop a small printable variant of it.
-
-<a id="p1a"></a>
-
-### P1a — CSG massing sequence
-
-**Introduced:** Week 2 — Sep 1 · **Draft due:** Week 4 — Sep 15 · **Weight:** 7%
-
-- One 17 × 11 inch sheet carrying an ordered sequence of eight or nine numbered diagrams: one operation per diagram, read in order, each showing what the one before it produced.
-- Use at least three primitives, at least three transformations covering translate, rotate and scale, and at least three Boolean operations covering union, difference and intersection. Name the operands of every subtraction — which solid is kept and which is removed.
-- Develop the last diagram as a drawing rather than a diagram: the final solid at building scale, with a 1.75 m human figure, vegetation, ground and shadow, so the sequence ends in something readable as architecture.
-- Write the sequence out as pseudocode beside the diagrams — one line per operation, in the same order as the diagrams, with the parameters you exposed.
-- Read the spatial operations in Di Mari and Yoo, Operative Design, and Di Mari, Conditional Design, and state which operation your sequence performs in their terms.
-- Submit an editable graph with exposed inputs and geometry generated in the graph. Keep the source operations intact.
-
-<a id="p1b"></a>
-
-### P1b — Panel from scratch
-
-**Introduced:** Week 4 — Sep 15 · **Draft due:** Week 6 — Sep 29 · **Weight:** 7%
-
-- Find one panel in a built precedent and keep it simple. Choose it by one test: could you set it beside three copies of itself, edge to edge, and have the grid close? Name the building, the architect and your source on the sheet.
-- Decide the parameters before you model anything, and say in one line what each does. At least one must change the panel's shape — an aperture, a fold depth, a corner offset — not its bounding box.
-- Rebuild it from scratch: an explicit point list and an explicit face list, every point an expression of those parameters rather than a typed coordinate. Nothing collapsed, and it closes.
-- State each parameter's working range — where the panel still closes and still tiles — and show it at the low, middle and high end of the one an attractor will drive in P2b.
-- One 17 × 11 inch sheet, and one image on it: the panel rendered on a ground plane, one material, studio light, no context and no entourage. The object, its structure and nothing else.
-- Print the point list, the face list and the parameter table beside the render, and annotate the vertex order of one face. Explain normals, closure, and what breaks when a face is wound backwards.
-
-<a id="p1c"></a>
-
-### P1c — First print
-
-**Introduced:** Week 4 — Sep 15 · **Draft due:** Week 10 — Oct 27 · **Weight:** 7%
-
-- Develop a printable variant of the geometry project, within 60 mm on each axis and the 200 g allocation, with no supports.
-- Present the physical print at midterm with one orientation/process sheet and a photograph.
-- Submit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.
-
-**Preparation / revision checkpoints** (not extra graded assignments):
-
-- Week 6 — Sep 29: Review print-ready geometry, physical units, orientation and the sliced preview before queueing.
-
-## P2 — Repetition and response — arrays to attractors
-
-Take the panel you built in P1b and use it, unchanged, as the component. First design its arrangement, then vary that arrangement through external measurements.
-
-<a id="p2a"></a>
-
-### P2a — Arrays and conditional control
-
-**Introduced:** Week 6 — Sep 29 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
-
-- Array the P1b panel — linear, nested grid, hexagonal and radial — and develop three comparisons on up to two sheets, including the nested grid.
-- Keep the panel itself unchanged while comparing arrangements; only its positions move. Expose count and spacing or radius and explain index order.
-- Show one conditional index-range displacement and one sine-driven variation; identify amplitude, frequency and phase.
-- Build the repetition and selection logic from basic nodes. Show a small inspectable count before scaling up; no minimum of 1,000 elements is imposed.
-
-<a id="p2b"></a>
-
-### P2b — Attractor field study
-
-**Introduced:** Week 8 — Oct 13 · **Draft due:** Week 10 — Oct 27 · **Weight:** 7%
-
-- On up to two sheets, compare single-point, multiple-point and curve attractors, holding the P1b panel and one arrangement from P2a constant so only the measurement changes.
-- Show the measured field before the geometric result. State source and target ranges, clamping and falloff.
-- Develop one spatial or architectural intention and demonstrate a live change to the attractor or mapping.
-
-**Preparation / revision checkpoints** (not extra graded assignments):
-
-- Week 9 — Oct 20: Bring the grayscale field and a first geometric response for a working review.
-
-## P3 — Spatial arrays and assembly
-
-Extend the array into XYZ space, apply controlled variation and develop a small connected assembly. Use the same discrete positions to introduce later volume sampling.
-
-<a id="p3a"></a>
-
-### P3a — 3D array and connection study
-
-**Introduced:** Week 10 — Oct 27 · **Draft due:** Week 12 — Nov 10 · **Weight:** 7%
-
-- Show the progression from row to grid to 3D cube array on up to two sheets. Explain how count on each axis determines the total number of components.
-- Show a uniform state and at least two controlled variants using count, spacing, component size or attractor-driven variation.
-- Develop one component connection for the modular assembly. Tessellation, panelization, lattices and simulation are optional methods, not requirements.
-
-<a id="p3b"></a>
-
-### P3b — Modular print assembly
-
-**Introduced:** Week 10 — Oct 27 · **Draft due:** Week 14 — Nov 24 · **Weight:** 7%
-
-- Produce a 3 × 3 assembly of nine components, including controlled variation, within 300 mm on each assembled axis.
-- Test and document a connection, thickness, orientation and fit before production. Justify any supports and respect the confirmed machine allocation.
-- Submit the assembly, editable source and fabrication files, plus a sheet showing the part map, assembly sequence and photographs.
-
-**Preparation / revision checkpoints** (not extra graded assignments):
-
-- Week 12 — Nov 10: Review one connection test and a production plan before the nine-part batch.
-
-## P4 — Samples, fields and sections
-
-Analyze a point cloud, develop a volumetric interpretation or design, and discretize the selected volume into physical sections.
-
-<a id="p4a"></a>
-
-### P4a — Point-cloud analysis
-
-**Introduced:** Week 11 — Nov 3 · **Draft due:** Week 13 — Nov 17 · **Weight:** 7%
-
-- One or two sheets comparing source samples, a distance-based analysis and a volume conversion.
-- Record data source and permission/license, model units, origin, original count, processed count and sampling choices.
-- Explain the analytical purpose and what radius/influence and voxel size change. Retain the original points alongside derived outputs.
-
-<a id="p4b"></a>
-
-### P4b — Volume, section and light
-
-**Introduced:** Week 12 — Nov 10 · **Draft due:** Week 14 — Nov 24 · **Weight:** 7%
-
-- Two sheets showing a controlled volumetric study, its field/Boolean logic and three parameter variants.
-- Compare two section directions or intervals and develop one ordered contour stack; render its light, shadow and material reading.
-- Explain whether the field is density, signed distance or another implicit function, and document sampling resolution and surface extraction.
-
-**Preparation / revision checkpoints** (not extra graded assignments):
-
-- Week 13 — Nov 17: Select the volume and compare two section directions before developing physical parts.
-
-<a id="p4c"></a>
-
-### P4c — Sectional fabrication
-
-**Introduced:** Week 14 — Nov 24 · **Draft due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 7%
-
-- Translate the chosen volume into at least 12 ordered section parts with material thickness, labels and a registration or connection system.
-- Fit the assembly within 300 mm on each axis and nest within one confirmed material sheet. Include test cuts in the allocation.
-- Present the assembly with the editable source, cutting file, assembly diagram and photographs, comparing continuous form with discrete parts.
-
-**Preparation / revision checkpoints** (not extra graded assignments):
-
-- Week 15 — Dec 1: Review a fit/kerf test, registered parts and the nested cutting file before full production.
-
-## Visual identity and course reviews
+Create your own Graphic Standards Manual and apply it to every course presentation.
 
 <a id="gsm"></a>
 
 ### GSM — Graphic Standards Manual
 
-**Introduced:** Week 1 — Aug 25 · **Draft due:** Week 10 — Oct 27 · **Weight:** 7%
+**Introduced:** Week 1 — Aug 25 · **Due:** Week 10 — Oct 27 · **Weight:** 7%
 
-- Four pages, and no more. The manual is the graphic system itself, shown in use: rules with a tested application beside each one, not a description of intentions.
-- One page per decision: (1) the template — sheet size, margins, grid and columns, with the placement rules; (2) typography and hierarchy; (3) color and line weights; (4) annotation, captions and image treatment, demonstrated on a real sheet from this course.
-- Use no more than three typefaces, three colors in total — black, the paper and every accent count toward the three — four hierarchy levels and four line weights.
-- Study the three manuals shown in Class 01 — NYCTA, NASA and Munich 1972 — and name one rule you took from them. All three are linked in full under reading and documentation.
-- Apply the manual to every sheet; revise it in response to actual use and critique.
+**Present:** Four-page Graphic Standards Manual; PDF and editable layout.
 
-**Preparation / revision checkpoints** (not extra graded assignments):
+- Make exactly four pages. Show each graphic rule beside a tested application.
+- Use one page each for: (1) sheet size, margins, grid, columns and placement; (2) typography and hierarchy; (3) color and line weights; (4) annotations, captions and image treatment on a course sheet.
+- Use at most three typefaces, three colors including black and paper, four hierarchy levels and four line weights.
+- Study the NYCTA, NASA and Munich 1972 manuals linked under Reading and documentation. Name one rule you adopted.
+- Apply the manual to every sheet and revise it after critique.
+
+**Ungraded checkpoints:**
 
 - Week 2 — Sep 1: Bring a sample sheet for an ungraded identity check.
 - Final review — December 10–16, 2026; exact review slot to be confirmed: Submit the revised manual as a separate PDF alongside the booklet.
+
+## P2 — CSG
+
+Explain a CSG object through a BIG-style process diagram with instructions, then 3D print it.
+
+<a id="p2a"></a>
+
+### P2a — CSG process and instructions
+
+**Introduced:** Week 2 — Sep 1 · **Due:** Week 4 — Sep 15 · **Weight:** 7%
+
+**Present:** One process sheet; PDF and editable graph.
+
+- One 17 × 11 inch sheet laid out as a BIG-style process diagram (in the manner of Bjarke Ingels Group's step-by-step massing diagrams): eight or nine numbered frames, one operation per frame, read in sequence.
+- Use at least three primitives; include translation, rotation and scale, plus union, difference and intersection. Label the kept and removed solids in each subtraction.
+- Draw the final solid at building scale with a 1.75 m figure, vegetation, ground and shadow.
+- Add clear instructions and matching pseudocode beside the diagrams, one step per operation, with the exposed parameters.
+- Refer to Di Mari and Yoo's Operative Design and Di Mari's Conditional Design; name the spatial operation your sequence explores.
+- Submit an editable graph with exposed inputs and all source operations intact.
+
+<a id="p2b"></a>
+
+### P2b — CSG 3D printed object
+
+**Introduced:** Week 3 — Sep 8 · **Due:** Week 10 — Oct 27 · **Weight:** 7%
+
+**Present:** One 3D printed CSG object and one process sheet; source, mesh and slicer files.
+
+- Print a variant of your CSG object from P2a, within 60 mm on each axis and the 200 g allocation, without supports.
+- Bring the print to midterm with one process sheet showing orientation and a photograph.
+- Submit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.
+
+**Ungraded checkpoints:**
+
+- Week 6 — Sep 29: Check geometry, units, orientation and the sliced preview before queueing.
+
+## P3 — Paneling
+
+Build a module, array it across two sheets, plot an attractor field and analyze a site with the Mixtli add-on.
+
+<a id="p3a"></a>
+
+### P3a — Descriptive geometry module — material and lighting
+
+**Introduced:** Week 4 — Sep 15 · **Due:** Week 6 — Sep 29 · **Weight:** 7%
+
+**Present:** One module presentation sheet; PDF and editable graph.
+
+- Choose a simple panel from a built precedent that tiles edge to edge in a 2 × 2 grid. Credit the building, architect and source.
+- Define parameters first and explain each. Include a shape control such as aperture, fold depth or corner offset, beyond overall dimensions.
+- Build an editable, closed mesh from explicit point and face lists. Calculate point positions from the parameters.
+- State the ranges where the module closes and tiles. Diagram low, middle and high values of a shape parameter.
+- Use one 17 × 11 inch sheet with one studio render of the module on a ground plane — one material, a deliberate lighting setup (key, fill and rim, or one sun and sky) and no entourage. Record the material and light settings on the sheet.
+- Beside the render, show point and face lists, a parameter table and the vertex order of one face. Explain normals, closure and reversed face winding.
+
+<a id="p3b"></a>
+
+### P3b — Arrays
+
+**Introduced:** Week 6 — Sep 29 · **Due:** Week 8 — Oct 13 · **Weight:** 7%
+
+**Present:** Exactly two sheets submitted together as one assignment; PDF and editable graph.
+
+- Array your P3a module across exactly two 17 × 11 inch sheets, submitted together as one assignment.
+- Sheet 1 — 1D, 2D and 3D arrays: a linear array, a nested grid and an XYZ cube array. Label count, spacing and index order; show the predicted total for each.
+- Sheet 2 — hexagonal, radial and curve arrays: a staggered hexagonal grid, a radial array (radius, count, angular step) and an array along a curve, including one sine-driven curve with amplitude, frequency and phase labelled.
+- Keep the module unchanged; vary only its placement. Expose count and spacing or radius in the graph.
+- Build repetition from basic nodes and begin with a count you can inspect; there is no minimum element count. One conditional (index-range) selection is encouraged on either sheet.
+
+<a id="p3c"></a>
+
+### P3c — Attractor: 2D field plotter drawing
+
+**Introduced:** Week 8 — Oct 13 · **Due:** Week 10 — Oct 27 · **Weight:** 7%
+
+**Present:** One pen-plotter drawing of a 2D attractor field; SVG, scan or photograph and editable graph.
+
+- Build a 2D attractor field on a flat grid and translate it into lines a pen plotter can draw — vary line length, rotation, spacing or hatch density with the measured distance.
+- Compare single-point, multiple-point and curve attractors on the same grid, with the same mapping, so the difference comes from the attractor alone.
+- Show the grayscale field with a legend beside the line drawing. Label input and output ranges, clamping and falloff.
+- Export an SVG at the plotted size, test a small plot, then plot the final drawing at 17 × 11 inches (or the confirmed plotter size) with one pen weight or a declared set of pens.
+- Submit the plotted drawing, the SVG, a photograph or scan of the plot and the editable graph. Move an attractor or change the mapping live at midterm.
+
+**Ungraded checkpoints:**
+
+- Week 9 — Oct 20: Bring a grayscale field, the line translation and a small test plot.
+
+<a id="p3d"></a>
+
+### P3d — Attractor: site analysis with Mixtli
+
+**Introduced:** Week 8 — Oct 13 · **Due:** Week 10 — Oct 27 · **Weight:** 7%
+
+**Present:** One site-analysis sheet; PDF, working Blender file and a source record for the site.
+
+- Pick a site you can document and state why you chose it. Record the source of the site model or data, its units, scale and orientation.
+- Analyze the site with the Mixtli add-on for Blender, provided by the instructor. Record the analysis type, inputs and settings.
+- Make one 17 × 11 inch sheet with an annotated site plan or base view, the mapped analysis with a legend and units, and one comparison of settings, times or conditions.
+- Explain what the output measures, how it reads as a field — the same distance-and-remap logic as P3c — and how it informs one spatial decision on the site.
+- Submit the working file and dependencies. The add-on does the computation; the question, comparison and interpretation are yours.
+
+**Ungraded checkpoints:**
+
+- Week 9 — Oct 20: Bring your chosen site, one Mixtli analysis with a legend and a stated analysis question.
+
+## P4 — Volumetric Data
+
+Model a volume with signed distance fields, discretize it into slices and fabricate a laser-cut assembly.
+
+<a id="p4a"></a>
+
+### P4a — SDF volume
+
+**Introduced:** Week 10 — Oct 27 · **Due:** Week 12 — Nov 10 · **Weight:** 14%
+
+**Present:** Two volume-study sheets; PDF and editable field graph.
+
+- Use two 17 x 11 inch sheets to explain a volume built from signed distance fields (SDF) — the CSG logic from P2, applied to fields instead of meshes.
+- Compare union, intersection and difference using the same source fields. Show the chosen result and three controlled parameter variants.
+- Diagram the field logic and identify density, signed distance or another implicit function. State sampling resolution and surface extraction settings.
+- Select one volume for P4b and explain the spatial intention. Submit the editable graph and retain the source fields.
+
+**Ungraded checkpoints:**
+
+- Week 11 — Nov 3: Bring an SDF diagram, a union/intersection/difference comparison and a candidate volume for slicing.
+
+<a id="p4b"></a>
+
+### P4b — Discretizing and laser-cut fabrication
+
+**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 14%
+
+**Present:** Laser-cut slice assembly and one process sheet; source, cutting file and photographs.
+
+- Use the selected P4a volume. Compare two section directions or intervals, then develop at least 12 ordered slices with material thickness and a registration system.
+- Fit the assembly within 300 mm on each axis and one confirmed material sheet. Test kerf and fit before the batch; label and nest every part.
+- Laser-cut and assemble the slices under FabLab procedures. Include test cuts and failed parts in the material allocation.
+- Present the assembly with one 17 x 11 inch process sheet showing the continuous volume, section sequence, cutting layout, assembly diagram and photographs.
+- Submit the editable source, cutting file and documentation. Regenerate fabrication files after any geometry or material change.
+
+**Ungraded checkpoints:**
+
+- Week 13 — Nov 17: Review section directions, thickness, registration, fit/kerf test and cutting layout before production.
+- Week 15 — Dec 1: Review the assembled result, photographs and final booklet documentation.
+
+## Visual identity and course reviews
 
 <a id="mid"></a>
 
 ### MID — Midterm review
 
-**Introduced:** Week 1 — Aug 25 · **Draft due:** Week 10 — Oct 27 · **Weight:** 7%
+**Introduced:** Week 1 — Aug 25 · **Due:** Week 10 — Oct 27 · **Weight:** 7%
 
-- Print and present the GSM, revised CSG and mesh sheets, the first print and its documentation, the array study and the attractor field study.
-- 3D array and assembly work (P3) is briefed after the review and is not expected at midterm.
-- Bring the editable file for a brief live parameter change and explanation. The review assesses the assembled body of work without re-grading earlier milestones.
+- Print and present Project 1: the four-page Graphic Standards Manual.
+- Present Project 2: the CSG process sheet, the 3D printed CSG object and its process sheet.
+- Present Project 3: one module sheet, two array sheets, the plotted attractor field drawing and one Mixtli site-analysis sheet.
+- Bring editable files and dependencies. Change a parameter live, predict the result and explain the nodes or the Mixtli analysis settings.
+- The review assesses revision and coherence across Projects 1-3. Earlier assignment grades remain separate. Project 4 follows the review.
 
 <a id="book"></a>
 
 ### BOOK — Final booklet and review
 
-**Introduced:** Week 1 — Aug 25 · **Draft due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 11%
+**Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 11%
 
-- Compile the four projects and all ten milestones in their revised form, using 17 × 11 inch pages and the visual identity.
-- Include photographs, process diagrams and captions for the three fabricated outputs and identify substantive revisions after critique.
-- Submit the booklet PDF, a separate revised GSM PDF, editable project files and their dependencies, and required fabrication files.
-- Present the sectional assembly and the earlier fabricated work or its review documentation as directed. The exact final review slot remains to be confirmed.
+- Compile all four projects and nine assignments in revised form, using 17 x 11 inch pages and your graphic standards.
+- Include process diagrams, photographs and captions for the CSG print and laser-cut volume. Identify substantive revisions after critique.
+- Submit the booklet PDF, a separate revised GSM PDF, editable project files and dependencies, and required fabrication files.
+- Present the laser-cut assembly and the CSG print or its review documentation as directed. The exact final review slot remains to be confirmed.
 
-**Preparation / revision checkpoints** (not extra graded assignments):
+**Ungraded checkpoints:**
 
 - Week 12 — Nov 10: Bring a booklet spread and contents list for an ungraded progress check.
 
@@ -322,7 +327,7 @@ Analyze a point cloud, develop a volumetric interpretation or design, and discre
 
 ### PART — Attendance and participation
 
-**Introduced:** Week 1 — Aug 25 · **Draft due:** Throughout the semester · **Weight:** 5%
+**Introduced:** Week 1 — Aug 25 · **Due:** Throughout the semester · **Weight:** 5%
 
 - Participate in demonstrations, working sessions and critique and bring the current editable file.
 - Attendance and absence terms are stated in the retained course policies.
@@ -333,7 +338,7 @@ Use **17 × 11 inch** sheets and booklet pages, following the Graphic Standards 
 
 Keep native node names visible. Use Frames for short explanations and name exposed input parameters clearly. Students may name their own reusable groups, but custom labels must not conceal which native node is being taught. Small readable graphs are preferred to unnecessary complexity.
 
-Before each submission, open the file from a clean folder, confirm dependencies and units, and check that changing the exposed inputs produces the claimed alternatives. Supplied specialist groups are permitted for volume and section operations when students can explain their inputs, outputs and role. They must build the geometry, repetition, conditionals and attractor relationships that the early exercises are teaching.
+Before each submission, open the file from a clean folder, confirm dependencies and units, and check that changing the exposed inputs produces the claimed alternatives. Supplied specialist groups are permitted for volume and section operations when students can explain their inputs, outputs and role. Students build the geometry, repetition, conditionals and attractor relationships in the early exercises. P3d uses the Mixtli add-on; students must explain its inputs, output and their interpretation.
 
 ## Software and data
 
@@ -347,15 +352,13 @@ Import a supplied or properly attributed point-cloud dataset for the point-cloud
 
 ## Fabrication and materials
 
-Complete the FabLab Safety Orientation before machine use. The retained target is the end of Week 2; the enrollment link and operating arrangements must be confirmed with the FabLab. All fabrication follows the lab's supervision and machine procedures.
+Complete FabLab Safety Orientation before machine use. The target is the end of Week 2; confirm enrollment and operating arrangements with the lab. Introduce 3D printing in Week 3.
 
-**First print:** maximum 60 mm in each bounding-box dimension and 200 g of filament, including failed attempts within the allocation. Use a draft layer height and develop an orientation that prints without supports. Choose or revise a CSG variant that can satisfy that constraint; a classroom Boolean demonstration is not automatically a printable object.
+**CSG print (P2b):** print the CSG object from P2a. Maximum 60 mm on each axis and 200 g of filament including failed attempts. Use a draft layer height and an orientation that prints without supports.
 
-**Modular print:** develop a small 3 × 3 assembly of nine components, with a connection test before the batch. Maximum 300 mm in each assembled bounding-box dimension. Supports may be used with a documented reason. Material supply and print-time limits remain to be confirmed; do not plan production around an unallocated machine budget.
+**Laser-cut volume (P4b):** fabricate the P4a volume as at least 12 ordered slices. Maximum 300 mm on each assembled axis and one confirmed sheet of material. Confirm stock and sheet dimensions, test kerf and fit, then label and nest the parts. Test cuts and failed parts count against the allocation.
 
-**Sectional assembly:** maximum 300 mm in each assembled bounding-box dimension and one allocated sheet of material, with the sheet dimensions and stock confirmed before nesting. Test kerf and fit, then label and order the parts. Test cuts and failed parts count against the allocation.
-
-The first-print filament allocation and one cutting sheet are retained from the earlier syllabus; the School must confirm their availability. Students provide storage and backups and are responsible for replacement material beyond the confirmed allocation.
+These are the two required physical outputs. Material availability and machine time require FabLab confirmation. Keep backups and account for replacement material beyond the confirmed allocation.
 
 ## Course grading scale
 
@@ -427,9 +430,9 @@ Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a 
 
 ## Material availability
 
-The geometry-from-scratch unit has an existing Blender lesson with six scenes. It keeps the pyramid parameters exposed and ends with cube-minus-pyramid. Its teaching notes remain with the file.
+Posted lessons link their Blender examples and screenshots. Use each file as a reference while building your own work. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
 
-The other unit descriptions are preparation briefs. Remaining Blender files, recordings and revised slide decks will be made and checked in the next phase. Earlier slide decks and Python/Sverchok scripts are historical teaching resources, not the current weekly instructions. The material register distinguishes an existing lesson from a file still to be prepared.
+**Site analysis:** students pick their own site and use the Mixtli add-on for Blender. The add-on and install notes will be posted before Week 8.
 
 ## Decisions before issue
 
@@ -442,15 +445,15 @@ The other unit descriptions are preparation briefs. Remaining Blender files, rec
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
 - Establish one source of curriculum information before preparing the remaining Blender class files.
-- Start with short assignments that build into four projects: geometry, arrays/attractors, spatial arrays/assembly, and point clouds/volumes/sections.
+- Organize nine assignments into four projects: GSM, CSG, Paneling and Volumetric Data.
 
 ### Working proposals
 
 - Budget two weeks per tutorial and per assignment: CSG and geometry from scratch each took two classes in practice. Attractors are covered before the midterm, which moves to Week 10. Weeks 10–15 after the midterm are provisional and will be re-planned then.
 - Retain the existing 15-week semester and midterm/final review windows.
-- Retain the calendar's grading total: ten project milestones at 7% each, GSM 7%, midterm 7%, booklet 11% and participation 5%.
+- Draft grading: GSM 7%, CSG 14%, Paneling 28%, Volumetric Data 28%, midterm 7%, booklet 11% and participation 5%.
 - Focus the required final on the developed visual work, physical work and booklet. The previous Python/AI final and extra-credit scheme are awaiting an instructor decision and are not assigned in this draft.
-- Keep three fabrication outputs: an introductory print, a small modular print assembly and a sectional assembly. A plotter demonstration is optional and carries no separate grade.
+- Three physical outputs: the CSG 3D print, the attractor field plotter drawing and a laser-cut SDF volume assembled from slices.
 
 ### Administrative items to confirm
 
@@ -458,6 +461,7 @@ The other unit descriptions are preparation briefs. Remaining Blender files, rec
 - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
 - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
 - Confirm the attendance sign-in method and the accreditation criteria used by the School.
+- Confirm pen-plotter access, pens and paper for the P3c field drawing, and post the Mixtli add-on with install instructions before Week 8.
 
 # Standing course and university policies
 

@@ -16,3 +16,8 @@ __pycache__/
 # Blender creates local recovery copies beside the working file.
 *.blend[0-9]
 !reference/archive/**/*.blend[0-9]
+
+# Reproducible presentation audit renders and the local pre-edit snapshot.
+/reference/course-audit/ARC3133_Class*/
+/reference/course-audit/*-contact-*.jpg
+/reference/course-audit/before-project-restructure.yml

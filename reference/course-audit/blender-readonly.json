@@ -1,0 +1,1500 @@
+{
+  "blender_version": "5.2.1 LTS",
+  "files": [
+    {
+      "session": "S01",
+      "file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
+      "sha256": "74b448576808d51b5b656891f3d950e226e24ec53b0e77f4fdb62ad900b709fa",
+      "scenes": [
+        {
+          "name": "01 - CSG example",
+          "objects": [
+            "01 - CSG example",
+            "01 - CSG example camera",
+            "01 - CSG example key",
+            "01 - CSG example rim"
+          ],
+          "active_object": "01 - CSG example",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 687,
+            "faces": 428
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.34979179341800776,
+          "node_groups": [
+            "01 - CSG example"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Geometry"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S02",
+      "file": "files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend",
+      "sha256": "ce81a7f77edd2f0ba7594d299ba35b16e7c86006052611a7c6cffaa9c1714bf9",
+      "scenes": [
+        {
+          "name": "01 - Point",
+          "objects": [
+            "01 - Point",
+            "01 - Point camera",
+            "01 - Point key",
+            "01 - Point rim"
+          ],
+          "active_object": "01 - Point",
+          "geometry": {
+            "points": 1,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 0,
+            "faces": 0
+          },
+          "node_groups": [
+            "01 - Point"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": []
+          }
+        },
+        {
+          "name": "02 - Line",
+          "objects": [
+            "02 - Line",
+            "02 - Line camera",
+            "02 - Line key",
+            "02 - Line rim"
+          ],
+          "active_object": "02 - Line",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 1,
+            "vertices": 0,
+            "faces": 0
+          },
+          "node_groups": [
+            "02 - Line"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": []
+          }
+        },
+        {
+          "name": "03 - Edge",
+          "objects": [
+            "03 - Edge",
+            "03 - Edge camera",
+            "03 - Edge key",
+            "03 - Edge rim"
+          ],
+          "active_object": "03 - Edge",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 2,
+            "faces": 0
+          },
+          "node_groups": [
+            "03 - Edge"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": []
+          }
+        },
+        {
+          "name": "04 - Face",
+          "objects": [
+            "04 - Face",
+            "04 - Face camera",
+            "04 - Face key",
+            "04 - Face rim"
+          ],
+          "active_object": "04 - Face",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 3,
+            "faces": 1
+          },
+          "nonmanifold_edges": 3,
+          "mesh_volume": 0.0,
+          "node_groups": [
+            "04 - Face"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": []
+          }
+        },
+        {
+          "name": "05 - Solid",
+          "objects": [
+            "05 - Solid camera",
+            "05 - Solid key",
+            "05 - Solid rim",
+            "05 - Solid"
+          ],
+          "active_object": "05 - Solid",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 5,
+            "faces": 5
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.5280000534057634,
+          "node_groups": [
+            "002-point in middle"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Width",
+              "Depth",
+              "Height"
+            ]
+          }
+        },
+        {
+          "name": "06 - Boolean",
+          "objects": [
+            "06 - Boolean",
+            "06 - Boolean camera",
+            "06 - Boolean key",
+            "06 - Boolean rim"
+          ],
+          "active_object": "06 - Boolean",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 16,
+            "faces": 12
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.8090390152682831,
+          "node_groups": [
+            "06 - Boolean"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Width",
+              "Depth",
+              "Height"
+            ]
+          }
+        },
+        {
+          "name": "Intro 01 - Start",
+          "objects": [
+            "Intro 01 - Start",
+            "Intro 01 - Start camera",
+            "Intro 01 - Start key",
+            "Intro 01 - Start rim"
+          ],
+          "active_object": "Intro 01 - Start",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 8,
+            "faces": 6
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 1.7280000486373888,
+          "node_groups": [
+            "Intro 01 - Start"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": []
+          }
+        },
+        {
+          "name": "Intro 02 - Translation",
+          "objects": [
+            "Intro 02 - Translation",
+            "Intro 02 - Translation camera",
+            "Intro 02 - Translation key",
+            "Intro 02 - Translation rim"
+          ],
+          "active_object": "Intro 02 - Translation",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 8,
+            "faces": 6
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 1.7279998769760136,
+          "node_groups": [
+            "Intro 02 - Translation"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Translation"
+            ]
+          }
+        },
+        {
+          "name": "Intro 03 - Rotation",
+          "objects": [
+            "Intro 03 - Rotation",
+            "Intro 03 - Rotation camera",
+            "Intro 03 - Rotation key",
+            "Intro 03 - Rotation rim"
+          ],
+          "active_object": "Intro 03 - Rotation",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 8,
+            "faces": 6
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 1.7280000549704153,
+          "node_groups": [
+            "Intro 03 - Rotation"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Rotation"
+            ]
+          }
+        },
+        {
+          "name": "Intro 04 - Scale",
+          "objects": [
+            "Intro 04 - Scale",
+            "Intro 04 - Scale camera",
+            "Intro 04 - Scale key",
+            "Intro 04 - Scale rim"
+          ],
+          "active_object": "Intro 04 - Scale",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 8,
+            "faces": 6
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 1.65888015655518,
+          "node_groups": [
+            "Intro 04 - Scale"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Scale"
+            ]
+          }
+        },
+        {
+          "name": "Intro 05 - Order",
+          "objects": [
+            "Move then rotate",
+            "Rotate then move",
+            "Intro 05 - Order camera",
+            "Intro 05 - Order key",
+            "Intro 05 - Order rim"
+          ],
+          "active_object": "Move then rotate",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 8,
+            "faces": 6
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.5200001589730144,
+          "node_groups": [
+            "05 - Order"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": []
+          }
+        },
+        {
+          "name": "Intro 06 - Union",
+          "objects": [
+            "Intro 06 - Union",
+            "Intro 06 - Union camera",
+            "Intro 06 - Union key",
+            "Intro 06 - Union rim"
+          ],
+          "active_object": "Intro 06 - Union",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 174,
+            "faces": 89
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 10.162309671880397,
+          "node_groups": [
+            "Intro 06 - Union"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Block Size",
+              "Cylinder Radius",
+              "Cylinder Depth",
+              "Cylinder Position"
+            ]
+          }
+        },
+        {
+          "name": "Intro 07 - Difference",
+          "objects": [
+            "Intro 07 - Difference",
+            "Intro 07 - Difference camera",
+            "Intro 07 - Difference key",
+            "Intro 07 - Difference rim"
+          ],
+          "active_object": "Intro 07 - Difference",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 78,
+            "faces": 41
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 5.580840544638443,
+          "node_groups": [
+            "Intro 07 - Difference"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Block Size",
+              "Cylinder Radius",
+              "Cylinder Depth",
+              "Cylinder Position"
+            ]
+          }
+        },
+        {
+          "name": "Intro 08 - Intersect",
+          "objects": [
+            "Intro 08 - Intersect",
+            "Intro 08 - Intersect camera",
+            "Intro 08 - Intersect key",
+            "Intro 08 - Intersect rim"
+          ],
+          "active_object": "Intro 08 - Intersect",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 70,
+            "faces": 37
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 2.4191595745708474,
+          "node_groups": [
+            "Intro 08 - Intersect"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Block Size",
+              "Cylinder Radius",
+              "Cylinder Depth",
+              "Cylinder Position"
+            ]
+          }
+        },
+        {
+          "name": "Intro 09 - Massing exercise",
+          "objects": [
+            "Intro 09 - Massing exercise",
+            "Intro 09 - Massing exercise camera",
+            "Intro 09 - Massing exercise key",
+            "Intro 09 - Massing exercise rim"
+          ],
+          "active_object": "Intro 09 - Massing exercise",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 16,
+            "faces": 10
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 5.792826821541974,
+          "node_groups": [
+            "Intro 09 - Massing exercise"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Block Size",
+              "Opening Scale",
+              "Opening Rotation",
+              "Opening Position"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S03",
+      "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
+      "sha256": "477d8260d1dfa2293ad99328d82edd447ec26ca2abae8a0d5daf815cd15088f3",
+      "scenes": [
+        {
+          "name": "01 - Linear loop",
+          "objects": [
+            "01 - Linear loop",
+            "01 - Linear loop camera",
+            "01 - Linear loop key",
+            "01 - Linear loop rim"
+          ],
+          "active_object": "01 - Linear loop",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 40,
+            "faces": 40
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.14634670241514788,
+          "node_groups": [
+            "01 - Linear loop"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Spacing"
+            ]
+          }
+        },
+        {
+          "name": "02 - Nested grid",
+          "objects": [
+            "02 - Nested grid",
+            "02 - Nested grid camera",
+            "02 - Nested grid key",
+            "02 - Nested grid rim"
+          ],
+          "active_object": "02 - Nested grid",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 125,
+            "faces": 125
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.4573332904974635,
+          "node_groups": [
+            "02 - Nested grid"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Rows",
+              "Columns",
+              "Spacing"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S04",
+      "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+      "sha256": "3828be287ce0325830c31cdb35d88448f1e660853934528ab655196fdc71e6c8",
+      "scenes": [
+        {
+          "name": "03 - 3D array",
+          "objects": [
+            "03 - 3D array",
+            "03 - 3D array camera",
+            "03 - 3D array key",
+            "03 - 3D array rim"
+          ],
+          "active_object": "03 - 3D array",
+          "geometry": {
+            "points": 0,
+            "instances": 4,
+            "curves": 0,
+            "vertices": 0,
+            "faces": 0
+          },
+          "node_groups": [
+            "03 - 3D array"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Spacing",
+              "Cube Size"
+            ]
+          }
+        },
+        {
+          "name": "04 - Hexagonal array",
+          "objects": [
+            "04 - Hexagonal array",
+            "04 - Hexagonal array camera",
+            "04 - Hexagonal array key",
+            "04 - Hexagonal array rim"
+          ],
+          "active_object": "04 - Hexagonal array",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 125,
+            "faces": 125
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.45733326323827517,
+          "node_groups": [
+            "04 - Hexagonal array"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Rows",
+              "Columns",
+              "Spacing"
+            ]
+          }
+        },
+        {
+          "name": "05 - Radial array",
+          "objects": [
+            "05 - Radial array",
+            "05 - Radial array camera",
+            "05 - Radial array key",
+            "05 - Radial array rim"
+          ],
+          "active_object": "05 - Radial array",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 55,
+            "faces": 55
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.201226635746957,
+          "node_groups": [
+            "05 - Radial array"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Radius"
+            ]
+          }
+        },
+        {
+          "name": "06 - If and range",
+          "objects": [
+            "06 - If and range",
+            "06 - If and range camera",
+            "06 - If and range key",
+            "06 - If and range rim"
+          ],
+          "active_object": "06 - If and range",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 605,
+            "faces": 605
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 2.213493468694686,
+          "node_groups": [
+            "06 - If and range"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Start",
+              "End",
+              "Height"
+            ]
+          }
+        },
+        {
+          "name": "07 - Sine curve",
+          "objects": [
+            "07 - Sine curve",
+            "07 - Sine curve camera",
+            "07 - Sine curve key",
+            "07 - Sine curve rim"
+          ],
+          "active_object": "07 - Sine curve",
+          "geometry": {
+            "points": 0,
+            "instances": 20,
+            "curves": 0,
+            "vertices": 0,
+            "faces": 0
+          },
+          "node_groups": [
+            "07 - Sine curve"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Amplitude",
+              "Frequency",
+              "Phase",
+              "Amplitude Y",
+              "Frequency Y",
+              "Phase Y"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S05",
+      "file": "files/blender/04-attractors/Attractors.blend",
+      "sha256": "3b910aa7c9ef2529ac56ca392986d10cfad19d6580c3b5e03a03a8a19949f8fd",
+      "scenes": [
+        {
+          "name": "01 - Read the field",
+          "objects": [
+            "01 - Read the field",
+            "Attractor - move me",
+            "01 - Read the field camera",
+            "01 - Read the field key",
+            "01 - Read the field rim"
+          ],
+          "active_object": "01 - Read the field",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 1681,
+            "faces": 1600
+          },
+          "nonmanifold_edges": 160,
+          "mesh_volume": 0.0,
+          "node_groups": [
+            "01 - Read the field"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Attractor",
+              "Distance Limit"
+            ]
+          }
+        },
+        {
+          "name": "02 - One point",
+          "objects": [
+            "02 - One point",
+            "Attractor - move me.001",
+            "02 - One point camera",
+            "02 - One point key",
+            "02 - One point rim"
+          ],
+          "active_object": "02 - One point",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 1445,
+            "faces": 1445
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 4.829407612605742,
+          "node_groups": [
+            "02 - One point"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Attractor",
+              "Distance Limit",
+              "Near Scale",
+              "Far Scale"
+            ]
+          }
+        },
+        {
+          "name": "03 - Multiple points",
+          "objects": [
+            "03 - Multiple points",
+            "03 - Multiple points camera",
+            "03 - Multiple points key",
+            "03 - Multiple points rim",
+            "Attractor A - move me",
+            "Attractor B - move me",
+            "Attractor C - move me"
+          ],
+          "active_object": "03 - Multiple points",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 1445,
+            "faces": 1445
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 8.734280841094973,
+          "node_groups": [
+            "03 - Multiple points"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Attractors",
+              "Distance Limit",
+              "Near Scale",
+              "Far Scale"
+            ]
+          }
+        },
+        {
+          "name": "04 - Curve attractor",
+          "objects": [
+            "04 - Curve attractor",
+            "Attractor curve - edit or move me",
+            "04 - Curve attractor camera",
+            "04 - Curve attractor key",
+            "04 - Curve attractor rim"
+          ],
+          "active_object": "04 - Curve attractor",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 1445,
+            "faces": 1445
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 9.544525136401676,
+          "node_groups": [
+            "04 - Curve attractor"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Attractor",
+              "Distance Limit",
+              "Near Scale",
+              "Far Scale"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S06",
+      "file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
+      "sha256": "f5303d8f0592f9ce243bb768104fa6f3e28f3b7ac646bd22e08d339ac8a8fdb3",
+      "scenes": [
+        {
+          "name": "01 - Tessellation",
+          "objects": [
+            "01 - Tessellation",
+            "01 - Tessellation camera",
+            "01 - Tessellation key",
+            "01 - Tessellation rim"
+          ],
+          "active_object": "01 - Tessellation",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 288,
+            "faces": 216
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 2.764800020599362,
+          "node_groups": [
+            "01 - Tessellation"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Cell Size",
+              "Fill",
+              "Thickness"
+            ]
+          }
+        },
+        {
+          "name": "02 - Lattice",
+          "objects": [
+            "02 - Lattice",
+            "02 - Lattice camera",
+            "02 - Lattice key",
+            "02 - Lattice rim"
+          ],
+          "active_object": "02 - Lattice",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 1680,
+            "faces": 1050
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.6586700973655266,
+          "node_groups": [
+            "02 - Lattice"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Layer Height",
+              "Strut Radius"
+            ]
+          }
+        },
+        {
+          "name": "03 - Attractor lattice",
+          "objects": [
+            "03 - Attractor lattice",
+            "Attractor - move me",
+            "03 - Attractor lattice camera",
+            "03 - Attractor lattice key",
+            "03 - Attractor lattice rim"
+          ],
+          "active_object": "03 - Attractor lattice",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 1680,
+            "faces": 1050
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.6590931798005265,
+          "node_groups": [
+            "03 - Attractor lattice"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Strut Radius",
+              "Attractor",
+              "Distance Limit",
+              "Near Scale",
+              "Far Scale"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S07",
+      "file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
+      "sha256": "65171f739bbe973dc812b0676ddec3f68dafefe34deae4f8b8e292b535ec5660",
+      "scenes": [
+        {
+          "name": "01 - Import points",
+          "objects": [
+            "01 - Import points",
+            "01 - Import points camera",
+            "01 - Import points key",
+            "01 - Import points rim"
+          ],
+          "active_object": "01 - Import points",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 21672,
+            "faces": 36120
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.071565477890283,
+          "node_groups": [
+            "01 - Import points"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Display Radius"
+            ]
+          }
+        },
+        {
+          "name": "02 - Analyze points",
+          "objects": [
+            "02 - Analyze points",
+            "Attractor - move me",
+            "02 - Analyze points camera",
+            "02 - Analyze points key",
+            "02 - Analyze points rim"
+          ],
+          "active_object": "02 - Analyze points",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 11676,
+            "faces": 19460
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.06662580425460483,
+          "node_groups": [
+            "02 - Analyze points"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Attractor",
+              "Distance Limit",
+              "Display Radius"
+            ]
+          }
+        },
+        {
+          "name": "03 - Points to volume",
+          "objects": [
+            "03 - Points to volume",
+            "03 - Points to volume camera",
+            "03 - Points to volume key",
+            "03 - Points to volume rim"
+          ],
+          "active_object": "03 - Points to volume",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 9558,
+            "faces": 9546
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 14.983281459369966,
+          "node_groups": [
+            "03 - Points to volume"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Influence Radius",
+              "Voxel Amount",
+              "Surface Threshold"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [
+        {
+          "path": "//teaching-courtyard.ply",
+          "exists": true
+        },
+        {
+          "path": "//teaching-courtyard.ply",
+          "exists": true
+        },
+        {
+          "path": "//teaching-courtyard.ply",
+          "exists": true
+        }
+      ],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S08",
+      "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
+      "sha256": "8cdf8bddb1570cf4a951bcd1df7f69b2b0b524ade593cdbfb190df3612ef476d",
+      "scenes": [
+        {
+          "name": "01 - Mesh to SDF",
+          "objects": [
+            "01 - Mesh to SDF",
+            "01 - Mesh to SDF camera",
+            "01 - Mesh to SDF key",
+            "01 - Mesh to SDF rim"
+          ],
+          "active_object": "01 - Mesh to SDF",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 1712,
+            "faces": 1710
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 7.6805306314175725,
+          "node_groups": [
+            "01 - Mesh to SDF"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Size",
+              "Voxel Size"
+            ]
+          }
+        },
+        {
+          "name": "02 - Signed distance",
+          "objects": [
+            "02 - Signed distance",
+            "02 - Signed distance camera",
+            "02 - Signed distance key",
+            "02 - Signed distance rim"
+          ],
+          "active_object": "02 - Signed distance",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 4784,
+            "faces": 4782
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 7.205817139936251,
+          "node_groups": [
+            "02 - Signed distance"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Radius",
+              "Resolution"
+            ]
+          }
+        },
+        {
+          "name": "03 - SDF Boolean",
+          "objects": [
+            "03 - SDF Boolean",
+            "03 - SDF Boolean camera",
+            "03 - SDF Boolean key",
+            "03 - SDF Boolean rim"
+          ],
+          "active_object": "03 - SDF Boolean",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 4664,
+            "faces": 4662
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 4.7334199197721425,
+          "node_groups": [
+            "03 - SDF Boolean"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Voxel Size",
+              "Cutter Radius",
+              "Cutter Position"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S09",
+      "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
+      "sha256": "9362d560c093ad9de345a680872759f038627ad9b59a3c1d2fe0ebfac91de0f7",
+      "scenes": [
+        {
+          "name": "04 - Noise field",
+          "objects": [
+            "04 - Noise field",
+            "04 - Noise field camera",
+            "04 - Noise field key",
+            "04 - Noise field rim"
+          ],
+          "active_object": "04 - Noise field",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 5030,
+            "faces": 5028
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 7.22305441761552,
+          "node_groups": [
+            "04 - Noise field"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Radius",
+              "Resolution",
+              "Noise Strength",
+              "Noise Scale"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S10",
+      "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
+      "sha256": "a9ecc05dda74197e9cc9ba2bbcefd788f3b662aaeeeada8d2d0adc26afe4acc4",
+      "scenes": [
+        {
+          "name": "01 - One contour",
+          "objects": [
+            "01 - One contour",
+            "01 - One contour camera",
+            "01 - One contour key",
+            "01 - One contour rim"
+          ],
+          "active_object": "01 - One contour",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 1224,
+            "faces": 1224
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.003078021488523165,
+          "node_groups": [
+            "01 - One contour"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Height"
+            ]
+          }
+        },
+        {
+          "name": "02 - Contour stack",
+          "objects": [
+            "02 - Contour stack",
+            "02 - Contour stack camera",
+            "02 - Contour stack key",
+            "02 - Contour stack rim"
+          ],
+          "active_object": "02 - Contour stack",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 10464,
+            "faces": 10464
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 0.02430739988078143,
+          "node_groups": [
+            "02 - Contour stack"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Start Height",
+              "Spacing"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S11",
+      "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
+      "sha256": "7a3dc1bd490d3357ae1f5726cc8f31d2e6179d2d4dae2b8a5df9936495c15b5c",
+      "scenes": [
+        {
+          "name": "03 - Section parts",
+          "objects": [
+            "03 - Section parts",
+            "03 - Section parts camera",
+            "03 - Section parts key",
+            "03 - Section parts rim"
+          ],
+          "active_object": "03 - Section parts",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 2616,
+            "faces": 3888
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 1.8802715555940674,
+          "node_groups": [
+            "03 - Section parts"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Start Height",
+              "Spacing",
+              "Thickness"
+            ]
+          }
+        },
+        {
+          "name": "04 - Laid out parts",
+          "objects": [
+            "04 - Laid out parts",
+            "04 - Laid out parts camera",
+            "04 - Laid out parts key",
+            "04 - Laid out parts rim"
+          ],
+          "active_object": "04 - Laid out parts",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 2616,
+            "faces": 3888
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 1.8802714603243156,
+          "node_groups": [
+            "04 - Laid out parts"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Start Height",
+              "Spacing",
+              "Thickness",
+              "Columns",
+              "Pitch"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    },
+    {
+      "session": "S12",
+      "file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
+      "sha256": "d974c5065d68b468ea5f1176f705e3ae0bdb02d2e11cae7ec4e5875c782a476d",
+      "scenes": [
+        {
+          "name": "01 - Print orientation",
+          "objects": [
+            "01 - Print orientation",
+            "01 - Print orientation camera",
+            "01 - Print orientation key",
+            "01 - Print orientation rim"
+          ],
+          "active_object": "01 - Print orientation",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 16,
+            "faces": 10
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 26531.99515485787,
+          "node_groups": [
+            "01 - Print orientation"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Opening Width"
+            ]
+          }
+        },
+        {
+          "name": "02 - Fit coupon",
+          "objects": [
+            "02 - Fit coupon",
+            "02 - Fit coupon camera",
+            "02 - Fit coupon key",
+            "02 - Fit coupon rim"
+          ],
+          "active_object": "02 - Fit coupon",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 212,
+            "faces": 108
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 787.3295062246291,
+          "node_groups": [
+            "02 - Fit coupon"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Radial Allowance"
+            ]
+          }
+        },
+        {
+          "name": "03 - Modular print",
+          "objects": [
+            "03 - Modular print",
+            "03 - Modular print camera",
+            "03 - Modular print key",
+            "03 - Modular print rim"
+          ],
+          "active_object": "03 - Modular print",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 1056,
+            "faces": 576
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 9287.619369777269,
+          "node_groups": [
+            "03 - Modular print"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Thickness",
+              "Base Aperture",
+              "Fit Clearance",
+              "Pitch"
+            ]
+          }
+        },
+        {
+          "name": "04 - Registered sections",
+          "objects": [
+            "04 - Registered sections",
+            "04 - Registered sections camera",
+            "04 - Registered sections key",
+            "04 - Registered sections rim"
+          ],
+          "active_object": "04 - Registered sections",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 4622,
+            "faces": 5348
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 96452.00975203044,
+          "node_groups": [
+            "04 - Registered sections"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Sheet Thickness",
+              "Hole Radius"
+            ]
+          }
+        },
+        {
+          "name": "05 - Cutting layout",
+          "objects": [
+            "05 - Cutting layout",
+            "05 - Cutting layout camera",
+            "05 - Cutting layout key",
+            "05 - Cutting layout rim"
+          ],
+          "active_object": "05 - Cutting layout",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 4622,
+            "faces": 5348
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 96452.01141656835,
+          "node_groups": [
+            "05 - Cutting layout"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Count",
+              "Sheet Thickness",
+              "Hole Radius",
+              "Columns",
+              "Pitch"
+            ]
+          }
+        },
+        {
+          "name": "06 - Spacer rings",
+          "objects": [
+            "06 - Spacer rings",
+            "06 - Spacer rings camera",
+            "06 - Spacer rings key",
+            "06 - Spacer rings rim"
+          ],
+          "active_object": "06 - Spacer rings",
+          "geometry": {
+            "points": 0,
+            "instances": 0,
+            "curves": 0,
+            "vertices": 2816,
+            "faces": 1496
+          },
+          "nonmanifold_edges": 0,
+          "mesh_volume": 1293.2608899412444,
+          "node_groups": [
+            "06 - Spacer rings"
+          ],
+          "exposed_inputs": {
+            "GeometryNodes": [
+              "Section Count",
+              "Sheet Thickness",
+              "Hole Radius"
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "dependencies": [],
+      "undefined_nodes": [],
+      "external_libraries": [],
+      "source_unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,676 @@
+[
+  {
+    "file": "slides/ARC3133_Class01.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "CLASS 01  /  AUG 25\nARC 3133\nVISUAL IDENTITY\nHOW THE WORK WILL LOOK, BEFORE THERE IS ANY WORK\nNOTHING DUE\nGSM ISSUED TODAY"
+      },
+      {
+        "slide": 2,
+        "text": "WHAT THIS COURSE IS\nComputational methods for architectural representation and digital fabrication.\nWHAT YOU WILL DO\nSet your own graphic standards.\nDescribe geometry with parameters.\nRepeat it, and vary it.\nWork with sampled and volumetric data.\nTurn all of it into drawings and physical parts.\nWHAT CARRIES THROUGH\nVisual quality stays central all semester — composition, hierarchy, line weight, colour, rendering, photography.\n \nA working graph supports those decisions. It does not replace them.\nEACH PROJECT CARRIES ITS GEOMETRY INTO THE NEXT. YOU NEVER START FROM AN UNRELATED OBJECT."
+      },
+      {
+        "slide": 3,
+        "text": "THREE PARADIGMS\nEach one a strict extension of the one before it.\n01   PROCEDURAL\nForm as a fixed sequence of operations. You define the steps.\nOutput is expected.\n02   PARAMETRIC\nRelationships between inputs and form. You define the rules of variation.\nOutput is a family — you know the range, not each member.\n03   GENERATIVE\nA rule applied to its own output, repeatedly. You define the rule and the starting state.\nOutput is unknown, within a spectrum you set.\nA procedure is a fixed recipe. A parametric system is a recipe with dials. A generative system reads its own output and decides what to do next."
+      },
+      {
+        "slide": 4,
+        "text": "FOUR PROJECTS\nTen short assignments, assembled into four. Nothing is graded twice.\nP1\nGeometry — from operations to construction\nCSG massing sequence  →  Panel from scratch  →  First print\n21%\nP2\nRepetition and response — arrays to attractors\nArrays and conditional control  →  Attractor field study\n14%\nP3\nSpatial arrays and assembly\n3D array and connection study  →  Modular print assembly\n14%\nP4\nSamples, fields and sections\nPoint-cloud analysis  →  Volume, section and light  →  Sectional fabrication\n21%\nYou do the short assignment, then revise it inside its project. The project itself adds no second grade — the revision is what the booklet rewards."
+      },
+      {
+        "slide": 5,
+        "text": "HOW A CLASS RUNS\nThe same four things, every week.\n01\nREVIEW OF WORK\nWe open the files. Bring the editable file, not a screenshot of it.\n02\nDEMONSTRATION\nA short tutorial or discussion of the week's unit.\n03\nGUIDED PRACTICE\nYou build the small exercise while help is in the room.\n04\nWORKING CRITIQUE\nWe look at what is on screen and say what it needs.\nYOU WILL BE ASKED TO CHANGE ONE PARAMETER AND PREDICT WHAT HAPPENS. FROM THE FIRST REVIEW."
+      },
+      {
+        "slide": 6,
+        "text": "WHY THIS COMES FIRST\nEvery sheet you make for the next fifteen weeks uses the system you build now.\nA DRAWING IS READ BEFORE IT IS UNDERSTOOD\nHierarchy is what makes an architectural drawing legible — not detail, and not effort.\n \nLine weight, spacing and restraint do more work than anything you will model this semester. A good system makes weak work readable. A bad one hides good work.\nWHAT A SYSTEM IS\nPage size and margins.\nA column grid.\nA type hierarchy — three levels, no more.\nA line-weight set — four weights.\nA palette of three colours, and the black is one of them.\nThree typefaces is the ceiling. Two is better.\nDECIDE IT ONCE, APPLY IT EVERY WEEK, REVISE IT AT THE MIDTERM. IT IS NOT REMADE PER SHEET."
+      },
+      {
+        "slide": 7,
+        "text": "THREE MANUALS WORTH STEALING FROM\nThis document type has a history. Each one is a page grid, a type hierarchy, and a rule for every case that comes up.\nAdd: a spread from the NYCTA manual - a signage case with its dimensioned rule.\nNYCTA GRAPHICS STANDARDS\nMassimo Vignelli and Bob Noorda, Unimark - 1970 - archive.org/details/nycta-gs-manual\nA binder of cases. Every sign in the New York subway, drawn at size, with the rule beside it. The manual is the design - the signs are what falls out of it.\nAdd: a page from the NASA manual - the mark with its clearance and placement rules.\nNASA GRAPHICS STANDARDS\nRichard Danne and Bruce Blackburn - 1975 - archive.org/details/NASA_Graphics_Standards_Manual\nOne mark, and a hundred pages of where it is allowed to go. What is being designed is the consistency, not the logotype.\nAdd: the Munich 1972 pictogram sheet, and the construction grid behind one figure.\nMUNICH 1972\nOtl Aicher - 1967 to 1972 - otlaicher.de, 'the rainbow games'\nA grid, a fixed set of angles, and one component varied across a whole field of pictograms. You will build a system with this exact structure in Week 4.\nYOURS IS FOUR PAGES, NOT THREE HUNDRED. THE PRINCIPLE IS IDENTICAL: DECIDE ONCE, WRITE IT DOWN, APPLY IT EVERY TIME.\nAll three are online in full, linked on the U01 lesson page and under Reading. Look at how much of each one is rules rather than pictures."
+      },
+      {
+        "slide": 8,
+        "text": "A VISUAL IDENTITY IS A PARAMETER SET\nA short list of values, decided once. Every sheet this semester reads them.\nPAGES     = 4                # the whole manual\nSHEET     = (17, 11)         # inches\nMARGIN    = 0.75\nCOLUMNS   = 6\n \nTYPEFACES = 2                # 3 is the ceiling\nTYPE      = {\"title\": 24, \"heading\": 14, \"body\": 9}\nWEIGHTS   = [0.13, 0.35, 0.70]     # thin, medium, heavy\nCOLORS    = 3                # the black counts as one\nPALETTE   = [\"#000000\", \"#FFFDF7\", \"#C6F035\"]\n \n# every sheet this semester reads these values\nWHAT IT MAPS ONTO\ncomposition\ngrid\nhierarchy\ntypography\nline weight\npalette\nA BINDER OF RULES AND THIS SHORT LIST ARE THE SAME DOCUMENT, AT DIFFERENT SCALES."
+      },
+      {
+        "slide": 9,
+        "text": "ISSUED TODAY\nGSM — GRAPHIC STANDARDS MANUAL\nDUE WEEK 8 — Oct 13   /   7%\nBuild the graphic system you will communicate every later project with. It is the only assignment in the course that does not require a computational graph — it is judged purely on whether the system works and whether you used it.\nDECIDE\nTHE SYSTEM\nGrid, margins, type, line weights, colour. Written down, not improvised.\nTEST\nON REAL WORK\nA diagram and a rendered image, made with the rules you just set.\nREVISE\nALL SEMESTER\nDue at the midterm, revised again for the booklet."
+      },
+      {
+        "slide": 10,
+        "text": "REQUIREMENTS — GSM\nAssessed on visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%.\n01\nFour pages, and no more. The manual is the graphic system itself, shown in use: rules with a tested application beside each one, not a description of intentions.\n02\nOne page per decision: (1) the template — sheet size, margins, grid and columns, with the placement rules; (2) typography and hierarchy; (3) color and line weights; (4) annotation, captions and image treatment, demonstrated on a real sheet from this course.\n03\nUse no more than three typefaces, three colors in total — black, the paper and every accent count toward the three — four hierarchy levels and four line weights.\n04\nStudy the three manuals shown in Class 01 — NYCTA, NASA and Munich 1972 — and name one rule you took from them. All three are linked in full under reading and documentation.\n05\nApply the manual to every sheet; revise it in response to actual use and critique.\nCHECKPOINT · WEEK 2 — Sep 1 — Bring a sample sheet for an ungraded identity check."
+      },
+      {
+        "slide": 11,
+        "text": "NOW — YOUR FIRST SHEET\nRest of the session: set the page up and put something on it.\n✓\nPage size set to 17 × 11 inches, with margins and a column grid\n✓\nType hierarchy chosen — three levels, and a reason for each\n✓\nA line-weight set, from hairline to heaviest — four weights\n✓\nThree colours you can defend, black included, that survive being printed\n✓\nOne sample sheet, with one decision about hierarchy you can explain\nLEAVE WITH A SHEET. IT DOES NOT HAVE TO BE RIGHT YET."
+      },
+      {
+        "slide": 12,
+        "text": "BEFORE NEXT CLASS\nWATCH\nU02 — Transformations and CSG. The node editor, parameters, and the three Boolean operations. Check the unit page; watch a recording only once a link is posted.\nINSTALL\nBlender, and set up a project folder you can open from a clean machine. File organization is part of the workflow, not an afterthought.\nBRING\nYour sample sheet and the file it came from.\nLOOK\nThree architectural drawings you think are well made. Be ready to say what makes each one readable."
+      }
+    ],
+    "pdf_exists": true,
+    "pdf_pages": 12,
+    "pdf_text": [
+      "CLASS 01  /  AUG 25\nARC 3133\nVISUAL IDENTITY\nHOW THE WORK WILL LOOK, BEFORE THERE IS ANY WORK NOTHING DUE\nGSM ISSUED TODAY",
+      "WHAT THIS COURSE IS\nComputational methods for architectural representation and digital fabrication.\nWHAT YOU WILL DO\nSet your own graphic standards.\nDescribe geometry with parameters.\nRepeat it, and vary it.\nWork with sampled and volumetric data.\nTurn all of it into drawings and physical parts.\nWHAT CARRIES THROUGH\nVisual quality stays central all semester — composition, \nhierarchy, line weight, colour, rendering, photography.\n \nA working graph supports those decisions. It does not replace \nthem.\nEACH PROJECT CARRIES ITS GEOMETRY INTO THE NEXT. YOU NEVER START FROM AN UNRELATED OBJECT.",
+      "THREE PARADIGMS\nEach one a strict extension of the one before it.\n01   PROCEDURAL\nForm as a fixed sequence of operations. \nYou define the steps.\nOutput is expected.\n02   PARAMETRIC\nRelationships between inputs and form. \nYou define the rules of variation.\nOutput is a family — you know the range, not \neach member.\n03   GENERATIVE\nA rule applied to its own output, \nrepeatedly. You define the rule and the \nstarting state.\nOutput is unknown, within a spectrum you \nset.\nA procedure is a fixed recipe. A parametric system is a recipe with dials. A generative system reads its own output and decides what to \ndo next.",
+      "FOUR PROJECTS\nTen short assignments, assembled into four. Nothing is graded twice.\nP1\nGeometry — from operations to construction\nCSG massing sequence  →  Panel from scratch  →  First print 21%\nP2\nRepetition and response — arrays to attractors\nArrays and conditional control  →  Attractor field study 14%\nP3\nSpatial arrays and assembly\n3D array and connection study  →  Modular print assembly 14%\nP4\nSamples, fields and sections\nPoint-cloud analysis  →  Volume, section and light  →  Sectional fabrication 21%\nYou do the short assignment, then revise it inside its project. The project itself adds no second grade — the revision is what the booklet \nrewards.",
+      "HOW A CLASS RUNS\nThe same four things, every week.\n01\nREVIEW OF WORK\nWe open the files. Bring the editable file, not a screenshot of it.\n02\nDEMONSTRATION\nA short tutorial or discussion of the week's unit.\n03\nGUIDED PRACTICE\nYou build the small exercise while help is in the room.\n04\nWORKING CRITIQUE\nWe look at what is on screen and say what it needs.\nYOU WILL BE ASKED TO CHANGE ONE PARAMETER AND PREDICT WHAT HAPPENS. FROM THE FIRST REVIEW.",
+      "WHY THIS COMES FIRST\nEvery sheet you make for the next fifteen weeks uses the system you build now.\nA DRAWING IS READ BEFORE IT IS UNDERSTOOD\nHierarchy is what makes an architectural drawing legible — not \ndetail, and not effort.\n \nLine weight, spacing and restraint do more work than anything you \nwill model this semester. A good system makes weak work \nreadable. A bad one hides good work.\nWHAT A SYSTEM IS\nPage size and margins.\nA column grid.\nA type hierarchy — three levels, no more.\nA line-weight set — four weights.\nA palette of three colours, and the black is one of them.\nThree typefaces is the ceiling. Two is better.\nDECIDE IT ONCE, APPLY IT EVERY WEEK, REVISE IT AT THE MIDTERM. IT IS NOT REMADE PER SHEET.",
+      "THREE MANUALS WORTH STEALING FROM\nThis document type has a history. Each one is a page grid, a type hierarchy, and a rule for every case that comes up.\nAdd: a spread from the NYCTA manual - a signage \ncase with its dimensioned rule.\nNYCTA GRAPHICS STANDARDS\nMassimo Vignelli and Bob Noorda, Unimark - 1970 - \narchive.org/details/nycta-gs-manual\nA binder of cases. Every sign in the New York subway, \ndrawn at size, with the rule beside it. The manual is \nthe design - the signs are what falls out of it.\nAdd: a page from the NASA manual - the mark \nwith its clearance and placement rules.\nNASA GRAPHICS STANDARDS\nRichard Danne and Bruce Blackburn - 1975 - \narchive.org/details/NASA_Graphics_Standards_Manual\nOne mark, and a hundred pages of where it is \nallowed to go. What is being designed is the \nconsistency, not the logotype.\nAdd: the Munich 1972 pictogram sheet, and the \nconstruction grid behind one figure.\nMUNICH 1972\nOtl Aicher - 1967 to 1972 - otlaicher.de, 'the rainbow games'\nA grid, a fixed set of angles, and one component \nvaried across a whole field of pictograms. You will \nbuild a system with this exact structure in Week 4.\nYOURS IS FOUR PAGES, NOT THREE HUNDRED. THE PRINCIPLE IS IDENTICAL: DECIDE ONCE, WRITE IT DOWN, APPLY IT EVERY TIME.\nAll three are online in full, linked on the U01 lesson page and under Reading. Look at how much of each one is rules rather than pictures.",
+      "A VISUAL IDENTITY IS A PARAMETER SET\nA short list of values, decided once. Every sheet this semester reads them.\nPAGES     = 4                # the whole manual\nSHEET     = (17, 11)         # inches\nMARGIN    = 0.75\nCOLUMNS   = 6\n \nTYPEFACES = 2                # 3 is the ceiling\nTYPE      = {\"title\": 24, \"heading\": 14, \"body\": 9}\nWEIGHTS   = [0.13, 0.35, 0.70]     # thin, medium, heavy\nCOLORS    = 3                # the black counts as one\nPALETTE   = [\"#000000\", \"#FFFDF7\", \"#C6F035\"]\n \n# every sheet this semester reads these values\nWHAT IT MAPS ONTO\ncomposition\ngrid\nhierarchy\ntypography\nline weight\npalette\nA BINDER OF RULES AND THIS SHORT LIST ARE THE SAME DOCUMENT, AT DIFFERENT SCALES.",
+      "ISSUED TODAY\nGSM — GRAPHIC STANDARDS MANUAL\nDUE WEEK 8 — Oct 13   /   7%\nBuild the graphic system you will communicate every later project with. It is the only assignment in the course that does not require a \ncomputational graph — it is judged purely on whether the system works and whether you used it.\nDECIDE\nTHE SYSTEM\nGrid, margins, type, line weights, colour. \nWritten down, not improvised.\nTEST\nON REAL WORK\nA diagram and a rendered image, made with \nthe rules you just set.\nREVISE\nALL SEMESTER\nDue at the midterm, revised again for the \nbooklet.",
+      "REQUIREMENTS — GSM\nAssessed on visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%.\n01\nFour pages, and no more. The manual is the graphic system itself, shown in use: rules with a tested application beside each one, not a \ndescription of intentions.\n02\nOne page per decision: (1) the template — sheet size, margins, grid and columns, with the placement rules; (2) typography and hierarchy; \n(3) color and line weights; (4) annotation, captions and image treatment, demonstrated on a real sheet from this course.\n03\nUse no more than three typefaces, three colors in total — black, the paper and every accent count toward the three — four hierarchy levels \nand four line weights.\n04\nStudy the three manuals shown in Class 01 — NYCTA, NASA and Munich 1972 — and name one rule you took from them. All three are linked \nin full under reading and documentation.\n05\n Apply the manual to every sheet; revise it in response to actual use and critique.\nCHECKPOINT · WEEK 2 — Sep 1 — Bring a sample sheet for an ungraded identity check.",
+      "NOW — YOUR FIRST SHEET\nRest of the session: set the page up and put something on it.\n✓\n Page size set to 17 × 11 inches, with margins and a column grid\n✓\n Type hierarchy chosen — three levels, and a reason for each\n✓\n A line-weight set, from hairline to heaviest — four weights\n✓\n Three colours you can defend, black included, that survive being printed\n✓\n One sample sheet, with one decision about hierarchy you can explain\nLEAVE WITH A SHEET. IT DOES NOT HAVE TO BE RIGHT YET.",
+      "BEFORE NEXT CLASS\nWATCH\nU02 — Transformations and CSG. The node editor, parameters, and the three Boolean operations. Check the unit page; \nwatch a recording only once a link is posted.\nINSTALL\nBlender, and set up a project folder you can open from a clean machine. File organization is part of the workflow, not an \nafterthought.\nBRING\nYour sample sheet and the file it came from.\nLOOK\nThree architectural drawings you think are well made. Be ready to say what makes each one readable."
+    ],
+    "page_count_matches": true
+  },
+  {
+    "file": "slides/ARC3133_Class01_CKS.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "\nARC 3133\n\n\nARCHITECTURAL\nVISUALIZATION\nMETHODS 1\n\n\nCOMPUTATIONAL VISUALIZATION + DIGITAL FABRICATION\nFALL 2026   \n|\n   \nWEDNESDAY 9 AM   | CHRISTINE KHOURI SADER\t\t\t\t\t\t\t\t\tHEAD COORDINATOR: \nLUIS PACHECO ALCALA\nCSADER2015@FAU.EDU"
+      },
+      {
+        "slide": 2,
+        "text": "\nARC 3133\n\n\njoin our Microsoft Teams group using the following code: 796zq4x \n\n\nCOMPUTATIONAL VISUALIZATION + DIGITAL FABRICATION\nFALL 2026   \n|\n   \nWEDNESDAY 9 AM   | CHRISTINE KHOURI SADER\t\t\t\t\t\t\t\t\tHEAD COORDINATOR: \nLUIS PACHECO ALCALA\nCSADER2015@FAU.EDU"
+      },
+      {
+        "slide": 3,
+        "text": "\nARCHITECTURAL \nVISUALIZATION\n\n\n1\nSYLLABUS\nSIGN IN SHEET\nCLASS SCHEDULE + ASSIGNMENTS\n\n\n\n2\n\n\n3"
+      },
+      {
+        "slide": 4,
+        "text": "\nSTRUCTURE OF CLASS\n\n\n1\nTUTORIAL WILL BE HANDED THE PRIOR CLASS\nPIN UP OR 1-1 CRITIQUE\nLECTURE/TUTORIAL TIME - QUESTIONS AND \nTROUBLESHOOT\nPRESENT NEXT ASSIGNMENT IF APPLICABLE\nWORK TIME\n\n\n2\n\n\n3\n\n\n4"
+      },
+      {
+        "slide": 5,
+        "text": "\nVISUAL SCRIPTING\nBLENDER\nGRASSHOPPER IN RHINO\n\n\n\n"
+      },
+      {
+        "slide": 6,
+        "text": ""
+      },
+      {
+        "slide": 7,
+        "text": "\n\nTHE DESIGNER IS NO LONGER MAKING CHOICES ABOUT A SINGLE, FINAL OBJECT \n,\n BUT CREATING A MATRIX \nMAKING \nAN ENTIRE POPULATION OF POSSIBLE DESIGNS."
+      },
+      {
+        "slide": 8,
+        "text": "\n\nINPUT\nparameters\ndata\nvariables\n\n\n\nPROCESS\nalgorithm\nprocedure\noperation tree\n\n\n\nOUTPUT\ndesign"
+      },
+      {
+        "slide": 9,
+        "text": "THREE PARADIGMS\n\n\n\n01\nPROCEDURAL\nPROCESS\nA fixed sequence\nof operations\nYOU DEFINE\nTHE STEPS\nOUTPUT IS\nONE EXPECTED\nRESULT\nWe are interested primarily in instructions.\n\n\nMODULE 0\n\n\n\n02\nPARAMETRIC\nPROCESS\nRelationships between\ninputs and form\nYOU DEFINE\nTHE RULES OF\nVARIATION\nOUTPUT IS\nA FAMILY\n OF RESULTS THAT \nYOU\nKNOW THE RANGE,\nNOT EACH MEMBER\nThe same inputs always produce the same output.\n\n\nMODULES 1–3\n\n\n\n03\nGENERATIVE\nPROCESS\nA rule applied to its\nown output, repeatedly\nYOU DEFINE\nTHE RULE + THE\nSTARTING STATE\nOUTPUT IS\nUNKNOWN, WITHIN\nA SPECTRUM YOU SET\nParameters are iterated by the algorithm itself.\n\n\nFINAL"
+      },
+      {
+        "slide": 10,
+        "text": "01 — PROCEDURAL\nForm as a set of instructions. Output: expected.\n\n\n\nLEWITT WALL DRAWING\nAdd: a LeWitt wall drawing beside its written instruction.\n\n\nThe work IS the instruction. Someone else executes it — LeWitt often never touched the wall.\n\n\n\nAN INSTRUCTION\n1.  Place twenty points at random\n     on the sheet.\n2.  Connect each point to its two\n     nearest neighbours with a\n     straight line.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1. THE POINTS\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2. THE LINES"
+      },
+      {
+        "slide": 11,
+        "text": "02 — PARAMETRIC\nParameters drive the form. Output: partially expected.\n\n\nDECOMPOSE A FORM INTO VARIABLES\n\n\nSAME INPUTS IN\n\nsame result out. Always.\n\n\nCHANGE ONE INPUT\n\nthe whole system responds.\n\n\nNON-DESTRUCTIVE\n\nevery step stays editable.\n\n\n\nPARAMETRIC PRECEDENT\nhttps://formandcode.com/code-examples/parameterize-chair\nMODULES 1–3   /   FIELDS + ATTRACTORS   /   SECTION + SEQUENCE   /   TESSELLATION"
+      },
+      {
+        "slide": 12,
+        "text": "03 — GENERATIVE\nThe system feeds itself. Output: unknown, within a spectrum.\nEvery generative system is the same three-step loop, run over and over.\n\n\nSTATE\n\n\n\nRULE\n\n\n\nNEXT STATE\nTHE OUTPUT BECOMES THE INPUT\n\n\n\nGENERATIVE PRECEDENT\nUsing FEA as a generative algorithm\n\n\nGROWTH  /  AGENTS  /  CELLULAR AUTOMATA  /  RELAXATION + PACKING\nYour final assignment. You will build one of these."
+      },
+      {
+        "slide": 13,
+        "text": "HOW THIS RUNS\nWatch before class. Class time is for your problems, not my demo.\n\n\n01\n\n\nTUTORIAL ARRIVES\nPre-recorded, sent after the class before. Grasshopper and Blender versions of each.\n\n\n02\n\n\nYOU WORK THROUGH IT\nBefore the session. This is the part that doesn't work if you skip it.\n\n\n03\n\n\nWE TROUBLESHOOT\nFirst part of class: what broke. Bring the file, not the description.\n\n\n04\n\n\nASSIGNMENT BRIEFING\nRequirements, precedents, then supervised work and critique."
+      },
+      {
+        "slide": 14,
+        "text": "WHAT YOU'LL MAKE\nEvery module has a drawing and a physical thing.\n\n\n\nMODULE 0\nPROCEDURE\nMassing diagram + written instructions\nSMALL 3D PRINT\n\n\n\nMODULE 1\nFIELDS\nArrays and attractors, systematically\nPLOTTER DEMO \n\n\n\nMODULE 2\nSECTION\nSerial sections, contours, hierarchy\nLASER-CUT ASSEMBLY\n\n\n\nMODULE 3\nTESSELLATION\nA panelized surface as a filter\n3D-PRINTED SYSTEM\n\n\n\nFINAL\nGENERATIVE\nA tool that iterates\n—"
+      },
+      {
+        "slide": 15,
+        "text": "\n\nISSUED TODAY\n0.2 — VISUAL IDENTITY MANUAL\nFOUR PAGES. NO MORE. DUE CLASS 4 — SEP 1\n5\n\n\n1\nTypography — typefaces and hierarchy, with sizes\n\n\n2\nPalette with stated values · line weights with assigned uses\n\n\n3\nThe 17\" × 11\" sheet template, grid shown explicitly\n\n\n4\nA sample sheet, using the system on real work\n\n\nNO CANVA. NO EXPRESS. NO SLIDES. A template supplies the grid, the hierarchy and the palette — exactly what you're being asked to decide."
+      },
+      {
+        "slide": 16,
+        "text": "BEFORE NEXT CLASS\n\n\nMODEL\nTutorial 0.1 — Grasshopper / Geometry Nodes basics, transformations, Booleans, non-destructive modeling. Sent tonight.\n\n\nENROL\nFabLab Safety Orientation on Canvas. Required before you touch any machine — due end of Class 2.\n\n\nSTART\nvisual identity - \nLook at how other people build identity systems before you build yours.\n\n\nBRING\nA building you find interesting. Orthogonal massing — no complex curves. You'll rebuild it as a procedure."
+      },
+      {
+        "slide": 17,
+        "text": "\n\nPROCEDURAL\n\n\n\nPARAMETRIC\n\n\n\nGENERATIVE\n\n\nQUESTIONS."
+      }
+    ],
+    "pdf_exists": false
+  },
+  {
+    "file": "slides/ARC3133_Class02-CKS.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "DOWNLOAD BLENDER IF YOU ARE HERE EARLY :)"
+      },
+      {
+        "slide": 2,
+        "text": "\nCLASS 02  /  SEP 1\n\n\nNON-DESTRUCTIVE\nMODELING\n\n\n+ ASSIGNMENT 0.1 ISSUED TODAY\nFALL 2026   \n|\n   \nWEDNESDAY 9 AM   | CHRISTINE KHOURI SADER\t\t\t\t\t\t\t\t\tHEAD COORDINATOR: \nLUIS PACHECO ALCALA\nCSADER2015@FAU.EDU"
+      },
+      {
+        "slide": 3,
+        "text": "TUTORIAL 0.1 — THE LOGIC\n\n\n01\n\n\nA GRAPH/\nCOMPONENT/NODE\n IS A CHAIN OF OPERATIONS\nEach node takes something in, does one thing, passes it on.\n\n\n02\n\n\nDATA FLOWS LEFT TO RIGHT\nIf a result is wrong, walk backwards until it stops being wrong.\n\n\n03\n\n\nGEOMETRY IS AN OUTPUT\nNothing is 'made'. The graph describes how to make it, every time.\n\n\n04\n\n\nEVERY INPUT STAYS LIVE\nChange a number at the start and everything downstream recomputes."
+      },
+      {
+        "slide": 4,
+        "text": "ERRORS?\n\n\nNOTHING APPEARS\nUsually a preview toggled off, or a node not connected to output.\n\n\nTHE WRONG NUMBER OF THINGS\nA list where a single item was expected, or the reverse.\n\n\nIT WORKED, THEN STOPPED\nSomething upstream changed. Walk backwards node by node.\n\n\nA NODE IS ORANGE / RED\nIt is telling you what it needs. Read the message before changing anything."
+      },
+      {
+        "slide": 5,
+        "text": "WHY NON-DESTRUCTIVE\n\n\n\nDESTRUCTIVE\n\nCUBE\n\n\nSPHERE\n\n\nONE MESH\ngone\n\nREBUILD FROM SCRATCH\nThe operations were discarded. The sphere no longer exists as anything you can edit.\n\n\n\nNON-DESTRUCTIVE\n\nCUBE\n\nSPHERE\n\nSUBTRACT\n\nRESULT\n\nCHANGE r HERE\nEVERYTHING DOWNSTREAM\nRECOMPUTES\nEvery input is still a live node. Edit it and the result rebuilds itself.\n\n\n0.1 REQUIRES YOUR OPERATION HISTORY TO BE INTACT. I WILL ASK TO SEE IT."
+      },
+      {
+        "slide": 6,
+        "text": "THREE BOOLEANS\nEverything in Module 0 is built from these, applied in order.\n\n\n\n\n\nUNION\nA + B\n\n\n\n\n\nDIFFERENCE\nA − B\n\n\n\n\n\n\n\n\n\nINTERSECTION\nA ∩ B\n\n\nOrder matters. A − B is not B − A. Your instructions must make the order unambiguous."
+      },
+      {
+        "slide": 7,
+        "text": "TRANSFORMATIONS ARE ARITHMETIC\n\n\n\nMOVE\n=  ADD\n\n\n\n\nTHE MATH\nx' = x + dx\ny' = y + dy\nz' = z + dz\n\n(2, 1)  +  (3, 0)   →   (5, 1)\n\n\n\nSCALE\n=  MULTIPLY\n\n\n\n\nTHE MATH\nx' = x × f\ny' = y × f\nz' = z × f\n\n(2, 1)  ×  2       →   (4, 2)\n\n\n\nROTATE\n=  MIX x AND y\n\n\n\n\nTHE MATH\nx' = x·cosθ − y·sinθ\ny' = x·sinθ + y·cosθ\n\n(1, 0)  rot 90°   →   (0, 1)\n\n\nMove and scale treat each coordinate on its own. Rotation is the only one where x and y have to talk to each other."
+      },
+      {
+        "slide": 8,
+        "text": "PRECEDENT — THE MASSING DIAGRAM\n\n\nMASSING DIAGRAM\nAdd: a sequential massing diagram, one axo per move.\n\n\nWHAT MAKES IT WORK\n\nOne operation per frame. \n\nThe same viewpoint every frame, so the change is the only thing moving.\n\nThe moved or removed part is marked — colour, arrow, ghost.\n\nIt reads left to right without a caption.\n\n\nYour diagram is graded on whether the sequence can be read \n,\n not on how the building looks."
+      },
+      {
+        "slide": 9,
+        "text": "\n\nISSUED TODAY\n0.1 — PROCEDURE: DIAGRAM + INSTRUCTIONS\nDUE CLASS 4 — SEP \n16\n  /   8%\nTake an existing building. Rebuild its massing as a sequence of primitives and Booleans. Then document that sequence twice.\n\n\n01\nTHE DIAGRAM\nA sequential axonometric set — one drawing per operation — plus one larger final isometric with human scale, context, shadows and annotation.\n\n\n02\nTHE INSTRUCTIONS\nA written procedure another person could follow to rebuild your object without ever seeing your model.\n\n\nBOTH ON ONE 17\" × 11\" SHEET, IN YOUR VISUAL IDENTITY."
+      },
+      {
+        "slide": 10,
+        "text": "REQUIREMENTS\n\n\n5+\nBoolean operations\n\n\n4+\ndistinct primitive types\n\n\n2+\ntranslations\n\n\n1+\nrotation\n\n\n1\nprecedent analysis — 2–3 sentences on why the massing reads as a sequence\n\n\nOperation history intact and demonstrable.  No imported or downloaded models."
+      },
+      {
+        "slide": 11,
+        "text": "THE NOTATION\nWrite the procedure as pseudocode. Formal enough to be unambiguous, plain enough to read aloud.\n\n\n\nPRIMITIVES\nbox(x, y, z)\ncylinder(r, h)\nsphere(r)\ncone(r, h)\n\n\n\nTRANSFORMS\nmove(s, x, y, z)\nrotate(s, axis, deg)\nscale(s, factor)\n\n\n\nBOOLEANS\nunion(a, b)\nsubtract(a, b)\nintersect(a, b)\n\n\nTHREE RULES\n\nEvery shape is created centred on the origin (0, 0, 0). Move it from there.\n\nUnits are abstract. No millimetres, no metres — 3 units, half the width.\n\nEvery step assigns a name, so the order of a subtraction is never in doubt.\nThis is real: OpenSCAD is a working language built on exactly these operations."
+      },
+      {
+        "slide": 12,
+        "text": "WORKED EXAMPLE\n\n\n\nPROCEDURE\nbase   = box(6, 4, 3)\ntower  = box(2, 2, 6)\ntower  = move(tower, 2, 0, 3)\nvoid   = cylinder(r=1, h=5)\nvoid   = move(void, -1.5, 0, 0)\n\nmass   = union(base, tower)\nresult = subtract(mass, void)\n\n\nWHAT THIS FIXES\nORDER\nsubtract(mass, void) can only mean one thing.\nPOSITION\nEvery shape starts at the origin, so a move is the whole story.\nREUSE\nA named step can be referred to later — mass is used, not rebuilt.\nREADING\nAnyone can execute it. That is the test at Class 5.\n\n"
+      },
+      {
+        "slide": 13,
+        "text": "CHOOSING YOUR OBJECT\nPick badly and the rest of the assignment is impossible.\n\n\nORTHOGONAL MASSING\nBoxes, slabs, stacked volumes. Right angles.\n\n\nNO COMPLEX CURVES\nIf you cannot get there with primitives, it is the wrong building.\n\n\n5–10 CLEAR MOVES\nToo simple is boring. Too complex will not resolve in five Booleans.\n\n\n\nAPPROVED OBJECT LIST\nAdd: 6–8 buildings that work. Students may propose others for approval."
+      },
+      {
+        "slide": 14,
+        "text": "UPCOMING WEEKS\n\n\nCLASS 4\nSEP 1\n6\n\n\nSheet due — diagram and instructions.\n\n\n\nCLASS 5\nSEP 2\n3\n\n\nInstructions exchanged. You build a classmate's object from their written procedure alone. The gap between the two results is the finding.\n\n\n\nCLASS 8\nOCT 1\n4\n\n\nYour object, 3D printed at small scale, presented at the Midterm. No supports "
+      },
+      {
+        "slide": 15,
+        "text": "NEXT up\n\n\n✓\n\n\nObject chosen and approved\n\n\n✓\n\n\nFirst three primitives placed\n\n\n✓\n\n\nAt least one Boolean working\n\n\n✓\n\n\nOperation history intact \n- non destructive modeling\n\n\n✓\n\n\nBlender tutorial"
+      },
+      {
+        "slide": 16,
+        "text": "BEFORE NEXT CLASS\n\n\nWATCH\n\n\nTutorial 0.2 — \nMake2d on blender and rhino and 3D printing\n\n\nCHECK\n\n\nFabLab Safety Orientation \nis waived\n\n\nBUILD\n\n\nKeep going on 0.1. \nCSG and buildings massings . Visual identity manual\n\n\nWRITE\n\n\nDraft your instructions. Read them aloud to someone who has not seen the model."
+      }
+    ],
+    "pdf_exists": false
+  },
+  {
+    "file": "slides/ARC3133_Class02.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "CLASS 02  /  SEP 1\nTRANSFORMATIONS\nAND CSG\nP1 BEGINS — DESCRIBE A SOLID AS AN EDITABLE SEQUENCE\nNOTHING DUE\nP1a ISSUED TODAY"
+      },
+      {
+        "slide": 2,
+        "text": "WHY NON-DESTRUCTIVE\nThe same two solids, subtracted. One keeps its history; one throws it away.\nDESTRUCTIVE\nCUBE  −  SPHERE  →  ONE MESH\n \nThe sphere is gone. Its radius is gone. To change anything you rebuild from scratch.\nNON-DESTRUCTIVE\nCUBE  +  SPHERE  →  SUBTRACT  →  RESULT\n \nEvery input is still a live node. Change the radius and everything downstream recomputes itself.\nP1a REQUIRES YOUR OPERATION HISTORY TO BE INTACT. YOU WILL BE ASKED TO CHANGE A PARAMETER IN FRONT OF THE CLASS."
+      },
+      {
+        "slide": 3,
+        "text": "TRANSFORMATIONS ARE ARITHMETIC\nThree operations you already know, written as what they actually do.\nMOVE\n=  ADD\nx' = x + dx\ny' = y + dy\nz' = z + dz\n(2, 1)  +  (3, 0)   →   (5, 1)\nSCALE\n=  MULTIPLY\nx' = x × f\ny' = y × f\nz' = z × f\n(2, 1)  ×  2        →   (4, 2)\nROTATE\n=  MIX x AND y\nx' = x·cosθ − y·sinθ\ny' = x·sinθ + y·cosθ\n(1, 0)  rot 90°    →   (0, 1)\nMove and scale treat each coordinate on its own. Rotation is the only one where x and y have to talk to each other."
+      },
+      {
+        "slide": 4,
+        "text": "THREE BOOLEANS\nEverything in P1a is built from these, applied in order.\nUNION\nA + B\nEverything either solid occupies.\nDIFFERENCE\nA − B\nA, with B carved out of it.\nINTERSECTION\nA ∩ B\nOnly where both solids overlap.\nORDER MATTERS. A − B IS NOT B − A, AND YOUR DIAGRAM MUST MAKE THE OPERANDS UNAMBIGUOUS.\nP1a asks for at least three Booleans, so one of them can be a reversed subtraction. Do it once deliberately and you will never confuse the operands again."
+      },
+      {
+        "slide": 5,
+        "text": "THE SEQUENCE\nWhat we build together, in order, this session.\n01\nIntroduce the node editor, inputs, outputs and parameters using one primitive.\n02\nMove, rotate and scale procedurally; change the order and compare the result.\n03\nCompare union, difference and intersection between two solids, including reversing the subtraction.\n04\nExpose useful inputs and compose a short massing sequence."
+      },
+      {
+        "slide": 6,
+        "text": "THE NOTATION\nWrite the procedure as pseudocode. Formal enough to be unambiguous, plain enough to read aloud.\nTHE OPERATIONS\nbox(x, y, z)      cylinder(r, h)\nsphere(r)         cone(r, h)\n \nmove(s, x, y, z)  rotate(s, axis, deg)\nscale(s, factor)\n \nunion(a, b)       subtract(a, b)\nintersect(a, b)\nWORKED EXAMPLE\nbase   = box(6, 4, 3)\ntower  = box(2, 2, 6)\ntower  = move(tower, 2, 0, 3)\nvoid   = cylinder(r=1, h=5)\nvoid   = move(void, -1.5, 0, 0)\n \nmass   = union(base, tower)\nresult = subtract(mass, void)\nTHREE RULES: EVERY SHAPE IS BORN AT THE ORIGIN · UNITS ARE ABSTRACT · EVERY STEP ASSIGNS A NAME, SO A SUBTRACTION IS NEVER IN DOUBT."
+      },
+      {
+        "slide": 7,
+        "text": "THE SAME THING, WRITTEN OUT\nYou are not asked to type this. Read it, and check that it says what the nodes you just built say.\n# nine diagrams, one operation each, in this order\n \nbox     = cube(1.0)                  # 1  primitive\nball    = sphere(r=0.65)             # 2  primitive\nrod     = cylinder(r=0.30, h=2.0)    # 3  primitive\n \nball    = scale(ball, 1.15)          # 4  scale\nball    = translate(ball, z=0.15)    # 5  translate\nrod_y   = rotate(rod, x=90)          # 6  rotate - degrees\nrod_x   = rotate(rod, y=90)          # 6  same operation\n \nsolid   = intersection(box, ball)    # 7  intersection\ncutters = union(rod, rod_y, rod_x)   # 8  union\nresult  = difference(solid, cutters) # 9  difference\n \n# 9 keeps solid, removes cutters. draw 9 again at\n# building scale: a figure, planting, ground, shadow.\nWHAT IT MAPS ONTO\nparameter\nvector\ntranslation\nrotation\nscale\nunion\ndifference\nintersection\nTHIS IS THE NOTATION FROM THE LAST SLIDE, AND IT IS ALSO PYTHON. MORE ON THAT IN DECEMBER."
+      },
+      {
+        "slide": 8,
+        "text": "ISSUED TODAY\nP1a — CSG MASSING SEQUENCE\nDUE WEEK 4 — Sep 15   /   7%\nBuild a parametric massing study, then build a repeating panel from its own points and faces and develop a small printable variant of it.  This first milestone is the massing study: an ordered sequence of primitives and Booleans, diagrammed so another person could follow it.\nSTAGE 1\nTHE SEQUENCE\nThree primitives, three transformations, three Booleans, in a stated order.\nSTAGE 2\nTHE DIAGRAMS\nEight or nine, numbered. One operation each, read left to right.\nSTAGE 3\nTHE LAST ONE\nDrawn, not diagrammed: building scale, a figure, planting, ground, shadow."
+      },
+      {
+        "slide": 9,
+        "text": "REQUIREMENTS — P1a\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\nOne 17 × 11 inch sheet carrying an ordered sequence of eight or nine numbered diagrams: one operation per diagram, read in order, each showing what the one before it produced.\n02\nUse at least three primitives, at least three transformations covering translate, rotate and scale, and at least three Boolean operations covering union, difference and intersection. Name the operands of every subtraction — which solid is kept and which is removed.\n03\nDevelop the last diagram as a drawing rather than a diagram: the final solid at building scale, with a 1.75 m human figure, vegetation, ground and shadow, so the sequence ends in something readable as architecture.\n04\nWrite the sequence out as pseudocode beside the diagrams — one line per operation, in the same order as the diagrams, with the parameters you exposed.\n05\nRead the spatial operations in Di Mari and Yoo, Operative Design, and Di Mari, Conditional Design, and state which operation your sequence performs in their terms.\n06\nSubmit an editable graph with exposed inputs and geometry generated in the graph. Keep the source operations intact."
+      },
+      {
+        "slide": 10,
+        "text": "NOW — BUILD THE SEQUENCE\nRest of the session: a working graph with something you can change in front of me.\n✓\nObject chosen — orthogonal massing, 5–10 clear moves, no complex curves\n✓\nFirst three primitives placed, each born at the origin and moved from there\n✓\nAt least one Boolean working, with the operands named\n✓\nTwo useful inputs exposed, so a variant is one number away\n✓\nOperation history intact — nothing collapsed or applied\nLEAVE WITH A GRAPH YOU CAN CHANGE, NOT A MESH YOU CANNOT."
+      },
+      {
+        "slide": 11,
+        "text": "BEFORE NEXT CLASS\nWATCH\nU03 — Geometry from scratch. Point, line, edge, face, mesh, solid. The Blender lesson file for this one already exists; check the unit page.\nBUILD\nKeep going on P1a. It is due Week 4 — eight or nine numbered diagrams, the last one developed in context, and the sequence written out as pseudocode.\nWRITE\nYour procedure as pseudocode, using the notation above. Read it aloud to someone who has not seen your model and fix what they cannot follow.\nBRING\nThe editable file, and one question about something in it that behaves oddly.\nREAD\nDi Mari and Yoo, Operative Design, and Di Mari, Conditional Design. Find the spatial verb your own sequence performs, and name it on the sheet."
+      }
+    ],
+    "pdf_exists": true,
+    "pdf_pages": 11,
+    "pdf_text": [
+      "CLASS 02  /  SEP 1\nTRANSFORMATIONS\nAND CSG\nP1 BEGINS — DESCRIBE A SOLID AS AN EDITABLE SEQUENCE NOTHING DUE\nP1a ISSUED TODAY",
+      "WHY NON-DESTRUCTIVE\nThe same two solids, subtracted. One keeps its history; one throws it away.\nDESTRUCTIVE\nCUBE  −  SPHERE  →  ONE MESH\n \nThe sphere is gone. Its radius is gone. To change anything you \nrebuild from scratch.\nNON-DESTRUCTIVE\nCUBE  +  SPHERE  →  SUBTRACT  →  RESULT\n \nEvery input is still a live node. Change the radius and everything \ndownstream recomputes itself.\nP1a REQUIRES YOUR OPERATION HISTORY TO BE INTACT. YOU WILL BE ASKED TO CHANGE A PARAMETER IN FRONT OF THE CLASS.",
+      "TRANSFORMATIONS ARE ARITHMETIC\nThree operations you already know, written as what they actually do.\nMOVE\n=  ADD\nx' = x + dx\ny' = y + dy\nz' = z + dz\n(2, 1)  +  (3, 0)   →   (5, 1)\nSCALE\n=  MULTIPLY\nx' = x × f\ny' = y × f\nz' = z × f\n(2, 1)  ×  2        →   (4, 2)\nROTATE\n=  MIX x AND y\nx' = x·cosθ − y·sinθ\ny' = x·sinθ + y·cosθ\n(1, 0)  rot 90°    →   (0, 1)\nMove and scale treat each coordinate on its own. Rotation is the only one where x and y have to talk to each other.",
+      "THREE BOOLEANS\nEverything in P1a is built from these, applied in order.\nUNION\nA + B\nEverything either solid occupies.\nDIFFERENCE\nA − B\nA, with B carved out of it.\nINTERSECTION\nA ∩ B\nOnly where both solids overlap.\nORDER MATTERS. A − B IS NOT B − A, AND YOUR DIAGRAM MUST MAKE THE OPERANDS UNAMBIGUOUS.\nP1a asks for at least three Booleans, so one of them can be a reversed subtraction. Do it once deliberately and you will never confuse the operands again.",
+      "THE SEQUENCE\nWhat we build together, in order, this session.\n01\n Introduce the node editor, inputs, outputs and parameters using one primitive.\n02\n Move, rotate and scale procedurally; change the order and compare the result.\n03\n Compare union, difference and intersection between two solids, including reversing the subtraction.\n04\n Expose useful inputs and compose a short massing sequence.",
+      "THE NOTATION\nWrite the procedure as pseudocode. Formal enough to be unambiguous, plain enough to read aloud.\nTHE OPERATIONS\nbox(x, y, z)      cylinder(r, h)\nsphere(r)         cone(r, h)\n \nmove(s, x, y, z)  rotate(s, axis, deg)\nscale(s, factor)\n \nunion(a, b)       subtract(a, b)\nintersect(a, b)\nWORKED EXAMPLE\nbase   = box(6, 4, 3)\ntower  = box(2, 2, 6)\ntower  = move(tower, 2, 0, 3)\nvoid   = cylinder(r=1, h=5)\nvoid   = move(void, -1.5, 0, 0)\n \nmass   = union(base, tower)\nresult = subtract(mass, void)\nTHREE RULES: EVERY SHAPE IS BORN AT THE ORIGIN · UNITS ARE ABSTRACT · EVERY STEP ASSIGNS A NAME, SO A SUBTRACTION IS \nNEVER IN DOUBT.",
+      "THE SAME THING, WRITTEN OUT\nYou are not asked to type this. Read it, and check that it says what the nodes you just built say.\n# nine diagrams, one operation each, in this order\n \nbox     = cube(1.0)                  # 1  primitive\nball    = sphere(r=0.65)             # 2  primitive\nrod     = cylinder(r=0.30, h=2.0)    # 3  primitive\n \nball    = scale(ball, 1.15)          # 4  scale\nball    = translate(ball, z=0.15)    # 5  translate\nrod_y   = rotate(rod, x=90)          # 6  rotate - degrees\nrod_x   = rotate(rod, y=90)          # 6  same operation\n \nsolid   = intersection(box, ball)    # 7  intersection\ncutters = union(rod, rod_y, rod_x)   # 8  union\nresult  = difference(solid, cutters) # 9  difference\n \n# 9 keeps solid, removes cutters. draw 9 again at\n# building scale: a figure, planting, ground, shadow.\nWHAT IT MAPS ONTO\nparameter\nvector\ntranslation\nrotation\nscale\nunion\ndifference\nintersection\nTHIS IS THE NOTATION FROM THE LAST SLIDE, AND IT IS ALSO PYTHON. MORE ON THAT IN DECEMBER.",
+      "ISSUED TODAY\nP1a — CSG MASSING SEQUENCE\nDUE WEEK 4 — Sep 15   /   7%\nBuild a parametric massing study, then build a repeating panel from its own points and faces and develop a small printable variant of it.  \nThis first milestone is the massing study: an ordered sequence of primitives and Booleans, diagrammed so another person could follow it.\nSTAGE 1\nTHE SEQUENCE\nThree primitives, three transformations, three \nBooleans, in a stated order.\nSTAGE 2\nTHE DIAGRAMS\nEight or nine, numbered. One operation each, \nread left to right.\nSTAGE 3\nTHE LAST ONE\nDrawn, not diagrammed: building scale, a \nfigure, planting, ground, shadow.",
+      "REQUIREMENTS — P1a\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\n One 17 × 11 inch sheet carrying an ordered sequence of eight or nine numbered diagrams: one operation per diagram, read in order, each showing \nwhat the one before it produced.\n02\n Use at least three primitives, at least three transformations covering translate, rotate and scale, and at least three Boolean operations covering union, \ndifference and intersection. Name the operands of every subtraction — which solid is kept and which is removed.\n03\n Develop the last diagram as a drawing rather than a diagram: the final solid at building scale, with a 1.75 m human figure, vegetation, ground and \nshadow, so the sequence ends in something readable as architecture.\n04\n Write the sequence out as pseudocode beside the diagrams — one line per operation, in the same order as the diagrams, with the parameters you \nexposed.\n05\n Read the spatial operations in Di Mari and Yoo, Operative Design, and Di Mari, Conditional Design, and state which operation your sequence performs \nin their terms.\n06\n Submit an editable graph with exposed inputs and geometry generated in the graph. Keep the source operations intact.",
+      "NOW — BUILD THE SEQUENCE\nRest of the session: a working graph with something you can change in front of me.\n✓\n Object chosen — orthogonal massing, 5–10 clear moves, no complex curves\n✓\n First three primitives placed, each born at the origin and moved from there\n✓\n At least one Boolean working, with the operands named\n✓\n Two useful inputs exposed, so a variant is one number away\n✓\n Operation history intact — nothing collapsed or applied\nLEAVE WITH A GRAPH YOU CAN CHANGE, NOT A MESH YOU CANNOT.",
+      "BEFORE NEXT CLASS\nWATCH\nU03 — Geometry from scratch. Point, line, edge, face, mesh, solid. The Blender lesson file for this one already exists; check \nthe unit page.\nBUILD\nKeep going on P1a. It is due Week 4 — eight or nine numbered diagrams, the last one developed in context, and the \nsequence written out as pseudocode.\nWRITE\nYour procedure as pseudocode, using the notation above. Read it aloud to someone who has not seen your model and fix \nwhat they cannot follow.\nBRING\nThe editable file, and one question about something in it that behaves oddly.\nREAD\nDi Mari and Yoo, Operative Design, and Di Mari, Conditional Design. Find the spatial verb your own sequence performs, and \nname it on the sheet."
+    ],
+    "page_count_matches": true
+  },
+  {
+    "file": "slides/ARC3133_Class03.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "CLASS 03  /  SEP 8\nGEOMETRY\nFROM SCRATCH\nP1 CONTINUES — WHAT A SOLID IS MADE OF, UNDERNEATH\nNOTHING DUE\nP1b + P1c ISSUED TODAY"
+      },
+      {
+        "slide": 2,
+        "text": "POINT → LINE → EDGE → FACE → SOLID\nFive steps, and each one is a list of the thing before it.\nPOINT\nthree numbers\n[x, y, z]\nLINE\ntwo positions\n[p1, p2]\nEDGE\ntwo vertices\n[v1, v2]\nFACE\nordered corners\n[v1, v2, v3]\nMESH\nmany faces\n[f1, f2, f3…]\nA POSITION IS NOT A DISPLACEMENT. THE SAME THREE NUMBERS MEAN DIFFERENT THINGS DEPENDING ON WHICH ONE YOU MEANT.\nNothing here is new geometry. It is the same collection, read at a different level: a face is a list of vertices, a mesh is a list of faces, and next week an array will be a list of copies."
+      },
+      {
+        "slide": 3,
+        "text": "A FACE IS AN ORDERED LIST OF CORNERS\nSame three vertices, two different faces. The order is the difference.\nWINDING ORDER\nv0\nv1\nv2\nf = [v0, v1, v2]\n  normal → toward you\n \nf = [v0, v2, v1]\n  normal → away\nWHY IT MATTERS LATER\nA flipped face tells a renderer the inside is the outside.\n \nIt tells a slicer there is nothing to fill.\n \nMost failed prints this semester will start here, not at the printer.\nCLOSED MEANS EVERY EDGE IS SHARED BY EXACTLY TWO FACES. CHECK IT BEFORE YOU BELIEVE IT."
+      },
+      {
+        "slide": 4,
+        "text": "THE PYRAMID\nFive vertices, eight edges, five faces. Built by hand, driven by three numbers.\nWHAT YOU ASSEMBLE\n5\nVERTICES\nfour base corners and an apex\n8\nEDGES\nfour around the base, four to the apex\n5\nFACES\nfour triangular sides and the base\nEXPOSED INPUTS\nWidth\nDepth\nHeight\n \nThree numbers, and the whole solid rebuilds. That is the entire point of the exercise.\nDO NOT FORGET THE BASE FACE. A PYRAMID WITH FOUR SIDES AND NO BOTTOM IS NOT A SOLID."
+      },
+      {
+        "slide": 5,
+        "text": "AND THEN IT GOES BACK INTO LAST WEEK'S FILE\nThe pyramid is not an exercise. It is the cutter for the study you already built.\n01   BUILD IT\nFive vertices, five faces, closed, with Width / Depth / Height exposed.\n02   SUBTRACT IT\nCube minus pyramid. The same Boolean from Week 2, with your own solid.\n03   DRIVE IT\nChange the three inputs and show at least three settings of the result.\n04   EXPLAIN IT\nFace order, normals, closure — why it cuts cleanly instead of failing.\nTHIS IS WHY P1 IS ONE PROJECT AND NOT THREE ASSIGNMENTS.\nEvery project in this course does the same thing — the geometry you make in one milestone becomes the input to the next. You will never start from an unrelated object."
+      },
+      {
+        "slide": 6,
+        "text": "THE SAME THING, WRITTEN OUT\nA mesh is two lists. That is the entire idea, and it fits on one slide.\nverts = [[-w, -d, 0],              # 0\n         [ w, -d, 0],              # 1\n         [ w,  d, 0],              # 2\n         [-w,  d, 0],              # 3\n         [ 0,  0, h]]              # 4  apex\n \nfaces = [[0, 1, 4], [1, 2, 4],\n         [2, 3, 4], [3, 0, 4],\n         [0, 3, 2, 1]]             # the base — do not forget it\n \npyramid = mesh(verts, faces)\nresult  = difference(cube, pyramid)\nWHAT IT MAPS ONTO\npoint\nvector\nparameter\nvertex\nline\nedge\nface\nmesh\nsolid\nnormal\nverts IS A LIST OF POSITIONS. faces IS A LIST OF INDICES INTO IT."
+      },
+      {
+        "slide": 7,
+        "text": "ISSUED TODAY\nP1b — PANEL FROM SCRATCH\nDUE WEEK 5 — Sep 22   /   7%\nFind a panel in a building you like, keep it simple, and build it out of two lists - points and faces. It is the component you will array in P2 and the object you will print, so choose something that tiles.\nFIND\nA PANEL\nOne precedent, simple. It has to sit beside itself and close.\nDECIDE\nWHAT MOVES\nThe parameters, first. One has to change its shape, not its box.\nBUILD\nFROM TWO LISTS\nEvery point an expression of those numbers. Never a typed coordinate.\nSHOW\nTHE RANGE\nLow, middle, high - still closing, still tiling. P2b drives it."
+      },
+      {
+        "slide": 8,
+        "text": "REQUIREMENTS — P1b\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\nFind one panel in a built precedent and keep it simple. Choose it by one test: could you set it beside three copies of itself, edge to edge, and have the grid close? Name the building, the architect and your source on the sheet.\n02\nDecide the parameters before you model anything, and say in one line what each does. At least one must change the panel's shape — an aperture, a fold depth, a corner offset — not its bounding box.\n03\nRebuild it from scratch: an explicit point list and an explicit face list, every point an expression of those parameters rather than a typed coordinate. Nothing collapsed, and it closes.\n04\nState each parameter's working range — where the panel still closes and still tiles — and show it at the low, middle and high end of the one an attractor will drive in P2b.\n05\nOne 17 × 11 inch sheet, and one image on it: the panel rendered on a ground plane, one material, studio light, no context and no entourage. The object, its structure and nothing else.\n06\nPrint the point list, the face list and the parameter table beside the render, and annotate the vertex order of one face. Explain normals, closure, and what breaks when a face is wound backwards."
+      },
+      {
+        "slide": 9,
+        "text": "ALSO ISSUED\nP1c — FIRST PRINT\nDUE WEEK 8 — Oct 13   /   7%\nThe same geometry, made real. A printable variant of the project you have been building for two weeks — presented as a physical object at the midterm.\nLIMIT\n60 MM, 200 G\nEach axis within 60 mm. The allocation includes failures.\nRULE\nNO SUPPORTS\nOrientation is your only lever. Change the geometry if you must.\nDUE\nAT THE MIDTERM\nThe queue has latency the two-week cycle does not."
+      },
+      {
+        "slide": 10,
+        "text": "REQUIREMENTS — P1c\nFabrication milestone — visual documentation 20% · computational understanding 20% · technical execution 15% · fabrication quality 30% · experimentation 5% · requirements 10%.\n01\nDevelop a printable variant of the geometry project, within 60 mm on each axis and the 200 g allocation, with no supports.\n02\nPresent the physical print at midterm with one orientation/process sheet and a photograph.\n03\nSubmit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.\nCHECKPOINT · WEEK 5 — Sep 22 — Review print-ready geometry, physical units, orientation and the sliced preview before queueing."
+      },
+      {
+        "slide": 11,
+        "text": "NOW — BUILD THE PYRAMID\nRest of the session: from a single point to a closed solid that cuts.\n✓\nOne point placed from an XYZ vector, and you can say why it is a position\n✓\nFour base corners and an apex, with Width / Depth / Height exposed\n✓\nAll five faces joined — four sides and the base\n✓\nClosure checked: every edge shared by exactly two faces\n✓\nCube minus pyramid working, off the same three inputs\n✓\nYour own panel named, and the numbers that will drive it written down\nLEAVE WITH A SOLID THAT CUTS. THE SHEET IS THE EASY PART."
+      },
+      {
+        "slide": 12,
+        "text": "BEFORE NEXT CLASS\nWATCH\nU04 — Arrays and lists. Repeat Zone, Compare and Switch, and the nested grid. We start small and inspectable before anything scales up.\nFINISH\nP1a is due next class: eight or nine numbered diagrams, the last one developed at building scale with a figure and planting, and the sequence written as pseudocode.\nFIND\nThe panel. One building, one repeating component, simple enough to write as two lists, and it has to sit beside itself without a gap. Name the building and your source, and bring its point and face lists started - next week it gets repeated.\nCHECK\nYour FabLab orientation, before you need the machine rather than after."
+      }
+    ],
+    "pdf_exists": true,
+    "pdf_pages": 12,
+    "pdf_text": [
+      "CLASS 03  /  SEP 8\nGEOMETRY\nFROM SCRATCH\nP1 CONTINUES — WHAT A SOLID IS MADE OF, UNDERNEATH NOTHING DUE\nP1b + P1c ISSUED TODAY",
+      "POINT → LINE → EDGE → FACE → SOLID\nFive steps, and each one is a list of the thing before it.\nPOINT\nthree numbers\n[x, y, z]\nLINE\ntwo positions\n[p1, p2]\nEDGE\ntwo vertices\n[v1, v2]\nFACE\nordered corners\n[v1, v2, v3]\nMESH\nmany faces\n[f1, f2, f3…]\nA POSITION IS NOT A DISPLACEMENT. THE SAME THREE NUMBERS MEAN DIFFERENT THINGS DEPENDING ON WHICH ONE YOU MEANT.\nNothing here is new geometry. It is the same collection, read at a different level: a face is a list of vertices, a mesh is a list of faces, and next week an array will \nbe a list of copies.",
+      "A FACE IS AN ORDERED LIST OF CORNERS\nSame three vertices, two different faces. The order is the difference.\nWINDING ORDER\nv0\nv1\n v2\nf = [v0, v1, v2]\n  normal → toward you\n \nf = [v0, v2, v1]\n  normal → away\nWHY IT MATTERS LATER\nA flipped face tells a renderer the inside is the outside.\n \nIt tells a slicer there is nothing to fill.\n \nMost failed prints this semester will start here, not at the \nprinter.\nCLOSED MEANS EVERY EDGE IS SHARED BY EXACTLY TWO FACES. CHECK IT BEFORE YOU BELIEVE IT.",
+      "THE PYRAMID\nFive vertices, eight edges, five faces. Built by hand, driven by three numbers.\nWHAT YOU ASSEMBLE\n5\nVERTICES\nfour base corners and an apex\n8\nEDGES\nfour around the base, four to the apex\n5\nFACES\nfour triangular sides and the base\nEXPOSED INPUTS\nWidth\nDepth\nHeight\n \nThree numbers, and the whole solid rebuilds. That is the entire \npoint of the exercise.\nDO NOT FORGET THE BASE FACE. A PYRAMID WITH FOUR SIDES AND NO BOTTOM IS NOT A SOLID.",
+      "AND THEN IT GOES BACK INTO LAST WEEK'S FILE\nThe pyramid is not an exercise. It is the cutter for the study you already built.\n01   BUILD IT\nFive vertices, five faces, closed, \nwith Width / Depth / Height \nexposed.\n02   SUBTRACT IT\nCube minus pyramid. The same \nBoolean from Week 2, with \nyour own solid.\n03   DRIVE IT\nChange the three inputs and \nshow at least three settings of \nthe result.\n04   EXPLAIN IT\nFace order, normals, closure — \nwhy it cuts cleanly instead of \nfailing.\nTHIS IS WHY P1 IS ONE PROJECT AND NOT THREE ASSIGNMENTS.\nEvery project in this course does the same thing — the geometry you make in one milestone becomes the input to the next. You will never start from an \nunrelated object.",
+      "THE SAME THING, WRITTEN OUT\nA mesh is two lists. That is the entire idea, and it fits on one slide.\nverts = [[-w, -d, 0],              # 0\n         [ w, -d, 0],              # 1\n         [ w,  d, 0],              # 2\n         [-w,  d, 0],              # 3\n         [ 0,  0, h]]              # 4  apex\n \nfaces = [[0, 1, 4], [1, 2, 4],\n         [2, 3, 4], [3, 0, 4],\n         [0, 3, 2, 1]]             # the base — do not forget it\n \npyramid = mesh(verts, faces)\nresult  = difference(cube, pyramid)\nWHAT IT MAPS ONTO\npoint\nvector\nparameter\nvertex\nline\nedge\nface\nmesh\nsolid\nnormal\nverts IS A LIST OF POSITIONS. faces IS A LIST OF INDICES INTO IT.",
+      "ISSUED TODAY\nP1b — PANEL FROM SCRATCH\nDUE WEEK 5 — Sep 22   /   7%\nFind a panel in a building you like, keep it simple, and build it out of two lists - points and faces. It is the component you will array in P2 \nand the object you will print, so choose something that tiles.\nFIND\nA PANEL\nOne precedent, simple. It has to \nsit beside itself and close.\nDECIDE\nWHAT MOVES\nThe parameters, first. One has \nto change its shape, not its box.\nBUILD\nFROM TWO LISTS\nEvery point an expression of \nthose numbers. Never a typed \ncoordinate.\nSHOW\nTHE RANGE\nLow, middle, high - still closing, \nstill tiling. P2b drives it.",
+      "REQUIREMENTS — P1b\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\n Find one panel in a built precedent and keep it simple. Choose it by one test: could you set it beside three copies of itself, edge to edge, and have the \ngrid close? Name the building, the architect and your source on the sheet.\n02\n Decide the parameters before you model anything, and say in one line what each does. At least one must change the panel's shape — an aperture, a \nfold depth, a corner offset — not its bounding box.\n03\n Rebuild it from scratch: an explicit point list and an explicit face list, every point an expression of those parameters rather than a typed coordinate. \nNothing collapsed, and it closes.\n04\n State each parameter's working range — where the panel still closes and still tiles — and show it at the low, middle and high end of the one an attractor \nwill drive in P2b.\n05\n One 17 × 11 inch sheet, and one image on it: the panel rendered on a ground plane, one material, studio light, no context and no entourage. The \nobject, its structure and nothing else.\n06\n Print the point list, the face list and the parameter table beside the render, and annotate the vertex order of one face. Explain normals, closure, and \nwhat breaks when a face is wound backwards.",
+      "ALSO ISSUED\nP1c — FIRST PRINT\nDUE WEEK 8 — Oct 13   /   7%\nThe same geometry, made real. A printable variant of the project you have been building for two weeks — presented as a physical object \nat the midterm.\nLIMIT\n60 MM, 200 G\nEach axis within 60 mm. The allocation \nincludes failures.\nRULE\nNO SUPPORTS\nOrientation is your only lever. Change the \ngeometry if you must.\nDUE\nAT THE MIDTERM\nThe queue has latency the two-week cycle \ndoes not.",
+      "REQUIREMENTS — P1c\nFabrication milestone — visual documentation 20% · computational understanding 20% · technical execution 15% · fabrication quality 30% · experimentation \n5% · requirements 10%.\n01\n Develop a printable variant of the geometry project, within 60 mm on each axis and the 200 g allocation, with no supports.\n02\n Present the physical print at midterm with one orientation/process sheet and a photograph.\n03\n Submit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.\nCHECKPOINT · WEEK 5 — Sep 22 — Review print-ready geometry, physical units, orientation and the sliced preview before queueing.",
+      "NOW — BUILD THE PYRAMID\nRest of the session: from a single point to a closed solid that cuts.\n✓\n One point placed from an XYZ vector, and you can say why it is a position\n✓\n Four base corners and an apex, with Width / Depth / Height exposed\n✓\n All five faces joined — four sides and the base\n✓\n Closure checked: every edge shared by exactly two faces\n✓\n Cube minus pyramid working, off the same three inputs\n✓\n Your own panel named, and the numbers that will drive it written down\nLEAVE WITH A SOLID THAT CUTS. THE SHEET IS THE EASY PART.",
+      "BEFORE NEXT CLASS\nWATCH\nU04 — Arrays and lists. Repeat Zone, Compare and Switch, and the nested grid. We start small and inspectable before \nanything scales up.\nFINISH\nP1a is due next class: eight or nine numbered diagrams, the last one developed at building scale with a figure and planting, \nand the sequence written as pseudocode.\nFIND\nThe panel. One building, one repeating component, simple enough to write as two lists, and it has to sit beside itself without \na gap. Name the building and your source, and bring its point and face lists started - next week it gets repeated.\nCHECK\nYour FabLab orientation, before you need the machine rather than after."
+    ],
+    "page_count_matches": true
+  },
+  {
+    "file": "slides/ARC3133_Class04.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "CLASS 04  /  SEP 15\nGEOMETRY\nFROM SCRATCH\nP1 CONTINUES — WHAT A SOLID IS MADE OF, UNDERNEATH\nP1a DUE\nP1b + P1c ISSUED TODAY"
+      },
+      {
+        "slide": 2,
+        "text": "POINT → LINE → EDGE → FACE → SOLID\nFive steps, and each one is a list of the thing before it.\nPOINT\nthree numbers\n[x, y, z]\nLINE\ntwo positions\n[p1, p2]\nEDGE\ntwo vertices\n[v1, v2]\nFACE\nordered corners\n[v1, v2, v3]\nMESH\nmany faces\n[f1, f2, f3…]\nA POSITION IS NOT A DISPLACEMENT. THE SAME THREE NUMBERS MEAN DIFFERENT THINGS DEPENDING ON WHICH ONE YOU MEANT.\nNothing here is new geometry. It is the same collection, read at a different level: a face is a list of vertices, a mesh is a list of faces, and in Week 6 an array will be a list of copies."
+      },
+      {
+        "slide": 3,
+        "text": "A FACE IS AN ORDERED LIST OF CORNERS\nSame three vertices, two different faces. The order is the difference.\nWINDING ORDER\nv0\nv1\nv2\nf = [v0, v1, v2]\n  normal → toward you\n \nf = [v0, v2, v1]\n  normal → away\nWHY IT MATTERS LATER\nA flipped face tells a renderer the inside is the outside.\n \nIt tells a slicer there is nothing to fill.\n \nMost failed prints this semester will start here, not at the printer.\nCLOSED MEANS EVERY EDGE IS SHARED BY EXACTLY TWO FACES. CHECK IT BEFORE YOU BELIEVE IT."
+      },
+      {
+        "slide": 4,
+        "text": "THE PYRAMID\nFive vertices, eight edges, five faces. Built by hand, driven by three numbers.\nWHAT YOU ASSEMBLE\n5\nVERTICES\nfour base corners and an apex\n8\nEDGES\nfour around the base, four to the apex\n5\nFACES\nfour triangular sides and the base\nEXPOSED INPUTS\nWidth\nDepth\nHeight\n \nThree numbers, and the whole solid rebuilds. That is the entire point of the exercise.\nDO NOT FORGET THE BASE FACE. A PYRAMID WITH FOUR SIDES AND NO BOTTOM IS NOT A SOLID."
+      },
+      {
+        "slide": 5,
+        "text": "AND THEN IT GOES BACK INTO THE CSG FILE\nThe pyramid is not an exercise. It is the cutter for the study you already built.\n01   BUILD IT\nFive vertices, five faces, closed, with Width / Depth / Height exposed.\n02   SUBTRACT IT\nCube minus pyramid. The same Boolean from Week 2, with your own solid.\n03   DRIVE IT\nChange the three inputs and show at least three settings of the result.\n04   EXPLAIN IT\nFace order, normals, closure — why it cuts cleanly instead of failing.\nTHIS IS WHY P1 IS ONE PROJECT AND NOT THREE ASSIGNMENTS.\nEvery project in this course does the same thing — the geometry you make in one milestone becomes the input to the next. You will never start from an unrelated object."
+      },
+      {
+        "slide": 6,
+        "text": "THE SAME THING, WRITTEN OUT\nA mesh is two lists. That is the entire idea, and it fits on one slide.\nverts = [[-w, -d, 0],              # 0\n         [ w, -d, 0],              # 1\n         [ w,  d, 0],              # 2\n         [-w,  d, 0],              # 3\n         [ 0,  0, h]]              # 4  apex\n \nfaces = [[0, 1, 4], [1, 2, 4],\n         [2, 3, 4], [3, 0, 4],\n         [0, 3, 2, 1]]             # the base — do not forget it\n \npyramid = mesh(verts, faces)\nresult  = difference(cube, pyramid)\nWHAT IT MAPS ONTO\npoint\nvector\nparameter\nvertex\nline\nedge\nface\nmesh\nsolid\nnormal\nverts IS A LIST OF POSITIONS. faces IS A LIST OF INDICES INTO IT."
+      },
+      {
+        "slide": 7,
+        "text": "ISSUED TODAY\nP1b — PANEL FROM SCRATCH\nDUE WEEK 6 — Sep 29   /   7%\nFind a panel in a building you like, keep it simple, and build it out of two lists - points and faces. It is the component you will array in P2 and the object you will print, so choose something that tiles.\nFIND\nA PANEL\nOne precedent, simple. It has to sit beside itself and close.\nDECIDE\nWHAT MOVES\nThe parameters, first. One has to change its shape, not its box.\nBUILD\nFROM TWO LISTS\nEvery point an expression of those numbers. Never a typed coordinate.\nSHOW\nTHE RANGE\nLow, middle, high - still closing, still tiling. P2b drives it."
+      },
+      {
+        "slide": 8,
+        "text": "REQUIREMENTS — P1b\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\nFind one panel in a built precedent and keep it simple. Choose it by one test: could you set it beside three copies of itself, edge to edge, and have the grid close? Name the building, the architect and your source on the sheet.\n02\nDecide the parameters before you model anything, and say in one line what each does. At least one must change the panel's shape — an aperture, a fold depth, a corner offset — not its bounding box.\n03\nRebuild it from scratch: an explicit point list and an explicit face list, every point an expression of those parameters rather than a typed coordinate. Nothing collapsed, and it closes.\n04\nState each parameter's working range — where the panel still closes and still tiles — and show it at the low, middle and high end of the one an attractor will drive in P2b.\n05\nOne 17 × 11 inch sheet, and one image on it: the panel rendered on a ground plane, one material, studio light, no context and no entourage. The object, its structure and nothing else.\n06\nPrint the point list, the face list and the parameter table beside the render, and annotate the vertex order of one face. Explain normals, closure, and what breaks when a face is wound backwards."
+      },
+      {
+        "slide": 9,
+        "text": "ALSO ISSUED\nP1c — FIRST PRINT\nDUE WEEK 10 — Oct 27   /   7%\nThe same geometry, made real. A printable variant of the project you have been building since Week 2 — presented as a physical object at the midterm.\nLIMIT\n60 MM, 200 G\nEach axis within 60 mm. The allocation includes failures.\nRULE\nNO SUPPORTS\nOrientation is your only lever. Change the geometry if you must.\nDUE\nAT THE MIDTERM\nThe queue has latency the two-week cycle does not."
+      },
+      {
+        "slide": 10,
+        "text": "REQUIREMENTS — P1c\nFabrication milestone — visual documentation 20% · computational understanding 20% · technical execution 15% · fabrication quality 30% · experimentation 5% · requirements 10%.\n01\nDevelop a printable variant of the geometry project, within 60 mm on each axis and the 200 g allocation, with no supports.\n02\nPresent the physical print at midterm with one orientation/process sheet and a photograph.\n03\nSubmit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.\nCHECKPOINT · WEEK 6 — Sep 29 — Review print-ready geometry, physical units, orientation and the sliced preview before queueing."
+      },
+      {
+        "slide": 11,
+        "text": "NOW — BUILD THE PYRAMID\nRest of the session: from a single point to a closed solid that cuts.\n✓\nOne point placed from an XYZ vector, and you can say why it is a position\n✓\nFour base corners and an apex, with Width / Depth / Height exposed\n✓\nAll five faces joined — four sides and the base\n✓\nClosure checked: every edge shared by exactly two faces\n✓\nCube minus pyramid working, off the same three inputs\n✓\nYour own panel named, and the numbers that will drive it written down\nLEAVE WITH A SOLID THAT CUTS. THE SHEET IS THE EASY PART."
+      },
+      {
+        "slide": 12,
+        "text": "BEFORE NEXT CLASS\nCONTINUE\nU03 runs into next class. Build the panel from its own point and face lists; arrays start in Week 6, once the panel closes.\nFINISH\nP1a is due today. P1b — the panel sheet — is due Week 6, two weeks from now.\nFIND\nThe panel. One building, one repeating component, simple enough to write as two lists, and it has to sit beside itself without a gap. Name the building and your source, and bring its point and face lists started - next class we build it.\nCHECK\nYour FabLab orientation now. P1c print-ready geometry is reviewed in Week 6."
+      }
+    ],
+    "pdf_exists": true,
+    "pdf_pages": 12,
+    "pdf_text": [
+      "CLASS 04  /  SEP 15\nGEOMETRY\nFROM SCRATCH\nP1 CONTINUES — WHAT A SOLID IS MADE OF, UNDERNEATH P1a DUE\nP1b + P1c ISSUED TODAY",
+      "POINT → LINE → EDGE → FACE → SOLID\nFive steps, and each one is a list of the thing before it.\nPOINT\nthree numbers\n[x, y, z]\nLINE\ntwo positions\n[p1, p2]\nEDGE\ntwo vertices\n[v1, v2]\nFACE\nordered corners\n[v1, v2, v3]\nMESH\nmany faces\n[f1, f2, f3…]\nA POSITION IS NOT A DISPLACEMENT. THE SAME THREE NUMBERS MEAN DIFFERENT THINGS DEPENDING ON WHICH ONE YOU MEANT.\nNothing here is new geometry. It is the same collection, read at a different level: a face is a list of vertices, a mesh is a list of faces, and in Week 6 an array will \nbe a list of copies.",
+      "A FACE IS AN ORDERED LIST OF CORNERS\nSame three vertices, two different faces. The order is the difference.\nWINDING ORDER\nv0\nv1\n v2\nf = [v0, v1, v2]\n  normal → toward you\n \nf = [v0, v2, v1]\n  normal → away\nWHY IT MATTERS LATER\nA flipped face tells a renderer the inside is the outside.\n \nIt tells a slicer there is nothing to fill.\n \nMost failed prints this semester will start here, not at the \nprinter.\nCLOSED MEANS EVERY EDGE IS SHARED BY EXACTLY TWO FACES. CHECK IT BEFORE YOU BELIEVE IT.",
+      "THE PYRAMID\nFive vertices, eight edges, five faces. Built by hand, driven by three numbers.\nWHAT YOU ASSEMBLE\n5\nVERTICES\nfour base corners and an apex\n8\nEDGES\nfour around the base, four to the apex\n5\nFACES\nfour triangular sides and the base\nEXPOSED INPUTS\nWidth\nDepth\nHeight\n \nThree numbers, and the whole solid rebuilds. That is the entire \npoint of the exercise.\nDO NOT FORGET THE BASE FACE. A PYRAMID WITH FOUR SIDES AND NO BOTTOM IS NOT A SOLID.",
+      "AND THEN IT GOES BACK INTO THE CSG FILE\nThe pyramid is not an exercise. It is the cutter for the study you already built.\n01   BUILD IT\nFive vertices, five faces, closed, \nwith Width / Depth / Height \nexposed.\n02   SUBTRACT IT\nCube minus pyramid. The same \nBoolean from Week 2, with \nyour own solid.\n03   DRIVE IT\nChange the three inputs and \nshow at least three settings of \nthe result.\n04   EXPLAIN IT\nFace order, normals, closure — \nwhy it cuts cleanly instead of \nfailing.\nTHIS IS WHY P1 IS ONE PROJECT AND NOT THREE ASSIGNMENTS.\nEvery project in this course does the same thing — the geometry you make in one milestone becomes the input to the next. You will never start from an \nunrelated object.",
+      "THE SAME THING, WRITTEN OUT\nA mesh is two lists. That is the entire idea, and it fits on one slide.\nverts = [[-w, -d, 0],              # 0\n         [ w, -d, 0],              # 1\n         [ w,  d, 0],              # 2\n         [-w,  d, 0],              # 3\n         [ 0,  0, h]]              # 4  apex\n \nfaces = [[0, 1, 4], [1, 2, 4],\n         [2, 3, 4], [3, 0, 4],\n         [0, 3, 2, 1]]             # the base — do not forget it\n \npyramid = mesh(verts, faces)\nresult  = difference(cube, pyramid)\nWHAT IT MAPS ONTO\npoint\nvector\nparameter\nvertex\nline\nedge\nface\nmesh\nsolid\nnormal\nverts IS A LIST OF POSITIONS. faces IS A LIST OF INDICES INTO IT.",
+      "ISSUED TODAY\nP1b — PANEL FROM SCRATCH\nDUE WEEK 6 — Sep 29   /   7%\nFind a panel in a building you like, keep it simple, and build it out of two lists - points and faces. It is the component you will array in P2 \nand the object you will print, so choose something that tiles.\nFIND\nA PANEL\nOne precedent, simple. It has to \nsit beside itself and close.\nDECIDE\nWHAT MOVES\nThe parameters, first. One has \nto change its shape, not its box.\nBUILD\nFROM TWO LISTS\nEvery point an expression of \nthose numbers. Never a typed \ncoordinate.\nSHOW\nTHE RANGE\nLow, middle, high - still closing, \nstill tiling. P2b drives it.",
+      "REQUIREMENTS — P1b\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\n Find one panel in a built precedent and keep it simple. Choose it by one test: could you set it beside three copies of itself, edge to edge, and have the \ngrid close? Name the building, the architect and your source on the sheet.\n02\n Decide the parameters before you model anything, and say in one line what each does. At least one must change the panel's shape — an aperture, a \nfold depth, a corner offset — not its bounding box.\n03\n Rebuild it from scratch: an explicit point list and an explicit face list, every point an expression of those parameters rather than a typed coordinate. \nNothing collapsed, and it closes.\n04\n State each parameter's working range — where the panel still closes and still tiles — and show it at the low, middle and high end of the one an attractor \nwill drive in P2b.\n05\n One 17 × 11 inch sheet, and one image on it: the panel rendered on a ground plane, one material, studio light, no context and no entourage. The \nobject, its structure and nothing else.\n06\n Print the point list, the face list and the parameter table beside the render, and annotate the vertex order of one face. Explain normals, closure, and \nwhat breaks when a face is wound backwards.",
+      "ALSO ISSUED\nP1c — FIRST PRINT\nDUE WEEK 10 — Oct 27   /   7%\nThe same geometry, made real. A printable variant of the project you have been building since Week 2 — presented as a physical object \nat the midterm.\nLIMIT\n60 MM, 200 G\nEach axis within 60 mm. The allocation \nincludes failures.\nRULE\nNO SUPPORTS\nOrientation is your only lever. Change the \ngeometry if you must.\nDUE\nAT THE MIDTERM\nThe queue has latency the two-week cycle \ndoes not.",
+      "REQUIREMENTS — P1c\nFabrication milestone — visual documentation 20% · computational understanding 20% · technical execution 15% · fabrication quality 30% · experimentation \n5% · requirements 10%.\n01\n Develop a printable variant of the geometry project, within 60 mm on each axis and the 200 g allocation, with no supports.\n02\n Present the physical print at midterm with one orientation/process sheet and a photograph.\n03\n Submit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.\nCHECKPOINT · WEEK 6 — Sep 29 — Review print-ready geometry, physical units, orientation and the sliced preview before queueing.",
+      "NOW — BUILD THE PYRAMID\nRest of the session: from a single point to a closed solid that cuts.\n✓\n One point placed from an XYZ vector, and you can say why it is a position\n✓\n Four base corners and an apex, with Width / Depth / Height exposed\n✓\n All five faces joined — four sides and the base\n✓\n Closure checked: every edge shared by exactly two faces\n✓\n Cube minus pyramid working, off the same three inputs\n✓\n Your own panel named, and the numbers that will drive it written down\nLEAVE WITH A SOLID THAT CUTS. THE SHEET IS THE EASY PART.",
+      "BEFORE NEXT CLASS\nCONTINUE\nU03 runs into next class. Build the panel from its own point and face lists; arrays start in Week 6, once the panel closes.\nFINISH\nP1a is due today. P1b — the panel sheet — is due Week 6, two weeks from now.\nFIND\nThe panel. One building, one repeating component, simple enough to write as two lists, and it has to sit beside itself without \na gap. Name the building and your source, and bring its point and face lists started - next class we build it.\nCHECK\nYour FabLab orientation now. P1c print-ready geometry is reviewed in Week 6."
+    ],
+    "page_count_matches": true
+  },
+  {
+    "file": "slides/ARC3133_Class05.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "CLASS 05  /  SEP 22\nARRAYS AND LISTS\nPART TWO\nSTAGGER IT, SPIN IT, BEND IT\nP1b DUE\nU04 CONTINUES  /  P2a IN PROGRESS, DUE AT THE MIDTERM"
+      },
+      {
+        "slide": 2,
+        "text": "FOUR ARRANGEMENTS\nSame component, four rules for generating the list of positions.\nLINEAR\none counter\nGRID\ntwo counters\nHEXAGONAL\nstagger alternate rows\nRADIAL\nradius, count, angular step\nEvery one of these is the same operation — move, repeated, with the amount driven by a counter. Only the rule for the counter changes."
+      },
+      {
+        "slide": 3,
+        "text": "HEXAGONAL IS A GRID WITH AN ODD/EVEN TEST\nStagger alternate rows by half the spacing. Keep the row spacing consistent.\nTHE TEST\noffset = (j mod 2 == 0) ? 0 : dx / 2\n \nModulo asks: is this row odd or even? Compare turns that into True or False, and Switch picks the offset. The same two nodes as last week.\n \nRow spacing is not dx. If you use the same number for both, you get a squashed grid, not a hex field.\nWHAT IT LOOKS LIKE\nA BRICK BOND IS A HEXAGONAL ARRAY. SO IS A HONEYCOMB. SO IS HALF THE PAVING YOU WALK ON."
+      },
+      {
+        "slide": 4,
+        "text": "RADIAL IS POLAR ARITHMETIC\nRadius, count, angular step. The index drives the angle.\nTHE RULE\nstep  = 360 / count\nθ[i]  = i × step\np[i]  = c + r · (cos θ, sin θ)\n \nThe same rotation arithmetic from Week 2 — the one place where x and y have to talk to each other — now generating positions instead of moving a solid.\nTWO KNOBS\nChange the count and the step changes with it. Change the radius per ring and it opens up.\nIF YOUR LAST ELEMENT LANDS ON TOP OF YOUR FIRST, YOU DIVIDED BY THE WRONG NUMBER."
+      },
+      {
+        "slide": 5,
+        "text": "MOVE ONLY SOME OF THEM\nSelect a range of indices with comparisons, and displace just those.\nBEFORE\nEvery element identical. The index is computed, then ignored.\nAFTER\nIndices 3 to 5 lifted. One Compare, one Switch, one Set Position.\nTHE FIELD STOPS BEING WALLPAPER THE MOMENT A TEST DECIDES SOMETHING."
+      },
+      {
+        "slide": 6,
+        "text": "SINE GIVES YOU A SMOOTH RULE\nMath set to Sine, driven by the index. Three words describe the whole curve.\nTHREE PARAMETERS\nAMPLITUDE\nhow far it swings\nFREQUENCY\nhow many swings across the set\nPHASE\nwhere in the swing it starts\nh[i] = amp × sin(i × freq + phase)\nREAD IT AS A CURVE\nConnect the ordered points and the list becomes a curve. That is the same list — read as a shape instead of as positions.\nNAME THE THREE VALUES ON YOUR SHEET. P2a ASKS FOR THEM EXPLICITLY."
+      },
+      {
+        "slide": 7,
+        "text": "TWO WAYS TO REPEAT\nWorth being precise about, because they look alike and are not.\nEXPLICIT ITERATION\nA Repeat Zone runs a body once per step, in order, carrying a value forward.\n \nUse it when step n depends on step n−1 — and when you want to watch the loop happen.\nPER-ELEMENT EVALUATION\nThe other kind is evaluated across every element at once. There is no order and no carry.\n \nIt is faster and it is usually what you want — but nothing on screen tells you a loop happened, which is exactly why we built the explicit one first.\nNEXT WEEK THIS GETS A NAME. FOR NOW: ONE CARRIES A VALUE FORWARD, THE OTHER DOES NOT."
+      },
+      {
+        "slide": 8,
+        "text": "THE SAME NINE LINES, A WEEK LATER\nLast week you could read the first three lines. Today you can read all of it.\npoints = []\n \nfor j in range(rows):                      # nested loop = grid\n    offset = spacing / 2 if j % 2 else 0   # odd/even stagger\n    for i in range(cols):\n        z = amplitude * sin(i * frequency + phase)\n        if 3 <= i <= 5:                    # Compare + Switch\n            z = z + lift\n        points.append([i * spacing + offset, j * row_gap, z])\nWHAT IT MAPS ONTO\nlist\nindex\ncount\nloop\nnested loop\nconditional\nmodulo\nsine\namplitude\nfrequency\nphase\nj % 2 IS THE ODD/EVEN TEST · if IS COMPARE AND SWITCH · sin IS THE MATH NODE"
+      },
+      {
+        "slide": 9,
+        "text": "NOW — FINISH THE FOUR\nRest of the session: hexagonal, radial, the conditional and the sine.\n✓\nHexagonal array working, with the odd/even test visible and row spacing correct\n✓\nRadial array working from radius, count and angular step\n✓\nOne index range displaced — and you can say which indices and why\n✓\nSine driving height, with amplitude, frequency and phase written down\n✓\nThree of the four chosen for the sheet, including the nested grid\nP2a IS THREE COMPARISONS, NOT FOUR UNRELATED PICTURES."
+      },
+      {
+        "slide": 10,
+        "text": "BEFORE NEXT CLASS\nWATCH\nU05 — Attractors. Distance, remap, clamp and falloff. Next week the rule stops coming from the index and starts coming from a measurement.\nBRING\nYour four arrangements, working. We drive them with attractors next class, so bring a file you can build on.\nCHECK\nP1c — print-ready geometry, physical units, orientation and the sliced preview get reviewed today before anything is queued.\nFINISH\nP1b is due today. P2a is due at the midterm; keep the comparisons moving."
+      }
+    ],
+    "pdf_exists": true,
+    "pdf_pages": 10,
+    "pdf_text": [
+      "CLASS 05  /  SEP 22\nARRAYS AND LISTS\nPART TWO\nSTAGGER IT, SPIN IT, BEND IT P1b DUE\nU04 CONTINUES  /  P2a IN PROGRESS, DUE AT THE MIDTERM",
+      "FOUR ARRANGEMENTS\nSame component, four rules for generating the list of positions.\nLINEAR\none counter\nGRID\ntwo counters\nHEXAGONAL\nstagger alternate rows\nRADIAL\nradius, count, angular step\nEvery one of these is the same operation — move, repeated, with the amount driven by a counter. Only the rule for the counter changes.",
+      "HEXAGONAL IS A GRID WITH AN ODD/EVEN TEST\nStagger alternate rows by half the spacing. Keep the row spacing consistent.\nTHE TEST\noffset = (j mod 2 == 0) ? 0 : dx / 2\n \nModulo asks: is this row odd or even? Compare turns that into True or \nFalse, and Switch picks the offset. The same two nodes as last week.\n \nRow spacing is not dx. If you use the same number for both, you get a \nsquashed grid, not a hex field.\nWHAT IT LOOKS LIKE\nA BRICK BOND IS A HEXAGONAL ARRAY. SO IS A HONEYCOMB. SO IS HALF THE PAVING YOU WALK ON.",
+      "RADIAL IS POLAR ARITHMETIC\nRadius, count, angular step. The index drives the angle.\nTHE RULE\nstep  = 360 / count\nθ[i]  = i × step\np[i]  = c + r · (cos θ, sin θ)\n \nThe same rotation arithmetic from Week 2 — the one place where x \nand y have to talk to each other — now generating positions instead \nof moving a solid.\nTWO KNOBS\nChange the count and the step changes with it. Change the radius \nper ring and it opens up.\nIF YOUR LAST ELEMENT LANDS ON TOP OF YOUR FIRST, YOU DIVIDED BY THE WRONG NUMBER.",
+      "MOVE ONLY SOME OF THEM\nSelect a range of indices with comparisons, and displace just those.\nBEFORE\nEvery element identical. The index is computed, then ignored.\nAFTER\nIndices 3 to 5 lifted. One Compare, one Switch, one Set Position.\nTHE FIELD STOPS BEING WALLPAPER THE MOMENT A TEST DECIDES SOMETHING.",
+      "SINE GIVES YOU A SMOOTH RULE\nMath set to Sine, driven by the index. Three words describe the whole curve.\nTHREE PARAMETERS\nAMPLITUDE how far it swings\nFREQUENCY how many swings across the set\nPHASE where in the swing it starts\nh[i] = amp × sin(i × freq + phase)\nREAD IT AS A CURVE\nConnect the ordered points and the list becomes a curve. That is \nthe same list — read as a shape instead of as positions.\nNAME THE THREE VALUES ON YOUR SHEET. P2a ASKS FOR THEM EXPLICITLY.",
+      "TWO WAYS TO REPEAT\nWorth being precise about, because they look alike and are not.\nEXPLICIT ITERATION\nA Repeat Zone runs a body once per step, in order, carrying a value \nforward.\n \nUse it when step n depends on step n−1 — and when you want to \nwatch the loop happen.\nPER-ELEMENT EVALUATION\nThe other kind is evaluated across every element at once. There \nis no order and no carry.\n \nIt is faster and it is usually what you want — but nothing on \nscreen tells you a loop happened, which is exactly why we built \nthe explicit one first.\nNEXT WEEK THIS GETS A NAME. FOR NOW: ONE CARRIES A VALUE FORWARD, THE OTHER DOES NOT.",
+      "THE SAME NINE LINES, A WEEK LATER\nLast week you could read the first three lines. Today you can read all of it.\npoints = []\n \nfor j in range(rows):                      # nested loop = grid\n    offset = spacing / 2 if j % 2 else 0   # odd/even stagger\n    for i in range(cols):\n        z = amplitude * sin(i * frequency + phase)\n        if 3 <= i <= 5:                    # Compare + Switch\n            z = z + lift\n        points.append([i * spacing + offset, j * row_gap, z])\nWHAT IT MAPS ONTO\nlist\nindex\ncount\nloop\nnested loop\nconditional\nmodulo\nsine\namplitude\nfrequency\nphase\nj % 2 IS THE ODD/EVEN TEST · if IS COMPARE AND SWITCH · sin IS THE MATH NODE",
+      "NOW — FINISH THE FOUR\nRest of the session: hexagonal, radial, the conditional and the sine.\n✓\n Hexagonal array working, with the odd/even test visible and row spacing correct\n✓\n Radial array working from radius, count and angular step\n✓\n One index range displaced — and you can say which indices and why\n✓\n Sine driving height, with amplitude, frequency and phase written down\n✓\n Three of the four chosen for the sheet, including the nested grid\nP2a IS THREE COMPARISONS, NOT FOUR UNRELATED PICTURES.",
+      "BEFORE NEXT CLASS\nWATCH\nU05 — Attractors. Distance, remap, clamp and falloff. Next week the rule stops coming from the index and starts coming \nfrom a measurement.\nBRING\nYour four arrangements, working. We drive them with attractors next class, so bring a file you can build on.\nCHECK\nP1c — print-ready geometry, physical units, orientation and the sliced preview get reviewed today before anything is \nqueued.\nFINISH\nP1b is due today. P2a is due at the midterm; keep the comparisons moving."
+    ],
+    "page_count_matches": true
+  },
+  {
+    "file": "slides/ARC3133_Class06.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "CLASS 06  /  SEP 29\nARRAYS AND LISTS\nPART ONE\nP2 BEGINS — ONE COMPONENT, MANY POSITIONS\nP1b DUE\nP2a ISSUED TODAY"
+      },
+      {
+        "slide": 2,
+        "text": "AN ARRAY IS A LIST OF POSITIONS\nNot a command that duplicates things. A list you compute, then place geometry at.\nINDEX  →  POSITION\ni = 0   →   p = start\ni = 1   →   p = start + step\ni = 2   →   p = start + 2 × step\n \np[i] = start + i × step\nTHREE THINGS TO READ\nTHE LIST — what is in the collection.\nTHE COUNT — how many there are.\nTHE INDEX — where each one sits in the order.\n \nThe index is the only new idea. It is a counter that tells each copy how far along it is — and therefore how different it should be.\nYour panel is the component. It does not change today — only where it goes."
+      },
+      {
+        "slide": 3,
+        "text": "THE REPEAT ZONE\nThe loop, made visible. Repeat Input, a body, Repeat Output.\nWHAT IT IS\nRepeat Input   →  body  →  Repeat Output\n \nEverything between the two runs once per iteration. Whatever you hand to Repeat Input comes back changed, once for every step of the count.\nREAD IT SMALL FIRST\nSet the count to 3 and look at the spreadsheet.\n \nThen 5. Then 20.\n \nA collection you cannot inspect is a collection you cannot debug. There is no prize for a large count.\nBUILD IT AT A COUNT YOU CAN COUNT. SCALE UP ONLY ONCE IT IS RIGHT."
+      },
+      {
+        "slide": 4,
+        "text": "COMPARE + SWITCH IS AN IF STATEMENT\nTest a value, then act on the answer. Two nodes, one idea.\nTHE PATTERN\nCompare   index  >  4     →  True / False\nSwitch    False → a\n          True  → b\n \nCompare asks the question. Switch chooses between two answers. Everything conditional in this course is those two nodes.\nWHAT IT BUYS YOU\nMove only a range of indices.\nCull every third element.\nGive the first row a different height.\n \nThe field stops being uniform the moment a test decides something.\nCOMPARE THE RESULT AT TWO DIFFERENT COUNTS. IF IT ONLY WORKS AT ONE, IT IS NOT A RULE."
+      },
+      {
+        "slide": 5,
+        "text": "NEST IT AND YOU HAVE A GRID\nTwo counters instead of one. A list of lists.\nONE COUNTER\np[i] = start + i × step\n \ncount = 8\nTWO COUNTERS\np[i][j] = start + (i × dx, j × dy)      count = 8 × 5 = 40\nPREDICT THE TOTAL BEFORE YOU LOOK. IF THE NUMBER SURPRISES YOU, THE NESTING IS WRONG."
+      },
+      {
+        "slide": 6,
+        "text": "THE SAME THING, WRITTEN OUT\nEverything in U04 is in these nine lines — the nested loop, the stagger, the conditional, the sine.\npoints = []\n \nfor j in range(rows):                      # nested loop = grid\n    offset = spacing / 2 if j % 2 else 0   # odd/even stagger\n    for i in range(cols):\n        z = amplitude * sin(i * frequency + phase)\n        if 3 <= i <= 5:                    # Compare + Switch\n            z = z + lift\n        points.append([i * spacing + offset, j * row_gap, z])\nWHAT IT MAPS ONTO\nlist\nindex\ncount\nloop\nnested loop\nconditional\nmodulo\nsine\namplitude\nfrequency\nphase\nTHE INDENTATION IS THE NESTING. THAT IS WHY A GRID IS A LOOP INSIDE A LOOP."
+      },
+      {
+        "slide": 7,
+        "text": "ISSUED TODAY\nP2a — ARRAYS AND CONDITIONAL CONTROL\nDUE WEEK 8 — Oct 13   /   7%\nTake the panel you built in P1b and use it, unchanged, as the component. First design its arrangement, then vary that arrangement through external measurements.  This milestone is the arrangement half: four ways of placing the same component, three of them developed, with the repetition and selection logic built from basic nodes.\nBUILD\nFOUR ARRANGEMENTS\nLinear, nested grid, hexagonal, radial — the grid is required.\nCONTROL\nONE CONDITIONAL\nAn index range displaced, using Compare and Switch.\nVARY\nONE SINE\nAmplitude, frequency and phase, named and demonstrated."
+      },
+      {
+        "slide": 8,
+        "text": "REQUIREMENTS — P2a\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\nArray the P1b panel — linear, nested grid, hexagonal and radial — and develop three comparisons on up to two sheets, including the nested grid.\n02\nKeep the panel itself unchanged while comparing arrangements; only its positions move. Expose count and spacing or radius and explain index order.\n03\nShow one conditional index-range displacement and one sine-driven variation; identify amplitude, frequency and phase.\n04\nBuild the repetition and selection logic from basic nodes. Show a small inspectable count before scaling up; no minimum of 1,000 elements is imposed."
+      },
+      {
+        "slide": 9,
+        "text": "NOW — YOUR FIRST ARRAY\nRest of the session: a linear array, a conditional, and a grid you can predict.\n✓\nYour panel instanced along a linear array, count and spacing exposed\n✓\nThe spreadsheet open — list, count and index all readable at count = 5\n✓\nCompare and Switch changing one range of indices\n✓\nThe array nested into a grid, and you predicted the total before looking\n✓\nIndex order explained out loud: which way does i run, and what happens if you swap it\nA COUNT YOU CAN COUNT. NOT A THOUSAND OF ANYTHING, YET."
+      },
+      {
+        "slide": 10,
+        "text": "BEFORE NEXT CLASS\nCONTINUE\nU04 — the same unit runs into next week. Hexagonal and radial arrangements, conditional displacement and sine control.\nBUILD\nP2a is due Week 8. Start the comparisons now — the sheet is easier when the graphs already exist.\nBRING\nYour grid, working, at a small count, placing the P1b panel you submitted today.\nCHECK\nP1c: print-ready geometry, physical units and orientation are reviewed today before anything goes in the queue."
+      }
+    ],
+    "pdf_exists": true,
+    "pdf_pages": 10,
+    "pdf_text": [
+      "CLASS 06  /  SEP 29\nARRAYS AND LISTS\nPART ONE\nP2 BEGINS — ONE COMPONENT, MANY POSITIONS P1b DUE\nP2a ISSUED TODAY",
+      "AN ARRAY IS A LIST OF POSITIONS\nNot a command that duplicates things. A list you compute, then place geometry at.\nINDEX  →  POSITION\ni = 0   →   p = start\ni = 1   →   p = start + step\ni = 2   →   p = start + 2 × step\n \np[i] = start + i × step\nTHREE THINGS TO READ\nTHE LIST — what is in the collection.\nTHE COUNT — how many there are.\nTHE INDEX — where each one sits in the order.\n \nThe index is the only new idea. It is a counter that tells each copy how \nfar along it is — and therefore how different it should be.\nYour panel is the component. It does not change today — only where it goes.",
+      "THE REPEAT ZONE\nThe loop, made visible. Repeat Input, a body, Repeat Output.\nWHAT IT IS\nRepeat Input   →  body  →  Repeat Output\n \nEverything between the two runs once per iteration. Whatever you hand \nto Repeat Input comes back changed, once for every step of the count.\nREAD IT SMALL FIRST\nSet the count to 3 and look at the spreadsheet.\n \nThen 5. Then 20.\n \nA collection you cannot inspect is a collection you cannot debug. \nThere is no prize for a large count.\nBUILD IT AT A COUNT YOU CAN COUNT. SCALE UP ONLY ONCE IT IS RIGHT.",
+      "COMPARE + SWITCH IS AN IF STATEMENT\nTest a value, then act on the answer. Two nodes, one idea.\nTHE PATTERN\nCompare   index  >  4     →  True / False\nSwitch    False → a\n          True  → b\n \nCompare asks the question. Switch chooses between two answers. \nEverything conditional in this course is those two nodes.\nWHAT IT BUYS YOU\nMove only a range of indices.\nCull every third element.\nGive the first row a different height.\n \nThe field stops being uniform the moment a test decides \nsomething.\nCOMPARE THE RESULT AT TWO DIFFERENT COUNTS. IF IT ONLY WORKS AT ONE, IT IS NOT A RULE.",
+      "NEST IT AND YOU HAVE A GRID\nTwo counters instead of one. A list of lists.\nONE COUNTER\np[i] = start + i × step\n \ncount = 8\nTWO COUNTERS\np[i][j] = start + (i × dx, j × dy)      count = 8 × 5 \n= 40\nPREDICT THE TOTAL BEFORE YOU LOOK. IF THE NUMBER SURPRISES YOU, THE NESTING IS WRONG.",
+      "THE SAME THING, WRITTEN OUT\nEverything in U04 is in these nine lines — the nested loop, the stagger, the conditional, the sine.\npoints = []\n \nfor j in range(rows):                      # nested loop = grid\n    offset = spacing / 2 if j % 2 else 0   # odd/even stagger\n    for i in range(cols):\n        z = amplitude * sin(i * frequency + phase)\n        if 3 <= i <= 5:                    # Compare + Switch\n            z = z + lift\n        points.append([i * spacing + offset, j * row_gap, z])\nWHAT IT MAPS ONTO\nlist\nindex\ncount\nloop\nnested loop\nconditional\nmodulo\nsine\namplitude\nfrequency\nphase\nTHE INDENTATION IS THE NESTING. THAT IS WHY A GRID IS A LOOP INSIDE A LOOP.",
+      "ISSUED TODAY\nP2a — ARRAYS AND CONDITIONAL CONTROL\nDUE WEEK 8 — Oct 13   /   7%\nTake the panel you built in P1b and use it, unchanged, as the component. First design its arrangement, then vary that arrangement \nthrough external measurements.  This milestone is the arrangement half: four ways of placing the same component, three of them \ndeveloped, with the repetition and selection logic built from basic nodes.\nBUILD\nFOUR ARRANGEMENTS\nLinear, nested grid, hexagonal, radial — the \ngrid is required.\nCONTROL\nONE CONDITIONAL\nAn index range displaced, using Compare and \nSwitch.\nVARY\nONE SINE\nAmplitude, frequency and phase, named and \ndemonstrated.",
+      "REQUIREMENTS — P2a\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\nArray the P1b panel — linear, nested grid, hexagonal and radial — and develop three comparisons on up to two sheets, including the nested \ngrid.\n02\nKeep the panel itself unchanged while comparing arrangements; only its positions move. Expose count and spacing or radius and explain \nindex order .\n03\n Show one conditional index-range displacement and one sine-driven variation; identify amplitude, frequency and phase.\n04\nBuild the repetition and selection logic from basic nodes. Show a small inspectable count before scaling up; no minimum of 1,000 elements \nis imposed.",
+      "NOW — YOUR FIRST ARRAY\nRest of the session: a linear array, a conditional, and a grid you can predict.\n✓\n Your panel instanced along a linear array, count and spacing exposed\n✓\n The spreadsheet open — list, count and index all readable at count = 5\n✓\n Compare and Switch changing one range of indices\n✓\n The array nested into a grid, and you predicted the total before looking\n✓\n Index order explained out loud: which way does i run, and what happens if you swap it\nA COUNT YOU CAN COUNT. NOT A THOUSAND OF ANYTHING, YET.",
+      "BEFORE NEXT CLASS\nCONTINUE\nU04 — the same unit runs into next week. Hexagonal and radial arrangements, conditional displacement and sine control.\nBUILD\nP2a is due Week 8. Start the comparisons now — the sheet is easier when the graphs already exist.\nBRING\nYour grid, working, at a small count, placing the P1b panel you submitted today.\nCHECK\nP1c: print-ready geometry, physical units and orientation are reviewed today before anything goes in the queue."
+    ],
+    "page_count_matches": true
+  },
+  {
+    "file": "slides/ARC3133_Class07.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "CLASS 07  /  OCT 6\nARRAYS AND LISTS\nPART TWO\nSTAGGER IT, SPIN IT, BEND IT\nNOTHING DUE\nU04 CONTINUES  /  P2a IN PROGRESS, DUE WEEK 8"
+      },
+      {
+        "slide": 2,
+        "text": "FOUR ARRANGEMENTS\nSame component, four rules for generating the list of positions.\nLINEAR\none counter\nGRID\ntwo counters\nHEXAGONAL\nstagger alternate rows\nRADIAL\nradius, count, angular step\nEvery one of these is the same operation — move, repeated, with the amount driven by a counter. Only the rule for the counter changes."
+      },
+      {
+        "slide": 3,
+        "text": "HEXAGONAL IS A GRID WITH AN ODD/EVEN TEST\nStagger alternate rows by half the spacing. Keep the row spacing consistent.\nTHE TEST\noffset = (j mod 2 == 0) ? 0 : dx / 2\n \nModulo asks: is this row odd or even? Compare turns that into True or False, and Switch picks the offset. The same two nodes as last week.\n \nRow spacing is not dx. If you use the same number for both, you get a squashed grid, not a hex field.\nWHAT IT LOOKS LIKE\nA BRICK BOND IS A HEXAGONAL ARRAY. SO IS A HONEYCOMB. SO IS HALF THE PAVING YOU WALK ON."
+      },
+      {
+        "slide": 4,
+        "text": "RADIAL IS POLAR ARITHMETIC\nRadius, count, angular step. The index drives the angle.\nTHE RULE\nstep  = 360 / count\nθ[i]  = i × step\np[i]  = c + r · (cos θ, sin θ)\n \nThe same rotation arithmetic from Week 2 — the one place where x and y have to talk to each other — now generating positions instead of moving a solid.\nTWO KNOBS\nChange the count and the step changes with it. Change the radius per ring and it opens up.\nIF YOUR LAST ELEMENT LANDS ON TOP OF YOUR FIRST, YOU DIVIDED BY THE WRONG NUMBER."
+      },
+      {
+        "slide": 5,
+        "text": "MOVE ONLY SOME OF THEM\nSelect a range of indices with comparisons, and displace just those.\nBEFORE\nEvery element identical. The index is computed, then ignored.\nAFTER\nIndices 3 to 5 lifted. One Compare, one Switch, one Set Position.\nTHE FIELD STOPS BEING WALLPAPER THE MOMENT A TEST DECIDES SOMETHING."
+      },
+      {
+        "slide": 6,
+        "text": "SINE GIVES YOU A SMOOTH RULE\nMath set to Sine, driven by the index. Three words describe the whole curve.\nTHREE PARAMETERS\nAMPLITUDE\nhow far it swings\nFREQUENCY\nhow many swings across the set\nPHASE\nwhere in the swing it starts\nh[i] = amp × sin(i × freq + phase)\nREAD IT AS A CURVE\nConnect the ordered points and the list becomes a curve. That is the same list — read as a shape instead of as positions.\nNAME THE THREE VALUES ON YOUR SHEET. P2a ASKS FOR THEM EXPLICITLY."
+      },
+      {
+        "slide": 7,
+        "text": "TWO WAYS TO REPEAT\nWorth being precise about, because they look alike and are not.\nEXPLICIT ITERATION\nA Repeat Zone runs a body once per step, in order, carrying a value forward.\n \nUse it when step n depends on step n−1 — and when you want to watch the loop happen.\nPER-ELEMENT EVALUATION\nThe other kind is evaluated across every element at once. There is no order and no carry.\n \nIt is faster and it is usually what you want — but nothing on screen tells you a loop happened, which is exactly why we built the explicit one first.\nNEXT WEEK THIS GETS A NAME. FOR NOW: ONE CARRIES A VALUE FORWARD, THE OTHER DOES NOT."
+      },
+      {
+        "slide": 8,
+        "text": "THE SAME NINE LINES, A WEEK LATER\nLast week you could read the first three lines. Today you can read all of it.\npoints = []\n \nfor j in range(rows):                      # nested loop = grid\n    offset = spacing / 2 if j % 2 else 0   # odd/even stagger\n    for i in range(cols):\n        z = amplitude * sin(i * frequency + phase)\n        if 3 <= i <= 5:                    # Compare + Switch\n            z = z + lift\n        points.append([i * spacing + offset, j * row_gap, z])\nWHAT IT MAPS ONTO\nlist\nindex\ncount\nloop\nnested loop\nconditional\nmodulo\nsine\namplitude\nfrequency\nphase\nj % 2 IS THE ODD/EVEN TEST · if IS COMPARE AND SWITCH · sin IS THE MATH NODE"
+      },
+      {
+        "slide": 9,
+        "text": "NOW — FINISH THE FOUR\nRest of the session: hexagonal, radial, the conditional and the sine.\n✓\nHexagonal array working, with the odd/even test visible and row spacing correct\n✓\nRadial array working from radius, count and angular step\n✓\nOne index range displaced — and you can say which indices and why\n✓\nSine driving height, with amplitude, frequency and phase written down\n✓\nThree of the four chosen for the sheet, including the nested grid\nP2a IS THREE COMPARISONS, NOT FOUR UNRELATED PICTURES."
+      },
+      {
+        "slide": 10,
+        "text": "BEFORE NEXT CLASS\nWATCH\nU05 — Attractors. Distance, remap, clamp and falloff. Next week the rule stops coming from the index and starts coming from a measurement.\nBRING\nYour four arrangements, working. We drive them with attractors next class, so bring a file you can build on.\nCHECK\nP1c — the first print is due at the Week 10 midterm. If it is not queued yet, queue it now.\nFINISH\nNothing is due today. P2a is due next class; keep the comparisons moving."
+      }
+    ],
+    "pdf_exists": true,
+    "pdf_pages": 10,
+    "pdf_text": [
+      "CLASS 07  /  OCT 6\nARRAYS AND LISTS\nPART TWO\nSTAGGER IT, SPIN IT, BEND IT NOTHING DUE\nU04 CONTINUES  /  P2a IN PROGRESS, DUE WEEK 8",
+      "FOUR ARRANGEMENTS\nSame component, four rules for generating the list of positions.\nLINEAR\none counter\nGRID\ntwo counters\nHEXAGONAL\nstagger alternate rows\nRADIAL\nradius, count, angular step\nEvery one of these is the same operation — move, repeated, with the amount driven by a counter. Only the rule for the counter changes.",
+      "HEXAGONAL IS A GRID WITH AN ODD/EVEN TEST\nStagger alternate rows by half the spacing. Keep the row spacing consistent.\nTHE TEST\noffset = (j mod 2 == 0) ? 0 : dx / 2\n \nModulo asks: is this row odd or even? Compare turns that into True or \nFalse, and Switch picks the offset. The same two nodes as last week.\n \nRow spacing is not dx. If you use the same number for both, you get a \nsquashed grid, not a hex field.\nWHAT IT LOOKS LIKE\nA BRICK BOND IS A HEXAGONAL ARRAY. SO IS A HONEYCOMB. SO IS HALF THE PAVING YOU WALK ON.",
+      "RADIAL IS POLAR ARITHMETIC\nRadius, count, angular step. The index drives the angle.\nTHE RULE\nstep  = 360 / count\nθ[i]  = i × step\np[i]  = c + r · (cos θ, sin θ)\n \nThe same rotation arithmetic from Week 2 — the one place where x \nand y have to talk to each other — now generating positions instead \nof moving a solid.\nTWO KNOBS\nChange the count and the step changes with it. Change the radius \nper ring and it opens up.\nIF YOUR LAST ELEMENT LANDS ON TOP OF YOUR FIRST, YOU DIVIDED BY THE WRONG NUMBER.",
+      "MOVE ONLY SOME OF THEM\nSelect a range of indices with comparisons, and displace just those.\nBEFORE\nEvery element identical. The index is computed, then ignored.\nAFTER\nIndices 3 to 5 lifted. One Compare, one Switch, one Set Position.\nTHE FIELD STOPS BEING WALLPAPER THE MOMENT A TEST DECIDES SOMETHING.",
+      "SINE GIVES YOU A SMOOTH RULE\nMath set to Sine, driven by the index. Three words describe the whole curve.\nTHREE PARAMETERS\nAMPLITUDE how far it swings\nFREQUENCY how many swings across the set\nPHASE where in the swing it starts\nh[i] = amp × sin(i × freq + phase)\nREAD IT AS A CURVE\nConnect the ordered points and the list becomes a curve. That is \nthe same list — read as a shape instead of as positions.\nNAME THE THREE VALUES ON YOUR SHEET. P2a ASKS FOR THEM EXPLICITLY.",
+      "TWO WAYS TO REPEAT\nWorth being precise about, because they look alike and are not.\nEXPLICIT ITERATION\nA Repeat Zone runs a body once per step, in order, carrying a value \nforward.\n \nUse it when step n depends on step n−1 — and when you want to \nwatch the loop happen.\nPER-ELEMENT EVALUATION\nThe other kind is evaluated across every element at once. There \nis no order and no carry.\n \nIt is faster and it is usually what you want — but nothing on \nscreen tells you a loop happened, which is exactly why we built \nthe explicit one first.\nNEXT WEEK THIS GETS A NAME. FOR NOW: ONE CARRIES A VALUE FORWARD, THE OTHER DOES NOT.",
+      "THE SAME NINE LINES, A WEEK LATER\nLast week you could read the first three lines. Today you can read all of it.\npoints = []\n \nfor j in range(rows):                      # nested loop = grid\n    offset = spacing / 2 if j % 2 else 0   # odd/even stagger\n    for i in range(cols):\n        z = amplitude * sin(i * frequency + phase)\n        if 3 <= i <= 5:                    # Compare + Switch\n            z = z + lift\n        points.append([i * spacing + offset, j * row_gap, z])\nWHAT IT MAPS ONTO\nlist\nindex\ncount\nloop\nnested loop\nconditional\nmodulo\nsine\namplitude\nfrequency\nphase\nj % 2 IS THE ODD/EVEN TEST · if IS COMPARE AND SWITCH · sin IS THE MATH NODE",
+      "NOW — FINISH THE FOUR\nRest of the session: hexagonal, radial, the conditional and the sine.\n✓\n Hexagonal array working, with the odd/even test visible and row spacing correct\n✓\n Radial array working from radius, count and angular step\n✓\n One index range displaced — and you can say which indices and why\n✓\n Sine driving height, with amplitude, frequency and phase written down\n✓\n Three of the four chosen for the sheet, including the nested grid\nP2a IS THREE COMPARISONS, NOT FOUR UNRELATED PICTURES.",
+      "BEFORE NEXT CLASS\nWATCH\nU05 — Attractors. Distance, remap, clamp and falloff. Next week the rule stops coming from the index and starts coming \nfrom a measurement.\nBRING\nYour four arrangements, working. We drive them with attractors next class, so bring a file you can build on.\nCHECK\nP1c — the first print is due at the Week 10 midterm. If it is not queued yet, queue it now.\nFINISH\nNothing is due today. P2a is due next class; keep the comparisons moving."
+    ],
+    "page_count_matches": true
+  },
+  {
+    "file": "slides/ARC3133_Class08.pptx",
+    "zip_error": null,
+    "slides": [
+      {
+        "slide": 1,
+        "text": "CLASS 08  /  OCT 13\nATTRACTORS\nP2 CONTINUES — THE RULE STOPS COMING FROM THE INDEX\nP2a DUE\nP2b ISSUED TODAY"
+      },
+      {
+        "slide": 2,
+        "text": "AN ATTRACTOR IS A NUMBER\nFor every point: how far is it from something? Use that number to drive a property.\nTHE WHOLE IDEA\nfor each point p:\n    d = distance(p, attractor)\n    size = f(d)\n \nThat is it. Everything else\nis a choice of f.\nTWO NUMBERS, SAME JOB\nINDEX told you where in the sequence.\n \nDISTANCE tells you how far from something outside the collection.\n \nBoth are numbers driving a property. That is the only idea this week.\nLAST WEEK YOU BUILT THE POSITIONS. THIS WEEK YOU MEASURE THEM."
+      },
+      {
+        "slide": 3,
+        "text": "READ THE FIELD BEFORE YOU CHANGE ANYTHING\nDistance is a value at every point. Look at it as grey before it becomes geometry.\n01   MEASURE\nEvery point gets a number: how far to the attractor.\n02   DISPLAY\nShow those numbers as grey. This is a drawing already.\n03   REMAP\nPush that range into the range your property needs.\n04   DRIVE\nOnly now does the component change. The field was finished first.\nTHE FIELD, READ AS A GREY VALUE ACROSS THE PLANE\nIF THE GREY IMAGE IS NOT ALREADY A GOOD DRAWING, THE COMPONENT WILL NOT SAVE IT.\nP2b requires the measured field shown before the geometric result. That order is the assignment."
+      },
+      {
+        "slide": 4,
+        "text": "THREE KINDS\nSame arithmetic. What changes is what you measure the distance to.\nSINGLE POINT\ndistance(p, a)\nMULTIPLE POINTS\nnearest of several\nCURVE\nnearest location on a curve\nWhatever you measure to, the output is the same thing: one number per point. The attractor is not an object — it is a question you ask of every point."
+      },
+      {
+        "slide": 5,
+        "text": "REMAP, AND SAY WHERE YOU CLAMPED\nDistance comes out in model units. Your property needs a specific range.\nTHE OPERATION\nt   = (d − dmin) / (dmax − dmin)\nout = outmin + t × (outmax − outmin)\n \nd    0 … 8.4 units      ← source\nout  0.1 … 1.0 radius   ← target\nSUBTRACT. DIVIDE. MULTIPLY. ADD.\nNothing here is new — it is the arithmetic from Week 2 applied to a distance instead of a coordinate.\n \nClamping is a decision, not a safety net. Decide what happens past the end of your range and say so.\nP2b REQUIRES SOURCE AND TARGET RANGES, CLAMPING AND FALLOFF STATED ON THE SHEET."
+      },
+      {
+        "slide": 6,
+        "text": "FALLOFF IS THE FUNCTION\nf is your decision. It is where the graphic quality actually comes from.\nLINEAR\nv = d\ndistance →\nEven change all the way across.\nINVERSE\nv = 1 / d\ndistance →\nSharp near the attractor, flat far off.\nSMOOTH\neased\ndistance →\nSoft at both ends. Usually the best-looking.\nTHRESHOLD\non / off at a cut\ndistance →\nNo gradient at all. Two populations.\nTwo students with the same attractor and different falloff produce completely different images. This is a design decision, not a setting."
+      },
+      {
+        "slide": 7,
+        "text": "THE SAME THING, WRITTEN OUT\nMeasure, remap, clamp, shape the falloff, then place. In that order.\nfor p in points:\n    d = distance(p, attractor)             # or min(...) over several\n    t = (d - d_min) / (d_max - d_min)      # remap\n    t = clamp(t, 0, 1)\n    t = falloff(t)                         # linear, inverse, smooth, step\n    size = out_min + t * (out_max - out_min)\n    place(component, p, scale=size)\nWHAT IT MAPS ONTO\ndistance\nexternal condition\nfield\nremap\nclamp\nfalloff\nnearest\nLINE 2 IS THE ONLY LINE THAT CHANGES BETWEEN THE THREE ATTRACTOR TYPES."
+      },
+      {
+        "slide": 8,
+        "text": "ISSUED TODAY\nP2b — ATTRACTOR FIELD STUDY\nDUE WEEK 10 — Oct 27   /   7%\nHold the component and the arrangement constant, and change only what you measure against. The comparison is the assignment: three attractor types, one field logic, and an architectural intention you can defend.\nCOMPARE\nTHREE TYPES\nSingle point, multiple points, and a curve — same array.\nSHOW\nFIELD FIRST\nThe measured field, then the geometric result.\nARGUE\nONE INTENTION\nA spatial or architectural reason, demonstrated live."
+      },
+      {
+        "slide": 9,
+        "text": "REQUIREMENTS — P2b\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\nOn up to two sheets, compare single-point, multiple-point and curve attractors, holding the P1b panel and one arrangement from P2a constant so only the measurement changes.\n02\nShow the measured field before the geometric result. State source and target ranges, clamping and falloff.\n03\nDevelop one spatial or architectural intention and demonstrate a live change to the attractor or mapping.\nCHECKPOINT · WEEK 9 — Oct 20 — Bring the grayscale field and a first geometric response for a working review."
+      },
+      {
+        "slide": 10,
+        "text": "NOW — YOUR FIRST FIELD\nRest of the session: measure, look, remap, and only then attach geometry.\n✓\nDistance to one point measured across your existing array\n✓\nThe field displayed as grey, on its own, before anything changes shape\n✓\nSource and target ranges written down — actual numbers, not guesses\n✓\nOne property driven: size, height or rotation. Just one, for now\n✓\nThe attractor moved, and you can explain the response without looking at the graph\nMOVE THE ATTRACTOR. IF YOU CANNOT PREDICT WHAT HAPPENS, STOP AND READ THE FIELD."
+      },
+      {
+        "slide": 11,
+        "text": "BEFORE NEXT CLASS\nCONTINUE\nU05 runs into next class: read the field, remap it onto your P2a array, and compare the three attractor types.\nBUILD\nP2b is due Week 10. Get all three attractor types running on the same array — the comparison is what is being graded.\nBRING\nNext class: the grayscale field and a first geometric response, for a working review.\nPLAN\nThe midterm is Week 10: GSM, P1c, P2a and P2b, printed. Do not leave the print to the last week — the queue is shared."
+      }
+    ],
+    "pdf_exists": true,
+    "pdf_pages": 11,
+    "pdf_text": [
+      "CLASS 08  /  OCT 13\nATTRACTORS\nP2 CONTINUES — THE RULE STOPS COMING FROM THE INDEX P2a DUE\nP2b ISSUED TODAY",
+      "AN ATTRACTOR IS A NUMBER\nFor every point: how far is it from something? Use that number to drive a property.\nTHE WHOLE IDEA\nfor each point p:\n    d = distance(p, attractor)\n    size = f(d)\n \nThat is it. Everything else\nis a choice of f.\nTWO NUMBERS, SAME JOB\nINDEX told you where in the sequence.\n \nDISTANCE tells you how far from something outside the \ncollection.\n \nBoth are numbers driving a property. That is the only idea this \nweek.\nLAST WEEK YOU BUILT THE POSITIONS. THIS WEEK YOU MEASURE THEM.",
+      "READ THE FIELD BEFORE YOU CHANGE ANYTHING\nDistance is a value at every point. Look at it as grey before it becomes geometry.\n01   MEASURE\nEvery point gets a number: how \nfar to the attractor.\n02   DISPLAY\nShow those numbers as grey. \nThis is a drawing already.\n03   REMAP\nPush that range into the range \nyour property needs.\n04   DRIVE\nOnly now does the component \nchange. The field was finished \nfirst.\nTHE FIELD, READ AS A GREY VALUE ACROSS THE PLANE\nIF THE GREY IMAGE IS NOT ALREADY A GOOD DRAWING, THE COMPONENT WILL NOT SAVE IT.\nP2b requires the measured field shown before the geometric result. That order is the assignment.",
+      "THREE KINDS\nSame arithmetic. What changes is what you measure the distance to.\nSINGLE POINT\ndistance(p, a)\nMULTIPLE POINTS\nnearest of several\nCURVE\nnearest location on a curve\nWhatever you measure to, the output is the same thing: one number per point. The attractor is not an object — it is a question you ask of \nevery point.",
+      "REMAP, AND SAY WHERE YOU CLAMPED\nDistance comes out in model units. Your property needs a specific range.\nTHE OPERATION\nt   = (d − dmin) / (dmax − dmin)\nout = outmin + t × (outmax − outmin)\n \nd    0 … 8.4 units      ← source\nout  0.1 … 1.0 radius   ← target\nSUBTRACT. DIVIDE. MULTIPLY. ADD.\nNothing here is new — it is the arithmetic from Week 2 applied \nto a distance instead of a coordinate.\n \nClamping is a decision, not a safety net. Decide what happens \npast the end of your range and say so.\nP2b REQUIRES SOURCE AND TARGET RANGES, CLAMPING AND FALLOFF STATED ON THE SHEET.",
+      "FALLOFF IS THE FUNCTION\nf is your decision. It is where the graphic quality actually comes from.\nLINEAR\nv = d\ndistance →\nEven change all the way across.\nINVERSE\nv = 1 / d\ndistance →\nSharp near the attractor, flat far \noff.\nSMOOTH\neased\ndistance →\nSoft at both ends. Usually the \nbest-looking.\nTHRESHOLD\non / off at a cut\ndistance →\nNo gradient at all. Two \npopulations.\nTwo students with the same attractor and different falloff produce completely different images. This is a design decision, not a setting.",
+      "THE SAME THING, WRITTEN OUT\nMeasure, remap, clamp, shape the falloff, then place. In that order .\nfor p in points:\n    d = distance(p, attractor)             # or min(...) over \nseveral    t = (d - d_min) / (d_max - d_min)      # remap\n    t = clamp(t, 0, 1)\n    t = falloff(t)                         # linear, inverse, \nsmooth, step    size = out_min + t * (out_max - out_min)\n    place(component, p, scale=size)\nWHAT IT MAPS ONTO\ndistance\nexternal condition\nfield\nremap\nclamp\nfalloff\nnearest\nLINE 2 IS THE ONLY LINE THAT CHANGES BETWEEN THE THREE ATTRACTOR TYPES.",
+      "ISSUED TODAY\nP2b — ATTRACTOR FIELD STUDY\nDUE WEEK 10 — Oct 27   /   7%\nHold the component and the arrangement constant, and change only what you measure against. The comparison is the assignment: \nthree attractor types, one field logic, and an architectural intention you can defend.\nCOMPARE\nTHREE TYPES\nSingle point, multiple points, and a curve — \nsame array.\nSHOW\nFIELD FIRST\nThe measured field, then the geometric result.\nARGUE\nONE INTENTION\nA spatial or architectural reason, \ndemonstrated live.",
+      "REQUIREMENTS — P2b\nVisual quality 35% · computational understanding 25% · technical execution 20% · experimentation 10% · requirements and identity 10%.\n01\nOn up to two sheets, compare single-point, multiple-point and curve attractors, holding the P1b panel and one arrangement from P2a \nconstant so only the measurement changes.\n02\n Show the measured field before the geometric result. State source and target ranges, clamping and falloff.\n03\n Develop one spatial or architectural intention and demonstrate a live change to the attractor or mapping.\nCHECKPOINT · WEEK 9 — Oct 20 — Bring the grayscale field and a first geometric response for a working review.",
+      "NOW — YOUR FIRST FIELD\nRest of the session: measure, look, remap, and only then attach geometry.\n✓\n Distance to one point measured across your existing array\n✓\n The field displayed as grey, on its own, before anything changes shape\n✓\n Source and target ranges written down — actual numbers, not guesses\n✓\n One property driven: size, height or rotation. Just one, for now\n✓\n The attractor moved, and you can explain the response without looking at the graph\nMOVE THE ATTRACTOR. IF YOU CANNOT PREDICT WHAT HAPPENS, STOP AND READ THE FIELD.",
+      "BEFORE NEXT CLASS\nCONTINUE\nU05 runs into next class: read the field, remap it onto your P2a array, and compare the three attractor types.\nBUILD\nP2b is due Week 10. Get all three attractor types running on the same array — the comparison is what is being graded.\nBRING\nNext class: the grayscale field and a first geometric response, for a working review.\nPLAN\nThe midterm is Week 10: GSM, P1c, P2a and P2b, printed. Do not leave the print to the last week — the queue is shared."
+    ],
+    "page_count_matches": true
+  }
+]

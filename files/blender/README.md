@@ -4,39 +4,39 @@
 
 Download example files individually. These are lesson stages, not fixed weeks; continue a file for another class when needed.
 
-One teaching session and one tutorial video cover both example files. The second week is for practice. The video has not yet been posted.
+Two classes, two example files: 1D, 2D and 3D arrays in Week 6 (sheet 1); hexagonal, radial and curve arrays in Week 7 (sheet 2). A tutorial video is planned but not yet posted.
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes.
 
-Select the lesson object and change parameters on the nodes or, where provided, in the GeometryNodes modifier. Press Home over the node editor. Explanations are in Frames and native node names are retained. Build the exercise in a new file of your own, following each step in order.
+Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
 
-Use these example files only as a reference if you are struggling with a step. Build your own file and follow the process one step at a time. Compare the example to understand where you are stuck, then return to your own work. The supplied examples are not files to submit as your assignment.
+Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files.
 
 | Session | Target weeks | Open file | Scenes in this file | Lesson |
 | --- | --- | --- | --- | --- |
-| S01 | 2–3 | [Intro to Geometry Nodes — transformations and CSG](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | 01 - CSG example | U02 Transformations and CSG |
-| S02 | 4–5 | [Geometry Fundamentals](02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Geometry from scratch |
-| S03 | 6–7 | [Arrays and Lists — Part 1: linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid | U04 Arrays and lists |
-| S04 | 6–7 | [Arrays and Lists — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays and lists |
-| S05 | 8–9 | [Attractors](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractors |
+| S01 | 2–3 | [Constructive Solid Geometry](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | 01 - CSG example | U02 Constructive Solid Geometry |
+| S02 | 4–5 | [Descriptive Geometry](02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Descriptive Geometry |
+| S03 | 6–7 | [Arrays — Part 1: linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid | U04 Arrays |
+| S04 | 6–7 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays |
+| S05 | 8–9 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractor |
 | S06 | Optional | [Optional — Tessellation and Lattices](05-tessellation-lattices/Tessellation-and-Lattices.blend) | Tessellation, Lattice, Attractor lattice | U06 Tessellation, panelization, lattices and simulation |
-| S07 | 10–11 | [Point Clouds and Volumes](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Point clouds and the transition to volumes |
-| S08 | 12–13 | [Advanced Volumes I — signed distance and Boolean](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U08 Volumetric fields and signed distance |
-| S09 | 12–13 | [Advanced Volumes II — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U08 Volumetric fields and signed distance |
-| S10 | 14–15 | [Discretizing Geometry I — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Contour sections and physical parts |
-| S11 | 14–15 | [Discretizing Geometry II — physical parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Contour sections and physical parts |
-| S12 | 14–15 | [Final Project — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U09 Contour sections and physical parts |
+| S07 | 10–11 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Volumetric Data and Fields |
+| S08 | 10–11 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Volumetric Data and Fields |
+| S09 | 10–11 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Volumetric Data and Fields |
+| S10 | 12–13 | [Discretizing Geometry — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Discretizing Geometry |
+| S11 | 12–13 | [Discretizing Geometry — section parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Discretizing Geometry |
+| S12 | 14–15 | [Final — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U10 Final |
 
-**S01 — Intro to Geometry Nodes — transformations and CSG.** The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the native nodes; these controls are not in the modifier.
+**S01 — Constructive Solid Geometry.** The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the native nodes; these controls are not in the modifier.
 
-**S02 — Geometry Fundamentals.** Follow the six main teaching scenes. Original reference scenes remain in the file. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
+**S02 — Descriptive Geometry.** Follow the six main teaching scenes. Original reference scenes remain in the file. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
 
-**S04 — Arrays and Lists — Part 2: arrangements and rules.** Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
+**S04 — Arrays — Part 2: arrangements and rules.** Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
 
 **S06 — Optional — Tessellation and Lattices.** The existing file covers tessellation and lattices. Panelization and simulation are possible additions to this intermediate class and are not yet demonstrated here.
 
-**S07 — Point Clouds and Volumes.** Keep the data folder together — the file reads teaching-courtyard.ply from beside it. It is a synthetic teaching cloud, not a survey. Supporting files: [Teaching point cloud](06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json).
+**S07 — Volumetric Data and Fields — point clouds.** Keep the data folder together — the file reads teaching-courtyard.ply from beside it. It is a synthetic teaching cloud, not a survey. Supporting files: [Teaching point cloud](06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json).
 
-**S12 — Final Project — fabrication and assembly.** The exported files are default-parameter snapshots in millimetres. Regenerate them after edits and test physical fit before production. Supporting files: [Fabrication notes and dimensions](09-final-project/FABRICATION-NOTES.md), [Small print STL](09-final-project/small-print-mm.stl), [Fit coupon STL](09-final-project/fit-coupon-mm.stl), [Modular parts STL](09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](09-final-project/section-parts-and-spacers-mm.svg).
+**S12 — Final — fabrication and assembly.** The exported files are default-parameter snapshots in millimetres. Regenerate them after edits and test physical fit before production. Modular parts are an optional reference. The required physical outputs are the CSG print (P2b) and laser-cut volume (P4b). Supporting files: [Fabrication notes and dimensions](09-final-project/FABRICATION-NOTES.md), [Small print STL](09-final-project/small-print-mm.stl), [Fit coupon STL](09-final-project/fit-coupon-mm.stl), [Modular parts STL](09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](09-final-project/section-parts-and-spacers-mm.svg).
 
 The Graphic Standards Manual and the final booklet use graphic and layout files rather than Blender scenes. Assignment requirements and the flexible teaching calendar are in the [current syllabus](../../syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md).

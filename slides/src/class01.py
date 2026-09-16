@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Class 01 — Visual identity and course introduction (U01)."""
+"""Class 01 — Graphic Standards Manual and course introduction (U01). GSM issued."""
 import os
 from nb import *
 from slidekit import *
@@ -12,7 +12,7 @@ d = Deck()
 WK = 1
 
 # 1 ── TITLE
-title_slide(d, WK, ["ARC 3133", "VISUAL IDENTITY"],
+title_slide(d, WK, ["ARC 3133", "GRAPHIC STANDARDS MANUAL"],
             "HOW THE WORK WILL LOOK, BEFORE THERE IS ANY WORK",
             bg=LIME, right_tag="NOTHING DUE", foot="GSM ISSUED TODAY")
 
@@ -57,26 +57,46 @@ s.banner(5.75, "A procedure is a fixed recipe. A parametric system is a recipe w
               "A generative system reads its own output and decides what to do next.",
          fill=CYAN, h=0.72)
 
-# 4 ── FOUR PROJECTS
+# 4 ── FOUR PROJECTS, NINE ASSIGNMENTS
+SHORT = {"GSM": "four-page manual", "P2a": "CSG process sheet", "P2b": "3D printed object",
+         "P3a": "module sheet", "P3b": "arrays, two sheets", "P3c": "plotter field",
+         "P3d": "site analysis", "P4a": "SDF volume", "P4b": "laser-cut slices"}
+NAMES = {"P1": "GRAPHIC STANDARDS MANUAL", "P2": "CONSTRUCTIVE SOLID GEOMETRY",
+         "P3": "PANELING", "P4": "VOLUMETRIC DATA"}
+
+
+def due_short(m):
+    return ("W%d" % m["due"]) if isinstance(m["due"], int) else str(m["due"]).upper()
+
+
 s = d.slide(CREAM)
-s.header("FOUR PROJECTS", "Ten short assignments, assembled into four. Nothing is graded twice.")
-y = 2.0
+s.header("FOUR PROJECTS, NINE ASSIGNMENTS",
+         "Each assignment is graded once. Each project carries its geometry into the next.")
+y = 1.95
 for i, pid in enumerate(["P1", "P2", "P3", "P4"]):
     p = C.PROJECTS[pid]
     ms = p["milestones"]
     total = sum(m.get("weight", 0) for m in ms)
     col = ACCENTS[i % 4]
-    s.chip(L, y, 1.15, 1.0, pid, fill=col, size=19)
-    s.card(L + 1.45, y, W - 1.45, 1.0, fill=CREAM)
-    s.t(L + 1.75, y + 0.13, W - 3.6, 0.35, [s.Ab(p["title"], 14)])
-    s.t(L + 1.75, y + 0.55, W - 3.6, 0.35,
-        [s.Cb("  →  ".join(m["title"] for m in ms), 12)])
-    s.t(W - 1.3, y, 1.6, 1.0, [s.Ab("%d%%" % total, 17)],
+    s.chip(L, y, 1.0, 0.92, pid, fill=col, size=19)
+    s.card(L + 1.25, y, W - 1.25, 0.92, fill=CREAM)
+    s.t(L + 1.5, y + 0.1, W - 3.2, 0.32, [s.Ab(NAMES[pid], 13.5)])
+    line = []
+    for k, m in enumerate(ms):
+        gap = "     " if k < len(ms) - 1 else ""
+        line += [s.Mb(m["id"], 11.5, bold=True),
+                 s.Cb(" %s · due %s%s" % (SHORT[m["id"]], due_short(m), gap), 11.5)]
+    s.t(L + 1.5, y + 0.48, W - 3.2, 0.34, [line])
+    s.t(W - 0.95, y, 1.6, 0.92, [s.Ab("%d%%" % total, 17)],
         align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    y += 1.15
-s.banner(6.7, "You do the short assignment, then revise it inside its project. "
-              "The project itself adds no second grade — the revision is what the booklet rewards.",
-         fill=LIME, h=0.62, size=12)
+    y += 1.04
+mid, book, part = C.milestone("MID"), C.milestone("BOOK"), C.milestone("PART")
+s.banner(6.22, "MIDTERM REVIEW OF P1–P3 · %s · %d%%     FINAL BOOKLET · DUE %s · %d%%     "
+               "PARTICIPATION · %d%%" % (C.date_long(mid["due"]).upper(), mid["weight"],
+                                         str(book["due"]).upper(), book["weight"], part["weight"]),
+         fill=LIME, h=0.6, size=12, align=PP_ALIGN.CENTER)
+s.t(L, 6.98, W, 0.3, [s.C("Dates after the midterm are provisional. The course site is the "
+                         "reference for every due date.", 11.5, GREY)])
 
 # 5 ── HOW A CLASS RUNS
 s = d.slide(BLACK)
@@ -109,47 +129,39 @@ s.panel(7.0, 1.95, 5.65, 3.4, "WHAT A SYSTEM IS", headfill=LIME, tsize=14.5)
 s.t(7.3, 2.72, 5.05, 2.4, [
     s.Cb("Page size and margins.", 14),
     s.Cb("A column grid.", 14),
-    s.Cb("A type hierarchy — three levels, no more.", 14),
-    s.Cb("A line-weight set — four weights.", 14),
-    s.Cb("A palette of three colours, and the black is one of them.", 14),
+    s.Cb("A type hierarchy — four levels at most.", 14),
+    s.Cb("A line-weight set — four weights at most.", 14),
+    s.Cb("Three colours — black and paper count as two.", 14),
     s.Cb("Three typefaces is the ceiling. Two is better.", 14)], ls=1.4)
-s.banner(5.65, "DECIDE IT ONCE, APPLY IT EVERY WEEK, REVISE IT AT THE MIDTERM. IT IS NOT REMADE PER SHEET.",
+s.banner(5.65, "FOUR PAGES. DECIDE IT ONCE, APPLY IT EVERY WEEK, REVISE IT AFTER CRITIQUE. NOT REMADE PER SHEET.",
          fill=YELLOW, h=0.72, align=PP_ALIGN.CENTER)
 
 # 7 ── THE PRECEDENTS
 s = d.slide(CREAM)
-s.header("THREE MANUALS WORTH STEALING FROM",
-         "This document type has a history. Each one is a page grid, a type hierarchy, "
-         "and a rule for every case that comes up.")
-mans = [("NYCTA GRAPHICS STANDARDS", CYAN,
-         "Massimo Vignelli and Bob Noorda, Unimark - 1970 - archive.org/details/nycta-gs-manual",
-         "A binder of cases. Every sign in the New York subway, drawn at size, with the rule "
-         "beside it. The manual is the design - the signs are what falls out of it.",
-         "Add: a spread from the NYCTA manual - a signage case with its dimensioned rule."),
-        ("NASA GRAPHICS STANDARDS", PINK,
-         "Richard Danne and Bruce Blackburn - 1975 - archive.org/details/NASA_Graphics_Standards_Manual",
-         "One mark, and a hundred pages of where it is allowed to go. What is being designed "
-         "is the consistency, not the logotype.",
-         "Add: a page from the NASA manual - the mark with its clearance and placement rules."),
-        ("MUNICH 1972", LIME,
-         "Otl Aicher - 1967 to 1972 - otlaicher.de, 'the rainbow games'",
-         "A grid, a fixed set of angles, and one component varied across a whole field of "
-         "pictograms. You will build a system with this exact structure in Week 4.",
-         "Add: the Munich 1972 pictogram sheet, and the construction grid behind one figure.")]
+s.header("THREE MANUALS TO STUDY",
+         "Each one is a set of rules, drawn out, and applied to real cases. Read them as systems.")
+mans = [("NYCTA", "1970", CYAN, "GRAPHICS STANDARDS MANUAL",
+         "A transit signage system."),
+        ("NASA", "1975", PINK, "GRAPHICS STANDARDS MANUAL",
+         "An agency identity manual."),
+        ("MUNICH OLYMPICS", "1972", LIME, "DESIGN GUIDELINES",
+         "An Olympic identity system.")]
 x = L
-for nm, col, credit, body, placeholder in mans:
-    s.card(x, 1.95, 3.85, 1.9, fill=PAPER)
-    s.t(x + 0.3, 1.95, 3.25, 1.9, [s.Cb(placeholder, 11.5, GREY)],
-        align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    s.chip(x, 3.95, 3.85, 0.48, nm, fill=col, size=11)
-    s.t(x + 0.05, 4.58, 3.75, 0.28, [s.Cb(credit, 10.5, GREY)])
-    s.t(x + 0.05, 4.95, 3.75, 1.15, [s.Cb(body, 12.5)], ls=1.3)
+for nm, yr, col, kind, body in mans:
+    s.chip(x, 1.95, 3.85, 0.5, "%s  ·  %s" % (nm, yr), fill=col, size=13)
+    s.card(x, 2.55, 3.85, 2.55, fill=CREAM)
+    s.t(x + 0.28, 2.75, 3.3, 0.3, [s.Ab(kind, 11.5, GREY)])
+    s.t(x + 0.28, 3.12, 3.3, 0.4, [s.Cb(body, 15, bold=True)])
+    s.rule(x + 0.28, 3.72, 3.3, lw=Pt(1.5), color=MUTE)
+    s.t(x + 0.28, 3.88, 3.3, 1.1, [s.Cb("Find one rule.", 12.5),
+                                   s.Cb("Find the drawing that dimensions it.", 12.5),
+                                   s.Cb("Find where it is applied.", 12.5)], ls=1.3)
     x += 4.08
-s.banner(6.2, "YOURS IS FOUR PAGES, NOT THREE HUNDRED. THE PRINCIPLE IS IDENTICAL: "
-              "DECIDE ONCE, WRITE IT DOWN, APPLY IT EVERY TIME.",
-         fill=BLACK, color=CYAN, h=0.65, size=12, align=PP_ALIGN.CENTER)
-s.t(L, 7.0, W, 0.3, [s.C("All three are online in full, linked on the U01 lesson page and under "
-                         "Reading. Look at how much of each one is rules rather than pictures.", 12, GREY)])
+s.banner(5.45, "YOUR TASK: PICK ONE RULE FROM ONE MANUAL. ADOPT IT IN YOUR GSM, AND NAME IT ON THE PAGE "
+              "WHERE YOU USE IT.", fill=BLACK, color=CYAN, h=0.72, size=12.5, align=PP_ALIGN.CENTER)
+s.t(L, 6.45, W, 0.6, [s.C("All three are linked in full under Reading and documentation. Notice how much "
+                          "of each one is rules rather than pictures. Yours is four pages; the "
+                          "principle is the same.", 13, GREY)], ls=1.25)
 
 pseudocode_slide(d, "U01", title="A VISUAL IDENTITY IS A PARAMETER SET",
                  sub="A short list of values, decided once. Every sheet this semester reads them.",
@@ -173,24 +185,26 @@ requirements_slide(d, "GSM",
 
 # 9 ── NOW
 now_slide(d, "NOW — YOUR FIRST SHEET",
-          "Rest of the session: set the page up and put something on it.",
+          "Rest of the class: set the page up and put something on it.",
           ["Page size set to 17 × 11 inches, with margins and a column grid",
-           "Type hierarchy chosen — three levels, and a reason for each",
-           "A line-weight set, from hairline to heaviest — four weights",
-           "Three colours you can defend, black included, that survive being printed",
+           "Type hierarchy chosen — up to four levels, and a reason for each",
+           "A line-weight set, from hairline to heaviest — four weights at most",
+           "Three colours you can defend, black and paper included, that survive printing",
            "One sample sheet, with one decision about hierarchy you can explain"],
           closer="LEAVE WITH A SHEET. IT DOES NOT HAVE TO BE RIGHT YET.",
           bg=CYAN)
 
 # 10 ── BEFORE NEXT CLASS
+gsm_cp = C.checkpoints("GSM")[0]
 before_next_slide(d, [
-    ("WATCH", "U02 — Transformations and CSG. The node editor, parameters, and the three Boolean "
-              "operations. Check the unit page; watch a recording only once a link is posted."),
-    ("INSTALL", "Blender, and set up a project folder you can open from a clean machine. "
+    ("WATCH", "U02 — Constructive Solid Geometry. Nodes, parameters, transformations and the three "
+              "Boolean operations. Watch the CSG video tutorial (Blender or Rhino + Grasshopper) linked on the Class 02 page."),
+    ("INSTALL", "Blender, and a project folder you can open from a clean machine. "
                 "File organization is part of the workflow, not an afterthought."),
-    ("BRING", "Your sample sheet and the file it came from."),
-    ("LOOK", "Three architectural drawings you think are well made. Be ready to say what makes "
-             "each one readable."),
+    ("BRING", "Your sample sheet and the file it came from. The sheet gets an ungraded "
+              "identity check next class (%s)." % C.date_long(gsm_cp[0])),
+    ("PLAN", "GSM is due at the midterm, %s. Study the three manuals and pick your rule "
+             "before you lay out page 1." % C.date_long(C.milestone("GSM")["due"])),
 ])
 
 d.save(os.path.join(OUT, "ARC3133_Class01.pptx"))

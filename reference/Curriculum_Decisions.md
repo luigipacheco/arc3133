@@ -13,15 +13,15 @@
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
 - Establish one source of curriculum information before preparing the remaining Blender class files.
-- Start with short assignments that build into four projects: geometry, arrays/attractors, spatial arrays/assembly, and point clouds/volumes/sections.
+- Organize nine assignments into four projects: GSM, CSG, Paneling and Volumetric Data.
 
 ### Working proposals
 
 - Budget two weeks per tutorial and per assignment: CSG and geometry from scratch each took two classes in practice. Attractors are covered before the midterm, which moves to Week 10. Weeks 10–15 after the midterm are provisional and will be re-planned then.
 - Retain the existing 15-week semester and midterm/final review windows.
-- Retain the calendar's grading total: ten project milestones at 7% each, GSM 7%, midterm 7%, booklet 11% and participation 5%.
+- Draft grading: GSM 7%, CSG 14%, Paneling 28%, Volumetric Data 28%, midterm 7%, booklet 11% and participation 5%.
 - Focus the required final on the developed visual work, physical work and booklet. The previous Python/AI final and extra-credit scheme are awaiting an instructor decision and are not assigned in this draft.
-- Keep three fabrication outputs: an introductory print, a small modular print assembly and a sectional assembly. A plotter demonstration is optional and carries no separate grade.
+- Three physical outputs: the CSG 3D print, the attractor field plotter drawing and a laser-cut SDF volume assembled from slices.
 
 ### Administrative items to confirm
 
@@ -29,15 +29,16 @@
 - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
 - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
 - Confirm the attendance sign-in method and the accreditation criteria used by the School.
+- Confirm pen-plotter access, pens and paper for the P3c field drawing, and post the Mixtli add-on with install instructions before Week 8.
 
 ## Why the sequence changed
 
-The earlier materials disagreed about module numbering, due dates, project weights, the role of Python and the placement of point clouds, tessellation and sections. Their original versions are preserved in the dated archive. This revision uses unit identifiers for topics and project identifiers for assessment so that extending a topic does not require renumbering the entire course.
+The four projects are GSM, CSG, Paneling and Volumetric Data. Projects 1-3 finish at the Week 10 midterm. Paneling includes four separate assignments: the module, arrays, the 2D field plotter drawing and the Mixtli site analysis. The two array sheets form one assignment; the two attractor sheets form two assignments.
 
-Arrays follows linear, nested grid, 3D cube, hexagonal, radial and conditional construction, ending with the math-driven 3D curve array in one teaching session and one tutorial video. Keep the second target week for practice where needed. Revisit operations through attractors and extend guided practice when students cannot explain index order or predict a count. Use small examples; large element counts are not evidence of understanding.
+Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 9 is a working review of both attractor assignments. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
 
-Attractors introduce measurement rather than another arrangement. The XYZ array establishes discrete locations in 3D. Point clouds introduce data the student did not author. Volumes introduce a new representation, and sections translate that representation into buildable parts. Make each transition explicit and retain a before/after comparison. Tessellation, panelization, lattices and simulation are possible intermediate topics and must not interrupt or become prerequisites for this route.
+Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
 
-The midterm (Week 10) is a review of completed foundations, arrays and attractors. P3 now develops those arrays into the retained modular assembly, so its brief does not require the optional intermediate methods. Its existing weights and dates are retained. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
+Draft weights use 7% per assignment in Projects 1-3 and 14% for each Project 4 assignment. The fabricated outputs are the CSG print, the plotter drawing and the sliced volume. Review machine capacity and the later schedule at midterm.
 
-Keep institutional policy text separate from curriculum edits. The School's accreditation mapping remains unconfirmed; do not present the earlier mixed 2014/2020 criteria table as a verified current requirement.
+Every class now has a deck generated from slides/src that reads dates and briefs from this file; rebuild the decks after any calendar or brief change. Video tutorials exist for CSG and Descriptive Geometry (Blender and Rhino + Grasshopper); record the others as time allows. Keep institutional policies separate from curriculum edits.

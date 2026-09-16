@@ -17,35 +17,35 @@ The `teaching_sequence` block is authoritative: its blocks determine the require
 
 ## Teaching structure
 
-| Target weeks | Focus | Practical sessions |
-|---|---|---|
-| 1 | Graphic Standards Manual | Manual and sample sheet |
-| 2–3 | Transformations and CSG | S01 |
-| 4–5 | Point → Line → Edge → Face → Solid → Boolean | S02 |
-| 6–7 | Arrays, lists, loops, conditionals and sine | One arrays session |
-| 8–9 | Point, multiple-point and curve attractors | S05 |
-| 10–11 | Point clouds and conversion to volumes | S07 |
-| 12–13 | Volumetric fields, SDFs, noise and Booleans | S08, S09 |
-| 14–15 | Contours, sections, fabrication and booklet | S10, S11, S12 |
+| Weeks | Topic | Classes | Video tutorials |
+|---|---|---|---|
+| 1 | Graphic Standards Manual | Class 01 | — |
+| 2–3 | Constructive Solid Geometry | Class 02 · Class 03 | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
+| 4–5 | Descriptive Geometry | Class 04 · Class 05 | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
+| 6–7 | Arrays | Class 06 · Class 07 | — |
+| 8–9 | Attractor | Class 08 · Class 09 | — |
+| 10–11 | Volumetric Data and Fields | Class 10 · Class 11 | — |
+| 12–13 | Discretizing Geometry | Class 12 · Class 13 | — |
+| 14–15 | Final | Class 14 · Class 15 | — |
 
-Architectural Visualization Methods 1 develops computational methods for architectural representation and digital fabrication. Students make a visual identity, describe geometry with parameters, repeat and vary it, work with sampled and volumetric data, and translate that work into drawings and physical parts.
+Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain your design decisions through clear visual work.
 
-The learning sequence is **graphic standards → CSG → geometry from scratch → arrays and lists → attractors → point clouds → volumetric fields → sections and fabrication**. Arrays progresses from a row to a grid and an XYZ cube array before hexagonal and radial arrangements, introducing 3D sampling locations for later volume lessons. These are teaching units, not a promise to finish one unit every week.
+**Through midterm:** Graphic Standards Manual → Constructive Solid Geometry → Descriptive Geometry → Arrays → Attractor. Diagram and 3D print a CSG object, build a module from points and faces, array it in 1D, 2D and 3D and along hexagonal, radial and curve patterns, then plot a 2D attractor field and analyze a site with the Mixtli add-on. 3D printing is introduced in Week 3; the print is presented at midterm.
 
-Tessellation, panelization, lattices and simulation are possible intermediate topics, offered if time and the developing work make them useful. They are outside the required sequence and carry no separate required submission.
+**After midterm:** Volumetric Data and Fields → Discretizing Geometry → Final. Model a volume with signed distance fields, slice it into sections, then laser-cut and assemble the final work. The later schedule will be confirmed at midterm. Tessellation, panelization, lattices and simulation are optional, with no separate required submission.
 
-Visual quality remains central: composition, hierarchy, line weight, color, rendering, photography and clear explanation of spatial ideas. A working graph supports those decisions. Each project carries geometry and knowledge into the next rather than starting with an unrelated object.
+Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
 
-| Developing project | Short assignments that build it | Combined weight |
+| Project | Assignments | Weight |
 | --- | --- | --- |
-| P1 — Geometry — from operations to construction | CSG massing sequence → Panel from scratch → First print | 21% |
-| P2 — Repetition and response — arrays to attractors | Arrays and conditional control → Attractor field study | 14% |
-| P3 — Spatial arrays and assembly | 3D array and connection study → Modular print assembly | 14% |
-| P4 — Samples, fields and sections | Point-cloud analysis → Volume, section and light → Sectional fabrication | 21% |
+| P1 — GSM | Graphic Standards Manual | 7% |
+| P2 — CSG | CSG process and instructions → CSG 3D printed object | 14% |
+| P3 — Paneling | Descriptive geometry module — material and lighting → Arrays → Attractor: 2D field plotter drawing → Attractor: site analysis with Mixtli | 28% |
+| P4 — Volumetric Data | SDF volume → Discretizing and laser-cut fabrication | 28% |
 
-The dated schedule is a target. Each teaching block is budgeted at two classes — a demonstration class and a practice class — and each short assignment at two weeks from brief to deadline. Arrays uses one teaching session and one tutorial video, with the second week for practice. Everything up to and including attractors is covered before the Week 10 midterm. The blocks after the midterm are provisional: their order is set, but their pace and deadlines will be confirmed at the midterm and announced before they change. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
+**Complete attractors by the Week 10 midterm.** After the Week 1 introduction, each topic has two classes for demonstration and practice. The CSG sheet, module and arrays each have two weeks from brief to deadline. Both attractor assignments run through Weeks 8-9; the manual and CSG print develop alongside them. Arrays runs over two classes: 1D, 2D and 3D arrays in Week 6, then hexagonal, radial and curve arrays in Week 7.
 
-Assignment deadlines are listed separately from the teaching sequence. If teaching moves, the instructor will announce an updated deadline in class and Canvas and update this source before regenerating the course pages. A changed lesson pace does not silently change a deadline. No new graded submission is scheduled in the retained studio-review windows: October 5–9 and December 1–4.
+Later teaching dates and deadlines are provisional and will be confirmed at midterm. Until a change is announced in class and on Canvas, use the listed deadlines. October 5–9 and December 1–4 are reserved for studio reviews, with no graded submissions for this course.
 
 ## Update and verify
 
@@ -68,10 +68,10 @@ The weekly move is one edit — add the week number, the unit ids and any newly 
 release:
   classes: [1, 2, 3, 4, 5, 6]
   tutorials: [U01, U02, U03, U04, U05]
-  assignments: [GSM, MID, BOOK, P1, P2]
+  assignments: [P1, P2, P3, MID, BOOK]
 ```
 
-Assignments take the project id — listing `P2` posts P2a and P2b with it. The assignment overview page is always posted; it is the index.
+Assignments take the project id — listing `P1` posts GSM; `P2` posts both CSG briefs; `P3` posts all four Paneling briefs. The assignment overview page is always posted.
 
 Use `all` on either line to publish everything. To preview the finished site locally without editing the source, run `SYNC_RELEASE=all python scripts/sync_course.py` — then run it again without the variable before committing, or the held-back pages go live.
 
@@ -96,7 +96,7 @@ The site uses Jekyll and P2PU Course in a Box. Post filename dates control navig
 
 [Maintenance tools](scripts/README.md) explains the update sequence. Website templates, styles, scripts and icons remain in the standard Jekyll folders.
 
-[Geometry Fundamentals](files/blender/02-geometry-fundamentals/README.md) follows Point → Line → Edge → Face → Solid → Boolean. The pyramid retains exposed Width, Depth and Height. [Instructor materials](reference/archive/geometry101-preparation/README.md) preserve its preparation history.
+[Descriptive Geometry](files/blender/02-geometry-fundamentals/README.md) follows Point → Line → Edge → Face → Solid → Boolean. The pyramid retains exposed Width, Depth and Height. [Instructor materials](reference/archive/geometry101-preparation/README.md) preserve its preparation history.
 
 Earlier course plans, site pages and slide decks are preserved in the [dated snapshot](reference/archive/2026-09-12-before-sequence/ARCHIVE_README.md). Earlier Python and Sverchok exercises are in `reference/archive/legacy-code/`. Earlier slide decks remain available where linked. Sources, archives, maintenance scripts and `slides/src` are excluded from the published course.
 

@@ -1,157 +1,283 @@
 # -*- coding: utf-8 -*-
-"""Class 05 — Arrays and lists II (U04, steps 4–7). P1b due."""
+"""Class 05 — Descriptive geometry continued (U03). Your own module, then material and
+lighting for the P3a sheet. Nothing due; nothing issued."""
 import os, math
 from nb import *
 from slidekit import *
 import coursedata as C
 import diagrams as G
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
+from pptx.enum.shapes import MSO_SHAPE
 from pptx.util import Pt
 
 OUT = os.environ.get("DECK_OUT", "/home/claude/out")
 d = Deck()
 WK = 5
+VISUAL = ("Visual quality 35% · computational understanding 25% · technical execution 20% "
+          "· experimentation 10% · requirements and identity 10%.")
+
+
+def frame_panel(s, x, y, size, k, fill=LIME, hole=PAPER, lw=HAIR):
+    """Plan of a square frame module: outer square, inner aperture of ratio k."""
+    s.rect(x, y, size, size, fill=fill, line=BLACK, lw=lw)
+    q = size * k
+    if q > 0.01:
+        s.rect(x + (size - q) / 2, y + (size - q) / 2, q, q, fill=hole, line=BLACK, lw=lw)
+
 
 # 1 ── TITLE
-title_slide(d, WK, ["ARRAYS AND LISTS", "PART TWO"],
-            "STAGGER IT, SPIN IT, BEND IT", bg=PINK, lfill=CYAN, rfill=YELLOW,
-            foot="U04 CONTINUES  /  P2a IN PROGRESS, DUE AT THE MIDTERM")
+title_slide(d, WK, ["FROM THE PYRAMID", "TO YOUR MODULE"],
+            "BUILD IT, THEN LIGHT IT — THE P3a SHEET", bg=PINK, lfill=YELLOW, rfill=CYAN,
+            foot="U03 CONTINUES  /  P3a IN PROGRESS  /  " + C.due_line("P3a").upper())
 
-# 2 ── FOUR ARRANGEMENTS
+# 2 ── PARAMETERS FIRST
 s = d.slide(CREAM)
-s.header("FOUR ARRANGEMENTS", "Same component, four rules for generating the list of positions.")
-CY = 1.95
-xs = [L, L + 3.05, L + 6.10, L + 9.15]
-names = ["LINEAR", "GRID", "HEXAGONAL", "RADIAL"]
-cols = [CYAN, LIME, YELLOW, PINK]
-subs = ["one counter", "two counters", "stagger alternate rows", "radius, count, angular step"]
-for x, nm, col, sub in zip(xs, names, cols, subs):
-    s.panel(x, CY, 2.85, 3.5, nm, headfill=col, tsize=14.5)
-    s.t(x + 0.22, CY + 2.85, 2.41, 0.5, [s.Mb(sub, 10.5)], anchor=MSO_ANCHOR.MIDDLE)
-G.cartesian(s, xs[0] + 0.42, CY + 1.72, cols=7, rows=1, p=0.34)
-G.cartesian(s, xs[1] + 0.55, CY + 0.95, cols=6, rows=5, p=0.34)
-G.hexagonal(s, xs[2] + 0.45, CY + 0.95, cols=6, rows=5, p=0.34)
-G.radial(s, xs[3] + 1.42, CY + 1.72, rings=(0.44, 0.80, 1.16), n=12)
-s.banner(5.75, "Every one of these is the same operation — move, repeated, with the amount driven "
-              "by a counter. Only the rule for the counter changes.", fill=CYAN, h=0.72)
-
-# 3 ── HEXAGONAL
-s = d.slide(BLACK)
-s.header("HEXAGONAL IS A GRID WITH AN ODD/EVEN TEST",
-         "Stagger alternate rows by half the spacing. Keep the row spacing consistent.")
-s.panel(L, 2.05, 6.2, 3.35, "THE TEST", headfill=LIME)
-s.t(L + 0.35, 2.8, 5.5, 2.3, [
-    s.Mb("offset = (j mod 2 == 0) ? 0 : dx / 2", 12.5, bold=True),
-    s.Mb(" ", 8),
-    s.Cb("Modulo asks: is this row odd or even? Compare turns that into True or False, and "
-         "Switch picks the offset. The same two nodes as last week.", 13.5),
+s.header("PARAMETERS FIRST",
+         "Before a single point: write down the numbers that drive the module, and what each one does.")
+s.panel(L, 1.95, 6.3, 3.55, "A PARAMETER TABLE", headfill=CYAN)
+rows = [("size", "1.0", "outer edge — also the tiling pitch"),
+        ("thickness", "0.1", "depth of the panel"),
+        ("aperture k", "0.5", "hole as a share of the size, 0 < k < 1")]
+yy = 2.7
+s.t(L + 0.3, yy, 1.8, 0.3, [s.Ab("NAME", 11, GREY)])
+s.t(L + 2.1, yy, 0.8, 0.3, [s.Ab("VALUE", 11, GREY)])
+s.t(L + 3.0, yy, 3.1, 0.3, [s.Ab("WHAT IT CONTROLS", 11, GREY)])
+yy += 0.42
+for nm, v, what in rows:
+    s.rule(L + 0.3, yy - 0.06, 5.7, lw=HAIR, color=LINE)
+    s.t(L + 0.3, yy, 1.8, 0.5, [s.Mb(nm, 12.5, bold=True)])
+    s.t(L + 2.1, yy, 0.8, 0.5, [s.Mb(v, 12.5)])
+    s.t(L + 3.0, yy, 3.1, 0.6, [s.Cb(what, 12.5)], ls=1.15)
+    yy += 0.7
+s.panel(7.25, 1.95, 5.4, 3.55, "ONE MUST CHANGE THE SHAPE", headfill=PINK, tsize=14.5)
+s.t(7.55, 2.7, 4.8, 2.7, [
+    s.Cb("Size and thickness only change the box. P3a asks for a shape control beyond overall "
+         "dimensions:", 13.5),
     s.Cb(" ", 6),
-    s.Cb("Row spacing is not dx. If you use the same number for both, you get a squashed grid, "
-         "not a hex field.", 13.5)], ls=1.3)
-s.panel(7.15, 2.05, 5.5, 3.35, "WHAT IT LOOKS LIKE", headfill=CYAN)
-G.hexagonal(s, 7.75, 2.95, cols=7, rows=6, p=0.36, d=0.13)
-s.banner(5.75, "A BRICK BOND IS A HEXAGONAL ARRAY. SO IS A HONEYCOMB. SO IS HALF THE PAVING YOU WALK ON.",
+    s.Ab("APERTURE  ·  FOLD DEPTH  ·  CORNER OFFSET", 12),
+    s.Cb(" ", 6),
+    s.Cb("The example here is an aperture: a square frame with a square hole. Yours comes "
+         "from your precedent.", 13.5)], ls=1.3)
+s.banner(5.8, "IF YOU CANNOT SAY WHAT A NUMBER CONTROLS, IT IS NOT A PARAMETER YET.",
          fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
 
-# 4 ── RADIAL
-s = d.slide(CREAM)
-s.header("RADIAL IS POLAR ARITHMETIC", "Radius, count, angular step. The index drives the angle.")
-s.panel(L, 1.95, 6.0, 3.5, "THE RULE", headfill=PINK)
-s.t(L + 0.35, 2.7, 5.3, 2.4, [
-    s.Mb("step  = 360 / count", 12.5),
-    s.Mb("θ[i]  = i × step", 12.5),
-    s.Mb("p[i]  = c + r · (cos θ, sin θ)", 12.5, bold=True),
-    s.Mb(" ", 8),
-    s.Cb("The same rotation arithmetic from Week 2 — the one place where x and y have to talk "
-         "to each other — now generating positions instead of moving a solid.", 13.5)], ls=1.3)
-s.panel(7.0, 1.95, 5.65, 3.5, "TWO KNOBS", headfill=LIME, tsize=14.5)
-G.radial(s, 9.85, 3.35, rings=(0.42, 0.78, 1.14), n=12, d=0.10)
-s.t(7.3, 4.85, 5.05, 0.5, [s.Cb("Change the count and the step changes with it. "
-                                "Change the radius per ring and it opens up.", 13)], ls=1.25)
-s.banner(5.65, "IF YOUR LAST ELEMENT LANDS ON TOP OF YOUR FIRST, YOU DIVIDED BY THE WRONG NUMBER.",
-         fill=CYAN, h=0.72, align=PP_ALIGN.CENTER)
-
-# 5 ── CONDITIONAL DISPLACEMENT
-s = d.slide(CREAM)
-s.header("MOVE ONLY SOME OF THEM", "Select a range of indices with comparisons, and displace just those.")
-s.panel(L, 1.95, 5.6, 3.5, "BEFORE", headfill=MUTE)
-G.cartesian(s, L + 0.8, 3.0, cols=9, rows=4, p=0.42, d=0.15)
-s.t(L + 0.35, 4.85, 5.0, 0.4, [s.Cb("Every element identical. The index is computed, then ignored.", 12.5)])
-s.panel(6.6, 1.95, 6.05, 3.5, "AFTER", headfill=LIME)
-for i in range(9):
-    for j in range(4):
-        lift = -0.32 if 3 <= i <= 5 else 0.0
-        s.dot(7.0 + i * 0.42, 3.0 + j * 0.42 + lift, d=0.15,
-              fill=PINK if 3 <= i <= 5 else BLACK)
-s.t(6.9, 4.85, 5.45, 0.4, [s.Cb("Indices 3 to 5 lifted. One Compare, one Switch, one Set Position.", 12.5)])
-s.banner(5.75, "THE FIELD STOPS BEING WALLPAPER THE MOMENT A TEST DECIDES SOMETHING.",
-         fill=YELLOW, h=0.72, align=PP_ALIGN.CENTER)
-
-# 6 ── SINE
+# 3 ── CALCULATE EVERY POINT
 s = d.slide(BLACK)
-s.header("SINE GIVES YOU A SMOOTH RULE",
-         "Math set to Sine, driven by the index. Three words describe the whole curve.")
-s.panel(L, 2.05, 6.2, 3.3, "THREE PARAMETERS", headfill=CYAN)
-tri = [("AMPLITUDE", "how far it swings"),
-       ("FREQUENCY", "how many swings across the set"),
-       ("PHASE", "where in the swing it starts")]
-y = 2.85
-for nm, body in tri:
-    s.chip(L + 0.35, y, 2.0, 0.55, nm, fill=LIME, size=11)
-    s.t(L + 2.6, y, 3.3, 0.55, [s.Cb(body, 13)], anchor=MSO_ANCHOR.MIDDLE)
-    y += 0.72
-s.t(L + 0.35, 5.0, 5.5, 0.35, [s.Mb("h[i] = amp × sin(i × freq + phase)", 12.5, bold=True)])
-s.panel(7.15, 2.05, 5.5, 3.3, "READ IT AS A CURVE", headfill=YELLOW)
-G.sine_row(s, 7.6, 3.3, w=4.6, amp=0.55, n=15, cycles=1.0)
-s.t(7.45, 4.35, 4.9, 0.9, [s.Cb("Connect the ordered points and the list becomes a curve. "
-                                "That is the same list — read as a shape instead of as positions.",
-                                13)], ls=1.3)
-s.banner(5.7, "NAME THE THREE VALUES ON YOUR SHEET. P2a ASKS FOR THEM EXPLICITLY.",
-         fill=PINK, h=0.7, align=PP_ALIGN.CENTER)
+s.header("CALCULATE EVERY POINT",
+         "Each position is an expression of the parameters. Never a typed coordinate.")
+s.panel(L, 2.05, 5.1, 4.0, "PLAN — TOP RING", headfill=LIME)
+ox, oy, sz = L + 1.25, 2.95, 2.6
+kk = 0.42
+s.rect(ox, oy, sz, sz, fill=CREAM, line=BLACK, lw=THIN)
+qd = sz * kk
+ix, iy = ox + (sz - qd) / 2, oy + (sz - qd) / 2
+s.rect(ix, iy, qd, qd, fill=PAPER, line=BLACK, lw=THIN)
+# plan: y up, so index 0 is bottom-left
+pts = [(ox, oy + sz, "0"), (ox + sz, oy + sz, "1"), (ox + sz, oy, "2"), (ox, oy, "3"),
+       (ix, iy + qd, "4"), (ix + qd, iy + qd, "5"), (ix + qd, iy, "6"), (ix, iy, "7")]
+for i, (px, py, lab) in enumerate(pts):
+    s.dot(px, py, d=0.15, fill=PINK if i < 4 else CYAN)
+    dx = -0.34 if px < ox + sz / 2 else 0.08
+    dy = 0.02 if py > oy + sz / 2 else -0.3
+    if i >= 4:
+        dx = 0.08 if px < ox + sz / 2 else -0.3
+        dy = -0.3 if py > oy + sz / 2 else 0.04
+    s.t(px + dx, py + dy, 0.3, 0.26, [s.Mb(lab, 11.5, bold=True)])
+s.panel(6.05, 2.05, 6.6, 4.0, "THE POINT LIST", headfill=YELLOW)
+code = ["h = size / 2              # half size",
+        "q = h * k                 # aperture",
+        "t = thickness",
+        " ",
+        "top    = [[-h,-h,t], [ h,-h,t],     # 0 1",
+        "          [ h, h,t], [-h, h,t],     # 2 3",
+        "          [-q,-q,t], [ q,-q,t],     # 4 5",
+        "          [ q, q,t], [-q, q,t]]     # 6 7",
+        " ",
+        "bottom = the same eight at z = 0    # 8–15",
+        "verts  = top + bottom"]
+s.t(6.35, 2.8, 6.1, 3.1, [s.Mb(c, 11.5) for c in code], ls=1.2)
+s.banner(6.35, "WRITE THE INDEX NEXT TO EVERY POINT. THE FACES ARE LISTS OF THESE NUMBERS.",
+         fill=CYAN, h=0.6, align=PP_ALIGN.CENTER, size=12)
 
-# 7 ── THE TRAP
+# 4 ── FACE ORDER AND CLOSURE
 s = d.slide(CREAM)
-s.header("TWO WAYS TO REPEAT", "Worth being precise about, because they look alike and are not.")
-s.panel(L, 1.95, 6.0, 3.4, "EXPLICIT ITERATION", headfill=PINK)
-s.t(L + 0.35, 2.7, 5.3, 2.4, [
-    s.Cb("A Repeat Zone runs a body once per step, in order, carrying a value forward.", 14),
-    s.Cb(" ", 7),
-    s.Cb("Use it when step n depends on step n−1 — and when you want to watch the loop happen.", 14)], ls=1.3)
-s.panel(7.0, 1.95, 5.65, 3.4, "PER-ELEMENT EVALUATION", headfill=CYAN)
-s.t(7.3, 2.7, 5.05, 2.4, [
-    s.Cb("The other kind is evaluated across every element at once. There is no order and no carry.", 14),
-    s.Cb(" ", 7),
-    s.Cb("It is faster and it is usually what you want — but nothing on screen tells you a loop "
-         "happened, which is exactly why we built the explicit one first.", 14)], ls=1.3)
-s.banner(5.65, "NEXT WEEK THIS GETS A NAME. FOR NOW: ONE CARRIES A VALUE FORWARD, THE OTHER DOES NOT.",
-         fill=BLACK, color=CYAN, h=0.72, align=PP_ALIGN.CENTER)
+s.header("FACE ORDER AND CLOSURE",
+         "Four kinds of face, each written counter-clockwise as seen from outside the solid.")
+s.panel(L, 1.95, 6.9, 3.6, "THE FACE LIST  —  i = 0…3,  n = (i + 1) % 4", headfill=CYAN, tsize=13.5)
+fl = [("top", "[i,    n,    4+n,  4+i ]", "normal up"),
+      ("bottom", "[12+i, 12+n, 8+n,  8+i ]", "normal down"),
+      ("outer", "[i,    8+i,  8+n,  n   ]", "normal outward"),
+      ("inner", "[4+i,  4+n,  12+n, 12+i]", "normal into the hole")]
+yy = 2.75
+for nm, f, note in fl:
+    s.chip(L + 0.3, yy, 1.2, 0.45, nm.upper(), fill=LIME, size=11, shadow=False)
+    s.t(L + 1.75, yy + 0.08, 3.4, 0.35, [s.Mb(f, 12, bold=True)])
+    s.t(L + 5.05, yy + 0.08, 1.7, 0.35, [s.Cb(note, 11.5, GREY)])
+    yy += 0.66
+s.panel(7.85, 1.95, 4.8, 3.6, "CHECK IT", headfill=PINK)
+s.t(8.15, 2.7, 4.2, 2.7, [
+    s.Ab("16 VERTICES · 32 EDGES · 16 FACES", 12.5),
+    s.Cb(" ", 6),
+    s.Cb("Closed: every edge is shared by exactly two faces.", 13.5),
+    s.Cb(" ", 4),
+    s.Cb("Oriented: a shared edge runs one way in one face and the other way in the next.", 13.5),
+    s.Cb(" ", 4),
+    s.Cb("A reversed face flips its normal. Show one on the sheet, and say how you found it.", 13.5)],
+    ls=1.25)
+s.banner(5.85, "PUT ONE FACE ON THE SHEET WITH ITS VERTEX ORDER DRAWN. P3a ASKS FOR IT.",
+         fill=YELLOW, h=0.68, align=PP_ALIGN.CENTER)
 
-pseudocode_slide(d, "U04",
-                 title="THE SAME NINE LINES, A WEEK LATER",
-                 sub="Last week you could read the first three lines. Today you can read all of it.",
-                 note="j % 2 IS THE ODD/EVEN TEST · if IS COMPARE AND SWITCH · sin IS THE MATH NODE",
-                 note_fill=CYAN)
+# 5 ── TILE IT, THEN PUSH IT
+s = d.slide(CREAM)
+s.header("TILE IT 2 × 2, THEN PUSH THE NUMBERS",
+         "A module that only works at one value is a drawing. Find the range where it still closes and tiles.")
+s.panel(L, 1.95, 4.3, 3.75, "2 × 2, EDGE TO EDGE", headfill=LIME)
+ts = 1.15
+tx, ty = L + (4.3 - 2 * ts) / 2, 2.75
+for a in range(2):
+    for b in range(2):
+        frame_panel(s, tx + a * ts, ty + b * ts, ts, 0.45, fill=CREAM, lw=THIN)
+s.t(L + 0.3, 5.12, 3.7, 0.45, [s.Cb("Size is the pitch. Shared edges, no gaps.", 12.5)],
+    align=PP_ALIGN.CENTER)
+s.panel(5.2, 1.95, 7.45, 3.75, "LOW  ·  MIDDLE  ·  HIGH", headfill=YELLOW)
+for i, (lab, k, col) in enumerate([("k = 0.15", 0.15, CYAN), ("k = 0.50", 0.50, LIME),
+                                   ("k = 0.85", 0.85, PINK)]):
+    px = 5.65 + i * 2.35
+    frame_panel(s, px, 2.8, 1.6, k, fill=col, lw=THIN)
+    s.t(px - 0.2, 4.55, 2.0, 0.3, [s.Mb(lab, 12, bold=True)], align=PP_ALIGN.CENTER)
+s.t(5.5, 5.0, 6.9, 0.6, [s.Cb("At k = 0 the hole is gone and the inner faces collapse. At k = 1 the "
+                              "frame has no width. Both ends break the mesh.", 12.5)], ls=1.2)
+s.banner(6.0, "STATE THE RANGE ON THE SHEET — FOR EXAMPLE 0.15 ≤ k ≤ 0.85 — AND DRAW BOTH ENDS AND THE MIDDLE.",
+         fill=BLACK, color=YELLOW, h=0.68, align=PP_ALIGN.CENTER, size=12)
 
-# 8 ── NOW
-now_slide(d, "NOW — FINISH THE FOUR",
-          "Rest of the session: hexagonal, radial, the conditional and the sine.",
-          ["Hexagonal array working, with the odd/even test visible and row spacing correct",
-           "Radial array working from radius, count and angular step",
-           "One index range displaced — and you can say which indices and why",
-           "Sine driving height, with amplitude, frequency and phase written down",
-           "Three of the four chosen for the sheet, including the nested grid"],
-          closer="P2a IS THREE COMPARISONS, NOT FOUR UNRELATED PICTURES.",
+# 6 ── ONE RENDER, ONE MATERIAL
+s = d.slide(CREAM)
+s.header("ONE RENDER, ONE MATERIAL",
+         "A studio render: the module alone, on a ground plane, in one surface.")
+cols3 = [("GROUND PLANE", CYAN,
+          ["The module sits on it. Its shadow tells the eye where the module is.",
+           "Make it large enough to hold the whole shadow."]),
+         ("ONE MATERIAL", LIME,
+          ["One surface for the whole module: colour, roughness, metal or not.",
+           "Write the values down. They go on the sheet."]),
+         ("BACKGROUND", PINK,
+          ["Plain and continuous. The floor meets the backdrop without a visible edge.",
+           "No entourage: no people, trees or context."])]
+x = L
+for nm, col, body in cols3:
+    s.panel(x, 1.95, 3.85, 3.45, nm, headfill=col, tsize=15)
+    s.t(x + 0.28, 2.75, 3.3, 2.5, [s.Cb(body[0], 14), s.Cb(" ", 7), s.Cb(body[1], 14)], ls=1.3)
+    x += 4.08
+s.banner(5.75, "THE GEOMETRY IS THE SUBJECT. THE MATERIAL SHOULD SHOW ITS FORM, NOT COMPETE WITH IT.",
+         fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
+
+# 7 ── LIGHT IT ON PURPOSE
+s = d.slide(BLACK)
+s.header("LIGHT IT ON PURPOSE",
+         "Choose one setup. Every light has a job, and you can name it.")
+s.panel(L, 2.05, 5.2, 3.6, "KEY · FILL · RIM  (PLAN)", headfill=CYAN, tsize=14.5)
+mx, my = L + 2.6, 3.95
+s.rect(mx - 0.35, my - 0.35, 0.7, 0.7, fill=LIME, line=BLACK, lw=THIN)
+s.chip(mx - 0.55, my + 1.05, 1.1, 0.36, "CAMERA", fill=MUTE, size=9.5, shadow=False)
+s.chip(mx - 2.25, my + 0.35, 1.0, 0.36, "KEY", fill=YELLOW, size=10, shadow=False)
+s.chip(mx + 1.25, my + 0.2, 1.0, 0.36, "FILL", fill=PAPER, size=10, shadow=False)
+s.chip(mx - 0.5, my - 1.2, 1.0, 0.36, "RIM", fill=PINK, size=10, shadow=False)
+s.panel(6.1, 2.05, 6.55, 3.6, "TWO SETUPS", headfill=YELLOW)
+s.t(6.4, 2.8, 6.0, 2.8, [
+    [s.Ab("KEY  ", 12.5), s.Cb("the main light. It sets the shadow direction.", 13)],
+    [s.Ab("FILL  ", 12.5), s.Cb("opposite side, weaker. It lifts the dark side.", 13)],
+    [s.Ab("RIM  ", 12.5), s.Cb("behind the module. It separates the edge from the background.", 13)],
+    [s.Cb(" ", 6)],
+    [s.Ab("OR", 12.5)],
+    [s.Cb(" ", 4)],
+    [s.Ab("SUN  ", 12.5), s.Cb("one direction, sharp shadow.", 13)],
+    [s.Ab("SKY  ", 12.5), s.Cb("soft light from everywhere that fills the shadow.", 13)]], ls=1.3)
+s.banner(5.95, "LARGE LIGHT, SOFT SHADOW. SMALL LIGHT, SHARP SHADOW. CHOOSE ONE, SAY WHY, "
+              "AND RECORD EVERY SETTING.",
+         fill=PINK, h=0.72, align=PP_ALIGN.CENTER, size=12)
+
+# 8 ── CAMERA AND SHEET
+s = d.slide(CREAM)
+s.header("CAMERA AND SHEET",
+         "One fixed view, then a layout where the render leads and the lists explain it.")
+s.panel(L, 1.95, 5.0, 4.35, "CAMERA", headfill=LIME)
+s.t(L + 0.3, 2.7, 4.4, 3.5, [
+    s.Cb("One view. Slightly above, three-quarter, so the top and two sides read.", 13.5),
+    s.Cb(" ", 5),
+    s.Cb("A long enough lens that the module does not distort.", 13.5),
+    s.Cb(" ", 5),
+    s.Cb("Frame the module and its shadow. Leave air around both.", 13.5),
+    s.Cb(" ", 5),
+    s.Cb("Render at the proportion of the space it fills on the sheet.", 13.5)], ls=1.25)
+s.panel(5.95, 1.95, 6.7, 4.35, "17 × 11 INCH SHEET", headfill=CYAN)
+sx, sy, sw, sh_ = 6.8, 2.78, 5.0, 5.0 * 11 / 17
+f = sw / 5.9
+s.rect(sx, sy, sw, sh_, fill=PAPER, line=BLACK, lw=THIN)
+blocks = [(0.12, 0.12, 3.35, 2.45, "STUDIO RENDER", YELLOW),
+          (3.6, 0.12, 2.18, 0.72, "PARAMETER TABLE", LIME),
+          (3.6, 0.96, 2.18, 0.8, "POINT + FACE LISTS", CYAN),
+          (3.6, 1.88, 2.18, 0.69, "ONE FACE, VERTEX ORDER", PINK),
+          (0.12, 2.69, 3.35, 0.99, "LOW · MIDDLE · HIGH + 2 × 2", CREAM),
+          (3.6, 2.69, 2.18, 0.99, "SETTINGS · CREDIT", CREAM)]
+for bx, by, bw, bh, lab, col in blocks:
+    bx, by, bw, bh = bx * f, by * f, bw * f, bh * f
+    s.rect(sx + bx, sy + by, bw, bh, fill=col, line=BLACK, lw=HAIR)
+    s.t(sx + bx + 0.05, sy + by, bw - 0.1, bh, [s.Ab(lab, 9)],
+        align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+s.banner(6.55, "SETTINGS = MATERIAL VALUES AND EVERY LIGHT. CREDIT = BUILDING, ARCHITECT, SOURCE.",
+         fill=BLACK, color=LIME, h=0.56, align=PP_ALIGN.CENTER, size=11.5)
+
+# 9 ── CRITIQUE CHECKLIST
+s = d.slide(BLACK)
+s.header("CRITIQUE CHECKLIST",
+         "What we look at when your sheet goes on the wall. Check it yourself first.")
+lists = [("THE MODULE", LIME,
+          ["Tiles 2 × 2, edge to edge, with no gaps",
+           "Closed: every edge shared by two faces",
+           "One shape parameter beyond the box",
+           "Ranges stated; low, middle and high drawn",
+           "Every point calculated, none typed"]),
+         ("THE RENDER", CYAN,
+          ["Sits on the ground; the shadow reads",
+           "One material, its values recorded",
+           "Each light has a job you can name",
+           "Plain background, no entourage",
+           "The render leads the sheet; lists explain it"])]
+x = L
+for nm, col, items in lists:
+    s.panel(x, 2.05, 5.88, 4.15, nm, headfill=col)
+    yy = 2.85
+    for it in items:
+        s.rect(x + 0.3, yy + 0.05, 0.28, 0.28, fill=CREAM, line=BLACK, lw=THIN)
+        s.t(x + 0.8, yy, 4.9, 0.4, [s.Cb(it, 14)], anchor=MSO_ANCHOR.MIDDLE)
+        yy += 0.64
+    x += 6.12
+s.banner(6.5, "IF YOU CANNOT TICK A BOX, THAT IS WHAT YOU WORK ON THIS WEEK.",
+         fill=YELLOW, h=0.58, align=PP_ALIGN.CENTER, size=12)
+
+# 10 ── REMINDER — P3a REQUIREMENTS
+requirements_slide(d, "P3a", title="REMINDER — P3a REQUIREMENTS", sub=VISUAL)
+
+# 11 ── NOW
+now_slide(d, "NOW — BUILD IT, THEN LIGHT IT",
+          "Rest of the class: your own module, closed and tiling, in a first test render.",
+          ["Parameters written down first, with one shape control beyond the box",
+           "Point list calculated from the parameters — no typed coordinates",
+           "Faces ordered, normals out, closure checked",
+           "2 × 2 tiling working at low, middle and high values",
+           "One test render: ground plane, one material, lights placed on purpose"],
+          closer="A CLOSED MODULE AND A TEST RENDER. THE SHEET FOLLOWS.",
           bg=LIME)
 
-# 9 ── BEFORE NEXT CLASS
+# 12 ── BEFORE NEXT CLASS
 before_next_slide(d, [
-    ("WATCH", "U05 — Attractors. Distance, remap, clamp and falloff. Next week the rule stops "
-              "coming from the index and starts coming from a measurement."),
-    ("BRING", "Your four arrangements, working. We drive them with attractors next class, so bring "
-              "a file you can build on."),
-    ("CHECK", "P1c — print-ready geometry, physical units, orientation and the sliced preview get "
-              "reviewed today before anything is queued."),
-    ("FINISH", "P1b is due today. P2a is due at the midterm; keep the comparisons moving."),
+    ("NEXT", "Week 6 starts arrays: 1D, 2D and 3D — a linear array, a nested grid and an XYZ "
+             "cube array. Your module is the component we repeat."),
+    ("DUE", "P3a is due next class: one sheet, one studio render, settings recorded. "
+            + C.due_line("P3a") + "."),
+    ("PRINT", "P2b print checkpoint next class. " + C.checkpoints("P2b")[0][1]),
+    ("BRING", "The editable module file — closed, parameterised, tiling. Next class it becomes "
+              "the component of every array."),
 ])
 
 d.save(os.path.join(OUT, "ARC3133_Class05.pptx"))

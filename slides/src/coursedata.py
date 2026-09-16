@@ -23,7 +23,14 @@ DATA, PATH = _load()
 COURSE   = DATA["course"]
 UNITS    = {u["id"]: u for u in DATA["units"]}
 PROJECTS = {p["id"]: p for p in DATA["projects"]}
-WEEKS    = {w["week"]: w for w in DATA["weeks"]}
+WEEKS    = {w["week"]: dict(w) for w in DATA["weeks"]}
+# Week titles and units live on the teaching blocks, not on the dated weeks.
+BLOCKS   = {}
+for _b in DATA.get("teaching_sequence", []):
+    for _n in _b["weeks"]:
+        WEEKS[_n].setdefault("title", _b["focus"])
+        WEEKS[_n].setdefault("units", list(_b["units"]))
+        BLOCKS[_n] = _b
 
 MILESTONES = {}
 for _p in DATA["projects"]:
@@ -109,7 +116,7 @@ def banner_for(week_n):
 if __name__ == "__main__":
     print("course.yml:", PATH)
     print("revision:", DATA.get("revision"), "|", DATA.get("status"))
-    for n in range(1, 7):
+    for n in sorted(WEEKS):
         w = WEEKS[n]
         print("W%-2d %s  %-38s units=%s  %s" % (
             n, date_short(n), w["title"], ",".join(w["units"]), banner_for(n)))

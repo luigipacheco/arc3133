@@ -2,7 +2,7 @@
   {
     "id": "S01",
     "unit": "U02",
-    "title": "Intro to Geometry Nodes — transformations and CSG",
+    "title": "Constructive Solid Geometry",
     "file": "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
     "scenes": [
       "01 - CSG example"
@@ -11,7 +11,7 @@
   {
     "id": "S02",
     "unit": "U03",
-    "title": "Geometry Fundamentals",
+    "title": "Descriptive Geometry",
     "file": "files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend",
     "scenes": [
       "Point",
@@ -25,7 +25,7 @@
   {
     "id": "S03",
     "unit": "U04",
-    "title": "Arrays and Lists — Part 1: linear and nested grid",
+    "title": "Arrays — Part 1: linear and nested grid",
     "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
     "scenes": [
       "Linear loop",
@@ -35,7 +35,7 @@
   {
     "id": "S04",
     "unit": "U04",
-    "title": "Arrays and Lists — Part 2: arrangements and rules",
+    "title": "Arrays — Part 2: arrangements and rules",
     "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
     "scenes": [
       "3D array",
@@ -48,7 +48,7 @@
   {
     "id": "S05",
     "unit": "U05",
-    "title": "Attractors",
+    "title": "Attractor",
     "file": "files/blender/04-attractors/Attractors.blend",
     "scenes": [
       "Read the field",
@@ -71,7 +71,7 @@
   {
     "id": "S07",
     "unit": "U07",
-    "title": "Point Clouds and Volumes",
+    "title": "Volumetric Data and Fields — point clouds",
     "file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
     "scenes": [
       "Import points",
@@ -81,8 +81,8 @@
   },
   {
     "id": "S08",
-    "unit": "U08",
-    "title": "Advanced Volumes I — signed distance and Boolean",
+    "unit": "U07",
+    "title": "Volumetric Data and Fields — signed distance and Booleans",
     "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
     "scenes": [
       "Mesh to SDF",
@@ -92,8 +92,8 @@
   },
   {
     "id": "S09",
-    "unit": "U08",
-    "title": "Advanced Volumes II — noise and surface extraction",
+    "unit": "U07",
+    "title": "Volumetric Data and Fields — noise and surface extraction",
     "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
     "scenes": [
       "Noise field"
@@ -102,7 +102,7 @@
   {
     "id": "S10",
     "unit": "U09",
-    "title": "Discretizing Geometry I — contours",
+    "title": "Discretizing Geometry — contours",
     "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
     "scenes": [
       "One contour",
@@ -112,7 +112,7 @@
   {
     "id": "S11",
     "unit": "U09",
-    "title": "Discretizing Geometry II — physical parts",
+    "title": "Discretizing Geometry — section parts",
     "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
     "scenes": [
       "Section parts",
@@ -121,8 +121,8 @@
   },
   {
     "id": "S12",
-    "unit": "U09",
-    "title": "Final Project — fabrication and assembly",
+    "unit": "U10",
+    "title": "Final — fabrication and assembly",
     "file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
     "scenes": [
       "Print orientation",

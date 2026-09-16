@@ -1,0 +1,82 @@
+{
+  "small-print-mm.stl": {
+    "triangles": 28,
+    "dimensions_mm": [
+      45.0,
+      36.0,
+      22.0
+    ],
+    "minimum_z": 0.0
+  },
+  "fit-coupon-mm.stl": {
+    "triangles": 432,
+    "dimensions_mm": [
+      24.0,
+      12.0,
+      3.0
+    ],
+    "minimum_z": 0.0
+  },
+  "modular-parts-mm.stl": {
+    "triangles": 2112,
+    "dimensions_mm": [
+      75.5,
+      75.5,
+      3.0
+    ],
+    "minimum_z": 0.0
+  },
+  "svg": {
+    "width": "400mm",
+    "height": "300mm",
+    "paths": 80,
+    "all_closed": true,
+    "labels": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "22 spacers \u2014 same stock"
+    ]
+  },
+  "point_cloud": {
+    "header": [
+      "ply",
+      "format ascii 1.0",
+      "comment Synthetic ARC 3133 teaching data; not a survey",
+      "element vertex 1806",
+      "property float x",
+      "property float y",
+      "property float z",
+      "end_header"
+    ],
+    "data_rows": 1806
+  },
+  "old_verification_hash_mismatches": [
+    "files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend",
+    "files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend",
+    "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
+    "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
+    "files/blender/04-attractors/Attractors.blend",
+    "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
+    "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
+    "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
+    "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
+    "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
+    "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
+    "files/blender/09-final-project/Final-Project-Fabrication.blend"
+  ],
+  "grasshopper": {
+    "bytes": 17463,
+    "header_hex": "edbd093cd45dfb3f3ed69024",
+    "execution_verified": false
+  }
+}

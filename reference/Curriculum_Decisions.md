@@ -17,11 +17,12 @@
 
 ### Working proposals
 
-- Budget two weeks per tutorial and per assignment: CSG and geometry from scratch each took two classes in practice. Attractors are covered before the midterm, which moves to Week 10. Weeks 10–15 after the midterm are provisional and will be re-planned then.
-- Retain the existing 15-week semester and midterm/final review windows.
-- Draft grading: GSM 7%, CSG 14%, Paneling 28%, Volumetric Data 28%, midterm 7%, booklet 11% and participation 5%.
+- Budget two weeks per tutorial and per assignment: CSG and geometry from scratch each took two classes in practice.
+- Week 10 is a hard mid-semester deadline for everything through Arrays (manual, CSG sheet and print, module, arrays), held as a regular class. There is no separate midterm review; its 7% moves to the final booklet.
+- Draft grading: GSM 7%, CSG 14%, Paneling 28%, Volumetric Data 28%, final booklet 18% and participation 5%.
+- Attractor assignments are due two weeks after their class: the 2D field drawing in Week 10, the layered site analysis in Week 11.
 - Focus the required final on the developed visual work, physical work and booklet. The previous Python/AI final and extra-credit scheme are awaiting an instructor decision and are not assigned in this draft.
-- Three physical outputs: the CSG 3D print, the attractor field plotter drawing and a laser-cut SDF volume assembled from slices.
+- Two required physical outputs: the CSG 3D print and a laser-cut SDF volume. Plotting the 2D attractor drawing is optional.
 
 ### Administrative items to confirm
 
@@ -29,16 +30,16 @@
 - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
 - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
 - Confirm the attendance sign-in method and the accreditation criteria used by the School.
-- Confirm pen-plotter access, pens and paper for the P3c field drawing, and post the Mixtli add-on with install instructions before Week 8.
+- Confirm pen-plotter access, pens and paper for students who choose to plot the P3c drawing, and post the Mixtli add-on with install instructions before Week 9.
 
 ## Why the sequence changed
 
-The four projects are GSM, CSG, Paneling and Volumetric Data. Projects 1-3 finish at the Week 10 midterm. Paneling includes four separate assignments: the module, arrays, the 2D field plotter drawing and the Mixtli site analysis. The two array sheets form one assignment; the two attractor sheets form two assignments.
+The four projects are GSM, CSG, Paneling and Volumetric Data. Week 10 is the hard deadline for everything through Arrays; there is no midterm review. Paneling includes four separate assignments: the module, arrays, the 2D field drawing (due Week 10) and the layered site analysis (due Week 11). The two array sheets form one assignment; the two attractor sheets form two assignments.
 
-Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and the pen-plotter workflow; Week 9 teaches the Mixtli site analysis and reviews test plots. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
+Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and its line drawing, with pen plotting as an option; Week 9 teaches the layered site analysis with Mixtli. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
 
 Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
 
-Draft weights use 7% per assignment in Projects 1-3 and 14% for each Project 4 assignment. The fabricated outputs are the CSG print, the plotter drawing and the sliced volume. Review machine capacity and the later schedule at midterm.
+Draft weights use 7% per assignment in Projects 1-3 and 14% for each Project 4 assignment. The required fabricated outputs are the CSG print and the sliced volume; plotting the P3c drawing is optional. Review machine capacity and the later schedule in Week 10.
 
 Every class now has a deck generated from slides/src that reads dates and briefs from this file; rebuild the decks after any calendar or brief change. Video tutorials exist for CSG and Descriptive Geometry (Blender and Rhino + Grasshopper); record the others as time allows. Keep institutional policies separate from curriculum edits.

@@ -59,8 +59,8 @@ s.banner(5.75, "A procedure is a fixed recipe. A parametric system is a recipe w
 
 # 4 ── FOUR PROJECTS, NINE ASSIGNMENTS
 SHORT = {"GSM": "four-page manual", "P2a": "CSG process sheet", "P2b": "3D printed object",
-         "P3a": "module sheet", "P3b": "arrays, two sheets", "P3c": "plotter field",
-         "P3d": "site analysis", "P4a": "SDF volume", "P4b": "laser-cut slices"}
+         "P3a": "module sheet", "P3b": "arrays, two sheets", "P3c": "2D field drawing",
+         "P3d": "layered site analysis", "P4a": "SDF volume", "P4b": "laser-cut slices"}
 NAMES = {"P1": "GRAPHIC STANDARDS MANUAL", "P2": "CONSTRUCTIVE SOLID GEOMETRY",
          "P3": "PANELING", "P4": "VOLUMETRIC DATA"}
 
@@ -83,20 +83,20 @@ for i, pid in enumerate(["P1", "P2", "P3", "P4"]):
     s.t(L + 1.5, y + 0.1, W - 3.2, 0.32, [s.Ab(NAMES[pid], 13.5)])
     line = []
     for k, m in enumerate(ms):
-        gap = "     " if k < len(ms) - 1 else ""
+        gap = "    " if k < len(ms) - 1 else ""
         line += [s.Mb(m["id"], 11.5, bold=True),
                  s.Cb(" %s · due %s%s" % (SHORT[m["id"]], due_short(m), gap), 11.5)]
-    s.t(L + 1.5, y + 0.48, W - 3.2, 0.34, [line])
+    s.t(L + 1.5, y + 0.48, W - 2.75, 0.34, [line])
     s.t(W - 0.95, y, 1.6, 0.92, [s.Ab("%d%%" % total, 17)],
         align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
     y += 1.04
-mid, book, part = C.milestone("MID"), C.milestone("BOOK"), C.milestone("PART")
-s.banner(6.22, "MIDTERM REVIEW OF P1–P3 · %s · %d%%     FINAL BOOKLET · DUE %s · %d%%     "
-               "PARTICIPATION · %d%%" % (C.date_long(mid["due"]).upper(), mid["weight"],
+book, part = C.milestone("BOOK"), C.milestone("PART")
+s.banner(6.22, "MID-SEMESTER DEADLINE · %s     FINAL BOOKLET · DUE %s · %d%%     "
+               "PARTICIPATION · %d%%" % (C.date_long(C.COURSE["midterm_week"]).upper(),
                                          str(book["due"]).upper(), book["weight"], part["weight"]),
          fill=LIME, h=0.6, size=12, align=PP_ALIGN.CENTER)
-s.t(L, 6.98, W, 0.3, [s.C("Dates after the midterm are provisional. The course site is the "
-                         "reference for every due date.", 11.5, GREY)])
+s.t(L, 6.98, W, 0.3, [s.C("Everything through Arrays is due by Week 10. Later dates are provisional; "
+                         "the course site is the reference for every due date.", 11.5, GREY)])
 
 # 5 ── HOW A CLASS RUNS
 s = d.slide(BLACK)
@@ -176,7 +176,7 @@ issued_slide(d, "GSM",
              badgefill=CYAN,
              cards=[("DECIDE", "THE SYSTEM", "Grid, margins, type, line weights, colour. Written down, not improvised."),
                     ("TEST", "ON REAL WORK", "A diagram and a rendered image, made with the rules you just set."),
-                    ("REVISE", "ALL SEMESTER", "Due at the midterm, revised again for the booklet.")])
+                    ("REVISE", "ALL SEMESTER", "Due Week 10, revised again for the booklet.")])
 
 # 8 ── REQUIREMENTS
 requirements_slide(d, "GSM",
@@ -203,7 +203,7 @@ before_next_slide(d, [
                 "File organization is part of the workflow, not an afterthought."),
     ("BRING", "Your sample sheet and the file it came from. The sheet gets an ungraded "
               "identity check next class (%s)." % C.date_long(gsm_cp[0])),
-    ("PLAN", "GSM is due at the midterm, %s. Study the three manuals and pick your rule "
+    ("PLAN", "GSM is due at the mid-semester deadline, %s. Study the three manuals and pick your rule "
              "before you lay out page 1." % C.date_long(C.milestone("GSM")["due"])),
 ])
 

@@ -191,7 +191,7 @@ now_slide(d, "NOW — SHEET 2",
            "Radial array working from radius, count and angular step",
            "Your module placed along a resampled curve, aligned to its tangent",
            "A sine-driven curve, with amplitude, frequency and phase written down",
-           "Sheet 1 reviewed at your desk — count, spacing, index order labelled"],
+           "Sheet 1 reviewed — labels in place, and one conditional selection with its rule stated"],
           closer="TWO SHEETS, ONE MODULE, SIX ARRAYS. NOTHING ELSE CHANGES.",
           bg=LIME)
 
@@ -203,7 +203,7 @@ before_next_slide(d, [
             + C.due_line("P3b") + "."),
     ("FINISH", "Sheet 2: hexagonal, radial and curve arrays, the sine values labelled. Check "
                "sheet 1 against the requirements again."),
-    ("PRINT", "P2b — the printed object and its process sheet are due at the midterm, "
+    ("PRINT", "P2b — the printed object and its process sheet are due at the mid-semester deadline, "
               + C.date_long(10) + ". If it is not queued yet, queue it now."),
 ])
 

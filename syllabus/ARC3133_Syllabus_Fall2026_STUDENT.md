@@ -23,9 +23,9 @@
 
 Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain your design decisions through clear visual work.
 
-**Through midterm:** Graphic Standards Manual → Constructive Solid Geometry → Descriptive Geometry → Arrays → Attractor. Diagram and 3D print a CSG object, build a module from points and faces, array it in 1D, 2D and 3D and along hexagonal, radial and curve patterns, then plot a 2D attractor field and analyze a site with the Mixtli add-on. 3D printing is introduced in Week 3; the print is presented at midterm.
+**Weeks 1–10:** Graphic Standards Manual → Constructive Solid Geometry → Descriptive Geometry → Arrays → Attractor. Diagram and 3D print a CSG object, build a module from points and faces, array it in 1D, 2D and 3D and along hexagonal, radial and curve patterns, then draw a 2D attractor field and map a site in layers. 3D printing is introduced in Week 3; the print is due in Week 10.
 
-**After midterm:** Volumetric Data and Fields → Discretizing Geometry → Final. Model a volume with signed distance fields, slice it into sections, then laser-cut and assemble the final work. The later schedule will be confirmed at midterm. Tessellation, panelization, lattices and simulation are optional, with no separate required submission.
+**Weeks 10–15:** Volumetric Data and Fields → Discretizing Geometry → Final. Model a volume with signed distance fields, slice it into sections, then laser-cut and assemble the final work. Dates in this second half may still change. Tessellation, panelization, lattices and simulation are optional, with no separate required submission.
 
 Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
 
@@ -44,9 +44,9 @@ Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight
 
 ## Learning pace and class format
 
-**Complete attractors by the Week 10 midterm.** After the Week 1 introduction, each topic has two classes for demonstration and practice. The CSG sheet, module and arrays each have two weeks from brief to deadline. Both attractor assignments run through Weeks 8-9; the manual and CSG print develop alongside them. Arrays runs over two classes: 1D, 2D and 3D arrays in Week 6, then hexagonal, radial and curve arrays in Week 7.
+**Week 10 is the mid-semester deadline:** everything through Arrays — the manual, the CSG sheet and print, the module and the arrays — must be submitted by then. It is a regular class, not a review. After the Week 1 introduction, each topic has two classes for demonstration and practice, and each assignment has two weeks from brief to deadline: the 2D attractor drawing is due in Week 10 and the layered site analysis in Week 11. Arrays runs over two classes: 1D, 2D and 3D arrays in Week 6, then hexagonal, radial and curve arrays in Week 7.
 
-Later teaching dates and deadlines are provisional and will be confirmed at midterm. Until a change is announced in class and on Canvas, use the listed deadlines. October 5–9 and December 1–4 are reserved for studio reviews, with no graded submissions for this course.
+Teaching dates and deadlines after Week 10 are provisional. Until a change is announced in class and on Canvas, use the listed deadlines. October 5–9 and December 1–4 are reserved for studio reviews, with no graded submissions for this course.
 
 Each class combines a short demonstration, guided practice and critique. Start with a small example, check how it works, then increase its complexity. Watch the video tutorial for the topic where one is posted.
 
@@ -77,7 +77,7 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | --- | --- | --- |
 | P1 — GSM | Graphic Standards Manual | 7% |
 | P2 — CSG | CSG process and instructions → CSG 3D printed object | 14% |
-| P3 — Paneling | Descriptive geometry module — material and lighting → Arrays → Attractor: 2D field plotter drawing → Attractor: site analysis with Mixtli | 28% |
+| P3 — Paneling | Descriptive geometry module — material and lighting → Arrays → Attractor: 2D field drawing → Attractor: layered site analysis | 28% |
 | P4 — Volumetric Data | SDF volume → Discretizing and laser-cut fabrication | 28% |
 
 ## Target teaching calendar
@@ -93,8 +93,8 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 7 | Oct 6 | Arrays | No graded submission |
 | 8 | Oct 13 | Attractor | P3b — Arrays |
 | 9 | Oct 20 | Attractor | — |
-| 10 | Oct 27 | Midterm review; then volumetric Data and Fields | GSM — Graphic Standards Manual; P2b — CSG 3D printed object; P3c — Attractor: 2D field plotter drawing; P3d — Attractor: site analysis with Mixtli; MID — Midterm review |
-| 11 | Nov 3 | Volumetric Data and Fields | — |
+| 10 | Oct 27 | Mid-semester deadline (everything through Arrays); volumetric Data and Fields | GSM — Graphic Standards Manual; P2b — CSG 3D printed object; P3c — Attractor: 2D field drawing |
+| 11 | Nov 3 | Volumetric Data and Fields | P3d — Attractor: layered site analysis |
 | 12 | Nov 10 | Discretizing Geometry | P4a — SDF volume |
 | 13 | Nov 17 | Discretizing Geometry | — |
 | 14 | Nov 24 | Final | — |
@@ -109,21 +109,20 @@ Digital assignments: visual quality 35%, computational understanding 25%, techni
 
 GSM: visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%. The manual does not require a computational graph.
 
-Midterm: revision 40%, coherence across the set 30%, print/layout/documentation quality 30%. Booklet: substantive revision 40%, documentation 35%, visual identity 25%. Reviews do not replace earlier assignment grades. Standing late-work and revision policies apply.
+Final booklet: substantive revision 40%, documentation 35%, visual identity 25%. The booklet does not replace earlier assignment grades. Standing late-work and revision policies apply.
 
-| Assignment / review | Introduced | Due | Weight |
+| Assignment | Introduced | Due | Weight |
 | --- | --- | --- | --- |
 | GSM — Graphic Standards Manual | Week 1 — Aug 25 | Week 10 — Oct 27 | 7% |
 | P2a — CSG process and instructions | Week 2 — Sep 1 | Week 4 — Sep 15 | 7% |
 | P2b — CSG 3D printed object | Week 3 — Sep 8 | Week 10 — Oct 27 | 7% |
 | P3a — Descriptive geometry module — material and lighting | Week 4 — Sep 15 | Week 6 — Sep 29 | 7% |
 | P3b — Arrays | Week 6 — Sep 29 | Week 8 — Oct 13 | 7% |
-| P3c — Attractor: 2D field plotter drawing | Week 8 — Oct 13 | Week 10 — Oct 27 | 7% |
-| P3d — Attractor: site analysis with Mixtli | Week 8 — Oct 13 | Week 10 — Oct 27 | 7% |
+| P3c — Attractor: 2D field drawing | Week 8 — Oct 13 | Week 10 — Oct 27 | 7% |
+| P3d — Attractor: layered site analysis | Week 9 — Oct 20 | Week 11 — Nov 3 | 7% |
 | P4a — SDF volume | Week 10 — Oct 27 | Week 12 — Nov 10 | 14% |
 | P4b — Discretizing and laser-cut fabrication | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 14% |
-| MID — Midterm review | Week 1 — Aug 25 | Week 10 — Oct 27 | 7% |
-| BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 10–16, 2026; exact review slot to be confirmed | 11% |
+| BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 10–16, 2026; exact review slot to be confirmed | 18% |
 | PART — Attendance and participation | Week 1 — Aug 25 | Throughout the semester | 5% |
 | Total |  |  | 100% |
 
@@ -178,7 +177,7 @@ Explain a CSG object through a BIG-style process diagram with instructions, then
 **Present:** One 3D printed CSG object and one process sheet; source, mesh and slicer files.
 
 - Print a variant of your CSG object from P2a, within 60 mm on each axis and the 200 g allocation, without supports.
-- Bring the print to midterm with one process sheet showing orientation and a photograph.
+- Hand in the print in Week 10 with one process sheet showing orientation and a photograph.
 - Submit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.
 
 **Ungraded checkpoints:**
@@ -216,43 +215,44 @@ Build a module, array it across two sheets, plot an attractor field and analyze 
 - Sheet 1 — 1D, 2D and 3D arrays: a linear array, a nested grid and an XYZ cube array. Label count, spacing and index order; show the predicted total for each.
 - Sheet 2 — hexagonal, radial and curve arrays: a staggered hexagonal grid, a radial array (radius, count, angular step) and an array along a curve, including one sine-driven curve with amplitude, frequency and phase labelled.
 - Keep the module unchanged; vary only its placement. Expose count and spacing or radius in the graph.
-- Build repetition from basic nodes and begin with a count you can inspect; there is no minimum element count. One conditional (index-range) selection is encouraged on either sheet.
+- Build repetition from basic nodes and begin with a count you can inspect; there is no minimum element count.
+- Include one conditional selection on either sheet. State its rule (for example, indices 3–5 lift by 0.5) and show the array before and after it applies.
 
 <a id="p3c"></a>
 
-### P3c — Attractor: 2D field plotter drawing
+### P3c — Attractor: 2D field drawing
 
 **Introduced:** Week 8 — Oct 13 · **Due:** Week 10 — Oct 27 · **Weight:** 7%
 
-**Present:** One pen-plotter drawing of a 2D attractor field; SVG, scan or photograph and editable graph.
+**Present:** One sheet presenting a 2D attractor field drawing; PDF, SVG and editable graph. A physical plot is optional.
 
-- Build a 2D attractor field on a flat grid and translate it into lines a pen plotter can draw — vary line length, rotation, spacing or hatch density with the measured distance.
+- Build a 2D attractor field on a flat grid and translate it into lines — vary line length, rotation, spacing or hatch density with the measured distance.
 - Compare single-point, multiple-point and curve attractors on the same grid, with the same mapping, so the difference comes from the attractor alone.
-- Show the grayscale field with a legend beside the line drawing. Label input and output ranges, clamping and falloff.
-- Export an SVG at the plotted size, test a small plot, then plot the final drawing at 17 × 11 inches (or the confirmed plotter size) with one pen weight or a declared set of pens.
-- Submit the plotted drawing, the SVG, a photograph or scan of the plot and the editable graph. Move an attractor or change the mapping live at midterm.
+- Make one 17 × 11 inch sheet presenting the line drawing, with the grayscale field and a legend beside it. Label input and output ranges, clamping and falloff.
+- Keep the drawing as clean vector lines and submit the SVG with the sheet PDF and the editable graph.
+- Optional — plot the drawing on the pen plotter and add a photograph or scan of the plot to the sheet.
 
 **Ungraded checkpoints:**
 
-- Week 9 — Oct 20: Bring a grayscale field, the line translation and a small test plot.
+- Week 9 — Oct 20: Bring the grayscale field and a first line drawing of it.
 
 <a id="p3d"></a>
 
-### P3d — Attractor: site analysis with Mixtli
+### P3d — Attractor: layered site analysis
 
-**Introduced:** Week 8 — Oct 13 · **Due:** Week 10 — Oct 27 · **Weight:** 7%
+**Introduced:** Week 9 — Oct 20 · **Due:** Week 11 — Nov 3 · **Weight:** 7%
 
-**Present:** One site-analysis sheet; PDF, working Blender file and a source record for the site.
+**Present:** One site-analysis sheet; PDF, working file and a source record for the site.
 
-- Pick a site you can document and state why you chose it. Record the source of the site model or data, its units, scale and orientation.
-- Analyze the site with the Mixtli add-on for Blender, provided by the instructor. Record the analysis type, inputs and settings.
-- Make one 17 × 11 inch sheet with an annotated site plan or base view, the mapped analysis with a legend and units, and one comparison of settings, times or conditions.
-- Explain what the output measures, how it reads as a field — the same distance-and-remap logic as P3c — and how it informs one spatial decision on the site.
-- Submit the working file and dependencies. The add-on does the computation; the question, comparison and interpretation are yours.
+- Pick a site you can document and state why you chose it. Record the source of the point cloud, its units, scale and orientation.
+- Map at least three layers of the point-cloud data with attractor logic — for example distance to points or curves, height bands, and a recorded attribute such as colour or classification.
+- Make one 17 × 11 inch sheet with small views of each layer, each with its own legend and units, beside one larger combined visualization.
+- Explain what each layer measures, how you combined them, and what the combined view shows about the site.
+- Record the tool, inputs and ranges for every layer and submit the working file. The Mixtli add-on for Blender, introduced in class, does these operations; an equivalent tool is fine.
 
 **Ungraded checkpoints:**
 
-- Week 9 — Oct 20: Bring your chosen site, one Mixtli analysis with a legend and a stated analysis question.
+- Week 10 — Oct 27: Bring your site's point cloud and at least two mapped layers with legends.
 
 ## P4 — Volumetric Data
 
@@ -296,23 +296,11 @@ Model a volume with signed distance fields, discretize it into slices and fabric
 
 ## Visual identity and course reviews
 
-<a id="mid"></a>
-
-### MID — Midterm review
-
-**Introduced:** Week 1 — Aug 25 · **Due:** Week 10 — Oct 27 · **Weight:** 7%
-
-- Print and present Project 1: the four-page Graphic Standards Manual.
-- Present Project 2: the CSG process sheet, the 3D printed CSG object and its process sheet.
-- Present Project 3: one module sheet, two array sheets, the plotted attractor field drawing and one Mixtli site-analysis sheet.
-- Bring editable files and dependencies. Change a parameter live, predict the result and explain the nodes or the Mixtli analysis settings.
-- The review assesses revision and coherence across Projects 1-3. Earlier assignment grades remain separate. Project 4 follows the review.
-
 <a id="book"></a>
 
 ### BOOK — Final booklet and review
 
-**Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 11%
+**Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 18%
 
 - Compile all four projects and nine assignments in revised form, using 17 x 11 inch pages and your graphic standards.
 - Include process diagrams, photographs and captions for the CSG print and laser-cut volume. Identify substantive revisions after critique.
@@ -381,9 +369,9 @@ These are the two required physical outputs. Material availability and machine t
 
 The core course teaches graphs and geometric reasoning. No required Python or AI tool-building final is assigned in this working draft; that decision remains open.
 
-**Through the Week 10 midterm:** students produce their own graphs, geometry, layouts and submission material. AI may explain a concept, syntax or an error message, but may not write, complete or repair submitted work.
+**Through Week 10:** students produce their own graphs, geometry, layouts and submission material. AI may explain a concept, syntax or an error message, but may not write, complete or repair submitted work.
 
-**After the midterm:** code assistance may be used only where an assignment explicitly permits it. Students write their own procedure or pseudocode first, disclose the tool/version and prompts, record what was kept or changed, and verify the result. This permission does not replace the required node-based exercises or authorize AI production of the visual work.
+**After Week 10:** code assistance may be used only where an assignment explicitly permits it. Students write their own procedure or pseudocode first, disclose the tool/version and prompts, record what was kept or changed, and verify the result. This permission does not replace the required node-based exercises or authorize AI production of the visual work.
 
 Generative image production, generative fill, AI upscaling, and AI generation of a visual identity, palette or layout remain prohibited for submitted coursework. Students remain responsible for every submitted result and must be able to explain and modify it. Citation follows the University's AI policy retained below.
 
@@ -432,7 +420,7 @@ Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a 
 
 Posted lessons link their Blender examples and screenshots. Use each file as a reference while building your own work. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
 
-**Site analysis:** students pick their own site and use the Mixtli add-on for Blender. The add-on and install notes will be posted before Week 8.
+**Site analysis:** students pick their own site and use the Mixtli add-on for Blender. The add-on and install notes will be posted before Week 9.
 
 ## Decisions before issue
 
@@ -449,11 +437,12 @@ Posted lessons link their Blender examples and screenshots. Use each file as a r
 
 ### Working proposals
 
-- Budget two weeks per tutorial and per assignment: CSG and geometry from scratch each took two classes in practice. Attractors are covered before the midterm, which moves to Week 10. Weeks 10–15 after the midterm are provisional and will be re-planned then.
-- Retain the existing 15-week semester and midterm/final review windows.
-- Draft grading: GSM 7%, CSG 14%, Paneling 28%, Volumetric Data 28%, midterm 7%, booklet 11% and participation 5%.
+- Budget two weeks per tutorial and per assignment: CSG and geometry from scratch each took two classes in practice.
+- Week 10 is a hard mid-semester deadline for everything through Arrays (manual, CSG sheet and print, module, arrays), held as a regular class. There is no separate midterm review; its 7% moves to the final booklet.
+- Draft grading: GSM 7%, CSG 14%, Paneling 28%, Volumetric Data 28%, final booklet 18% and participation 5%.
+- Attractor assignments are due two weeks after their class: the 2D field drawing in Week 10, the layered site analysis in Week 11.
 - Focus the required final on the developed visual work, physical work and booklet. The previous Python/AI final and extra-credit scheme are awaiting an instructor decision and are not assigned in this draft.
-- Three physical outputs: the CSG 3D print, the attractor field plotter drawing and a laser-cut SDF volume assembled from slices.
+- Two required physical outputs: the CSG 3D print and a laser-cut SDF volume. Plotting the 2D attractor drawing is optional.
 
 ### Administrative items to confirm
 
@@ -461,7 +450,7 @@ Posted lessons link their Blender examples and screenshots. Use each file as a r
 - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
 - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
 - Confirm the attendance sign-in method and the accreditation criteria used by the School.
-- Confirm pen-plotter access, pens and paper for the P3c field drawing, and post the Mixtli add-on with install instructions before Week 8.
+- Confirm pen-plotter access, pens and paper for students who choose to plot the P3c drawing, and post the Mixtli add-on with install instructions before Week 9.
 
 # Standing course and university policies
 

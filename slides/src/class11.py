@@ -30,7 +30,8 @@ def sign_field(s, x, y, cols, rows, p, fn, inside=PINK, outside=CYAN, zero=YELLO
 # 1 ── TITLE
 title_slide(d, WK, ["SDF VOLUME", "STUDIO WORK"],
             "P4 CONTINUES — ONE SHAPE, WRITTEN AS A FUNCTION", bg=LIME, lfill=PINK, rfill=CYAN,
-            right_tag="P4a CHECKPOINT")
+            right_tag="P3d DUE · P4a CHECKPOINT",
+            foot="P3d DUE TODAY  /  P4a CHECKPOINT TODAY")
 
 # 2 ── A FIELD HAS A SIGN
 s = d.slide(BLACK)
@@ -186,7 +187,7 @@ requirements_slide(d, "P4a", sub=RUBRIC, title="REMINDER — P4a")
 
 # 10 ── NOW
 now_slide(d, "NOW — CHECKPOINT AND WORK",
-          "Rest of the class: the checkpoint first — items 1, 2 and 5 — then keep building.",
+          "P3d is handed in today. Then the P4a checkpoint — items 1, 2 and 5 — then keep building.",
           ["An SDF diagram: inside, outside and the zero surface, for your own fields",
            "Union, intersection and difference from the same two source fields",
            "One smooth-min or noise variant, with the changed value written down",

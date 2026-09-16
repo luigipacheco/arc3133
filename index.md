@@ -13,7 +13,7 @@ Fall 2026 — Full Term · Tuesday, 5:00 PM–7:50 PM · Luis Pacheco Alcala and
 
 ## Welcome
 
-Welcome to ARC 3133. This course is about describing architecture as a set of rules — operations, points and faces, arrays and fields — and turning that description into clear drawings, renders and physical objects: a 3D print, a pen-plotter drawing and a laser-cut assembly.
+Welcome to ARC 3133. This course is about describing architecture as a set of rules — operations, points and faces, arrays and fields — and turning that description into clear drawings, renders and physical objects: a 3D print, attractor drawings and a laser-cut assembly.
 
 We work mainly in Blender Geometry Nodes, and the video tutorials also cover Rhino + Grasshopper. No programming experience is needed: you build with nodes, and each lesson shows the same steps written as short pseudocode so you learn to read it.
 
@@ -38,15 +38,13 @@ We work mainly in Blender Geometry Nodes, and the video tutorials also cover Rhi
 | [P3b — Arrays]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3b) | Week 8 — Oct 13 | 7% |
 | [GSM — Graphic Standards Manual]({{ site.baseurl }}/modules/assignments/p1-gsm/#gsm) | Week 10 — Oct 27 | 7% |
 | [P2b — CSG 3D printed object]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b) | Week 10 — Oct 27 | 7% |
-| [P3c — Attractor: 2D field plotter drawing]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3c) | Week 10 — Oct 27 | 7% |
-| [P3d — Attractor: site analysis with Mixtli]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3d) | Week 10 — Oct 27 | 7% |
-| [MID — Midterm review]({{ site.baseurl }}/modules/assignments/mid-midterm-review/) | Week 10 — Oct 27 | 7% |
+| [P3c — Attractor: 2D field drawing]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3c) | Week 10 — Oct 27 | 7% |
 
 [Full calendar]({{ site.baseurl }}/resources/course-policies/#target-teaching-calendar) — all fifteen weeks with every deadline.
 
 ## The semester
 
-Topics run in order, usually two classes each. The midterm review is Week 10 — Oct 27.
+Topics run in order, usually two classes each. Everything through Arrays is due by Week 10 — Oct 27, the mid-semester deadline.
 
 | Weeks | Topic | Classes | Video tutorials |
 |---|---|---|---|
@@ -72,6 +70,6 @@ Topics run in order, usually two classes each. The midterm review is Week 10 —
 
 Each class is a short demonstration, then guided practice and critique. Bring your editable file every week: you should be able to change an input, predict what happens and explain why. Your Graphic Standards Manual sets the look of every sheet you present.
 
-Fabrication runs through the semester: a 3D print in Project 2, a pen-plotter drawing in Project 3 and a laser-cut assembly in Project 4. Complete the FabLab Safety Orientation before using any machine.
+Fabrication runs through the semester: a 3D print in Project 2 and a laser-cut assembly in Project 4, with an optional pen-plotter drawing in Project 3. Complete the FabLab Safety Orientation before using any machine.
 
 [Syllabus, calendar and policies]({{ site.baseurl }}/resources/course-policies/) · [Assignments and grading]({{ site.baseurl }}/modules/assignments/overview/)

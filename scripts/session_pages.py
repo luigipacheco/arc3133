@@ -107,7 +107,7 @@ def build(course, front):
     index = front('Classes · overview', categories=['classes'])
     index += ('# Classes\n\nOne page per class, in order. Each class page has the slides, the video tutorials, '
               'the Blender example files, what to practice and what is due. Pages are posted as the semester reaches them. '
-              'The midterm review is ' + course.when(course.by_id['MID']['due']) + '.\n\n')
+              'Everything through Arrays is due by ' + course.when(course.meta['midterm_week']) + '.\n\n')
     index += sequence(course)
     for block in course.sequence:
         label = 'Weeks' if len(block['weeks']) > 1 else 'Week'

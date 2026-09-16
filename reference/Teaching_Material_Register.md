@@ -4,7 +4,7 @@
 
 Posted lessons link their Blender examples and screenshots. Use each file as a reference while building your own work. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
 
-**Site analysis:** students pick their own site and use the Mixtli add-on for Blender. The add-on and install notes will be posted before Week 8.
+**Site analysis:** students pick their own site and use the Mixtli add-on for Blender. The add-on and install notes will be posted before Week 9.
 
 | Unit | Topic | Blender session | Released | Recording / revised slides |
 | --- | --- | --- | --- | --- |
@@ -31,10 +31,10 @@ Every class has one deck, built with the course slide kit from `slides/src` and 
 | 5 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class05.pptx) / [PDF](../slides/ARC3133_Class05.pdf) | Current | Your own module: parameters, points, faces, tiling; one material and lighting for the P3a sheet. |
 | 6 | Arrays | [PPTX](../slides/ARC3133_Class06.pptx) / [PDF](../slides/ARC3133_Class06.pdf) | Current | Arrays 1D, 2D, 3D (P3b sheet 1); P3a due; P3b issued; P2b print checkpoint. |
 | 7 | Arrays | [PPTX](../slides/ARC3133_Class07.pptx) / [PDF](../slides/ARC3133_Class07.pdf) | Current | Arrays hexagonal, radial, curve (P3b sheet 2); studio-review week, nothing due. |
-| 8 | Attractor | [PPTX](../slides/ARC3133_Class08.pptx) / [PDF](../slides/ARC3133_Class08.pdf) | Current | Attractors on a 2D field and the pen-plotter workflow; P3b due; P3c and P3d issued. |
-| 9 | Attractor | [PPTX](../slides/ARC3133_Class09.pptx) / [PDF](../slides/ARC3133_Class09.pdf) | Current | Site analysis with Mixtli; P3c test-plot review; midterm checklist. |
-| 10 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class10.pptx) / [PDF](../slides/ARC3133_Class10.pdf) | Current | Midterm review of Projects 1-3, then SDF introduction; P4a issued. |
-| 11 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class11.pptx) / [PDF](../slides/ARC3133_Class11.pdf) | Current | SDF volume studio work; P4a checkpoint. |
+| 8 | Attractor | [PPTX](../slides/ARC3133_Class08.pptx) / [PDF](../slides/ARC3133_Class08.pdf) | Current | Attractors on a 2D field and its line drawing (plotting optional); P3b due; P3c issued. |
+| 9 | Attractor | [PPTX](../slides/ARC3133_Class09.pptx) / [PDF](../slides/ARC3133_Class09.pdf) | Current | Layered site analysis with Mixtli; P3d issued; P3c review. |
+| 10 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class10.pptx) / [PDF](../slides/ARC3133_Class10.pdf) | Current | Mid-semester deadline (through Arrays + P3c), then SDF introduction; P4a issued. |
+| 11 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class11.pptx) / [PDF](../slides/ARC3133_Class11.pdf) | Current | SDF volume studio work; P4a checkpoint; P3d due. |
 | 12 | Discretizing Geometry | [PPTX](../slides/ARC3133_Class12.pptx) / [PDF](../slides/ARC3133_Class12.pdf) | Current | Discretizing geometry; P4a due; P4b issued; booklet checkpoint. |
 | 13 | Discretizing Geometry | [PPTX](../slides/ARC3133_Class13.pptx) / [PDF](../slides/ARC3133_Class13.pdf) | Current | Parts for the laser cutter: thickness, registration, kerf, nesting; P4b checkpoint. |
 | 14 | Final | [PPTX](../slides/ARC3133_Class14.pptx) / [PDF](../slides/ARC3133_Class14.pdf) | Current | Final production, assembly, photography, booklet. |
@@ -42,12 +42,12 @@ Every class has one deck, built with the course slide kit from `slides/src` and 
 
 [Detailed project and materials audit](ARC3133_Project_and_Materials_Audit_2026-09-16.md)
 
-The four projects are GSM, CSG, Paneling and Volumetric Data. Projects 1-3 finish at the Week 10 midterm. Paneling includes four separate assignments: the module, arrays, the 2D field plotter drawing and the Mixtli site analysis. The two array sheets form one assignment; the two attractor sheets form two assignments.
+The four projects are GSM, CSG, Paneling and Volumetric Data. Week 10 is the hard deadline for everything through Arrays; there is no midterm review. Paneling includes four separate assignments: the module, arrays, the 2D field drawing (due Week 10) and the layered site analysis (due Week 11). The two array sheets form one assignment; the two attractor sheets form two assignments.
 
-Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and the pen-plotter workflow; Week 9 teaches the Mixtli site analysis and reviews test plots. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
+Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and its line drawing, with pen plotting as an option; Week 9 teaches the layered site analysis with Mixtli. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
 
 Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
 
-Draft weights use 7% per assignment in Projects 1-3 and 14% for each Project 4 assignment. The fabricated outputs are the CSG print, the plotter drawing and the sliced volume. Review machine capacity and the later schedule at midterm.
+Draft weights use 7% per assignment in Projects 1-3 and 14% for each Project 4 assignment. The required fabricated outputs are the CSG print and the sliced volume; plotting the P3c drawing is optional. Review machine capacity and the later schedule in Week 10.
 
 Every class now has a deck generated from slides/src that reads dates and briefs from this file; rebuild the decks after any calendar or brief change. Video tutorials exist for CSG and Descriptive Geometry (Blender and Rhino + Grasshopper); record the others as time allows. Keep institutional policies separate from curriculum edits.

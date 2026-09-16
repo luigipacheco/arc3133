@@ -12,7 +12,7 @@ categories:
 
 ## BOOK — Final booklet and review
 
-**Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 11%
+**Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 18%
 
 - Compile all four projects and nine assignments in revised form, using 17 x 11 inch pages and your graphic standards.
 - Include process diagrams, photographs and captions for the CSG print and laser-cut volume. Identify substantive revisions after critique.

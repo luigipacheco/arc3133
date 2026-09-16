@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Class 10 — Midterm review (Projects 1–3), then Volumetric Data (U07): SDF.
-GSM, P2b, P3c, P3d and MID due. P4a issued."""
+"""Class 10 — Mid-semester deadline (everything through Arrays is in), then Volumetric Data
+(U07): SDF. GSM, P2b and P3c due. P3d checkpoint. P4a issued."""
 import os, math
 from nb import *
 from slidekit import *
@@ -15,7 +15,7 @@ WK = 10
 
 VISUAL = ("Visual quality 35% · computational understanding 25% · technical execution 20% "
           "· experimentation 10% · requirements and identity 10%.")
-DUE_MID = sorted(m["id"] for m in C.milestones_due(WK))
+DUE_TODAY = sorted(m["id"] for m in C.milestones_due(WK))
 
 
 def sdf_dots(s, x, y, fn, cols=11, rows=8, p=0.26, band=0.09):
@@ -45,43 +45,39 @@ def box(cx, cy, bx, by):
 
 
 # 1 ── TITLE
-title_slide(d, WK, ["MIDTERM REVIEW", "+ VOLUMETRIC DATA"],
-            "PART 1 — PROJECTS 1–3 ON THE WALL · PART 2 — P4 BEGINS",
-            bg=PINK, lfill=YELLOW, rfill=CYAN, right_tag="MIDTERM — %d DUE" % len(DUE_MID))
+title_slide(d, WK, ["DEADLINE WEEK", "+ VOLUMETRIC DATA"],
+            "EVERYTHING THROUGH ARRAYS IS IN · PROJECT 4 BEGINS",
+            bg=PINK, lfill=YELLOW, rfill=CYAN,
+            foot="MID-SEMESTER DEADLINE  /  P4a ISSUED TODAY  /  P3d CHECKPOINT TODAY")
 
-# 2 ── RUNNING ORDER
+# 2 ── DUE TODAY
+SUBMIT = {"GSM": "Four pages, each rule beside a tested application. Revised again for the booklet.",
+          "P2b": "The print and its process sheet, handed in, with the source, mesh and slicer files.",
+          "P3c": "One 17 × 11 sheet: line drawing, grayscale field and legend. SVG, PDF and graph."}
 s = d.slide(BLACK)
-s.header("PART 1 — RUNNING ORDER",
-         "Due today: %s. Everything is on the wall before the first presentation." % " · ".join(DUE_MID))
-order = [("01", "PIN UP", "Prints, the plotted drawing and the 3D print, in project order."),
-         ("02", "PROJECT 1", "The manual, and one rule you can point to on every other sheet."),
-         ("03", "PROJECT 2", "The process sheet, the print, and what changed for printability."),
-         ("04", "PROJECT 3", "Module, arrays, plotted field, site analysis — as one sequence."),
-         ("05", "LIVE", "Open the file. Change one thing in front of the room.")]
-y = 2.0
-for i, (n, ttl, body) in enumerate(order):
-    s.chip(L, y, 0.7, 0.58, n, fill=ACCENTS[i % 4], size=13)
-    s.t(L + 0.95, y, 1.9, 0.58, [s.A(ttl, 13)], anchor=MSO_ANCHOR.MIDDLE)
-    s.t(L + 2.85, y, 3.9, 0.58, [s.C(body, 12.5)], anchor=MSO_ANCHOR.MIDDLE, ls=1.15)
-    y += 0.8
-s.panel(7.95, 2.0, 4.7, 3.9, "THE LIVE CHANGE", headfill=YELLOW, tsize=14)
-s.t(8.25, 2.75, 4.1, 3.0, [
-    s.Cb("CHOOSE", 13.5, bold=True),
-    s.Cb("One parameter: an attractor position, a count, a radius, a setting.", 13.5),
-    s.Cb("PREDICT", 13.5, bold=True),
-    s.Cb("Say what will happen before you touch it.", 13.5),
-    s.Cb("CHANGE AND EXPLAIN", 13.5, bold=True),
-    s.Cb("Name the nodes, or the analysis settings, that made it happen.", 13.5)], ls=1.2)
-s.banner(6.2, "IF THE PREDICTION WAS WRONG, SAY WHY. THAT IS ALSO UNDERSTANDING.",
-         fill=CYAN, h=0.62, align=PP_ALIGN.CENTER)
-
-# 3 ── WHAT IS ASSESSED
-s = requirements_slide(d, "MID", title="PART 1 — WHAT IS ASSESSED",
-                       sub="Revision and coherence across Projects 1–3, presented and changed live.")
+s.header("DUE TODAY — THE MID-SEMESTER DEADLINE",
+         "Everything through Arrays must be in today. This is a regular class after that.")
+y = 1.95
+for i, mid in enumerate(DUE_TODAY):
+    m = C.milestone(mid)
+    s.chip(L, y, 1.1, 0.95, mid, fill=ACCENTS[i % 4], size=16)
+    s.card(L + 1.35, y, W - 1.35, 0.95, fill=CREAM)
+    s.t(L + 1.6, y + 0.1, 6.5, 0.35, [s.Ab(m["title"].upper(), 13)])
+    s.t(W - 3.3, y + 0.1, 3.8, 0.35, [s.A(C.due_line(mid), 10.5, GREY)], align=PP_ALIGN.RIGHT)
+    s.t(L + 1.6, y + 0.48, W - 1.9, 0.4, [s.Cb(SUBMIT.get(mid, ""), 12.5)])
+    y += 1.1
+earlier = sorted(m["id"] for m in C.MILESTONES.values()
+                 if isinstance(m.get("due"), int) and m["due"] < WK)
+s.t(L, y + 0.02, W, 0.35, [s.C("Already due and expected in: %s." % ", ".join(earlier), 13, MUTE)])
+cp_d = C.checkpoints("P3d")[0][1]
+s.banner(5.55, "P3d CHECKPOINT TODAY · " + cp_d.upper(), fill=YELLOW, h=0.62, size=12,
+         align=PP_ALIGN.CENTER)
+s.t(L, 6.4, W, 0.4, [s.C("P3d is due next class, %s. P4a is issued today."
+                         % C.date_long(C.milestone("P3d")["due"]).title(), 13, MUTE)])
 
 # 4 ── MESH VS FIELD
 s = d.slide(CREAM)
-s.header("PART 2 — A MESH OR A FIELD",
+s.header("A MESH OR A FIELD",
          "Two ways to describe the same solid. Until now you have only used one.")
 s.panel(L, 1.95, 5.85, 3.5, "MESH — THE SKIN", headfill=MUTE)
 s.t(L + 0.3, 2.7, 5.25, 2.6, [
@@ -199,7 +195,7 @@ pseudocode_slide(d, "U07", size=9.5,
                  sub="The top half reads a point cloud. Today is the bottom half: a shape as a function.",
                  note="FROM “def field” DOWN IS P4a: TWO FIELDS, ONE BLEND, ONE GRID, ONE SURFACE AT ZERO.")
 
-# 10 ── ISSUED — P4a
+# 9 ── ISSUED — P4a
 issued_slide(d, "P4a",
              blurb="Project 4 begins. Build a volume from signed distance fields — the CSG logic from P2, "
                    "applied to fields instead of meshes — and choose the one you will slice and "
@@ -208,12 +204,12 @@ issued_slide(d, "P4a",
                     ("VARY", "THREE VARIANTS", "Three controlled parameter changes on the chosen result."),
                     ("STATE", "HOW IT WAS READ", "Resolution, extraction settings, and the spatial intention.")])
 
-# 11 ── REQUIREMENTS — P4a
+# 10 ── REQUIREMENTS — P4a
 requirements_slide(d, "P4a", sub=VISUAL)
 
-# 12 ── NOW
+# 11 ── NOW
 now_slide(d, "NOW — YOUR FIRST FIELD VOLUME",
-          "After the review: two primitives, three Booleans, one surface.",
+          "Rest of the class: two primitives, three Booleans, one surface.",
           ["A sphere field sampled on a grid and extracted at zero",
            "A box field beside it, each with its size exposed",
            "Union as min, then swapped for max, then for max(a, −b)",
@@ -222,15 +218,17 @@ now_slide(d, "NOW — YOUR FIRST FIELD VOLUME",
           closer="IF YOU CAN SAY WHERE ZERO IS, YOU CAN SAY WHERE THE SURFACE IS.",
           bg=LIME)
 
-# 13 ── BEFORE NEXT CLASS
+# 12 ── BEFORE NEXT CLASS
 cp = C.checkpoints("P4a")[0]
 before_next_slide(d, [
     ("NEXT", "%s: SDF volume studio work — primitives, the three Booleans, smooth blend, noise and "
              "surface extraction." % C.date_long(11).title()),
+    ("P3d", "Due next class, %s: one sheet with each layer small, with its legend, beside the "
+            "combined view, and the working file." % C.date_long(C.milestone("P3d")["due"]).title()),
     ("P4a", "Checkpoint %s. %s" % (C.date_long(cp[0]).title(), cp[1])),
-    ("DUE", "P4a is due %s (%d%%): two sheets, the editable graph and the source fields."
-            % (C.date_long(C.milestone("P4a")["due"]).title(), C.milestone("P4a")["weight"])),
-    ("NOTE", "Dates after the midterm are provisional. Check the course site each week."),
+    ("DUE", "P4a is due %s (%d%%): two sheets, the editable graph and the source fields. Later "
+            "dates are provisional." % (C.date_long(C.milestone("P4a")["due"]).title(),
+                                        C.milestone("P4a")["weight"])),
 ])
 
 d.save(os.path.join(OUT, "ARC3133_Class10.pptx"))

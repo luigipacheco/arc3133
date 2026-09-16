@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Class 08 — Attractors (U05): 2D field and pen plotter. P3b due. P3c and P3d issued."""
+"""Class 08 — Attractors (U05): 2D field drawing (pen plotting optional). P3b due. P3c issued."""
 import os, math
 from nb import *
 from slidekit import *
@@ -20,7 +20,7 @@ FABRICATION = ("Visual documentation 20% · computational understanding 20% · t
 
 
 def stroke(s, x1, y1, x2, y2, lw=Pt(1.5), col=BLACK):
-    """One straight pen stroke — the only mark a plotter makes."""
+    """One straight stroke — the only mark a line drawing (or a pen plotter) makes."""
     ln = s.s.shapes.add_connector(MSO_CONNECTOR.STRAIGHT, Inches(x1), Inches(y1),
                                   Inches(x2), Inches(y2))
     ln.line.color.rgb = rgb(col)
@@ -40,8 +40,8 @@ def hatch_cell(s, x, y, w, h, n, lw=Pt(1.0)):
 
 
 # 1 ── TITLE
-title_slide(d, WK, ["ATTRACTORS", "2D FIELD + PLOTTER"],
-            "P3 CONTINUES — A FIELD FIRST, THEN LINES A PEN CAN DRAW", bg=CYAN, lfill=PINK, rfill=LIME)
+title_slide(d, WK, ["ATTRACTORS", "2D FIELD DRAWING"],
+            "P3 CONTINUES — A FIELD FIRST, THEN A DRAWING MADE OF LINES", bg=CYAN, lfill=PINK, rfill=LIME)
 
 # 2 ── AN ATTRACTOR IS A NUMBER
 s = d.slide(BLACK)
@@ -144,13 +144,13 @@ s.banner(6.45, "SAME GRID, SAME MAPPING, THREE ATTRACTORS: P3c SHOWS WHAT THE AT
 
 # 6 ── LINES, NOT PIXELS
 s = d.slide(BLACK)
-s.header("A PLOTTER DRAWS LINES, NOT PIXELS",
-         "A screen can show any grey. A pen is either down or up.")
+s.header("A LINE DRAWING IS LINES, NOT PIXELS",
+         "A screen can show any grey. A line, drawn or plotted, is either there or not.")
 s.panel(L, 2.0, 5.85, 2.75, "ON SCREEN — A VALUE PER PIXEL", headfill=MUTE, tsize=13.5)
 G.gray_ramp(s, L + 0.3, 2.85, 5.25, 0.75)
 s.t(L + 0.3, 3.8, 5.25, 0.8, [s.Cb("Every sample can be any grey. Nothing needs to be drawn.", 13.5)],
     ls=1.25)
-s.panel(6.8, 2.0, 5.85, 2.75, "ON PAPER — A STROKE OR NOTHING", headfill=LIME, tsize=13.5)
+s.panel(6.8, 2.0, 5.85, 2.75, "AS LINES — A STROKE OR NOTHING", headfill=LIME, tsize=13.5)
 cw = 5.25 / 9
 for i in range(9):
     s.rect(7.1 + i * cw, 2.85, cw, 0.75, fill=CREAM, line=BLACK, lw=Pt(1.0))
@@ -158,9 +158,9 @@ for i in range(9):
 s.t(7.1, 3.8, 5.25, 0.8, [s.Cb("Every stroke is the same darkness. Grey comes from how many "
                                "lines, how long and how close.", 13.5)], ls=1.25)
 s.banner(5.1, "SO THE FIELD MUST BECOME GEOMETRY: CURVES WITH A START AND AN END. "
-              "AN IMAGE WILL NOT PLOT.", fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
-s.t(L, 6.1, W, 0.7, [s.C("The grayscale field stays on the sheet as the legend. The line drawing is "
-                         "what the pen draws.", 13.5, MUTE)], ls=1.3)
+              "THAT IS WHAT THE SVG HOLDS.", fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
+s.t(L, 6.1, W, 0.7, [s.C("The grayscale field stays on the sheet, with its legend, beside the line drawing. "
+                         "The lines are what you submit as SVG — and what a pen plotter could draw.", 13.5, MUTE)], ls=1.3)
 
 # 7 ── FOUR TRANSLATIONS
 s = d.slide(CREAM)
@@ -216,17 +216,17 @@ s.t(L + 0.35, 5.8, W - 0.7, 1.0, [
     s.Mb("line(p, angle, length)            # the last line is the translation", 12.5, YELLOW)],
     anchor=MSO_ANCHOR.MIDDLE, ls=1.3)
 
-# 8 ── EXPORT, TEST PLOT, COMMON PROBLEMS
+# 8 ── EXPORT, OPTIONAL TEST PLOT, COMMON PROBLEMS
 s = d.slide(CREAM)
-s.header("EXPORT AT SIZE. TEST SMALL. FIX IT IN THE SVG.",
-         "The SVG is the drawing the plotter receives. Check it before the pen touches paper.")
+s.header("EXPORT THE SVG AT SIZE. PLOTTING IS OPTIONAL.",
+         "The SVG is required. If you choose to plot it, test small before the pen touches paper.")
 blocks = [(L, "01   EXPORT THE SVG", CYAN,
            [("CURVES", "Keep strokes as curves. No mesh, no filled shape."),
-            ("SIZE", "17 × 11 in, or the confirmed plotter size, at 100%."),
+            ("SIZE", "17 × 11 in, the sheet size, at 100%."),
             ("UNITS", "Know the file unit. Measure one known line."),
             ("PEN", "One pen weight, or one layer per declared pen."),
             ("MARGIN", "Every stroke inside the paper, with a margin.")]),
-          (6.8, "02   TEST PLOT SMALL FIRST", LIME,
+          (6.8, "02   OPTIONAL — TEST PLOT SMALL FIRST", LIME,
            [("CROP", "A small, dense corner of the real drawing."),
             ("PEN", "Check tip and ink. A dry pen skips."),
             ("PAPER", "Real paper, fixed flat, right way round."),
@@ -239,7 +239,7 @@ for bx, ttl, col, rws in blocks:
         s.chip(bx + 0.22, y, 1.3, 0.36, chip, fill=ACCENTS[i % 4], size=10, shadow=False)
         s.t(bx + 1.68, y - 0.02, 4.05, 0.4, [s.Cb(body, 12)], anchor=MSO_ANCHOR.MIDDLE)
         y += 0.49
-s.t(L, 5.3, W, 0.3, [s.A("03   COMMON PROBLEMS — EACH ONE IS VISIBLE IN THE SVG BEFORE IT IS ON PAPER",
+s.t(L, 5.3, W, 0.3, [s.A("03   COMMON PROBLEMS — EACH ONE IS VISIBLE IN THE SVG BEFORE IT IS PRINTED OR PLOTTED",
                          11, GREY)])
 probs = [("DUPLICATE LINES", PINK, "Strokes on top of each other. Remove overlaps."),
          ("TOO-DENSE HATCHING", YELLOW, "Lines closer than the pen blot. Space them wider."),
@@ -254,56 +254,39 @@ for nm, col, fix in probs:
 
 # 9 ── ISSUED — P3c
 issued_slide(d, "P3c",
-             blurb="Take the field off the screen. Sample it on a flat grid, turn every value into a "
-                   "line, and let a pen plotter draw it. Same grid, same mapping, three attractors: "
-                   "the drawing shows what the attractor alone changes.",
+             blurb="Sample a field on a flat grid, turn every value into a line, and present the line "
+                   "drawing beside its grayscale field on one sheet. Same grid, same mapping, three "
+                   "attractors: the drawing shows what the attractor alone changes.",
              cards=[("FIELD", "GREY FIRST", "The grayscale field, with a legend, before any line."),
                     ("LINES", "ONE MAPPING", "Length, rotation, spacing or hatch density, driven by distance."),
-                    ("PLOT", "SVG TO PAPER", "Export at plotted size, test small, then plot the sheet.")])
+                    ("SHEET", "ONE 17 × 11", "Line drawing, field and legend. SVG submitted. Plotting is optional.")])
 
 # 10 ── REQUIREMENTS — P3c
-s = requirements_slide(d, "P3c", sub=FABRICATION)
-# the fabrication rubric is long: keep it on one line above the first row
-for sh in s.s.shapes:
-    if sh.has_text_frame and sh.text_frame.text == FABRICATION:
-        for r in sh.text_frame.paragraphs[0].runs:
-            r.font.size = Pt(12)
+requirements_slide(d, "P3c", sub=VISUAL)
 
-# 11 ── ISSUED — P3d
-issued_slide(d, "P3d", badge="ALSO ISSUED TODAY", badgefill=LIME,
-             blurb="Pick a real site and analyze it with Mixtli, the Blender add-on the instructor "
-                   "provides. Read its output as a field — the same distance-and-remap logic as P3c — "
-                   "and use it to make one spatial decision. Mixtli is taught in detail next class.",
-             cards=[("SITE", "RECORD IT", "Source, units, scale and orientation, before any analysis."),
-                    ("ANALYZE", "ONE COMPARISON", "One analysis with a legend and units, and one comparison."),
-                    ("DECIDE", "YOUR READING", "The add-on computes. The question and the reading are yours.")])
-
-# 12 ── REQUIREMENTS — P3d
-requirements_slide(d, "P3d", sub=VISUAL)
-
-# 13 ── NOW
-now_slide(d, "NOW — FIELD TO PAPER",
-          "Rest of the class: build the field, translate it, export it, test it.",
+# 11 ── NOW
+now_slide(d, "NOW — FIELD TO DRAWING",
+          "Rest of the class: build the field, translate it, export it, start the sheet.",
           ["Build the 2D field: a flat grid, distance at every sample, shown as grey with a legend",
            "Write down input and output ranges, clamp and falloff — actual numbers",
            "Translate the field into lines: length, rotation, spacing or hatch density",
-           "Export an SVG at plotted size and measure one known line",
-           "Run a small test plot and compare it with the screen"],
+           "Export an SVG at sheet size and measure one known line",
+           "Optional: run a small test plot on the pen plotter and compare it with the screen"],
           closer="MOVE THE ATTRACTOR. IF YOU CANNOT PREDICT WHAT HAPPENS, STOP AND READ THE FIELD.",
           bg=LIME)
 
-# 14 ── BEFORE NEXT CLASS
+# 12 ── BEFORE NEXT CLASS
 cp_c = C.checkpoints("P3c")[0][1]
-cp_d = C.checkpoints("P3d")[0][1]
-due_ids = sorted((m["id"] for m in C.milestones_due(10)), key=lambda i: (i == "MID", i))
-due_mid = ", ".join(due_ids[:-1]) + " and " + due_ids[-1]
+dl = C.COURSE["midterm_week"]
+due_ids = sorted(m["id"] for m in C.milestones_due(dl))
+due_list = ", ".join(due_ids[:-1]) + " and " + due_ids[-1]
 before_next_slide(d, [
-    ("NEXT", "%s: site analysis with Mixtli, the Blender add-on the instructor provides."
-             % C.date_long(9).title()),
+    ("NEXT", "%s: layered site analysis — map a site's point cloud in layers with attractor "
+             "logic. P3d is issued." % C.date_long(9).title()),
     ("P3c", "Checkpoint next class. %s" % cp_c),
-    ("P3d", "Checkpoint next class. %s" % cp_d),
-    ("MIDTERM", "%s: midterm review of Projects 1–3. Due then: %s. Do not leave prints or "
-                "plots to the last week." % (C.date_long(10).title(), due_mid)),
+    ("DEADLINE", "%s is the mid-semester deadline. %s are due, and everything through Arrays "
+                 "must be in." % (C.date_long(dl).title(), due_list)),
+    ("SITE", "Think of a site you can document. P3d starts from its point cloud."),
 ])
 
 d.save(os.path.join(OUT, "ARC3133_Class08.pptx"))

@@ -89,7 +89,7 @@ s.header("PACKAGE THE FILES",
          "Three kinds of file. The review may open any of them, on a machine that is not yours.")
 pk = [("EDITABLE", CYAN, "Every project file with its graph intact, plus its dependencies: textures, "
                          "linked files, supplied groups and add-ons you used."),
-      ("FABRICATION", LIME, "The files that made the physical work: the P2b print file, the P3c plot file "
+      ("FABRICATION", LIME, "The files that made the physical work: the P2b print file, the P3c SVG "
                             "and the final P4b cutting file."),
       ("PDF", YELLOW, "The booklet PDF, and the revised GSM as a separate PDF.")]
 x = L

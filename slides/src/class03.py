@@ -267,7 +267,7 @@ issued_slide(d, "P2b",
                    "photograph go on one process sheet.",
              cards=[("SIZE", "60 mm, 200 g", "Within 60 mm on each axis, inside the 200 g allocation."),
                     ("SUPPORTS", "NONE", "Orientation is the lever. Change geometry only if you must, and say why."),
-                    ("SHEET", "ONE PAGE", "Orientation and a photograph. Brought to the midterm with the print.")])
+                    ("SHEET", "ONE PAGE", "Orientation and a photograph. Handed in with the print in Week 10.")])
 
 # 11 ── REQUIREMENTS
 s = requirements_slide(d, "P2b", sub="")
@@ -293,7 +293,7 @@ before_next_slide(d, [
     ("NEXT", "%s. %s: point, line, edge, face, solid, Boolean. P3a is issued."
              % (C.date_long(4), C.week(4)["title"])),
     ("DUE", "P2a, the CSG process sheet, is due next class, %s." % C.date_long(p2a["due"])),
-    ("PRINT", "P2b print checkpoint %s: %s P2b is due at the midterm, %s."
+    ("PRINT", "P2b print checkpoint %s: %s P2b is due at the mid-semester deadline, %s."
               % (C.date_long(cp_wk), cp_txt, C.date_long(p2b["due"]))),
     ("FABLAB", "Complete the FabLab safety orientation before the checkpoint. "
                "No orientation, no machine access."),

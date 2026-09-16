@@ -264,8 +264,8 @@ class Course:
             if web:
                 labels = [self.link(label, self.assignment_url(a)) for label, a in zip(labels, due)]
             focus = w["title"]
-            if w["week"] == self.by_id["MID"]["due"]:
-                focus = "Midterm review; then " + focus[0].lower() + focus[1:]
+            if w["week"] == self.meta.get("midterm_week"):
+                focus = "Mid-semester deadline (everything through Arrays); " + focus[0].lower() + focus[1:]
             rows.append([w["week"], self.when(w["week"]).split(" — ")[1], focus, "; ".join(labels) or ("No graded submission" if w.get("no_due") else "—")])
         final = [a for a in self.assessments if a["due"] == "final"]
         rows.append(["Final", self.meta["final_window"], "Final review", "; ".join(a["id"] + " — " + a["title"] for a in final) + "; revised GSM"])
@@ -279,7 +279,7 @@ class Course:
                 name = self.link(name, self.assignment_url(a))
             rows.append([name, self.when(a["release"]), self.when(a["due"]), f"{a['weight']}%"])
         rows.append(["Total", "", "", "100%"])
-        return table(["Assignment / review", "Introduced", "Due", "Weight"], rows)
+        return table(["Assignment", "Introduced", "Due", "Weight"], rows)
 
     def project_table(self, web=False):
         rows = []
@@ -462,8 +462,8 @@ class Course:
         out += "## Where we are\n\n" + self.latest_class()
         out += self.whats_next(limit=3, heading=False)
         out += "## The semester\n\n"
-        out += ("Topics run in order, usually two classes each. The midterm review is "
-                + self.when(self.by_id['MID']['due']) + ".\n\n")
+        out += ("Topics run in order, usually two classes each. Everything through Arrays is due by "
+                + self.when(self.meta['midterm_week']) + ", the mid-semester deadline.\n\n")
         out += self.sequence_table() + "\n"
         out += "## Four projects\n\n" + self.project_spine() + "\n"
         out += "## How we work\n\n" + h["how_we_work"].strip() + "\n\n"
@@ -475,10 +475,10 @@ class Course:
         """Explain the unlinked rows, so a held brief reads as timing, not an omission."""
         held = [p["id"] + " — " + p["title"] for p in self.projects.values() if p["id"] not in self.open_work]
         held += [self.by_id[a]["id"] + " — " + self.by_id[a]["title"]
-                 for a in ("MID", "BOOK") if a not in self.open_work]
+                 for a in ("BOOK",) if a not in self.open_work]
         if not held:
             return ""
-        return ("Briefs are posted as topics are introduced. Dates after midterm are provisional. Still to be posted: "
+        return ("Briefs are posted as topics are introduced. Dates after Week 10 are provisional. Still to be posted: "
                 + "; ".join(held) + ".\n\n")
 
     def roster(self):
@@ -615,7 +615,7 @@ class Course:
             if w["week"] in self.open_weeks:
                 self.emit(f"modules/classes/_posts/2000-01-{w['week']:02d}-class-{w['week']:02d}.md", out)
         assessment_intro, rubrics = self.data['assessment_notes'].split('\n\n', 1)
-        overview = front("Assignments · overview", categories=["assignments"]) + self.notice() + assessment_intro + "\n\n" + self.release_note() + self.project_table(True) + "\n## What to present\n\n" + self.submission_table(True) + "\n## Dates and draft weights\n\n" + self.assessment_table(True) + "\n## How work is assessed\n\n" + rubrics + "\n## Shared standards\n\n" + self.data["presentation"] + "\n" + self.link("Fabrication, AI and standing policies", "/resources/course-policies/")
+        overview = front("Assignments · overview", categories=["assignments"]) + self.notice() + assessment_intro + "\n\n" + self.release_note() + self.project_table(True) + "\n## What to present\n\n" + self.submission_table(True) + "\n## Dates and weights\n\n" + self.assessment_table(True) + "\n## How work is assessed\n\n" + rubrics + "\n## Shared standards\n\n" + self.data["presentation"] + "\n" + self.link("Fabrication, AI and standing policies", "/resources/course-policies/")
         self.emit("modules/assignments/_posts/1999-12-31-overview.md", overview)
         for i,p in enumerate(self.projects.values(), 2):
             out = front(p["id"] + " · " + p["title"], categories=["assignments"]) + self.notice() + p["description"] + "\n\n"
@@ -625,7 +625,7 @@ class Course:
             out += "\n" + self.link("Shared submission standards and grading", "/assignments/overview/") + "\n"
             if p["id"] in self.open_work:
                 self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{p['id'].lower()}-{slug(p['title'])}.md", out)
-        for a, i in [(self.by_id["MID"],6), (self.by_id["BOOK"],7)]:
+        for a, i in [(self.by_id["BOOK"],7)]:
             if a["id"] not in self.open_work:
                 continue
             self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{a['id'].lower()}-{a.get('url_slug', slug(a['title']))}.md", front(a["id"] + " · " + a["title"], categories=["assignments"]) + self.notice() + self.assignment(a, "##") + "\n" + self.link("Shared submission standards and grading", "/assignments/overview/"))
@@ -710,7 +710,7 @@ class Course:
                   "The `release:` block in [syllabus/course.yml](syllabus/course.yml) is the switch: a page not listed there is not written to the site, "
                   "and every link to it becomes plain text marked *not yet released*. The calendar, the lesson list and the assignment table still show every row with its date, so nothing looks missing.\n\n"
                   "The weekly move is one edit — add the week number, the unit ids and any newly briefed assignment, then regenerate:\n\n"
-                  "```text\nrelease:\n  classes: [1, 2, 3, 4, 5, 6]\n  tutorials: [U01, U02, U03, U04, U05]\n  assignments: [P1, P2, P3, MID, BOOK]\n```\n\n"
+                  "```text\nrelease:\n  classes: [1, 2, 3, 4, 5, 6]\n  tutorials: [U01, U02, U03, U04, U05]\n  assignments: [P1, P2, P3, BOOK]\n```\n\n"
                   "Assignments take the project id — listing `P1` posts GSM; `P2` posts both CSG briefs; `P3` posts all four Paneling briefs. The assignment overview page is always posted.\n\n"
                   "Use `all` on either line to publish everything. To preview the finished site locally without editing the source, "
                   "run `SYNC_RELEASE=all python scripts/sync_course.py` — then run it again without the variable before committing, "
@@ -798,6 +798,10 @@ class Course:
 
     def build_redirects(self):
         # Preserve old bookmarked URLs without placing obsolete briefs in navigation.
+        self.emit("redirects/assignments-mid-midterm-review.md",
+                  front("Course material has moved", "index", permalink="/modules/assignments/mid-midterm-review/", sitemap=False)
+                  + "## There is no midterm review\n\nWeek 10 is a regular class and the deadline for everything through Arrays. "
+                  + self.link("Open the assignments", "/assignments/overview/") + ".\n")
         migrations = {
             'gsm-graphic-standards-manual': [('gsm', 'GSM')],
             'p1-geometry-from-operations-to-construction': [('p1a', 'P2a'), ('p1b', 'P3a'), ('p1c', 'P2b')],

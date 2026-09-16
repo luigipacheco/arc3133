@@ -114,7 +114,7 @@ s.banner(6.0, "SAY IT OUT LOUD: WHICH WAY DOES i RUN, AND WHAT HAPPENS IF YOU SW
 # 6 ── COMPARE + SWITCH IS AN IF
 s = d.slide(CREAM)
 s.header("COMPARE + SWITCH IS AN IF STATEMENT",
-         "Test the index, then act on the answer. One conditional selection is encouraged in P3b.")
+         "Test the index, then act on the answer. P3b requires one conditional selection: rule stated, before and after shown.")
 s.panel(L, 1.95, 6.0, 3.4, "THE PATTERN", headfill=PINK)
 s.t(L + 0.35, 2.7, 5.3, 2.3, [
     s.Mb("Compare   3 <= i <= 5    →  True / False", 12),
@@ -151,7 +151,7 @@ for nm, col, body in checks:
     s.card(L + 2.9, y, W - 2.9, 0.72, fill=CREAM)
     s.t(L + 3.2, y, W - 3.5, 0.72, [s.Cb(body, 14)], anchor=MSO_ANCHOR.MIDDLE)
     y += 0.92
-s.banner(5.85, "P2b IS DUE AT THE MIDTERM, " + C.date_long(10).upper() + ". BRING THE PRINT AND ITS PROCESS SHEET.",
+s.banner(5.85, "P2b IS DUE AT THE MID-SEMESTER DEADLINE, " + C.date_long(10).upper() + ". HAND IN THE PRINT AND ITS PROCESS SHEET.",
          fill=BLACK, color=LIME, h=0.7, align=PP_ALIGN.CENTER)
 
 # 9 ── ISSUED — P3b
@@ -186,9 +186,9 @@ before_next_slide(d, [
     ("DUE", "Nothing is due next week; it is a studio-review week. P3b, both sheets together, is "
             + C.due_line("P3b") + "."),
     ("BUILD", "Finish sheet 1: linear, nested grid and XYZ cube, with count, spacing, index "
-              "order and predicted totals labelled."),
+              "order and predicted totals labelled — and one conditional selection, rule stated."),
     ("PRINT", "P2b: fix anything flagged at today's checkpoint, then queue it. It is due at the "
-              "midterm, " + C.date_long(10) + "."),
+              "mid-semester deadline, " + C.date_long(10) + ", with its process sheet."),
 ])
 
 d.save(os.path.join(OUT, "ARC3133_Class06.pptx"))

@@ -30,9 +30,9 @@ The `teaching_sequence` block is authoritative: its blocks determine the require
 
 Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain your design decisions through clear visual work.
 
-**Through midterm:** Graphic Standards Manual → Constructive Solid Geometry → Descriptive Geometry → Arrays → Attractor. Diagram and 3D print a CSG object, build a module from points and faces, array it in 1D, 2D and 3D and along hexagonal, radial and curve patterns, then plot a 2D attractor field and analyze a site with the Mixtli add-on. 3D printing is introduced in Week 3; the print is presented at midterm.
+**Weeks 1–10:** Graphic Standards Manual → Constructive Solid Geometry → Descriptive Geometry → Arrays → Attractor. Diagram and 3D print a CSG object, build a module from points and faces, array it in 1D, 2D and 3D and along hexagonal, radial and curve patterns, then draw a 2D attractor field and map a site in layers. 3D printing is introduced in Week 3; the print is due in Week 10.
 
-**After midterm:** Volumetric Data and Fields → Discretizing Geometry → Final. Model a volume with signed distance fields, slice it into sections, then laser-cut and assemble the final work. The later schedule will be confirmed at midterm. Tessellation, panelization, lattices and simulation are optional, with no separate required submission.
+**Weeks 10–15:** Volumetric Data and Fields → Discretizing Geometry → Final. Model a volume with signed distance fields, slice it into sections, then laser-cut and assemble the final work. Dates in this second half may still change. Tessellation, panelization, lattices and simulation are optional, with no separate required submission.
 
 Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
 
@@ -40,12 +40,12 @@ Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight
 | --- | --- | --- |
 | P1 — GSM | Graphic Standards Manual | 7% |
 | P2 — CSG | CSG process and instructions → CSG 3D printed object | 14% |
-| P3 — Paneling | Descriptive geometry module — material and lighting → Arrays → Attractor: 2D field plotter drawing → Attractor: site analysis with Mixtli | 28% |
+| P3 — Paneling | Descriptive geometry module — material and lighting → Arrays → Attractor: 2D field drawing → Attractor: layered site analysis | 28% |
 | P4 — Volumetric Data | SDF volume → Discretizing and laser-cut fabrication | 28% |
 
-**Complete attractors by the Week 10 midterm.** After the Week 1 introduction, each topic has two classes for demonstration and practice. The CSG sheet, module and arrays each have two weeks from brief to deadline. Both attractor assignments run through Weeks 8-9; the manual and CSG print develop alongside them. Arrays runs over two classes: 1D, 2D and 3D arrays in Week 6, then hexagonal, radial and curve arrays in Week 7.
+**Week 10 is the mid-semester deadline:** everything through Arrays — the manual, the CSG sheet and print, the module and the arrays — must be submitted by then. It is a regular class, not a review. After the Week 1 introduction, each topic has two classes for demonstration and practice, and each assignment has two weeks from brief to deadline: the 2D attractor drawing is due in Week 10 and the layered site analysis in Week 11. Arrays runs over two classes: 1D, 2D and 3D arrays in Week 6, then hexagonal, radial and curve arrays in Week 7.
 
-Later teaching dates and deadlines are provisional and will be confirmed at midterm. Until a change is announced in class and on Canvas, use the listed deadlines. October 5–9 and December 1–4 are reserved for studio reviews, with no graded submissions for this course.
+Teaching dates and deadlines after Week 10 are provisional. Until a change is announced in class and on Canvas, use the listed deadlines. October 5–9 and December 1–4 are reserved for studio reviews, with no graded submissions for this course.
 
 ## Update and verify
 
@@ -68,7 +68,7 @@ The weekly move is one edit — add the week number, the unit ids and any newly 
 release:
   classes: [1, 2, 3, 4, 5, 6]
   tutorials: [U01, U02, U03, U04, U05]
-  assignments: [P1, P2, P3, MID, BOOK]
+  assignments: [P1, P2, P3, BOOK]
 ```
 
 Assignments take the project id — listing `P1` posts GSM; `P2` posts both CSG briefs; `P3` posts all four Paneling briefs. The assignment overview page is always posted.

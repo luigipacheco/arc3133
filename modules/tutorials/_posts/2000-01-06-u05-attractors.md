@@ -21,12 +21,12 @@ Use distance fields from points and curves to control geometric variation.
 1. Measure distance to one point. Display a grayscale field before changing geometry.
 2. Set input and output ranges; remap, clamp and choose a falloff.
 3. Compare distance to one point, the nearest of several points and the nearest location on a curve.
-4. Sample the field on a flat 2D grid and translate it into lines — line length, rotation, spacing or hatch density — that a pen plotter can draw. Export an SVG and test a small plot.
-5. Pick a site and run the Mixtli add-on; read its output as a field, with legend and units, and relate it to a design question.
+4. Sample the field on a flat 2D grid and translate it into lines — line length, rotation, spacing or hatch density. Export an SVG; plotting it on the pen plotter is optional.
+5. Pick a site and map its point cloud in layers — distance to points or curves, height bands, and a recorded attribute such as colour or classification — then combine the layers into one reading. The Mixtli add-on for Blender does this; an equivalent tool is fine.
 
-**Practice:** Show measurement → mapping → drawing: a 2D attractor field plotted with a pen plotter (P3c). Then pick a site and analyze it with the Mixtli add-on (P3d).
+**Practice:** Show measurement → mapping → drawing: a 2D attractor field as a line drawing, plotted if you like (P3c). Then pick a site and map its point cloud in layers (P3d).
 
-**Use it next:** Complete two assignments for midterm: P3c is a 2D field plotter drawing; P3d is a site analysis with the Mixtli add-on. Later, reuse fields to define SDF volumes.
+**Use it next:** Two assignments: P3c presents a 2D attractor field as a line drawing (due Week 10); P3d maps a site in layers of point-cloud data (due Week 11). Later, reuse fields to define SDF volumes.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 

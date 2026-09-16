@@ -86,7 +86,7 @@ Target weeks: 7–8.
 
 [Arrays and lists]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/)
 
-Reuse one component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation. Include the 3D cube array before hexagonal arrays and compare counts of 3, 4 and 5 per axis.
+Reuse your P1b panel as the component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation. Include the 3D cube array before hexagonal arrays and compare counts of 3, 4 and 5 per axis.
 
 [Attractors]({{ site.baseurl }}/modules/tutorials/u05-attractors/)
 

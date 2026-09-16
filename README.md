@@ -40,7 +40,7 @@ Visual quality remains central: composition, hierarchy, line weight, color, rend
 
 | Developing project | Short assignments that build it | Combined weight |
 | --- | --- | --- |
-| P1 — Geometry — from operations to construction | CSG massing sequence → Mesh from scratch → First print | 21% |
+| P1 — Geometry — from operations to construction | CSG massing sequence → Panel from scratch → First print | 21% |
 | P2 — Repetition and response — arrays to attractors | Arrays and conditional control → Attractor field study | 14% |
 | P3 — Spatial arrays and assembly | 3D array and connection study → Modular print assembly | 14% |
 | P4 — Samples, fields and sections | Point-cloud analysis → Volume, section and light → Sectional fabrication | 21% |

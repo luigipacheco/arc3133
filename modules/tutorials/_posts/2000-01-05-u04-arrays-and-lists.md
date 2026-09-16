@@ -27,9 +27,9 @@ Generate positions in an ordered collection, then control selected positions wit
 7. Select a range of indices with comparisons and move only those points up or down.
 8. End with the 3D curve array. Use Math set to Sine to control height along X, repeat in Z and Y, then use a second sine relationship along Y to shape the volume. Explain amplitude, frequency and phase.
 
-**Small exercise:** Reuse one component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation. Include the 3D cube array before hexagonal arrays and compare counts of 3, 4 and 5 per axis.
+**Small exercise:** Reuse your P1b panel as the component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation. Include the 3D cube array before hexagonal arrays and compare counts of 3, 4 and 5 per axis.
 
-**Connection:** The next unit replaces an index-based rule with a measurement from an external object. The XYZ array introduces the 3D sampling locations used later for volumes.
+**Connection:** The panel arrives from P1b and does not change here — only where its copies go. The next unit keeps both the panel and one of these arrangements and replaces the index-based rule with a measurement from an external object. The XYZ array introduces the 3D sampling locations used later for volumes.
 
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 

@@ -66,7 +66,7 @@ for nm, col, sym, body in bl:
     x += 4.08
 s.banner(5.35, "ORDER MATTERS. A − B IS NOT B − A, AND YOUR DIAGRAM MUST MAKE THE OPERANDS UNAMBIGUOUS.",
          fill=BLACK, color=CYAN, h=0.68, align=PP_ALIGN.CENTER)
-s.t(L, 6.25, W, 0.8, [s.C("Reversing a subtraction is one of the three comparisons P1a asks for. "
+s.t(L, 6.25, W, 0.8, [s.C("P1a asks for at least three Booleans, so one of them can be a reversed subtraction. "
                           "Do it once deliberately and you will never confuse the operands again.",
                           13.5, GREY)], ls=1.3)
 
@@ -110,9 +110,9 @@ m = C.milestone("P1a")
 issued_slide(d, "P1a", blurb=C.PROJECTS["P1"]["description"] +
              "  This first milestone is the massing study: an ordered sequence of primitives and "
              "Booleans, diagrammed so another person could follow it.",
-             cards=[("STAGE 1", "THE SEQUENCE", "Primitives, transformed and combined in a stated order."),
-                    ("STAGE 2", "THE DIAGRAM", "One drawing per operation, plus a final axonometric."),
-                    ("STAGE 3", "THE VARIANTS", "Three parameter settings off the same graph.")])
+             cards=[("STAGE 1", "THE SEQUENCE", "Three primitives, three transformations, three Booleans, in a stated order."),
+                    ("STAGE 2", "THE DIAGRAMS", "Eight or nine, numbered. One operation each, read left to right."),
+                    ("STAGE 3", "THE LAST ONE", "Drawn, not diagrammed: building scale, a figure, planting, ground, shadow.")])
 
 # 8 ── REQUIREMENTS
 requirements_slide(d, "P1a",
@@ -134,10 +134,13 @@ now_slide(d, "NOW — BUILD THE SEQUENCE",
 before_next_slide(d, [
     ("WATCH", "U03 — Geometry from scratch. Point, line, edge, face, mesh, solid. The Blender lesson "
               "file for this one already exists; check the unit page."),
-    ("BUILD", "Keep going on P1a. It is due Week 4 — the sequence, the diagram and three variants."),
+    ("BUILD", "Keep going on P1a. It is due Week 4 — eight or nine numbered diagrams, the last one "
+              "developed in context, and the sequence written out as pseudocode."),
     ("WRITE", "Your procedure as pseudocode, using the notation above. Read it aloud to someone who "
               "has not seen your model and fix what they cannot follow."),
     ("BRING", "The editable file, and one question about something in it that behaves oddly."),
+    ("READ", "Di Mari and Yoo, Operative Design, and Di Mari, Conditional Design. Find the spatial "
+             "verb your own sequence performs, and name it on the sheet."),
 ])
 
 d.save(os.path.join(OUT, "ARC3133_Class02.pptx"))

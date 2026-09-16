@@ -43,8 +43,8 @@ The course is one continuous piece of work in four stages. Each project takes th
 
 | Project | What you do | Ends in | Weight |
 | --- | --- | --- | --- |
-| [P1 — Geometry — from operations to construction]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/) | Build a parametric massing study, reconstruct its cutter from basic geometry, and develop a small printable variant | First print | 21% |
-| [P2 — Repetition and response — arrays to attractors]({{ site.baseurl }}/modules/assignments/p2-repetition-and-response-arrays-to-attractors/) | Use the geometry project as a component. First design its arrangement, then vary it through external measurements | Attractor field study | 14% |
+| [P1 — Geometry — from operations to construction]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/) | Build a parametric massing study, then build a repeating panel from its own points and faces and develop a small printable variant of it | First print | 21% |
+| [P2 — Repetition and response — arrays to attractors]({{ site.baseurl }}/modules/assignments/p2-repetition-and-response-arrays-to-attractors/) | Take the panel you built in P1b and use it, unchanged, as the component. First design its arrangement, then vary that arrangement through external measurements | Attractor field study | 14% |
 | P3 — Spatial arrays and assembly — *not yet released* | Extend the array into XYZ space, apply controlled variation and develop a small connected assembly. Use the same discrete positions to introduce later volume sampling | Modular print assembly | 14% |
 | P4 — Samples, fields and sections — *not yet released* | Analyze a point cloud, develop a volumetric interpretation or design, and discretize the selected volume into physical sections | Sectional fabrication | 21% |
 

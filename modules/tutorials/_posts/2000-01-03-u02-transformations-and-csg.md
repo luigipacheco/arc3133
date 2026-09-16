@@ -21,19 +21,30 @@ Describe a solid as an editable sequence of operations.
 3. Compare union, difference and intersection between two solids, including reversing the subtraction.
 4. Expose useful inputs and compose a short massing sequence.
 
-**Small exercise:** Show three variants of the instructor's CSG graph and diagram the ordered operations. Change one parameter at a time.
+**Small exercise:** Diagram the ordered operations of the instructor's CSG graph, one diagram per operation. Change one parameter at a time and show what moves.
 
 **Connection:** In the next unit, replace a primitive Boolean cutter with geometry built from points and faces.
 
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 
 ```python
-solid = intersection(box(1, 1, 1), sphere(r=0.65))
-z_cut = cylinder(r=0.30, h=2)
-y_cut = rotate(z_cut, x=90)        # degrees
-x_cut = rotate(z_cut, y=90)
-cutters = union(z_cut, y_cut, x_cut)
-result = difference(solid, cutters)
+# nine diagrams, one operation each, in this order
+
+box     = cube(1.0)                  # 1  primitive
+ball    = sphere(r=0.65)             # 2  primitive
+rod     = cylinder(r=0.30, h=2.0)    # 3  primitive
+
+ball    = scale(ball, 1.15)          # 4  scale
+ball    = translate(ball, z=0.15)    # 5  translate
+rod_y   = rotate(rod, x=90)          # 6  rotate - degrees
+rod_x   = rotate(rod, y=90)          # 6  same operation
+
+solid   = intersection(box, ball)    # 7  intersection
+cutters = union(rod, rod_y, rod_x)   # 8  union
+result  = difference(solid, cutters) # 9  difference
+
+# 9 keeps solid, removes cutters. draw 9 again at
+# building scale: a figure, planting, ground, shadow.
 ```
 
 **Teaching note:** In the class file, intersect a cube and sphere, union three perpendicular cylinders, then subtract the cylinders. Parameters remain visible on the native nodes. Join Geometry is an optional comparison, not the final output.

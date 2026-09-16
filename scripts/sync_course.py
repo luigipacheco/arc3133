@@ -292,6 +292,9 @@ class Course:
                 out += '**Session and tutorial video:** ' + block['delivery'] + '\n\n'
         out += "\n".join(f"{i}. {step}" for i, step in enumerate(u["steps"], 1)) + "\n\n"
         out += "**Small exercise:** " + u["exercise"] + "\n\n**Connection:** " + u["connection"] + "\n\n"
+        if u.get("references"):
+            group = self.data["references"][u["references"]]
+            out += "**Examples to study:**\n\n" + bullets([f"[{a}]({b}) — {c}" for a,b,c in group]) + "\n"
         if "pseudocode" in u:
             out += "**The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.\n\n"
             out += "```python\n" + u["pseudocode"].rstrip() + "\n```\n\n"
@@ -490,6 +493,8 @@ class Course:
     def references(self):
         refs = self.data["references"]
         return (refs["note"] + "\n\n### Reading\n\n" + bullets(refs["readings"]) +
+                "\n### Example graphic standards manuals\n\nShown in Class 01 and the reference for the Graphic Standards Manual. Each is a page grid, a type hierarchy and a rule for every case that comes up. Read them for how much of each one is rules rather than pictures.\n\n" +
+                table(["Manual", "What to look for"], [[f"[{a}]({b})", c] for a,b,c in refs["manuals"]]) +
                 "\n### Visual precedents\n\n" + table(["Reference", "Use"], [[f"[{a}]({b})", c] for a,b,c in refs["precedents"]]) +
                 "\n### Technical documentation\n\n" + bullets([f"[{a}]({b}) — {c}" for a,b,c in refs["documentation"]]))
 

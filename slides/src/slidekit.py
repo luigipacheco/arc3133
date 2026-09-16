@@ -59,12 +59,18 @@ def requirements_slide(d, mid, sub="Counting these earns a C. The rest is judgem
     n = len(reqs)
     top, gap = 1.95, 0.16
     h = min(1.05, (6.55 - top - gap * (n - 1)) / n)
+    # keep long requirements inside their row: ~95 characters per line at 13pt,
+    # and a row fits h / 0.22 lines. Shrink the type rather than clip the text.
+    longest = max((len(r) for r in reqs), default=0)
+    size = 13.0
+    while size > 9.5 and (longest / (95 * 13.0 / size)) > int(h / (0.225 * size / 13.0)):
+        size -= 0.5
     y = top
     for i, r in enumerate(reqs):
         col = ACCENTS[i % len(ACCENTS)]
         s.chip(L, y, 0.85, h, "%02d" % (i + 1), fill=col, size=15)
         s.card(L + 1.15, y, W - 1.15, h, fill=CREAM)
-        s.t(L + 1.45, y + 0.1, W - 1.75, h - 0.2, [s.Cb(r, 13)], ls=1.25,
+        s.t(L + 1.45, y + 0.1, W - 1.75, h - 0.2, [s.Cb(r, size)], ls=1.25,
             anchor=MSO_ANCHOR.MIDDLE)
         y += h + gap
     cps = C.checkpoints(mid)

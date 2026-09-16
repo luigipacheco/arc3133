@@ -17,25 +17,35 @@ Establish the graphic system used to communicate all later work.
 **Vocabulary:** composition, grid, hierarchy, typography, line weight, palette.
 
 1. Compare a small set of architectural drawings and identify how hierarchy makes them readable.
-2. Set page size, margins, columns, type hierarchy, line weights and a restrained palette.
-3. Test the system on a diagram and a rendered image, then begin the manual.
+2. Read the three example manuals below. In each, find one rule, its dimensioned drawing and the case it resolves.
+3. Set page size, margins, columns, type hierarchy, line weights and a restrained palette.
+4. Test the system on a diagram and a rendered image, then write the four pages.
 
 **Small exercise:** Make a sample 17 × 11 inch sheet and explain one decision about visual hierarchy.
 
 **Connection:** Apply and revise this identity in every project and in the final booklet.
 
+**Examples to study:**
+
+- [NYCTA Graphics Standards Manual (1970)](https://archive.org/details/nycta-gs-manual) — Massimo Vignelli and Bob Noorda, Unimark International. A binder of cases: every sign in the New York subway drawn at size with its rule beside it. Full scan.
+- [NASA Graphics Standards Manual (1975, NHB 1430-2)](https://archive.org/details/NASA_Graphics_Standards_Manual) — Richard Danne and Bruce Blackburn. One mark, and a hundred pages of where it is allowed to go. What is designed is the consistency. Full scan, public domain.
+- [Munich 1972 — visual design guidelines](https://www.otlaicher.de/en/articles/the-rainbow-games/) — Otl Aicher, 1967–1972. A grid, a fixed set of angles and one component varied across a whole field of pictograms. A restricted palette held for four years.
+
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 
 ```python
-SHEET   = (17, 11)                 # inches
-MARGIN  = 0.75
-COLUMNS = 6
+PAGES     = 4                # the whole manual
+SHEET     = (17, 11)         # inches
+MARGIN    = 0.75
+COLUMNS   = 6
 
-TYPE    = {"title": 24, "heading": 14, "body": 9}
-WEIGHTS = [0.13, 0.35, 0.70]       # thin, medium, heavy
-PALETTE = ["#000000", "#FFFDF7", "#C6F035"]
+TYPEFACES = 2                # 3 is the ceiling
+TYPE      = {"title": 24, "heading": 14, "body": 9}
+WEIGHTS   = [0.13, 0.35, 0.70]     # thin, medium, heavy
+COLORS    = 3                # the black counts as one
+PALETTE   = ["#000000", "#FFFDF7", "#C6F035"]
 
-# every sheet this semester reads these six values
+# every sheet this semester reads these values
 ```
 
 **Lesson file:** To be prepared and verified.

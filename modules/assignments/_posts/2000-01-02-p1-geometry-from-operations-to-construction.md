@@ -10,7 +10,7 @@ categories:
 
 > The teaching sequence is flexible — a topic may take more than one class. Deadlines are firm, and any change is announced in class and on Canvas before this page changes.
 
-Build a parametric massing study, reconstruct its cutter from basic geometry, and develop a small printable variant.
+Build a parametric massing study, then build a repeating panel from its own points and faces and develop a small printable variant of it.
 
 Complete the short assignments below in order. Combine and revise them as one project for the booklet; the combined project carries no additional grade.
 
@@ -20,19 +20,25 @@ Complete the short assignments below in order. Combine and revise them as one pr
 
 **Introduced:** Week 2 — Sep 1 · **Draft due:** Week 4 — Sep 15 · **Weight:** 7%
 
-- One 17 × 11 inch sheet with the ordered transformation/Boolean diagram, a final axonometric and three parameter variants.
-- Demonstrate translation, rotation and scale, and compare union, difference and intersection. Clearly identify the operands of subtraction.
+- One 17 × 11 inch sheet carrying an ordered sequence of eight or nine numbered diagrams: one operation per diagram, read in order, each showing what the one before it produced.
+- Use at least three primitives, at least three transformations covering translate, rotate and scale, and at least three Boolean operations covering union, difference and intersection. Name the operands of every subtraction — which solid is kept and which is removed.
+- Develop the last diagram as a drawing rather than a diagram: the final solid at building scale, with a 1.75 m human figure, vegetation, ground and shadow, so the sequence ends in something readable as architecture.
+- Write the sequence out as pseudocode beside the diagrams — one line per operation, in the same order as the diagrams, with the parameters you exposed.
+- Read the spatial operations in Di Mari and Yoo, Operative Design, and Di Mari, Conditional Design, and state which operation your sequence performs in their terms.
 - Submit an editable graph with exposed inputs and geometry generated in the graph. Keep the source operations intact.
 
 <a id="p1b"></a>
 
-## P1b — Mesh from scratch
+## P1b — Panel from scratch
 
 **Introduced:** Week 3 — Sep 8 · **Draft due:** Week 5 — Sep 22 · **Weight:** 7%
 
-- One sheet showing point, line, edge, face and the multiple-face mesh exercise, with an annotated closed pyramid.
-- Build four base corners and an apex with Width, Depth and Height exposed; include all four side faces and the base.
-- Reuse the pyramid as a Boolean cutter in the previous study and show at least three parameter settings. Explain face order, normals and closure.
+- Find one panel in a built precedent and keep it simple. Choose it by one test: could you set it beside three copies of itself, edge to edge, and have the grid close? Name the building, the architect and your source on the sheet.
+- Decide the parameters before you model anything, and say in one line what each does. At least one must change the panel's shape — an aperture, a fold depth, a corner offset — not its bounding box.
+- Rebuild it from scratch: an explicit point list and an explicit face list, every point an expression of those parameters rather than a typed coordinate. Nothing collapsed, and it closes.
+- State each parameter's working range — where the panel still closes and still tiles — and show it at the low, middle and high end of the one an attractor will drive in P2b.
+- One 17 × 11 inch sheet, and one image on it: the panel rendered on a ground plane, one material, studio light, no context and no entourage. The object, its structure and nothing else.
+- Print the point list, the face list and the parameter table beside the render, and annotate the vertex order of one face. Explain normals, closure, and what breaks when a face is wound backwards.
 
 <a id="p1c"></a>
 

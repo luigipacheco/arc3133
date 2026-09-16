@@ -22,10 +22,11 @@ Explain the structure behind geometry and build a parametric solid from its part
 4. Face — order corners around a boundary and make a face; explain its normal.
 5. Mesh and solid — return to the multiple-face exercise. Build four base corners and an apex, join four triangular side faces and a base face, and check that the pyramid is closed.
 6. Boolean — subtract this pyramid from a cube and connect the result to the preceding CSG assignment.
+7. Your own panel — apply the same method to the precedent panel you chose. Decide which numbers drive it first, write every corner point as an expression of those numbers, order its faces, close it, and check that it still tiles at both ends of each parameter's range.
 
 **Small exercise:** Keep Width, Depth and Height exposed. Show the five pyramid vertices, eight edges and five faces, then demonstrate the cube-minus-pyramid operation.
 
-**Connection:** Save a reusable parametric object for arrays and later attractor controls.
+**Connection:** The panel you build here is the component P2 arrays and the object P1c prints. The parameters you expose now are the ones an attractor drives in P2b, so choose numbers worth varying.
 
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 

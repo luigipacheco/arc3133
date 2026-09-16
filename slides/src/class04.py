@@ -35,7 +35,7 @@ s.t(6.9, 2.72, 5.45, 2.5, [
     s.Cb(" ", 7),
     s.Cb("The index is the only new idea. It is a counter that tells each copy how far along "
          "it is — and therefore how different it should be.", 13.5)], ls=1.35)
-s.banner(5.75, "Your pyramid is the component. It does not change today — only where it goes.",
+s.banner(5.75, "Your panel is the component. It does not change today — only where it goes.",
          fill=LIME, h=0.72)
 
 # 3 ── THE REPEAT ZONE
@@ -117,7 +117,7 @@ requirements_slide(d, "P2a",
 # 8 ── NOW
 now_slide(d, "NOW — YOUR FIRST ARRAY",
           "Rest of the session: a linear array, a conditional, and a grid you can predict.",
-          ["Your pyramid instanced along a linear array, count and spacing exposed",
+          ["Your panel instanced along a linear array, count and spacing exposed",
            "The spreadsheet open — list, count and index all readable at count = 5",
            "Compare and Switch changing one range of indices",
            "The array nested into a grid, and you predicted the total before looking",
@@ -131,7 +131,7 @@ before_next_slide(d, [
                  "conditional displacement and sine control."),
     ("BUILD", "P2a is due at the midterm. Start the comparisons now — the sheet is easier when "
               "the graphs already exist."),
-    ("BRING", "Your grid, working, at a small count. And P1b — the pyramid sheet is due next class."),
+    ("BRING", "Your grid, working, at a small count. And P1b — the panel sheet is due next class."),
     ("CHECK", "P1c: print-ready geometry, physical units and orientation get reviewed next week "
               "before anything goes in the queue."),
 ])

@@ -79,7 +79,7 @@ This is an in-person course with scheduled FabLab work. Students should plan for
 
 | Developing project | Short assignments that build it | Combined weight |
 | --- | --- | --- |
-| P1 — Geometry — from operations to construction | CSG massing sequence → Mesh from scratch → First print | 21% |
+| P1 — Geometry — from operations to construction | CSG massing sequence → Panel from scratch → First print | 21% |
 | P2 — Repetition and response — arrays to attractors | Arrays and conditional control → Attractor field study | 14% |
 | P3 — Spatial arrays and assembly | 3D array and connection study → Modular print assembly | 14% |
 | P4 — Samples, fields and sections | Point-cloud analysis → Volume, section and light → Sectional fabrication | 21% |
@@ -92,7 +92,7 @@ This is an in-person course with scheduled FabLab work. Students should plan for
 | 2 | Sep 1 | Transformations and CSG | — |
 | 3 | Sep 8 | Point → Line → Edge → Face → Solid → Boolean | — |
 | 4 | Sep 15 | Arrays, lists, loops, conditionals and sine | P1a — CSG massing sequence |
-| 5 | Sep 22 | Arrays, lists, loops, conditionals and sine | P1b — Mesh from scratch |
+| 5 | Sep 22 | Arrays, lists, loops, conditionals and sine | P1b — Panel from scratch |
 | 6 | Sep 29 | Point, multiple-point and curve attractors | — |
 | 7 | Oct 6 | 3D arrays, review and midterm | No graded submission |
 | 8 | Oct 13 | 3D arrays, review and midterm | P1c — First print; P2a — Arrays and conditional control; GSM — Graphic Standards Manual; MID — Midterm review |
@@ -118,7 +118,7 @@ Midterm: evidence of revision 40%, coherence across the set 30%, and print/layou
 | Assignment / review | Introduced | Draft due date | Weight |
 | --- | --- | --- | --- |
 | P1a — CSG massing sequence | Week 2 — Sep 1 | Week 4 — Sep 15 | 7% |
-| P1b — Mesh from scratch | Week 3 — Sep 8 | Week 5 — Sep 22 | 7% |
+| P1b — Panel from scratch | Week 3 — Sep 8 | Week 5 — Sep 22 | 7% |
 | P1c — First print | Week 3 — Sep 8 | Week 8 — Oct 13 | 7% |
 | P2a — Arrays and conditional control | Week 4 — Sep 15 | Week 8 — Oct 13 | 7% |
 | P2b — Attractor field study | Week 6 — Sep 29 | Week 9 — Oct 20 | 7% |
@@ -135,7 +135,7 @@ Midterm: evidence of revision 40%, coherence across the set 30%, and print/layou
 
 ## P1 — Geometry — from operations to construction
 
-Build a parametric massing study, reconstruct its cutter from basic geometry, and develop a small printable variant.
+Build a parametric massing study, then build a repeating panel from its own points and faces and develop a small printable variant of it.
 
 <a id="p1a"></a>
 
@@ -143,19 +143,25 @@ Build a parametric massing study, reconstruct its cutter from basic geometry, an
 
 **Introduced:** Week 2 — Sep 1 · **Draft due:** Week 4 — Sep 15 · **Weight:** 7%
 
-- One 17 × 11 inch sheet with the ordered transformation/Boolean diagram, a final axonometric and three parameter variants.
-- Demonstrate translation, rotation and scale, and compare union, difference and intersection. Clearly identify the operands of subtraction.
+- One 17 × 11 inch sheet carrying an ordered sequence of eight or nine numbered diagrams: one operation per diagram, read in order, each showing what the one before it produced.
+- Use at least three primitives, at least three transformations covering translate, rotate and scale, and at least three Boolean operations covering union, difference and intersection. Name the operands of every subtraction — which solid is kept and which is removed.
+- Develop the last diagram as a drawing rather than a diagram: the final solid at building scale, with a 1.75 m human figure, vegetation, ground and shadow, so the sequence ends in something readable as architecture.
+- Write the sequence out as pseudocode beside the diagrams — one line per operation, in the same order as the diagrams, with the parameters you exposed.
+- Read the spatial operations in Di Mari and Yoo, Operative Design, and Di Mari, Conditional Design, and state which operation your sequence performs in their terms.
 - Submit an editable graph with exposed inputs and geometry generated in the graph. Keep the source operations intact.
 
 <a id="p1b"></a>
 
-### P1b — Mesh from scratch
+### P1b — Panel from scratch
 
 **Introduced:** Week 3 — Sep 8 · **Draft due:** Week 5 — Sep 22 · **Weight:** 7%
 
-- One sheet showing point, line, edge, face and the multiple-face mesh exercise, with an annotated closed pyramid.
-- Build four base corners and an apex with Width, Depth and Height exposed; include all four side faces and the base.
-- Reuse the pyramid as a Boolean cutter in the previous study and show at least three parameter settings. Explain face order, normals and closure.
+- Find one panel in a built precedent and keep it simple. Choose it by one test: could you set it beside three copies of itself, edge to edge, and have the grid close? Name the building, the architect and your source on the sheet.
+- Decide the parameters before you model anything, and say in one line what each does. At least one must change the panel's shape — an aperture, a fold depth, a corner offset — not its bounding box.
+- Rebuild it from scratch: an explicit point list and an explicit face list, every point an expression of those parameters rather than a typed coordinate. Nothing collapsed, and it closes.
+- State each parameter's working range — where the panel still closes and still tiles — and show it at the low, middle and high end of the one an attractor will drive in P2b.
+- One 17 × 11 inch sheet, and one image on it: the panel rendered on a ground plane, one material, studio light, no context and no entourage. The object, its structure and nothing else.
+- Print the point list, the face list and the parameter table beside the render, and annotate the vertex order of one face. Explain normals, closure, and what breaks when a face is wound backwards.
 
 <a id="p1c"></a>
 
@@ -173,7 +179,7 @@ Build a parametric massing study, reconstruct its cutter from basic geometry, an
 
 ## P2 — Repetition and response — arrays to attractors
 
-Use the geometry project as a component. First design its arrangement, then vary it through external measurements.
+Take the panel you built in P1b and use it, unchanged, as the component. First design its arrangement, then vary that arrangement through external measurements.
 
 <a id="p2a"></a>
 
@@ -181,8 +187,8 @@ Use the geometry project as a component. First design its arrangement, then vary
 
 **Introduced:** Week 4 — Sep 15 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
 
-- Practice linear, nested-grid, hexagonal and radial arrays; develop three comparisons on up to two sheets, including the nested grid.
-- Keep the component constant while comparing arrangements. Expose count and spacing or radius and explain index order.
+- Array the P1b panel — linear, nested grid, hexagonal and radial — and develop three comparisons on up to two sheets, including the nested grid.
+- Keep the panel itself unchanged while comparing arrangements; only its positions move. Expose count and spacing or radius and explain index order.
 - Show one conditional index-range displacement and one sine-driven variation; identify amplitude, frequency and phase.
 - Build the repetition and selection logic from basic nodes. Show a small inspectable count before scaling up; no minimum of 1,000 elements is imposed.
 
@@ -192,7 +198,7 @@ Use the geometry project as a component. First design its arrangement, then vary
 
 **Introduced:** Week 6 — Sep 29 · **Draft due:** Week 9 — Oct 20 · **Weight:** 7%
 
-- On up to two sheets, compare single-point, multiple-point and curve attractors using the same component and arrangement.
+- On up to two sheets, compare single-point, multiple-point and curve attractors, holding the P1b panel and one arrangement from P2a constant so only the measurement changes.
 - Show the measured field before the geometric result. State source and target ranges, clamping and falloff.
 - Develop one spatial or architectural intention and demonstrate a live change to the attractor or mapping.
 
@@ -278,9 +284,10 @@ Analyze a point cloud, develop a volumetric interpretation or design, and discre
 
 **Introduced:** Week 1 — Aug 25 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
 
-- At least eight pages defining the graphic system and showing tested applications.
-- Specify page grid, margins, typography, color, line weights, annotation, captions and image treatment.
-- Use no more than three typefaces, four hierarchy levels, five colors and four line weights.
+- Four pages, and no more. The manual is the graphic system itself, shown in use: rules with a tested application beside each one, not a description of intentions.
+- One page per decision: (1) the template — sheet size, margins, grid and columns, with the placement rules; (2) typography and hierarchy; (3) color and line weights; (4) annotation, captions and image treatment, demonstrated on a real sheet from this course.
+- Use no more than three typefaces, three colors in total — black, the paper and every accent count toward the three — four hierarchy levels and four line weights.
+- Study the three manuals shown in Class 01 — NYCTA, NASA and Munich 1972 — and name one rule you took from them. All three are linked in full under reading and documentation.
 - Apply the manual to every sheet; revise it in response to actual use and critique.
 
 **Preparation / revision checkpoints** (not extra graded assignments):
@@ -388,25 +395,35 @@ Establish the graphic system used to communicate all later work.
 **Vocabulary:** composition, grid, hierarchy, typography, line weight, palette.
 
 1. Compare a small set of architectural drawings and identify how hierarchy makes them readable.
-2. Set page size, margins, columns, type hierarchy, line weights and a restrained palette.
-3. Test the system on a diagram and a rendered image, then begin the manual.
+2. Read the three example manuals below. In each, find one rule, its dimensioned drawing and the case it resolves.
+3. Set page size, margins, columns, type hierarchy, line weights and a restrained palette.
+4. Test the system on a diagram and a rendered image, then write the four pages.
 
 **Small exercise:** Make a sample 17 × 11 inch sheet and explain one decision about visual hierarchy.
 
 **Connection:** Apply and revise this identity in every project and in the final booklet.
 
+**Examples to study:**
+
+- [NYCTA Graphics Standards Manual (1970)](https://archive.org/details/nycta-gs-manual) — Massimo Vignelli and Bob Noorda, Unimark International. A binder of cases: every sign in the New York subway drawn at size with its rule beside it. Full scan.
+- [NASA Graphics Standards Manual (1975, NHB 1430-2)](https://archive.org/details/NASA_Graphics_Standards_Manual) — Richard Danne and Bruce Blackburn. One mark, and a hundred pages of where it is allowed to go. What is designed is the consistency. Full scan, public domain.
+- [Munich 1972 — visual design guidelines](https://www.otlaicher.de/en/articles/the-rainbow-games/) — Otl Aicher, 1967–1972. A grid, a fixed set of angles and one component varied across a whole field of pictograms. A restricted palette held for four years.
+
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 
 ```python
-SHEET   = (17, 11)                 # inches
-MARGIN  = 0.75
-COLUMNS = 6
+PAGES     = 4                # the whole manual
+SHEET     = (17, 11)         # inches
+MARGIN    = 0.75
+COLUMNS   = 6
 
-TYPE    = {"title": 24, "heading": 14, "body": 9}
-WEIGHTS = [0.13, 0.35, 0.70]       # thin, medium, heavy
-PALETTE = ["#000000", "#FFFDF7", "#C6F035"]
+TYPEFACES = 2                # 3 is the ceiling
+TYPE      = {"title": 24, "heading": 14, "body": 9}
+WEIGHTS   = [0.13, 0.35, 0.70]     # thin, medium, heavy
+COLORS    = 3                # the black counts as one
+PALETTE   = ["#000000", "#FFFDF7", "#C6F035"]
 
-# every sheet this semester reads these six values
+# every sheet this semester reads these values
 ```
 
 **Lesson file:** To be prepared and verified.
@@ -424,19 +441,30 @@ Describe a solid as an editable sequence of operations.
 3. Compare union, difference and intersection between two solids, including reversing the subtraction.
 4. Expose useful inputs and compose a short massing sequence.
 
-**Small exercise:** Show three variants of the instructor's CSG graph and diagram the ordered operations. Change one parameter at a time.
+**Small exercise:** Diagram the ordered operations of the instructor's CSG graph, one diagram per operation. Change one parameter at a time and show what moves.
 
 **Connection:** In the next unit, replace a primitive Boolean cutter with geometry built from points and faces.
 
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 
 ```python
-solid = intersection(box(1, 1, 1), sphere(r=0.65))
-z_cut = cylinder(r=0.30, h=2)
-y_cut = rotate(z_cut, x=90)        # degrees
-x_cut = rotate(z_cut, y=90)
-cutters = union(z_cut, y_cut, x_cut)
-result = difference(solid, cutters)
+# nine diagrams, one operation each, in this order
+
+box     = cube(1.0)                  # 1  primitive
+ball    = sphere(r=0.65)             # 2  primitive
+rod     = cylinder(r=0.30, h=2.0)    # 3  primitive
+
+ball    = scale(ball, 1.15)          # 4  scale
+ball    = translate(ball, z=0.15)    # 5  translate
+rod_y   = rotate(rod, x=90)          # 6  rotate - degrees
+rod_x   = rotate(rod, y=90)          # 6  same operation
+
+solid   = intersection(box, ball)    # 7  intersection
+cutters = union(rod, rod_y, rod_x)   # 8  union
+result  = difference(solid, cutters) # 9  difference
+
+# 9 keeps solid, removes cutters. draw 9 again at
+# building scale: a figure, planting, ground, shadow.
 ```
 
 **Teaching note:** In the class file, intersect a cube and sphere, union three perpendicular cylinders, then subtract the cylinders. Parameters remain visible on the native nodes. Join Geometry is an optional comparison, not the final output.
@@ -467,10 +495,11 @@ Explain the structure behind geometry and build a parametric solid from its part
 4. Face — order corners around a boundary and make a face; explain its normal.
 5. Mesh and solid — return to the multiple-face exercise. Build four base corners and an apex, join four triangular side faces and a base face, and check that the pyramid is closed.
 6. Boolean — subtract this pyramid from a cube and connect the result to the preceding CSG assignment.
+7. Your own panel — apply the same method to the precedent panel you chose. Decide which numbers drive it first, write every corner point as an expression of those numbers, order its faces, close it, and check that it still tiles at both ends of each parameter's range.
 
 **Small exercise:** Keep Width, Depth and Height exposed. Show the five pyramid vertices, eight edges and five faces, then demonstrate the cube-minus-pyramid operation.
 
-**Connection:** Save a reusable parametric object for arrays and later attractor controls.
+**Connection:** The panel you build here is the component P2 arrays and the object P1c prints. The parameters you expose now are the ones an attractor drives in P2b, so choose numbers worth varying.
 
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 
@@ -520,9 +549,9 @@ Generate positions in an ordered collection, then control selected positions wit
 7. Select a range of indices with comparisons and move only those points up or down.
 8. End with the 3D curve array. Use Math set to Sine to control height along X, repeat in Z and Y, then use a second sine relationship along Y to shape the volume. Explain amplitude, frequency and phase.
 
-**Small exercise:** Reuse one component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation. Include the 3D cube array before hexagonal arrays and compare counts of 3, 4 and 5 per axis.
+**Small exercise:** Reuse your P1b panel as the component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation. Include the 3D cube array before hexagonal arrays and compare counts of 3, 4 and 5 per axis.
 
-**Connection:** The next unit replaces an index-based rule with a measurement from an external object. The XYZ array introduces the 3D sampling locations used later for volumes.
+**Connection:** The panel arrives from P1b and does not change here — only where its copies go. The next unit keeps both the panel and one of these arrangements and replaces the index-based rule with a measurement from an external object. The XYZ array introduces the 3D sampling locations used later for volumes.
 
 **The same task, written out.** You are not asked to type this. Read it, and check that it says what the nodes you just built say.
 
@@ -567,7 +596,7 @@ Vary a parameter in response to an external condition.
 1. Measure distance to one point and display the values as a grayscale field before changing geometry.
 2. State the input distance range and the output parameter range; remap and clamp deliberately.
 3. Compare a single-point attractor, multiple points using the nearest distance, and the nearest location on a curve.
-4. Drive size, height or rotation, holding the array and component constant while comparing the three attractor types.
+4. Drive size, height or rotation of the P1b panel, holding the panel and the P2a arrangement constant while comparing the three attractor types.
 
 **Small exercise:** Show the field, the mapping and the resulting form. Move the attractor and explain the response.
 
@@ -825,7 +854,19 @@ No required textbook is assigned in this draft. These references are retained or
 - Casey Reas, Chandler McWilliams and LUST, Form+Code — repetition, transformation and visualization.
 - Arturo Tedeschi, AAD Algorithms-Aided Design — an additional Grasshopper reference where that environment is supported.
 - Diego García Cuevas and Gianluca Pugliese, Advanced 3D Printing with Grasshopper: Clay and FDM — fabrication and toolpath reference.
+- Anthony Di Mari and Nora Yoo, Operative Design: A Catalog of Spatial Verbs — the CSG operations named as spatial acts; primary reference for the massing sequence.
+- Anthony Di Mari, Conditional Design: An Introduction to Elemental Architecture — the companion volume; operations driven by a condition or rule.
 - Neil Spiller, Drawing Architecture; Peter Cook, Drawing: The Motive Force of Architecture — architectural drawing and visual communication.
+
+### Example graphic standards manuals
+
+Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a page grid, a type hierarchy and a rule for every case that comes up. Read them for how much of each one is rules rather than pictures.
+
+| Manual | What to look for |
+| --- | --- |
+| [NYCTA Graphics Standards Manual (1970)](https://archive.org/details/nycta-gs-manual) | Massimo Vignelli and Bob Noorda, Unimark International. A binder of cases: every sign in the New York subway drawn at size with its rule beside it. Full scan. |
+| [NASA Graphics Standards Manual (1975, NHB 1430-2)](https://archive.org/details/NASA_Graphics_Standards_Manual) | Richard Danne and Bruce Blackburn. One mark, and a hundred pages of where it is allowed to go. What is designed is the consistency. Full scan, public domain. |
+| [Munich 1972 — visual design guidelines](https://www.otlaicher.de/en/articles/the-rainbow-games/) | Otl Aicher, 1967–1972. A grid, a fixed set of angles and one component varied across a whole field of pictograms. A restricted palette held for four years. |
 
 ### Visual precedents
 

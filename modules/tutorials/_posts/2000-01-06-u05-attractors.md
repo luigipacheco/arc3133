@@ -19,7 +19,7 @@ Vary a parameter in response to an external condition.
 1. Measure distance to one point and display the values as a grayscale field before changing geometry.
 2. State the input distance range and the output parameter range; remap and clamp deliberately.
 3. Compare a single-point attractor, multiple points using the nearest distance, and the nearest location on a curve.
-4. Drive size, height or rotation, holding the array and component constant while comparing the three attractor types.
+4. Drive size, height or rotation of the P1b panel, holding the panel and the P2a arrangement constant while comparing the three attractor types.
 
 **Small exercise:** Show the field, the mapping and the resulting form. Move the attractor and explain the response.
 

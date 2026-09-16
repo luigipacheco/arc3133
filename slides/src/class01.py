@@ -110,8 +110,9 @@ s.t(7.3, 2.72, 5.05, 2.4, [
     s.Cb("Page size and margins.", 14),
     s.Cb("A column grid.", 14),
     s.Cb("A type hierarchy — three levels, no more.", 14),
-    s.Cb("A line-weight set.", 14),
-    s.Cb("A restrained palette.", 14)], ls=1.45)
+    s.Cb("A line-weight set — four weights.", 14),
+    s.Cb("A palette of three colours, and the black is one of them.", 14),
+    s.Cb("Three typefaces is the ceiling. Two is better.", 14)], ls=1.4)
 s.banner(5.65, "DECIDE IT ONCE, APPLY IT EVERY WEEK, REVISE IT AT THE MIDTERM. IT IS NOT REMADE PER SHEET.",
          fill=YELLOW, h=0.72, align=PP_ALIGN.CENTER)
 
@@ -121,17 +122,17 @@ s.header("THREE MANUALS WORTH STEALING FROM",
          "This document type has a history. Each one is a page grid, a type hierarchy, "
          "and a rule for every case that comes up.")
 mans = [("NYCTA GRAPHICS STANDARDS", CYAN,
-         "Massimo Vignelli and Bob Noorda, Unimark - 1970",
+         "Massimo Vignelli and Bob Noorda, Unimark - 1970 - archive.org/details/nycta-gs-manual",
          "A binder of cases. Every sign in the New York subway, drawn at size, with the rule "
          "beside it. The manual is the design - the signs are what falls out of it.",
          "Add: a spread from the NYCTA manual - a signage case with its dimensioned rule."),
         ("NASA GRAPHICS STANDARDS", PINK,
-         "Richard Danne and Bruce Blackburn - 1975",
+         "Richard Danne and Bruce Blackburn - 1975 - archive.org/details/NASA_Graphics_Standards_Manual",
          "One mark, and a hundred pages of where it is allowed to go. What is being designed "
          "is the consistency, not the logotype.",
          "Add: a page from the NASA manual - the mark with its clearance and placement rules."),
         ("MUNICH 1972", LIME,
-         "Otl Aicher - 1967 to 1972",
+         "Otl Aicher - 1967 to 1972 - otlaicher.de, 'the rainbow games'",
          "A grid, a fixed set of angles, and one component varied across a whole field of "
          "pictograms. You will build a system with this exact structure in Week 4.",
          "Add: the Munich 1972 pictogram sheet, and the construction grid behind one figure.")]
@@ -144,15 +145,15 @@ for nm, col, credit, body, placeholder in mans:
     s.t(x + 0.05, 4.58, 3.75, 0.28, [s.Cb(credit, 10.5, GREY)])
     s.t(x + 0.05, 4.95, 3.75, 1.15, [s.Cb(body, 12.5)], ls=1.3)
     x += 4.08
-s.banner(6.2, "YOURS IS EIGHT PAGES, NOT THREE HUNDRED. THE PRINCIPLE IS IDENTICAL: "
+s.banner(6.2, "YOURS IS FOUR PAGES, NOT THREE HUNDRED. THE PRINCIPLE IS IDENTICAL: "
               "DECIDE ONCE, WRITE IT DOWN, APPLY IT EVERY TIME.",
          fill=BLACK, color=CYAN, h=0.65, size=12, align=PP_ALIGN.CENTER)
-s.t(L, 7.0, W, 0.3, [s.C("All three are online in full. Look at how much of each one is rules "
-                         "rather than pictures.", 12, GREY)])
+s.t(L, 7.0, W, 0.3, [s.C("All three are online in full, linked on the U01 lesson page and under "
+                         "Reading. Look at how much of each one is rules rather than pictures.", 12, GREY)])
 
 pseudocode_slide(d, "U01", title="A VISUAL IDENTITY IS A PARAMETER SET",
-                 sub="Six values, decided once. Every sheet this semester reads them.",
-                 note="A BINDER OF RULES AND THESE SIX VALUES ARE THE SAME DOCUMENT, AT DIFFERENT SCALES.",
+                 sub="A short list of values, decided once. Every sheet this semester reads them.",
+                 note="A BINDER OF RULES AND THIS SHORT LIST ARE THE SAME DOCUMENT, AT DIFFERENT SCALES.",
                  note_fill=CYAN)
 
 # 8 ── ISSUED TODAY — GSM
@@ -175,8 +176,8 @@ now_slide(d, "NOW — YOUR FIRST SHEET",
           "Rest of the session: set the page up and put something on it.",
           ["Page size set to 17 × 11 inches, with margins and a column grid",
            "Type hierarchy chosen — three levels, and a reason for each",
-           "A line-weight set, from hairline to heaviest",
-           "A palette you can defend, and that survives being printed",
+           "A line-weight set, from hairline to heaviest — four weights",
+           "Three colours you can defend, black included, that survive being printed",
            "One sample sheet, with one decision about hierarchy you can explain"],
           closer="LEAVE WITH A SHEET. IT DOES NOT HAVE TO BE RIGHT YET.",
           bg=CYAN)

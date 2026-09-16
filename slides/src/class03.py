@@ -114,12 +114,13 @@ pseudocode_slide(d, "U03",
 
 # 6 ── ISSUED — P1b
 issued_slide(d, "P1b",
-             blurb="Build the solid from its parts, then take it back to the massing study and let it "
-                   "do work there. One sheet covers the whole ladder — point, line, edge, face, mesh — "
-                   "and ends with an annotated closed pyramid.",
-             cards=[("SHOW", "THE LADDER", "Point, line, edge, face, and the multiple-face exercise."),
-                    ("BUILD", "THE PYRAMID", "Width, Depth and Height exposed. Four sides and a base."),
-                    ("REUSE", "AS A CUTTER", "Back into the P1a study, at three parameter settings.")])
+             blurb="Find a panel in a building you like, keep it simple, and build it out of two lists - "
+                   "points and faces. It is the component you will array in P2 and the object you will "
+                   "print, so choose something that tiles.",
+             cards=[("FIND", "A PANEL", "One precedent, simple. It has to sit beside itself and close."),
+                    ("DECIDE", "WHAT MOVES", "The parameters, first. One has to change its shape, not its box."),
+                    ("BUILD", "FROM TWO LISTS", "Every point an expression of those numbers. Never a typed coordinate."),
+                    ("SHOW", "THE RANGE", "Low, middle, high - still closing, still tiling. P2b drives it.")])
 
 # 7 ── REQUIREMENTS P1b
 requirements_slide(d, "P1b",
@@ -147,7 +148,8 @@ now_slide(d, "NOW — BUILD THE PYRAMID",
            "Four base corners and an apex, with Width / Depth / Height exposed",
            "All five faces joined — four sides and the base",
            "Closure checked: every edge shared by exactly two faces",
-           "Cube minus pyramid working, off the same three inputs"],
+           "Cube minus pyramid working, off the same three inputs",
+           "Your own panel named, and the numbers that will drive it written down"],
           closer="LEAVE WITH A SOLID THAT CUTS. THE SHEET IS THE EASY PART.",
           bg=CYAN)
 
@@ -155,9 +157,11 @@ now_slide(d, "NOW — BUILD THE PYRAMID",
 before_next_slide(d, [
     ("WATCH", "U04 — Arrays and lists. Repeat Zone, Compare and Switch, and the nested grid. "
               "We start small and inspectable before anything scales up."),
-    ("FINISH", "P1a is due next class: the ordered diagram, the final axonometric and three variants."),
-    ("BRING", "Your pyramid, parametric and closed. Next week it becomes the component that gets "
-              "repeated, so bring a file you can build on."),
+    ("FINISH", "P1a is due next class: eight or nine numbered diagrams, the last one developed at "
+               "building scale with a figure and planting, and the sequence written as pseudocode."),
+    ("FIND", "The panel. One building, one repeating component, simple enough to write as two "
+             "lists, and it has to sit beside itself without a gap. Name the building and your "
+             "source, and bring its point and face lists started - next week it gets repeated."),
     ("CHECK", "Your FabLab orientation, before you need the machine rather than after."),
 ])
 

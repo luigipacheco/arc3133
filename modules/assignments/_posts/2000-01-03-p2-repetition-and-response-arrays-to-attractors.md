@@ -10,7 +10,7 @@ categories:
 
 > The teaching sequence is flexible — a topic may take more than one class. Deadlines are firm, and any change is announced in class and on Canvas before this page changes.
 
-Use the geometry project as a component. First design its arrangement, then vary it through external measurements.
+Take the panel you built in P1b and use it, unchanged, as the component. First design its arrangement, then vary that arrangement through external measurements.
 
 Complete the short assignments below in order. Combine and revise them as one project for the booklet; the combined project carries no additional grade.
 
@@ -20,8 +20,8 @@ Complete the short assignments below in order. Combine and revise them as one pr
 
 **Introduced:** Week 4 — Sep 15 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
 
-- Practice linear, nested-grid, hexagonal and radial arrays; develop three comparisons on up to two sheets, including the nested grid.
-- Keep the component constant while comparing arrangements. Expose count and spacing or radius and explain index order.
+- Array the P1b panel — linear, nested grid, hexagonal and radial — and develop three comparisons on up to two sheets, including the nested grid.
+- Keep the panel itself unchanged while comparing arrangements; only its positions move. Expose count and spacing or radius and explain index order.
 - Show one conditional index-range displacement and one sine-driven variation; identify amplitude, frequency and phase.
 - Build the repetition and selection logic from basic nodes. Show a small inspectable count before scaling up; no minimum of 1,000 elements is imposed.
 
@@ -31,7 +31,7 @@ Complete the short assignments below in order. Combine and revise them as one pr
 
 **Introduced:** Week 6 — Sep 29 · **Draft due:** Week 9 — Oct 20 · **Weight:** 7%
 
-- On up to two sheets, compare single-point, multiple-point and curve attractors using the same component and arrangement.
+- On up to two sheets, compare single-point, multiple-point and curve attractors, holding the P1b panel and one arrangement from P2a constant so only the measurement changes.
 - Show the measured field before the geometric result. State source and target ranges, clamping and falloff.
 - Develop one spatial or architectural intention and demonstrate a live change to the attractor or mapping.
 

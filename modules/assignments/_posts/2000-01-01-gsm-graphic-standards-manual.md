@@ -16,9 +16,10 @@ categories:
 
 **Introduced:** Week 1 — Aug 25 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
 
-- At least eight pages defining the graphic system and showing tested applications.
-- Specify page grid, margins, typography, color, line weights, annotation, captions and image treatment.
-- Use no more than three typefaces, four hierarchy levels, five colors and four line weights.
+- Four pages, and no more. The manual is the graphic system itself, shown in use: rules with a tested application beside each one, not a description of intentions.
+- One page per decision: (1) the template — sheet size, margins, grid and columns, with the placement rules; (2) typography and hierarchy; (3) color and line weights; (4) annotation, captions and image treatment, demonstrated on a real sheet from this course.
+- Use no more than three typefaces, three colors in total — black, the paper and every accent count toward the three — four hierarchy levels and four line weights.
+- Study the three manuals shown in Class 01 — NYCTA, NASA and Munich 1972 — and name one rule you took from them. All three are linked in full under reading and documentation.
 - Apply the manual to every sheet; revise it in response to actual use and critique.
 
 **Preparation / revision checkpoints** (not extra graded assignments):

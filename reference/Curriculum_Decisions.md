@@ -35,7 +35,7 @@
 
 The four projects are GSM, CSG, Paneling and Volumetric Data. Projects 1-3 finish at the Week 10 midterm. Paneling includes four separate assignments: the module, arrays, the 2D field plotter drawing and the Mixtli site analysis. The two array sheets form one assignment; the two attractor sheets form two assignments.
 
-Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 9 is a working review of both attractor assignments. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
+Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and the pen-plotter workflow; Week 9 teaches the Mixtli site analysis and reviews test plots. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
 
 Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
 

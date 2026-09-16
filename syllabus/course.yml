@@ -634,13 +634,13 @@ weeks:
   focus: 'Hexagonal, radial and curve arrays, including a sine-driven curve. Start P3b sheet 2. No graded submissions during studio reviews.'
   no_due: true
 - week: 8
-  label: Distance fields
+  label: 2D field and plotter
   date: '2026-10-13'
-  focus: 'Attractors: measure distance, show a 2D grayscale field, remap and clamp. Brief P3c (plotter drawing) and P3d (site analysis with the Mixtli add-on).'
+  focus: 'Attractors on a 2D field: measure distance, show the grayscale field, remap and clamp, then translate the field into lines, export an SVG and run a test plot. Brief P3c (plotter drawing) and P3d (site analysis).'
 - week: 9
-  label: Plotter and site analysis
+  label: Site analysis with Mixtli
   date: '2026-10-20'
-  focus: 'Plotter workflow: translate the field into lines, export SVG and run a test plot. Working review of the Mixtli site analysis. Midterm checklist.'
+  focus: 'Site analysis with the Mixtli add-on: pick a site, run an analysis, read it as a field and turn it into one design decision. Review P3c test plots. Midterm checklist.'
 - week: 10
   label: Midterm review and SDF
   date: '2026-10-27'
@@ -722,7 +722,7 @@ references:
 instructor_notes: |
   The four projects are GSM, CSG, Paneling and Volumetric Data. Projects 1-3 finish at the Week 10 midterm. Paneling includes four separate assignments: the module, arrays, the 2D field plotter drawing and the Mixtli site analysis. The two array sheets form one assignment; the two attractor sheets form two assignments.
 
-  Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 9 is a working review of both attractor assignments. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
+  Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and the pen-plotter workflow; Week 9 teaches the Mixtli site analysis and reviews test plots. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
 
   Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
 
@@ -956,10 +956,10 @@ presentation_review:
   note: 'Arrays hexagonal, radial, curve (P3b sheet 2); studio-review week, nothing due.'
 - week: 8
   status: current
-  note: 'Attractors: distance, 2D field, remap, falloff; P3b due; P3c plotter and P3d Mixtli issued.'
+  note: 'Attractors on a 2D field and the pen-plotter workflow; P3b due; P3c and P3d issued.'
 - week: 9
   status: current
-  note: 'Plotter workflow, Mixtli working review, midterm checklist.'
+  note: 'Site analysis with Mixtli; P3c test-plot review; midterm checklist.'
 - week: 10
   status: current
   note: 'Midterm review of Projects 1-3, then SDF introduction; P4a issued.'

@@ -1,185 +1,58 @@
 # -*- coding: utf-8 -*-
-"""Class 09 — Attractors continued (U05): plotter workflow, Mixtli working review,
-midterm checklist. P3c and P3d checkpoints. Nothing issued."""
-import os, math
+"""Class 09 — Attractors continued (U05): site analysis with Mixtli, P3c and P3d
+checkpoints, midterm checklist. Nothing issued."""
+import os
 from nb import *
 from slidekit import *
 import coursedata as C
 import diagrams as G
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
-from pptx.enum.shapes import MSO_CONNECTOR
-from pptx.util import Pt, Inches
+from pptx.util import Pt
 
 OUT = os.environ.get("DECK_OUT", "/home/claude/out")
 d = Deck()
 WK = 9
 
+VISUAL = ("Visual quality 35% · computational understanding 25% · technical execution 20% "
+          "· experimentation 10% · requirements and identity 10%.")
 
-def stroke(s, x1, y1, x2, y2, lw=Pt(1.5), col=BLACK):
-    """One straight pen stroke — the only mark a plotter makes."""
-    ln = s.s.shapes.add_connector(MSO_CONNECTOR.STRAIGHT, Inches(x1), Inches(y1),
-                                  Inches(x2), Inches(y2))
-    ln.line.color.rgb = rgb(col)
-    ln.line.width = lw
-    return ln
-
-
-def field(u, v, ax=0.25, ay=0.35):
-    """0 near the attractor, 1 far away (u, v in 0..1)."""
-    return min(1.0, math.hypot(u - ax, (v - ay) * 0.7) / 0.85)
-
-
-def hatch_cell(s, x, y, w, h, n, lw=Pt(1.0)):
-    for k in range(n):
-        xx = x + (k + 0.5) * w / n
-        stroke(s, xx, y, xx, y + h, lw=lw)
-
-
-DUE_MID = sorted(m["id"] for m in C.milestones_due(10))
+DUE_MID = sorted((m["id"] for m in C.milestones_due(10)), key=lambda i: (i == "MID", i))
 
 # 1 ── TITLE
-title_slide(d, WK, ["PLOTTER WORKFLOW", "AND SITE REVIEW"],
-            "P3c + P3d CHECKPOINT — FIELD TO LINES, SITE TO DECISION",
+title_slide(d, WK, ["SITE ANALYSIS", "WITH MIXTLI"],
+            "P3c + P3d CHECKPOINT — FIELD TO SITE, SITE TO DECISION",
             bg=YELLOW, lfill=PINK, rfill=CYAN,
             foot="MIDTERM NEXT CLASS — %s" % C.date_long(10).upper())
 
-# 2 ── LINES, NOT PIXELS
+# 2 ── A SITE ANALYSIS IS A FIELD
 s = d.slide(BLACK)
-s.header("A PLOTTER DRAWS LINES, NOT PIXELS",
-         "A screen can show any grey. A pen is either down or up.")
-s.panel(L, 2.0, 5.85, 2.75, "ON SCREEN — A VALUE PER PIXEL", headfill=MUTE, tsize=13.5)
-G.gray_ramp(s, L + 0.3, 2.85, 5.25, 0.75)
-s.t(L + 0.3, 3.8, 5.25, 0.8, [s.Cb("Every sample can be any grey. Nothing needs to be drawn.", 13.5)],
-    ls=1.25)
-s.panel(6.8, 2.0, 5.85, 2.75, "ON PAPER — A STROKE OR NOTHING", headfill=LIME, tsize=13.5)
-cw = 5.25 / 9
-for i in range(9):
-    s.rect(7.1 + i * cw, 2.85, cw, 0.75, fill=CREAM, line=BLACK, lw=Pt(1.0))
-    hatch_cell(s, 7.1 + i * cw, 2.85, cw, 0.75, i, lw=Pt(1.0))
-s.t(7.1, 3.8, 5.25, 0.8, [s.Cb("Every stroke is the same darkness. Grey comes from how many "
-                               "lines, how long and how close.", 13.5)], ls=1.25)
-s.banner(5.1, "SO THE FIELD MUST BECOME GEOMETRY: CURVES WITH A START AND AN END. "
-              "AN IMAGE WILL NOT PLOT.", fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
-s.t(L, 6.1, W, 0.7, [s.C("The grayscale field stays on the sheet as the legend. The line drawing is "
-                         "what the pen draws.", 13.5, MUTE)], ls=1.3)
-
-# 3 ── FOUR TRANSLATIONS
-s = d.slide(CREAM)
-s.header("TRANSLATE THE FIELD INTO LINES",
-         "Same field, same remap. Only what the output number drives changes. Pick one.")
-tr = [("LINE LENGTH", CYAN, "length = out", "Long near, short far."),
-      ("ROTATION", PINK, "angle = out", "Lines turn with distance."),
-      ("SPACING", LIME, "gap = out", "Rows open up with distance."),
-      ("HATCH DENSITY", YELLOW, "lines per cell = out", "More strokes, darker cell.")]
-x = L
-pw = 2.85
-for k, (nm, col, eq, cap) in enumerate(tr):
-    s.panel(x, 1.95, pw, 3.55, nm, headfill=col, tsize=14)
-    s.t(x + 0.22, 2.62, pw - 0.44, 0.3, [s.Mb(eq, 11)])
-    gx, gy, gw, gh = x + 0.35, 3.1, pw - 0.7, 1.45
-    cols, rows = 6, 4
-    cx, cy = gw / cols, gh / rows
-    if k == 0:
-        for i in range(cols):
-            for j in range(rows):
-                t = field(i / (cols - 1), j / (rows - 1))
-                ln = cx * (0.9 - 0.7 * t)
-                mx, my = gx + (i + 0.5) * cx, gy + (j + 0.5) * cy
-                stroke(s, mx - ln / 2, my, mx + ln / 2, my)
-    elif k == 1:
-        for i in range(cols):
-            for j in range(rows):
-                t = field(i / (cols - 1), j / (rows - 1))
-                a = t * math.pi / 2
-                ln = min(cx, cy) * 0.8
-                mx, my = gx + (i + 0.5) * cx, gy + (j + 0.5) * cy
-                dx, dy = math.cos(a) * ln / 2, math.sin(a) * ln / 2
-                stroke(s, mx - dx, my - dy, mx + dx, my + dy)
-    elif k == 2:
-        yy, gap = gy, 0.06
-        while yy <= gy + gh:
-            stroke(s, gx, yy, gx + gw, yy, lw=Pt(1.25))
-            gap *= 1.35
-            yy += gap
-    else:
-        hc = 5
-        for i in range(hc):
-            for j in range(3):
-                t = field(i / (hc - 1), j / 2.0)
-                n = int(round(7 * (1 - t)))
-                hatch_cell(s, gx + i * gw / hc, gy + j * gh / 3, gw / hc, gh / 3 - 0.06, n,
-                           lw=Pt(0.9))
-    s.t(x + 0.22, 4.78, pw - 0.44, 0.5, [s.Cb(cap, 12.5)])
-    x += 3.05
-s.card(L, 5.8, W, 1.0, fill=BLACK)
-s.t(L + 0.35, 5.8, W - 0.7, 1.0, [
-    s.Mb("t = remap(distance(p, a))         # the field, unchanged", 12.5, CREAM),
-    s.Mb("line(p, angle, length)            # the last line is the translation", 12.5, YELLOW)],
-    anchor=MSO_ANCHOR.MIDDLE, ls=1.3)
-
-# 4 ── EXPORT
-s = d.slide(CREAM)
-s.header("KEEP IT A CURVE. EXPORT AT SIZE.",
-         "The SVG is the drawing the plotter receives. Check it before the pen touches paper.")
-rows = [("CURVES", "Keep strokes as curves to the end. Do not convert them to a mesh or a filled shape."),
-        ("SIZE", "Set the drawing to the plotted size — 17 × 11 inches, or the confirmed plotter size — "
-                 "and export at 100%."),
-        ("UNITS", "Know the unit of the file and of the export. Measure one known line in the SVG."),
-        ("PEN", "One pen weight, or a declared set of pens, one layer or colour per pen."),
-        ("MARGINS", "Keep every stroke inside the paper, with a margin the pen can reach.")]
-y = 1.95
-for i, (chip, body) in enumerate(rows):
-    s.numrow(y, chip, body, chipfill=ACCENTS[i % 4], cw=1.7, h=0.62, size=14)
-    y += 0.8
-s.banner(6.05, "OPEN THE EXPORTED SVG ON ITS OWN AND MEASURE IT. WHAT YOU SEE THERE IS WHAT WILL PLOT.",
-         fill=PINK, h=0.7, align=PP_ALIGN.CENTER)
-
-# 5 ── TEST PLOT
-s = d.slide(BLACK)
-s.header("TEST PLOT SMALL FIRST",
-         "A small crop of the real drawing, on the real paper, with the real pen.")
-steps = [("01", "CROP", "Take a small, dense corner of the drawing. Same line weight, same spacing.", CYAN),
-         ("02", "PEN", "Check the tip and the ink. A dry or worn pen skips.", LIME),
-         ("03", "PAPER", "Fixed flat, the right size, the right way round.", YELLOW),
-         ("04", "SPEED", "Slower for dense areas. Watch the first strokes.", PINK)]
-x = L
-for n, ttl, body, col in steps:
-    s.chip(x, 2.0, 2.85, 0.5, n + "   " + ttl, fill=col, size=12)
-    s.card(x, 2.6, 2.85, 1.55, fill=CREAM)
-    s.t(x + 0.25, 2.6, 2.35, 1.55, [s.Cb(body, 13)], ls=1.3, anchor=MSO_ANCHOR.MIDDLE)
-    x += 3.05
-s.panel(L, 4.5, W, 1.35, "THEN COMPARE THE TEST WITH THE SCREEN", headfill=CYAN, tsize=13.5)
-s.t(L + 0.3, 5.1, W - 0.6, 0.7, [s.Cb("Does the darkest area still read as separate lines? Does the "
-                                       "lightest area still read at all? Change the mapping, not the pen.", 13.5)],
-    ls=1.25, anchor=MSO_ANCHOR.MIDDLE)
-s.banner(6.2, "P3c CHECKPOINT TODAY: A SMALL TEST PLOT, IN YOUR HAND.",
+s.header("A SITE ANALYSIS IS A FIELD",
+         "Last class you built a field from distance. A site analysis reads the same way.")
+X1, X2, CW = L + 1.95, 7.75, 4.9
+s.chip(X1, 1.95, CW, 0.45, "ATTRACTOR FIELD — P3c", fill=CYAN, size=12)
+s.chip(X2, 1.95, CW, 0.45, "SITE FIELD — P3d", fill=LIME, size=12)
+rows = [("MEASURE", YELLOW, "Distance to the attractor, at every point of the grid.",
+         "A site value at every point, computed by Mixtli."),
+        ("REMAP", PINK, "Distance range pushed into grey or a line property.",
+         "The value range pushed into colour."),
+        ("LEGEND", CYAN, "Near → far, with input and output ranges.",
+         "What the colour means, with units."),
+        ("USE", LIME, "The value drives a line the pen draws.",
+         "The reading informs one spatial decision.")]
+y = 2.6
+for lab, col, a, b in rows:
+    s.chip(L, y, 1.7, 0.7, lab, fill=col, size=12.5)
+    for xx, body in ((X1, a), (X2, b)):
+        s.card(xx, y, CW, 0.7, fill=CREAM)
+        s.t(xx + 0.25, y, CW - 0.5, 0.7, [s.Cb(body, 13)], anchor=MSO_ANCHOR.MIDDLE)
+    y += 0.85
+s.banner(6.1, "MEASURE → REMAP → LEGEND. THE SAME THREE STEPS. THE SITE VERSION ENDS IN A DECISION.",
          fill=YELLOW, h=0.62, align=PP_ALIGN.CENTER)
 
-# 6 ── COMMON PROBLEMS
-s = d.slide(CREAM)
-s.header("COMMON PROBLEMS", "Each one is visible in the SVG before it is visible on paper.")
-probs = [("DUPLICATE LINES", PINK, "Two strokes on top of each other. The pen draws both: darker ink, "
-                                   "longer plot, weaker paper.", "Remove overlaps before export."),
-         ("TOO-DENSE HATCHING", YELLOW, "Lines closer than the pen is wide merge into a blot and can "
-                                        "wet through the paper.", "Keep spacing above the pen width."),
-         ("FILLS", CYAN, "A filled shape has no stroke to follow. It will not plot, or it plots only "
-                         "its outline.", "Turn fills into hatching."),
-         ("TOO MANY TINY STROKES", LIME, "Thousands of very short segments make a slow plot with "
-                                        "little to see.", "Simplify, or lower the count.")]
-x = L
-for nm, col, body, fix in probs:
-    s.panel(x, 1.95, 2.85, 3.75, nm, headfill=col, tsize=12.5)
-    s.t(x + 0.22, 2.7, 2.4, 1.9, [s.Cb(body, 13)], ls=1.3)
-    s.rule(x + 0.22, 4.75, 2.4, lw=Pt(1.5), color=MUTE)
-    s.t(x + 0.22, 4.9, 2.4, 0.7, [s.Cb(fix, 13, bold=True)], ls=1.2)
-    x += 3.05
-s.banner(6.05, "IF IT LOOKS WRONG AT 100% ON SCREEN, IT WILL LOOK WORSE ON PAPER.",
-         fill=BLACK, color=YELLOW, h=0.68, align=PP_ALIGN.CENTER)
-
-# 7 ── MIXTLI: THE SITE
+# 3 ── MIXTLI: THE SITE
 s = d.slide(BLACK)
-s.header("MIXTLI WORKING REVIEW — THE SITE",
-         "Mixtli is the Blender add-on provided for site analysis. Before any analysis, record the site.")
+s.header("MIXTLI — RECORD THE SITE FIRST",
+         "Mixtli is a Blender add-on provided by the instructor. Before any analysis, record the site.")
 rec = [("SOURCE", "Where the site model or data came from. Name it on the sheet.", CYAN),
        ("UNITS", "What one unit is. Check it against one known dimension.", LIME),
        ("SCALE", "The scale of the site plan or base view, with a bar.", YELLOW),
@@ -197,7 +70,7 @@ s.t(L + 0.3, 5.1, W - 0.6, 0.7, [s.Cb("A site you can document, and a reason you
 s.banner(6.2, "P3d CHECKPOINT TODAY: YOUR SITE, ONE ANALYSIS WITH A LEGEND, AND A QUESTION.",
          fill=YELLOW, h=0.62, align=PP_ALIGN.CENTER)
 
-# 8 ── MIXTLI: ANALYSIS TO DECISION
+# 4 ── MIXTLI: ANALYSIS TO DECISION
 s = d.slide(CREAM)
 s.header("ONE ANALYSIS, ONE DECISION",
          "The add-on does the computation. The question, the comparison and the reading are yours.")
@@ -217,26 +90,92 @@ s.banner(5.55, "SAME LOGIC AS P3c: A MEASURED VALUE, A STATED RANGE, A LEGEND, T
 s.t(L, 6.5, W, 0.4, [s.C("A colourful image with no legend and no decision is not an analysis.",
                          13.5, GREY)])
 
-# 9 ── MIDTERM CHECKLIST
-s = requirements_slide(d, "MID", title="MIDTERM CHECKLIST — PROJECTS 1–3",
-                       sub="Next class. Due then: %s. Tick every line before you print."
-                           % " · ".join(DUE_MID))
+# 5 ── P3d SHEET LAYOUT
+s = d.slide(CREAM)
+s.header("THE P3d SHEET — ONE 17 × 11",
+         "Four zones on one landscape sheet. Every zone answers to the same question.")
+SX, SY, SW, SH = L, 1.95, 7.0, 7.0 * 11 / 17
+s.card(SX, SY, SW, SH, fill="FFFFFF")
+zones = [(SX + 0.15, SY + 0.15, 3.65, 3.1, "01", "ANNOTATED SITE PLAN\nOR BASE VIEW", CYAN),
+         (SX + 3.95, SY + 0.15, 2.9, 1.5, "02", "MAPPED ANALYSIS", LIME),
+         (SX + 3.95, SY + 1.8, 2.9, 1.45, "03", "ONE COMPARISON", YELLOW),
+         (SX + 0.15, SY + 3.4, 6.7, SH - 3.55, "04", "INTERPRETATION  →  ONE DECISION", PINK)]
+for zx, zy, zw, zh, n, lab, col in zones:
+    s.rect(zx, zy, zw, zh, fill=PAPER, line=BLACK, lw=Pt(1.5))
+    s.chip(zx + 0.12, zy + 0.12, 0.55, 0.34, n, fill=col, size=10.5, shadow=False)
+    s.t(zx + 0.8, zy + 0.08, zw - 0.9, 0.7, [s.Ab(ln, 11) for ln in lab.split("\n")], ls=1.1)
+# plan zone: north arrow, scale bar, source line
+s.t(SX + 0.35, SY + 2.35, 3.3, 0.3, [s.A("N ↑     SCALE BAR     SOURCE · UNITS", 9.5, GREY)])
+s.rect(SX + 0.35, SY + 2.72, 1.6, 0.1, fill=BLACK, line=None)
+s.rect(SX + 1.15, SY + 2.72, 0.8, 0.1, fill="FFFFFF", line=BLACK, lw=Pt(1.0))
+# analysis zone: legend with units
+s.t(SX + 4.1, SY + 1.0, 2.6, 0.25, [s.A("LEGEND + UNITS", 9, GREY)])
+G.gray_ramp(s, SX + 4.1, SY + 1.28, 2.6, 0.2)
+# comparison zone: two frames side by side
+s.rect(SX + 4.1, SY + 2.45, 1.25, 0.65, fill="FFFFFF", line=BLACK, lw=Pt(1.0))
+s.rect(SX + 5.45, SY + 2.45, 1.25, 0.65, fill="FFFFFF", line=BLACK, lw=Pt(1.0))
+s.t(SX + 4.1, SY + 2.6, 1.25, 0.3, [s.A("A", 11, GREY)], align=PP_ALIGN.CENTER)
+s.t(SX + 5.45, SY + 2.6, 1.25, 0.3, [s.A("B", 11, GREY)], align=PP_ALIGN.CENTER)
+s.panel(7.95, 1.95, 4.7, 3.7, " ", headfill=BLACK, tsize=13.5)
+s.t(7.95 + 0.25, 1.95, 4.2, 0.55, [s.Ab("EACH ZONE MUST SAY", 13.5, CREAM)],
+    anchor=MSO_ANCHOR.MIDDLE)
+s.t(8.2, 2.7, 4.2, 2.85, [
+    s.Cb("01  Where: the site, annotated. Source, units, scale, north.", 13.5),
+    s.Cb(" ", 8),
+    s.Cb("02  What: the analysis, mapped, with a legend and units.", 13.5),
+    s.Cb(" ", 8),
+    s.Cb("03  Against what: one change of setting, time or condition.", 13.5),
+    s.Cb(" ", 8),
+    s.Cb("04  So what: what the output measures, and the one decision it informs.", 13.5)],
+    ls=1.2)
+s.banner(5.85, "ONE SHEET. ONE QUESTION. ONE DECISION.", x=7.95, w=4.7,
+         fill=PINK, h=0.63, size=12.5, align=PP_ALIGN.CENTER)
 
-# 10 ── NOW
+# 6 ── P3c CHECKPOINT
+s = d.slide(BLACK)
+s.header("P3c CHECKPOINT — READ THE TEST PLOT",
+         "Bring the grayscale field, the line translation and a small test plot. Read the paper, not the screen.")
+chk = [("PEN", CYAN, "Does it draw clean from first stroke to last? No skips, no blots.",
+        "Wrong? Change the pen or the speed."),
+       ("PAPER", LIME, "Right size and weight, fixed flat. Does the ink bleed or wet through?",
+        "Wrong? Change the paper."),
+       ("LINE DENSITY", YELLOW, "Darkest area still separate lines? Lightest area still visible?",
+        "Wrong? Change the mapping."),
+       ("SIZE", PINK, "Crop plotted at 100%. Final set to 17 × 11 or the confirmed plotter size.",
+        "Wrong? Fix the SVG export.")]
+x = L
+for nm, col, q, fix in chk:
+    s.panel(x, 1.95, 2.85, 3.55, nm, headfill=col, tsize=13.5)
+    s.t(x + 0.22, 2.7, 2.4, 1.7, [s.Cb(q, 13)], ls=1.3)
+    s.rule(x + 0.22, 4.5, 2.4, lw=Pt(1.5), color=MUTE)
+    s.t(x + 0.22, 4.62, 2.4, 0.75, [s.Cb(fix, 12.5, bold=True)], ls=1.2)
+    x += 3.05
+s.banner(5.85, "ONE CHANGE AT A TIME. REPLOT THE SAME CROP. KEEP BOTH TESTS FOR THE SHEET.",
+         fill=YELLOW, h=0.68, align=PP_ALIGN.CENTER)
+
+# 7 ── REQUIREMENTS — P3d (reminder)
+requirements_slide(d, "P3d", title="REMINDER — P3d REQUIREMENTS", sub=VISUAL)
+
+# 8 ── MIDTERM CHECKLIST
+requirements_slide(d, "MID", title="MIDTERM CHECKLIST — PROJECTS 1–3",
+                   sub="Next class. Due then: %s. Tick every line before you print."
+                       % " · ".join(DUE_MID))
+
+# 9 ── NOW
 now_slide(d, "NOW — CHECKPOINTS",
           "Rest of the class: one table at a time, then work on what the review found.",
-          ["P3c: grayscale field with a legend, beside the line translation",
-           "P3c: an SVG at plotted size, and a small test plot",
-           "P3d: site recorded — source, units, scale, orientation",
-           "P3d: one Mixtli analysis with a legend and units, and a stated question",
+          ["P3c: test plot read for pen, paper, line density and size",
+           "P3c: mapping fixed, final plot at full size booked",
+           "P3d: site recorded — source, units, scale, orientation — and one question",
+           "P3d: one Mixtli analysis with legend and units, one comparison, one decision",
            "Midterm: every item on the checklist located, printed or booked for printing"],
           closer="FIX THE MAPPING TODAY. NEXT WEEK THERE IS NO TIME TO REPLOT.",
           bg=CYAN, closer_color=YELLOW)
 
-# 11 ── BEFORE NEXT CLASS
+# 10 ── BEFORE NEXT CLASS
 before_next_slide(d, [
-    ("MIDTERM", "%s is the midterm review of Projects 1–3. Due then: %s."
-                % (C.date_long(10).title(), ", ".join(DUE_MID))),
+    ("MIDTERM", "Next class, %s, is the midterm review of Projects 1–3. Due then: %s."
+                % (C.date_long(10).title(), ", ".join(DUE_MID[:-1]) + " and " + DUE_MID[-1])),
     ("PLOT", "Plot the final P3c drawing at full size. Keep the SVG, a photograph or scan of the plot "
              "and the editable graph."),
     ("SHEET", "Finish the P3d sheet: annotated site, mapped analysis with legend and units, one "

@@ -31,8 +31,8 @@ Every class has one deck, built with the course slide kit from `slides/src` and 
 | 5 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class05.pptx) / [PDF](../slides/ARC3133_Class05.pdf) | Current | Your own module: parameters, points, faces, tiling; one material and lighting for the P3a sheet. |
 | 6 | Arrays | [PPTX](../slides/ARC3133_Class06.pptx) / [PDF](../slides/ARC3133_Class06.pdf) | Current | Arrays 1D, 2D, 3D (P3b sheet 1); P3a due; P3b issued; P2b print checkpoint. |
 | 7 | Arrays | [PPTX](../slides/ARC3133_Class07.pptx) / [PDF](../slides/ARC3133_Class07.pdf) | Current | Arrays hexagonal, radial, curve (P3b sheet 2); studio-review week, nothing due. |
-| 8 | Attractor | [PPTX](../slides/ARC3133_Class08.pptx) / [PDF](../slides/ARC3133_Class08.pdf) | Current | Attractors: distance, 2D field, remap, falloff; P3b due; P3c plotter and P3d Mixtli issued. |
-| 9 | Attractor | [PPTX](../slides/ARC3133_Class09.pptx) / [PDF](../slides/ARC3133_Class09.pdf) | Current | Plotter workflow, Mixtli working review, midterm checklist. |
+| 8 | Attractor | [PPTX](../slides/ARC3133_Class08.pptx) / [PDF](../slides/ARC3133_Class08.pdf) | Current | Attractors on a 2D field and the pen-plotter workflow; P3b due; P3c and P3d issued. |
+| 9 | Attractor | [PPTX](../slides/ARC3133_Class09.pptx) / [PDF](../slides/ARC3133_Class09.pdf) | Current | Site analysis with Mixtli; P3c test-plot review; midterm checklist. |
 | 10 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class10.pptx) / [PDF](../slides/ARC3133_Class10.pdf) | Current | Midterm review of Projects 1-3, then SDF introduction; P4a issued. |
 | 11 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class11.pptx) / [PDF](../slides/ARC3133_Class11.pdf) | Current | SDF volume studio work; P4a checkpoint. |
 | 12 | Discretizing Geometry | [PPTX](../slides/ARC3133_Class12.pptx) / [PDF](../slides/ARC3133_Class12.pdf) | Current | Discretizing geometry; P4a due; P4b issued; booklet checkpoint. |
@@ -44,7 +44,7 @@ Every class has one deck, built with the course slide kit from `slides/src` and 
 
 The four projects are GSM, CSG, Paneling and Volumetric Data. Projects 1-3 finish at the Week 10 midterm. Paneling includes four separate assignments: the module, arrays, the 2D field plotter drawing and the Mixtli site analysis. The two array sheets form one assignment; the two attractor sheets form two assignments.
 
-Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 9 is a working review of both attractor assignments. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
+Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and the pen-plotter workflow; Week 9 teaches the Mixtli site analysis and reviews test plots. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
 
 Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
 

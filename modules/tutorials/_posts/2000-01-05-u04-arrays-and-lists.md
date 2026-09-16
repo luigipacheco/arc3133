@@ -16,7 +16,7 @@ Generate positions in an ordered collection, then control selected positions wit
 
 **Vocabulary:** list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase.
 
-**Session and tutorial video:** One teaching session and one tutorial video cover both example files. Use the second target week for practice if needed. The video has not yet been posted.
+**Session and tutorial video:** One teaching session and one tutorial video cover both example files. The second week is for practice. The video has not yet been posted.
 
 1. Start with a small linear array. Show the list, count and index, then construct repetition with Repeat Input and Repeat Output in a Repeat Zone.
 2. Use Compare and Switch to express an if condition; compare the result at two counts.

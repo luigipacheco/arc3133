@@ -14,7 +14,7 @@ categories:
 
 ## GSM — Graphic Standards Manual
 
-**Introduced:** Week 1 — Aug 25 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
+**Introduced:** Week 1 — Aug 25 · **Draft due:** Week 10 — Oct 27 · **Weight:** 7%
 
 - Four pages, and no more. The manual is the graphic system itself, shown in use: rules with a tested application beside each one, not a description of intentions.
 - One page per decision: (1) the template — sheet size, margins, grid and columns, with the placement rules; (2) typography and hierarchy; (3) color and line weights; (4) annotation, captions and image treatment, demonstrated on a real sheet from this course.

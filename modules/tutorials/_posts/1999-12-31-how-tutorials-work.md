@@ -16,7 +16,7 @@ Students bring the editable file and explain one relationship between an input a
 
 This is an in-person course with scheduled FabLab work. Students should plan for at least six hours of work outside class each week. Fabrication preparation, testing and documentation are part of that work.
 
-The dated schedule is a target. Arrays uses one teaching session and one tutorial video, with the second target week available for practice. Volumetric fields and slicing retain additional sessions. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
+The dated schedule is a target. Each teaching block is budgeted at two classes — a demonstration class and a practice class — and each short assignment at two weeks from brief to deadline. Arrays uses one teaching session and one tutorial video, with the second week for practice. Everything up to and including attractors is covered before the Week 10 midterm. The blocks after the midterm are provisional: their order is set, but their pace and deadlines will be confirmed at the midterm and announced before they change. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
 
 Assignment deadlines are listed separately from the teaching sequence. If teaching moves, the instructor will announce an updated deadline in class and Canvas and update this source before regenerating the course pages. A changed lesson pace does not silently change a deadline. No new graded submission is scheduled in the retained studio-review windows: October 5–9 and December 1–4.
 
@@ -29,17 +29,17 @@ Lessons are posted as the course reaches them, so you follow along in class rath
 | Lesson | Target week | Status |
 | --- | --- | --- |
 | [U01 — Graphic Standards Manual]({{ site.baseurl }}/modules/tutorials/u01-graphic-standards-manual/) | Week 1 | Posted |
-| [U02 — Transformations and CSG]({{ site.baseurl }}/modules/tutorials/u02-transformations-and-csg/) | Week 2 | Posted |
-| [U03 — Geometry from scratch]({{ site.baseurl }}/modules/tutorials/u03-geometry-from-scratch/) | Week 3 | Posted |
-| [U04 — Arrays and lists]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 4, 5, 7, 8 | Posted |
-| [U05 — Attractors]({{ site.baseurl }}/modules/tutorials/u05-attractors/) | Weeks 6, 7, 8 | Posted |
-| U07 — Point clouds and the transition to volumes | Week 9 | Posted after the class |
-| U08 — Volumetric fields and signed distance | Weeks 10, 11 | Posted after the class |
-| U09 — Contour sections and physical parts | Weeks 12, 13, 14, 15 | Posted after the class |
+| [U02 — Transformations and CSG]({{ site.baseurl }}/modules/tutorials/u02-transformations-and-csg/) | Weeks 2, 3 | Posted |
+| [U03 — Geometry from scratch]({{ site.baseurl }}/modules/tutorials/u03-geometry-from-scratch/) | Weeks 4, 5 | Posted |
+| [U04 — Arrays and lists]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 6, 7 | Posted |
+| [U05 — Attractors]({{ site.baseurl }}/modules/tutorials/u05-attractors/) | Weeks 8, 9 | Posted |
+| U07 — Point clouds and the transition to volumes | Weeks 10, 11 | Posted after the class |
+| U08 — Volumetric fields and signed distance | Weeks 12, 13 | Posted after the class |
+| U09 — Contour sections and physical parts | Weeks 14, 15 | Posted after the class |
 
 ## Possible intermediate class
 
-**Tessellation, panelization, lattices and simulation.** A possible intermediate class after arrays or attractors, if time allows. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
+**Tessellation, panelization, lattices and simulation.** A possible intermediate class after arrays or attractors, only if the two-week blocks run ahead of schedule — the current calendar has no spare week for it. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
 
 Optional lesson notes — Tessellation, panelization, lattices and simulation — *not yet released*
 

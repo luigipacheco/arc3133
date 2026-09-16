@@ -11,20 +11,18 @@ permalink: /sessions/
 
 # Teaching sequence
 
-These ten blocks set the teaching order. Target weeks are a guide: a topic may take longer. Start with short assignments, then combine and revise them into the four projects. Download example files individually; the arrays session uses two files.
+These 8 blocks set the teaching order. Target weeks are a guide: a topic may take longer. Start with short assignments, then combine and revise them into the four projects. Download example files individually; the arrays session uses two files.
 
 | Target weeks | Focus | Practical sessions |
 |---|---|---|
 | 1 | Graphic Standards Manual | [Manual and sample sheet]({{ site.baseurl }}/modules/tutorials/u01-graphic-standards-manual/) |
-| 2 | Transformations and CSG | [S01]({{ site.baseurl }}/sessions/s01/) |
-| 3 | Point → Line → Edge → Face → Solid → Boolean | [S02]({{ site.baseurl }}/sessions/s02/) |
-| 4–5 | Arrays, lists, loops, conditionals and sine | [One arrays session]({{ site.baseurl }}/sessions/s03/) |
-| 6 | Point, multiple-point and curve attractors | [S05]({{ site.baseurl }}/sessions/s05/) |
-| 7–8 | 3D arrays, review and midterm | [Review and practice]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) |
-| 9 | Point clouds and conversion to volumes | S07 |
-| 10–11 | Volumetric fields, SDFs, noise and Booleans | S08, S09 |
-| 12–13 | Contours, sections and physical parts | S10, S11 |
-| 14–15 | Fabrication, revision and booklet | S12 |
+| 2–3 | Transformations and CSG | [S01]({{ site.baseurl }}/sessions/s01/) |
+| 4–5 | Point → Line → Edge → Face → Solid → Boolean | [S02]({{ site.baseurl }}/sessions/s02/) |
+| 6–7 | Arrays, lists, loops, conditionals and sine | [One arrays session]({{ site.baseurl }}/sessions/s03/) |
+| 8–9 | Point, multiple-point and curve attractors | [S05]({{ site.baseurl }}/sessions/s05/) |
+| 10–11 | Point clouds and conversion to volumes | S07 |
+| 12–13 | Volumetric fields, SDFs, noise and Booleans | S08, S09 |
+| 14–15 | Contours, sections, fabrication and booklet | S10, S11, S12 |
 
 Session pages bring together the file, scene order, short exercise and matching screenshots. Pages are posted with their lesson; later sessions remain listed here.
 
@@ -42,7 +40,7 @@ Make a sample 17 × 11 inch sheet and explain one decision about visual hierarch
 
 ## Transformations and CSG
 
-Target weeks: 2.
+Target weeks: 2–3.
 
 [Intro to Geometry Nodes — transformations and CSG]({{ site.baseurl }}/sessions/s01/)
 
@@ -52,7 +50,7 @@ Build the instructor's three-operation CSG example from native primitives and ro
 
 ## Point → Line → Edge → Face → Solid → Boolean
 
-Target weeks: 3.
+Target weeks: 4–5.
 
 [Geometry Fundamentals]({{ site.baseurl }}/sessions/s02/)
 
@@ -62,17 +60,17 @@ Build geometry from coordinates, then use the parametric pyramid as a Boolean cu
 
 ## Arrays, lists, loops, conditionals and sine
 
-Target weeks: 4–5.
+Target weeks: 6–7.
 
 [Arrays and lists]({{ site.baseurl }}/sessions/s03/)
 
-One teaching session and one tutorial video cover both example files. Use the second target week for practice if needed. The video has not yet been posted.
+One teaching session and one tutorial video cover both example files. The second week is for practice. The video has not yet been posted.
 
 <a id="b05"></a>
 
 ## Point, multiple-point and curve attractors
 
-Target weeks: 6.
+Target weeks: 8–9.
 
 [Attractors]({{ site.baseurl }}/sessions/s05/)
 
@@ -80,33 +78,19 @@ Vary parameters using distance to one point, multiple points and a curve.
 
 <a id="b06"></a>
 
-## 3D arrays, review and midterm
-
-Target weeks: 7–8.
-
-[Arrays and lists]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/)
-
-Reuse your P1b panel as the component in linear, grid, hexagonal and radial studies. Develop three for the sheet, including the nested grid, a conditional change and a sine-driven variation. Include the 3D cube array before hexagonal arrays and compare counts of 3, 4 and 5 per axis.
-
-[Attractors]({{ site.baseurl }}/modules/tutorials/u05-attractors/)
-
-Show the field, the mapping and the resulting form. Move the attractor and explain the response.
-
-<a id="b07"></a>
-
 ## Point clouds and conversion to volumes
 
-Target weeks: 9.
+Target weeks: 10–11.
 
 Point Clouds and Volumes — *not yet released*
 
 Import points, analyze their relationship to an attractor and convert the samples into a volume.
 
-<a id="b08"></a>
+<a id="b07"></a>
 
 ## Volumetric fields, SDFs, noise and Booleans
 
-Target weeks: 10–11.
+Target weeks: 12–13.
 
 Advanced Volumes I — signed distance and Boolean — *not yet released*
 
@@ -116,11 +100,11 @@ Advanced Volumes II — noise and surface extraction — *not yet released*
 
 Use noise to vary a volumetric field and extract its surface.
 
-<a id="b09"></a>
+<a id="b08"></a>
 
-## Contours, sections and physical parts
+## Contours, sections, fabrication and booklet
 
-Target weeks: 12–13.
+Target weeks: 14–15.
 
 Discretizing Geometry I — contours — *not yet released*
 
@@ -129,12 +113,6 @@ Slice the chosen form into ordered contour curves.
 Discretizing Geometry II — physical parts — *not yet released*
 
 Convert section profiles into numbered physical parts and a cutting layout.
-
-<a id="b10"></a>
-
-## Fabrication, revision and booklet
-
-Target weeks: 14–15.
 
 Final Project — fabrication and assembly — *not yet released*
 
@@ -146,6 +124,6 @@ Fabricate, test and revise the selected system, then assemble its documentation 
 
 ### Tessellation, panelization, lattices and simulation
 
-A possible intermediate class after arrays or attractors, if time allows. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
+A possible intermediate class after arrays or attractors, only if the two-week blocks run ahead of schedule — the current calendar has no spare week for it. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
 
 Optional — Tessellation and Lattices — *optional lesson not yet posted*

@@ -12,30 +12,28 @@ published: true
 
 A course on computational design for architectural representation — describing geometry as operations and rules, varying it with data, and making the result physical.
 
-**Most recently posted:** [Class 06 — Point, multiple-point and curve attractors]({{ site.baseurl }}/modules/classes/class-06/) · Week 6 — Sep 29
+**Most recently posted:** [Class 06 — Arrays, lists, loops, conditionals and sine]({{ site.baseurl }}/modules/classes/class-06/) · Week 6 — Sep 29
 
 ## Teaching sequence
 
-Follow these ten teaching blocks in order. Target weeks are a guide; a topic may take longer. Download reference files individually. Arrays uses two files in one session and one tutorial video.
+Follow these 8 teaching blocks in order. Target weeks are a guide; a topic may take longer. Download reference files individually. Arrays uses two files in one session and one tutorial video.
 
 | Target weeks | Focus | Practical sessions |
 |---|---|---|
 | 1 | Graphic Standards Manual | [Manual and sample sheet]({{ site.baseurl }}/modules/tutorials/u01-graphic-standards-manual/) |
-| 2 | Transformations and CSG | [S01]({{ site.baseurl }}/sessions/s01/) |
-| 3 | Point → Line → Edge → Face → Solid → Boolean | [S02]({{ site.baseurl }}/sessions/s02/) |
-| 4–5 | Arrays, lists, loops, conditionals and sine | [One arrays session]({{ site.baseurl }}/sessions/s03/) |
-| 6 | Point, multiple-point and curve attractors | [S05]({{ site.baseurl }}/sessions/s05/) |
-| 7–8 | 3D arrays, review and midterm | [Review and practice]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) |
-| 9 | Point clouds and conversion to volumes | S07 |
-| 10–11 | Volumetric fields, SDFs, noise and Booleans | S08, S09 |
-| 12–13 | Contours, sections and physical parts | S10, S11 |
-| 14–15 | Fabrication, revision and booklet | S12 |
+| 2–3 | Transformations and CSG | [S01]({{ site.baseurl }}/sessions/s01/) |
+| 4–5 | Point → Line → Edge → Face → Solid → Boolean | [S02]({{ site.baseurl }}/sessions/s02/) |
+| 6–7 | Arrays, lists, loops, conditionals and sine | [One arrays session]({{ site.baseurl }}/sessions/s03/) |
+| 8–9 | Point, multiple-point and curve attractors | [S05]({{ site.baseurl }}/sessions/s05/) |
+| 10–11 | Point clouds and conversion to volumes | S07 |
+| 12–13 | Volumetric fields, SDFs, noise and Booleans | S08, S09 |
+| 14–15 | Contours, sections, fabrication and booklet | S10, S11, S12 |
 
 [Open the session guide]({{ site.baseurl }}/sessions/)
 
 ## Possible intermediate class
 
-**Tessellation, panelization, lattices and simulation.** A possible intermediate class after arrays or attractors, if time allows. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
+**Tessellation, panelization, lattices and simulation.** A possible intermediate class after arrays or attractors, only if the two-week blocks run ahead of schedule — the current calendar has no spare week for it. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
 
 ## Four projects
 
@@ -78,10 +76,10 @@ afterthought at the end of it.
 
 | Next due | Date | Weight |
 | --- | --- | --- |
-| [P1c — First print]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/#p1c) | Week 8 — Oct 13 | 7% |
+| [P1b — Panel from scratch]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/#p1b) | Week 6 — Sep 29 | 7% |
 | [P2a — Arrays and conditional control]({{ site.baseurl }}/modules/assignments/p2-repetition-and-response-arrays-to-attractors/#p2a) | Week 8 — Oct 13 | 7% |
-| [GSM — Graphic Standards Manual]({{ site.baseurl }}/modules/assignments/gsm-graphic-standards-manual/) | Week 8 — Oct 13 | 7% |
-| [MID — Midterm review]({{ site.baseurl }}/modules/assignments/mid-midterm-review/) | Week 8 — Oct 13 | 7% |
+| [P1c — First print]({{ site.baseurl }}/modules/assignments/p1-geometry-from-operations-to-construction/#p1c) | Week 10 — Oct 27 | 7% |
+| [P2b — Attractor field study]({{ site.baseurl }}/modules/assignments/p2-repetition-and-response-arrays-to-attractors/#p2b) | Week 10 — Oct 27 | 7% |
 
 [The full teaching calendar]({{ site.baseurl }}/resources/course-policies/) lists all fifteen weeks with every deadline and the reserved review windows.
 

@@ -18,7 +18,7 @@ Complete the short assignments below in order. Combine and revise them as one pr
 
 ## P2a — Arrays and conditional control
 
-**Introduced:** Week 4 — Sep 15 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
+**Introduced:** Week 6 — Sep 29 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
 
 - Array the P1b panel — linear, nested grid, hexagonal and radial — and develop three comparisons on up to two sheets, including the nested grid.
 - Keep the panel itself unchanged while comparing arrangements; only its positions move. Expose count and spacing or radius and explain index order.
@@ -29,7 +29,7 @@ Complete the short assignments below in order. Combine and revise them as one pr
 
 ## P2b — Attractor field study
 
-**Introduced:** Week 6 — Sep 29 · **Draft due:** Week 9 — Oct 20 · **Weight:** 7%
+**Introduced:** Week 8 — Oct 13 · **Draft due:** Week 10 — Oct 27 · **Weight:** 7%
 
 - On up to two sheets, compare single-point, multiple-point and curve attractors, holding the P1b panel and one arrangement from P2a constant so only the measurement changes.
 - Show the measured field before the geometric result. State source and target ranges, clamping and falloff.
@@ -37,7 +37,7 @@ Complete the short assignments below in order. Combine and revise them as one pr
 
 **Preparation / revision checkpoints** (not extra graded assignments):
 
-- Week 8 — Oct 13: Bring the grayscale field and a first geometric response to midterm as work in progress.
+- Week 9 — Oct 20: Bring the grayscale field and a first geometric response for a working review.
 
 ## Related lessons
 

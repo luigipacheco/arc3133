@@ -55,7 +55,7 @@ def sequence(course, web=True):
 
 
 def build(course, front):
-    introduction = ('These ten blocks set the teaching order. Target weeks are a guide: a topic may take longer. '
+    introduction = (f'These {len(course.sequence)} blocks set the teaching order. Target weeks are a guide: a topic may take longer. '
                     'Start with short assignments, then combine and revise them into the four projects. '
                     'Download example files individually; the arrays session uses two files.\n\n')
     index = front('Teaching sequence · sessions', categories=['sessions'], permalink='/sessions/')

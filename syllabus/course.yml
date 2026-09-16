@@ -1,7 +1,7 @@
 # EDIT THIS FILE for the learning sequence, briefs, dates and grading.
 # Run: python scripts/sync_course.py
 # University and standing course policy wording is in policies.md.
-revision: '2026-09-12'
+revision: '2026-09-16'
 status: Working draft for instructor discussion
 # Two audiences, two notices. The instructor one rides on the syllabus and the
 # reference documents; the student one is what appears on the public course
@@ -45,7 +45,8 @@ decisions:
     - Establish one source of curriculum information before preparing the remaining Blender class files.
     - 'Start with short assignments that build into four projects: geometry, arrays/attractors, spatial arrays/assembly, and point clouds/volumes/sections.'
   proposed:
-    - Retain the existing 15-week semester and midterm/final review windows, with additional time for arrays, volumes and slicing.
+    - 'Budget two weeks per tutorial and per assignment: CSG and geometry from scratch each took two classes in practice. Attractors are covered before the midterm, which moves to Week 10. Weeks 10–15 after the midterm are provisional and will be re-planned then.'
+    - Retain the existing 15-week semester and midterm/final review windows.
     - 'Retain the calendar''s grading total: ten project milestones at 7% each, GSM 7%, midterm 7%, booklet 11% and participation 5%.'
     - Focus the required final on the developed visual work, physical work and booklet. The previous Python/AI final and extra-credit scheme are awaiting an instructor decision and are not assigned in this draft.
     - 'Keep three fabrication outputs: an introductory print, a small modular print assembly and a sectional assembly. A plotter demonstration is optional and carries no separate grade.'
@@ -63,7 +64,7 @@ description: |
 
   Visual quality remains central: composition, hierarchy, line weight, color, rendering, photography and clear explanation of spatial ideas. A working graph supports those decisions. Each project carries geometry and knowledge into the next rather than starting with an unrelated object.
 pacing: |
-  The dated schedule is a target. Arrays uses one teaching session and one tutorial video, with the second target week available for practice. Volumetric fields and slicing retain additional sessions. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
+  The dated schedule is a target. Each teaching block is budgeted at two classes — a demonstration class and a practice class — and each short assignment at two weeks from brief to deadline. Arrays uses one teaching session and one tutorial video, with the second week for practice. Everything up to and including attractors is covered before the Week 10 midterm. The blocks after the midterm are provisional: their order is set, but their pace and deadlines will be confirmed at the midterm and announced before they change. A class may continue the previous topic when students need more practice. Begin with a small example, check understanding, and only then increase the count or complexity.
 
   Assignment deadlines are listed separately from the teaching sequence. If teaching moves, the instructor will announce an updated deadline in class and Canvas and update this source before regenerating the course pages. A changed lesson pace does not silently change a deadline. No new graded submission is scheduled in the retained studio-review windows: October 5–9 and December 1–4.
 format: |
@@ -110,7 +111,7 @@ fabrication: |
 ai: |
   The core course teaches graphs and geometric reasoning. No required Python or AI tool-building final is assigned in this working draft; that decision remains open.
 
-  **Through the Week 8 midterm:** students produce their own graphs, geometry, layouts and submission material. AI may explain a concept, syntax or an error message, but may not write, complete or repair submitted work.
+  **Through the Week 10 midterm:** students produce their own graphs, geometry, layouts and submission material. AI may explain a concept, syntax or an error message, but may not write, complete or repair submitted work.
 
   **After the midterm:** code assistance may be used only where an assignment explicitly permits it. Students write their own procedure or pseudocode first, disclose the tool/version and prompts, record what was kept or changed, and verify the result. This permission does not replace the required node-based exercises or authorize AI production of the visual work.
 
@@ -402,8 +403,8 @@ projects:
       - id: P1b
         title: Panel from scratch
         kind: visual
-        release: 3
-        due: 5
+        release: 4
+        due: 6
         weight: 7
         requirements:
           - 'Find one panel in a built precedent and keep it simple. Choose it by one test: could you set it beside three copies of itself, edge to edge, and have the grid close? Name the building, the architect and your source on the sheet.'
@@ -415,9 +416,9 @@ projects:
       - id: P1c
         title: First print
         kind: fabrication
-        release: 3
-        due: 8
-        checkpoints: [{week: 5, text: 'Review print-ready geometry, physical units, orientation and the sliced preview before queueing.'}]
+        release: 4
+        due: 10
+        checkpoints: [{week: 6, text: 'Review print-ready geometry, physical units, orientation and the sliced preview before queueing.'}]
         weight: 7
         requirements:
           - Develop a printable variant of the geometry project, within 60 mm on each axis and the 200 g allocation, with no supports.
@@ -431,7 +432,7 @@ projects:
       - id: P2a
         title: Arrays and conditional control
         kind: visual
-        release: 4
+        release: 6
         due: 8
         weight: 7
         requirements:
@@ -442,9 +443,9 @@ projects:
       - id: P2b
         title: Attractor field study
         kind: visual
-        release: 6
-        due: 9
-        checkpoints: [{week: 8, text: Bring the grayscale field and a first geometric response to midterm as work in progress.}]
+        release: 8
+        due: 10
+        checkpoints: [{week: 9, text: Bring the grayscale field and a first geometric response for a working review.}]
         weight: 7
         requirements:
           - On up to two sheets, compare single-point, multiple-point and curve attractors, holding the P1b panel and one arrangement from P2a constant so only the measurement changes.
@@ -458,8 +459,8 @@ projects:
       - id: P3a
         title: 3D array and connection study
         kind: visual
-        release: 7
-        due: 10
+        release: 10
+        due: 12
         weight: 7
         requirements:
           - Show the progression from row to grid to 3D cube array on up to two sheets. Explain how count on each axis determines the total number of components.
@@ -468,9 +469,9 @@ projects:
       - id: P3b
         title: Modular print assembly
         kind: fabrication
-        release: 7
-        due: 13
-        checkpoints: [{week: 10, text: Review one connection test and a production plan before the nine-part batch.}]
+        release: 10
+        due: 14
+        checkpoints: [{week: 12, text: Review one connection test and a production plan before the nine-part batch.}]
         weight: 7
         requirements:
           - Produce a 3 × 3 assembly of nine components, including controlled variation, within 300 mm on each assembled axis.
@@ -484,8 +485,8 @@ projects:
       - id: P4a
         title: Point-cloud analysis
         kind: visual
-        release: 9
-        due: 11
+        release: 11
+        due: 13
         weight: 7
         requirements:
           - One or two sheets comparing source samples, a distance-based analysis and a volume conversion.
@@ -494,9 +495,9 @@ projects:
       - id: P4b
         title: Volume, section and light
         kind: visual
-        release: 10
+        release: 12
         due: 14
-        checkpoints: [{week: 12, text: Select the volume and compare two section directions before developing physical parts.}]
+        checkpoints: [{week: 13, text: Select the volume and compare two section directions before developing physical parts.}]
         weight: 7
         requirements:
           - Two sheets showing a controlled volumetric study, its field/Boolean logic and three parameter variants.
@@ -505,9 +506,9 @@ projects:
       - id: P4c
         title: Sectional fabrication
         kind: fabrication
-        release: 12
+        release: 14
         due: final
-        checkpoints: [{week: 13, text: 'Review a fit/kerf test, registered parts and the nested cutting file before full production.'}]
+        checkpoints: [{week: 15, text: 'Review a fit/kerf test, registered parts and the nested cutting file before full production.'}]
         weight: 7
         requirements:
           - Translate the chosen volume into at least 12 ordered section parts with material thickness, labels and a registration or connection system.
@@ -518,7 +519,7 @@ assessments:
     title: Graphic Standards Manual
     url_slug: graphic-standards-manual
     release: 1
-    due: 8
+    due: 10
     weight: 7
     checkpoints: [{week: 2, text: Bring a sample sheet for an ungraded identity check.}, {week: final, text: Submit the revised manual as a separate PDF alongside the booklet.}]
     requirements:
@@ -530,11 +531,11 @@ assessments:
   - id: MID
     title: Midterm review
     release: 1
-    due: 8
+    due: 10
     weight: 7
     requirements:
-      - Print and present the GSM, revised CSG and mesh sheets, the first print and its documentation, and the array study.
-      - Bring attractor and 3D array work in progress for feedback; these are not additional completed submissions at midterm.
+      - Print and present the GSM, revised CSG and mesh sheets, the first print and its documentation, the array study and the attractor field study.
+      - 3D array and assembly work (P3) is briefed after the review and is not expected at midterm.
       - Bring the editable file for a brief live parameter change and explanation. The review assesses the assembled body of work without re-grading earlier milestones.
   - id: BOOK
     title: Final booklet and review
@@ -558,19 +559,19 @@ assessments:
 weeks:
   - {week: 1, date: '2026-08-25', focus: 'Begin the manual and test a sample sheet. Establish file organization and the class workflow.'}
   - {week: 2, date: '2026-09-01', focus: 'Move, rotate and scale procedurally. Compare solid Boolean operators and begin the massing study.'}
-  - {week: 3, date: '2026-09-08', focus: 'Point → Line → Edge → Face → Solid → Boolean. Build the parametric pyramid and reconnect to the CSG project.'}
-  - {week: 4, date: '2026-09-15', focus: 'One arrays session covers both example files: linear and nested grid repetition, hexagonal and radial arrangements, conditionals and sine. Develop the XYZ cube array before hexagonal arrays to introduce later volume sampling.'}
-  - {week: 5, date: '2026-09-22', focus: 'Practice and extend the arrays lesson where needed. Rebuild the steps in your own file and develop the assignment; no separate second arrays tutorial is planned.'}
-  - {week: 6, date: '2026-09-29', focus: 'One point, multiple points and a curve. Read the measured field, then remap it into geometric variation.'}
-  - {week: 7, date: '2026-10-06', focus: 'Consolidate the point-to-3D-array sequence, apply attractor controls and test a component connection. Working session; no graded submissions during the retained studio-review window.', no_due: true}
-  - {week: 8, date: '2026-10-13', focus: 'Review graphic standards, geometry, arrays and the first print. Discuss attractor and 3D array work in progress, then prepare for imported point clouds and volumes.'}
-  - {week: 9, date: '2026-10-20', focus: 'Import, document and analyze samples using attractor logic. Compare the points with a volume conversion.'}
-  - {week: 10, date: '2026-10-27', focus: 'Mesh versus field, density versus signed distance, and Boolean combinations. Review the modular connection test and production plan.'}
-  - {week: 11, date: '2026-11-03', focus: 'Noise, textures and external controls; compare resolution and surface extraction. Continue point-cloud work where needed.'}
-  - {week: 12, date: '2026-11-10', focus: 'Section direction, interval and order. Translate the chosen volume into curves and compare light and material effects.'}
-  - {week: 13, date: '2026-11-17', focus: 'Thickness, registration, fit, kerf, labels and nesting. Review the modular assembly and test section parts.'}
-  - {week: 14, date: '2026-11-24', focus: 'Fabricate and assemble sections within lab availability. Photograph physical work and refine the volume/section sheets.'}
-  - {week: 15, date: '2026-12-01', focus: 'Assembly follow-through, documentation, booklet and file checks. No graded submissions during the retained final studio-review window.', no_due: true}
+  - {week: 3, date: '2026-09-08', focus: 'Continue CSG: name the operands of each subtraction, expose inputs and develop the massing sequence and its pseudocode.'}
+  - {week: 4, date: '2026-09-15', focus: 'Point → Line → Edge → Face → Solid → Boolean. Build the parametric pyramid and reconnect to the CSG project.'}
+  - {week: 5, date: '2026-09-22', focus: 'Continue geometry from scratch: build the precedent panel from its own points and faces, then review print-ready geometry for the first print.'}
+  - {week: 6, date: '2026-09-29', focus: 'One arrays session covers both example files: linear and nested grid repetition, the XYZ cube array, hexagonal and radial arrangements, conditionals and sine.'}
+  - {week: 7, date: '2026-10-06', focus: 'Practice and extend the arrays lesson: rebuild the steps in your own file and place your panel. Working session; no graded submissions during the retained studio-review window.', no_due: true}
+  - {week: 8, date: '2026-10-13', focus: 'Point, multiple points and a curve. Measure distance to an attractor and read the field before it drives anything.'}
+  - {week: 9, date: '2026-10-20', focus: 'Continue attractors: remap the measured field into geometric variation on your P2a array, and compare the three attractor types.'}
+  - {week: 10, date: '2026-10-27', focus: 'Midterm review of graphic standards, geometry, arrays, attractors and the first print. Then introduce imported point clouds: import, document and analyze samples.'}
+  - {week: 11, date: '2026-11-03', focus: 'Continue point clouds and compare the points with a volume conversion. Review the modular connection test and production plan.'}
+  - {week: 12, date: '2026-11-10', focus: 'Mesh versus field, density versus signed distance, and Boolean combinations.'}
+  - {week: 13, date: '2026-11-17', focus: 'Noise, textures and external controls; compare resolution and surface extraction. Select the volume and compare two section directions.'}
+  - {week: 14, date: '2026-11-24', focus: 'Section direction, interval and order; thickness, registration, fit, kerf, labels and nesting. Translate the chosen volume into parts.'}
+  - {week: 15, date: '2026-12-01', focus: 'Fabricate and assemble sections within lab availability, then documentation, booklet and file checks. No graded submissions during the retained final studio-review window.', no_due: true}
 vocabulary:
   - [parameter, 'An input you can change that controls a relationship or result.', 'Width, Depth and Height on the pyramid.']
   - [vector, 'An ordered set of components representing direction and magnitude; XYZ values can also specify a position relative to an origin.', 'A displacement of (0, 0, 1) moves a point upward one model unit.']
@@ -629,7 +630,7 @@ instructor_notes: |
 
   Attractors introduce measurement rather than another arrangement. The XYZ array establishes discrete locations in 3D. Point clouds introduce data the student did not author. Volumes introduce a new representation, and sections translate that representation into buildable parts. Make each transition explicit and retain a before/after comparison. Tessellation, panelization, lattices and simulation are possible intermediate topics and must not interrupt or become prerequisites for this route.
 
-  The midterm is a review of completed foundations and arrays, with developing attractor and spatial-array work. P3 now develops those arrays into the retained modular assembly, so its brief does not require the optional intermediate methods. Its existing weights and dates are retained. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
+  The midterm (Week 10) is a review of completed foundations, arrays and attractors. P3 now develops those arrays into the retained modular assembly, so its brief does not require the optional intermediate methods. Its existing weights and dates are retained. Reserve production time in the later semester and verify lab capacity before committing the cohort to a batch.
 
   Keep institutional policy text separate from curriculum edits. The School's accreditation mapping remains unconfirmed; do not present the earlier mixed 2014/2020 criteria table as a verified current requirement.
 
@@ -696,53 +697,42 @@ teaching_sequence:
     units: [U01]
     sessions: []
   - id: B02
-    weeks: [2]
+    weeks: [2, 3]
     focus: Transformations and CSG
     units: [U02]
     sessions: [S01]
   - id: B03
-    weeks: [3]
+    weeks: [4, 5]
     focus: Point → Line → Edge → Face → Solid → Boolean
     units: [U03]
     sessions: [S02]
   - id: B04
-    weeks: [4, 5]
+    weeks: [6, 7]
     focus: Arrays, lists, loops, conditionals and sine
     units: [U04]
     sessions: [S03, S04]
     combine_sessions: true
-    delivery: One teaching session and one tutorial video cover both example files. Use the second target week for practice if needed. The video has not yet been posted.
+    delivery: One teaching session and one tutorial video cover both example files. The second week is for practice. The video has not yet been posted.
   - id: B05
-    weeks: [6]
+    weeks: [8, 9]
     focus: Point, multiple-point and curve attractors
     units: [U05]
     sessions: [S05]
   - id: B06
-    weeks: [7, 8]
-    focus: 3D arrays, review and midterm
-    units: [U04, U05]
-    sessions: []
-    activity: Review and practice
-  - id: B07
-    weeks: [9]
+    weeks: [10, 11]
     focus: Point clouds and conversion to volumes
     units: [U07]
     sessions: [S07]
-  - id: B08
-    weeks: [10, 11]
+  - id: B07
+    weeks: [12, 13]
     focus: Volumetric fields, SDFs, noise and Booleans
     units: [U08]
     sessions: [S08, S09]
-  - id: B09
-    weeks: [12, 13]
-    focus: Contours, sections and physical parts
-    units: [U09]
-    sessions: [S10, S11]
-  - id: B10
+  - id: B08
     weeks: [14, 15]
-    focus: Fabrication, revision and booklet
+    focus: Contours, sections, fabrication and booklet
     units: [U09]
-    sessions: [S12]
+    sessions: [S10, S11, S12]
 
 optional_classes:
   - id: O01
@@ -751,7 +741,7 @@ optional_classes:
     units: [U06]
     sessions: [S06]
     optional: true
-    description: A possible intermediate class after arrays or attractors, if time allows. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
+    description: A possible intermediate class after arrays or attractors, only if the two-week blocks run ahead of schedule — the current calendar has no spare week for it. It is outside the required sequence and carries no separate required submission. The existing file covers tessellation and lattices; panelization and simulation are possible additions.
 
 release:
   classes: [1, 2, 3, 4, 5, 6]

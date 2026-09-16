@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-"""Class 04 — Arrays and lists I (U04, steps 1–3). P1a due, P2a issued."""
+"""Class 04 — Geometry from scratch (U03), first of two classes. P1a due; P1b + P1c issued."""
 import os, math
 from nb import *
 from slidekit import *
 import coursedata as C
 import diagrams as G
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
+from pptx.enum.shapes import MSO_SHAPE
 from pptx.util import Pt
 
 OUT = os.environ.get("DECK_OUT", "/home/claude/out")
@@ -13,127 +14,154 @@ d = Deck()
 WK = 4
 
 # 1 ── TITLE
-title_slide(d, WK, ["ARRAYS AND LISTS", "PART ONE"],
-            "P2 BEGINS — ONE COMPONENT, MANY POSITIONS", bg=LIME, lfill=PINK, rfill=CYAN)
+title_slide(d, WK, ["GEOMETRY", "FROM SCRATCH"],
+            "P1 CONTINUES — WHAT A SOLID IS MADE OF, UNDERNEATH", bg=YELLOW, lfill=CYAN, rfill=LIME)
 
-# 2 ── AN ARRAY IS A LIST OF POSITIONS
-s = d.slide(CREAM)
-s.header("AN ARRAY IS A LIST OF POSITIONS",
-         "Not a command that duplicates things. A list you compute, then place geometry at.")
-s.panel(L, 1.95, 5.6, 3.5, "INDEX  →  POSITION", headfill=CYAN)
-s.t(L + 0.35, 2.75, 5.0, 2.4, [
-    s.Mb("i = 0   →   p = start", 13.5),
-    s.Mb("i = 1   →   p = start + step", 13.5),
-    s.Mb("i = 2   →   p = start + 2 × step", 13.5),
-    s.Mb(" ", 8),
-    s.Mb("p[i] = start + i × step", 13.5, bold=True)], ls=1.35)
-s.panel(6.6, 1.95, 6.05, 3.5, "THREE THINGS TO READ", headfill=PINK)
-s.t(6.9, 2.72, 5.45, 2.5, [
-    s.Cb("THE LIST — what is in the collection.", 14),
-    s.Cb("THE COUNT — how many there are.", 14),
-    s.Cb("THE INDEX — where each one sits in the order.", 14),
-    s.Cb(" ", 7),
-    s.Cb("The index is the only new idea. It is a counter that tells each copy how far along "
-         "it is — and therefore how different it should be.", 13.5)], ls=1.35)
-s.banner(5.75, "Your panel is the component. It does not change today — only where it goes.",
-         fill=LIME, h=0.72)
-
-# 3 ── THE REPEAT ZONE
+# 2 ── THE LADDER
 s = d.slide(BLACK)
-s.header("THE REPEAT ZONE", "The loop, made visible. Repeat Input, a body, Repeat Output.")
-s.panel(L, 2.05, 6.2, 3.3, "WHAT IT IS", headfill=LIME)
-s.t(L + 0.35, 2.8, 5.5, 2.3, [
-    s.Mb("Repeat Input   →  body  →  Repeat Output", 12.5, bold=True),
-    s.Mb(" ", 8),
-    s.Cb("Everything between the two runs once per iteration. Whatever you hand to Repeat Input "
-         "comes back changed, once for every step of the count.", 13.5)], ls=1.3)
-s.panel(7.15, 2.05, 5.5, 3.3, "READ IT SMALL FIRST", headfill=CYAN)
-s.t(7.45, 2.8, 4.9, 2.3, [
-    s.Cb("Set the count to 3 and look at the spreadsheet.", 13.5),
-    s.Cb(" ", 6),
-    s.Cb("Then 5. Then 20.", 13.5),
-    s.Cb(" ", 6),
-    s.Cb("A collection you cannot inspect is a collection you cannot debug. There is no prize "
-         "for a large count.", 13.5)], ls=1.3)
-s.banner(5.7, "BUILD IT AT A COUNT YOU CAN COUNT. SCALE UP ONLY ONCE IT IS RIGHT.",
-         fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
+s.header("POINT → LINE → EDGE → FACE → SOLID",
+         "Five steps, and each one is a list of the thing before it.")
+rungs = [("POINT", CYAN, "three numbers", "[x, y, z]"),
+         ("LINE", LIME, "two positions", "[p1, p2]"),
+         ("EDGE", YELLOW, "two vertices", "[v1, v2]"),
+         ("FACE", PINK, "ordered corners", "[v1, v2, v3]"),
+         ("MESH", CYAN, "many faces", "[f1, f2, f3…]")]
+x = L
+wd = (W - 0.2 * 4) / 5
+for nm, col, sub, code in rungs:
+    s.chip(x, 2.1, wd, 0.5, nm, fill=col, size=13)
+    s.card(x, 2.7, wd, 1.9, fill=CREAM)
+    s.t(x + 0.2, 2.95, wd - 0.4, 0.5, [s.Cb(sub, 12.5)], align=PP_ALIGN.CENTER)
+    s.t(x + 0.2, 3.6, wd - 0.4, 0.5, [s.Mb(code, 11.5)], align=PP_ALIGN.CENTER)
+    x += wd + 0.2
+s.banner(4.95, "A POSITION IS NOT A DISPLACEMENT. THE SAME THREE NUMBERS MEAN DIFFERENT THINGS "
+              "DEPENDING ON WHICH ONE YOU MEANT.", fill=YELLOW, h=0.68, align=PP_ALIGN.CENTER)
+s.t(L, 5.9, W, 0.9, [s.C("Nothing here is new geometry. It is the same collection, read at a "
+                         "different level: a face is a list of vertices, a mesh is a list of faces, "
+                         "and in Week 6 an array will be a list of copies.", 13.5, MUTE)], ls=1.3)
 
-# 4 ── COMPARE + SWITCH IS AN IF
+# 3 ── A FACE IS AN ORDERED LIST
 s = d.slide(CREAM)
-s.header("COMPARE + SWITCH IS AN IF STATEMENT",
-         "Test a value, then act on the answer. Two nodes, one idea.")
-s.panel(L, 1.95, 6.0, 3.4, "THE PATTERN", headfill=PINK)
-s.t(L + 0.35, 2.7, 5.3, 2.3, [
-    s.Mb("Compare   index  >  4     →  True / False", 12),
-    s.Mb("Switch    False → a", 12),
-    s.Mb("          True  → b", 12),
+s.header("A FACE IS AN ORDERED LIST OF CORNERS",
+         "Same three vertices, two different faces. The order is the difference.")
+s.panel(L, 1.95, 6.0, 3.4, "WINDING ORDER", headfill=CYAN)
+cx0, cy0 = L + 1.4, 3.6
+tri = [(cx0, cy0 - 0.7), (cx0 - 0.75, cy0 + 0.55), (cx0 + 0.75, cy0 + 0.55)]
+for i, (px, py) in enumerate(tri):
+    s.dot(px, py, d=0.16, fill=BLACK)
+    s.t(px - 0.35, py - 0.42, 0.7, 0.3, [s.Mb("v%d" % i, 11)], align=PP_ALIGN.CENTER)
+s.t(L + 3.0, 2.75, 2.8, 2.3, [
+    s.Mb("f = [v0, v1, v2]", 12, bold=True),
+    s.Mb("  normal → toward you", 11),
     s.Mb(" ", 8),
-    s.Cb("Compare asks the question. Switch chooses between two answers. Everything conditional "
-         "in this course is those two nodes.", 13.5)], ls=1.3)
-s.panel(7.0, 1.95, 5.65, 3.4, "WHAT IT BUYS YOU", headfill=LIME, tsize=14.5)
+    s.Mb("f = [v0, v2, v1]", 12, bold=True),
+    s.Mb("  normal → away", 11)], ls=1.4)
+s.panel(7.0, 1.95, 5.65, 3.4, "WHY IT MATTERS LATER", headfill=PINK, tsize=14.5)
 s.t(7.3, 2.72, 5.05, 2.4, [
-    s.Cb("Move only a range of indices.", 14),
-    s.Cb("Cull every third element.", 14),
-    s.Cb("Give the first row a different height.", 14),
+    s.Cb("A flipped face tells a renderer the inside is the outside.", 14),
     s.Cb(" ", 7),
-    s.Cb("The field stops being uniform the moment a test decides something.", 14)], ls=1.35)
-s.banner(5.65, "COMPARE THE RESULT AT TWO DIFFERENT COUNTS. IF IT ONLY WORKS AT ONE, IT IS NOT A RULE.",
-         fill=CYAN, h=0.72, align=PP_ALIGN.CENTER)
+    s.Cb("It tells a slicer there is nothing to fill.", 14),
+    s.Cb(" ", 7),
+    s.Cb("Most failed prints this semester will start here, not at the printer.", 14)], ls=1.3)
+s.banner(5.65, "CLOSED MEANS EVERY EDGE IS SHARED BY EXACTLY TWO FACES. CHECK IT BEFORE YOU BELIEVE IT.",
+         fill=LIME, h=0.72, align=PP_ALIGN.CENTER)
 
-# 5 ── NEST IT AND YOU HAVE A GRID
+# 4 ── THE PYRAMID
+s = d.slide(BLACK)
+s.header("THE PYRAMID", "Five vertices, eight edges, five faces. Built by hand, driven by three numbers.")
+s.panel(L, 2.05, 6.2, 3.3, "WHAT YOU ASSEMBLE", headfill=LIME)
+counts = [("5", "VERTICES", "four base corners and an apex"),
+          ("8", "EDGES", "four around the base, four to the apex"),
+          ("5", "FACES", "four triangular sides and the base")]
+y = 2.85
+for n, nm, body in counts:
+    s.chip(L + 0.35, y, 0.75, 0.62, n, fill=CYAN, size=17)
+    s.t(L + 1.35, y, 4.6, 0.3, [s.Ab(nm, 12.5)])
+    s.t(L + 1.35, y + 0.3, 4.6, 0.3, [s.Cb(body, 11.5)])
+    y += 0.78
+s.panel(7.15, 2.05, 5.5, 3.3, "EXPOSED INPUTS", headfill=YELLOW)
+s.t(7.45, 2.85, 4.9, 2.2, [
+    s.Mb("Width", 14, bold=True), s.Mb("Depth", 14, bold=True), s.Mb("Height", 14, bold=True),
+    s.Mb(" ", 8),
+    s.Cb("Three numbers, and the whole solid rebuilds. That is the entire point of the exercise.", 13)], ls=1.4)
+s.banner(5.7, "DO NOT FORGET THE BASE FACE. A PYRAMID WITH FOUR SIDES AND NO BOTTOM IS NOT A SOLID.",
+         fill=PINK, h=0.7, align=PP_ALIGN.CENTER)
+
+# 5 ── IT BECOMES THE CUTTER
 s = d.slide(CREAM)
-s.header("NEST IT AND YOU HAVE A GRID", "Two counters instead of one. A list of lists.")
-s.panel(L, 1.95, 5.6, 3.5, "ONE COUNTER", headfill=CYAN)
-G.cartesian(s, L + 0.6, 3.0, cols=8, rows=1, p=0.38, d=0.14)
-s.t(L + 0.35, 3.9, 5.0, 1.2, [
-    s.Mb("p[i] = start + i × step", 12),
-    s.Mb(" ", 7),
-    s.Cb("count = 8", 13)], ls=1.3)
-s.panel(6.6, 1.95, 6.05, 3.5, "TWO COUNTERS", headfill=LIME)
-G.cartesian(s, 7.0, 2.75, cols=8, rows=5, p=0.38, d=0.14)
-s.t(6.9, 4.8, 5.45, 0.5, [
-    s.Mb("p[i][j] = start + (i × dx, j × dy)      count = 8 × 5 = 40", 12)])
-s.banner(5.75, "PREDICT THE TOTAL BEFORE YOU LOOK. IF THE NUMBER SURPRISES YOU, THE NESTING IS WRONG.",
-         fill=YELLOW, h=0.72, align=PP_ALIGN.CENTER)
+s.header("AND THEN IT GOES BACK INTO THE CSG FILE",
+         "The pyramid is not an exercise. It is the cutter for the study you already built.")
+flow = [("01", "BUILD IT", CYAN, "Five vertices, five faces, closed, with Width / Depth / Height exposed."),
+        ("02", "SUBTRACT IT", LIME, "Cube minus pyramid. The same Boolean from Week 2, with your own solid."),
+        ("03", "DRIVE IT", YELLOW, "Change the three inputs and show at least three settings of the result."),
+        ("04", "EXPLAIN IT", PINK, "Face order, normals, closure — why it cuts cleanly instead of failing.")]
+x = L
+wd = (W - 0.23 * 3) / 4
+for n, ttl, col, body in flow:
+    s.chip(x, 1.95, wd, 0.5, n + "   " + ttl, fill=col, size=12.5)
+    s.card(x, 2.55, wd, 2.2, fill=CREAM)
+    s.t(x + 0.25, 2.55, wd - 0.5, 2.2, [s.Cb(body, 13)], ls=1.3, anchor=MSO_ANCHOR.MIDDLE)
+    x += wd + 0.23
+s.banner(5.05, "THIS IS WHY P1 IS ONE PROJECT AND NOT THREE ASSIGNMENTS.",
+         fill=BLACK, color=CYAN, h=0.68, align=PP_ALIGN.CENTER)
+s.t(L, 5.95, W, 0.8, [s.C("Every project in this course does the same thing — the geometry you make "
+                          "in one milestone becomes the input to the next. You will never start from "
+                          "an unrelated object.", 13.5, GREY)], ls=1.3)
 
-pseudocode_slide(d, "U04",
-                 sub="Everything in U04 is in these nine lines — the nested loop, the stagger, the conditional, the sine.",
-                 note="THE INDENTATION IS THE NESTING. THAT IS WHY A GRID IS A LOOP INSIDE A LOOP.")
+pseudocode_slide(d, "U03",
+                 sub="A mesh is two lists. That is the entire idea, and it fits on one slide.",
+                 note="verts IS A LIST OF POSITIONS. faces IS A LIST OF INDICES INTO IT.")
 
-# 6 ── ISSUED — P2a
-issued_slide(d, "P2a",
-             blurb=C.PROJECTS["P2"]["description"] +
-                   "  This milestone is the arrangement half: four ways of placing the same component, "
-                   "three of them developed, with the repetition and selection logic built from basic nodes.",
-             cards=[("BUILD", "FOUR ARRANGEMENTS", "Linear, nested grid, hexagonal, radial — the grid is required."),
-                    ("CONTROL", "ONE CONDITIONAL", "An index range displaced, using Compare and Switch."),
-                    ("VARY", "ONE SINE", "Amplitude, frequency and phase, named and demonstrated.")])
+# 6 ── ISSUED — P1b
+issued_slide(d, "P1b",
+             blurb="Find a panel in a building you like, keep it simple, and build it out of two lists - "
+                   "points and faces. It is the component you will array in P2 and the object you will "
+                   "print, so choose something that tiles.",
+             cards=[("FIND", "A PANEL", "One precedent, simple. It has to sit beside itself and close."),
+                    ("DECIDE", "WHAT MOVES", "The parameters, first. One has to change its shape, not its box."),
+                    ("BUILD", "FROM TWO LISTS", "Every point an expression of those numbers. Never a typed coordinate."),
+                    ("SHOW", "THE RANGE", "Low, middle, high - still closing, still tiling. P2b drives it.")])
 
-# 7 ── REQUIREMENTS
-requirements_slide(d, "P2a",
+# 7 ── REQUIREMENTS P1b
+requirements_slide(d, "P1b",
                    sub="Visual quality 35% · computational understanding 25% · technical execution 20% "
                        "· experimentation 10% · requirements and identity 10%.")
 
-# 8 ── NOW
-now_slide(d, "NOW — YOUR FIRST ARRAY",
-          "Rest of the session: a linear array, a conditional, and a grid you can predict.",
-          ["Your panel instanced along a linear array, count and spacing exposed",
-           "The spreadsheet open — list, count and index all readable at count = 5",
-           "Compare and Switch changing one range of indices",
-           "The array nested into a grid, and you predicted the total before looking",
-           "Index order explained out loud: which way does i run, and what happens if you swap it"],
-          closer="A COUNT YOU CAN COUNT. NOT A THOUSAND OF ANYTHING, YET.",
+# 8 ── ALSO ISSUED — P1c
+issued_slide(d, "P1c", badge="ALSO ISSUED", badgefill=PINK,
+             blurb="The same geometry, made real. A printable variant of the project you have been "
+                   "building since Week 2 — presented as a physical object at the midterm.",
+             cards=[("LIMIT", "60 MM, 200 G", "Each axis within 60 mm. The allocation includes failures."),
+                    ("RULE", "NO SUPPORTS", "Orientation is your only lever. Change the geometry if you must."),
+                    ("DUE", "AT THE MIDTERM", "The queue has latency the two-week cycle does not.")])
+
+# 9 ── REQUIREMENTS P1c
+requirements_slide(d, "P1c",
+                   sub="Fabrication milestone — visual documentation 20% · computational understanding 20% "
+                       "· technical execution 15% · fabrication quality 30% · experimentation 5% · "
+                       "requirements 10%.")
+
+# 10 ── NOW
+now_slide(d, "NOW — BUILD THE PYRAMID",
+          "Rest of the session: from a single point to a closed solid that cuts.",
+          ["One point placed from an XYZ vector, and you can say why it is a position",
+           "Four base corners and an apex, with Width / Depth / Height exposed",
+           "All five faces joined — four sides and the base",
+           "Closure checked: every edge shared by exactly two faces",
+           "Cube minus pyramid working, off the same three inputs",
+           "Your own panel named, and the numbers that will drive it written down"],
+          closer="LEAVE WITH A SOLID THAT CUTS. THE SHEET IS THE EASY PART.",
           bg=CYAN)
 
-# 9 ── BEFORE NEXT CLASS
+# 11 ── BEFORE NEXT CLASS
 before_next_slide(d, [
-    ("CONTINUE", "U04 — the same unit runs into next week. Hexagonal and radial arrangements, "
-                 "conditional displacement and sine control."),
-    ("BUILD", "P2a is due at the midterm. Start the comparisons now — the sheet is easier when "
-              "the graphs already exist."),
-    ("BRING", "Your grid, working, at a small count. And P1b — the panel sheet is due next class."),
-    ("CHECK", "P1c: print-ready geometry, physical units and orientation get reviewed next week "
-              "before anything goes in the queue."),
+    ("CONTINUE", "U03 runs into next class. Build the panel from its own point and face lists; "
+                 "arrays start in Week 6, once the panel closes."),
+    ("FINISH", "P1a is due today. P1b — the panel sheet — is due Week 6, two weeks from now."),
+    ("FIND", "The panel. One building, one repeating component, simple enough to write as two "
+             "lists, and it has to sit beside itself without a gap. Name the building and your "
+             "source, and bring its point and face lists started - next class we build it."),
+    ("CHECK", "Your FabLab orientation now. P1c print-ready geometry is reviewed in Week 6."),
 ])
 
 d.save(os.path.join(OUT, "ARC3133_Class04.pptx"))

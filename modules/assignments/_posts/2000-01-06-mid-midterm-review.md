@@ -14,10 +14,10 @@ categories:
 
 ## MID — Midterm review
 
-**Introduced:** Week 1 — Aug 25 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
+**Introduced:** Week 1 — Aug 25 · **Draft due:** Week 10 — Oct 27 · **Weight:** 7%
 
-- Print and present the GSM, revised CSG and mesh sheets, the first print and its documentation, and the array study.
-- Bring attractor and 3D array work in progress for feedback; these are not additional completed submissions at midterm.
+- Print and present the GSM, revised CSG and mesh sheets, the first print and its documentation, the array study and the attractor field study.
+- 3D array and assembly work (P3) is briefed after the review and is not expected at midterm.
 - Bring the editable file for a brief live parameter change and explanation. The review assesses the assembled body of work without re-grading earlier milestones.
 
 

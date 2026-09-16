@@ -365,7 +365,7 @@ class Course:
         return table(["Project", "What you do", "Ends in", "Weight"], rows)
 
     def sequence_table(self, web=True):
-        """The approved ten blocks, with practical files nested underneath."""
+        """The approved teaching blocks, with practical files nested underneath."""
         return session_pages.sequence(self, web)
 
     def optional_summary(self):
@@ -412,7 +412,7 @@ class Course:
         out += h["tagline"].strip() + "\n\n"
         out += self.latest_class()
         out += '## Teaching sequence\n\n'
-        out += 'Follow these ten teaching blocks in order. Target weeks are a guide; a topic may take longer. Download reference files individually. Arrays uses two files in one session and one tutorial video.\n\n'
+        out += f'Follow these {len(self.sequence)} teaching blocks in order. Target weeks are a guide; a topic may take longer. Download reference files individually. Arrays uses two files in one session and one tutorial video.\n\n'
         out += self.sequence_table() + '\n'
         out += self.link('Open the session guide', '/sessions/') + '\n\n'
         out += self.optional_summary()
@@ -622,7 +622,7 @@ class Course:
                   "Edit [syllabus/course.yml](syllabus/course.yml) for the teaching sequence, short assignments, project connections, calendar and grading. "
                   "Standing policy wording is maintained only in [syllabus/policies.md](syllabus/policies.md). "
                   "The readable syllabi and current course pages are generated from those sources.\n\n"
-                  "The `teaching_sequence` block is authoritative: its ten blocks determine the required order, target weeks, lesson membership and session placement. `optional_classes` holds possible intermediate classes outside that route. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise.\n\n"
+                  "The `teaching_sequence` block is authoritative: its blocks determine the required order, target weeks, lesson membership and session placement. `optional_classes` holds possible intermediate classes outside that route. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise.\n\n"
                   "- [Student syllabus](syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md)\n"
                   "- [Full syllabus and instructor notes](syllabus/ARC3133_Syllabus_Fall2026.md)\n"
                   "- [Decisions for discussion](reference/Curriculum_Decisions.md)\n"

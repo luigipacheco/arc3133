@@ -31,7 +31,7 @@ Complete the short assignments below in order. Combine and revise them as one pr
 
 ## P1b — Panel from scratch
 
-**Introduced:** Week 3 — Sep 8 · **Draft due:** Week 5 — Sep 22 · **Weight:** 7%
+**Introduced:** Week 4 — Sep 15 · **Draft due:** Week 6 — Sep 29 · **Weight:** 7%
 
 - Find one panel in a built precedent and keep it simple. Choose it by one test: could you set it beside three copies of itself, edge to edge, and have the grid close? Name the building, the architect and your source on the sheet.
 - Decide the parameters before you model anything, and say in one line what each does. At least one must change the panel's shape — an aperture, a fold depth, a corner offset — not its bounding box.
@@ -44,7 +44,7 @@ Complete the short assignments below in order. Combine and revise them as one pr
 
 ## P1c — First print
 
-**Introduced:** Week 3 — Sep 8 · **Draft due:** Week 8 — Oct 13 · **Weight:** 7%
+**Introduced:** Week 4 — Sep 15 · **Draft due:** Week 10 — Oct 27 · **Weight:** 7%
 
 - Develop a printable variant of the geometry project, within 60 mm on each axis and the 200 g allocation, with no supports.
 - Present the physical print at midterm with one orientation/process sheet and a photograph.
@@ -52,7 +52,7 @@ Complete the short assignments below in order. Combine and revise them as one pr
 
 **Preparation / revision checkpoints** (not extra graded assignments):
 
-- Week 5 — Sep 22: Review print-ready geometry, physical units, orientation and the sliced preview before queueing.
+- Week 6 — Sep 29: Review print-ready geometry, physical units, orientation and the sliced preview before queueing.
 
 ## Related lessons
 

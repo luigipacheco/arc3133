@@ -4,7 +4,7 @@
 
 Download example files individually. These are lesson stages, not fixed weeks; continue a file for another class when needed.
 
-One teaching session and one tutorial video cover both example files. Use the second target week for practice if needed. The video has not yet been posted.
+One teaching session and one tutorial video cover both example files. The second week is for practice. The video has not yet been posted.
 
 Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later sessions.
 
@@ -14,17 +14,17 @@ Use these example files only as a reference if you are struggling with a step. B
 
 | Session | Target weeks | Open file | Scenes in this file | Lesson |
 | --- | --- | --- | --- | --- |
-| S01 | 2 | [Intro to Geometry Nodes — transformations and CSG](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | 01 - CSG example | U02 Transformations and CSG |
-| S02 | 3 | [Geometry Fundamentals](02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Geometry from scratch |
-| S03 | 4–5 | [Arrays and Lists — Part 1: linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid | U04 Arrays and lists |
-| S04 | 4–5 | [Arrays and Lists — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays and lists |
-| S05 | 6 | [Attractors](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractors |
+| S01 | 2–3 | [Intro to Geometry Nodes — transformations and CSG](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | 01 - CSG example | U02 Transformations and CSG |
+| S02 | 4–5 | [Geometry Fundamentals](02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Geometry from scratch |
+| S03 | 6–7 | [Arrays and Lists — Part 1: linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid | U04 Arrays and lists |
+| S04 | 6–7 | [Arrays and Lists — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays and lists |
+| S05 | 8–9 | [Attractors](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractors |
 | S06 | Optional | [Optional — Tessellation and Lattices](05-tessellation-lattices/Tessellation-and-Lattices.blend) | Tessellation, Lattice, Attractor lattice | U06 Tessellation, panelization, lattices and simulation |
-| S07 | 9 | [Point Clouds and Volumes](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Point clouds and the transition to volumes |
-| S08 | 10–11 | [Advanced Volumes I — signed distance and Boolean](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U08 Volumetric fields and signed distance |
-| S09 | 10–11 | [Advanced Volumes II — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U08 Volumetric fields and signed distance |
-| S10 | 12–13 | [Discretizing Geometry I — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Contour sections and physical parts |
-| S11 | 12–13 | [Discretizing Geometry II — physical parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Contour sections and physical parts |
+| S07 | 10–11 | [Point Clouds and Volumes](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Point clouds and the transition to volumes |
+| S08 | 12–13 | [Advanced Volumes I — signed distance and Boolean](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U08 Volumetric fields and signed distance |
+| S09 | 12–13 | [Advanced Volumes II — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U08 Volumetric fields and signed distance |
+| S10 | 14–15 | [Discretizing Geometry I — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Contour sections and physical parts |
+| S11 | 14–15 | [Discretizing Geometry II — physical parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Contour sections and physical parts |
 | S12 | 14–15 | [Final Project — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U09 Contour sections and physical parts |
 
 **S01 — Intro to Geometry Nodes — transformations and CSG.** The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the native nodes; these controls are not in the modifier.

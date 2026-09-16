@@ -2,7 +2,7 @@
 
 `syllabus/course.yml` is the source for session paths, teaching content and release settings. Generated course pages, the session index and `reference/blender/session-manifest.json` follow that source.
 
-Edit `teaching_sequence` for the approved ten blocks, their target weeks and session placement. The dated `weeks` entries add dates and class notes, and `blender.sessions` adds the file, scene order and exercise. A teaching block with `combine_sessions: true` groups its example files on one session page; arrays uses this with one planned video. Do not duplicate topic titles or session membership in those lists.
+Edit `teaching_sequence` for the approved teaching blocks, their target weeks and session placement. The dated `weeks` entries add dates and class notes, and `blender.sessions` adds the file, scene order and exercise. A teaching block with `combine_sessions: true` groups its example files on one session page; arrays uses this with one planned video. Do not duplicate topic titles or session membership in those lists.
 
 | Tool | Use |
 |---|---|

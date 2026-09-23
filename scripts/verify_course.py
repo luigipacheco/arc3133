@@ -141,6 +141,33 @@ def verify_screenshots(course, site, documents):
         assert {i for i in page.ids if i.startswith("capture-")} == expected, f"Lesson screenshots missing: {uid}"
 
 
+def matches_archive_hash(path, expected):
+    """Keep the archived content check stable across Git's LF/CRLF checkouts."""
+    payload = path.read_bytes()
+    if sha256(payload).hexdigest() == expected:
+        return True
+    # Only the known archived UTF-8 source formats permit newline normalization.
+    # Binary teaching assets and all other changes still require the exact hash.
+    if path.suffix.lower() not in {".md", ".yml", ".yaml", ".py"}:
+        return False
+    try:
+        payload.decode("utf-8")
+    except UnicodeDecodeError:
+        return False
+    return sha256(payload.replace(b"\r\n", b"\n")).hexdigest() == expected
+
+
+def verify_assignment_pdfs(course, site, documents, baseurl):
+    for project in course.projects.values():
+        if not project.get("brief_pdf"):
+            continue
+        relative = project["brief_pdf"]
+        assert (site / relative).read_bytes() == (ROOT / relative).read_bytes(), relative
+        if project["id"] in course.open_work:
+            page = (site / ("modules" + course.project_url(project)).lstrip("/") / "index.html").resolve()
+            assert baseurl + "/" + relative in documents[page].links, f"Missing PDF download: {project['id']}"
+
+
 def main():
     course = Course()
     if course.sync(True):
@@ -148,7 +175,7 @@ def main():
     archive = ROOT / "reference/archive/2026-09-12-before-sequence"
     manifest = json.loads((archive / "manifest.json").read_text(encoding="utf-8"))
     for item in manifest:
-        assert sha256((archive / item["path"]).read_bytes()).hexdigest() == item["sha256"], item["path"]
+        assert matches_archive_hash(archive / item["path"], item["sha256"]), item["path"]
     site = ROOT / "_site"
     config = yaml.safe_load((ROOT / "_config.yml").read_text(encoding="utf-8"))
     baseurl = config.get("baseurl", "").rstrip("/")
@@ -195,6 +222,7 @@ def main():
         assert not (site / excluded).exists(), f"Historical/source directory leaked into site: {excluded}"
     verify_screenshots(course, site, documents)
     verify_sequence(course, site, documents, baseurl)
+    verify_assignment_pdfs(course, site, documents, baseurl)
     size = sum((site / name).stat().st_size for name in built_files)
     assert size < 1_000_000_000, "Site exceeds the GitHub Pages 1 GB site limit"
     if STALE:

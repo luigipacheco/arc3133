@@ -19,7 +19,7 @@
 
 **Prerequisites:** ARC 1301, ARC 1302, ARC 2303 and ARC 2304, each with a minimum grade of C
 
-> **Working draft for instructor discussion · 2026-09-16.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.
+> **Working draft for instructor discussion · 2026-09-22.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.
 
 ## Course description
 
@@ -215,7 +215,8 @@ Build a module, array it across two sheets, plot an attractor field and analyze 
 
 - Array your P3a module across exactly two 17 × 11 inch sheets, submitted together as one assignment.
 - Sheet 1 — 1D, 2D and 3D arrays: a linear array, a nested grid and an XYZ cube array. Label count, spacing and index order; show the predicted total for each.
-- Sheet 2 — hexagonal, radial and curve arrays: a staggered hexagonal grid, a radial array (radius, count, angular step) and an array along a curve, including one sine-driven curve with amplitude, frequency and phase labelled.
+- Sheet 2 — parameters and index logic: a second count/spacing setting for each 1D, 2D and 3D array, a row/column/layer diagram, and the conditional selection before and after its rule applies.
+- Current brief scope: 1D, 2D and 3D arrays. Hexagonal, radial and curve arrays and attractors are reserved for later work.
 - Keep the module unchanged; vary only its placement. Expose count and spacing or radius in the graph.
 - Build repetition from basic nodes and begin with a count you can inspect; there is no minimum element count.
 - Include one conditional selection on either sheet. State its rule (for example, indices 3–5 lift by 0.5) and show the array before and after it applies.
@@ -548,7 +549,7 @@ Arrange copies of your panel using lists, if statements and for loops.
 6. Week 7 · Radial: place copies from radius, count and angular step.
 7. Week 7 · Curve: resample a curve and place copies along it, aligned to its tangent. Drive a curve with sine; explain amplitude, frequency and phase.
 
-**Practice:** Practice with your P3a module. Sheet 1 of P3b: 1D, 2D and 3D arrays (compare 3, 4 and 5 copies per axis in the cube). Sheet 2: hexagonal, radial and curve arrays.
+**Practice:** Practice with your P3a module. Sheet 1 of P3b: 1D, 2D and 3D arrays. Sheet 2: count/spacing comparisons and index logic, including the conditional selection. Hexagonal, radial and curve arrays remain later practice.
 
 **Use it next:** Keep the module unchanged in P3b; vary its placement. The attractor field in P3c is sampled on the same kind of 2D grid.
 

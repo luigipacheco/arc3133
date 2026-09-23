@@ -31,3 +31,7 @@ Earlier build experiments and one-time preparation scripts are archived under `r
 Blender example files are downloaded individually from Resources. Do not recreate a bundle of all sessions; the earlier ZIP and packaging script are preserved in the archive.
 
 Possible intermediate classes belong under `optional_classes`, outside the required `teaching_sequence`. Their example files remain available individually and are identified as optional.
+
+## Assignment PDFs
+
+Detailed brief fields live under each milestone in `syllabus/course.yml`. `assignment_briefs.py` renders the shared brief text and project PDFs. Run `python scripts/sync_course.py` after editing; it refreshes both pages and PDF downloads. `--check` detects stale or changed PDFs using the committed source/PDF hashes. Review every rendered PDF before release. P3's current detailed scope is the module and 1D/2D/3D arrays; later assignments remain outside its handout.

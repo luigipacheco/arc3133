@@ -213,7 +213,8 @@ Build a module, array it across two sheets, plot an attractor field and analyze 
 
 - Array your P3a module across exactly two 17 × 11 inch sheets, submitted together as one assignment.
 - Sheet 1 — 1D, 2D and 3D arrays: a linear array, a nested grid and an XYZ cube array. Label count, spacing and index order; show the predicted total for each.
-- Sheet 2 — hexagonal, radial and curve arrays: a staggered hexagonal grid, a radial array (radius, count, angular step) and an array along a curve, including one sine-driven curve with amplitude, frequency and phase labelled.
+- Sheet 2 — parameters and index logic: a second count/spacing setting for each 1D, 2D and 3D array, a row/column/layer diagram, and the conditional selection before and after its rule applies.
+- Current brief scope: 1D, 2D and 3D arrays. Hexagonal, radial and curve arrays and attractors are reserved for later work.
 - Keep the module unchanged; vary only its placement. Expose count and spacing or radius in the graph.
 - Build repetition from basic nodes and begin with a count you can inspect; there is no minimum element count.
 - Include one conditional selection on either sheet. State its rule (for example, indices 3–5 lift by 0.5) and show the array before and after it applies.

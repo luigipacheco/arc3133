@@ -30,7 +30,7 @@ Every class has one deck, built with the course slide kit from `slides/src` and 
 | 4 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class04.pptx) / [PDF](../slides/ARC3133_Class04.pdf) | Current | Descriptive geometry: point to solid, pyramid, Boolean; P2a due; P3a issued. |
 | 5 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class05.pptx) / [PDF](../slides/ARC3133_Class05.pdf) | Current | Your own module: parameters, points, faces, tiling; one material and lighting for the P3a sheet. |
 | 6 | Arrays | [PPTX](../slides/ARC3133_Class06.pptx) / [PDF](../slides/ARC3133_Class06.pdf) | Current | Arrays 1D, 2D, 3D (P3b sheet 1); P3a due; P3b issued; P2b print checkpoint. |
-| 7 | Arrays | [PPTX](../slides/ARC3133_Class07.pptx) / [PDF](../slides/ARC3133_Class07.pdf) | Current | Arrays hexagonal, radial, curve (P3b sheet 2); studio-review week, nothing due. |
+| 7 | Arrays | [PPTX](../slides/ARC3133_Class07.pptx) / [PDF](../slides/ARC3133_Class07.pdf) | Current | P3b now focuses on 1D, 2D and 3D arrays, with comparisons and conditional selection on sheet 2. Hexagonal, radial and curve arrays remain later practice; revise the deck before reuse. Studio-review week, nothing due. |
 | 8 | Attractor | [PPTX](../slides/ARC3133_Class08.pptx) / [PDF](../slides/ARC3133_Class08.pdf) | Current | Attractors on a 2D field and its line drawing (plotting optional); P3b due; P3c issued. |
 | 9 | Attractor | [PPTX](../slides/ARC3133_Class09.pptx) / [PDF](../slides/ARC3133_Class09.pdf) | Current | Layered site analysis with Mixtli; P3d issued; P3c review. |
 | 10 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class10.pptx) / [PDF](../slides/ARC3133_Class10.pdf) | Current | Mid-semester deadline (through Arrays + P3c), then SDF introduction; P4a issued. |

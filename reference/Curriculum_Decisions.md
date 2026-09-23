@@ -2,7 +2,7 @@
 
 # Curriculum decisions
 
-> **Working draft for instructor discussion · 2026-09-16.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.
+> **Working draft for instructor discussion · 2026-09-22.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.
 
 ### Confirmed direction
 

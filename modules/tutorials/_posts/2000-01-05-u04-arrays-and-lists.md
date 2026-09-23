@@ -26,7 +26,7 @@ Arrange copies of your panel using lists, if statements and for loops.
 6. Week 7 · Radial: place copies from radius, count and angular step.
 7. Week 7 · Curve: resample a curve and place copies along it, aligned to its tangent. Drive a curve with sine; explain amplitude, frequency and phase.
 
-**Practice:** Practice with your P3a module. Sheet 1 of P3b: 1D, 2D and 3D arrays (compare 3, 4 and 5 copies per axis in the cube). Sheet 2: hexagonal, radial and curve arrays.
+**Practice:** Practice with your P3a module. Sheet 1 of P3b: 1D, 2D and 3D arrays. Sheet 2: count/spacing comparisons and index logic, including the conditional selection. Hexagonal, radial and curve arrays remain later practice.
 
 **Use it next:** Keep the module unchanged in P3b; vary its placement. The attractor field in P3c is sampled on the same kind of 2D grid.
 

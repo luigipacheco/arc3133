@@ -15,6 +15,7 @@ import sys
 
 import yaml
 import session_pages
+import assignment_briefs
 from output_files import write_text
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,6 +71,7 @@ class Course:
         self.load_release()
         self.outputs = {}
         self.validate()
+        assignment_briefs.validate(self)
 
     def apply_sequence(self):
         """One approved sequence owns weeks and session/lesson membership."""
@@ -290,12 +292,12 @@ class Course:
             rows.append([title, " → ".join(a["title"] for a in p["milestones"]), str(sum(a["weight"] for a in p["milestones"])) + "%"])
         return table(["Project", "Assignments", "Weight"], rows)
 
-    def assignment(self, a, heading="###"):
+    def assignment(self, a, heading="###", detailed=False):
         body = f"<a id=\"{a['id'].lower()}\"></a>\n\n{heading} {a['id']} — {a['title']}\n\n"
         body += f"**Introduced:** {self.when(a['release'])} · **Due:** {self.when(a['due'])} · **Weight:** {a['weight']}%\n\n"
         if a.get('deliverable'):
             body += '**Present:** ' + a['deliverable'] + '\n\n'
-        body += bullets(a["requirements"])
+        body += assignment_briefs.body(a, heading + "#") if detailed and a.get("brief") else bullets(a["requirements"])
         if a.get("checkpoints"):
             body += "\n**Ungraded checkpoints:**\n\n"
             body += bullets([f"{self.when(c['week'])}: {c['text']}" for c in a["checkpoints"]])
@@ -620,7 +622,12 @@ class Course:
         for i,p in enumerate(self.projects.values(), 2):
             out = front(p["id"] + " · " + p["title"], categories=["assignments"]) + self.notice() + p["description"] + "\n\n"
             out += "Complete these assignments in order, then revise them for the booklet. The combined project adds no extra grade.\n\n"
-            out += "".join(self.assignment(a, "##") for a in p["milestones"])
+            if p.get("brief_pdf"):
+                out += f"**[Download the {p['id']} assignment brief (PDF)]({BASE}/{p['brief_pdf']})**\n\n"
+                if p["id"] == "P3":
+                    out += "The PDF covers panel construction and 1D, 2D and 3D arrays. Attractor briefs below are later work.\n\n"
+                out += "Jump to: " + " / ".join(f"[{a['id']}](#{a['id'].lower()})" for a in p["milestones"]) + "\n\n"
+            out += "".join(self.assignment(a, "##", detailed=True) for a in p["milestones"])
             out += "## Related lessons\n\n" + bullets([self.link(u + " — " + self.units[u]["title"], self.unit_url(self.units[u])) for u in p["units"]])
             out += "\n" + self.link("Shared submission standards and grading", "/assignments/overview/") + "\n"
             if p["id"] in self.open_work:
@@ -736,6 +743,14 @@ class Course:
                   "Earlier Python and Sverchok exercises are in `reference/archive/legacy-code/`. Earlier slide decks remain available where linked. "
                   "Sources, archives, maintenance scripts and `slides/src` are excluded from the published course.\n\n"
                   "## License\n\nCourse content CC BY-SA 4.0 unless noted. Template © P2PU.\n")
+        readme += "\n## Assignment brief structure and PDFs\n\n"
+        readme += "Each detailed brief follows Description, Rules & Constraints, Parameters, Required Studies, Workflow, Deliverables, Evaluation, and Before You Submit. State numerical limits, visible evidence, exact sheet contents, native files and naming so students can check their submission.\n\n"
+        readme += "Edit the milestone requirements and brief fields in syllabus/course.yml. The same text generates the website and the project PDFs; never edit either output separately. Existing milestone IDs own the dates and grading. P1 covers GSM; P2 covers P2a/P2b; the current P3 PDF covers P3a/P3b only, with 1D/2D/3D arrays. Later attractor briefs remain separate.\n\n"
+        readme += "Run python scripts/sync_course.py to regenerate pages, README and PDFs together. The check mode also verifies source and PDF hashes in files/assignments/manifest.json. Commit the source, renderer, generated pages, PDFs, manifest and any retired-page deletions together after instructor review.\n\n"
+        readme += "| Project | Download |\n| --- | --- |\n"
+        for project in self.projects.values():
+            if project.get("brief_pdf"):
+                readme += f"| {project['id']} | [{project['brief_title']}]({project['brief_pdf']}) |\n"
         self.emit("README.md", readme)
         self.emit("reference/Curriculum_Decisions.md", MARKER + "\n\n# Curriculum decisions\n\n" + self.banner() + self.decisions() + "\n## Why the sequence changed\n\n" + self.data["instructor_notes"])
         rows = []
@@ -832,6 +847,7 @@ class Course:
 
     def sync(self, check):
         self.build()
+        pdf_changes = assignment_briefs.sync_pdfs(self, ROOT, check)
         stale = []
         for category in ("classes", "assignments", "tutorials", "resources", "sessions"):  # sessions: retired section, cleaned up
             for p in (ROOT / "modules" / category / "_posts").glob("*.md"):
@@ -865,8 +881,10 @@ class Course:
                     assert hashlib.sha256(p.read_bytes()).hexdigest() == manifest[rel], f"Unarchived changes in {rel}"
                 p.unlink()
         print(f"{'Checked' if check else 'Generated'} {len(self.outputs)} views; {len(changed)} {'out of sync' if check else 'updated'}; {len(stale)} obsolete pages; grading 100%; calendar and dependencies valid.")
-        if check and (changed or stale):
-            print("\n".join(changed + [p.relative_to(ROOT).as_posix() for p in stale]))
+        if pdf_changes:
+            print(f"Assignment PDFs: {len(pdf_changes)} {'out of sync' if check else 'updated'} outputs.")
+        if check and (changed or stale or pdf_changes):
+            print("\n".join(changed + [p.relative_to(ROOT).as_posix() for p in stale] + pdf_changes))
             return 1
         return 0
 

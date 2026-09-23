@@ -1,0 +1,17 @@
+{
+  "P1": {
+    "file": "files/assignments/P1-Graphic-Standards-Manual.pdf",
+    "source_sha256": "562b4558995b55192c6348e46978afdd44bbd9276f82596ec28087006255622c",
+    "pdf_sha256": "6d8b195fe9c4b220e0598f7b8efa577fa7566080d8d42759d2eee226e9a8d9dc"
+  },
+  "P2": {
+    "file": "files/assignments/P2-CSG-Sheet-and-Print.pdf",
+    "source_sha256": "dfeb60e16e7dfae7565b1ce35fe1e3fd7074e46c2ab43a5f6f284f2236720bd2",
+    "pdf_sha256": "e41aa96f5e9373835d848b261c8af390c406ef677e03abe203815ad2dac3dc2e"
+  },
+  "P3": {
+    "file": "files/assignments/P3-Paneling-and-Arrays.pdf",
+    "source_sha256": "ddb7b0bbeba887c0f3ff3ad7e097a6ba86d42a9fde2cad2b0c83c7664bcd6919",
+    "pdf_sha256": "7f1a07d11a9681a3aaebb24e85b1de67b15249dd7bd5cc36a3944725786e3929"
+  }
+}

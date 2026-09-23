@@ -29,14 +29,6 @@ Download only the example for the class you are working on. Arrays uses two exam
 | Discretizing Geometry — section parts | [Download .blend]({{ site.baseurl }}/files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) |
 | Final — fabrication and assembly | [Download .blend]({{ site.baseurl }}/files/blender/09-final-project/Final-Project-Fabrication.blend)<br>[Fabrication notes and dimensions]({{ site.baseurl }}/files/blender/09-final-project/FABRICATION-NOTES.md)<br>[Small print STL]({{ site.baseurl }}/files/blender/09-final-project/small-print-mm.stl)<br>[Fit coupon STL]({{ site.baseurl }}/files/blender/09-final-project/fit-coupon-mm.stl)<br>[Modular parts STL]({{ site.baseurl }}/files/blender/09-final-project/modular-parts-mm.stl)<br>[Section parts and spacers SVG]({{ site.baseurl }}/files/blender/09-final-project/section-parts-and-spacers-mm.svg) |
 
-## Possible intermediate class
-
-Optional reference files; these are outside the required sequence.
-
-| Optional example | Individual downloads |
-| --- | --- |
-| Optional — Tessellation and Lattices | [Download .blend]({{ site.baseurl }}/files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend) |
-
 For Point Clouds and Volumes, also download the teaching point cloud and keep the PLY beside its Blender file. The dataset note records its source and units.
 
 Prepared in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes.

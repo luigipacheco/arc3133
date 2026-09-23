@@ -32,14 +32,8 @@ Open the posted lessons below; later lessons will be added as the course progres
 | [U01 — Graphic Standards Manual]({{ site.baseurl }}/modules/tutorials/u01-graphic-standards-manual/) | Week 1 | Posted |
 | [U02 — Constructive Solid Geometry]({{ site.baseurl }}/modules/tutorials/u02-transformations-and-csg/) | Weeks 2, 3 | Posted |
 | [U03 — Descriptive Geometry]({{ site.baseurl }}/modules/tutorials/u03-geometry-from-scratch/) | Weeks 4, 5 | Posted |
-| [U04 — Arrays]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 6, 8 | Posted |
+| [U04 — Arrays]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 6, 7 | Posted |
 | U05 — Attractor | Week 9 | Posted after the class |
-| U07 — Volumetric Data and Fields | Weeks 11, 12 | Posted after the class |
-| U09 — Discretizing Geometry | Week 13 | Posted after the class |
-| U10 — Final | Weeks 14, 15 | Posted after the class |
-
-## Possible intermediate class
-
-**Tessellation, panelization, lattices and simulation.** Offered only if time allows after arrays or attractors; no separate submission. The file covers tessellation and lattices. Panelization and simulation are possible additions.
-
-Optional lesson notes — Tessellation, panelization, lattices and simulation — *not yet released*
+| U07 — Volumetric Data and Fields | Weeks 10, 11 | Posted after the class |
+| U09 — Discretizing Geometry | Week 12 | Posted after the class |
+| U10 — Final | Week 12 | Posted after the class |

@@ -58,17 +58,6 @@
     ]
   },
   {
-    "id": "S06",
-    "unit": "U06",
-    "title": "Optional — Tessellation and Lattices",
-    "file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
-    "scenes": [
-      "Tessellation",
-      "Lattice",
-      "Attractor lattice"
-    ]
-  },
-  {
     "id": "S07",
     "unit": "U07",
     "title": "Volumetric Data and Fields — point clouds",
@@ -121,7 +110,7 @@
   },
   {
     "id": "S12",
-    "unit": "U10",
+    "unit": "U09",
     "title": "Final — fabrication and assembly",
     "file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
     "scenes": [

@@ -140,34 +140,6 @@
     "nodes_alt": "Geometry Proximity measures distance to the curve and Map Range controls Z scale."
   },
   {
-    "session": "S06",
-    "unit": "U06",
-    "title": "Optional — Tessellation and Lattices",
-    "source_file": "files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend",
-    "source_sha256": "e5ad35a606c4366dd147f5606ae0c632c297d31a8ecd87f5b8df346fa3959ab5",
-    "scene": "03 - Attractor lattice",
-    "node_group": "03 - Attractor lattice",
-    "object": "03 - Attractor lattice",
-    "capture": "Blender native editor screenshots",
-    "blender_version": "5.2.1 LTS",
-    "geonodes": {
-      "file": "images/blender/s06-attractor-lattice-geonodes.png",
-      "width": 3394,
-      "height": 1041,
-      "sha256": "33b14c8d8dc852e40a1d819ad05de48334b684dc5d497c14a821dd1dd3b246d7"
-    },
-    "viewport": {
-      "file": "images/blender/s06-attractor-lattice-viewport.png",
-      "width": 1904,
-      "height": 1041,
-      "sha256": "65bcafe9859f4a184938d120afa4a96eb9afb139aec6be17070b8a01d802e092"
-    },
-    "example": "Attractor lattice",
-    "caption": "An attractor changes the height of the upper lattice. The struts overlap at their joints.",
-    "viewport_alt": "a two-layer lattice with varying upper heights and an external attractor",
-    "nodes_alt": "distance remapping moves the upper layer and controls the vertical members."
-  },
-  {
     "session": "S07",
     "unit": "U07",
     "title": "Volumetric Data and Fields — point clouds",

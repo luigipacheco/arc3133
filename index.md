@@ -28,23 +28,9 @@ We work mainly in Blender Geometry Nodes, and the video tutorials also cover Rhi
 | [Tutorials]({{ site.baseurl }}/modules/tutorials/how-tutorials-work/) | Lesson notes and video tutorials for each topic. Use them to review a class, catch up, or work through a step at your own pace. |
 | [Resources]({{ site.baseurl }}/resources/overview/) | The syllabus and course policies, software and materials, readings, visual precedents, and every example file and screenshot in one place. |
 
-## Where we are
-
-**Latest posted class:** [Class 06 · Arrays 1 — loops in 1D, 2D and 3D — Arrays 1 — loops in 1D, 2D and 3D; CSG sheet]({{ site.baseurl }}/modules/classes/class-06/) (Week 6 — Sep 29)
-
-**Coming up:**
-
-| Next due | Date | Weight |
-| --- | --- | --- |
-| [2.1 — CSG process and instructions]({{ site.baseurl }}/modules/assignments/p2-csg/#p2a) | Week 6 — Sep 29, 11:59 PM Eastern Time | 10% |
-| [2.2 — CSG 3D printed object]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b) | Week 8 — Oct 13, 11:59 PM Eastern Time | 5% |
-| [3.1 — Descriptive geometry module — material and three-point lighting]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a) | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
-
-[Full calendar]({{ site.baseurl }}/resources/course-policies/#target-teaching-calendar) — all fifteen weeks with every deadline.
-
 ## The semester
 
-The proposed calendar provides practice through midterm, followed by the attractor façade and integrated project. Everything through Arrays is due by Week 10 — Oct 27, the mid-semester deadline.
+The proposed calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and introduces façade attractors in Week 9. Project 4 starts in Week 10; all new content ends by Week 12, leaving Weeks 13–15 for production and feedback. Everything through Arrays is due by Week 10 — Oct 27, the mid-semester deadline.
 
 | Weeks | Topic | Classes | Video tutorials |
 |---|---|---|---|
@@ -52,14 +38,13 @@ The proposed calendar provides practice through midterm, followed by the attract
 | 2–3 | Constructive Solid Geometry | [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/) | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/) | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
 | 6 | Arrays 1 — loops in 1D, 2D and 3D | [Class 06]({{ site.baseurl }}/modules/classes/class-06/) | — |
-| 7 | Supported practice during studio reviews | Class 07 — *not yet released* | — |
-| 8 | Arrays 2 — if/Switch and math functions | Class 08 — *not yet released* | — |
+| 7 | Arrays 2 — if/Switch and math functions | Class 07 — *not yet released* | — |
+| 8 | Supported practice — Arrays 1 and 2 | Class 08 — *not yet released* | — |
 | 9 | Façade attractors — Project 3 | Class 09 — *not yet released* | — |
-| 10 | Review of everything before Project 4 | Class 10 — *not yet released* | — |
-| 11 | Attractor-based site analysis — Project 4 | Class 11 — *not yet released* | — |
-| 12 | Generative volume exploration — Project 4 | Class 12 — *not yet released* | — |
-| 13 | Discretizing Geometry | Class 13 — *not yet released* | — |
-| 14–15 | Laser-cut model and final documentation | Class 14 — *not yet released* · Class 15 — *not yet released* | — |
+| 10 | Attractor-based site analysis — Project 4 | Class 10 — *not yet released* | — |
+| 11 | Generative volume exploration — Project 4 | Class 11 — *not yet released* | — |
+| 12 | Contouring, laser-cut preparation and assembly | Class 12 — *not yet released* | — |
+| 13–15 | Production, feedback and documentation | Class 13 — *not yet released* · Class 14 — *not yet released* · Class 15 — *not yet released* | — |
 
 ## Four projects
 

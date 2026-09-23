@@ -480,10 +480,8 @@ class Course:
         out += "## Welcome\n\n" + h["welcome"].strip() + "\n\n"
         out += "## How this site works\n\n"
         out += table(["Tab", "What you will find"], [[self.link(name, url), text] for name, url, text in h["tabs"]]) + "\n"
-        out += "## Where we are\n\n" + self.latest_class()
-        out += self.whats_next(limit=3, heading=False)
         out += "## The semester\n\n"
-        out += ("The proposed calendar provides practice through midterm, followed by the attractor façade and integrated project. Everything through Arrays is due by "
+        out += ("The proposed calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and introduces façade attractors in Week 9. Project 4 starts in Week 10; all new content ends by Week 12, leaving Weeks 13–15 for production and feedback. Everything through Arrays is due by "
                 + self.when(self.meta['midterm_week']) + ", the mid-semester deadline.\n\n")
         out += self.sequence_table() + "\n"
         out += "## Four projects\n\n" + self.project_spine() + "\n"
@@ -732,7 +730,7 @@ class Course:
                   "Edit [syllabus/course.yml](syllabus/course.yml) for the teaching sequence, short assignments, project connections, calendar and grading. "
                   "Standing policy wording is maintained only in [syllabus/policies.md](syllabus/policies.md). "
                   "The readable syllabi and current course pages are generated from those sources.\n\n"
-                  "The `teaching_sequence` block is authoritative: its blocks determine the required order, target weeks, lesson membership and session placement. `optional_classes` holds possible intermediate classes outside that route. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise.\n\n"
+                  "The `teaching_sequence` block is authoritative: its blocks determine the required order, target weeks, lesson membership and session placement. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise. All new required content ends by Week 12; Weeks 13–15 are for production and feedback.\n\n"
                   "- [Student syllabus](syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md)\n"
                   "- [Full syllabus and instructor notes](syllabus/ARC3133_Syllabus_Fall2026.md)\n"
                   "- [Decisions for discussion](reference/Curriculum_Decisions.md)\n"

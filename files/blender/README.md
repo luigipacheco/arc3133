@@ -6,19 +6,19 @@ Download example files individually. These are lesson stages, not fixed weeks; c
 
 First of two Arrays classes, paired with the loop tutorial. Use loops and nested loops to build a row, grid and layered array; explain counts, spacing and indices.
 
-Optional help with work already introduced. No new topic or graded submission; this is not an additional Arrays class.
-
 Second of two Arrays classes. Explain if/Switch selection through façade patterns, then use mathematical functions of X and Y to shape a cube volume. Hexagonal and radial arrays remain optional.
 
-One façade-attractor class. Combine one curve and one or two point attractors to drive a panel parameter. The next application of attractors is site analysis in Project 4.
+Check 1D/2D/3D repetition, indices, counts and spacing, conditional façade patterns and the mathematical cube volume. Give feedback on the three array sheets. Hand in the CSG print; no new topic.
 
-Submit the manual and arrays. Review graphic standards, CSG/printing, panel construction, loops/arrays, if/Switch, mathematical functions and façade attractors together. Resolve gaps before the generative project. No new lecture topic, separate review assignment or additional grade.
+One façade-attractor class. Combine one curve and one or two point attractors to drive a panel parameter. The next application of attractors is site analysis in Project 4.
 
 Apply attractor measurements to the prepared point cloud using supplied groups. Produce two analytical layers and one design observation for the final project; this is distinct from the façade class.
 
 Use supplied volume groups to explore three settings of one strategy and select a form for contouring.
 
-Week 14 checks assembly tests and production plans. Week 15 offers fabrication and documentation support during studio reviews, with no graded submission.
+Complete all new required content with a prepared example using the supplied contouring group. Cover spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. Introduce both 4.3 and 4.4; continue their production during Weeks 13–15.
+
+No new required content. Week 13 checks contours and assembly tests; Week 14 checks fabrication progress and a booklet spread. Week 15 supports production, revisions and final documentation during studio reviews, with no graded submission that day.
 
 Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes.
 
@@ -31,23 +31,20 @@ Build your own file. Use these examples to check a step when you are stuck, then
 | S01 | 2–3 | [Constructive Solid Geometry](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | 01 - CSG example | U02 Constructive Solid Geometry |
 | S02 | 4–5 | [Descriptive Geometry](02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Descriptive Geometry |
 | S03 | 6 | [Arrays — Part 1: linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid | U04 Arrays |
-| S04 | 8 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays |
+| S04 | 7 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays |
 | S05 | 9 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractor |
-| S06 | Optional | [Optional — Tessellation and Lattices](05-tessellation-lattices/Tessellation-and-Lattices.blend) | Tessellation, Lattice, Attractor lattice | U06 Tessellation, panelization, lattices and simulation |
-| S07 | 11 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Volumetric Data and Fields |
-| S08 | 12 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Volumetric Data and Fields |
-| S09 | 12 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Volumetric Data and Fields |
-| S10 | 13 | [Discretizing Geometry — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Discretizing Geometry |
-| S11 | 13 | [Discretizing Geometry — section parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Discretizing Geometry |
-| S12 | 14–15 | [Final — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U10 Final |
+| S07 | 10 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Volumetric Data and Fields |
+| S08 | 11 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Volumetric Data and Fields |
+| S09 | 11 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Volumetric Data and Fields |
+| S10 | 12 | [Discretizing Geometry — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Discretizing Geometry, U10 Final |
+| S11 | 12 | [Discretizing Geometry — section parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Discretizing Geometry, U10 Final |
+| S12 | 12 | [Final — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U09 Discretizing Geometry, U10 Final |
 
 **S01 — Constructive Solid Geometry.** The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the native nodes; these controls are not in the modifier.
 
 **S02 — Descriptive Geometry.** Follow the six main teaching scenes. Original reference scenes remain in the file. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
 
 **S04 — Arrays — Part 2: arrangements and rules.** Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
-
-**S06 — Optional — Tessellation and Lattices.** The existing file covers tessellation and lattices. Panelization and simulation are possible additions to this intermediate class and are not yet demonstrated here.
 
 **S07 — Volumetric Data and Fields — point clouds.** Keep the data folder together — the file reads teaching-courtyard.ply from beside it. It is a synthetic teaching cloud, not a survey. Supporting files: [Teaching point cloud](06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json).
 

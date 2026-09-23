@@ -8,7 +8,7 @@
 
 Edit [syllabus/course.yml](syllabus/course.yml) for the teaching sequence, short assignments, project connections, calendar and grading. Standing policy wording is maintained only in [syllabus/policies.md](syllabus/policies.md). The readable syllabi and current course pages are generated from those sources.
 
-The `teaching_sequence` block is authoritative: its blocks determine the required order, target weeks, lesson membership and session placement. `optional_classes` holds possible intermediate classes outside that route. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise.
+The `teaching_sequence` block is authoritative: its blocks determine the required order, target weeks, lesson membership and session placement. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise. All new required content ends by Week 12; Weeks 13–15 are for production and feedback.
 
 - [Student syllabus](syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md)
 - [Full syllabus and instructor notes](syllabus/ARC3133_Syllabus_Fall2026.md)
@@ -23,14 +23,13 @@ The `teaching_sequence` block is authoritative: its blocks determine the require
 | 2–3 | Constructive Solid Geometry | Class 02 · Class 03 | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | Class 04 · Class 05 | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
 | 6 | Arrays 1 — loops in 1D, 2D and 3D | Class 06 | — |
-| 7 | Supported practice during studio reviews | Class 07 | — |
-| 8 | Arrays 2 — if/Switch and math functions | Class 08 | — |
+| 7 | Arrays 2 — if/Switch and math functions | Class 07 | — |
+| 8 | Supported practice — Arrays 1 and 2 | Class 08 | — |
 | 9 | Façade attractors — Project 3 | Class 09 | — |
-| 10 | Review of everything before Project 4 | Class 10 | — |
-| 11 | Attractor-based site analysis — Project 4 | Class 11 | — |
-| 12 | Generative volume exploration — Project 4 | Class 12 | — |
-| 13 | Discretizing Geometry | Class 13 | — |
-| 14–15 | Laser-cut model and final documentation | Class 14 · Class 15 | — |
+| 10 | Attractor-based site analysis — Project 4 | Class 10 | — |
+| 11 | Generative volume exploration — Project 4 | Class 11 | — |
+| 12 | Contouring, laser-cut preparation and assembly | Class 12 | — |
+| 13–15 | Production, feedback and documentation | Class 13 · Class 14 · Class 15 | — |
 
 Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain design decisions through clear visual work.
 
@@ -41,10 +40,11 @@ select and fabricate a spatial result. These are the teaching emphases; the meth
 
 **Through midterm:** Graphic Standards Manual → CSG sheet and print → descriptive geometry module → 1D, 2D and 3D arrays. Create a module material and three-point lighting setup, then use supplied or student-authored materials for the array compositions.
 
-**Transition to Project 4:** introduce the parametric façade before the full review, combining one curve
+**Transition to Project 4:** introduce the parametric façade in Week 9, combining one curve
 and one or two point attractors. Continue refining its elevation and isometric for the November deadline.
-After the review, begin the generative project with supplied tools: site analysis (4.1), volume exploration
-(4.2), contouring (4.3), and laser-cut assembly (4.4). Printed components are optional.
+Begin the generative project in Week 10 with supplied tools: site analysis (4.1), volume exploration
+(4.2), contouring (4.3), and laser-cut assembly (4.4). Finish all new instruction by Week 12;
+Weeks 13–15 are for production, feedback and documentation. Printed components are optional.
 
 Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
 
@@ -59,9 +59,9 @@ Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight
 
 The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
 
-Teach Arrays in two classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, paired with the loop tutorial; October 13 explains if/Switch and mathematical functions. October 6 remains supported practice during studio reviews. Teach façade attractors on October 20. October 27 reviews everything taught so far, including graphic standards, CSG/printing, panel construction, arrays, conditionals, math and the first façade response; the manual and arrays are submitted that day. Project 4 follows this review.
+Teach Arrays in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, paired with the loop tutorial; October 6 explains if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice checking both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Teach façade attractors on October 20. Begin Project 4 on October 27, when the manual and arrays are also submitted; no separate full-course review class is scheduled.
 
-Introduce the façade assignment October 20, due November 17. The second application of attractors is site analysis in Project 4 on November 3, due November 24. Introduce generative volume exploration November 10 and contouring November 17. Use November 24 for assembly tests and laser-cut production planning; December 1 remains supported production during studio reviews. Select the volume at the November 17 ungraded check and test assembly by November 24. The remaining Project 4 stages and booklet are due at the final review, December 10–16; the exact slot remains to be confirmed.
+Introduce the façade assignment October 20, due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: use the supplied contouring group and demonstrate cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
 
 This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions. The proposed schedule and lab capacity must be reviewed before publication.
 

@@ -32,10 +32,11 @@ select and fabricate a spatial result. These are the teaching emphases; the meth
 
 **Through midterm:** Graphic Standards Manual → CSG sheet and print → descriptive geometry module → 1D, 2D and 3D arrays. Create a module material and three-point lighting setup, then use supplied or student-authored materials for the array compositions.
 
-**Transition to Project 4:** introduce the parametric façade before the full review, combining one curve
+**Transition to Project 4:** introduce the parametric façade in Week 9, combining one curve
 and one or two point attractors. Continue refining its elevation and isometric for the November deadline.
-After the review, begin the generative project with supplied tools: site analysis (4.1), volume exploration
-(4.2), contouring (4.3), and laser-cut assembly (4.4). Printed components are optional.
+Begin the generative project in Week 10 with supplied tools: site analysis (4.1), volume exploration
+(4.2), contouring (4.3), and laser-cut assembly (4.4). Finish all new instruction by Week 12;
+Weeks 13–15 are for production, feedback and documentation. Printed components are optional.
 
 Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
 
@@ -58,9 +59,9 @@ Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight
 
 The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
 
-Teach Arrays in two classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, paired with the loop tutorial; October 13 explains if/Switch and mathematical functions. October 6 remains supported practice during studio reviews. Teach façade attractors on October 20. October 27 reviews everything taught so far, including graphic standards, CSG/printing, panel construction, arrays, conditionals, math and the first façade response; the manual and arrays are submitted that day. Project 4 follows this review.
+Teach Arrays in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, paired with the loop tutorial; October 6 explains if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice checking both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Teach façade attractors on October 20. Begin Project 4 on October 27, when the manual and arrays are also submitted; no separate full-course review class is scheduled.
 
-Introduce the façade assignment October 20, due November 17. The second application of attractors is site analysis in Project 4 on November 3, due November 24. Introduce generative volume exploration November 10 and contouring November 17. Use November 24 for assembly tests and laser-cut production planning; December 1 remains supported production during studio reviews. Select the volume at the November 17 ungraded check and test assembly by November 24. The remaining Project 4 stages and booklet are due at the final review, December 10–16; the exact slot remains to be confirmed.
+Introduce the façade assignment October 20, due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: use the supplied contouring group and demonstrate cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
 
 This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions. The proposed schedule and lab capacity must be reviewed before publication.
 
@@ -78,18 +79,13 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 2–3 | Constructive Solid Geometry | Class 02 · Class 03 | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | Class 04 · Class 05 | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
 | 6 | Arrays 1 — loops in 1D, 2D and 3D | Class 06 | — |
-| 7 | Supported practice during studio reviews | Class 07 | — |
-| 8 | Arrays 2 — if/Switch and math functions | Class 08 | — |
+| 7 | Arrays 2 — if/Switch and math functions | Class 07 | — |
+| 8 | Supported practice — Arrays 1 and 2 | Class 08 | — |
 | 9 | Façade attractors — Project 3 | Class 09 | — |
-| 10 | Review of everything before Project 4 | Class 10 | — |
-| 11 | Attractor-based site analysis — Project 4 | Class 11 | — |
-| 12 | Generative volume exploration — Project 4 | Class 12 | — |
-| 13 | Discretizing Geometry | Class 13 | — |
-| 14–15 | Laser-cut model and final documentation | Class 14 · Class 15 | — |
-
-## Possible intermediate class
-
-**Tessellation, panelization, lattices and simulation.** Offered only if time allows after arrays or attractors; no separate submission. The file covers tessellation and lattices. Panelization and simulation are possible additions.
+| 10 | Attractor-based site analysis — Project 4 | Class 10 | — |
+| 11 | Generative volume exploration — Project 4 | Class 11 | — |
+| 12 | Contouring, laser-cut preparation and assembly | Class 12 | — |
+| 13–15 | Production, feedback and documentation | Class 13 · Class 14 · Class 15 | — |
 
 ## Four projects built through short assignments
 
@@ -110,15 +106,15 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 4 | Sep 15 | Descriptive Geometry | — |
 | 5 | Sep 22 | Descriptive Geometry | — |
 | 6 | Sep 29 | Arrays 1 — loops in 1D, 2D and 3D | 2.1 — CSG process and instructions (11:59 PM Eastern Time) |
-| 7 | Oct 6 | Supported practice during studio reviews | No graded submission |
-| 8 | Oct 13 | Arrays 2 — if/Switch and math functions | 2.2 — CSG 3D printed object (11:59 PM Eastern Time) |
+| 7 | Oct 6 | Arrays 2 — if/Switch and math functions | No graded submission |
+| 8 | Oct 13 | Supported practice — Arrays 1 and 2 | 2.2 — CSG 3D printed object (11:59 PM Eastern Time) |
 | 9 | Oct 20 | Façade attractors — Project 3 | 3.1 — Descriptive geometry module — material and three-point lighting (11:59 PM Eastern Time) |
-| 10 | Oct 27 | Midterm deadline and accumulated grade; review of everything before Project 4 | 1 — Graphic Standards Manual (11:59 PM Eastern Time); 3.2 — Arrays (11:59 PM Eastern Time) |
-| 11 | Nov 3 | Attractor-based site analysis — Project 4 | — |
-| 12 | Nov 10 | Generative volume exploration — Project 4 | — |
-| 13 | Nov 17 | Discretizing Geometry | 3.3 — Attractor-driven panel façade (11:59 PM Eastern Time) |
-| 14 | Nov 24 | Laser-cut model and final documentation | 4.1 — Site analysis using attractors (11:59 PM Eastern Time) |
-| 15 | Dec 1 | Laser-cut model and final documentation | No graded submission |
+| 10 | Oct 27 | Midterm deadline and accumulated grade; attractor-based site analysis — Project 4 | 1 — Graphic Standards Manual (11:59 PM Eastern Time); 3.2 — Arrays (11:59 PM Eastern Time) |
+| 11 | Nov 3 | Generative volume exploration — Project 4 | — |
+| 12 | Nov 10 | Contouring, laser-cut preparation and assembly | — |
+| 13 | Nov 17 | Production, feedback and documentation | 3.3 — Attractor-driven panel façade (11:59 PM Eastern Time) |
+| 14 | Nov 24 | Production, feedback and documentation | 4.1 — Site analysis using attractors (11:59 PM Eastern Time) |
+| 15 | Dec 1 | Production, feedback and documentation | No graded submission |
 | Final | December 10–16, 2026; exact review slot to be confirmed | Final review | 4.2 — SDF volumetric exploration; 4.3 — Discretizing the SDF; 4.4 — Laser-cut model and documentation; BOOK — Final booklet and review; revised GSM |
 
 ## Assignments and grading
@@ -147,10 +143,10 @@ Approved grading allocation: manual 5%; CSG 15% (diagram/pseudocode 10%, print 5
 | 3.1 — Descriptive geometry module — material and three-point lighting | Week 4 — Sep 15 | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
 | 3.2 — Arrays | Week 6 — Sep 29 | Week 10 — Oct 27, 11:59 PM Eastern Time | 10% |
 | 3.3 — Attractor-driven panel façade | Week 9 — Oct 20 | Week 13 — Nov 17, 11:59 PM Eastern Time | 10% |
-| 4.1 — Site analysis using attractors | Week 11 — Nov 3 | Week 14 — Nov 24, 11:59 PM Eastern Time | 5% |
-| 4.2 — SDF volumetric exploration | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
-| 4.3 — Discretizing the SDF | Week 13 — Nov 17 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
-| 4.4 — Laser-cut model and documentation | Week 14 — Nov 24 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
+| 4.1 — Site analysis using attractors | Week 10 — Oct 27 | Week 14 — Nov 24, 11:59 PM Eastern Time | 5% |
+| 4.2 — SDF volumetric exploration | Week 11 — Nov 3 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
+| 4.3 — Discretizing the SDF | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
+| 4.4 — Laser-cut model and documentation | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
 | BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
 | PART — Attendance and participation | Week 1 — Aug 25 | Throughout the semester | 5% |
 | Total |  |  | 100% |
@@ -296,7 +292,7 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 ### 4.1 — Site analysis using attractors
 
-**Introduced:** Week 11 — Nov 3 · **Due:** Week 14 — Nov 24, 11:59 PM Eastern Time · **Weight:** 5%
+**Introduced:** Week 10 — Oct 27 · **Due:** Week 14 — Nov 24, 11:59 PM Eastern Time · **Weight:** 5%
 
 **Present:** One 17 x 11 inch site-analysis sheet with two analytical layers and one design observation; PDF, working file and source record.
 
@@ -307,13 +303,13 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Ungraded checkpoints:**
 
-- Week 12 — Nov 10: Bring the prepared dataset or an approved alternative, source/units, and two analytical layers with legends.
+- Week 11 — Nov 3: Bring the prepared dataset or an approved alternative, source/units, and two analytical layers with legends.
 
 <a id="p4b"></a>
 
 ### 4.2 — SDF volumetric exploration
 
-**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
+**Introduced:** Week 11 — Nov 3 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
 **Present:** One 17 x 11 inch sheet with three generative variations, the selected isometric and key parameters; PDF and editable volume source.
 
@@ -325,13 +321,13 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Ungraded checkpoints:**
 
-- Week 13 — Nov 17: Ungraded production check: bring three generative settings, a selected volume in isometric and its intended model scale before contouring.
+- Week 12 — Nov 10: Ungraded production check: bring three generative settings, a selected volume in isometric and its intended model scale before contouring.
 
 <a id="p4c"></a>
 
 ### 4.3 — Discretizing the SDF
 
-**Introduced:** Week 13 — Nov 17 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
+**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
 **Present:** One 17 x 11 inch fabrication sheet, continued in 4.4; PDF, editable source and full-size numbered cutting file.
 
@@ -343,13 +339,13 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Ungraded checkpoints:**
 
-- Week 14 — Nov 24: Ungraded production check: bring numbered contours, a cutting layout, an assembly diagram and a small material/registration test.
+- Week 13 — Nov 17: Ungraded production check: bring numbered contours, a cutting layout, an assembly diagram and a small material/registration test.
 
 <a id="p4d"></a>
 
 ### 4.4 — Laser-cut model and documentation
 
-**Introduced:** Week 14 — Nov 24 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
+**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
 **Present:** One assembled laser-cut model and the completed 4.3 fabrication sheet with photographs; source, cutting file and material/part list. Print files only if used.
 
@@ -362,7 +358,7 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Ungraded checkpoints:**
 
-- Week 15 — Dec 1: Ungraded fabrication check: show a tested sample, assembly strategy, cutting progress and a remaining-work plan.
+- Week 14 — Nov 24: Ungraded fabrication check: show a tested sample, assembly strategy, cutting progress and a remaining-work plan.
 
 ## Visual identity and course reviews
 
@@ -611,7 +607,7 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 
 **Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes, paired with the loop tutorial. Use loops and nested loops to build a row, grid and layered array; explain counts, spacing and indices.
 
-**Taught in:** Class 08 — *not yet released*. Second of two Arrays classes. Explain if/Switch selection through façade patterns, then use mathematical functions of X and Y to shape a cube volume. Hexagonal and radial arrays remain optional.
+**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Explain if/Switch selection through façade patterns, then use mathematical functions of X and Y to shape a cube volume. Hexagonal and radial arrays remain optional.
 
 1. 1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.
 2. 2D: nest repetition into a grid. Identify rows and columns; predict the total count.
@@ -727,50 +723,6 @@ Build your own file. Use these examples to check a step when you are stuck, then
 
 Scenes in this file: Read the field, One point, Multiple points, Curve attractor. Open them in the order listed.
 
-## U06 — Tessellation, panelization, lattices and simulation
-
-Explore possible intermediate methods for subdividing surfaces, arranging panels, connecting elements and studying change.
-
-**Possible intermediate class — optional.** This topic is outside the required teaching sequence.
-
-**Vocabulary:** cell, adjacency, tessellation, panelization, lattice, simulation, strut, aperture, thickness.
-
-**Video tutorial:** not yet posted. Use the lesson notes and the class slides.
-
-1. Distinguish a tessellation covering a surface from a lattice formed by connected nodes and struts.
-2. Begin with a small repeated cell; inspect shared boundaries, gaps and connectivity.
-3. Vary aperture, depth or strut thickness with the previous attractor logic.
-4. As time permits, discuss panelization and simulation as extensions; these demonstrations are not yet prepared in the supplied file.
-
-**Practice:** Compare a uniform system with a controlled variation, then make one connection or cell test before a batch.
-
-**Use it next:** Optional exploration after arrays or attractors. The required course continues from points to volumetric fields without depending on these methods.
-
-**Read the pseudocode.** Match each step to your nodes; you do not need to type it.
-
-```python
-for cell in subdivide(surface, u, v):
-    panel = morph(component, cell)         # component into the cell
-    d = distance(center(cell), attractor)
-    panel.aperture = remap(d, d_min, d_max, 0.1, 0.9)
-    panel.depth    = remap(d, d_min, d_max, 2.0, 12.0)
-    keep(panel)
-```
-
-**Teaching note:** Possible intermediate class, not a required lesson or graded submission. The existing example covers tessellation and lattices; panelization and simulation remain possible additions.
-
-### Blender files for this lesson
-
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
-
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
-
-**S06 — [Optional — Tessellation and Lattices](../files/blender/05-tessellation-lattices/Tessellation-and-Lattices.blend)**
-
-Scenes in this file: Tessellation, Lattice, Attractor lattice. Open them in the order listed.
-
-The existing file covers tessellation and lattices. Panelization and simulation are possible additions to this intermediate class and are not yet demonstrated here.
-
 ## U07 — Volumetric Data and Fields
 
 Use supplied groups to interpret spatial samples and explore generative volumes controlled by fields.
@@ -779,9 +731,9 @@ Use supplied groups to interpret spatial samples and explore generative volumes 
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 11 — *not yet released*. Apply attractor measurements to the prepared point cloud using supplied groups. Produce two analytical layers and one design observation for the final project; this is distinct from the façade class.
+**Taught in:** Class 10 — *not yet released*. Apply attractor measurements to the prepared point cloud using supplied groups. Produce two analytical layers and one design observation for the final project; this is distinct from the façade class.
 
-**Taught in:** Class 12 — *not yet released*. Use supplied volume groups to explore three settings of one strategy and select a form for contouring.
+**Taught in:** Class 11 — *not yet released*. Use supplied volume groups to explore three settings of one strategy and select a form for contouring.
 
 1. Open the prepared point cloud and identify its source, units and orientation. Use the supplied analysis groups to create two meaningful layers and state one design observation.
 2. Demonstrate how point samples, density, signed distance and an extracted boundary differ. Students need to explain the supplied groups' inputs and outputs; they do not rebuild the internal algorithms.
@@ -848,7 +800,7 @@ Use contours and sections to translate a volumetric design into parts for fabric
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 13 — *not yet released*.
+**Taught in:** Class 12 — *not yet released*. Complete all new required content with a prepared example using the supplied contouring group. Cover spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. Introduce both 4.3 and 4.4; continue their production during Weeks 13–15.
 
 1. Use the supplied contouring group to section the selected volume and order the resulting curves.
 2. Choose one direction and interval suited to the form, material thickness and model scale. Demonstrate alternatives in class; there is no fixed minimum slice count or required comparison sheet.
@@ -889,6 +841,14 @@ Scenes in this file: One contour, Contour stack. Open them in the order listed.
 
 Scenes in this file: Section parts, Laid out parts. Open them in the order listed.
 
+**S12 — [Final — fabrication and assembly](../files/blender/09-final-project/Final-Project-Fabrication.blend)**
+
+Scenes in this file: Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings. Open them in the order listed.
+
+The exported files are default-parameter snapshots in millimetres. Regenerate them after edits and test physical fit before production. Modular parts are an optional reference. The required physical outputs are the CSG print (P2b) and laser-cut volume (P4b).
+
+Supporting files: [Fabrication notes and dimensions](../files/blender/09-final-project/FABRICATION-NOTES.md), [Small print STL](../files/blender/09-final-project/small-print-mm.stl), [Fit coupon STL](../files/blender/09-final-project/fit-coupon-mm.stl), [Modular parts STL](../files/blender/09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](../files/blender/09-final-project/section-parts-and-spacers-mm.svg).
+
 ## U10 — Final
 
 Assemble and document one laser-cut model, make selected revisions and complete the final booklet.
@@ -897,7 +857,7 @@ Assemble and document one laser-cut model, make selected revisions and complete 
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 14 — *not yet released* · Class 15 — *not yet released*. Week 14 checks assembly tests and production plans. Week 15 offers fabrication and documentation support during studio reviews, with no graded submission.
+**Taught in:** Class 12 — *not yet released*. Complete all new required content with a prepared example using the supplied contouring group. Cover spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. Introduce both 4.3 and 4.4; continue their production during Weeks 13–15.
 
 1. Test material, fit and connections before full production.
 2. Fabricate and assemble the selected parts within the confirmed lab allocation.
@@ -913,6 +873,14 @@ Assemble and document one laser-cut model, make selected revisions and complete 
 Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
 
 Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+
+**S10 — [Discretizing Geometry — contours](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend)**
+
+Scenes in this file: One contour, Contour stack. Open them in the order listed.
+
+**S11 — [Discretizing Geometry — section parts](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend)**
+
+Scenes in this file: Section parts, Laid out parts. Open them in the order listed.
 
 **S12 — [Final — fabrication and assembly](../files/blender/09-final-project/Final-Project-Fabrication.blend)**
 
@@ -1004,7 +972,6 @@ The 3.2 material library is planned and has not yet been linked. Students may cr
 ### Confirmed direction
 
 - Follow the instructor's sequence from graphic standards through geometry, repetition, attractors, point clouds, volumes and sections.
-- Keep tessellation, panelization, lattices and simulation as a possible intermediate class outside the required sequence.
 - The sequence is a guide. A topic may take more than one class; understanding and working files determine the pace.
 - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
@@ -1188,8 +1155,9 @@ In any case involving allegations of sexual misconduct, you are encouraged to re
 Preserve the project numbering and teaching progression: P1 establishes the Graphic Standards Manual;
 P2 emphasizes procedural design; P3 emphasizes parametric design; P4 emphasizes generative design.
 Arrays has one class on loops in 1D/2D/3D and one on if/Switch and mathematical functions. Retain the
-façade-attractor class, then review everything before beginning Project 4. The later attractor-based
-site-analysis class belongs to Project 4.
+supported practice class after both Arrays lessons and the façade-attractor class in Week 9. Begin
+Project 4 in Week 10 with attractor-based site analysis. Complete all new content by Week 12 and
+reserve Weeks 13–15 for production, feedback and documentation.
 
 The revised sequence contains ten assignments in four projects: 1 Manual; 2.1 CSG sheet; 2.2 CSG print; 3.1 Module; 3.2 Arrays; 3.3 Attractor façade; 4.1 Site analysis; 4.2 SDF exploration; 4.3 Discretization; 4.4 Laser-cut model. The three array sheets remain one assignment: four module/basic-array diagrams, four conditional façade patterns, and an isometric mathematical cube volume with optional voids. The standalone 2D attractor drawing has been replaced by a façade elevation and isometric showing an actual panel parameter response.
 
@@ -1197,7 +1165,7 @@ For 3.1 students create one module material, place the module on a ground plane 
 
 Project 4 follows analyze → generate → contour → laser-cut → assemble using supplied groups. Provide the analysis dataset/groups, volume tools and contouring tools before the respective assignments. Require two analytical layers and one observation in 4.1; three settings of one strategy and a selected isometric on one sheet in 4.2; and one chosen slicing direction/spacing with numbered parts and an assembly diagram in 4.3. Add final model photographs to that same fabrication sheet in 4.4. No mandatory Boolean comparison, floor plan, fixed slice minimum or final-project 3D print remains. Assess students' inputs, outputs, interpretation and design decisions, not reconstruction of the supplied algorithms.
 
-The instructor approved the revised grading allocation: GSM, CSG print and site analysis are 5% each; the seven major design exercises are 10% each; booklet is 10% and participation is 5%. Midterm accumulates 40%. Project 4 remains 35%, with distinct assessment of spatial exploration, buildable parts and physical assembly. Dates remain proposals. Arrays has two taught classes (Weeks 6 and 8); Week 7 is studio-review support and Week 10 is submission/critique. Week 9 teaches façade attractors in Project 3; Week 11 applies attractors to site analysis in Project 4. Move volume and contouring instruction earlier to protect November 17 volume selection, November 24 assembly tests and December 1 production support. Confirm laser-cut stock and lab capacity before issuing the full Project 4 brief.
+The instructor approved the revised grading allocation: GSM, CSG print and site analysis are 5% each; the seven major design exercises are 10% each; booklet is 10% and participation is 5%. Midterm accumulates 40%. Project 4 remains 35%, with distinct assessment of spatial exploration, buildable parts and physical assembly. Submission dates remain proposals and are unchanged by this teaching adjustment. Arrays has two taught classes (Weeks 6 and 7), followed by supported practice checking both in Week 8. Week 9 teaches façade attractors; Week 10 begins Project 4 site analysis while the manual and arrays are submitted. Week 11 teaches generative volumes. Week 12 completes contouring, cutting-file preparation, assembly and documentation using a prepared demonstration. Weeks 13–15 are production and feedback only. Use ungraded checks for volume selection November 10, contours/assembly tests November 17 and fabrication progress November 24. Confirm laser-cut stock and lab capacity before issuing the full Project 4 brief.
 
 Detailed PDFs currently cover Projects 1–3. Project 4 has a simplified coordinated outline; prepare its detailed handout after verifying the supplied teaching packages and fabrication allocation. Existing slide decks and their generators need revision for the new sequence and numbering before reuse. Keep institutional policies and historical assets unchanged.
 

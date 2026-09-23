@@ -20,7 +20,7 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 
 **Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes, paired with the loop tutorial. Use loops and nested loops to build a row, grid and layered array; explain counts, spacing and indices.
 
-**Taught in:** Class 08 — *not yet released*. Second of two Arrays classes. Explain if/Switch selection through façade patterns, then use mathematical functions of X and Y to shape a cube volume. Hexagonal and radial arrays remain optional.
+**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Explain if/Switch selection through façade patterns, then use mathematical functions of X and Y to shape a cube volume. Hexagonal and radial arrays remain optional.
 
 1. 1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.
 2. 2D: nest repetition into a grid. Identify rows and columns; predict the total count.

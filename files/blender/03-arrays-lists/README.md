@@ -1,6 +1,6 @@
 # 03 · Arrays and Lists
 
-Two taught classes cover Arrays: Week 6 (September 29) uses loops and nested loops for 1D, 2D and 3D repetition, paired with the loop tutorial; Week 8 (October 13) explains if/Switch and mathematical functions. Week 7 is optional studio-review support. After the façade-attractor class, Week 10 reviews everything before Project 4 begins. Download the files individually. Written loop examples are in the Arrays lesson; the tutorial recording is not yet linked.
+Two taught classes cover Arrays: Week 6 (September 29) uses loops and nested loops for 1D, 2D and 3D repetition, paired with the loop tutorial; Week 7 (October 6) explains if/Switch and mathematical functions. Week 8 (October 13) is supported practice checking both lessons and all three array sheets. Week 9 teaches façade attractors; Week 10 begins Project 4. All new required content ends in Week 12, leaving Weeks 13–15 for production and feedback. Download the files individually. Written loop examples are in the Arrays lesson; the tutorial recording is not yet linked.
 
 - [Arrays-Lists-Session-1.blend](Arrays-Lists-Session-1.blend) — Linear loop, Nested grid.
 - [Arrays-Lists-Session-2.blend](Arrays-Lists-Session-2.blend) — 3D array, Hexagonal array, Radial array, If and range, Sine curve.

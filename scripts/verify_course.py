@@ -78,7 +78,13 @@ def verify_sequence(course, site, documents, baseurl):
         page = documents[path]
         assert block['focus'] in ''.join(page.text), f'Class focus drift: {number}'
         stem = f'/slides/ARC3133_Class{number:02d}'
-        assert baseurl + stem + '.pdf' in page.links and baseurl + stem + '.pptx' in page.links, f'Class slides missing: {number}'
+        review = next(r for r in course.data['presentation_review'] if r['week'] == number)
+        slide_links = [baseurl + stem + suffix for suffix in ('.pdf', '.pptx')]
+        if review['status'] == 'current':
+            assert all(link in page.links for link in slide_links), f'Class slides missing: {number}'
+        else:
+            assert not any(link in page.links for link in slide_links), f'Unreviewed slides linked: {number}'
+            assert 'Revised slides are not yet posted' in ''.join(page.text), f'Missing slide-status notice: {number}'
         for sid in course.weeks[number]['sessions']:
             session = next(s for s in course.sessions if s['id'] == sid)
             if session_pages.available(course, session):

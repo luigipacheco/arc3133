@@ -1,0 +1,2 @@
+# Keep PDF byte offsets and verification hashes intact on Windows and Linux.
+*.pdf binary

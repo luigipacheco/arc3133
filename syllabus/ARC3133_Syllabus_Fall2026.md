@@ -436,7 +436,7 @@ Establish the graphic system used to communicate all later work.
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** [Class 01]({{ site.baseurl }}/modules/classes/class-01/). 
+**Taught in:** [Class 01]({{ site.baseurl }}/modules/classes/class-01/).
 
 1. Compare architectural drawings and identify how hierarchy makes them readable.
 2. Study the three manuals below. Identify a rule, its dimensioned drawing and its application in each.
@@ -480,7 +480,7 @@ Build editable solids with transformations and Boolean operations.
 
 **Video tutorials:** [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g)
 
-**Taught in:** [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/). 
+**Taught in:** [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/).
 
 1. Start with one primitive; identify node inputs, outputs and parameters.
 2. Translate, rotate and scale. Change the order and compare results.
@@ -536,7 +536,7 @@ Describe geometry through points, lines, edges and faces, then build a parametri
 
 **Video tutorials:** [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg)
 
-**Taught in:** [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/). 
+**Taught in:** [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/).
 
 1. Point — locate a point with XYZ values; distinguish position from displacement.
 2. Line — connect two positions with a curve.
@@ -641,7 +641,7 @@ Use distance fields from points and curves to control geometric variation.
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 11 — *not yet released*. 
+**Taught in:** Class 11 — *not yet released*.
 
 1. Measure distance to one point. Display a grayscale field before changing geometry.
 2. Set input and output ranges; remap, clamp and choose a falloff.
@@ -727,7 +727,7 @@ Read spatial samples, convert them into volumes and use fields to control form.
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 12 — *not yet released* · Class 13 — *not yet released*. 
+**Taught in:** Class 12 — *not yet released* · Class 13 — *not yet released*.
 
 1. Import an attributed point cloud. Record source, units, origin and point count; document any cropping or decimation.
 2. Use point or curve distance to color, filter or displace samples for a stated analytical purpose.
@@ -797,7 +797,7 @@ Use contours and sections to translate a volumetric design into parts for fabric
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 14 — *not yet released*. 
+**Taught in:** Class 14 — *not yet released*.
 
 1. Intersect the volume or its extracted boundary with a sequence of planes; order the resulting contour curves.
 2. Compare two section directions and intervals, including the relationship between gaps, light and the reading of the form.
@@ -846,7 +846,7 @@ Assemble and document one model combining laser-cut and 3D-printed parts, revise
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 15 — *not yet released*. 
+**Taught in:** Class 15 — *not yet released*.
 
 1. Test material, fit and connections before full production.
 2. Fabricate and assemble the selected parts within the confirmed lab allocation.

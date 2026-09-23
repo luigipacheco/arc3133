@@ -18,7 +18,7 @@ Build editable solids with transformations and Boolean operations.
 
 **Video tutorials:** [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g)
 
-**Taught in:** [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/). 
+**Taught in:** [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/).
 
 1. Start with one primitive; identify node inputs, outputs and parameters.
 2. Translate, rotate and scale. Change the order and compare results.

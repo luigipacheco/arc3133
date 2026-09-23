@@ -340,7 +340,7 @@ class Course:
         for block in self.sequence:
             if u['id'] in block['units']:
                 classes = ' · '.join(self.link(f'Class {n:02d}', self.class_url(n)) for n in block['weeks'])
-                out += '**Taught in:** ' + classes + '. ' + (block.get('delivery') or '') + '\n\n'
+                out += ('**Taught in:** ' + classes + '. ' + (block.get('delivery') or '')).rstrip() + '\n\n'
         out += "\n".join(f"{i}. {step}" for i, step in enumerate(u["steps"], 1)) + "\n\n"
         out += "**Practice:** " + u["exercise"] + "\n\n**Use it next:** " + u["connection"] + "\n\n"
         if u.get("references"):

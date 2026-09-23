@@ -18,7 +18,7 @@ Describe geometry through points, lines, edges and faces, then build a parametri
 
 **Video tutorials:** [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg)
 
-**Taught in:** [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/). 
+**Taught in:** [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/).
 
 1. Point — locate a point with XYZ values; distinguish position from displacement.
 2. Line — connect two positions with a curve.

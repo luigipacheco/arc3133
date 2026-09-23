@@ -18,7 +18,7 @@ Use distance fields from points and curves to control geometric variation.
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 11 — *not yet released*. 
+**Taught in:** Class 11 — *not yet released*.
 
 1. Measure distance to one point. Display a grayscale field before changing geometry.
 2. Set input and output ranges; remap, clamp and choose a falloff.

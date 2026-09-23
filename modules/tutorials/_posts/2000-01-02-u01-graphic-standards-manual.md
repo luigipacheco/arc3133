@@ -18,7 +18,7 @@ Establish the graphic system used to communicate all later work.
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** [Class 01]({{ site.baseurl }}/modules/classes/class-01/). 
+**Taught in:** [Class 01]({{ site.baseurl }}/modules/classes/class-01/).
 
 1. Compare architectural drawings and identify how hierarchy makes them readable.
 2. Study the three manuals below. Identify a rule, its dimensioned drawing and its application in each.

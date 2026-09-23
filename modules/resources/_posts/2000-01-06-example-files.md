@@ -11,7 +11,7 @@ permalink: /resources/example-files/
 
 # Example files
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files.
+Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
 
 Download only the example for the class you are working on. Arrays uses two example files across the practice block.
 

@@ -2,7 +2,7 @@
 
 # Curriculum decisions
 
-> **Instructor review draft — revised assignment sequence · 2026-09-22.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.
+> **Instructor review draft — revised assignment sequence · 2026-09-23.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.
 
 ### Confirmed direction
 
@@ -16,14 +16,14 @@
 - Organize ten assignments into four projects: Graphic Standards Manual, CSG, Paneling, and Integrated Spatial Project.
 - 3.1 requires one student-authored module material, a ground plane and three-point lighting (key, fill, rim/back). 3.2 permits supplied library materials or student-authored materials.
 - 3.3 uses attractor data to drive one geometric parameter of the existing panel, documented in façade elevation and isometric.
-- 4.1 site analysis → 4.2 abstract SDF volume → 4.3 discretization → 4.4 combined laser-cut/3D-printed model develop one project.
-- Use the instructor-accepted draft weights: 7%, 14%, 21%, 35% across the four projects, 18% booklet and 5% participation. Midterm accumulates the first five submissions (35% of the course).
+- 4.1 site analysis → 4.2 generative volume → 4.3 contouring → 4.4 laser-cut assembly develop one project using supplied node groups. Printed components are optional.
+- Use the instructor-approved grading allocation: 5%, 15%, 30%, 35% across the four projects, 10% booklet and 5% participation. Midterm accumulates the first five submissions (40% of the course).
 
 ### Working proposals
 
 - Review the proposed September 29–October 27 staged deadlines and the November 3 start of attractors. Keep October 6 and December 1 free of graded submissions.
 - Façade 3.3 due November 17 and site analysis 4.1 due November 24; 4.2–4.4 due at the final review with earlier ungraded production checks.
-- Keep the final project focused enough to prototype connections by December 1 and complete laser cutting, printing and documentation before the confirmed final review.
+- Keep the final project focused enough to test assembly by December 1 and complete laser cutting and documentation before the confirmed final review.
 - The previous Python/AI final and extra-credit scheme remain outside the required core assignments.
 
 ### Administrative items to confirm
@@ -32,17 +32,17 @@
 - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
 - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
 - Confirm the attendance sign-in method and the accreditation criteria used by the School.
-- Post and test the material library before 3.2 is due; post the Mixtli add-on/install notes before 4.1.
-- Confirm the separate final-project filament allocation and machine capacity for the mixed-media model.
+- Post and test the material library before 3.2 is due. Supply a prepared point cloud and analysis groups before 4.1, volume groups before 4.2, and contouring groups before 4.3, with usage notes.
+- Confirm laser-cut stock and machine capacity for the final model; approve any optional printing separately.
 
 ## Why the sequence changed
 
-The revised sequence contains ten assignments in four projects: 1 Manual; 2.1 CSG sheet; 2.2 CSG print; 3.1 Module; 3.2 Arrays; 3.3 Attractor façade; 4.1 Site analysis; 4.2 SDF exploration; 4.3 Discretization; 4.4 Mixed-media model. The two array sheets remain one assignment. The standalone 2D attractor drawing has been replaced by a façade elevation and isometric showing an actual panel parameter response.
+The revised sequence contains ten assignments in four projects: 1 Manual; 2.1 CSG sheet; 2.2 CSG print; 3.1 Module; 3.2 Arrays; 3.3 Attractor façade; 4.1 Site analysis; 4.2 SDF exploration; 4.3 Discretization; 4.4 Laser-cut model. The three array sheets remain one assignment: four module/basic-array diagrams, four conditional façade patterns, and an isometric mathematical cube volume with optional voids. The standalone 2D attractor drawing has been replaced by a façade elevation and isometric showing an actual panel parameter response.
 
 For 3.1 students create one module material, place the module on a ground plane and set up key/fill/rim three-point lighting. This describes three lighting roles, not the software's Point light type. For 3.2 students may use the supplied material library or create their own; post and verify the library before the deadline.
 
-Site analysis begins Project 4 and must inform the same project through SDF, discretization and mixed-media fabrication. Use the Instagram references already under Resources for 4.2 representation. Require a horizontal section for the abstract floor plan, coordinated with elevation and isometric. Both laser cutting and 3D printing belong to the final assembled model.
+Project 4 follows analyze → generate → contour → laser-cut → assemble using supplied groups. Provide the analysis dataset/groups, volume tools and contouring tools before the respective assignments. Require two analytical layers and one observation in 4.1; three settings of one strategy and a selected isometric on one sheet in 4.2; and one chosen slicing direction/spacing with numbered parts and an assembly diagram in 4.3. Add final model photographs to that same fabrication sheet in 4.4. No mandatory Boolean comparison, floor plan, fixed slice minimum or final-project 3D print remains. Assess students' inputs, outputs, interpretation and design decisions, not reconstruction of the supplied algorithms.
 
-The instructor accepted the draft grading allocation: early submissions stay at 7% each; site analysis moves into Project 4 at 7%, SDF remains 14%, and discretization/model split 14% into 7% each. Dates remain proposals. The final sequence is compressed: protect the November 24 volume selection and December 1 connection test, and confirm lab capacity and print allocation before issuing the full Project 4 brief.
+The instructor approved the revised grading allocation: GSM, CSG print and site analysis are 5% each; the seven major design exercises are 10% each; booklet is 10% and participation is 5%. Midterm accumulates 40%. Project 4 remains 35%, with distinct assessment of spatial exploration, buildable parts and physical assembly. Dates remain proposals. The final sequence is compressed: protect the November 24 volume selection and December 1 connection test, and confirm laser-cut stock and lab capacity before issuing the full Project 4 brief.
 
-Detailed PDFs currently cover Projects 1–3. Project 4 has a coordinated outline; prepare its detailed handout after reviewing its scope and fabrication allocation. Existing slide decks and their generators need revision for the new sequence and numbering before reuse. Keep institutional policies and historical assets unchanged.
+Detailed PDFs currently cover Projects 1–3. Project 4 has a simplified coordinated outline; prepare its detailed handout after verifying the supplied teaching packages and fabrication allocation. Existing slide decks and their generators need revision for the new sequence and numbering before reuse. Keep institutional policies and historical assets unchanged.

@@ -643,7 +643,7 @@ class Course:
         self.emit("modules/assignments/_posts/1999-12-31-overview.md", overview)
         for i,p in enumerate(self.projects.values(), 2):
             out = front(p["id"] + " · " + p["title"], categories=["assignments"]) + self.notice() + p["description"] + "\n\n"
-            out += "Complete these assignments in order, then revise them for the booklet. The combined project adds no extra grade.\n\n"
+            out += "Complete these assignments in order and assemble their sheets into the booklet as you go. Make selected substantive revisions after critique. The combined project adds no extra grade.\n\n"
             if p.get("brief_pdf"):
                 out += f"**[Download the {p['id']} assignment brief (PDF)]({BASE}/{p['brief_pdf']})**\n\n"
                 if p["id"] == "P3":
@@ -770,7 +770,7 @@ class Course:
                   "## License\n\nCourse content CC BY-SA 4.0 unless noted. Template © P2PU.\n")
         readme += "\n## Assignment brief structure and PDFs\n\n"
         readme += "Each detailed brief follows Description, Rules & Constraints, Parameters, Required Studies, Workflow, Deliverables, Evaluation, and Before You Submit. State numerical limits, visible evidence, exact sheet contents, native files and naming so students can check their submission.\n\n"
-        readme += "Edit the milestone requirements and brief fields in syllabus/course.yml. The same text generates the website and the project PDFs; never edit either output separately. Stable milestone IDs own dates and grading; number fields provide student-facing labels. P1 covers 1 (GSM); P2 covers 2.1/2.2; P3 covers 3.1 module, 3.2 arrays and 3.3 attractor façade. Project 4 develops one project through 4.1 site analysis, 4.2 SDF exploration, 4.3 discretization and 4.4 a mixed-media model. Its detailed PDF follows after scope and fabrication allocation review.\n\n"
+        readme += "Edit the milestone requirements and brief fields in syllabus/course.yml. The same text generates the website and the project PDFs; never edit either output separately. Stable milestone IDs own dates and grading; number fields provide student-facing labels. P1 covers 1 (GSM); P2 covers 2.1/2.2; P3 covers 3.1 module, 3.2 arrays and 3.3 attractor façade. Project 4 uses supplied analysis, volume and contouring groups through 4.1 site analysis, 4.2 generative exploration, 4.3 contouring and 4.4 a laser-cut model. Stages 4.3–4.4 share one fabrication sheet; printed components are optional. Its detailed PDF follows after teaching-package and fabrication allocation review.\n\n"
         readme += "Run python scripts/sync_course.py to regenerate pages, README and PDFs together. The check mode also verifies source and PDF hashes in files/assignments/manifest.json. Commit the source, renderer, generated pages, PDFs, manifest and any retired-page deletions together after instructor review.\n\n"
         readme += "| Project | Download |\n| --- | --- |\n"
         for project in self.projects.values():
@@ -778,7 +778,7 @@ class Course:
                 readme += f"| {project['id']} | [{project['brief_title']}]({project['brief_pdf']}) |\n"
         readme += "\n" + self.midterm_summary()
         readme += "\n## Assignment sequence\n\n" + self.submission_table() + "\n"
-        readme += "Projects 1–3 have detailed PDF handouts. The 3.2 material library is planned, not yet linked. Existing slide decks and their authoring sources need revision before reuse. Dates and weights remain a local review draft.\n"
+        readme += "Projects 1–3 have detailed PDF handouts. The 3.2 material library is planned, not yet linked. Existing slide decks and their authoring sources need revision before reuse. Grading is approved; dates remain a local review draft.\n"
         self.emit("README.md", readme)
         self.emit("reference/Curriculum_Decisions.md", MARKER + "\n\n# Curriculum decisions\n\n" + self.banner() + self.decisions() + "\n## Why the sequence changed\n\n" + self.data["instructor_notes"])
         rows = []

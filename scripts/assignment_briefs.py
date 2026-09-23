@@ -61,7 +61,7 @@ def project_markdown(course, project):
     title = project.get("brief_title", project["title"])
     out = f"# {project['id']} - {title}\n\n"
     out += f"{course.meta['code']} / {course.meta['title']} / {course.meta['term']}\n\n"
-    out += f"Revision: {course.data['revision']}. Instructor review draft. Dates and weights are proposed; review before publication.\n\n"
+    out += f"Revision: {course.data['revision']}. Instructor review draft. Grading allocation approved; dates remain proposed for review before publication.\n\n"
     if project["id"] == "P3":
         out += "3.1: module, authored material, ground plane and three-point lighting. 3.2: arrays with library or student-authored materials. 3.3: attractor-driven panel façade, shown in elevation and isometric.\n\n"
     for aid in project["brief_milestones"]:
@@ -85,6 +85,8 @@ def plain(text):
 
 def inline(text):
     text = html.escape(plain(text), quote=False)
+    text = re.sub(r"\[([^\]]+)\]\((https?://[^\s)]+)\)",
+                  r'<link href="\2" color="#2455A4"><u>\1</u></link>', text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", text)
     return re.sub(r"`([^`]+)`", r'<font name="Courier" size="8.5">\1</font>', text)
 
@@ -131,7 +133,7 @@ def render_pdf(path, markdown, course, project):
                 active_aid = next((a["id"] for a in project["milestones"] if a.get("number", a["id"]) == label), label)
                 story.append(Paragraph(inline(block[3:]), styles["milestone"]))
         elif block.startswith("### "):
-            if (active_aid, block[4:]) in {("P2b", "Deliverables"), ("P3b", "Workflow")}:
+            if (active_aid, block[4:]) == ("P2b", "Deliverables"):
                 story.append(PageBreak())
             story.append(Paragraph(inline(block[4:]), styles["heading"]))
         elif block.startswith("- "):

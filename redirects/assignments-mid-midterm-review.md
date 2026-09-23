@@ -12,16 +12,16 @@ sitemap: false
 
 **Midterm deadline:** Week 10 — Oct 27.
 
-The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 35% of the final course grade. Report the accumulated result as a percentage of those 35 possible course points. The midterm adds no separate assessment weight.
+The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 40% of the final course grade. Report the accumulated result as a percentage of those 40 possible course points. The midterm adds no separate assessment weight.
 
 | Included work | Due | Course weight |
 | --- | --- | --- |
-| [1 — Graphic Standards Manual]({{ site.baseurl }}/modules/assignments/p1-gsm/#gsm) | Week 10 — Oct 27, 11:59 PM Eastern Time | 7% |
-| [2.1 — CSG process and instructions]({{ site.baseurl }}/modules/assignments/p2-csg/#p2a) | Week 6 — Sep 29, 11:59 PM Eastern Time | 7% |
-| [2.2 — CSG 3D printed object]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b) | Week 8 — Oct 13, 11:59 PM Eastern Time | 7% |
-| [3.1 — Descriptive geometry module — material and three-point lighting]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a) | Week 9 — Oct 20, 11:59 PM Eastern Time | 7% |
-| [3.2 — Arrays]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3b) | Week 10 — Oct 27, 11:59 PM Eastern Time | 7% |
+| [1 — Graphic Standards Manual]({{ site.baseurl }}/modules/assignments/p1-gsm/#gsm) | Week 10 — Oct 27, 11:59 PM Eastern Time | 5% |
+| [2.1 — CSG process and instructions]({{ site.baseurl }}/modules/assignments/p2-csg/#p2a) | Week 6 — Sep 29, 11:59 PM Eastern Time | 10% |
+| [2.2 — CSG 3D printed object]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b) | Week 8 — Oct 13, 11:59 PM Eastern Time | 5% |
+| [3.1 — Descriptive geometry module — material and three-point lighting]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a) | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
+| [3.2 — Arrays]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3b) | Week 10 — Oct 27, 11:59 PM Eastern Time | 10% |
 
-**Calculation:** add each assignment's earned course points (assignment percentage / 100 x its course weight), then divide the total by 35 and multiply by 100. Use the course's existing submission and late-work policies.
+**Calculation:** add each assignment's earned course points (assignment percentage / 100 x its course weight), then divide the total by 40 and multiply by 100. Use the course's existing submission and late-work policies.
 
 [Open the assignments]({{ site.baseurl }}/modules/assignments/overview/).

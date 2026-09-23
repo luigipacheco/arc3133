@@ -19,7 +19,7 @@
 
 **Prerequisites:** ARC 1301, ARC 1302, ARC 2303 and ARC 2304, each with a minimum grade of C
 
-> Instructor review draft: assignment sequence updated; proposed dates and grading await final review before publication.
+> Instructor review draft: assignment sequence and grading updated; proposed dates await final review before publication.
 
 ## Course description
 
@@ -27,7 +27,7 @@ Use computational methods to make architectural drawings, models and physical pa
 
 **Through midterm:** Graphic Standards Manual → CSG sheet and print → descriptive geometry module → 1D, 2D and 3D arrays. Create a module material and three-point lighting setup, then use supplied or student-authored materials for the array compositions.
 
-**After midterm:** apply an attractor to one geometric panel parameter and present a façade elevation and isometric (3.3). Develop one integrated spatial project through site analysis using attractors (4.1), abstract SDF exploration (4.2), discretization (4.3), and a model combining laser cutting and 3D printing (4.4).
+**After midterm:** apply an attractor to one geometric panel parameter and present a façade elevation and isometric (3.3). Use supplied node groups to develop one project through two-layer site analysis (4.1), generative volume exploration (4.2), contouring (4.3), and a laser-cut assembly (4.4). Printed components are optional.
 
 Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
 
@@ -50,7 +50,7 @@ Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight
 
 The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
 
-Start the façade attractor assignment November 3, due November 17. Start project site analysis November 10, due November 24. Introduce SDF exploration November 17 and discretization/mixed-media fabrication November 24. The remaining Project 4 stages and booklet are due at the final review, December 10–16; the exact slot remains to be confirmed. Select a volume by the November 24 ungraded production check and test connections by December 1, so production begins before the final review.
+Start the façade attractor assignment November 3, due November 17. Start project site analysis November 10, due November 24. Introduce generative volume exploration November 17 and contouring/laser-cut fabrication November 24. The remaining Project 4 stages and booklet are due at the final review, December 10–16; the exact slot remains to be confirmed. Select a volume by the November 24 ungraded production check and test assembly by December 1, so production begins before the final review.
 
 This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions. The proposed schedule and lab capacity must be reviewed before publication.
 
@@ -71,7 +71,7 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 11 | Attractor-driven façade | Class 11 | — |
 | 12–13 | Site analysis and SDF exploration | Class 12 · Class 13 | — |
 | 14 | Discretizing Geometry | Class 14 | — |
-| 15 | Mixed-media model and final documentation | Class 15 | — |
+| 15 | Laser-cut model and final documentation | Class 15 | — |
 
 ## Possible intermediate class
 
@@ -81,10 +81,10 @@ Plan for at least six hours outside class each week, including fabrication prepa
 
 | Project | Assignments | Weight |
 | --- | --- | --- |
-| P1 — GSM | Graphic Standards Manual | 7% |
-| P2 — CSG | CSG process and instructions → CSG 3D printed object | 14% |
-| P3 — Paneling | Descriptive geometry module — material and three-point lighting → Arrays → Attractor-driven panel façade | 21% |
-| P4 — Integrated Spatial Project | Site analysis using attractors → SDF volumetric exploration → Discretizing the SDF → Mixed-media model — laser cutting and 3D printing | 35% |
+| P1 — GSM | Graphic Standards Manual | 5% |
+| P2 — CSG | CSG process and instructions → CSG 3D printed object | 15% |
+| P3 — Paneling | Descriptive geometry module — material and three-point lighting → Arrays → Attractor-driven panel façade | 30% |
+| P4 — Integrated Spatial Project | Site analysis using attractors → SDF volumetric exploration → Discretizing the SDF → Laser-cut model and documentation | 35% |
 
 ## Target teaching calendar
 
@@ -104,34 +104,40 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 12 | Nov 10 | Site analysis and SDF exploration | — |
 | 13 | Nov 17 | Site analysis and SDF exploration | 3.3 — Attractor-driven panel façade (11:59 PM Eastern Time) |
 | 14 | Nov 24 | Discretizing Geometry | 4.1 — Site analysis using attractors (11:59 PM Eastern Time) |
-| 15 | Dec 1 | Mixed-media model and final documentation | No graded submission |
-| Final | December 10–16, 2026; exact review slot to be confirmed | Final review | 4.2 — SDF volumetric exploration; 4.3 — Discretizing the SDF; 4.4 — Mixed-media model — laser cutting and 3D printing; BOOK — Final booklet and review; revised GSM |
+| 15 | Dec 1 | Laser-cut model and final documentation | No graded submission |
+| Final | December 10–16, 2026; exact review slot to be confirmed | Final review | 4.2 — SDF volumetric exploration; 4.3 — Discretizing the SDF; 4.4 — Laser-cut model and documentation; BOOK — Final booklet and review; revised GSM |
 
 ## Assignments and grading
 
 The course has four projects made of ten assignments. Each assignment is graded once; a project is the set of its assignments, not an extra grade.
 
-Digital assignments: visual quality 35%, computational understanding 25%, technical execution 20%, experimentation 10%, requirements and visual identity 10%. Fabrication assignments: visual documentation 20%, computational understanding 20%, technical execution 15%, fabrication quality 30%, experimentation 5%, requirements and visual identity 10%.
+Digital assignments: computational understanding 30%, visual communication 30%, technical execution 25%, exploration 15%. Students must be able to explain and modify their system. Visual communication includes composition, diagrams, renders and application of the Graphic Standards Manual. Technical execution includes valid geometry, working files and required outputs. Exploration assesses purposeful variations and the choices made from them.
+
+In Project 4, computational understanding means explaining the supplied groups' inputs, outputs and purpose, predicting changes to settings and interpreting the results. Students are not graded on reconstructing the internal analysis, SDF or contouring algorithms.
+
+Fabrication assignments: preparation and fabrication strategy 30%, fabrication quality 30%, visual documentation 25%, testing and revision 15%. Assess understanding of the source geometry, orientation or part division, machine-ready files, fit and finish, clear documentation using the Graphic Standards Manual, and what students learned from tests.
 
 GSM: visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%. The manual does not require a computational graph.
 
 Final booklet: substantive revision 40%, documentation 35%, visual identity 25%. The booklet does not replace earlier assignment grades. Standing late-work and revision policies apply.
 
-Draft allocation approved for review: manual 7%; CSG 14%; Paneling 21%; Integrated Spatial Project 35% (site analysis 7%, SDF 14%, discretization 7%, mixed-media model 7%); final booklet 18%; participation 5%. Total 100%.
+Assess a distinct achievement at each stage of Project 4: site analysis establishes a supported design observation; generative exploration develops spatial form; contouring translates the volume into buildable parts; the laser-cut model demonstrates the resulting fabrication and assembly. Stages 4.3 and 4.4 share one evolving fabrication sheet; do not grade its layout twice. The booklet assesses selected substantive revisions and communication, not a second grade for the original submissions.
+
+Approved grading allocation: manual 5%; CSG 15% (diagram/pseudocode 10%, print 5%); Paneling 30% (module, arrays and façade 10% each); Integrated Spatial Project 35% (site analysis 5%, SDF/volume exploration 10%, contouring 10%, laser-cut model 10%); final booklet 10%; participation 5%. Total 100%. The five assignments through midterm account for 40%.
 
 | Assignment | Introduced | Due | Weight |
 | --- | --- | --- | --- |
-| 1 — Graphic Standards Manual | Week 1 — Aug 25 | Week 10 — Oct 27, 11:59 PM Eastern Time | 7% |
-| 2.1 — CSG process and instructions | Week 2 — Sep 1 | Week 6 — Sep 29, 11:59 PM Eastern Time | 7% |
-| 2.2 — CSG 3D printed object | Week 3 — Sep 8 | Week 8 — Oct 13, 11:59 PM Eastern Time | 7% |
-| 3.1 — Descriptive geometry module — material and three-point lighting | Week 4 — Sep 15 | Week 9 — Oct 20, 11:59 PM Eastern Time | 7% |
-| 3.2 — Arrays | Week 6 — Sep 29 | Week 10 — Oct 27, 11:59 PM Eastern Time | 7% |
-| 3.3 — Attractor-driven panel façade | Week 11 — Nov 3 | Week 13 — Nov 17, 11:59 PM Eastern Time | 7% |
-| 4.1 — Site analysis using attractors | Week 12 — Nov 10 | Week 14 — Nov 24, 11:59 PM Eastern Time | 7% |
-| 4.2 — SDF volumetric exploration | Week 13 — Nov 17 | Final review — December 10–16, 2026; exact review slot to be confirmed | 14% |
-| 4.3 — Discretizing the SDF | Week 14 — Nov 24 | Final review — December 10–16, 2026; exact review slot to be confirmed | 7% |
-| 4.4 — Mixed-media model — laser cutting and 3D printing | Week 14 — Nov 24 | Final review — December 10–16, 2026; exact review slot to be confirmed | 7% |
-| BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 10–16, 2026; exact review slot to be confirmed | 18% |
+| 1 — Graphic Standards Manual | Week 1 — Aug 25 | Week 10 — Oct 27, 11:59 PM Eastern Time | 5% |
+| 2.1 — CSG process and instructions | Week 2 — Sep 1 | Week 6 — Sep 29, 11:59 PM Eastern Time | 10% |
+| 2.2 — CSG 3D printed object | Week 3 — Sep 8 | Week 8 — Oct 13, 11:59 PM Eastern Time | 5% |
+| 3.1 — Descriptive geometry module — material and three-point lighting | Week 4 — Sep 15 | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
+| 3.2 — Arrays | Week 6 — Sep 29 | Week 10 — Oct 27, 11:59 PM Eastern Time | 10% |
+| 3.3 — Attractor-driven panel façade | Week 11 — Nov 3 | Week 13 — Nov 17, 11:59 PM Eastern Time | 10% |
+| 4.1 — Site analysis using attractors | Week 12 — Nov 10 | Week 14 — Nov 24, 11:59 PM Eastern Time | 5% |
+| 4.2 — SDF volumetric exploration | Week 13 — Nov 17 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
+| 4.3 — Discretizing the SDF | Week 14 — Nov 24 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
+| 4.4 — Laser-cut model and documentation | Week 14 — Nov 24 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
+| BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
 | PART — Attendance and participation | Week 1 — Aug 25 | Throughout the semester | 5% |
 | Total |  |  | 100% |
 
@@ -139,17 +145,17 @@ Draft allocation approved for review: manual 7%; CSG 14%; Paneling 21%; Integrat
 
 **Midterm deadline:** Week 10 — Oct 27.
 
-The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 35% of the final course grade. Report the accumulated result as a percentage of those 35 possible course points. The midterm adds no separate assessment weight.
+The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 40% of the final course grade. Report the accumulated result as a percentage of those 40 possible course points. The midterm adds no separate assessment weight.
 
 | Included work | Due | Course weight |
 | --- | --- | --- |
-| 1 — Graphic Standards Manual | Week 10 — Oct 27, 11:59 PM Eastern Time | 7% |
-| 2.1 — CSG process and instructions | Week 6 — Sep 29, 11:59 PM Eastern Time | 7% |
-| 2.2 — CSG 3D printed object | Week 8 — Oct 13, 11:59 PM Eastern Time | 7% |
-| 3.1 — Descriptive geometry module — material and three-point lighting | Week 9 — Oct 20, 11:59 PM Eastern Time | 7% |
-| 3.2 — Arrays | Week 10 — Oct 27, 11:59 PM Eastern Time | 7% |
+| 1 — Graphic Standards Manual | Week 10 — Oct 27, 11:59 PM Eastern Time | 5% |
+| 2.1 — CSG process and instructions | Week 6 — Sep 29, 11:59 PM Eastern Time | 10% |
+| 2.2 — CSG 3D printed object | Week 8 — Oct 13, 11:59 PM Eastern Time | 5% |
+| 3.1 — Descriptive geometry module — material and three-point lighting | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
+| 3.2 — Arrays | Week 10 — Oct 27, 11:59 PM Eastern Time | 10% |
 
-**Calculation:** add each assignment's earned course points (assignment percentage / 100 x its course weight), then divide the total by 35 and multiply by 100. Use the course's existing submission and late-work policies.
+**Calculation:** add each assignment's earned course points (assignment percentage / 100 x its course weight), then divide the total by 40 and multiply by 100. Use the course's existing submission and late-work policies.
 
 ## P1 — GSM
 
@@ -159,15 +165,15 @@ Create your own Graphic Standards Manual and apply it to every course presentati
 
 ### 1 — Graphic Standards Manual
 
-**Introduced:** Week 1 — Aug 25 · **Due:** Week 10 — Oct 27, 11:59 PM Eastern Time · **Weight:** 7%
+**Introduced:** Week 1 — Aug 25 · **Due:** Week 10 — Oct 27, 11:59 PM Eastern Time · **Weight:** 5%
 
 **Present:** Four-page Graphic Standards Manual; PDF and editable layout.
 
 - Make exactly four pages. Show each graphic rule beside a tested application.
 - Use one page each for: (1) sheet size, margins, grid, columns and placement; (2) typography and hierarchy; (3) color and line weights; (4) annotations, captions and image treatment on a course sheet.
-- Use at most three typefaces, three colors including black and paper, four hierarchy levels and four line weights.
+- Use at most three typefaces, two colors plus a dark or white background, four hierarchy levels and four line weights.
 - Study the NYCTA, NASA and Munich 1972 manuals linked under Reading and documentation. Name one rule you adopted.
-- Apply the manual to every sheet and revise it after critique.
+- Apply the manual to all assignments and the final booklet, and revise it after critique.
 
 **Ungraded checkpoints:**
 
@@ -182,12 +188,13 @@ Explain a CSG object through a BIG-style process diagram with instructions, then
 
 ### 2.1 — CSG process and instructions
 
-**Introduced:** Week 2 — Sep 1 · **Due:** Week 6 — Sep 29, 11:59 PM Eastern Time · **Weight:** 7%
+**Introduced:** Week 2 — Sep 1 · **Due:** Week 6 — Sep 29, 11:59 PM Eastern Time · **Weight:** 10%
 
-**Present:** One process sheet; PDF and editable graph.
+**Present:** One 17 x 11 inch diagram sheet with matching instructions (pseudocode); PDF and editable graph.
 
-- One 17 × 11 inch sheet laid out as a BIG-style process diagram (in the manner of Bjarke Ingels Group's step-by-step massing diagrams): eight or nine numbered frames, one operation per frame, read in sequence.
-- Use at least three primitives; include translation, rotation and scale, plus union, difference and intersection. Label the kept and removed solids in each subtraction.
+- One 17 × 11 inch sheet laid out as a BIG-style process diagram (in the manner of Bjarke Ingels Group's step-by-step massing diagrams): six to nine numbered frames, according to the actual operation sequence, with one clear operation or operation type per frame.
+- Use white building masses, color to identify operations or changes, clear outlines and a simple line-weight hierarchy. Use lighter or dashed lines for hidden edges where needed. Keep the viewpoint consistent; introduce context and vegetation in the final frame. Follow your Graphic Standards Manual.
+- Use at least three primitives; include translation, rotation and scale, plus union and difference. Intersection is demonstrated in class and optional in the assignment. Label the kept solid and cutter in each subtraction.
 - Draw the final solid at building scale with a 1.75 m figure, vegetation, ground and shadow.
 - Add clear instructions and matching pseudocode beside the diagrams, one step per operation, with the exposed parameters.
 - Refer to Di Mari and Yoo's Operative Design and Di Mari's Conditional Design; name the spatial operation your sequence explores.
@@ -197,12 +204,13 @@ Explain a CSG object through a BIG-style process diagram with instructions, then
 
 ### 2.2 — CSG 3D printed object
 
-**Introduced:** Week 3 — Sep 8 · **Due:** Week 8 — Oct 13, 11:59 PM Eastern Time · **Weight:** 7%
+**Introduced:** Week 3 — Sep 8 · **Due:** Week 8 — Oct 13, 11:59 PM Eastern Time · **Weight:** 5%
 
-**Present:** One 3D printed CSG object and one process sheet; source, mesh and slicer files.
+**Present:** One 3D printed CSG object, assembled if printed in parts; source, mesh, slicer files and brief fabrication notes.
 
 - Print a variant of your CSG object from P2a, within 60 mm on each axis and the 200 g allocation, without supports.
-- Hand in the physical print during class on the listed due date; submit the process sheet and digital files by 11:59 PM Eastern Time that night.
+- Hand in the physical print during class on the listed due date; submit digital files and brief fabrication notes by 11:59 PM Eastern Time that night. No additional presentation sheet is required.
+- Plan how to avoid support material through orientation, separating the object into parts for assembly, or adjusting overhangs. Bridging is allowed when it prints successfully on the selected printer.
 - Submit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.
 
 **Ungraded checkpoints:**
@@ -217,40 +225,41 @@ Build a panel from descriptive geometry, repeat it in 1D/2D/3D arrays, then driv
 
 ### 3.1 — Descriptive geometry module — material and three-point lighting
 
-**Introduced:** Week 4 — Sep 15 · **Due:** Week 9 — Oct 20, 11:59 PM Eastern Time · **Weight:** 7%
+**Introduced:** Week 4 — Sep 15 · **Due:** Week 9 — Oct 20, 11:59 PM Eastern Time · **Weight:** 10%
 
-**Present:** One module presentation sheet; PDF and editable graph.
+**Present:** One 17 x 11 inch sheet with three panel variations, point and face lists, and a parameter table; PDF and editable graph.
 
 - Choose a simple panel from a built precedent that tiles edge to edge in a 2 × 2 grid. Credit the building, architect and source.
 - Define parameters first and explain each. Include a shape control such as aperture, fold depth or corner offset, beyond overall dimensions.
 - Build an editable, closed mesh from explicit point and face lists. Calculate point positions from the parameters.
+- For a panel with 24 or more points, a Boolean operator is allowed if at least 16 explicit points are used to generate geometry. Review this approach with your professor.
 - State the ranges where the module closes and tiles. Diagram low, middle and high values of a shape parameter.
-- Use one 17 x 11 inch sheet with a studio render of your module resting on a ground plane. Create one material yourself and apply it to the module. Set up three-point lighting with a key light, fill light and rim/back light. Use a simple neutral ground material and no entourage.
-- Beside the render, show point and face lists, a parameter table and the vertex order of one face. Explain normals, closure and reversed face winding.
-- Show a lighting diagram identifying the camera, ground plane and three lights. Record each light's type, position, size and power, and the material settings needed to reproduce the render. Three-point lighting describes the three lighting roles; it does not require three Point-type lights. Area lights are suitable.
+- Use one 17 x 11 inch sheet showing three rendered panel variations with different parameter values. Apply one student-authored module material and one consistent lighting strategy across all three. Use three-point lighting (key, fill and rim/back), a neutral ground plane and no entourage.
+- Beside the renders, show the point list, face list referencing those points and a parameter table with the values used for each variation. No separate face-winding explanation or lighting diagram is required.
+- Study the [three-point lighting tutorial](https://www.youtube.com/watch?v=RDbrOpnIY7Q), also listed in Resources. Three-point lighting describes lighting roles; it does not require Point-type lights.
 
 <a id="p3b"></a>
 
 ### 3.2 — Arrays
 
-**Introduced:** Week 6 — Sep 29 · **Due:** Week 10 — Oct 27, 11:59 PM Eastern Time · **Weight:** 7%
+**Introduced:** Week 6 — Sep 29 · **Due:** Week 10 — Oct 27, 11:59 PM Eastern Time · **Weight:** 10%
 
-**Present:** Exactly two sheets submitted together as one assignment; PDF and editable graph.
+**Present:** Three sheets — module and basic arrays, four conditional façade patterns, and a mathematical cube volume; one PDF and editable graph.
 
-- Array your P3a module across exactly two 17 × 11 inch sheets, submitted together as one assignment.
-- Sheet 1 — 1D, 2D and 3D arrays: a linear array, a nested grid and an XYZ cube array. Label count, spacing and index order; show the predicted total for each.
-- Sheet 2 — parameters and index logic: a second count/spacing setting for each 1D, 2D and 3D array, a row/column/layer diagram, and the conditional selection before and after its rule applies.
-- Current brief scope: 1D, 2D and 3D arrays. Hexagonal, radial and curve arrays and attractors are reserved for later work.
-- Keep the module geometry unchanged; vary its placement. Expose count and spacing in the graph.
+- Submit exactly three 17 x 11 inch landscape sheets together as one assignment.
+- Sheet 1 — four diagrams: your 3.1 module alone, your module in a 1D array, your module in a 2D array, and your module in a 3D array. Use the same module and label counts, spacing and axes.
+- Sheet 2 — four façade-pattern diagrams: use your module in a 2D array and if/Switch conditions to generate four different patterns. Each diagram must identify its condition and resulting modification.
+- Sheet 3 — volumetric exploration: use cubes in a 3D array and present an isometric view. Drive vertical variation with a mathematical function of both X and Y, such as sine or cosine. Explore the resulting spatial form; optionally combine it with Switch conditions to generate voids.
+- Reuse the 3.1 panel definition on Sheets 1–2. Sheet 2 may transform or omit selected instances to make a pattern. Use cubes, rather than the panel, for the volumetric exercise on Sheet 3.
+- Present simple diagrams using one consistent view and material for comparable studies. Keep lighting consistent; separate polished render setups for the four façade patterns are not required. Choose an appropriate view for each dimensional array and use isometric for the cube volume.
 - Build repetition from basic nodes and begin with a count you can inspect; there is no minimum element count.
-- Include one conditional selection on either sheet. State its rule (for example, indices 3–5 lift by 0.5) and show the array before and after it applies.
 - Use materials from the instructor-provided library or create your own. Record which materials you used and any edits; package required textures. Material choice must keep array spacing, depth and repetition readable. The library will be posted before this assignment is due; creating your own remains an equally valid route.
 
 <a id="p3c"></a>
 
 ### 3.3 — Attractor-driven panel façade
 
-**Introduced:** Week 11 — Nov 3 · **Due:** Week 13 — Nov 17, 11:59 PM Eastern Time · **Weight:** 7%
+**Introduced:** Week 11 — Nov 3 · **Due:** Week 13 — Nov 17, 11:59 PM Eastern Time · **Weight:** 10%
 
 **Present:** One façade composition: elevation, isometric, attractor/parameter diagram and controlled comparisons; PDF and editable graph.
 
@@ -267,83 +276,79 @@ Build a panel from descriptive geometry, repeat it in 1D/2D/3D arrays, then driv
 
 ## P4 — Integrated Spatial Project
 
-Develop one project from attractor-based site analysis through abstract SDF volumes and discretization to an assembled model combining laser-cut and 3D-printed parts.
+Use supplied analysis, volume and contouring node groups to develop one project from a site observation through generative volume studies to a laser-cut assembly.
 
 <a id="p4a"></a>
 
 ### 4.1 — Site analysis using attractors
 
-**Introduced:** Week 12 — Nov 10 · **Due:** Week 14 — Nov 24, 11:59 PM Eastern Time · **Weight:** 7%
+**Introduced:** Week 12 — Nov 10 · **Due:** Week 14 — Nov 24, 11:59 PM Eastern Time · **Weight:** 5%
 
-**Present:** One 17 x 11 inch site-analysis sheet with three mapped layers, combined reading and design intention; PDF, working file and source record.
+**Present:** One 17 x 11 inch site-analysis sheet with two analytical layers and one design observation; PDF, working file and source record.
 
-- Pick a site you can document and state why you chose it. Record the source of the point cloud, its units, scale and orientation.
-- Map at least three layers of the point-cloud data with attractor logic — for example distance to points or curves, height bands, and a recorded attribute such as colour or classification.
-- Make one 17 × 11 inch sheet with small views of each layer, each with its own legend and units, beside one larger combined visualization.
-- Explain what each layer measures, how you combined them, and what the combined view shows about the site.
-- Record the tool, inputs and ranges for every layer and submit the working file. The Mixtli add-on for Blender, introduced in class, does these operations; an equivalent tool is fine.
-- Use the analysis to state one spatial design intention for the same project in 4.2–4.4. Identify which mapped relationship will inform the volume; this is the start of one continuing project.
+- Use the instructor-prepared point-cloud dataset and supplied analysis groups. An approved student-sourced dataset is also welcome. Record source, units, scale and orientation.
+- Make two meaningful analytical layers, such as distance to a point or curve and height bands. Select inputs and ranges that reveal a spatial relationship; explain what each layer measures.
+- Submit one 17 x 11 inch sheet showing both layers with legends and one design observation that will inform 4.2–4.4. A separate combined visualization is optional.
+- Save the working file and identify the supplied groups, their inputs, outputs and role. You are assessed on your interpretation and use of the tools, not on rebuilding their internal algorithms.
 
 **Ungraded checkpoints:**
 
-- Week 13 — Nov 17: Bring a documented site, source/units, and at least two attractor-based analytical layers with legends.
+- Week 13 — Nov 17: Bring the prepared dataset or an approved alternative, source/units, and two analytical layers with legends.
 
 <a id="p4b"></a>
 
 ### 4.2 — SDF volumetric exploration
 
-**Introduced:** Week 13 — Nov 17 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 14%
+**Introduced:** Week 13 — Nov 17 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
-**Present:** Two sheets: field/variant studies and a coordinated elevation, isometric and abstract floor plan; PDF and editable SDF source.
+**Present:** One 17 x 11 inch sheet with three generative variations, the selected isometric and key parameters; PDF and editable volume source.
 
-- Develop the site/design intention from 4.1 into an abstract spatial project using signed distance fields. Identify the relationship between the site reading and your field/form decisions.
-- Compare union, intersection and difference using the same source fields. Show the selected result and three controlled parameter variants, with inputs and field logic recorded.
-- Submit two 17 x 11 inch sheets. Sheet 1 explains the site-to-field idea, source fields, Boolean comparisons, parameter variants, sampling resolution and extraction settings.
-- Sheet 2 presents an orthographic elevation, an isometric and an abstract floor plan of the same selected volume. State the plan cut height and show the cut as a horizontal section; a top view alone is not a floor plan. Keep orientation and scale consistent or label any change.
-- Keep the representation abstract: communicate solid/void, depth, rhythm and spatial relationships. Use the Instagram precedents already listed under Resources → Visual precedents to study composition and restraint. Credit the specific posts used and explain one representational choice you adapted; develop your own geometry.
-- Retain the editable source fields and selected volume. This same project continues through discretization (4.3) and the mixed-media model (4.4). A developed room program or construction drawing set is not required.
+- Use the supplied SDF/volume groups to explore one generative strategy informed by the observation from 4.1. For example, use a noise texture to drive a volume and vary its scale or threshold.
+- Show three settings of the same strategy, with key parameter values. Select one of these results and explain the spatial qualities that make it worth fabricating. Boolean comparisons are optional.
+- Submit one 17 x 11 inch sheet with the three variations, a larger isometric of the selected result, key parameters and a short explanation connecting the site observation to your choices. No elevation or abstract floor plan is required.
+- Communicate solid/void, depth and spatial relationships using the Graphic Standards Manual. The Resources visual precedents may guide composition; credit any references used.
+- Retain the editable file and selected volume for contouring and fabrication. Explain the supplied groups' inputs, outputs and purpose; rebuilding their internal SDF algorithms is not required. A noise-driven volume is not necessarily an exact signed distance field.
 
 **Ungraded checkpoints:**
 
-- Week 14 — Nov 24: Ungraded production check: select a volume, show its elevation/isometric/abstract plan, and establish scale before discretizing.
+- Week 14 — Nov 24: Ungraded production check: bring three generative settings, a selected volume in isometric and its intended model scale before contouring.
 
 <a id="p4c"></a>
 
 ### 4.3 — Discretizing the SDF
 
-**Introduced:** Week 14 — Nov 24 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 7%
+**Introduced:** Week 14 — Nov 24 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
-**Present:** One discretization/process sheet; PDF, editable source, numbered cutting layout and printable part meshes.
+**Present:** One 17 x 11 inch fabrication sheet, continued in 4.4; PDF, editable source and full-size numbered cutting file.
 
-- Use the selected 4.2 volume. Compare at least two section directions or intervals, then select and explain one discretization strategy.
-- Develop at least 12 ordered slices with material thickness, spacing and a registration/connection system. Show how the discrete parts approximate the continuous SDF volume.
-- Decide which parts will be laser-cut and which will be 3D printed for 4.4. Give each process a geometric or assembly role, such as sliced body plus printed connectors or base; a decorative unrelated print is not sufficient.
-- Prepare one 17 x 11 inch sheet with the continuous volume, comparison studies, numbered parts, an exploded isometric, assembly order and the proposed connection detail.
-- Check units, model scale, material thickness, clearances and lab-confirmed stock. Export clean, labeled cutting curves and printable meshes; retain the editable model so the parts can regenerate.
-- Test a representative connection before full production. Record the intended fit, measured result and any correction. A small test supports this milestone; the complete model is assessed in 4.4.
+- Use the supplied contouring group on the selected 4.2 volume. Choose one slicing direction and spacing; explain how these translate the form into buildable parts.
+- Let model scale, material thickness and intended spacing determine the number of slices. There is no fixed minimum slice count. Keep parts ordered and numbered.
+- Use a simple assembly strategy such as glued layers, rods or registration guides. Printed connectors are optional. Test a representative part or connection before cutting the full set.
+- Prepare one 17 x 11 inch fabrication sheet with the chosen direction/spacing, a numbered cutting layout, an assembly diagram and brief test notes. A reduced layout belongs on the sheet; submit the full-size cutting file separately. Reserve space for the final photographs added in 4.4.
+- Check units, scale, material thickness, kerf and lab-confirmed stock. Export clean cutting curves and retain the editable file. Explain the supplied group's inputs and outputs; rebuilding it is not required.
 
 **Ungraded checkpoints:**
 
-- Week 15 — Dec 1: Ungraded production check: bring ordered slices, part layout, a connection/fit test and the proposed laser-cut/3D-printed division.
+- Week 15 — Dec 1: Ungraded production check: bring numbered contours, a cutting layout, an assembly diagram and a small material/registration test.
 
 <a id="p4d"></a>
 
-### 4.4 — Mixed-media model — laser cutting and 3D printing
+### 4.4 — Laser-cut model and documentation
 
-**Introduced:** Week 14 — Nov 24 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 7%
+**Introduced:** Week 14 — Nov 24 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
-**Present:** One assembled mixed-media model and one documentation sheet; source, cutting files, print meshes, slicer files and photographs.
+**Present:** One assembled laser-cut model and the completed 4.3 fabrication sheet with photographs; source, cutting file and material/part list. Print files only if used.
 
-- Fabricate and assemble the same project developed in 4.1–4.3 as one mixed-media model that combines laser-cut and 3D-printed components. Both processes are required and must contribute to the model's form, support or assembly.
-- Use the numbered parts and connection strategy from 4.3. Test fit, kerf and printed tolerances before a full batch; revise and regenerate the files after changes.
-- Keep the assembled model within 300 mm on each axis and the laser-cut parts within one confirmed sheet. Confirm the final-project print allocation, stock, sheet size and machine schedule with the instructors/FabLab before production; the earlier CSG allocation is separate.
-- Submit the complete physical assembly and one 17 x 11 inch documentation sheet showing an overall photograph, a detail of the laser-cut/printed connection, process evidence and revisions from the digital model.
-- Include the editable source, final cutting file, printable meshes, slicer projects and a material/part list. Photograph both fabrication processes and credit any supplied assets.
-- Evaluate the model as a spatial translation of the project, including assembly quality, material relationships and fidelity to the intended geometry. An extra standalone CSG print does not replace the required printed component of this model.
+- Fabricate and assemble the contoured project from 4.1–4.3 on the laser cutter. A laser-cut assembly is sufficient; printed connectors or other printed components are optional.
+- Use the numbered parts and simple assembly strategy from 4.3. Test material, kerf and registration before the full batch; revise files as needed. Glue, rods or registration guides are acceptable.
+- Keep the assembled model within 300 mm on each axis and the laser-cut parts within one confirmed sheet. Confirm stock, sheet dimensions and machine access with the instructors/FabLab. Confirm any optional printing allocation separately before printing.
+- Submit the physical model and add an overall photograph, an assembly detail and brief observations to the same 17 x 11 inch fabrication sheet begun in 4.3. No additional presentation sheet is required.
+- Include the editable source, final cutting file, a material/part list and photographs; include printable meshes and slicer files only if you chose to print components. Credit supplied assets.
+- Assessment focuses on fabrication and assembly quality, fidelity to the selected form and learning from tests. The cutting strategy is assessed in 4.3; the shared sheet is not graded twice for its layout.
 
 **Ungraded checkpoints:**
 
-- Week 15 — Dec 1: Ungraded fabrication check: show tested connections, laser-cut/printed sample parts, production progress and a remaining-work plan.
+- Week 15 — Dec 1: Ungraded fabrication check: show a tested sample, assembly strategy, cutting progress and a remaining-work plan.
 
 ## Visual identity and course reviews
 
@@ -351,12 +356,13 @@ Develop one project from attractor-based site analysis through abstract SDF volu
 
 ### BOOK — Final booklet and review
 
-**Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 18%
+**Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
-- Compile all four projects and ten assignments in revised form, using 17 x 11 inch pages and your graphic standards.
-- Include process diagrams, photographs and captions for the CSG print and mixed-media model. Identify substantive revisions after critique.
+- Compile all four projects and ten assignments using the 17 x 11 inch sheets and graphic system developed throughout the semester. Include the shared 4.3–4.4 fabrication sheet once, labeled for both stages.
+- Select substantive revisions in response to critique and identify what changed. Reuse successful existing sheets; redesigning every assignment is not required. Keep the booklet assembled as the semester progresses.
+- Include process diagrams, photographs and captions for the CSG print and laser-cut model.
 - Submit the booklet PDF, a separate revised GSM PDF, editable project files and dependencies, and required fabrication files.
-- Present the mixed-media assembly and the CSG print or its review documentation as directed. The exact final review slot remains to be confirmed.
+- Present the laser-cut assembly and the CSG print or its review documentation as directed. The exact final review slot remains to be confirmed.
 
 **Ungraded checkpoints:**
 
@@ -373,11 +379,11 @@ Develop one project from attractor-based site analysis through abstract SDF volu
 
 ## Submission and presentation standards
 
-Use **17 × 11 inch** sheets and booklet pages, following the Graphic Standards Manual. Submit a PDF and the editable computational file for each visual milestone. Include a clear result, a diagram of the procedure, the relevant parameter values and a concise explanation of the design decision. Source attribution belongs on the sheet or its documentation page.
+Use **17 × 11 inch** sheets and booklet pages, following the Graphic Standards Manual. Submit a PDF and the editable computational file for each visual milestone. Include the results and process evidence specified in the brief, relevant parameter values and a concise explanation of the design decision. Source attribution belongs on the sheet or its documentation page. Stages 4.3 and 4.4 share one fabrication sheet.
 
 Keep native node names visible. Use Frames for short explanations and name exposed input parameters clearly. Students may name their own reusable groups, but custom labels must not conceal which native node is being taught. Small readable graphs are preferred to unnecessary complexity.
 
-Before each submission, open the file from a clean folder, confirm dependencies and units, and check that changing the exposed inputs produces the claimed alternatives. Supplied specialist groups are permitted for volume and section operations when students can explain their inputs, outputs and role. Students build the geometry, repetition, conditionals and attractor relationships in the early exercises. P3d uses the Mixtli add-on; students must explain its inputs, output and their interpretation.
+Before each submission, open the file from a clean folder, confirm dependencies and units, and check that changing the exposed inputs produces the claimed alternatives. Students build the geometry, repetition, conditionals and façade-attractor relationships in the early exercises. For Project 4, instructors provide point-cloud analysis, SDF/volume and contouring node groups. Students explain their inputs, outputs and role, test settings and interpret results; rebuilding the internal algorithms is not required. Credit supplied groups and retain the editable file with the chosen settings.
 
 ## Software and data
 
@@ -395,9 +401,9 @@ Complete FabLab Safety Orientation before machine use. Confirm enrollment, equip
 
 **CSG print (2.2):** print the CSG object from 2.1. Maximum 60 mm on each axis and 200 g of filament including failed attempts. Use a draft layer height and an orientation that prints without supports.
 
-**Mixed-media project model (4.4):** combine laser-cut and 3D-printed components in one assembly developed from the SDF project. Maximum 300 mm on each assembled axis and one confirmed sheet of laser-cut material. Confirm stock, sheet dimensions and the separate final-project print allocation before production. Test kerf and fit, label/nest cut parts and test printed connections. Tests and failed parts count toward the confirmed allocations.
+**Laser-cut project model (4.4):** contour the selected generative volume and assemble laser-cut parts using glue, rods or a simple registration system. Maximum 300 mm on each assembled axis and one confirmed sheet of laser-cut material. Confirm stock, sheet dimensions and machine access before production. Test material, kerf and registration; label and nest the parts. Printed components are optional and require a separately confirmed allocation if used. Tests and failed parts count toward confirmed allocations.
 
-These are the two required physical submissions: the CSG print and the integrated mixed-media model. Pen plotting is not required. Material availability and machine time require FabLab confirmation; keep backups and account for replacement material beyond the allocation.
+These are the two required physical submissions: the CSG print and the laser-cut model. Pen plotting is not required. Material availability and machine time require FabLab confirmation; keep backups and account for replacement material beyond the allocation.
 
 ## Course grading scale
 
@@ -462,6 +468,8 @@ Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a 
 
 ### Technical documentation
 
+- [BIG-style process diagram tutorial](https://www.youtube.com/watch?v=8Y5Rn3bDL5s) — CSG 2.1: reference for the operation sequence and graphic presentation.
+- [Three-point lighting tutorial](https://www.youtube.com/watch?v=RDbrOpnIY7Q) — Module 3.1: reference for one consistent key, fill and rim/back lighting strategy across three panel variations.
 - [Blender Repeat Zone](https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/utilities/repeat_zone.html) — Explicit iteration with Repeat Input and Repeat Output.
 - [Blender Field to Grid](https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/field_to_grid.html) — Sampling fields on a voxel-grid topology.
 - [Blender SDF Grid Offset](https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/sdf_grid_offset.html) — Distance-based offset of an SDF surface.
@@ -469,11 +477,11 @@ Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a 
 
 ## Material availability
 
-Posted lessons link their Blender examples and screenshots. Use each file as a reference while building your own work. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
+Posted lessons link their Blender examples and screenshots. Use the examples as references while building your own work; the designated Project 4 node groups are supplied tools that students may reuse directly. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
 
-**Site analysis:** students pick their own site and use the Mixtli add-on for Blender. The add-on and install notes will be posted before Week 9.
+**Project 4 tools:** instructors provide a prepared point-cloud dataset and analysis groups for 4.1, SDF/volume groups for 4.2, and contouring groups for 4.3. Students may use an approved alternative dataset. The teaching packages and usage notes will be linked before each assignment begins; students are not required to build these tools internally.
 
-The 3.2 material library is planned and has not yet been linked. Students may create their own materials. Final-project print allocation and machine slots remain to be confirmed. Revised slide decks are not yet posted; use the current briefs and lesson notes.
+The 3.2 material library is planned and has not yet been linked. Students may create their own materials. Final-project laser-cut stock and machine slots remain to be confirmed; optional printing requires a separate allocation if used. Revised slide decks are not yet posted; use the current briefs and lesson notes.
 
 ## Decisions before issue
 
@@ -489,14 +497,14 @@ The 3.2 material library is planned and has not yet been linked. Students may cr
 - Organize ten assignments into four projects: Graphic Standards Manual, CSG, Paneling, and Integrated Spatial Project.
 - 3.1 requires one student-authored module material, a ground plane and three-point lighting (key, fill, rim/back). 3.2 permits supplied library materials or student-authored materials.
 - 3.3 uses attractor data to drive one geometric parameter of the existing panel, documented in façade elevation and isometric.
-- 4.1 site analysis → 4.2 abstract SDF volume → 4.3 discretization → 4.4 combined laser-cut/3D-printed model develop one project.
-- Use the instructor-accepted draft weights: 7%, 14%, 21%, 35% across the four projects, 18% booklet and 5% participation. Midterm accumulates the first five submissions (35% of the course).
+- 4.1 site analysis → 4.2 generative volume → 4.3 contouring → 4.4 laser-cut assembly develop one project using supplied node groups. Printed components are optional.
+- Use the instructor-approved grading allocation: 5%, 15%, 30%, 35% across the four projects, 10% booklet and 5% participation. Midterm accumulates the first five submissions (40% of the course).
 
 ### Working proposals
 
 - Review the proposed September 29–October 27 staged deadlines and the November 3 start of attractors. Keep October 6 and December 1 free of graded submissions.
 - Façade 3.3 due November 17 and site analysis 4.1 due November 24; 4.2–4.4 due at the final review with earlier ungraded production checks.
-- Keep the final project focused enough to prototype connections by December 1 and complete laser cutting, printing and documentation before the confirmed final review.
+- Keep the final project focused enough to test assembly by December 1 and complete laser cutting and documentation before the confirmed final review.
 - The previous Python/AI final and extra-credit scheme remain outside the required core assignments.
 
 ### Administrative items to confirm
@@ -505,8 +513,8 @@ The 3.2 material library is planned and has not yet been linked. Students may cr
 - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
 - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
 - Confirm the attendance sign-in method and the accreditation criteria used by the School.
-- Post and test the material library before 3.2 is due; post the Mixtli add-on/install notes before 4.1.
-- Confirm the separate final-project filament allocation and machine capacity for the mixed-media model.
+- Post and test the material library before 3.2 is due. Supply a prepared point cloud and analysis groups before 4.1, volume groups before 4.2, and contouring groups before 4.3, with usage notes.
+- Confirm laser-cut stock and machine capacity for the final model; approve any optional printing separately.
 
 # Standing course and university policies
 

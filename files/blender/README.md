@@ -4,7 +4,7 @@
 
 Download example files individually. These are lesson stages, not fixed weeks; continue a file for another class when needed.
 
-Two classes, two example files: 1D, 2D and 3D arrays in Week 6 (sheet 1); hexagonal, radial and curve arrays in Week 7 (sheet 2). A tutorial video is planned but not yet posted.
+Introduce 1D/2D/3D arrays, then use supported practice and critique to complete the module, array comparisons and manual by midterm. Other array families are optional later practice; a recording is not yet posted.
 
 Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes.
 
@@ -16,16 +16,16 @@ Build your own file. Use these examples to check a step when you are stuck, then
 | --- | --- | --- | --- | --- |
 | S01 | 2–3 | [Constructive Solid Geometry](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | 01 - CSG example | U02 Constructive Solid Geometry |
 | S02 | 4–5 | [Descriptive Geometry](02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Descriptive Geometry |
-| S03 | 6–7 | [Arrays — Part 1: linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid | U04 Arrays |
-| S04 | 6–7 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays |
-| S05 | 8–9 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractor |
+| S03 | 6–10 | [Arrays — Part 1: linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid | U04 Arrays |
+| S04 | 6–10 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays |
+| S05 | 11 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractor |
 | S06 | Optional | [Optional — Tessellation and Lattices](05-tessellation-lattices/Tessellation-and-Lattices.blend) | Tessellation, Lattice, Attractor lattice | U06 Tessellation, panelization, lattices and simulation |
-| S07 | 10–11 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Volumetric Data and Fields |
-| S08 | 10–11 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Volumetric Data and Fields |
-| S09 | 10–11 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Volumetric Data and Fields |
-| S10 | 12–13 | [Discretizing Geometry — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Discretizing Geometry |
-| S11 | 12–13 | [Discretizing Geometry — section parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Discretizing Geometry |
-| S12 | 14–15 | [Final — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U10 Final |
+| S07 | 12–13 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Volumetric Data and Fields |
+| S08 | 12–13 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Volumetric Data and Fields |
+| S09 | 12–13 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Volumetric Data and Fields |
+| S10 | 14 | [Discretizing Geometry — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Discretizing Geometry |
+| S11 | 14 | [Discretizing Geometry — section parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Discretizing Geometry |
+| S12 | 15 | [Final — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U10 Final |
 
 **S01 — Constructive Solid Geometry.** The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the native nodes; these controls are not in the modifier.
 

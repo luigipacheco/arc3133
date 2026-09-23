@@ -10,7 +10,7 @@ sitemap: false
 
 ## Course material has moved
 
-The four projects are now GSM, CSG, Paneling and Volumetric Data. Open the current brief below.
+The four projects are now GSM, CSG, Paneling and Integrated Spatial Project. Open the current brief below.
 
 <a id="p2a"></a>
 
@@ -18,8 +18,8 @@ The four projects are now GSM, CSG, Paneling and Volumetric Data. Open the curre
 
 <a id="p2b"></a>
 
-[P3c — Attractor: 2D field drawing]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3c)
+[P3c — Attractor-driven panel façade]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3c)
 
 <a id="site-analysis"></a>
 
-[P3d — Attractor: layered site analysis]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3d)
+P4a — Site analysis using attractors — *not yet released*

@@ -5,6 +5,7 @@ import os, math
 from nb import *
 from slidekit import *
 import coursedata as C
+C.require_current_deck(10)
 import diagrams as G
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.util import Pt

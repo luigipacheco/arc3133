@@ -4,6 +4,7 @@ import os
 from nb import *
 from slidekit import *
 import coursedata as C
+C.require_current_deck(3)
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.util import Pt, Inches

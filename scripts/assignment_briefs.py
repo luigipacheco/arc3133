@@ -61,19 +61,20 @@ def project_markdown(course, project):
     title = project.get("brief_title", project["title"])
     out = f"# {project['id']} - {title}\n\n"
     out += f"{course.meta['code']} / {course.meta['title']} / {course.meta['term']}\n\n"
-    out += f"Revision: {course.data['revision']}. Dates and weights follow the course schedule.\n\n"
+    out += f"Revision: {course.data['revision']}. Instructor review draft. Dates and weights are proposed; review before publication.\n\n"
     if project["id"] == "P3":
-        out += "Current scope: descriptive geometry and 1D, 2D and 3D arrays. Attractors and other array families are reserved for later work.\n\n"
+        out += "3.1: module, authored material, ground plane and three-point lighting. 3.2: arrays with library or student-authored materials. 3.3: attractor-driven panel façade, shown in elevation and isometric.\n\n"
     for aid in project["brief_milestones"]:
         a = course.by_id[aid]
-        out += f"## {aid} - {a['title']}\n\n"
-        out += f"**Introduced:** {course.when(a['release'])} / **Due:** {course.when(a['due'])} / **Weight:** {a['weight']}%\n\n"
+        out += f"## {a.get('number', aid)} - {a['title']}\n\n"
+        out += f"**Introduced:** {course.when(a['release'])} / **Due:** {course.deadline(a)} / **Weight:** {a['weight']}%\n\n"
         if a.get("checkpoints"):
             out += "**Preparation checks:** " + "; ".join(
                 course.when(c["week"]) + ": " + c["text"] for c in a["checkpoints"]
             ) + "\n\n"
         out += body(a)
-    out += "**Shared standards:** Course software, fabrication, attribution and AI policies apply. Submit through the channel announced in class/Canvas. Test the packaged source from a clean folder. Percentages are existing course weights. This handout uses US Letter; student sheets are 17 x 11 inches.\n"
+    out += "**Shared standards:** Course software, fabrication, attribution and AI policies apply. Submit through the channel announced in class/Canvas. Test the packaged source from a clean folder. Percentages follow the instructor review draft. This handout uses US Letter; student sheets are 17 x 11 inches.\n"
+    out += "\n**Midterm grade:** " + course.midterm_note() + "\n"
     return out
 
 
@@ -126,7 +127,8 @@ def render_pdf(path, markdown, course, project):
                 if milestones:
                     story.append(PageBreak())
                 milestones += 1
-                active_aid = block[3:].split(" - ", 1)[0]
+                label = block[3:].split(" - ", 1)[0]
+                active_aid = next((a["id"] for a in project["milestones"] if a.get("number", a["id"]) == label), label)
                 story.append(Paragraph(inline(block[3:]), styles["milestone"]))
         elif block.startswith("### "):
             if (active_aid, block[4:]) in {("P2b", "Deliverables"), ("P3b", "Workflow")}:
@@ -142,7 +144,7 @@ def render_pdf(path, markdown, course, project):
                 story.extend(KeepTogether([item]) for item in items)
         elif re.match(r"^\d+\. ", block):
             story.extend(Paragraph(inline(line), styles["body"]) for line in block.splitlines())
-        elif block.startswith("**Shared standards:"):
+        elif block.startswith(("**Shared standards:", "**Midterm grade:")):
             story.append(Paragraph(inline(block), styles["note"]))
         else:
             story.append(Paragraph(inline(block.replace("\n", " ")), styles["body"]))

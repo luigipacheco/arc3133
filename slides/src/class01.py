@@ -4,6 +4,7 @@ import os
 from nb import *
 from slidekit import *
 import coursedata as C
+C.require_current_deck(1)
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.util import Pt
 

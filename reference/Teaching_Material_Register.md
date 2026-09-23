@@ -6,6 +6,8 @@ Posted lessons link their Blender examples and screenshots. Use each file as a r
 
 **Site analysis:** students pick their own site and use the Mixtli add-on for Blender. The add-on and install notes will be posted before Week 9.
 
+The 3.2 material library is planned and has not yet been linked. Students may create their own materials. Final-project print allocation and machine slots remain to be confirmed. Revised slide decks are not yet posted; use the current briefs and lesson notes.
+
 | Unit | Topic | Blender session | Released | Recording / revised slides |
 | --- | --- | --- | --- | --- |
 | U01 | Graphic Standards Manual | To prepare | Posted | Not linked / to prepare |
@@ -24,30 +26,30 @@ Every class has one deck, built with the course slide kit from `slides/src` and 
 
 | Week | Topic | Files | Status | Contents |
 | --- | --- | --- | --- | --- |
-| 1 | Graphic Standards Manual | [PPTX](../slides/ARC3133_Class01.pptx) / [PDF](../slides/ARC3133_Class01.pdf) | Current | GSM brief; four projects / nine assignments; three manuals to study. |
-| 2 | Constructive Solid Geometry | [PPTX](../slides/ARC3133_Class02.pptx) / [PDF](../slides/ARC3133_Class02.pdf) | Current | CSG; BIG-style process diagram; P2a issued. |
-| 3 | Constructive Solid Geometry | [PPTX](../slides/ARC3133_Class03.pptx) / [PDF](../slides/ARC3133_Class03.pdf) | Current | CSG continued + 3D printing: machine, manifold, overhangs, orientation, slicer, settings, failures, FabLab; P2b issued. |
-| 4 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class04.pptx) / [PDF](../slides/ARC3133_Class04.pdf) | Current | Descriptive geometry: point to solid, pyramid, Boolean; P2a due; P3a issued. |
-| 5 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class05.pptx) / [PDF](../slides/ARC3133_Class05.pdf) | Current | Your own module: parameters, points, faces, tiling; one material and lighting for the P3a sheet. |
-| 6 | Arrays | [PPTX](../slides/ARC3133_Class06.pptx) / [PDF](../slides/ARC3133_Class06.pdf) | Current | Arrays 1D, 2D, 3D (P3b sheet 1); P3a due; P3b issued; P2b print checkpoint. |
-| 7 | Arrays | [PPTX](../slides/ARC3133_Class07.pptx) / [PDF](../slides/ARC3133_Class07.pdf) | Current | P3b now focuses on 1D, 2D and 3D arrays, with comparisons and conditional selection on sheet 2. Hexagonal, radial and curve arrays remain later practice; revise the deck before reuse. Studio-review week, nothing due. |
-| 8 | Attractor | [PPTX](../slides/ARC3133_Class08.pptx) / [PDF](../slides/ARC3133_Class08.pdf) | Current | Attractors on a 2D field and its line drawing (plotting optional); P3b due; P3c issued. |
-| 9 | Attractor | [PPTX](../slides/ARC3133_Class09.pptx) / [PDF](../slides/ARC3133_Class09.pdf) | Current | Layered site analysis with Mixtli; P3d issued; P3c review. |
-| 10 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class10.pptx) / [PDF](../slides/ARC3133_Class10.pdf) | Current | Mid-semester deadline (through Arrays + P3c), then SDF introduction; P4a issued. |
-| 11 | Volumetric Data and Fields | [PPTX](../slides/ARC3133_Class11.pptx) / [PDF](../slides/ARC3133_Class11.pdf) | Current | SDF volume studio work; P4a checkpoint; P3d due. |
-| 12 | Discretizing Geometry | [PPTX](../slides/ARC3133_Class12.pptx) / [PDF](../slides/ARC3133_Class12.pdf) | Current | Discretizing geometry; P4a due; P4b issued; booklet checkpoint. |
-| 13 | Discretizing Geometry | [PPTX](../slides/ARC3133_Class13.pptx) / [PDF](../slides/ARC3133_Class13.pdf) | Current | Parts for the laser cutter: thickness, registration, kerf, nesting; P4b checkpoint. |
-| 14 | Final | [PPTX](../slides/ARC3133_Class14.pptx) / [PDF](../slides/ARC3133_Class14.pdf) | Current | Final production, assembly, photography, booklet. |
-| 15 | Final | [PPTX](../slides/ARC3133_Class15.pptx) / [PDF](../slides/ARC3133_Class15.pdf) | Current | Documentation and booklet; review week, nothing due. |
+| 1 | Graphic Standards Manual | [PPTX](../slides/ARC3133_Class01.pptx) / [PDF](../slides/ARC3133_Class01.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 2 | Constructive Solid Geometry | [PPTX](../slides/ARC3133_Class02.pptx) / [PDF](../slides/ARC3133_Class02.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 3 | Constructive Solid Geometry | [PPTX](../slides/ARC3133_Class03.pptx) / [PDF](../slides/ARC3133_Class03.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 4 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class04.pptx) / [PDF](../slides/ARC3133_Class04.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 5 | Descriptive Geometry | [PPTX](../slides/ARC3133_Class05.pptx) / [PDF](../slides/ARC3133_Class05.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 6 | Arrays | [PPTX](../slides/ARC3133_Class06.pptx) / [PDF](../slides/ARC3133_Class06.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 7 | Arrays | [PPTX](../slides/ARC3133_Class07.pptx) / [PDF](../slides/ARC3133_Class07.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 8 | Arrays | [PPTX](../slides/ARC3133_Class08.pptx) / [PDF](../slides/ARC3133_Class08.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 9 | Arrays | [PPTX](../slides/ARC3133_Class09.pptx) / [PDF](../slides/ARC3133_Class09.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 10 | Arrays | [PPTX](../slides/ARC3133_Class10.pptx) / [PDF](../slides/ARC3133_Class10.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 11 | Attractor-driven façade | [PPTX](../slides/ARC3133_Class11.pptx) / [PDF](../slides/ARC3133_Class11.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 12 | Site analysis and SDF exploration | [PPTX](../slides/ARC3133_Class12.pptx) / [PDF](../slides/ARC3133_Class12.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 13 | Site analysis and SDF exploration | [PPTX](../slides/ARC3133_Class13.pptx) / [PDF](../slides/ARC3133_Class13.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 14 | Discretizing Geometry | [PPTX](../slides/ARC3133_Class14.pptx) / [PDF](../slides/ARC3133_Class14.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 15 | Mixed-media model and final documentation | [PPTX](../slides/ARC3133_Class15.pptx) / [PDF](../slides/ARC3133_Class15.pdf) | Needs revision | Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
 
 [Detailed project and materials audit](ARC3133_Project_and_Materials_Audit_2026-09-16.md)
 
-The four projects are GSM, CSG, Paneling and Volumetric Data. Week 10 is the hard deadline for everything through Arrays; there is no midterm review. Paneling includes four separate assignments: the module, arrays, the 2D field drawing (due Week 10) and the layered site analysis (due Week 11). The two array sheets form one assignment; the two attractor sheets form two assignments.
+The revised sequence contains ten assignments in four projects: 1 Manual; 2.1 CSG sheet; 2.2 CSG print; 3.1 Module; 3.2 Arrays; 3.3 Attractor façade; 4.1 Site analysis; 4.2 SDF exploration; 4.3 Discretization; 4.4 Mixed-media model. The two array sheets remain one assignment. The standalone 2D attractor drawing has been replaced by a façade elevation and isometric showing an actual panel parameter response.
 
-Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and its line drawing, with pen plotting as an option; Week 9 teaches the layered site analysis with Mixtli. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
+For 3.1 students create one module material, place the module on a ground plane and set up key/fill/rim three-point lighting. This describes three lighting roles, not the software's Point light type. For 3.2 students may use the supplied material library or create their own; post and verify the library before the deadline.
 
-Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
+Site analysis begins Project 4 and must inform the same project through SDF, discretization and mixed-media fabrication. Use the Instagram references already under Resources for 4.2 representation. Require a horizontal section for the abstract floor plan, coordinated with elevation and isometric. Both laser cutting and 3D printing belong to the final assembled model.
 
-Draft weights use 7% per assignment in Projects 1-3 and 14% for each Project 4 assignment. The required fabricated outputs are the CSG print and the sliced volume; plotting the P3c drawing is optional. Review machine capacity and the later schedule in Week 10.
+The instructor accepted the draft grading allocation: early submissions stay at 7% each; site analysis moves into Project 4 at 7%, SDF remains 14%, and discretization/model split 14% into 7% each. Dates remain proposals. The final sequence is compressed: protect the November 24 volume selection and December 1 connection test, and confirm lab capacity and print allocation before issuing the full Project 4 brief.
 
-Every class now has a deck generated from slides/src that reads dates and briefs from this file; rebuild the decks after any calendar or brief change. Video tutorials exist for CSG and Descriptive Geometry (Blender and Rhino + Grasshopper); record the others as time allows. Keep institutional policies separate from curriculum edits.
+Detailed PDFs currently cover Projects 1–3. Project 4 has a coordinated outline; prepare its detailed handout after reviewing its scope and fabrication allocation. Existing slide decks and their generators need revision for the new sequence and numbering before reuse. Keep institutional policies and historical assets unchanged.

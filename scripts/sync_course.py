@@ -16,6 +16,7 @@ import sys
 import yaml
 import session_pages
 import assignment_briefs
+import course_deadlines
 from output_files import write_text
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,6 +73,7 @@ class Course:
         self.outputs = {}
         self.validate()
         assignment_briefs.validate(self)
+        course_deadlines.validate(self)
 
     def apply_sequence(self):
         """One approved sequence owns weeks and session/lesson membership."""
@@ -223,6 +225,22 @@ class Course:
         d = date.fromisoformat(self.weeks[value]["date"])
         return f"Week {value} — {d.strftime('%b')} {d.day}"
 
+    def due_time(self, assignment):
+        return course_deadlines.time_label(self, assignment)
+
+    def deadline(self, assignment):
+        return course_deadlines.deadline(self, assignment)
+
+    def midterm_note(self):
+        return course_deadlines.note(self)
+
+    def midterm_summary(self, web=False):
+        return course_deadlines.summary(self, web)
+
+    @staticmethod
+    def label(a):
+        return a.get("number", a["id"]) + " — " + a["title"]
+
     def banner(self):
         """The instructor-facing notice. Syllabus and reference documents only."""
         return (f"> **{self.data['status']} · {self.data['revision']}.** The teaching sequence is "
@@ -236,7 +254,7 @@ class Course:
 
     def project_url(self, p):
         p = self.projects[p] if isinstance(p, str) else p
-        return f"/assignments/{p['id'].lower()}-{slug(p['title'])}/"
+        return f"/assignments/{p['id'].lower()}-{p.get('url_slug', slug(p['title']))}/"
 
     def assignment_url(self, a):
         if "project" in a:
@@ -262,24 +280,25 @@ class Course:
         rows = []
         for w in self.weeks.values():
             due = [a for a in self.assessments if a["due"] == w["week"]]
-            labels = [f"{a['id']} — {a['title']}" for a in due]
+            labels = [self.label(a) for a in due]
             if web:
                 labels = [self.link(label, self.assignment_url(a)) for label, a in zip(labels, due)]
+            labels = [label + (f" ({self.due_time(a)})" if self.due_time(a) else "") for label, a in zip(labels, due)]
             focus = w["title"]
             if w["week"] == self.meta.get("midterm_week"):
-                focus = "Mid-semester deadline (everything through Arrays); " + focus[0].lower() + focus[1:]
+                focus = "Midterm deadline and accumulated grade; " + focus[0].lower() + focus[1:]
             rows.append([w["week"], self.when(w["week"]).split(" — ")[1], focus, "; ".join(labels) or ("No graded submission" if w.get("no_due") else "—")])
         final = [a for a in self.assessments if a["due"] == "final"]
-        rows.append(["Final", self.meta["final_window"], "Final review", "; ".join(a["id"] + " — " + a["title"] for a in final) + "; revised GSM"])
+        rows.append(["Final", self.meta["final_window"], "Final review", "; ".join(self.label(a) for a in final) + "; revised GSM"])
         return table(["Week", "Date", "Teaching focus", "Submissions"], rows)
 
     def assessment_table(self, web=False):
         rows = []
         for a in self.assessments:
-            name = f"{a['id']} — {a['title']}"
+            name = self.label(a)
             if web:
                 name = self.link(name, self.assignment_url(a))
-            rows.append([name, self.when(a["release"]), self.when(a["due"]), f"{a['weight']}%"])
+            rows.append([name, self.when(a["release"]), self.deadline(a), f"{a['weight']}%"])
         rows.append(["Total", "", "", "100%"])
         return table(["Assignment", "Introduced", "Due", "Weight"], rows)
 
@@ -293,8 +312,8 @@ class Course:
         return table(["Project", "Assignments", "Weight"], rows)
 
     def assignment(self, a, heading="###", detailed=False):
-        body = f"<a id=\"{a['id'].lower()}\"></a>\n\n{heading} {a['id']} — {a['title']}\n\n"
-        body += f"**Introduced:** {self.when(a['release'])} · **Due:** {self.when(a['due'])} · **Weight:** {a['weight']}%\n\n"
+        body = f"<a id=\"{a['id'].lower()}\"></a>\n\n{heading} {self.label(a)}\n\n"
+        body += f"**Introduced:** {self.when(a['release'])} · **Due:** {self.deadline(a)} · **Weight:** {a['weight']}%\n\n"
         if a.get('deliverable'):
             body += '**Present:** ' + a['deliverable'] + '\n\n'
         body += assignment_briefs.body(a, heading + "#") if detailed and a.get("brief") else bullets(a["requirements"])
@@ -306,7 +325,7 @@ class Course:
     def submission_table(self, web=False):
         rows = []
         for a in self.assignments:
-            title = a['id'] + ' — ' + a['title']
+            title = self.label(a)
             if web:
                 title = self.link(title, self.assignment_url(a))
             rows.append([title, a['deliverable']])
@@ -441,8 +460,8 @@ class Course:
             upcoming = [a for a in upcoming if a["due"] <= cutoff]
         out = "## What is next\n\n" if heading else ""
         if upcoming:
-            rows = [[self.link(a["id"] + " — " + a["title"], self.assignment_url(a)),
-                     self.when(a["due"]), f"{a['weight']}%"] for a in upcoming]
+            rows = [[self.link(self.label(a), self.assignment_url(a)),
+                     self.deadline(a), f"{a['weight']}%"] for a in upcoming]
             out += table(["Next due", "Date", "Weight"], rows) + "\n"
         else:
             out += "No dated submissions remain; the final review closes the course.\n\n"
@@ -453,7 +472,7 @@ class Course:
     def home(self):
         """Introduce the course, then explain the site, then show the semester."""
         m, h = self.meta, self.data["home"]
-        out = front(m["title"], "index")
+        out = front(m["title"], "index") + self.notice()
         people = " and ".join(p["name"] for p in m["instructors"])
         out += (f"**{m['code'].split('-')[0].strip()} · {m['title']}** · {m['institution']}  \n"
                 f"{m['term']} · {m['meeting']} · {people}\n\n")
@@ -464,10 +483,11 @@ class Course:
         out += "## Where we are\n\n" + self.latest_class()
         out += self.whats_next(limit=3, heading=False)
         out += "## The semester\n\n"
-        out += ("Topics run in order, usually two classes each. Everything through Arrays is due by "
+        out += ("The proposed calendar provides practice through midterm, followed by the attractor façade and integrated project. Everything through Arrays is due by "
                 + self.when(self.meta['midterm_week']) + ", the mid-semester deadline.\n\n")
         out += self.sequence_table() + "\n"
         out += "## Four projects\n\n" + self.project_spine() + "\n"
+        out += self.midterm_note() + " " + self.link("Midterm grade calculation", "/assignments/overview/#midterm-grade") + "\n\n"
         out += "## How we work\n\n" + h["how_we_work"].strip() + "\n\n"
         out += (self.link("Syllabus, calendar and policies", "/resources/course-policies/")
                 + " · " + self.link("Assignments and grading", "/assignments/overview/") + "\n")
@@ -556,6 +576,7 @@ class Course:
         out += "## Four projects built through short assignments\n\n" + self.project_table() + "\n"
         out += "## Target teaching calendar\n\n" + self.calendar() + "\n"
         out += "## Assignments and grading\n\n" + self.data["assessment_notes"] + "\n" + self.assessment_table() + "\n"
+        out += self.midterm_summary(web=web)
         for p in self.projects.values():
             out += f"## {p['id']} — {p['title']}\n\n{p['description']}\n\n"
             out += "".join(self.assignment(a) for a in p["milestones"])
@@ -602,13 +623,13 @@ class Course:
                 out += "\n"
             out += session_pages.files_section(self, w['week'])
             due = [a for a in self.assessments if a["due"] == w["week"]]
-            out += "## Due this class\n\n" + (bullets([self.link(a["id"] + " — " + a["title"], self.assignment_url(a)) + f" ({a['weight']}%)" for a in due]) if due else "No graded submission is scheduled.\n") + "\n"
+            out += "## Due this week\n\n" + (bullets([self.link(self.label(a), self.assignment_url(a)) + f" ({a['weight']}%)" + (f" — {self.due_time(a)}" if self.due_time(a) else "") for a in due]) if due else "No graded submission is scheduled.\n") + "\n"
             checkpoints = [(a, c) for a in self.assessments for c in a.get("checkpoints", []) if c["week"] == w["week"]]
             if checkpoints:
                 out += "## Preparation checks\n\n" + bullets([f"{a['id']}: {c['text']}" for a,c in checkpoints]) + "\n"
             introduced = [a for a in self.assessments if a["release"] == w["week"]]
             if introduced:
-                out += "## Introduced / briefed\n\n" + bullets([self.link(a["id"] + " — " + a["title"], self.assignment_url(a)) for a in introduced]) + "\n"
+                out += "## Introduced / briefed\n\n" + bullets([self.link(self.label(a), self.assignment_url(a)) for a in introduced]) + "\n"
             nxt = self.weeks.get(w["week"] + 1)
             out += "## Before next class\n\n"
             if nxt:
@@ -618,6 +639,7 @@ class Course:
                 self.emit(f"modules/classes/_posts/2000-01-{w['week']:02d}-class-{w['week']:02d}.md", out)
         assessment_intro, rubrics = self.data['assessment_notes'].split('\n\n', 1)
         overview = front("Assignments · overview", categories=["assignments"]) + self.notice() + assessment_intro + "\n\n" + self.release_note() + self.project_table(True) + "\n## What to present\n\n" + self.submission_table(True) + "\n## Dates and weights\n\n" + self.assessment_table(True) + "\n## How work is assessed\n\n" + rubrics + "\n## Shared standards\n\n" + self.data["presentation"] + "\n" + self.link("Fabrication, AI and standing policies", "/resources/course-policies/")
+        overview += "\n\n" + self.midterm_summary(web=True)
         self.emit("modules/assignments/_posts/1999-12-31-overview.md", overview)
         for i,p in enumerate(self.projects.values(), 2):
             out = front(p["id"] + " · " + p["title"], categories=["assignments"]) + self.notice() + p["description"] + "\n\n"
@@ -625,13 +647,16 @@ class Course:
             if p.get("brief_pdf"):
                 out += f"**[Download the {p['id']} assignment brief (PDF)]({BASE}/{p['brief_pdf']})**\n\n"
                 if p["id"] == "P3":
-                    out += "The PDF covers panel construction and 1D, 2D and 3D arrays. Attractor briefs below are later work.\n\n"
-                out += "Jump to: " + " / ".join(f"[{a['id']}](#{a['id'].lower()})" for a in p["milestones"]) + "\n\n"
+                    out += "The PDF covers 3.1 module construction/material/three-point lighting, 3.2 arrays, and 3.3 the attractor-driven façade.\n\n"
+                out += "Jump to: " + " / ".join(f"[{a.get('number', a['id'])}](#{a['id'].lower()})" for a in p["milestones"]) + "\n\n"
             out += "".join(self.assignment(a, "##", detailed=True) for a in p["milestones"])
+            if p["id"] == "P3":
+                out += '<a id="p3d"></a>\n\nSite analysis is now Assignment 4.1 in the integrated project. ' + self.link("Open 4.1", self.assignment_url(self.by_id["P4a"])) + "\n\n"
+
             out += "## Related lessons\n\n" + bullets([self.link(u + " — " + self.units[u]["title"], self.unit_url(self.units[u])) for u in p["units"]])
             out += "\n" + self.link("Shared submission standards and grading", "/assignments/overview/") + "\n"
             if p["id"] in self.open_work:
-                self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{p['id'].lower()}-{slug(p['title'])}.md", out)
+                self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{p['id'].lower()}-{p.get('url_slug', slug(p['title']))}.md", out)
         for a, i in [(self.by_id["BOOK"],7)]:
             if a["id"] not in self.open_work:
                 continue
@@ -674,7 +699,7 @@ class Course:
             self.emit("modules/resources/_posts/2000-01-05-blender-screenshots.md", gallery)
         examples = front('Example files · reference only', categories=['resources'], permalink='/resources/example-files/')
         examples += '# Example files\n\n' + self.blender['reference_note'] + '\n\n'
-        examples += 'Download only the example for the class you are working on. Arrays uses two files across two classes.\n\n'
+        examples += 'Download only the example for the class you are working on. Arrays uses two example files across the practice block.\n\n'
         rows = []
         optional_rows = []
         for s in self.sessions:
@@ -718,7 +743,7 @@ class Course:
                   "and every link to it becomes plain text marked *not yet released*. The calendar, the lesson list and the assignment table still show every row with its date, so nothing looks missing.\n\n"
                   "The weekly move is one edit — add the week number, the unit ids and any newly briefed assignment, then regenerate:\n\n"
                   "```text\nrelease:\n  classes: [1, 2, 3, 4, 5, 6]\n  tutorials: [U01, U02, U03, U04, U05]\n  assignments: [P1, P2, P3, BOOK]\n```\n\n"
-                  "Assignments take the project id — listing `P1` posts GSM; `P2` posts both CSG briefs; `P3` posts all four Paneling briefs. The assignment overview page is always posted.\n\n"
+                  "Assignments take the project id — listing `P1` posts GSM; `P2` posts both CSG briefs; `P3` posts all three Paneling briefs. The assignment overview page is always posted.\n\n"
                   "Use `all` on either line to publish everything. To preview the finished site locally without editing the source, "
                   "run `SYNC_RELEASE=all python scripts/sync_course.py` — then run it again without the variable before committing, "
                   "or the held-back pages go live.\n\n"
@@ -745,12 +770,15 @@ class Course:
                   "## License\n\nCourse content CC BY-SA 4.0 unless noted. Template © P2PU.\n")
         readme += "\n## Assignment brief structure and PDFs\n\n"
         readme += "Each detailed brief follows Description, Rules & Constraints, Parameters, Required Studies, Workflow, Deliverables, Evaluation, and Before You Submit. State numerical limits, visible evidence, exact sheet contents, native files and naming so students can check their submission.\n\n"
-        readme += "Edit the milestone requirements and brief fields in syllabus/course.yml. The same text generates the website and the project PDFs; never edit either output separately. Existing milestone IDs own the dates and grading. P1 covers GSM; P2 covers P2a/P2b; the current P3 PDF covers P3a/P3b only, with 1D/2D/3D arrays. Later attractor briefs remain separate.\n\n"
+        readme += "Edit the milestone requirements and brief fields in syllabus/course.yml. The same text generates the website and the project PDFs; never edit either output separately. Stable milestone IDs own dates and grading; number fields provide student-facing labels. P1 covers 1 (GSM); P2 covers 2.1/2.2; P3 covers 3.1 module, 3.2 arrays and 3.3 attractor façade. Project 4 develops one project through 4.1 site analysis, 4.2 SDF exploration, 4.3 discretization and 4.4 a mixed-media model. Its detailed PDF follows after scope and fabrication allocation review.\n\n"
         readme += "Run python scripts/sync_course.py to regenerate pages, README and PDFs together. The check mode also verifies source and PDF hashes in files/assignments/manifest.json. Commit the source, renderer, generated pages, PDFs, manifest and any retired-page deletions together after instructor review.\n\n"
         readme += "| Project | Download |\n| --- | --- |\n"
         for project in self.projects.values():
             if project.get("brief_pdf"):
                 readme += f"| {project['id']} | [{project['brief_title']}]({project['brief_pdf']}) |\n"
+        readme += "\n" + self.midterm_summary()
+        readme += "\n## Assignment sequence\n\n" + self.submission_table() + "\n"
+        readme += "Projects 1–3 have detailed PDF handouts. The 3.2 material library is planned, not yet linked. Existing slide decks and their authoring sources need revision before reuse. Dates and weights remain a local review draft.\n"
         self.emit("README.md", readme)
         self.emit("reference/Curriculum_Decisions.md", MARKER + "\n\n# Curriculum decisions\n\n" + self.banner() + self.decisions() + "\n## Why the sequence changed\n\n" + self.data["instructor_notes"])
         rows = []
@@ -815,16 +843,16 @@ class Course:
         # Preserve old bookmarked URLs without placing obsolete briefs in navigation.
         self.emit("redirects/assignments-mid-midterm-review.md",
                   front("Course material has moved", "index", permalink="/modules/assignments/mid-midterm-review/", sitemap=False)
-                  + "## There is no midterm review\n\nWeek 10 is a regular class and the deadline for everything through Arrays. "
+                  + self.midterm_summary(web=True)
                   + self.link("Open the assignments", "/assignments/overview/") + ".\n")
         migrations = {
             'gsm-graphic-standards-manual': [('gsm', 'GSM')],
             'p1-geometry-from-operations-to-construction': [('p1a', 'P2a'), ('p1b', 'P3a'), ('p1c', 'P2b')],
-            'p2-repetition-and-response-arrays-to-attractors': [('p2a', 'P3b'), ('p2b', 'P3c'), ('site-analysis', 'P3d')],
+            'p2-repetition-and-response-arrays-to-attractors': [('p2a', 'P3b'), ('p2b', 'P3c'), ('site-analysis', 'P4a')],
         }
         for name, targets in migrations.items():
             content = front('Course material has moved', 'index', permalink=f'/modules/assignments/{name}/', sitemap=False)
-            content += '## Course material has moved\n\nThe four projects are now GSM, CSG, Paneling and Volumetric Data. Open the current brief below.\n\n'
+            content += '## Course material has moved\n\nThe four projects are now GSM, CSG, Paneling and Integrated Spatial Project. Open the current brief below.\n\n'
             for anchor, aid in targets:
                 a = self.by_id[aid]
                 content += f'<a id="{anchor}"></a>\n\n' + self.link(aid + ' — ' + a['title'], self.assignment_url(a)) + '\n\n'

@@ -2,11 +2,11 @@
 # Run: python scripts/sync_course.py
 # University and standing course policy wording is in policies.md.
 revision: '2026-09-22'
-status: Working draft for instructor discussion
-# Two audiences, two notices. The instructor one rides on the syllabus and the
-# reference documents; the student one is what appears on the public course
-# pages. Leave student_notice blank to show no banner to students at all.
-student_notice: ''
+status: Instructor review draft — revised assignment sequence
+
+student_notice: 'Instructor review draft: assignment sequence updated; proposed dates and grading await final
+  review before publication.'
+
 course:
   code: ARC 3133-001
   title: Architectural Visualization Methods 1
@@ -16,58 +16,91 @@ course:
   credits: 3
   meeting: Tuesday, 5:00 PM–7:50 PM
   location: FAU/BC Higher Ed Complex FTL — room to be confirmed
-  # Both instructors are listed on every generated view. The two sections share
-  # this syllabus, the assignment sequence and the tutorial set, so the source
-  # is one file and neither name is section-specific.
-  # Any field left blank renders as "to be confirmed" rather than disappearing.
   instructors:
-    - name: Luis Pacheco Alcala
-      email: lpachecoalcala@fau.edu
-      office: '712'
-      office_hours: By appointment
-    - name: Christine Khouri Sader
-      email:
-      office:
-      office_hours: By appointment
+  - name: Luis Pacheco Alcala
+    email: lpachecoalcala@fau.edu
+    office: '712'
+    office_hours: By appointment
+  - name: Christine Khouri Sader
+    email: null
+    office: null
+    office_hours: By appointment
   ta: None assigned
   prerequisites: ARC 1301, ARC 1302, ARC 2303 and ARC 2304, each with a minimum grade of C
   final_window: December 10–16, 2026; exact review slot to be confirmed
-  midterm_week: 10  # mid-semester deadline: a regular class, everything through Arrays is due
+  midterm_week: 10
+  deadline_timezone: Eastern Time
+
+midterm_grade:
+  assessments:
+  - GSM
+  - P2a
+  - P2b
+  - P3a
+  - P3b
+  due_at_midterm:
+  - GSM
+  - P3b
+
 decisions:
   confirmed:
-    - Follow the instructor's sequence from graphic standards through geometry, repetition, attractors, point clouds, volumes and sections.
-    - Keep tessellation, panelization, lattices and simulation as a possible intermediate class outside the required sequence.
-    - The sequence is a guide. A topic may take more than one class; understanding and working files determine the pace.
-    - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
-    - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
-    - Align visual assignments and fabrication with the same developing geometry.
-    - Establish one source of curriculum information before preparing the remaining Blender class files.
-    - 'Organize nine assignments into four projects: GSM, CSG, Paneling and Volumetric Data.'
+  - Follow the instructor's sequence from graphic standards through geometry, repetition, attractors, point
+    clouds, volumes and sections.
+  - Keep tessellation, panelization, lattices and simulation as a possible intermediate class outside the required
+    sequence.
+  - The sequence is a guide. A topic may take more than one class; understanding and working files determine
+    the pace.
+  - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
+  - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid
+    Width, Depth and Height.
+  - Align visual assignments and fabrication with the same developing geometry.
+  - Establish one source of curriculum information before preparing the remaining Blender class files.
+  - 'Organize ten assignments into four projects: Graphic Standards Manual, CSG, Paneling, and Integrated Spatial
+    Project.'
+  - 3.1 requires one student-authored module material, a ground plane and three-point lighting (key, fill,
+    rim/back). 3.2 permits supplied library materials or student-authored materials.
+  - 3.3 uses attractor data to drive one geometric parameter of the existing panel, documented in façade elevation
+    and isometric.
+  - 4.1 site analysis → 4.2 abstract SDF volume → 4.3 discretization → 4.4 combined laser-cut/3D-printed model
+    develop one project.
+  - 'Use the instructor-accepted draft weights: 7%, 14%, 21%, 35% across the four projects, 18% booklet and
+    5% participation. Midterm accumulates the first five submissions (35% of the course).'
   proposed:
-    - 'Budget two weeks per tutorial and per assignment: CSG and geometry from scratch each took two classes in practice.'
-    - Week 10 is a hard mid-semester deadline for everything through Arrays (manual, CSG sheet and print, module, arrays), held as a regular class. There is no separate midterm review; its 7% moves to the final booklet.
-    - 'Draft grading: GSM 7%, CSG 14%, Paneling 28%, Volumetric Data 28%, final booklet 18% and participation 5%.'
-    - 'Attractor assignments are due two weeks after their class: the 2D field drawing in Week 10, the layered site analysis in Week 11.'
-    - Focus the required final on the developed visual work, physical work and booklet. The previous Python/AI final and extra-credit scheme are awaiting an instructor decision and are not assigned in this draft.
-    - 'Two required physical outputs: the CSG 3D print and a laser-cut SDF volume. Plotting the 2D attractor drawing is optional.'
+  - Review the proposed September 29–October 27 staged deadlines and the November 3 start of attractors. Keep
+    October 6 and December 1 free of graded submissions.
+  - Façade 3.3 due November 17 and site analysis 4.1 due November 24; 4.2–4.4 due at the final review with
+    earlier ungraded production checks.
+  - Keep the final project focused enough to prototype connections by December 1 and complete laser cutting,
+    printing and documentation before the confirmed final review.
+  - The previous Python/AI final and extra-credit scheme remain outside the required core assignments.
   administrative:
-    - Confirm the room, final review slot and School review blackout dates before issuing the student syllabus.
-    - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
-    - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
-    - Confirm the attendance sign-in method and the accreditation criteria used by the School.
-    - Confirm pen-plotter access, pens and paper for students who choose to plot the P3c drawing, and post the Mixtli add-on with install instructions before Week 9.
+  - Confirm the room, final review slot and School review blackout dates before issuing the student syllabus.
+  - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time
+    limits.
+  - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current
+    class-file preparation environment; equivalent files and recordings are not yet promised as available.
+  - Confirm the attendance sign-in method and the accreditation criteria used by the School.
+  - Post and test the material library before 3.2 is due; post the Mixtli add-on/install notes before 4.1.
+  - Confirm the separate final-project filament allocation and machine capacity for the mixed-media model.
+
 description: |
-  Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain your design decisions through clear visual work.
+  Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain design decisions through clear visual work.
 
-  **Weeks 1–10:** Graphic Standards Manual → Constructive Solid Geometry → Descriptive Geometry → Arrays → Attractor. Diagram and 3D print a CSG object, build a module from points and faces, array it in 1D, 2D and 3D and along hexagonal, radial and curve patterns, then draw a 2D attractor field and map a site in layers. 3D printing is introduced in Week 3; the print is due in Week 10.
+  **Through midterm:** Graphic Standards Manual → CSG sheet and print → descriptive geometry module → 1D, 2D and 3D arrays. Create a module material and three-point lighting setup, then use supplied or student-authored materials for the array compositions.
 
-  **Weeks 10–15:** Volumetric Data and Fields → Discretizing Geometry → Final. Model a volume with signed distance fields, slice it into sections, then laser-cut and assemble the final work. Dates in this second half may still change. Tessellation, panelization, lattices and simulation are optional, with no separate required submission.
+  **After midterm:** apply an attractor to one geometric panel parameter and present a façade elevation and isometric (3.3). Develop one integrated spatial project through site analysis using attractors (4.1), abstract SDF exploration (4.2), discretization (4.3), and a model combining laser cutting and 3D printing (4.4).
 
   Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
-pacing: |
-  **Week 10 is the mid-semester deadline:** everything through Arrays — the manual, the CSG sheet and print, the module and the arrays — must be submitted by then. It is a regular class, not a review. After the Week 1 introduction, each topic has two classes for demonstration and practice, and each assignment has two weeks from brief to deadline: the 2D attractor drawing is due in Week 10 and the layered site analysis in Week 11. Arrays runs over two classes: 1D, 2D and 3D arrays in Week 6, then hexagonal, radial and curve arrays in Week 7.
 
-  Teaching dates and deadlines after Week 10 are provisional. Until a change is announced in class and on Canvas, use the listed deadlines. October 5–9 and December 1–4 are reserved for studio reviews, with no graded submissions for this course.
+pacing: |
+  **Proposed deadlines for instructor review:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so the print deadline skips October 6.
+
+  The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
+
+  Start the façade attractor assignment November 3, due November 17. Start project site analysis November 10, due November 24. Introduce SDF exploration November 17 and discretization/mixed-media fabrication November 24. The remaining Project 4 stages and booklet are due at the final review, December 10–16; the exact slot remains to be confirmed. Select a volume by the November 24 ungraded production check and test connections by December 1, so production begins before the final review.
+
+  This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions. The proposed schedule and lab capacity must be reviewed before publication.
+
 format: |
   Each class combines a short demonstration, guided practice and critique. Start with a small example, check how it works, then increase its complexity. Watch the video tutorial for the topic where one is posted.
 
@@ -100,13 +133,14 @@ presentation: |
 
   Before each submission, open the file from a clean folder, confirm dependencies and units, and check that changing the exposed inputs produces the claimed alternatives. Supplied specialist groups are permitted for volume and section operations when students can explain their inputs, outputs and role. Students build the geometry, repetition, conditionals and attractor relationships in the early exercises. P3d uses the Mixtli add-on; students must explain its inputs, output and their interpretation.
 fabrication: |
-  Complete FabLab Safety Orientation before machine use. The target is the end of Week 2; confirm enrollment and operating arrangements with the lab. Introduce 3D printing in Week 3.
+  Complete FabLab Safety Orientation before machine use. Confirm enrollment, equipment and production arrangements with the lab.
 
-  **CSG print (P2b):** print the CSG object from P2a. Maximum 60 mm on each axis and 200 g of filament including failed attempts. Use a draft layer height and an orientation that prints without supports.
+  **CSG print (2.2):** print the CSG object from 2.1. Maximum 60 mm on each axis and 200 g of filament including failed attempts. Use a draft layer height and an orientation that prints without supports.
 
-  **Laser-cut volume (P4b):** fabricate the P4a volume as at least 12 ordered slices. Maximum 300 mm on each assembled axis and one confirmed sheet of material. Confirm stock and sheet dimensions, test kerf and fit, then label and nest the parts. Test cuts and failed parts count against the allocation.
+  **Mixed-media project model (4.4):** combine laser-cut and 3D-printed components in one assembly developed from the SDF project. Maximum 300 mm on each assembled axis and one confirmed sheet of laser-cut material. Confirm stock, sheet dimensions and the separate final-project print allocation before production. Test kerf and fit, label/nest cut parts and test printed connections. Tests and failed parts count toward the confirmed allocations.
 
-  These are the two required physical outputs. Material availability and machine time require FabLab confirmation. Keep backups and account for replacement material beyond the confirmed allocation.
+  These are the two required physical submissions: the CSG print and the integrated mixed-media model. Pen plotting is not required. Material availability and machine time require FabLab confirmation; keep backups and account for replacement material beyond the allocation.
+
 ai: |
   The core course teaches graphs and geometric reasoning. No required Python or AI tool-building final is assigned in this working draft; that decision remains open.
 
@@ -116,13 +150,16 @@ ai: |
 
   Generative image production, generative fill, AI upscaling, and AI generation of a visual identity, palette or layout remain prohibited for submitted coursework. Students remain responsible for every submitted result and must be able to explain and modify it. Citation follows the University's AI policy retained below.
 assessment_notes: |
-  The course has four projects made of nine assignments. Each assignment is graded once; a project is the set of its assignments, not an extra grade.
+  The course has four projects made of ten assignments. Each assignment is graded once; a project is the set of its assignments, not an extra grade.
 
   Digital assignments: visual quality 35%, computational understanding 25%, technical execution 20%, experimentation 10%, requirements and visual identity 10%. Fabrication assignments: visual documentation 20%, computational understanding 20%, technical execution 15%, fabrication quality 30%, experimentation 5%, requirements and visual identity 10%.
 
   GSM: visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%. The manual does not require a computational graph.
 
   Final booklet: substantive revision 40%, documentation 35%, visual identity 25%. The booklet does not replace earlier assignment grades. Standing late-work and revision policies apply.
+
+  Draft allocation approved for review: manual 7%; CSG 14%; Paneling 21%; Integrated Spatial Project 35% (site analysis 7%, SDF 14%, discretization 7%, mixed-media model 7%); final booklet 18%; participation 5%. Total 100%.
+
 grade_scale: |
   | Grade | Percentage |
   |---|---|
@@ -163,784 +200,1100 @@ translation: |
 
 
 units:
-  - id: U01
+- id: U01
+  title: Graphic Standards Manual
+  url_slug: graphic-standards-manual
+  vocabulary:
+  - composition
+  - grid
+  - hierarchy
+  - typography
+  - line weight
+  - palette
+  goal: Establish the graphic system used to communicate all later work.
+  steps:
+  - Compare architectural drawings and identify how hierarchy makes them readable.
+  - Study the three manuals below. Identify a rule, its dimensioned drawing and its application in each.
+  - Set page size, margins, columns, type hierarchy, line weights and a restrained palette.
+  - Test the system on a diagram and render, then assemble the four-page manual.
+  exercise: Make a sample 17 × 11 inch sheet and explain one decision about visual hierarchy.
+  connection: Apply and revise this identity in every project and in the final booklet.
+  references: manuals
+  pseudocode: |
+    PAGES     = 4                # the whole manual
+    SHEET     = (17, 11)         # inches
+    MARGIN    = 0.75
+    COLUMNS   = 6
+
+    TYPEFACES = 2                # 3 is the ceiling
+    TYPE      = {"title": 24, "heading": 14, "body": 9}
+    WEIGHTS   = [0.13, 0.35, 0.70]     # thin, medium, heavy
+    COLORS    = 3                # the black counts as one
+    PALETTE   = ["#000000", "#FFFDF7", "#C6F035"]
+
+    # every sheet this semester reads these values
+- id: U02
+  title: Constructive Solid Geometry
+  url_slug: transformations-and-csg
+  videos:
+  - - Blender
+    - https://www.youtube.com/watch?v=HO50aaKbfHY
+  - - Rhino + Grasshopper
+    - https://www.youtube.com/watch?v=z0UFlXQnk3g
+  vocabulary:
+  - parameter
+  - vector
+  - translation
+  - rotation
+  - scale
+  - union
+  - difference
+  - intersection
+  goal: Build editable solids with transformations and Boolean operations.
+  steps:
+  - Start with one primitive; identify node inputs, outputs and parameters.
+  - Translate, rotate and scale. Change the order and compare results.
+  - Compare union, intersection and difference. Reverse a subtraction and explain what changes.
+  - Expose useful inputs and build a short massing sequence.
+  - In Week 3, check the CSG object's closure and physical dimensions; export a mesh and inspect orientation,
+    supports, material use and the layer preview in the FabLab slicer.
+  exercise: Diagram the CSG graph as a BIG-style process diagram — one operation per frame, read left to right
+    — and change one parameter to show its effect.
+  connection: Descriptive Geometry replaces a primitive cutter with geometry built from points and faces. Week
+    3 introduces 3D printing; apply units, orientation and slicing to prepare the CSG object for the first
+    print.
+  teaching_note: In the class file, intersect a cube and sphere, union three perpendicular cylinders, then
+    subtract the cylinders. Parameters remain visible on the native nodes. Join Geometry is an optional comparison,
+    not the final output. For the print, confirm the exported dimensions in the slicer and record the settings
+    and any geometry changes on the P2b process sheet.
+  pseudocode: |
+    # nine diagrams, one operation each, in this order
+
+    box     = cube(1.0)                  # 1  primitive
+    ball    = sphere(r=0.65)             # 2  primitive
+    rod     = cylinder(r=0.30, h=2.0)    # 3  primitive
+
+    ball    = scale(ball, 1.15)          # 4  scale
+    ball    = translate(ball, z=0.15)    # 5  translate
+    rod_y   = rotate(rod, x=90)          # 6  rotate - degrees
+    rod_x   = rotate(rod, y=90)          # 6  same operation
+
+    solid   = intersection(box, ball)    # 7  intersection
+    cutters = union(rod, rod_y, rod_x)   # 8  union
+    result  = difference(solid, cutters) # 9  difference
+
+    # 9 keeps solid, removes cutters. draw 9 again at
+    # building scale: a figure, planting, ground, shadow.
+- id: U03
+  title: Descriptive Geometry
+  url_slug: geometry-from-scratch
+  videos:
+  - - Blender
+    - https://youtu.be/JQN7IjVIW4A
+  - - Rhino + Grasshopper
+    - https://www.youtube.com/watch?v=g-iOvUYX6Yg
+  vocabulary:
+  - point
+  - vector
+  - parameter
+  - vertex
+  - line
+  - edge
+  - face
+  - mesh
+  - solid
+  - normal
+  goal: Describe geometry through points, lines, edges and faces, then build a parametric solid.
+  steps:
+  - Point — locate a point with XYZ values; distinguish position from displacement.
+  - Line — connect two positions with a curve.
+  - Edge — connect two mesh vertices.
+  - Face — order its corners and explain the normal.
+  - Solid — build a pyramid from four base corners and an apex. Add four side faces and a base; check closure.
+  - Boolean — subtract the pyramid from a cube, revisiting CSG.
+  - Panel — define parameters, calculate corner points and order faces. Check closure and tiling across each
+    parameter's range.
+  exercise: Keep Width, Depth and Height exposed. Show the five pyramid vertices, eight edges and five faces,
+    demonstrate cube-minus-pyramid, then build your own module and present it with one student-authored material
+    on a ground plane with key/fill/rim three-point lighting.
+  connection: Use this module unchanged for arrays (3.2), then drive one geometric parameter using an attractor
+    in 3.3. The CSG object remains the separate earlier print.
+  pseudocode: |
+    verts = [[-w, -d, 0],              # 0
+             [ w, -d, 0],              # 1
+             [ w,  d, 0],              # 2
+             [-w,  d, 0],              # 3
+             [ 0,  0, h]]              # 4  apex
+
+    faces = [[0, 1, 4], [1, 2, 4],
+             [2, 3, 4], [3, 0, 4],
+             [0, 3, 2, 1]]             # the base — do not forget it
+
+    pyramid = mesh(verts, faces)
+    result  = difference(cube, pyramid)
+- id: U04
+  title: Arrays
+  url_slug: arrays-and-lists
+  vocabulary:
+  - list
+  - index
+  - count
+  - loop
+  - nested loop
+  - conditional
+  - modulo
+  - sine
+  - amplitude
+  - frequency
+  - phase
+  goal: Arrange copies of your panel using lists, if statements and for loops.
+  steps:
+  - '1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.'
+  - '2D: nest repetition into a grid. Identify rows and columns; predict the total count.'
+  - '3D: repeat the grid in Z for a cube array. Predict Count cubed; distinguish instances from a sampled volume.'
+  - Use Compare and Switch for an if condition; select an index range and move only those copies.
+  - 'Optional later practice · Hexagonal: stagger alternate rows; explain the odd/even test and row spacing.'
+  - 'Optional later practice · Radial: place copies from radius, count and angular step.'
+  - 'Optional later practice · Curve: resample a curve and place copies along it, aligned to its tangent. Drive
+    a curve with sine; explain amplitude, frequency and phase.'
+  exercise: 'Practice with your P3a module. Sheet 1 of P3b: 1D, 2D and 3D arrays. Sheet 2: count/spacing comparisons
+    and index logic, including the conditional selection. Hexagonal, radial and curve arrays remain later practice.'
+  connection: Keep the panel geometry unchanged in 3.2; vary placement and use supplied library or student-authored
+    materials. In 3.3 a sampled attractor field changes one panel geometry parameter across a façade.
+  pseudocode: |
+    points = []
+
+    for j in range(rows):                      # nested loop = grid
+        offset = spacing / 2 if j % 2 else 0   # odd/even stagger
+        for i in range(cols):
+            z = amplitude * sin(i * frequency + phase)
+            if 3 <= i <= 5:                    # Compare + Switch
+                z = z + lift
+            points.append([i * spacing + offset, j * row_gap, z])
+  teaching_note: Both files form one lesson. Show explicit iteration before comparing field-based construction;
+    a field is not a Repeat Zone. The sine example instances cubes on a displaced line, then repeats the row.
+    Distinguish Grasshopper data trees from Blender fields.
+- id: U05
+  title: Attractor
+  url_slug: attractors
+  vocabulary:
+  - distance
+  - external condition
+  - field
+  - remap
+  - clamp
+  - falloff
+  - nearest
+  goal: Use distance fields from points and curves to control geometric variation.
+  steps:
+  - Measure distance to one point. Display a grayscale field before changing geometry.
+  - Set input and output ranges; remap, clamp and choose a falloff.
+  - Compare distance to one point, the nearest of several points and the nearest location on a curve.
+  - Sample the field at façade panel locations and map it to one geometric panel parameter. Compare a uniform
+    baseline and two attractor positions; present elevation and isometric views of the same final façade.
+  - Pick a site and map its point cloud in layers — distance to points or curves, height bands, and a recorded
+    attribute such as colour or classification — then combine the layers into one reading. The Mixtli add-on
+    for Blender does this; an equivalent tool is fine.
+  exercise: '3.3: measure → remap → drive one panel parameter to generate a façade. Show elevation and isometric
+    with the attractor field and legend. 4.1: carry the measurement logic into layered site analysis for the
+    integrated project.'
+  connection: The façade completes Project 3. Site analysis begins Project 4 and informs the SDF exploration,
+    discretization and mixed-media model.
+  pseudocode: |
+    for p in points:
+        d = distance(p, attractor)             # or min(...) over several
+        t = (d - d_min) / (d_max - d_min)      # remap
+        t = clamp(t, 0, 1)
+        t = falloff(t)                         # linear, inverse, smooth, step
+        size = out_min + t * (out_max - out_min)
+        place(component, p, scale=size)
+- id: U06
+  title: Tessellation, panelization, lattices and simulation
+  url_slug: tessellation-and-lattices
+  optional: true
+  vocabulary:
+  - cell
+  - adjacency
+  - tessellation
+  - panelization
+  - lattice
+  - simulation
+  - strut
+  - aperture
+  - thickness
+  goal: Explore possible intermediate methods for subdividing surfaces, arranging panels, connecting elements
+    and studying change.
+  steps:
+  - Distinguish a tessellation covering a surface from a lattice formed by connected nodes and struts.
+  - Begin with a small repeated cell; inspect shared boundaries, gaps and connectivity.
+  - Vary aperture, depth or strut thickness with the previous attractor logic.
+  - As time permits, discuss panelization and simulation as extensions; these demonstrations are not yet prepared
+    in the supplied file.
+  exercise: Compare a uniform system with a controlled variation, then make one connection or cell test before
+    a batch.
+  connection: Optional exploration after arrays or attractors. The required course continues from points to
+    volumetric fields without depending on these methods.
+  teaching_note: Possible intermediate class, not a required lesson or graded submission. The existing example
+    covers tessellation and lattices; panelization and simulation remain possible additions.
+  pseudocode: |
+    for cell in subdivide(surface, u, v):
+        panel = morph(component, cell)         # component into the cell
+        d = distance(center(cell), attractor)
+        panel.aperture = remap(d, d_min, d_max, 0.1, 0.9)
+        panel.depth    = remap(d, d_min, d_max, 2.0, 12.0)
+        keep(panel)
+- id: U07
+  title: Volumetric Data and Fields
+  url_slug: point-clouds-and-the-transition-to-volumes
+  vocabulary:
+  - sample
+  - point cloud
+  - origin
+  - units
+  - decimation
+  - density
+  - voxel
+  - radius
+  - scalar field
+  - implicit surface
+  - signed distance field
+  - isosurface
+  - threshold
+  - noise
+  - resolution
+  goal: Read spatial samples, convert them into volumes and use fields to control form.
+  steps:
+  - Import an attributed point cloud. Record source, units, origin and point count; document any cropping or
+    decimation.
+  - Use point or curve distance to color, filter or displace samples for a stated analytical purpose.
+  - Convert a copy to a volume. Compare influence radius and voxel size; retain the original cloud.
+  - Distinguish mesh faces, density and signed distance. Identify inside, outside and the zero boundary.
+  - Compare union, intersection and difference of fields with the earlier solid Boolean operations.
+  - Vary a field with noise or external measurements, changing one influence at a time.
+  - Extract a surface at two resolutions, then select a volume for sections and fabrication.
+  exercise: Compare source points, an analytical field and a volume conversion. Make controlled field variants
+    and diagram what defines the surface. For 4.2 coordinate an elevation, isometric and abstract floor plan;
+    use the Resources visual precedents to study representation.
+  connection: Discretizing Geometry translates the chosen volume into ordered contours and physical parts.
+  pseudocode: |
+    cloud = load("site.ply")
+    print(len(cloud))                          # state this before
+
+    cloud = decimate(cloud, keep=0.05)
+    print(len(cloud))                          # and after
+
+    for p in cloud:
+        p.density = len(within(cloud, p, radius))
+
+    volume = voxelize(cloud, size=0.5)
+
+    # A designed field can also define a volume.
+    def field(p):                              # a shape as a function
+        a = sphere_sdf(p, center_a, r_a)
+        b = box_sdf(p, center_b, size_b)
+        return smooth_min(a, b, k)             # the blend comes free
+
+    grid    = sample(field, bounds, resolution)
+    surface = extract(grid, iso=0.0)           # where the field is zero
+  teaching_note: A noise-modified implicit field is not automatically an exact signed distance field. Keep
+    the distinction visible and introduce specialized groups only when their inputs and outputs can be explained.
+- id: U09
+  title: Discretizing Geometry
+  url_slug: contour-sections-and-physical-parts
+  vocabulary:
+  - section plane
+  - contour
+  - interval
+  - discretization
+  - thickness
+  - registration
+  - kerf
+  - nesting
+  goal: Use contours and sections to translate a volumetric design into parts for fabrication.
+  steps:
+  - Intersect the volume or its extracted boundary with a sequence of planes; order the resulting contour curves.
+  - Compare two section directions and intervals, including the relationship between gaps, light and the reading
+    of the form.
+  - Close and clean the intended profiles; turn them into parts with material thickness and a clear registration
+    system.
+  - Test fit and kerf, then number, nest and fabricate the parts and document the assembly.
+  exercise: Compare the continuous volume, its ordered contours and the discrete assembly. Explain what is
+    lost and gained in the translation.
+  connection: The selected 4.2 volume becomes the ordered parts of 4.3, then the combined laser-cut/3D-printed
+    assembly of 4.4.
+  pseudocode: |
+    sections = []
+    for k in range(count):
+        z = z0 + k * interval
+        sections.append(slice(volume, z))      # ordered, and order matters
+
+    for i, s in enumerate(sections):
+        s = offset(s, kerf / 2)                # the blade has width
+        label(s, i)
+        nest(s, sheet)
+  teaching_note: Designed section parts are distinct from the layers a printer slicer generates. Decide which
+    curves are part boundaries before assigning thickness or sending machine files.
+- id: U10
+  title: Final
+  url_slug: final
+  vocabulary:
+  - fabrication
+  - fit
+  - assembly
+  - documentation
+  - revision
+  goal: Assemble and document one model combining laser-cut and 3D-printed parts, revise the project and prepare
+    the final booklet.
+  steps:
+  - Test material, fit and connections before full production.
+  - Fabricate and assemble the selected parts within the confirmed lab allocation.
+  - Photograph the physical results and document changes from the digital studies.
+  - Revise the four projects and Graphic Standards Manual; assemble the booklet and check all submitted files.
+  exercise: Bring a fabrication test, a documented revision and a booklet spread for review.
+  connection: Submit the booklet, revised manual, editable files and required fabrication work at the final
+    review. Follow the existing BOOK and P4b briefs.
+
+projects:
+- id: P1
+  title: GSM
+  units:
+  - U01
+  description: Create your own Graphic Standards Manual and apply it to every course presentation.
+  brief_title: Graphic Standards Manual
+  brief_pdf: files/assignments/P1-Graphic-Standards-Manual.pdf
+  brief_milestones:
+  - GSM
+  milestones:
+  - id: GSM
     title: Graphic Standards Manual
     url_slug: graphic-standards-manual
-    vocabulary: [composition, grid, hierarchy, typography, line weight, palette]
-    goal: Establish the graphic system used to communicate all later work.
-    steps:
-      - Compare architectural drawings and identify how hierarchy makes them readable.
-      - Study the three manuals below. Identify a rule, its dimensioned drawing and its application in each.
-      - Set page size, margins, columns, type hierarchy, line weights and a restrained palette.
-      - Test the system on a diagram and render, then assemble the four-page manual.
-    exercise: Make a sample 17 × 11 inch sheet and explain one decision about visual hierarchy.
-    connection: Apply and revise this identity in every project and in the final booklet.
-    references: manuals
-    pseudocode: |
-      PAGES     = 4                # the whole manual
-      SHEET     = (17, 11)         # inches
-      MARGIN    = 0.75
-      COLUMNS   = 6
-
-      TYPEFACES = 2                # 3 is the ceiling
-      TYPE      = {"title": 24, "heading": 14, "body": 9}
-      WEIGHTS   = [0.13, 0.35, 0.70]     # thin, medium, heavy
-      COLORS    = 3                # the black counts as one
-      PALETTE   = ["#000000", "#FFFDF7", "#C6F035"]
-
-      # every sheet this semester reads these values
-  - id: U02
-    title: Constructive Solid Geometry
-    url_slug: transformations-and-csg
-    videos:
-      - [Blender, 'https://www.youtube.com/watch?v=HO50aaKbfHY']
-      - [Rhino + Grasshopper, 'https://www.youtube.com/watch?v=z0UFlXQnk3g']
-    vocabulary: [parameter, vector, translation, rotation, scale, union, difference, intersection]
-    goal: Build editable solids with transformations and Boolean operations.
-    steps:
-      - Start with one primitive; identify node inputs, outputs and parameters.
-      - Translate, rotate and scale. Change the order and compare results.
-      - Compare union, intersection and difference. Reverse a subtraction and explain what changes.
-      - Expose useful inputs and build a short massing sequence.
-      - In Week 3, check the CSG object's closure and physical dimensions; export a mesh and inspect orientation, supports, material use and the layer preview in the FabLab slicer.
-    exercise: Diagram the CSG graph as a BIG-style process diagram — one operation per frame, read left to right — and change one parameter to show its effect.
-    connection: Descriptive Geometry replaces a primitive cutter with geometry built from points and faces. Week 3 introduces 3D printing; apply units, orientation and slicing to prepare the CSG object for the first print.
-    teaching_note: >-
-      In the class file, intersect a cube and sphere, union three perpendicular
-      cylinders, then subtract the cylinders. Parameters remain visible on the
-      native nodes. Join Geometry is an optional comparison, not the final output.
-      For the print, confirm the exported dimensions in the slicer and record
-      the settings and any geometry changes on the P2b process sheet.
-    pseudocode: |
-      # nine diagrams, one operation each, in this order
-
-      box     = cube(1.0)                  # 1  primitive
-      ball    = sphere(r=0.65)             # 2  primitive
-      rod     = cylinder(r=0.30, h=2.0)    # 3  primitive
-
-      ball    = scale(ball, 1.15)          # 4  scale
-      ball    = translate(ball, z=0.15)    # 5  translate
-      rod_y   = rotate(rod, x=90)          # 6  rotate - degrees
-      rod_x   = rotate(rod, y=90)          # 6  same operation
-
-      solid   = intersection(box, ball)    # 7  intersection
-      cutters = union(rod, rod_y, rod_x)   # 8  union
-      result  = difference(solid, cutters) # 9  difference
-
-      # 9 keeps solid, removes cutters. draw 9 again at
-      # building scale: a figure, planting, ground, shadow.
-  - id: U03
-    title: Descriptive Geometry
-    url_slug: geometry-from-scratch
-    videos:
-      - [Blender, 'https://youtu.be/JQN7IjVIW4A']
-      - [Rhino + Grasshopper, 'https://www.youtube.com/watch?v=g-iOvUYX6Yg']
-    vocabulary: [point, vector, parameter, vertex, line, edge, face, mesh, solid, normal]
-    goal: Describe geometry through points, lines, edges and faces, then build a parametric solid.
-    steps:
-      - Point — locate a point with XYZ values; distinguish position from displacement.
-      - Line — connect two positions with a curve.
-      - Edge — connect two mesh vertices.
-      - Face — order its corners and explain the normal.
-      - Solid — build a pyramid from four base corners and an apex. Add four side faces and a base; check closure.
-      - Boolean — subtract the pyramid from a cube, revisiting CSG.
-      - Panel — define parameters, calculate corner points and order faces. Check closure and tiling across each parameter's range.
-    exercise: Keep Width, Depth and Height exposed. Show the five pyramid vertices, eight edges and five faces, demonstrate cube-minus-pyramid, then build your own module and present it with one material and a lighting setup.
-    connection: Use this module for the arrays (P3b). The attractor assignments (P3c, P3d) build on the same measurement and repetition skills. The CSG object is the separate 3D print.
-    pseudocode: |
-      verts = [[-w, -d, 0],              # 0
-               [ w, -d, 0],              # 1
-               [ w,  d, 0],              # 2
-               [-w,  d, 0],              # 3
-               [ 0,  0, h]]              # 4  apex
-
-      faces = [[0, 1, 4], [1, 2, 4],
-               [2, 3, 4], [3, 0, 4],
-               [0, 3, 2, 1]]             # the base — do not forget it
-
-      pyramid = mesh(verts, faces)
-      result  = difference(cube, pyramid)
-  - id: U04
-    title: Arrays
-    url_slug: arrays-and-lists
-    vocabulary: [list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase]
-    goal: Arrange copies of your panel using lists, if statements and for loops.
-    steps:
-      - 'Week 6 · 1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.'
-      - 'Week 6 · 2D: nest repetition into a grid. Identify rows and columns; predict the total count.'
-      - 'Week 6 · 3D: repeat the grid in Z for a cube array. Predict Count cubed; distinguish instances from a sampled volume.'
-      - Use Compare and Switch for an if condition; select an index range and move only those copies.
-      - 'Week 7 · Hexagonal: stagger alternate rows; explain the odd/even test and row spacing.'
-      - 'Week 7 · Radial: place copies from radius, count and angular step.'
-      - 'Week 7 · Curve: resample a curve and place copies along it, aligned to its tangent. Drive a curve with sine; explain amplitude, frequency and phase.'
-    exercise: 'Practice with your P3a module. Sheet 1 of P3b: 1D, 2D and 3D arrays. Sheet 2: count/spacing comparisons and index logic, including the conditional selection. Hexagonal, radial and curve arrays remain later practice.'
-    connection: Keep the module unchanged in P3b; vary its placement. The attractor field in P3c is sampled on the same kind of 2D grid.
-    pseudocode: |
-      points = []
-
-      for j in range(rows):                      # nested loop = grid
-          offset = spacing / 2 if j % 2 else 0   # odd/even stagger
-          for i in range(cols):
-              z = amplitude * sin(i * frequency + phase)
-              if 3 <= i <= 5:                    # Compare + Switch
-                  z = z + lift
-              points.append([i * spacing + offset, j * row_gap, z])
-    teaching_note: Both files form one lesson. Show explicit iteration before comparing field-based construction; a field is not a Repeat Zone. The sine example instances cubes on a displaced line, then repeats the row. Distinguish Grasshopper data trees from Blender fields.
-  - id: U05
-    title: Attractor
-    url_slug: attractors
-    vocabulary: [distance, external condition, field, remap, clamp, falloff, nearest]
-    goal: Use distance fields from points and curves to control geometric variation.
-    steps:
-      - Measure distance to one point. Display a grayscale field before changing geometry.
-      - Set input and output ranges; remap, clamp and choose a falloff.
-      - Compare distance to one point, the nearest of several points and the nearest location on a curve.
-      - Sample the field on a flat 2D grid and translate it into lines — line length, rotation, spacing or hatch density. Export an SVG; plotting it on the pen plotter is optional.
-      - Pick a site and map its point cloud in layers — distance to points or curves, height bands, and a recorded attribute such as colour or classification — then combine the layers into one reading. The Mixtli add-on for Blender does this; an equivalent tool is fine.
-    exercise: 'Show measurement → mapping → drawing: a 2D attractor field as a line drawing, plotted if you like (P3c). Then pick a site and map its point cloud in layers (P3d).'
-    connection: 'Two assignments: P3c presents a 2D attractor field as a line drawing (due Week 10); P3d maps a site in layers of point-cloud data (due Week 11). Later, reuse fields to define SDF volumes.'
-    pseudocode: |
-      for p in points:
-          d = distance(p, attractor)             # or min(...) over several
-          t = (d - d_min) / (d_max - d_min)      # remap
-          t = clamp(t, 0, 1)
-          t = falloff(t)                         # linear, inverse, smooth, step
-          size = out_min + t * (out_max - out_min)
-          place(component, p, scale=size)
-  - id: U06
-    title: Tessellation, panelization, lattices and simulation
-    url_slug: tessellation-and-lattices
-    optional: true
-    vocabulary: [cell, adjacency, tessellation, panelization, lattice, simulation, strut, aperture, thickness]
-    goal: Explore possible intermediate methods for subdividing surfaces, arranging panels, connecting elements and studying change.
-    steps:
-      - Distinguish a tessellation covering a surface from a lattice formed by connected nodes and struts.
-      - Begin with a small repeated cell; inspect shared boundaries, gaps and connectivity.
-      - Vary aperture, depth or strut thickness with the previous attractor logic.
-      - As time permits, discuss panelization and simulation as extensions; these demonstrations are not yet prepared in the supplied file.
-    exercise: Compare a uniform system with a controlled variation, then make one connection or cell test before a batch.
-    connection: Optional exploration after arrays or attractors. The required course continues from points to volumetric fields without depending on these methods.
-    teaching_note: Possible intermediate class, not a required lesson or graded submission. The existing example covers tessellation and lattices; panelization and simulation remain possible additions.
-    pseudocode: |
-      for cell in subdivide(surface, u, v):
-          panel = morph(component, cell)         # component into the cell
-          d = distance(center(cell), attractor)
-          panel.aperture = remap(d, d_min, d_max, 0.1, 0.9)
-          panel.depth    = remap(d, d_min, d_max, 2.0, 12.0)
-          keep(panel)
-  - id: U07
-    title: Volumetric Data and Fields
-    url_slug: point-clouds-and-the-transition-to-volumes
-    vocabulary: [sample, point cloud, origin, units, decimation, density, voxel, radius, scalar field, implicit surface, signed distance field, isosurface, threshold, noise, resolution]
-    goal: Read spatial samples, convert them into volumes and use fields to control form.
-    steps:
-      - Import an attributed point cloud. Record source, units, origin and point count; document any cropping or decimation.
-      - Use point or curve distance to color, filter or displace samples for a stated analytical purpose.
-      - Convert a copy to a volume. Compare influence radius and voxel size; retain the original cloud.
-      - Distinguish mesh faces, density and signed distance. Identify inside, outside and the zero boundary.
-      - Compare union, intersection and difference of fields with the earlier solid Boolean operations.
-      - Vary a field with noise or external measurements, changing one influence at a time.
-      - Extract a surface at two resolutions, then select a volume for sections and fabrication.
-    exercise: Compare source points, an analytical field and a volume conversion. Make controlled field variants and diagram what defines the surface.
-    connection: Discretizing Geometry translates the chosen volume into ordered contours and physical parts.
-    pseudocode: |
-      cloud = load("site.ply")
-      print(len(cloud))                          # state this before
-
-      cloud = decimate(cloud, keep=0.05)
-      print(len(cloud))                          # and after
-
-      for p in cloud:
-          p.density = len(within(cloud, p, radius))
-
-      volume = voxelize(cloud, size=0.5)
-
-      # A designed field can also define a volume.
-      def field(p):                              # a shape as a function
-          a = sphere_sdf(p, center_a, r_a)
-          b = box_sdf(p, center_b, size_b)
-          return smooth_min(a, b, k)             # the blend comes free
-
-      grid    = sample(field, bounds, resolution)
-      surface = extract(grid, iso=0.0)           # where the field is zero
-    teaching_note: A noise-modified implicit field is not automatically an exact signed distance field. Keep the distinction visible and introduce specialized groups only when their inputs and outputs can be explained.
-  - id: U09
-    title: Discretizing Geometry
-    url_slug: contour-sections-and-physical-parts
-    vocabulary: [section plane, contour, interval, discretization, thickness, registration, kerf, nesting]
-    goal: Use contours and sections to translate a volumetric design into parts for fabrication.
-    steps:
-      - Intersect the volume or its extracted boundary with a sequence of planes; order the resulting contour curves.
-      - Compare two section directions and intervals, including the relationship between gaps, light and the reading of the form.
-      - Close and clean the intended profiles; turn them into parts with material thickness and a clear registration system.
-      - Test fit and kerf, then number, nest and fabricate the parts and document the assembly.
-    exercise: Compare the continuous volume, its ordered contours and the discrete assembly. Explain what is lost and gained in the translation.
-    connection: Bring the digital studies, physical result and process documentation together in the final booklet.
-    pseudocode: |
-      sections = []
-      for k in range(count):
-          z = z0 + k * interval
-          sections.append(slice(volume, z))      # ordered, and order matters
-
-      for i, s in enumerate(sections):
-          s = offset(s, kerf / 2)                # the blade has width
-          label(s, i)
-          nest(s, sheet)
-    teaching_note: Designed section parts are distinct from the layers a printer slicer generates. Decide which curves are part boundaries before assigning thickness or sending machine files.
-  - id: U10
-    title: Final
-    url_slug: final
-    vocabulary: [fabrication, fit, assembly, documentation, revision]
-    goal: Fabricate and assemble the work, document revisions and prepare the final booklet and review.
-    steps:
-      - Test material, fit and connections before full production.
-      - Fabricate and assemble the selected parts within the confirmed lab allocation.
-      - Photograph the physical results and document changes from the digital studies.
-      - Revise the four projects and Graphic Standards Manual; assemble the booklet and check all submitted files.
-    exercise: Bring a fabrication test, a documented revision and a booklet spread for review.
-    connection: Submit the booklet, revised manual, editable files and required fabrication work at the final review. Follow the existing BOOK and P4b briefs.
-projects:
-  - id: P1
-    title: GSM
-    units:
-      - U01
-    description: Create your own Graphic Standards Manual and apply it to every course presentation.
-    brief_title: Graphic Standards Manual
-    brief_pdf: files/assignments/P1-Graphic-Standards-Manual.pdf
-    brief_milestones: [GSM]
-    milestones:
-      - id: GSM
-        title: Graphic Standards Manual
-        url_slug: graphic-standards-manual
-        release: 1
-        due: 10
-        weight: 7
-        checkpoints:
-          - week: 2
-            text: Bring a sample sheet for an ungraded identity check.
-          - week: final
-            text: Submit the revised manual as a separate PDF alongside the booklet.
-        requirements:
-          - Make exactly four pages. Show each graphic rule beside a tested application.
-          - 'Use one page each for: (1) sheet size, margins, grid, columns and placement; (2) typography and hierarchy; (3) color and line weights; (4) annotations, captions and image treatment on a course sheet.'
-          - Use at most three typefaces, three colors including black and paper, four hierarchy levels and four line weights.
-          - Study the NYCTA, NASA and Munich 1972 manuals linked under Reading and documentation. Name one rule you adopted.
-          - Apply the manual to every sheet and revise it after critique.
-        deliverable: Four-page Graphic Standards Manual; PDF and editable layout.
-        kind: identity
-        brief:
-          description: Create a Graphic Standards Manual that another person can use to reproduce the layout
-            and drawing conventions of your course work. State numerical settings and show each rule in use.
-            Apply this system to the CSG and Paneling submissions, then revise it after critique.
-          parameters:
-          - 'Page: 17 inches wide x 11 inches high, landscape. State margins, column count, gutter width, alignment
-            guides and the positions of the title, caption and footer.'
-          - 'Type: identify the family, style, point size and leading for each hierarchy level. Use at most
-            three typefaces and four hierarchy levels.'
-          - 'Color: provide HEX/RGB and CMYK values and an assigned role for each color. The limit is three
-            colors including black and the paper/background color.'
-          - 'Line: specify up to four weights in points or millimeters and their uses. Distinguish final edges,
-            secondary detail and construction geometry. State any dashed-line convention.'
-          studies:
-          - '**Page 1 - Sheet system.** Show the 17 x 11 inch grid with dimensioned margins, columns and gutters.
-            Place a small drawing in the grid to demonstrate alignment. Include course, student, assignment
-            and page information in a consistent location.'
-          - '**Page 2 - Typography.** Show the hierarchy with real titles, body text, drawing labels and captions.
-            Print the settings beside each specimen so another person can reproduce them.'
-          - '**Page 3 - Color and line weights.** Include labeled swatches and numerical values. Apply the line
-            hierarchy to one drawing fragment; isolated strokes alone do not explain which edges receive which
-            weight. Check the drawing in grayscale.'
-          - '**Page 4 - Applied course sheet.** Use your own course work to demonstrate annotations, captions
-            and image treatment. Show a main drawing and supporting process views with a clear reading order.
-            Include the reference manual and one rule you adopted. Do not add a separate cover.'
-          workflow:
-          - Study the NYCTA, NASA and Munich 1972 manuals linked in Reading and documentation. Identify a rule
-            and examine how its diagram and application agree.
-          - Set the grid, type, palette and line styles numerically in an editable layout/drawing application.
-            Template-based design tools cannot produce this work.
-          - Apply the settings to real drawings, then compare every page with the rules you wrote. Replace placeholders
-            and credit external sources.
-          - Check the exported PDF at actual size and make a sample test print. Adjust fine lines, small captions
-            or weak contrast before submission.
-          deliverables:
-          - '**Exactly four 17 x 11 inch landscape pages** in `Lastname_Firstname_GSM.pdf`, in the order above.
-            Export sharp linework and legible, selectable text where possible.'
-          - '**Editable layout source** with linked images packaged. Keep the grid and named styles available
-            for later course sheets.'
-          - Submit the PDF and source in `Lastname_Firstname_GSM/` through the course submission channel announced
-            in class/Canvas. Bring a sample sheet to the Week 2 check and submit the revised manual separately
-            alongside the final booklet.
-          evaluation:
-          - '**Definition:** rules have values, units and assigned uses; another person can reproduce the system.'
-          - '**Hierarchy:** the main drawing, supporting information and captions have a clear reading order.'
-          - '**Consistency:** the applications follow the documented grid, typography, palette and line weights.'
-          - '**Craft:** all four pages are complete, readable at actual size and free of missing assets or export
-            errors.'
-          checklist:
-          - Four pages only, all 17 x 11 inches, in the required order.
-          - No more than three typefaces, three colors including black/paper, four hierarchy levels and four
-            line weights.
-          - Every standard has a numerical setting and a tested application.
-          - One adopted precedent rule is named and credited.
-          - The PDF and editable source open from the submission folder.
-  - id: P2
-    title: CSG
-    units:
-      - U02
-    description: Explain a CSG object through a BIG-style process diagram with instructions, then 3D print it.
-    brief_title: CSG - Sheet and Print
-    brief_pdf: files/assignments/P2-CSG-Sheet-and-Print.pdf
-    brief_milestones: [P2a, P2b]
-    milestones:
-      - id: P2a
-        title: CSG process and instructions
-        kind: visual
-        release: 2
-        due: 4
-        weight: 7
-        requirements:
-          - 'One 17 × 11 inch sheet laid out as a BIG-style process diagram (in the manner of Bjarke Ingels Group''s step-by-step massing diagrams): eight or nine numbered frames, one operation per frame, read in sequence.'
-          - Use at least three primitives; include translation, rotation and scale, plus union, difference and intersection. Label the kept and removed solids in each subtraction.
-          - Draw the final solid at building scale with a 1.75 m figure, vegetation, ground and shadow.
-          - Add clear instructions and matching pseudocode beside the diagrams, one step per operation, with the exposed parameters.
-          - Refer to Di Mari and Yoo's Operative Design and Di Mari's Conditional Design; name the spatial operation your sequence explores.
-          - Submit an editable graph with exposed inputs and all source operations intact.
-        deliverable: One process sheet; PDF and editable graph.
-        brief:
-          description: 'Build an editable CSG object and explain its construction as a sequence another person
-            can follow. Use a BIG-style massing diagram: one operation per frame, a consistent viewpoint and
-            a visible change between steps. The same object becomes the basis of the P2b print.'
-          parameters:
-          - Expose primitive dimensions, translation values, rotation angle/axis/center and scale factor. Name
-            inputs by their geometric role and state units.
-          - Define the origin and axes, where each primitive starts, and the order of Boolean operands. In a
-            difference, identify the solid kept and the cutter removed.
-          - Keep the source operations editable. Preserve native node names and use Frames/groups to explain
-            the sequence. Use Blender Geometry Nodes or an already approved Rhino/Grasshopper route.
-          studies:
-          - '**Eight or nine numbered frames.** Begin with at least three primitive solids. Include translation,
-            rotation, scale, union, intersection and difference. Mark incoming geometry and removed material
-            so the change can be read without guessing. Each frame records one operation or operation type,
-            with its relevant values.'
-          - '**Matching instructions and pseudocode.** Give intermediate solids names, use those names consistently
-            and place the text beside its frame. State the units and coordinate conventions once, then specify
-            enough dimensions and transforms to reconstruct the result.'
-          - '**Final solid at building scale.** Show the final geometry with a 1.75 m figure, vegetation, ground
-            and shadow. Separate presentation context from the CSG object that will be fabricated. State the
-            spatial operation explored, with a reference to Operative Design or Conditional Design.'
-          workflow:
-          - Choose a spatial operation from the readings, sketch a sequence and build it from primitives using
-            an editable graph.
-          - Check the Boolean order and change an exposed input. Verify that the downstream result recomputes
-            without rebuilding the graph.
-          - Write the procedure from the working model. Ask a partner to identify any undefined size, position
-            or operand; revise those instructions.
-          - Export the operation views from one camera and compose the single sheet using the Graphic Standards
-            Manual. Match every frame to the current graph.
-          deliverables:
-          - '**One 17 x 11 inch landscape PDF sheet:** `Lastname_Firstname_P2a.pdf`. Include all numbered frames,
-            adjacent instructions/pseudocode, exposed values, the final architectural view and source credits.'
-          - '**Editable graph:** `.blend`, or `.gh` plus `.3dm` where used. Internalize Grasshopper reference
-            inputs; package any other necessary dependencies. A baked mesh or screenshots alone cannot demonstrate
-            the operation history.'
-          - Use `Lastname_Firstname_P2a/` for the submission. Keep the object available for the separate P2b
-            fabrication milestone.
-          evaluation:
-          - '**CSG logic:** the required transforms and all three Boolean types produce the stated result and
-            remain editable.'
-          - '**Reproducibility:** dimensions, axes, named operands and operation order make the procedure unambiguous.'
-          - '**Communication:** diagram and instructions agree; consistent views show one understandable change
-            per frame.'
-          - '**Design and craft:** the spatial operation reads at building scale and the sheet follows the Graphic
-            Standards Manual.'
-          checklist:
-          - Eight or nine frames; at least three primitives; translation, rotation, scale, union, intersection
-            and difference.
-          - Difference frames label the kept solid and cutter.
-          - Instructions and pseudocode match the graph and include parameter values.
-          - Final view includes a 1.75 m figure, vegetation, ground and shadow.
-          - One sheet and an editable source that opens with all dependencies.
-      - id: P2b
-        title: CSG 3D printed object
-        kind: fabrication
-        release: 3
-        due: 10
-        checkpoints:
-          - week: 6
-            text: Check geometry, units, orientation and the sliced preview before queueing.
-        weight: 7
-        requirements:
-          - Print a variant of your CSG object from P2a, within 60 mm on each axis and the 200 g allocation, without supports.
-          - Hand in the print in Week 10 with one process sheet showing orientation and a photograph.
-          - Submit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.
-        deliverable: One 3D printed CSG object and one process sheet; source, mesh and slicer files.
-        brief:
-          description: Fabricate a variant of your P2a CSG object and explain the decisions that make it printable.
-            Compare the final physical object with the digital geometry. Record any revision for closure, feature
-            thickness or orientation so the fabrication copy remains traceable to the original construction.
-          parameters:
-          - Uniform print scale and final X/Y/Z dimensions in millimeters. Each axis must be no greater than
-            60 mm in the selected print orientation.
-          - Printer/material profile, draft layer height, wall count and infill. Supports must be off. Record
-            the chosen values rather than assuming a universal printer profile.
-          - Orientation, bed-contact face, estimated time and filament use. The total allocation is 200 g including
-            failed attempts.
-          studies:
-          - '**Geometry check.** Show the final fabrication mesh as a closed solid with consistent outward normals.
-            Resolve open edges, internal faces and self-intersections before slicing.'
-          - '**Orientation comparison.** Compare two positions on the bed. Label contact areas, overhangs, bridges
-            and unsupported islands; explain the chosen orientation. Revise geometry if no orientation is viable
-            without supports.'
-          - '**Sliced and physical result.** Inspect the layer preview for missing thin features and floating
-            starts. Record dimensions, settings, predicted time/material and a photograph of the completed object.
-            Explain one difference between the prediction and the print.'
-          workflow:
-          - Duplicate/export the P2a result for fabrication while keeping its source graph intact. Record changes
-            made to the geometry.
-          - Export the mesh in millimeters and confirm all three dimensions in the slicer; STL itself does not
-            store units. Scale uniformly to preserve proportions.
-          - Complete the geometry/orientation/slicing check before entering the queue. Follow current FabLab
-            orientation and machine procedures.
-          - Print with supports off, keep a record of material used including failed attempts, and photograph
-            the final object. Assemble the process sheet using the Graphic Standards Manual.
-          deliverables:
-          - '**One physical CSG print** within 60 x 60 x 60 mm, produced without supports and within the 200
-            g allocation. Bring it for the Week 10 submission with your name on a separate label.'
-          - '**One 17 x 11 inch landscape process sheet:** `Lastname_Firstname_P2b.pdf`. Include the orientation
-            comparison, dimensioned print view, slicer settings/time/material, geometry changes and a clear
-            photograph of the completed print.'
-          - '**Editable source, exported mesh and slicer project** in `Lastname_Firstname_P2b/`. Include a screenshot
-            showing dimensions and supports off. A preview or render does not replace the physical object.'
-          evaluation:
-          - '**Printability:** the submitted object and mesh satisfy the size, material and support constraints.'
-          - '**Fabrication reasoning:** orientation and any geometry changes follow a documented reading of
-            the model and sliced layers.'
-          - '**Evidence:** the source, mesh, slicer project, process sheet and physical result correspond to
-            the same variant.'
-          - '**Communication:** the sheet clearly records settings, observations and what you learned from the
-            print.'
-          checklist:
-          - Each dimension is at most 60 mm; supports are off; cumulative filament use is at most 200 g.
-          - Mesh closure, normals, thin features and layer preview have been checked.
-          - The process sheet includes orientation reasoning, settings and a photograph.
-          - Physical object, source, mesh and slicer project are ready for submission.
-  - id: P3
-    title: Paneling
-    units:
-      - U03
-      - U04
-      - U05
-    description: Build a module, array it across two sheets, plot an attractor field and analyze a site with the Mixtli add-on.
-    brief_title: Paneling - Descriptive Geometry and Arrays
-    brief_pdf: files/assignments/P3-Paneling-and-Arrays.pdf
-    brief_milestones: [P3a, P3b]
-    milestones:
-      - id: P3a
-        title: Descriptive geometry module — material and lighting
-        kind: visual
-        release: 4
-        due: 6
-        weight: 7
-        requirements:
-          - Choose a simple panel from a built precedent that tiles edge to edge in a 2 × 2 grid. Credit the building, architect and source.
-          - Define parameters first and explain each. Include a shape control such as aperture, fold depth or corner offset, beyond overall dimensions.
-          - Build an editable, closed mesh from explicit point and face lists. Calculate point positions from the parameters.
-          - State the ranges where the module closes and tiles. Diagram low, middle and high values of a shape parameter.
-          - Use one 17 × 11 inch sheet with one studio render of the module on a ground plane — one material, a deliberate lighting setup (key, fill and rim, or one sun and sky) and no entourage. Record the material and light settings on the sheet.
-          - Beside the render, show point and face lists, a parameter table and the vertex order of one face. Explain normals, closure and reversed face winding.
-        deliverable: One module presentation sheet; PDF and editable graph.
-        brief:
-          description: Construct a panel from a built precedent using explicit point positions and ordered faces.
-            Explain how its parameters determine the geometry, verify that the panel closes and tiles, and present
-            it with a deliberate material and lighting setup. This authored module becomes the unchanged element
-            in P3b.
-          parameters:
-          - Width, depth and height/thickness in stated model units, with a local origin and X/Y/Z axes.
-          - 'At least one shape control beyond overall size: aperture, fold depth, corner offset or an equivalent
-            geometric feature. Explain how this value changes specific point coordinates.'
-          - Valid ranges and dependencies for every control. State the limits within which faces remain valid,
-            the solid closes and neighboring panels meet.
-          - Material settings and light positions/intensities relevant to the studio render. Use one material
-            and either key/fill/rim lighting or one sun with sky.
-          studies:
-          - '**Precedent and construction.** Credit the building, architect and image source. Diagram the panel
-            boundary, numbered vertices, connecting edges and ordered face lists. Show the vertex order of one
-            face and explain how reversing it changes its normal.'
-          - '**Descriptive views.** Use coordinated plan/front/side views and an axonometric construction diagram
-            to show how the point coordinates generate the form. Dimension the boundary and the shape-controlled
-            feature; distinguish construction lines from final edges.'
-          - '**Three parameter settings.** Show low, middle and high values of one shape parameter from the
-            same graph. Label all settings. Verify closure and show how the selected module tiles edge to edge
-            in a 2 x 2 grid.'
-          - '**One studio render.** Present the module on a ground plane, with one material and intentional
-            lighting, without entourage. Record the material and lighting settings beside the image so the result
-            can be reproduced.'
-          workflow:
-          - Select a simple built panel with a repeatable boundary. Identify its point/edge/face relationships
-            before creating the graph.
-          - Define named inputs, calculate the vertices and assemble the face lists in consistent order. Build
-            the module yourself from these elements.
-          - Check closure, normals and shared tile boundaries at the low/middle/high parameter settings. Resolve
-            gaps, reversed faces or self-intersections.
-          - Set up the material, ground and lights. Compose one sheet that explains both the geometric construction
-            and its rendered appearance.
-          deliverables:
-          - '**One 17 x 11 inch landscape module sheet:** `Lastname_Firstname_P3a.pdf`. Include the credited
-            precedent, construction and descriptive views, point/face lists, parameter table, three shape settings,
-            2 x 2 tiling check and studio render with settings.'
-          - '**Editable graph/source:** `.blend`, or an already approved `.gh`/`.3dm` route. Include the material/light
-            scene used for the render and package referenced assets. Keep native node names visible and explain
-            your groups with Frames.'
-          - Submit files in `Lastname_Firstname_P3a/`. Save the chosen parameter setting and panel origin so
-            the exact same module can be reused in P3b. No physical print is required for this milestone.
-          evaluation:
-          - '**Geometric reasoning:** point and face lists, ordered vertices, normals and closure explain the
-            constructed solid.'
-          - '**Control and validity:** a meaningful shape input produces the three documented alternatives inside
-            a tested range.'
-          - '**Tiling:** the selected panel meets its neighbors edge to edge in the 2 x 2 check.'
-          - '**Presentation:** drawings agree with the render; material, lighting and graphic hierarchy reveal
-            the panel geometry.'
-          checklist:
-          - Built precedent credited; panel authored from calculated points and ordered faces.
-          - One shape control beyond dimensions, tested at low/middle/high values.
-          - Closure, normals and edge-to-edge 2 x 2 tiling demonstrated.
-          - Point/face lists, descriptive views and parameter values are readable.
-          - One material, deliberate lights, ground plane and no entourage; source and sheet match.
-      - id: P3b
-        title: Arrays
-        kind: visual
-        release: 6
-        due: 8
-        weight: 7
-        requirements:
-          - 'Array your P3a module across exactly two 17 × 11 inch sheets, submitted together as one assignment.'
-          - 'Sheet 1 — 1D, 2D and 3D arrays: a linear array, a nested grid and an XYZ cube array. Label count, spacing and index order; show the predicted total for each.'
-          - 'Sheet 2 — parameters and index logic: a second count/spacing setting for each 1D, 2D and 3D array, a row/column/layer diagram, and the conditional selection before and after its rule applies.'
-          - 'Current brief scope: 1D, 2D and 3D arrays. Hexagonal, radial and curve arrays and attractors are reserved for later work.'
-          - Keep the module unchanged; vary only its placement. Expose count and spacing or radius in the graph.
-          - Build repetition from basic nodes and begin with a count you can inspect; there is no minimum element count.
-          - Include one conditional selection on either sheet. State its rule (for example, indices 3–5 lift by 0.5) and show the array before and after it applies.
-        deliverable: Exactly two sheets submitted together as one assignment; PDF and editable graph.
-        brief:
-          description: Use your P3a panel to explain repetition in one, two and three dimensions. Keep the module
-            geometry unchanged and compute its placement from indices, counts and spacing. Show both the arrangement
-            and the rule that generates it. Attractors and other array families are outside this brief's current
-            scope.
-          parameters:
-          - Integer counts Nx, Ny, Nz and positive step distances dx, dy, dz. Step distance measures between
-            corresponding module origins; it is not necessarily the clear gap between edges.
-          - Base point P0, array axes and one shared module orientation. Label the local origin used to place
-            each copy.
-          - A conditional selection rule and its effect, such as lifting a named index range. Expose the selection
-            limits and displacement without changing the module itself.
-          studies:
-          - '**1D - row.** Vary one index: P(i) = P0 + i*dx*X. Label the first few indices, count and spacing.
-            Predict the number of copies before evaluating the graph.'
-          - '**2D - grid.** Use independent row/column indices: P(i,j) = P0 + i*dx*X + j*dy*Y. Predict Nx*Ny
-            copies. Show the row/column structure and distinguish it from manually duplicating a row.'
-          - '**3D - spatial array.** Add an independent layer index: P(i,j,k) = P0 + i*dx*X + j*dy*Y + k*dz*Z.
-            Predict Nx*Ny*Nz copies. For equal counts N, the total is N cubed; 3, 4 and 5 per axis give 27,
-            64 and 125 copies. Show an axonometric view plus a layer view that makes the Z repetition visible.'
-          - '**Controlled comparisons.** For each array, change count and/or spacing using the same graph and
-            record both settings and totals. Keep the panel shape fixed. Begin with inspectable counts; no large
-            minimum element count is required.'
-          - '**One conditional.** State an index-based rule and show before/after views. Identify the affected
-            copies and the displacement. Ensure the selection leaves the other copies unchanged.'
-          workflow:
-          - Reference the selected P3a module, preserving its dimensions, shape controls and origin. Separate
-            panel generation from placement.
-          - Build a small 1D row, then nested 2D and 3D repetitions from basic nodes. Use i = 0..Nx-1, j = 0..Ny-1,
-            k = 0..Nz-1 and define X/Y/Z as unit vectors of the stated axes.
-          - Predict and inspect counts at each stage. Explain indices and row/layer organization. Distinguish
-            Grasshopper lists/trees from Blender fields or Repeat Zones; use the appropriate data structure
-            for your software.
-          - Test the second count/spacing settings and the conditional selection. Check for duplicate positions
-            and unintended collisions, then compose the two sheets.
-          deliverables:
-          - '**Exactly two 17 x 11 inch landscape sheets in one PDF:** `Lastname_Firstname_P3b.pdf`. They are
-            one assignment, submitted together.'
-          - '**Sheet 1 - 1D, 2D and 3D.** Show the row, nested grid and spatial array with their placement rules,
-            labeled axes, count/spacing values and predicted totals. Include the 3D layer view and a small reference
-            image of the unchanged P3a panel.'
-          - '**Sheet 2 - Parameters and index logic.** Show the second setting for each array with values and
-            totals, a diagram of row/column/layer organization, and the conditional before/after comparison
-            with its rule.'
-          - '**Editable graph/source** in `Lastname_Firstname_P3b/`, with labeled inputs and an output for each
-            array. Internalize Grasshopper references or package equivalent dependencies. Save/record the settings
-            used on both sheets so they can be reproduced. No physical print is required.'
-          evaluation:
-          - '**Array logic:** row, grid and spatial array use one, two and three independent directions; predicted
-            and actual totals agree.'
-          - '**Data control:** index order and row/layer organization are understandable; the conditional affects
-            exactly the intended copies.'
-          - '**Parametric behavior:** count and spacing changes recompute the arrangement while preserving the
-            P3a module.'
-          - '**Design and communication:** views reveal spacing and dimensional structure; captions, diagrams
-            and file organization follow the Graphic Standards Manual.'
-          checklist:
-          - Same P3a panel used unchanged in all arrangements.
-          - A row, a grid and a true spatial array are clearly distinguished.
-          - Axes, count, spacing, index order and predicted totals are shown for each.
-          - A second setting for every array and one conditional before/after comparison are documented.
-          - Two sheets submitted together; the source reopens and reproduces the documented outputs.
-      - id: P3c
-        title: 'Attractor: 2D field drawing'
-        kind: visual
-        release: 8
-        due: 10
-        checkpoints:
-          - week: 9
-            text: Bring the grayscale field and a first line drawing of it.
-        weight: 7
-        requirements:
-          - Build a 2D attractor field on a flat grid and translate it into lines — vary line length, rotation, spacing or hatch density with the measured distance.
-          - Compare single-point, multiple-point and curve attractors on the same grid, with the same mapping, so the difference comes from the attractor alone.
-          - Make one 17 × 11 inch sheet presenting the line drawing, with the grayscale field and a legend beside it. Label input and output ranges, clamping and falloff.
-          - Keep the drawing as clean vector lines and submit the SVG with the sheet PDF and the editable graph.
-          - Optional — plot the drawing on the pen plotter and add a photograph or scan of the plot to the sheet.
-        deliverable: One sheet presenting a 2D attractor field drawing; PDF, SVG and editable graph. A physical plot is optional.
-      - id: P3d
-        title: 'Attractor: layered site analysis'
-        kind: visual
-        release: 9
-        due: 11
-        weight: 7
-        deliverable: One site-analysis sheet; PDF, working file and a source record for the site.
-        checkpoints:
-          - week: 10
-            text: Bring your site's point cloud and at least two mapped layers with legends.
-        requirements:
-          - Pick a site you can document and state why you chose it. Record the source of the point cloud, its units, scale and orientation.
-          - Map at least three layers of the point-cloud data with attractor logic — for example distance to points or curves, height bands, and a recorded attribute such as colour or classification.
-          - Make one 17 × 11 inch sheet with small views of each layer, each with its own legend and units, beside one larger combined visualization.
-          - Explain what each layer measures, how you combined them, and what the combined view shows about the site.
-          - Record the tool, inputs and ranges for every layer and submit the working file. The Mixtli add-on for Blender, introduced in class, does these operations; an equivalent tool is fine.
-  - id: P4
-    title: Volumetric Data
-    units:
-      - U07
-      - U09
-      - U10
-    description: Model a volume with signed distance fields, discretize it into slices and fabricate a laser-cut assembly.
-    milestones:
-      - id: P4a
-        title: SDF volume
-        kind: visual
-        release: 10
-        due: 12
-        checkpoints:
-          - week: 11
-            text: Bring an SDF diagram, a union/intersection/difference comparison and a candidate volume for slicing.
-        weight: 14
-        requirements:
-          - Use two 17 x 11 inch sheets to explain a volume built from signed distance fields (SDF) — the CSG logic from P2, applied to fields instead of meshes.
-          - Compare union, intersection and difference using the same source fields. Show the chosen result and three controlled parameter variants.
-          - Diagram the field logic and identify density, signed distance or another implicit function. State sampling resolution and surface extraction settings.
-          - Select one volume for P4b and explain the spatial intention. Submit the editable graph and retain the source fields.
-        deliverable: Two volume-study sheets; PDF and editable field graph.
-      - id: P4b
-        title: Discretizing and laser-cut fabrication
-        kind: fabrication
-        release: 12
-        due: final
-        checkpoints:
-          - week: 13
-            text: Review section directions, thickness, registration, fit/kerf test and cutting layout before production.
-          - week: 15
-            text: Review the assembled result, photographs and final booklet documentation.
-        weight: 14
-        requirements:
-          - Use the selected P4a volume. Compare two section directions or intervals, then develop at least 12 ordered slices with material thickness and a registration system.
-          - Fit the assembly within 300 mm on each axis and one confirmed material sheet. Test kerf and fit before the batch; label and nest every part.
-          - Laser-cut and assemble the slices under FabLab procedures. Include test cuts and failed parts in the material allocation.
-          - Present the assembly with one 17 x 11 inch process sheet showing the continuous volume, section sequence, cutting layout, assembly diagram and photographs.
-          - Submit the editable source, cutting file and documentation. Regenerate fabrication files after any geometry or material change.
-        deliverable: Laser-cut slice assembly and one process sheet; source, cutting file and photographs.
-assessments:
-  - id: BOOK
-    title: Final booklet and review
     release: 1
-    due: final
-    weight: 18
+    due: 10
+    weight: 7
     checkpoints:
-      - week: 12
-        text: Bring a booklet spread and contents list for an ungraded progress check.
+    - week: 2
+      text: Bring a sample sheet for an ungraded identity check.
+    - week: final
+      text: Submit the revised manual as a separate PDF alongside the booklet.
     requirements:
-      - Compile all four projects and nine assignments in revised form, using 17 x 11 inch pages and your graphic standards.
-      - Include process diagrams, photographs and captions for the CSG print and laser-cut volume. Identify substantive revisions after critique.
-      - Submit the booklet PDF, a separate revised GSM PDF, editable project files and dependencies, and required fabrication files.
-      - Present the laser-cut assembly and the CSG print or its review documentation as directed. The exact final review slot remains to be confirmed.
-  - id: PART
-    title: Attendance and participation
-    release: 1
-    due: ongoing
-    weight: 5
+    - Make exactly four pages. Show each graphic rule beside a tested application.
+    - 'Use one page each for: (1) sheet size, margins, grid, columns and placement; (2) typography and hierarchy;
+      (3) color and line weights; (4) annotations, captions and image treatment on a course sheet.'
+    - Use at most three typefaces, three colors including black and paper, four hierarchy levels and four line
+      weights.
+    - Study the NYCTA, NASA and Munich 1972 manuals linked under Reading and documentation. Name one rule you
+      adopted.
+    - Apply the manual to every sheet and revise it after critique.
+    deliverable: Four-page Graphic Standards Manual; PDF and editable layout.
+    kind: identity
+    brief:
+      description: Create a Graphic Standards Manual that another person can use to reproduce the layout and
+        drawing conventions of your course work. State numerical settings and show each rule in use. Apply
+        this system to the CSG and Paneling submissions, then revise it after critique.
+      parameters:
+      - 'Page: 17 inches wide x 11 inches high, landscape. State margins, column count, gutter width, alignment
+        guides and the positions of the title, caption and footer.'
+      - 'Type: identify the family, style, point size and leading for each hierarchy level. Use at most three
+        typefaces and four hierarchy levels.'
+      - 'Color: provide HEX/RGB and CMYK values and an assigned role for each color. The limit is three colors
+        including black and the paper/background color.'
+      - 'Line: specify up to four weights in points or millimeters and their uses. Distinguish final edges,
+        secondary detail and construction geometry. State any dashed-line convention.'
+      studies:
+      - '**Page 1 - Sheet system.** Show the 17 x 11 inch grid with dimensioned margins, columns and gutters.
+        Place a small drawing in the grid to demonstrate alignment. Include course, student, assignment and
+        page information in a consistent location.'
+      - '**Page 2 - Typography.** Show the hierarchy with real titles, body text, drawing labels and captions.
+        Print the settings beside each specimen so another person can reproduce them.'
+      - '**Page 3 - Color and line weights.** Include labeled swatches and numerical values. Apply the line
+        hierarchy to one drawing fragment; isolated strokes alone do not explain which edges receive which
+        weight. Check the drawing in grayscale.'
+      - '**Page 4 - Applied course sheet.** Use your own course work to demonstrate annotations, captions and
+        image treatment. Show a main drawing and supporting process views with a clear reading order. Include
+        the reference manual and one rule you adopted. Do not add a separate cover.'
+      workflow:
+      - Study the NYCTA, NASA and Munich 1972 manuals linked in Reading and documentation. Identify a rule
+        and examine how its diagram and application agree.
+      - Set the grid, type, palette and line styles numerically in an editable layout/drawing application.
+        Template-based design tools cannot produce this work.
+      - Apply the settings to real drawings, then compare every page with the rules you wrote. Replace placeholders
+        and credit external sources.
+      - Check the exported PDF at actual size and make a sample test print. Adjust fine lines, small captions
+        or weak contrast before submission.
+      deliverables:
+      - '**Exactly four 17 x 11 inch landscape pages** in `Lastname_Firstname_GSM.pdf`, in the order above.
+        Export sharp linework and legible, selectable text where possible.'
+      - '**Editable layout source** with linked images packaged. Keep the grid and named styles available for
+        later course sheets.'
+      - Submit the PDF and source in `Lastname_Firstname_GSM/` through the course submission channel announced
+        in class/Canvas. Bring a sample sheet to the Week 2 check and submit the revised manual separately
+        alongside the final booklet.
+      evaluation:
+      - '**Definition:** rules have values, units and assigned uses; another person can reproduce the system.'
+      - '**Hierarchy:** the main drawing, supporting information and captions have a clear reading order.'
+      - '**Consistency:** the applications follow the documented grid, typography, palette and line weights.'
+      - '**Craft:** all four pages are complete, readable at actual size and free of missing assets or export
+        errors.'
+      checklist:
+      - Four pages only, all 17 x 11 inches, in the required order.
+      - No more than three typefaces, three colors including black/paper, four hierarchy levels and four line
+        weights.
+      - Every standard has a numerical setting and a tested application.
+      - One adopted precedent rule is named and credited.
+      - The PDF and editable source open from the submission folder.
+    number: '1'
+    due_time: '23:59'
+- id: P2
+  title: CSG
+  units:
+  - U02
+  description: Explain a CSG object through a BIG-style process diagram with instructions, then 3D print it.
+  brief_title: CSG - Sheet and Print
+  brief_pdf: files/assignments/P2-CSG-Sheet-and-Print.pdf
+  brief_milestones:
+  - P2a
+  - P2b
+  milestones:
+  - id: P2a
+    title: CSG process and instructions
+    kind: visual
+    release: 2
+    due: 6
+    weight: 7
     requirements:
-      - Participate in demonstrations, working sessions and critique and bring the current editable file.
-      - Attendance and absence terms are stated in the retained course policies.
-weeks:
-  - week: 1
-    date: '2026-08-25'
-    focus: Begin the Graphic Standards Manual, test a sample sheet and organize your files.
-  - week: 2
-    label: Transformations and Booleans
-    date: '2026-09-01'
-    focus: Move, rotate and scale procedurally. Compare solid Boolean operators and begin the massing study.
-  - week: 3
-    label: 3D printing
-    date: '2026-09-08'
-    focus: 'Refine the CSG process sheet and instructions. Introduce P2b: prepare the CSG object for 3D printing, including units, orientation and slicing.'
-  - week: 4
-    label: Point to solid
-    date: '2026-09-15'
-    focus: Point → Line → Edge → Face → Solid → Boolean. Build the parametric pyramid and reconnect to the CSG project.
-  - week: 5
-    label: Your module, material and lighting
-    date: '2026-09-22'
-    focus: Build your own module from points and faces, test its parameter ranges, then render it with one material and a deliberate lighting setup for the P3a sheet.
-  - week: 6
-    label: 1D, 2D and 3D arrays
-    date: '2026-09-29'
-    focus: '1D, 2D and 3D arrays: linear, nested grid and XYZ cube array, with index order and a conditional selection. Brief P3b; start sheet 1.'
-  - week: 7
-    label: Hexagonal, radial and curve arrays
-    date: '2026-10-06'
-    focus: 'Hexagonal, radial and curve arrays, including a sine-driven curve. Start P3b sheet 2. No graded submissions during studio reviews.'
-    no_due: true
-  - week: 8
-    label: 2D field drawing
-    date: '2026-10-13'
-    focus: 'Attractors on a 2D field: measure distance, show the grayscale field, remap and clamp, then translate the field into lines and export an SVG (pen plotting optional). Brief P3c.'
-  - week: 9
-    label: Layered site analysis
-    date: '2026-10-20'
-    focus: 'Layered site analysis: map a point cloud with distance, height and attribute layers and combine them into one reading, using the Mixtli add-on. Brief P3d; review P3c line drawings.'
-  - week: 10
-    label: Deadline week and SDF
-    date: '2026-10-27'
-    focus: 'Mid-semester deadline: everything through Arrays is due, with the 2D attractor drawing. Regular class: introduce Volumetric Data and signed distance fields; brief P4a.'
-  - week: 11
-    label: SDF volume
-    date: '2026-11-03'
-    focus: 'SDF volume: signed distance primitives, union/intersection/difference and smooth blends, noise and surface extraction. Brief P4a; select a volume for slicing. P3d is due.'
-  - week: 12
-    label: Sections
-    date: '2026-11-10'
-    focus: Slice the chosen volume into contours. Compare section directions, intervals and order.
-  - week: 13
-    label: Parts for the laser cutter
-    date: '2026-11-17'
-    focus: Develop section parts with thickness and registration. Test fit and kerf, then label and nest the parts.
+    - 'One 17 × 11 inch sheet laid out as a BIG-style process diagram (in the manner of Bjarke Ingels Group''s
+      step-by-step massing diagrams): eight or nine numbered frames, one operation per frame, read in sequence.'
+    - Use at least three primitives; include translation, rotation and scale, plus union, difference and intersection.
+      Label the kept and removed solids in each subtraction.
+    - Draw the final solid at building scale with a 1.75 m figure, vegetation, ground and shadow.
+    - Add clear instructions and matching pseudocode beside the diagrams, one step per operation, with the
+      exposed parameters.
+    - Refer to Di Mari and Yoo's Operative Design and Di Mari's Conditional Design; name the spatial operation
+      your sequence explores.
+    - Submit an editable graph with exposed inputs and all source operations intact.
+    deliverable: One process sheet; PDF and editable graph.
+    brief:
+      description: 'Build an editable CSG object and explain its construction as a sequence another person
+        can follow. Use a BIG-style massing diagram: one operation per frame, a consistent viewpoint and a
+        visible change between steps. The same object becomes the basis of the P2b print.'
+      parameters:
+      - Expose primitive dimensions, translation values, rotation angle/axis/center and scale factor. Name
+        inputs by their geometric role and state units.
+      - Define the origin and axes, where each primitive starts, and the order of Boolean operands. In a difference,
+        identify the solid kept and the cutter removed.
+      - Keep the source operations editable. Preserve native node names and use Frames/groups to explain the
+        sequence. Use Blender Geometry Nodes or an already approved Rhino/Grasshopper route.
+      studies:
+      - '**Eight or nine numbered frames.** Begin with at least three primitive solids. Include translation,
+        rotation, scale, union, intersection and difference. Mark incoming geometry and removed material so
+        the change can be read without guessing. Each frame records one operation or operation type, with its
+        relevant values.'
+      - '**Matching instructions and pseudocode.** Give intermediate solids names, use those names consistently
+        and place the text beside its frame. State the units and coordinate conventions once, then specify
+        enough dimensions and transforms to reconstruct the result.'
+      - '**Final solid at building scale.** Show the final geometry with a 1.75 m figure, vegetation, ground
+        and shadow. Separate presentation context from the CSG object that will be fabricated. State the spatial
+        operation explored, with a reference to Operative Design or Conditional Design.'
+      workflow:
+      - Choose a spatial operation from the readings, sketch a sequence and build it from primitives using
+        an editable graph.
+      - Check the Boolean order and change an exposed input. Verify that the downstream result recomputes without
+        rebuilding the graph.
+      - Write the procedure from the working model. Ask a partner to identify any undefined size, position
+        or operand; revise those instructions.
+      - Export the operation views from one camera and compose the single sheet using the Graphic Standards
+        Manual. Match every frame to the current graph.
+      deliverables:
+      - '**One 17 x 11 inch landscape PDF sheet:** `Lastname_Firstname_P2a.pdf`. Include all numbered frames,
+        adjacent instructions/pseudocode, exposed values, the final architectural view and source credits.'
+      - '**Editable graph:** `.blend`, or `.gh` plus `.3dm` where used. Internalize Grasshopper reference inputs;
+        package any other necessary dependencies. A baked mesh or screenshots alone cannot demonstrate the
+        operation history.'
+      - Use `Lastname_Firstname_P2a/` for the submission. Keep the object available for the separate P2b fabrication
+        milestone.
+      evaluation:
+      - '**CSG logic:** the required transforms and all three Boolean types produce the stated result and remain
+        editable.'
+      - '**Reproducibility:** dimensions, axes, named operands and operation order make the procedure unambiguous.'
+      - '**Communication:** diagram and instructions agree; consistent views show one understandable change
+        per frame.'
+      - '**Design and craft:** the spatial operation reads at building scale and the sheet follows the Graphic
+        Standards Manual.'
+      checklist:
+      - Eight or nine frames; at least three primitives; translation, rotation, scale, union, intersection
+        and difference.
+      - Difference frames label the kept solid and cutter.
+      - Instructions and pseudocode match the graph and include parameter values.
+      - Final view includes a 1.75 m figure, vegetation, ground and shadow.
+      - One sheet and an editable source that opens with all dependencies.
+    number: '2.1'
+    due_time: '23:59'
+  - id: P2b
+    title: CSG 3D printed object
+    kind: fabrication
+    release: 3
+    due: 8
+    checkpoints:
+    - week: 6
+      text: Check geometry, units, orientation and the sliced preview before queueing.
+    weight: 7
+    requirements:
+    - Print a variant of your CSG object from P2a, within 60 mm on each axis and the 200 g allocation, without
+      supports.
+    - Hand in the physical print during class on the listed due date; submit the process sheet and digital
+      files by 11:59 PM Eastern Time that night.
+    - Submit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.
+    deliverable: One 3D printed CSG object and one process sheet; source, mesh and slicer files.
+    brief:
+      description: Fabricate a variant of your P2a CSG object and explain the decisions that make it printable.
+        Compare the final physical object with the digital geometry. Record any revision for closure, feature
+        thickness or orientation so the fabrication copy remains traceable to the original construction.
+      parameters:
+      - Uniform print scale and final X/Y/Z dimensions in millimeters. Each axis must be no greater than 60
+        mm in the selected print orientation.
+      - Printer/material profile, draft layer height, wall count and infill. Supports must be off. Record the
+        chosen values rather than assuming a universal printer profile.
+      - Orientation, bed-contact face, estimated time and filament use. The total allocation is 200 g including
+        failed attempts.
+      studies:
+      - '**Geometry check.** Show the final fabrication mesh as a closed solid with consistent outward normals.
+        Resolve open edges, internal faces and self-intersections before slicing.'
+      - '**Orientation comparison.** Compare two positions on the bed. Label contact areas, overhangs, bridges
+        and unsupported islands; explain the chosen orientation. Revise geometry if no orientation is viable
+        without supports.'
+      - '**Sliced and physical result.** Inspect the layer preview for missing thin features and floating starts.
+        Record dimensions, settings, predicted time/material and a photograph of the completed object. Explain
+        one difference between the prediction and the print.'
+      workflow:
+      - Duplicate/export the P2a result for fabrication while keeping its source graph intact. Record changes
+        made to the geometry.
+      - Export the mesh in millimeters and confirm all three dimensions in the slicer; STL itself does not
+        store units. Scale uniformly to preserve proportions.
+      - Complete the geometry/orientation/slicing check before entering the queue. Follow current FabLab orientation
+        and machine procedures.
+      - Print with supports off, keep a record of material used including failed attempts, and photograph the
+        final object. Assemble the process sheet using the Graphic Standards Manual.
+      deliverables:
+      - '**One physical CSG print** within 60 x 60 x 60 mm, produced without supports and within the 200 g
+        allocation. Bring it to class on the listed due date with your name on a separate label.'
+      - '**One 17 x 11 inch landscape process sheet:** `Lastname_Firstname_P2b.pdf`. Include the orientation
+        comparison, dimensioned print view, slicer settings/time/material, geometry changes and a clear photograph
+        of the completed print.'
+      - '**Editable source, exported mesh and slicer project** in `Lastname_Firstname_P2b/`. Include a screenshot
+        showing dimensions and supports off. A preview or render does not replace the physical object.'
+      evaluation:
+      - '**Printability:** the submitted object and mesh satisfy the size, material and support constraints.'
+      - '**Fabrication reasoning:** orientation and any geometry changes follow a documented reading of the
+        model and sliced layers.'
+      - '**Evidence:** the source, mesh, slicer project, process sheet and physical result correspond to the
+        same variant.'
+      - '**Communication:** the sheet clearly records settings, observations and what you learned from the
+        print.'
+      checklist:
+      - Each dimension is at most 60 mm; supports are off; cumulative filament use is at most 200 g.
+      - Mesh closure, normals, thin features and layer preview have been checked.
+      - The process sheet includes orientation reasoning, settings and a photograph.
+      - Physical object, source, mesh and slicer project are ready for submission.
+    number: '2.2'
+    due_time: '23:59'
+- id: P3
+  title: Paneling
+  units:
+  - U03
+  - U04
+  - U05
+  description: Build a panel from descriptive geometry, repeat it in 1D/2D/3D arrays, then drive one panel
+    parameter with an attractor to compose a façade.
+  brief_title: Paneling, Arrays and Attractor Façade
+  brief_pdf: files/assignments/P3-Paneling-and-Arrays.pdf
+  brief_milestones:
+  - P3a
+  - P3b
+  - P3c
+  milestones:
+  - id: P3a
+    title: Descriptive geometry module — material and three-point lighting
+    kind: visual
+    release: 4
+    due: 9
+    weight: 7
+    requirements:
+    - Choose a simple panel from a built precedent that tiles edge to edge in a 2 × 2 grid. Credit the building,
+      architect and source.
+    - Define parameters first and explain each. Include a shape control such as aperture, fold depth or corner
+      offset, beyond overall dimensions.
+    - Build an editable, closed mesh from explicit point and face lists. Calculate point positions from the
+      parameters.
+    - State the ranges where the module closes and tiles. Diagram low, middle and high values of a shape parameter.
+    - Use one 17 x 11 inch sheet with a studio render of your module resting on a ground plane. Create one
+      material yourself and apply it to the module. Set up three-point lighting with a key light, fill light
+      and rim/back light. Use a simple neutral ground material and no entourage.
+    - Beside the render, show point and face lists, a parameter table and the vertex order of one face. Explain
+      normals, closure and reversed face winding.
+    - Show a lighting diagram identifying the camera, ground plane and three lights. Record each light's type,
+      position, size and power, and the material settings needed to reproduce the render. Three-point lighting
+      describes the three lighting roles; it does not require three Point-type lights. Area lights are suitable.
+    deliverable: One module presentation sheet; PDF and editable graph.
+    brief:
+      description: Construct a panel from a built precedent using explicit point positions and ordered faces.
+        Verify closure and tiling, create one material for the module, and present it resting on a ground plane
+        with a three-point lighting setup. This authored module becomes the unchanged element in 3.2 and the
+        parameter-driven element in 3.3.
+      parameters:
+      - Width, depth and height/thickness in stated model units, with a local origin and X/Y/Z axes.
+      - 'At least one shape control beyond overall size: aperture, fold depth, corner offset or an equivalent
+        geometric feature. Explain how this value changes specific point coordinates.'
+      - Valid ranges and dependencies for every control. State the limits within which faces remain valid,
+        the solid closes and neighboring panels meet.
+      - 'Your authored module material: base color, roughness and any other active settings. Three lights:
+        key, fill and rim/back, with type, position, size and power recorded. Use a neutral ground plane; keep
+        its material separate from the one authored module material.'
+      studies:
+      - '**Precedent and construction.** Credit the building, architect and image source. Diagram the panel
+        boundary, numbered vertices, connecting edges and ordered face lists. Show the vertex order of one
+        face and explain how reversing it changes its normal.'
+      - '**Descriptive views.** Use coordinated plan/front/side views and an axonometric construction diagram
+        to show how the point coordinates generate the form. Dimension the boundary and the shape-controlled
+        feature; distinguish construction lines from final edges.'
+      - '**Three parameter settings.** Show low, middle and high values of one shape parameter from the same
+        graph. Label all settings. Verify closure and show how the selected module tiles edge to edge in a
+        2 x 2 grid.'
+      - '**Studio render and lighting diagram.** Place the module on a ground plane so contact and cast shadows
+        explain its position. The key light establishes form, the fill controls shadow contrast, and the rim/back
+        light separates the edges from the background. Show the three lights and camera in a small diagram;
+        record the material and light settings. No entourage.'
+      workflow:
+      - Select a simple built panel with a repeatable boundary. Identify its point/edge/face relationships
+        before creating the graph.
+      - Define named inputs, calculate the vertices and assemble the face lists in consistent order. Build
+        the module yourself from these elements.
+      - Check closure, normals and shared tile boundaries at the low/middle/high parameter settings. Resolve
+        gaps, reversed faces or self-intersections.
+      - Create the module material yourself. Place the module on a ground plane and build the key/fill/rim
+        lighting setup. Test each light separately, then balance the combined result. Compose the sheet with
+        the construction evidence, render and lighting diagram.
+      deliverables:
+      - '**One 17 x 11 inch landscape module sheet:** `Lastname_Firstname_P3a.pdf`. Include the credited precedent,
+        construction and descriptive views, point/face lists, parameter table, three shape settings, 2 x 2
+        tiling check and studio render with settings. Include the three-point lighting diagram and identify
+        the authored material.'
+      - '**Editable graph/source:** `.blend`, or an already approved `.gh`/`.3dm` route. Include the material/light
+        scene used for the render and package referenced assets. Keep native node names visible and explain
+        your groups with Frames.'
+      - Submit files in `Lastname_Firstname_P3a/`. Save the chosen parameter setting and panel origin so the
+        exact same module can be reused in P3b. No physical print is required for this milestone.
+      evaluation:
+      - '**Geometric reasoning:** point and face lists, ordered vertices, normals and closure explain the constructed
+        solid.'
+      - '**Control and validity:** a meaningful shape input produces the three documented alternatives inside
+        a tested range.'
+      - '**Tiling:** the selected panel meets its neighbors edge to edge in the 2 x 2 check.'
+      - '**Material and presentation:** the student-authored material and key/fill/rim lighting reveal the
+        geometry; the module visibly rests on a ground plane; the lighting diagram and recorded settings match
+        the editable scene.'
+      checklist:
+      - Built precedent credited; panel authored from calculated points and ordered faces.
+      - One shape control beyond dimensions, tested at low/middle/high values.
+      - Closure, normals and edge-to-edge 2 x 2 tiling demonstrated.
+      - Point/face lists, descriptive views and parameter values are readable.
+      - One student-authored module material; ground plane; key, fill and rim/back lights with a diagram and
+        settings; no entourage.
+    number: '3.1'
+    due_time: '23:59'
+  - id: P3b
+    title: Arrays
+    kind: visual
+    release: 6
+    due: 10
+    weight: 7
+    requirements:
+    - Array your P3a module across exactly two 17 × 11 inch sheets, submitted together as one assignment.
+    - 'Sheet 1 — 1D, 2D and 3D arrays: a linear array, a nested grid and an XYZ cube array. Label count, spacing
+      and index order; show the predicted total for each.'
+    - 'Sheet 2 — parameters and index logic: a second count/spacing setting for each 1D, 2D and 3D array, a
+      row/column/layer diagram, and the conditional selection before and after its rule applies.'
+    - 'Current brief scope: 1D, 2D and 3D arrays. Hexagonal, radial and curve arrays and attractors are reserved
+      for later work.'
+    - Keep the module geometry unchanged; vary its placement. Expose count and spacing in the graph.
+    - Build repetition from basic nodes and begin with a count you can inspect; there is no minimum element
+      count.
+    - Include one conditional selection on either sheet. State its rule (for example, indices 3–5 lift by 0.5)
+      and show the array before and after it applies.
+    - Use materials from the instructor-provided library or create your own. Record which materials you used
+      and any edits; package required textures. Material choice must keep array spacing, depth and repetition
+      readable. The library will be posted before this assignment is due; creating your own remains an equally
+      valid route.
+    deliverable: Exactly two sheets submitted together as one assignment; PDF and editable graph.
+    brief:
+      description: Use your P3a panel to explain repetition in one, two and three dimensions. Keep the module
+        geometry unchanged and compute its placement from indices, counts and spacing. Show both the arrangement
+        and the rule that generates it. Attractors and other array families are outside this brief's current
+        scope.
+      parameters:
+      - Integer counts Nx, Ny, Nz and positive step distances dx, dy, dz. Step distance measures between corresponding
+        module origins; it is not necessarily the clear gap between edges.
+      - Base point P0, array axes and one shared module orientation. Label the local origin used to place each
+        copy.
+      - A conditional selection rule and its effect, such as lifting a named index range. Expose the selection
+        limits and displacement without changing the module itself.
+      - Material selection and any edited settings. Use the instructor-provided library or your own materials;
+        identify the source and package textures. There is no separate requirement to author a new material
+        for 3.2.
+      studies:
+      - '**1D - row.** Vary one index: P(i) = P0 + i*dx*X. Label the first few indices, count and spacing.
+        Predict the number of copies before evaluating the graph.'
+      - '**2D - grid.** Use independent row/column indices: P(i,j) = P0 + i*dx*X + j*dy*Y. Predict Nx*Ny copies.
+        Show the row/column structure and distinguish it from manually duplicating a row.'
+      - '**3D - spatial array.** Add an independent layer index: P(i,j,k) = P0 + i*dx*X + j*dy*Y + k*dz*Z.
+        Predict Nx*Ny*Nz copies. For equal counts N, the total is N cubed; 3, 4 and 5 per axis give 27, 64
+        and 125 copies. Show an axonometric view plus a layer view that makes the Z repetition visible.'
+      - '**Controlled comparisons.** For each array, change count and/or spacing using the same graph and record
+        both settings and totals. Keep the panel shape fixed. Begin with inspectable counts; no large minimum
+        element count is required.'
+      - '**One conditional.** State an index-based rule and show before/after views. Identify the affected
+        copies and the displacement. Ensure the selection leaves the other copies unchanged.'
+      workflow:
+      - Reference the selected P3a module, preserving its dimensions, shape controls and origin. Separate panel
+        generation from placement.
+      - Build a small 1D row, then nested 2D and 3D repetitions from basic nodes. Use i = 0..Nx-1, j = 0..Ny-1,
+        k = 0..Nz-1 and define X/Y/Z as unit vectors of the stated axes.
+      - Predict and inspect counts at each stage. Explain indices and row/layer organization. Distinguish Grasshopper
+        lists/trees from Blender fields or Repeat Zones; use the appropriate data structure for your software.
+      - Test the second count/spacing settings and the conditional selection. Check for duplicate positions
+        and unintended collisions, then compose the two sheets. Apply library materials or your own materials
+        consistently across the comparison views.
+      deliverables:
+      - '**Exactly two 17 x 11 inch landscape sheets in one PDF:** `Lastname_Firstname_P3b.pdf`. They are one
+        assignment, submitted together.'
+      - '**Sheet 1 - 1D, 2D and 3D.** Show the row, nested grid and spatial array with their placement rules,
+        labeled axes, count/spacing values and predicted totals. Include the 3D layer view and a small reference
+        image of the unchanged P3a panel.'
+      - '**Sheet 2 - Parameters and index logic.** Show the second setting for each array with values and totals,
+        a diagram of row/column/layer organization, and the conditional before/after comparison with its rule.'
+      - '**Editable graph/source** in `Lastname_Firstname_P3b/`, with labeled inputs and an output for each
+        array. Internalize Grasshopper references or package equivalent dependencies. Save/record the settings
+        used on both sheets so they can be reproduced. No physical print is required. Include a short material-source
+        note and all referenced textures.'
+      evaluation:
+      - '**Array logic:** row, grid and spatial array use one, two and three independent directions; predicted
+        and actual totals agree.'
+      - '**Data control:** index order and row/layer organization are understandable; the conditional affects
+        exactly the intended copies.'
+      - '**Parametric behavior:** count and spacing changes recompute the arrangement while preserving the
+        P3a module.'
+      - '**Design and communication:** views reveal spacing and dimensional structure; captions, diagrams and
+        file organization follow the Graphic Standards Manual.'
+      checklist:
+      - Same P3a panel used unchanged in all arrangements.
+      - A row, a grid and a true spatial array are clearly distinguished.
+      - Axes, count, spacing, index order and predicted totals are shown for each.
+      - A second setting for every array and one conditional before/after comparison are documented.
+      - Two sheets submitted together; the source reopens and reproduces the documented outputs.
+      - Material library selections or student-authored materials identified; referenced textures packaged.
+    number: '3.2'
+    due_time: '23:59'
+  - id: P3c
+    title: Attractor-driven panel façade
+    kind: visual
+    release: 11
+    due: 13
+    checkpoints:
+    - week: 12
+      text: Bring a uniform façade, the sampled attractor field, and a first test of one driven panel parameter.
+    weight: 7
+    requirements:
+    - Use your 3.1 panel and the 2D array logic from 3.2 to build a façade. Sample distance to a point or curve
+      attractor at each panel location.
+    - Use the attractor data to drive exactly one geometric parameter of the panel, such as aperture, fold
+      depth or corner offset. Recompute panel geometry from that parameter. Color alone or moving unchanged
+      panels does not satisfy this requirement.
+    - Diagram distance measurement, normalization/remapping, clamping and the chosen parameter range. Keep
+      all other panel geometry inputs fixed for the comparison. Stay inside the valid range tested in 3.1.
+    - Compare a uniform baseline with the attractor-driven façade. Show one additional attractor position using
+      the same graph and parameter mapping.
+    - Present one 17 x 11 inch composition with an orthographic façade elevation and a matching isometric view
+      of the same final façade. Make the attractor location/curve and its influence readable in an overlay
+      or accompanying field diagram with a legend.
+    - Submit a print-ready PDF and the editable graph. These are views of a 3D panel system; a standalone 2D
+      line-field drawing is no longer the assignment. Pen plotting is not required.
+    deliverable: 'One façade composition: elevation, isometric, attractor/parameter diagram and controlled
+      comparisons; PDF and editable graph.'
+    number: '3.3'
+    due_time: '23:59'
+    brief:
+      description: Turn your panel array into a responsive façade. Measure an attractor field across the façade
+        and use its values to change one geometric parameter in the panel you built in 3.1. The elevation explains
+        the overall composition; the isometric explains the three-dimensional result.
+      parameters:
+      - Façade row/column counts, panel spacing and base plane/origin. Use a stable grid so the comparison
+        isolates changes to panel form.
+      - Attractor point position or curve, measured-distance input range, remapping/falloff and clamping.
+      - One selected geometric panel parameter, its units and minimum/maximum values. Keep the other shape
+        parameters fixed; test validity at both extremes.
+      studies:
+      - '**Baseline.** Show a small uniform façade with the selected panel parameter fixed. Label the constant
+        value.'
+      - '**Field to form.** Diagram sample location → distance → normalized/clamped value → panel parameter.
+        Show the field and legend beside the geometry so the relationship is traceable.'
+      - '**Controlled variation.** Move the attractor once and compare the result while keeping the grid, range
+        and remaining inputs unchanged. Do not rebuild the graph for each study.'
+      - '**Final composition.** Give the elevation and matching isometric the most space. Show the attractor
+        explicitly and label the selected parameter, limits and final settings. Use the Graphic Standards Manual.'
+      workflow:
+      - Reference your own panel definition and create a small façade grid. Confirm the uniform baseline first.
+      - Measure distance at each panel location. Map and clamp the values into the chosen panel parameter range,
+        then generate the individual panels.
+      - Check the near and far limits and several intermediate panels. Resolve gaps, self-intersections or
+        invalid faces before increasing the array count.
+      - Capture the two attractor settings and compose the elevation, isometric and explanatory diagrams from
+        the saved final state.
+      deliverables:
+      - '**One 17 x 11 inch landscape PDF:** `Lastname_Firstname_P3c.pdf`. Include the final façade elevation
+        and isometric, the attractor/field legend, the mapping diagram, the baseline and one additional attractor
+        setting.'
+      - '**Editable source** in `Lastname_Firstname_P3c/`: save the panel definition, array, attractor and
+        named mapping controls; internalize or package all dependencies and materials. Record the settings
+        used for the final views.'
+      - Prepare the composition for normal printing at its stated size. No pen-plotter output or physical façade
+        model is required.
+      evaluation:
+      - '**Attractor logic:** a measured field drives one actual panel geometry parameter through an explainable
+        mapping.'
+      - '**Continuity:** the work develops the student''s 3.1 panel and 3.2 array; extreme values remain geometrically
+        valid.'
+      - '**Experimentation:** baseline and changed-attractor studies isolate the effect of the chosen control.'
+      - '**Design and communication:** elevation, isometric, field legend and captions agree and clearly explain
+        the façade composition.'
+      checklist:
+      - Own panel and array reused; one geometric panel parameter responds to the attractor.
+      - Input/output ranges, units, clamping and attractor position are documented.
+      - Uniform baseline and one additional attractor setting are shown.
+      - Final elevation and isometric show the same façade; field influence is legible.
+      - Print-ready composition and packaged source reproduce the final result.
+- id: P4
+  title: Integrated Spatial Project
+  units:
+  - U05
+  - U07
+  - U09
+  - U10
+  description: Develop one project from attractor-based site analysis through abstract SDF volumes and discretization
+    to an assembled model combining laser-cut and 3D-printed parts.
+  milestones:
+  - id: P4a
+    title: Site analysis using attractors
+    kind: visual
+    release: 12
+    due: 14
+    weight: 7
+    deliverable: One 17 x 11 inch site-analysis sheet with three mapped layers, combined reading and design
+      intention; PDF, working file and source record.
+    checkpoints:
+    - week: 13
+      text: Bring a documented site, source/units, and at least two attractor-based analytical layers with
+        legends.
+    requirements:
+    - Pick a site you can document and state why you chose it. Record the source of the point cloud, its units,
+      scale and orientation.
+    - Map at least three layers of the point-cloud data with attractor logic — for example distance to points
+      or curves, height bands, and a recorded attribute such as colour or classification.
+    - Make one 17 × 11 inch sheet with small views of each layer, each with its own legend and units, beside
+      one larger combined visualization.
+    - Explain what each layer measures, how you combined them, and what the combined view shows about the site.
+    - Record the tool, inputs and ranges for every layer and submit the working file. The Mixtli add-on for
+      Blender, introduced in class, does these operations; an equivalent tool is fine.
+    - Use the analysis to state one spatial design intention for the same project in 4.2–4.4. Identify which
+      mapped relationship will inform the volume; this is the start of one continuing project.
+    number: '4.1'
+    due_time: '23:59'
+  - id: P4b
+    title: SDF volumetric exploration
+    kind: visual
+    release: 13
+    due: final
+    checkpoints:
+    - week: 14
+      text: 'Ungraded production check: select a volume, show its elevation/isometric/abstract plan, and establish
+        scale before discretizing.'
+    weight: 14
+    requirements:
+    - Develop the site/design intention from 4.1 into an abstract spatial project using signed distance fields.
+      Identify the relationship between the site reading and your field/form decisions.
+    - Compare union, intersection and difference using the same source fields. Show the selected result and
+      three controlled parameter variants, with inputs and field logic recorded.
+    - Submit two 17 x 11 inch sheets. Sheet 1 explains the site-to-field idea, source fields, Boolean comparisons,
+      parameter variants, sampling resolution and extraction settings.
+    - Sheet 2 presents an orthographic elevation, an isometric and an abstract floor plan of the same selected
+      volume. State the plan cut height and show the cut as a horizontal section; a top view alone is not a
+      floor plan. Keep orientation and scale consistent or label any change.
+    - 'Keep the representation abstract: communicate solid/void, depth, rhythm and spatial relationships. Use
+      the Instagram precedents already listed under Resources → Visual precedents to study composition and
+      restraint. Credit the specific posts used and explain one representational choice you adapted; develop
+      your own geometry.'
+    - Retain the editable source fields and selected volume. This same project continues through discretization
+      (4.3) and the mixed-media model (4.4). A developed room program or construction drawing set is not required.
+    deliverable: 'Two sheets: field/variant studies and a coordinated elevation, isometric and abstract floor
+      plan; PDF and editable SDF source.'
+    number: '4.2'
+  - id: P4c
+    number: '4.3'
+    title: Discretizing the SDF
+    kind: visual
+    release: 14
+    due: final
+    weight: 7
+    checkpoints:
+    - week: 15
+      text: 'Ungraded production check: bring ordered slices, part layout, a connection/fit test and the proposed
+        laser-cut/3D-printed division.'
+    requirements:
+    - Use the selected 4.2 volume. Compare at least two section directions or intervals, then select and explain
+      one discretization strategy.
+    - Develop at least 12 ordered slices with material thickness, spacing and a registration/connection system.
+      Show how the discrete parts approximate the continuous SDF volume.
+    - Decide which parts will be laser-cut and which will be 3D printed for 4.4. Give each process a geometric
+      or assembly role, such as sliced body plus printed connectors or base; a decorative unrelated print is
+      not sufficient.
+    - Prepare one 17 x 11 inch sheet with the continuous volume, comparison studies, numbered parts, an exploded
+      isometric, assembly order and the proposed connection detail.
+    - Check units, model scale, material thickness, clearances and lab-confirmed stock. Export clean, labeled
+      cutting curves and printable meshes; retain the editable model so the parts can regenerate.
+    - Test a representative connection before full production. Record the intended fit, measured result and
+      any correction. A small test supports this milestone; the complete model is assessed in 4.4.
+    deliverable: One discretization/process sheet; PDF, editable source, numbered cutting layout and printable
+      part meshes.
+  - id: P4d
+    number: '4.4'
+    title: Mixed-media model — laser cutting and 3D printing
+    kind: fabrication
+    release: 14
+    due: final
+    weight: 7
+    checkpoints:
+    - week: 15
+      text: 'Ungraded fabrication check: show tested connections, laser-cut/printed sample parts, production
+        progress and a remaining-work plan.'
+    requirements:
+    - Fabricate and assemble the same project developed in 4.1–4.3 as one mixed-media model that combines laser-cut
+      and 3D-printed components. Both processes are required and must contribute to the model's form, support
+      or assembly.
+    - Use the numbered parts and connection strategy from 4.3. Test fit, kerf and printed tolerances before
+      a full batch; revise and regenerate the files after changes.
+    - Keep the assembled model within 300 mm on each axis and the laser-cut parts within one confirmed sheet.
+      Confirm the final-project print allocation, stock, sheet size and machine schedule with the instructors/FabLab
+      before production; the earlier CSG allocation is separate.
+    - Submit the complete physical assembly and one 17 x 11 inch documentation sheet showing an overall photograph,
+      a detail of the laser-cut/printed connection, process evidence and revisions from the digital model.
+    - Include the editable source, final cutting file, printable meshes, slicer projects and a material/part
+      list. Photograph both fabrication processes and credit any supplied assets.
+    - Evaluate the model as a spatial translation of the project, including assembly quality, material relationships
+      and fidelity to the intended geometry. An extra standalone CSG print does not replace the required printed
+      component of this model.
+    deliverable: One assembled mixed-media model and one documentation sheet; source, cutting files, print
+      meshes, slicer files and photographs.
+  url_slug: volumetric-data
+
+assessments:
+- id: BOOK
+  title: Final booklet and review
+  release: 1
+  due: final
+  weight: 18
+  checkpoints:
   - week: 14
-    label: Production
-    date: '2026-11-24'
-    focus: Begin final production and assembly. Review fabrication tests, document revisions and develop the booklet.
-  - week: 15
-    label: Documentation and booklet
-    date: '2026-12-01'
-    focus: Fabricate and assemble sections within lab availability, then documentation, booklet and file checks. No graded submissions during the retained final studio-review window.
-    no_due: true
+    text: Bring a booklet spread and contents list for an ungraded progress check.
+  requirements:
+  - Compile all four projects and ten assignments in revised form, using 17 x 11 inch pages and your graphic
+    standards.
+  - Include process diagrams, photographs and captions for the CSG print and mixed-media model. Identify substantive
+    revisions after critique.
+  - Submit the booklet PDF, a separate revised GSM PDF, editable project files and dependencies, and required
+    fabrication files.
+  - Present the mixed-media assembly and the CSG print or its review documentation as directed. The exact final
+    review slot remains to be confirmed.
+- id: PART
+  title: Attendance and participation
+  release: 1
+  due: ongoing
+  weight: 5
+  requirements:
+  - Participate in demonstrations, working sessions and critique and bring the current editable file.
+  - Attendance and absence terms are stated in the retained course policies.
+
+weeks:
+- week: 1
+  date: '2026-08-25'
+  focus: Begin the Graphic Standards Manual, test a sample sheet and organize your files.
+- week: 2
+  label: Transformations and Booleans
+  date: '2026-09-01'
+  focus: Move, rotate and scale procedurally. Compare solid Boolean operators and begin the massing study.
+- week: 3
+  label: 3D printing
+  date: '2026-09-08'
+  focus: 'Refine the CSG process sheet and instructions. Introduce P2b: prepare the CSG object for 3D printing,
+    including units, orientation and slicing.'
+- week: 4
+  label: Point to solid
+  date: '2026-09-15'
+  focus: Point → Line → Edge → Face → Solid → Boolean. Build the parametric pyramid and reconnect to the CSG
+    project.
+- week: 5
+  label: Your module, material and lighting
+  date: '2026-09-22'
+  focus: Build your own module from points and faces, test its parameter ranges, then render it with one material
+    and a deliberate lighting setup for the P3a sheet.
+- week: 6
+  label: Arrays introduction; CSG sheet
+  date: '2026-09-29'
+  focus: Submit 2.1 by 11:59 PM. Introduce 1D/2D/3D arrays; check the CSG print file before queueing.
+- week: 7
+  label: Supported practice during studio reviews
+  date: '2026-10-06'
+  focus: No graded submission. Optional help with module geometry, three-point lighting and small array tests.
+  no_due: true
+- week: 8
+  label: CSG print; module and material review
+  date: '2026-10-13'
+  focus: Hand in 2.2 in class, with digital documentation by 11:59 PM. Review authored module materials, ground
+    planes and key/fill/rim lighting.
+- week: 9
+  label: Module deadline; array comparisons
+  date: '2026-10-20'
+  focus: Submit 3.1. Review 1D/2D/3D comparisons, conditional selection and library or student-authored materials
+    for 3.2.
+- week: 10
+  label: Manual, arrays and cumulative midterm
+  date: '2026-10-27'
+  focus: Submit the manual and 3.2. Review the accumulated result of the first five submissions; regular class,
+    no separate midterm assignment.
+- week: 11
+  label: Panel parameter driven by an attractor
+  date: '2026-11-03'
+  focus: 'Introduce 3.3: measure and remap a field to one geometric panel parameter; compose a façade elevation
+    and isometric.'
+- week: 12
+  label: Attractor site analysis; façade check
+  date: '2026-11-10'
+  focus: 'Introduce 4.1: document a site, map three analytical layers and state a spatial intention. Check
+    3.3 field-to-panel logic.'
+- week: 13
+  label: Façade deadline; abstract SDF project
+  date: '2026-11-17'
+  focus: Submit 3.3. Introduce 4.2 from the site intention; compare fields and coordinate elevation, isometric
+    and abstract floor plan. Check 4.1 layers.
+- week: 14
+  label: Site deadline; volume selection and discretization
+  date: '2026-11-24'
+  focus: 'Submit 4.1. Select the SDF volume at an ungraded check; introduce 4.3 and 4.4: slicing, registration
+    and integrated laser-cut/printed parts. Check a booklet spread.'
+- week: 15
+  label: Connection tests, production and documentation
+  date: '2026-12-01'
+  focus: No graded submission during studio reviews. Use ungraded support to check connections, part files,
+    fabrication progress and final documentation.
+  no_due: true
+
 vocabulary:
   - [parameter, 'An input you can change that controls a relationship or result.', 'Width, Depth and Height on the pyramid.']
   - [vector, 'An ordered set of components representing direction and magnitude; XYZ values can also specify a position relative to an origin.', 'A displacement of (0, 0, 1) moves a point upward one model unit.']
@@ -967,6 +1320,9 @@ materials_status: |
   Posted lessons link their Blender examples and screenshots. Use each file as a reference while building your own work. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
 
   **Site analysis:** students pick their own site and use the Mixtli add-on for Blender. The add-on and install notes will be posted before Week 9.
+
+  The 3.2 material library is planned and has not yet been linked. Students may create their own materials. Final-project print allocation and machine slots remain to be confirmed. Revised slide decks are not yet posted; use the current briefs and lesson notes.
+
 references:
   readings:
     - 'Wassily Kandinsky, Point and Line to Plane — conceptual reference for geometry and graphic relationships.'
@@ -993,74 +1349,145 @@ references:
     - ['Blender 5.2 manual', 'https://docs.blender.org/manual/en/5.2/index.html', 'Check exact node behavior against the version used to prepare the lesson.']
   note: No required textbook is assigned in this draft. These references are retained or aligned from the course repository. Tutorial and file availability is stated separately.
 instructor_notes: |
-  The four projects are GSM, CSG, Paneling and Volumetric Data. Week 10 is the hard deadline for everything through Arrays; there is no midterm review. Paneling includes four separate assignments: the module, arrays, the 2D field drawing (due Week 10) and the layered site analysis (due Week 11). The two array sheets form one assignment; the two attractor sheets form two assignments.
+  The revised sequence contains ten assignments in four projects: 1 Manual; 2.1 CSG sheet; 2.2 CSG print; 3.1 Module; 3.2 Arrays; 3.3 Attractor façade; 4.1 Site analysis; 4.2 SDF exploration; 4.3 Discretization; 4.4 Mixed-media model. The two array sheets remain one assignment. The standalone 2D attractor drawing has been replaced by a façade elevation and isometric showing an actual panel parameter response.
 
-  Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and its line drawing, with pen plotting as an option; Week 9 teaches the layered site analysis with Mixtli. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
+  For 3.1 students create one module material, place the module on a ground plane and set up key/fill/rim three-point lighting. This describes three lighting roles, not the software's Point light type. For 3.2 students may use the supplied material library or create their own; post and verify the library before the deadline.
 
-  Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
+  Site analysis begins Project 4 and must inform the same project through SDF, discretization and mixed-media fabrication. Use the Instagram references already under Resources for 4.2 representation. Require a horizontal section for the abstract floor plan, coordinated with elevation and isometric. Both laser cutting and 3D printing belong to the final assembled model.
 
-  Draft weights use 7% per assignment in Projects 1-3 and 14% for each Project 4 assignment. The required fabricated outputs are the CSG print and the sliced volume; plotting the P3c drawing is optional. Review machine capacity and the later schedule in Week 10.
+  The instructor accepted the draft grading allocation: early submissions stay at 7% each; site analysis moves into Project 4 at 7%, SDF remains 14%, and discretization/model split 14% into 7% each. Dates remain proposals. The final sequence is compressed: protect the November 24 volume selection and December 1 connection test, and confirm lab capacity and print allocation before issuing the full Project 4 brief.
 
-  Every class now has a deck generated from slides/src that reads dates and briefs from this file; rebuild the decks after any calendar or brief change. Video tutorials exist for CSG and Descriptive Geometry (Blender and Rhino + Grasshopper); record the others as time allows. Keep institutional policies separate from curriculum edits.
+  Detailed PDFs currently cover Projects 1–3. Project 4 has a coordinated outline; prepare its detailed handout after reviewing its scope and fabrication allocation. Existing slide decks and their generators need revision for the new sequence and numbering before reuse. Keep institutional policies and historical assets unchanged.
+
 home:
-  tagline: Build geometry with rules, vary it with data and communicate it through drawings, models and physical parts.
+  tagline: Build geometry with rules, vary it with data and communicate it through drawings, models and physical
+    parts.
   welcome: |
-    Welcome to ARC 3133. This course is about describing architecture as a set of rules — operations, points and faces, arrays and fields — and turning that description into clear drawings, renders and physical objects: a 3D print, attractor drawings and a laser-cut assembly.
+    Welcome to ARC 3133. This course is about describing architecture as a set of rules — operations, points and faces, arrays and fields — and turning that description into clear drawings, renders and physical objects: a CSG print, an attractor-driven façade and a model combining laser cutting and 3D printing.
 
     We work mainly in Blender Geometry Nodes, and the video tutorials also cover Rhino + Grasshopper. No programming experience is needed: you build with nodes, and each lesson shows the same steps written as short pseudocode so you learn to read it.
   tabs:
-    - [Classes, /classes/overview/, 'One page per class, in order. Each has the slides, the video tutorials, the Blender example files, what to practice and what is due. Start here every week.']
-    - [Assignments, /assignments/overview/, 'The four projects and their nine assignments — what to make, what to hand in, when it is due and how it is graded.']
-    - [Tutorials, /tutorials/how-tutorials-work/, 'Lesson notes and video tutorials for each topic. Use them to review a class, catch up, or work through a step at your own pace.']
-    - [Resources, /resources/overview/, 'The syllabus and course policies, software and materials, readings, visual precedents, and every example file and screenshot in one place.']
+  - - Classes
+    - /classes/overview/
+    - One page per class, in order. Each has the slides, the video tutorials, the Blender example files, what
+      to practice and what is due. Start here every week.
+  - - Assignments
+    - /assignments/overview/
+    - The four projects and their ten assignments — what to make, what to hand in, when it is due and how it
+      is graded.
+  - - Tutorials
+    - /tutorials/how-tutorials-work/
+    - Lesson notes and video tutorials for each topic. Use them to review a class, catch up, or work through
+      a step at your own pace.
+  - - Resources
+    - /resources/overview/
+    - The syllabus and course policies, software and materials, readings, visual precedents, and every example
+      file and screenshot in one place.
   how_we_work: |
     Each class is a short demonstration, then guided practice and critique. Bring your editable file every week: you should be able to change an input, predict what happens and explain why. Your Graphic Standards Manual sets the look of every sheet you present.
 
-    Fabrication runs through the semester: a 3D print in Project 2 and a laser-cut assembly in Project 4, with an optional pen-plotter drawing in Project 3. Complete the FabLab Safety Orientation before using any machine.
+    Fabrication runs through the semester: a 3D print in Project 2 and an integrated laser-cut/3D-printed model in Project 4. Complete the FabLab Safety Orientation before using any machine.
+
 teaching_sequence:
-  - id: B01
-    weeks: [1]
-    focus: Graphic Standards Manual
-    units: [U01]
-    sessions: []
-  - id: B02
-    weeks: [2, 3]
-    focus: Constructive Solid Geometry
-    units: [U02]
-    sessions: [S01]
-  - id: B03
-    weeks: [4, 5]
-    focus: Descriptive Geometry
-    units: [U03]
-    sessions: [S02]
-  - id: B04
-    weeks: [6, 7]
-    focus: Arrays
-    units: [U04]
-    sessions: [S03, S04]
-    sessions_by_week: {6: [S03, S04], 7: [S03, S04]}
-    delivery: 'Two classes, two example files: 1D, 2D and 3D arrays in Week 6 (sheet 1); hexagonal, radial and curve arrays in Week 7 (sheet 2). A tutorial video is planned but not yet posted.'
-  - id: B05
-    weeks: [8, 9]
-    focus: Attractor
-    units: [U05]
-    sessions: [S05]
-  - id: B06
-    weeks: [10, 11]
-    focus: Volumetric Data and Fields
-    units: [U07]
-    sessions: [S07, S08, S09]
-    sessions_by_week: {10: [S07], 11: [S08, S09]}
-  - id: B07
-    weeks: [12, 13]
-    focus: Discretizing Geometry
-    units: [U09]
-    sessions: [S10, S11]
-  - id: B08
-    weeks: [14, 15]
-    focus: Final
-    units: [U10]
-    sessions: [S12]
+- id: B01
+  weeks:
+  - 1
+  focus: Graphic Standards Manual
+  units:
+  - U01
+  sessions: []
+- id: B02
+  weeks:
+  - 2
+  - 3
+  focus: Constructive Solid Geometry
+  units:
+  - U02
+  sessions:
+  - S01
+- id: B03
+  weeks:
+  - 4
+  - 5
+  focus: Descriptive Geometry
+  units:
+  - U03
+  sessions:
+  - S02
+- id: B04
+  weeks:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  focus: Arrays
+  units:
+  - U04
+  sessions:
+  - S03
+  - S04
+  sessions_by_week:
+    6:
+    - S03
+    - S04
+    7:
+    - S03
+    - S04
+    8:
+    - S03
+    - S04
+    9:
+    - S03
+    - S04
+    10:
+    - S03
+    - S04
+  delivery: Introduce 1D/2D/3D arrays, then use supported practice and critique to complete the module, array
+    comparisons and manual by midterm. Other array families are optional later practice; a recording is not
+    yet posted.
+- id: B05
+  weeks:
+  - 11
+  focus: Attractor-driven façade
+  units:
+  - U05
+  sessions:
+  - S05
+- id: B06
+  weeks:
+  - 12
+  - 13
+  focus: Site analysis and SDF exploration
+  units:
+  - U07
+  sessions:
+  - S07
+  - S08
+  - S09
+  sessions_by_week:
+    12:
+    - S07
+    13:
+    - S08
+    - S09
+- id: B07
+  weeks:
+  - 14
+  focus: Discretizing Geometry
+  units:
+  - U09
+  sessions:
+  - S10
+  - S11
+- id: B08
+  weeks:
+  - 15
+  focus: Mixed-media model and final documentation
+  units:
+  - U10
+  sessions:
+  - S12
 
 optional_classes:
   - id: O01
@@ -1205,48 +1632,64 @@ blender:
 
 # Every class has one deck (PPTX + PDF), rebuilt 2026-09-16 from slides/src and checked page by page.
 presentation_review:
-  - week: 1
-    status: current
-    note: 'GSM brief; four projects / nine assignments; three manuals to study.'
-  - week: 2
-    status: current
-    note: 'CSG; BIG-style process diagram; P2a issued.'
-  - week: 3
-    status: current
-    note: 'CSG continued + 3D printing: machine, manifold, overhangs, orientation, slicer, settings, failures, FabLab; P2b issued.'
-  - week: 4
-    status: current
-    note: 'Descriptive geometry: point to solid, pyramid, Boolean; P2a due; P3a issued.'
-  - week: 5
-    status: current
-    note: 'Your own module: parameters, points, faces, tiling; one material and lighting for the P3a sheet.'
-  - week: 6
-    status: current
-    note: 'Arrays 1D, 2D, 3D (P3b sheet 1); P3a due; P3b issued; P2b print checkpoint.'
-  - week: 7
-    status: current
-    note: 'P3b now focuses on 1D, 2D and 3D arrays, with comparisons and conditional selection on sheet 2. Hexagonal, radial and curve arrays remain later practice; revise the deck before reuse. Studio-review week, nothing due.'
-  - week: 8
-    status: current
-    note: 'Attractors on a 2D field and its line drawing (plotting optional); P3b due; P3c issued.'
-  - week: 9
-    status: current
-    note: 'Layered site analysis with Mixtli; P3d issued; P3c review.'
-  - week: 10
-    status: current
-    note: 'Mid-semester deadline (through Arrays + P3c), then SDF introduction; P4a issued.'
-  - week: 11
-    status: current
-    note: 'SDF volume studio work; P4a checkpoint; P3d due.'
-  - week: 12
-    status: current
-    note: 'Discretizing geometry; P4a due; P4b issued; booklet checkpoint.'
-  - week: 13
-    status: current
-    note: 'Parts for the laser cutter: thickness, registration, kerf, nesting; P4b checkpoint.'
-  - week: 14
-    status: current
-    note: 'Final production, assembly, photography, booklet.'
-  - week: 15
-    status: current
-    note: 'Documentation and booklet; review week, nothing due.'
+- week: 1
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 2
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 3
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 4
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 5
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 6
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 7
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 8
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 9
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 10
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 11
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 12
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 13
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 14
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+- week: 15
+  status: needs_revision
+  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+    deck, then review before marking current.
+

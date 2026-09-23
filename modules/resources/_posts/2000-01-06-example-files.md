@@ -13,7 +13,7 @@ permalink: /resources/example-files/
 
 Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files.
 
-Download only the example for the class you are working on. Arrays uses two files across two classes.
+Download only the example for the class you are working on. Arrays uses two example files across the practice block.
 
 | Example | Individual downloads |
 | --- | --- |

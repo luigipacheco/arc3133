@@ -20,6 +20,11 @@ def _load():
 
 DATA, PATH = _load()
 
+def require_current_deck(week_number):
+    review = next(r for r in DATA["presentation_review"] if r["week"] == week_number)
+    if review["status"] != "current" and os.environ.get("DECK_REVIEW_DRAFT") != "1":
+        raise SystemExit("This deck needs editorial revision for the current assignment sequence. Revise it first; use DECK_REVIEW_DRAFT=1 only to render a review draft.")
+
 COURSE   = DATA["course"]
 UNITS    = {u["id"]: u for u in DATA["units"]}
 PROJECTS = {p["id"]: p for p in DATA["projects"]}

@@ -2,7 +2,7 @@
 
 # Curriculum decisions
 
-> **Working draft for instructor discussion · 2026-09-22.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.
+> **Instructor review draft — revised assignment sequence · 2026-09-22.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.
 
 ### Confirmed direction
 
@@ -13,16 +13,18 @@
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
 - Establish one source of curriculum information before preparing the remaining Blender class files.
-- Organize nine assignments into four projects: GSM, CSG, Paneling and Volumetric Data.
+- Organize ten assignments into four projects: Graphic Standards Manual, CSG, Paneling, and Integrated Spatial Project.
+- 3.1 requires one student-authored module material, a ground plane and three-point lighting (key, fill, rim/back). 3.2 permits supplied library materials or student-authored materials.
+- 3.3 uses attractor data to drive one geometric parameter of the existing panel, documented in façade elevation and isometric.
+- 4.1 site analysis → 4.2 abstract SDF volume → 4.3 discretization → 4.4 combined laser-cut/3D-printed model develop one project.
+- Use the instructor-accepted draft weights: 7%, 14%, 21%, 35% across the four projects, 18% booklet and 5% participation. Midterm accumulates the first five submissions (35% of the course).
 
 ### Working proposals
 
-- Budget two weeks per tutorial and per assignment: CSG and geometry from scratch each took two classes in practice.
-- Week 10 is a hard mid-semester deadline for everything through Arrays (manual, CSG sheet and print, module, arrays), held as a regular class. There is no separate midterm review; its 7% moves to the final booklet.
-- Draft grading: GSM 7%, CSG 14%, Paneling 28%, Volumetric Data 28%, final booklet 18% and participation 5%.
-- Attractor assignments are due two weeks after their class: the 2D field drawing in Week 10, the layered site analysis in Week 11.
-- Focus the required final on the developed visual work, physical work and booklet. The previous Python/AI final and extra-credit scheme are awaiting an instructor decision and are not assigned in this draft.
-- Two required physical outputs: the CSG 3D print and a laser-cut SDF volume. Plotting the 2D attractor drawing is optional.
+- Review the proposed September 29–October 27 staged deadlines and the November 3 start of attractors. Keep October 6 and December 1 free of graded submissions.
+- Façade 3.3 due November 17 and site analysis 4.1 due November 24; 4.2–4.4 due at the final review with earlier ungraded production checks.
+- Keep the final project focused enough to prototype connections by December 1 and complete laser cutting, printing and documentation before the confirmed final review.
+- The previous Python/AI final and extra-credit scheme remain outside the required core assignments.
 
 ### Administrative items to confirm
 
@@ -30,16 +32,17 @@
 - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
 - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
 - Confirm the attendance sign-in method and the accreditation criteria used by the School.
-- Confirm pen-plotter access, pens and paper for students who choose to plot the P3c drawing, and post the Mixtli add-on with install instructions before Week 9.
+- Post and test the material library before 3.2 is due; post the Mixtli add-on/install notes before 4.1.
+- Confirm the separate final-project filament allocation and machine capacity for the mixed-media model.
 
 ## Why the sequence changed
 
-The four projects are GSM, CSG, Paneling and Volumetric Data. Week 10 is the hard deadline for everything through Arrays; there is no midterm review. Paneling includes four separate assignments: the module, arrays, the 2D field drawing (due Week 10) and the layered site analysis (due Week 11). The two array sheets form one assignment; the two attractor sheets form two assignments.
+The revised sequence contains ten assignments in four projects: 1 Manual; 2.1 CSG sheet; 2.2 CSG print; 3.1 Module; 3.2 Arrays; 3.3 Attractor façade; 4.1 Site analysis; 4.2 SDF exploration; 4.3 Discretization; 4.4 Mixed-media model. The two array sheets remain one assignment. The standalone 2D attractor drawing has been replaced by a façade elevation and isometric showing an actual panel parameter response.
 
-Arrays runs over two classes: 1D, 2D and 3D in Week 6; hexagonal, radial and curve in Week 7. Week 8 teaches the 2D attractor field and its line drawing, with pen plotting as an option; Week 9 teaches the layered site analysis with Mixtli. Students pick their own site for P3d and analyze it with the Mixtli add-on; post the add-on and install notes before Week 8. Confirm plotter access and run a sample plot before briefing P3c.
+For 3.1 students create one module material, place the module on a ground plane and set up key/fill/rim three-point lighting. This describes three lighting roles, not the software's Point light type. For 3.2 students may use the supplied material library or create their own; post and verify the library before the deadline.
 
-Project 4 has two assignments: the SDF volume and discretizing/laser-cut fabrication. Point-cloud and noise exercises support the volume lesson but carry no separate required submission. Tessellation, lattices and modular prints are optional references.
+Site analysis begins Project 4 and must inform the same project through SDF, discretization and mixed-media fabrication. Use the Instagram references already under Resources for 4.2 representation. Require a horizontal section for the abstract floor plan, coordinated with elevation and isometric. Both laser cutting and 3D printing belong to the final assembled model.
 
-Draft weights use 7% per assignment in Projects 1-3 and 14% for each Project 4 assignment. The required fabricated outputs are the CSG print and the sliced volume; plotting the P3c drawing is optional. Review machine capacity and the later schedule in Week 10.
+The instructor accepted the draft grading allocation: early submissions stay at 7% each; site analysis moves into Project 4 at 7%, SDF remains 14%, and discretization/model split 14% into 7% each. Dates remain proposals. The final sequence is compressed: protect the November 24 volume selection and December 1 connection test, and confirm lab capacity and print allocation before issuing the full Project 4 brief.
 
-Every class now has a deck generated from slides/src that reads dates and briefs from this file; rebuild the decks after any calendar or brief change. Video tutorials exist for CSG and Descriptive Geometry (Blender and Rhino + Grasshopper); record the others as time allows. Keep institutional policies separate from curriculum edits.
+Detailed PDFs currently cover Projects 1–3. Project 4 has a coordinated outline; prepare its detailed handout after reviewing its scope and fabrication allocation. Existing slide decks and their generators need revision for the new sequence and numbering before reuse. Keep institutional policies and historical assets unchanged.

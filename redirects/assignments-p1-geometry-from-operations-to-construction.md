@@ -10,7 +10,7 @@ sitemap: false
 
 ## Course material has moved
 
-The four projects are now GSM, CSG, Paneling and Volumetric Data. Open the current brief below.
+The four projects are now GSM, CSG, Paneling and Integrated Spatial Project. Open the current brief below.
 
 <a id="p1a"></a>
 
@@ -18,7 +18,7 @@ The four projects are now GSM, CSG, Paneling and Volumetric Data. Open the curre
 
 <a id="p1b"></a>
 
-[P3a — Descriptive geometry module — material and lighting]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a)
+[P3a — Descriptive geometry module — material and three-point lighting]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a)
 
 <a id="p1c"></a>
 

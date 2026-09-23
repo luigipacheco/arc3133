@@ -10,7 +10,7 @@ sitemap: false
 
 ## Course material has moved
 
-The four projects are now GSM, CSG, Paneling and Volumetric Data. Open the current brief below.
+The four projects are now GSM, CSG, Paneling and Integrated Spatial Project. Open the current brief below.
 
 <a id="gsm"></a>
 

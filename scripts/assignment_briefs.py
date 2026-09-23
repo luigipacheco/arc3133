@@ -61,6 +61,7 @@ def project_markdown(course, project):
     title = project.get("brief_title", project["title"])
     out = f"# {project['id']} - {title}\n\n"
     out += f"{course.meta['code']} / {course.meta['title']} / {course.meta['term']}\n\n"
+    out += f"**Approach:** {project['approach']}\n\n"
     out += f"Revision: {course.data['revision']}. Instructor review draft. Grading allocation approved; dates remain proposed for review before publication.\n\n"
     if project["id"] == "P3":
         out += "3.1: module, authored material, ground plane and three-point lighting. 3.2: arrays with library or student-authored materials. 3.3: attractor-driven panel façade, shown in elevation and isometric.\n\n"
@@ -98,7 +99,7 @@ def render_pdf(path, markdown, course, project):
     from reportlab.lib.styles import ParagraphStyle
     from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak, KeepTogether
 
-    base = dict(fontName="Helvetica", fontSize=10, leading=12.5, spaceAfter=4,
+    base = dict(fontName="Helvetica", fontSize=9.5, leading=11.5, spaceAfter=4,
                 textColor=colors.HexColor("#171717"))
     styles = {
         "body": ParagraphStyle("body", **base),
@@ -143,7 +144,8 @@ def render_pdf(path, markdown, course, project):
                 heading = story.pop()
                 story.append(KeepTogether([heading, *items]))
             else:
-                story.extend(KeepTogether([item]) for item in items)
+                # Let the heading's keepWithNext apply directly to the first item.
+                story.extend(items)
         elif re.match(r"^\d+\. ", block):
             story.extend(Paragraph(inline(line), styles["body"]) for line in block.splitlines())
         elif block.startswith(("**Shared standards:", "**Midterm grade:")):

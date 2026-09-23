@@ -30,7 +30,7 @@ We work mainly in Blender Geometry Nodes, and the video tutorials also cover Rhi
 
 ## Where we are
 
-**Latest posted class:** [Class 06 · Arrays — Arrays introduction; CSG sheet]({{ site.baseurl }}/modules/classes/class-06/) (Week 6 — Sep 29)
+**Latest posted class:** [Class 06 · Arrays 1 — loops in 1D, 2D and 3D — Arrays 1 — loops in 1D, 2D and 3D; CSG sheet]({{ site.baseurl }}/modules/classes/class-06/) (Week 6 — Sep 29)
 
 **Coming up:**
 
@@ -51,20 +51,24 @@ The proposed calendar provides practice through midterm, followed by the attract
 | 1 | Graphic Standards Manual | [Class 01]({{ site.baseurl }}/modules/classes/class-01/) | — |
 | 2–3 | Constructive Solid Geometry | [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/) | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/) | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
-| 6–10 | Arrays | [Class 06]({{ site.baseurl }}/modules/classes/class-06/) · Class 07 — *not yet released* · Class 08 — *not yet released* · Class 09 — *not yet released* · Class 10 — *not yet released* | — |
-| 11 | Attractor-driven façade | Class 11 — *not yet released* | — |
-| 12–13 | Site analysis and SDF exploration | Class 12 — *not yet released* · Class 13 — *not yet released* | — |
-| 14 | Discretizing Geometry | Class 14 — *not yet released* | — |
-| 15 | Laser-cut model and final documentation | Class 15 — *not yet released* | — |
+| 6 | Arrays 1 — loops in 1D, 2D and 3D | [Class 06]({{ site.baseurl }}/modules/classes/class-06/) | — |
+| 7 | Supported practice during studio reviews | Class 07 — *not yet released* | — |
+| 8 | Arrays 2 — if/Switch and math functions | Class 08 — *not yet released* | — |
+| 9 | Façade attractors — Project 3 | Class 09 — *not yet released* | — |
+| 10 | Review of everything before Project 4 | Class 10 — *not yet released* | — |
+| 11 | Attractor-based site analysis — Project 4 | Class 11 — *not yet released* | — |
+| 12 | Generative volume exploration — Project 4 | Class 12 — *not yet released* | — |
+| 13 | Discretizing Geometry | Class 13 — *not yet released* | — |
+| 14–15 | Laser-cut model and final documentation | Class 14 — *not yet released* · Class 15 — *not yet released* | — |
 
 ## Four projects
 
 | Project | What you do | Weight |
 | --- | --- | --- |
 | [P1 — GSM]({{ site.baseurl }}/modules/assignments/p1-gsm/) | Create your own Graphic Standards Manual and apply it to every course presentation | 5% |
-| [P2 — CSG]({{ site.baseurl }}/modules/assignments/p2-csg/) | Explain a CSG object through a BIG-style process diagram with instructions, then 3D print it | 15% |
-| [P3 — Paneling]({{ site.baseurl }}/modules/assignments/p3-paneling/) | Build a panel from descriptive geometry, repeat it in 1D/2D/3D arrays, then drive one panel parameter with an attractor to compose a façade | 30% |
-| P4 — Integrated Spatial Project — *not yet released* | Use supplied analysis, volume and contouring node groups to develop one project from a site observation through generative volume studies to a laser-cut assembly | 35% |
+| [P2 — CSG]({{ site.baseurl }}/modules/assignments/p2-csg/) | Procedural design: construct a CSG object through a clear sequence of operations. Explain the procedure with a BIG-style diagram and pseudocode, then 3D print the result | 15% |
+| [P3 — Paneling]({{ site.baseurl }}/modules/assignments/p3-paneling/) | Parametric design: build a panel from points and faces, control repetition with loops, if/Switch and mathematical functions, then combine one curve and one or two point attractors to drive a panel parameter and compose a façade | 30% |
+| P4 — Integrated Spatial Project — *not yet released* | Generative design: use supplied analysis, volume and contouring node groups to explore alternatives informed by a site observation. Select a spatial result and develop it into a laser-cut assembly | 35% |
 
 The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 40% of the final course grade. Report the accumulated result as a percentage of those 40 possible course points. The midterm adds no separate assessment weight. [Midterm grade calculation]({{ site.baseurl }}/modules/assignments/overview/#midterm-grade)
 

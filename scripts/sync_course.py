@@ -308,8 +308,8 @@ class Course:
             title = p["id"] + " — " + p["title"]
             if web:
                 title = self.link(title, self.project_url(p))
-            rows.append([title, " → ".join(a["title"] for a in p["milestones"]), str(sum(a["weight"] for a in p["milestones"])) + "%"])
-        return table(["Project", "Assignments", "Weight"], rows)
+            rows.append([title, p["approach"], " → ".join(a["title"] for a in p["milestones"]), str(sum(a["weight"] for a in p["milestones"])) + "%"])
+        return table(["Project", "Approach", "Assignments", "Weight"], rows)
 
     def assignment(self, a, heading="###", detailed=False):
         body = f"<a id=\"{a['id'].lower()}\"></a>\n\n{heading} {self.label(a)}\n\n"
@@ -495,12 +495,14 @@ class Course:
 
     def release_note(self):
         """Explain the unlinked rows, so a held brief reads as timing, not an omission."""
+        note = self.data.get("release", {}).get("note", "")
+        prefix = note.strip() + "\n\n" if note else ""
         held = [p["id"] + " — " + p["title"] for p in self.projects.values() if p["id"] not in self.open_work]
         held += [self.by_id[a]["id"] + " — " + self.by_id[a]["title"]
                  for a in ("BOOK",) if a not in self.open_work]
         if not held:
-            return ""
-        return ("Briefs are posted as topics are introduced. Dates after Week 10 are provisional. Still to be posted: "
+            return prefix
+        return prefix + ("Briefs are posted as topics are introduced. Dates after Week 10 are provisional. Still to be posted: "
                 + "; ".join(held) + ".\n\n")
 
     def roster(self):
@@ -524,6 +526,9 @@ class Course:
         if vids:
             out = out.replace('## Lesson notes\n\n', '## Video tutorials\n\n' + table(['Topic', 'Videos'], vids)
                               + '\nMore videos will be added as they are recorded.\n\n## Lesson notes\n\n')
+        note = self.data.get("release", {}).get("note", "")
+        if note:
+            out += note.strip() + "\n\n"
         if held:
             out += "Open the posted lessons below; later lessons will be added as the course progresses.\n\n"
         out += table(["Lesson", "Target week", "Status"], rows) + '\n' + self.optional_summary()
@@ -742,7 +747,8 @@ class Course:
                   "The `release:` block in [syllabus/course.yml](syllabus/course.yml) is the switch: a page not listed there is not written to the site, "
                   "and every link to it becomes plain text marked *not yet released*. The calendar, the lesson list and the assignment table still show every row with its date, so nothing looks missing.\n\n"
                   "The weekly move is one edit — add the week number, the unit ids and any newly briefed assignment, then regenerate:\n\n"
-                  "```text\nrelease:\n  classes: [1, 2, 3, 4, 5, 6]\n  tutorials: [U01, U02, U03, U04, U05]\n  assignments: [P1, P2, P3, BOOK]\n```\n\n"
+                  "```text\nrelease:\n  classes: [1, 2, 3, 4, 5, 6]\n  tutorials: [U01, U02, U03, U04]\n  assignments: [P1, P2, P3, BOOK]\n```\n\n"
+                  "The current release covers classes through September 29 (Week 6). Review and update assignments, tutorials and class materials each week, and update `release.note` when advancing the release.\n\n"
                   "Assignments take the project id — listing `P1` posts GSM; `P2` posts both CSG briefs; `P3` posts all three Paneling briefs. The assignment overview page is always posted.\n\n"
                   "Use `all` on either line to publish everything. To preview the finished site locally without editing the source, "
                   "run `SYNC_RELEASE=all python scripts/sync_course.py` — then run it again without the variable before committing, "

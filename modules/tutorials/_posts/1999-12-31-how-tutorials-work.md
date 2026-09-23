@@ -23,6 +23,8 @@ More videos will be added as they are recorded.
 
 ## Lesson notes
 
+Course materials are released through September 29 (Week 6). Assignments, tutorials and class materials will be reviewed and updated each week. Project briefs include their full sequence of submissions; later class and tutorial pages will be released as those topics are introduced.
+
 Open the posted lessons below; later lessons will be added as the course progresses.
 
 | Lesson | Target week | Status |
@@ -30,11 +32,11 @@ Open the posted lessons below; later lessons will be added as the course progres
 | [U01 — Graphic Standards Manual]({{ site.baseurl }}/modules/tutorials/u01-graphic-standards-manual/) | Week 1 | Posted |
 | [U02 — Constructive Solid Geometry]({{ site.baseurl }}/modules/tutorials/u02-transformations-and-csg/) | Weeks 2, 3 | Posted |
 | [U03 — Descriptive Geometry]({{ site.baseurl }}/modules/tutorials/u03-geometry-from-scratch/) | Weeks 4, 5 | Posted |
-| [U04 — Arrays]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 6, 7, 8, 9, 10 | Posted |
-| [U05 — Attractor]({{ site.baseurl }}/modules/tutorials/u05-attractors/) | Week 11 | Posted |
-| U07 — Volumetric Data and Fields | Weeks 12, 13 | Posted after the class |
-| U09 — Discretizing Geometry | Week 14 | Posted after the class |
-| U10 — Final | Week 15 | Posted after the class |
+| [U04 — Arrays]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 6, 8 | Posted |
+| U05 — Attractor | Week 9 | Posted after the class |
+| U07 — Volumetric Data and Fields | Weeks 11, 12 | Posted after the class |
+| U09 — Discretizing Geometry | Week 13 | Posted after the class |
+| U10 — Final | Weeks 14, 15 | Posted after the class |
 
 ## Possible intermediate class
 

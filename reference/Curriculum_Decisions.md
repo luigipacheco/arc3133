@@ -15,13 +15,13 @@
 - Establish one source of curriculum information before preparing the remaining Blender class files.
 - Organize ten assignments into four projects: Graphic Standards Manual, CSG, Paneling, and Integrated Spatial Project.
 - 3.1 requires one student-authored module material, a ground plane and three-point lighting (key, fill, rim/back). 3.2 permits supplied library materials or student-authored materials.
-- 3.3 uses attractor data to drive one geometric parameter of the existing panel, documented in façade elevation and isometric.
+- 3.3 combines one curve attractor with one or two point attractors to drive one geometric parameter of the existing panel, documented in façade elevation and isometric.
 - 4.1 site analysis → 4.2 generative volume → 4.3 contouring → 4.4 laser-cut assembly develop one project using supplied node groups. Printed components are optional.
 - Use the instructor-approved grading allocation: 5%, 15%, 30%, 35% across the four projects, 10% booklet and 5% participation. Midterm accumulates the first five submissions (40% of the course).
 
 ### Working proposals
 
-- Review the proposed September 29–October 27 staged deadlines and the November 3 start of attractors. Keep October 6 and December 1 free of graded submissions.
+- Review the proposed September 29–October 27 staged deadlines and the October 20 façade-attractor class. Keep October 6 and December 1 free of graded submissions.
 - Façade 3.3 due November 17 and site analysis 4.1 due November 24; 4.2–4.4 due at the final review with earlier ungraded production checks.
 - Keep the final project focused enough to test assembly by December 1 and complete laser cutting and documentation before the confirmed final review.
 - The previous Python/AI final and extra-credit scheme remain outside the required core assignments.
@@ -37,12 +37,18 @@
 
 ## Why the sequence changed
 
+Preserve the project numbering and teaching progression: P1 establishes the Graphic Standards Manual;
+P2 emphasizes procedural design; P3 emphasizes parametric design; P4 emphasizes generative design.
+Arrays has one class on loops in 1D/2D/3D and one on if/Switch and mathematical functions. Retain the
+façade-attractor class, then review everything before beginning Project 4. The later attractor-based
+site-analysis class belongs to Project 4.
+
 The revised sequence contains ten assignments in four projects: 1 Manual; 2.1 CSG sheet; 2.2 CSG print; 3.1 Module; 3.2 Arrays; 3.3 Attractor façade; 4.1 Site analysis; 4.2 SDF exploration; 4.3 Discretization; 4.4 Laser-cut model. The three array sheets remain one assignment: four module/basic-array diagrams, four conditional façade patterns, and an isometric mathematical cube volume with optional voids. The standalone 2D attractor drawing has been replaced by a façade elevation and isometric showing an actual panel parameter response.
 
 For 3.1 students create one module material, place the module on a ground plane and set up key/fill/rim three-point lighting. This describes three lighting roles, not the software's Point light type. For 3.2 students may use the supplied material library or create their own; post and verify the library before the deadline.
 
 Project 4 follows analyze → generate → contour → laser-cut → assemble using supplied groups. Provide the analysis dataset/groups, volume tools and contouring tools before the respective assignments. Require two analytical layers and one observation in 4.1; three settings of one strategy and a selected isometric on one sheet in 4.2; and one chosen slicing direction/spacing with numbered parts and an assembly diagram in 4.3. Add final model photographs to that same fabrication sheet in 4.4. No mandatory Boolean comparison, floor plan, fixed slice minimum or final-project 3D print remains. Assess students' inputs, outputs, interpretation and design decisions, not reconstruction of the supplied algorithms.
 
-The instructor approved the revised grading allocation: GSM, CSG print and site analysis are 5% each; the seven major design exercises are 10% each; booklet is 10% and participation is 5%. Midterm accumulates 40%. Project 4 remains 35%, with distinct assessment of spatial exploration, buildable parts and physical assembly. Dates remain proposals. The final sequence is compressed: protect the November 24 volume selection and December 1 connection test, and confirm laser-cut stock and lab capacity before issuing the full Project 4 brief.
+The instructor approved the revised grading allocation: GSM, CSG print and site analysis are 5% each; the seven major design exercises are 10% each; booklet is 10% and participation is 5%. Midterm accumulates 40%. Project 4 remains 35%, with distinct assessment of spatial exploration, buildable parts and physical assembly. Dates remain proposals. Arrays has two taught classes (Weeks 6 and 8); Week 7 is studio-review support and Week 10 is submission/critique. Week 9 teaches façade attractors in Project 3; Week 11 applies attractors to site analysis in Project 4. Move volume and contouring instruction earlier to protect November 17 volume selection, November 24 assembly tests and December 1 production support. Confirm laser-cut stock and lab capacity before issuing the full Project 4 brief.
 
 Detailed PDFs currently cover Projects 1–3. Project 4 has a simplified coordinated outline; prepare its detailed handout after verifying the supplied teaching packages and fabrication allocation. Existing slide decks and their generators need revision for the new sequence and numbering before reuse. Keep institutional policies and historical assets unchanged.

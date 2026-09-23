@@ -22,32 +22,46 @@ The `teaching_sequence` block is authoritative: its blocks determine the require
 | 1 | Graphic Standards Manual | Class 01 | — |
 | 2–3 | Constructive Solid Geometry | Class 02 · Class 03 | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | Class 04 · Class 05 | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
-| 6–10 | Arrays | Class 06 · Class 07 · Class 08 · Class 09 · Class 10 | — |
-| 11 | Attractor-driven façade | Class 11 | — |
-| 12–13 | Site analysis and SDF exploration | Class 12 · Class 13 | — |
-| 14 | Discretizing Geometry | Class 14 | — |
-| 15 | Laser-cut model and final documentation | Class 15 | — |
+| 6 | Arrays 1 — loops in 1D, 2D and 3D | Class 06 | — |
+| 7 | Supported practice during studio reviews | Class 07 | — |
+| 8 | Arrays 2 — if/Switch and math functions | Class 08 | — |
+| 9 | Façade attractors — Project 3 | Class 09 | — |
+| 10 | Review of everything before Project 4 | Class 10 | — |
+| 11 | Attractor-based site analysis — Project 4 | Class 11 | — |
+| 12 | Generative volume exploration — Project 4 | Class 12 | — |
+| 13 | Discretizing Geometry | Class 13 | — |
+| 14–15 | Laser-cut model and final documentation | Class 14 · Class 15 | — |
 
 Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain design decisions through clear visual work.
 
+**Course progression:** P1 establishes graphic standards. P2 is procedural: describe and follow a sequence
+of operations. P3 is parametric: define relationships and control their variation with parameters, loops,
+conditions and attractors. P4 is generative: use supplied analysis, volume and contouring tools to explore,
+select and fabricate a spatial result. These are the teaching emphases; the methods build on one another.
+
 **Through midterm:** Graphic Standards Manual → CSG sheet and print → descriptive geometry module → 1D, 2D and 3D arrays. Create a module material and three-point lighting setup, then use supplied or student-authored materials for the array compositions.
 
-**After midterm:** apply an attractor to one geometric panel parameter and present a façade elevation and isometric (3.3). Use supplied node groups to develop one project through two-layer site analysis (4.1), generative volume exploration (4.2), contouring (4.3), and a laser-cut assembly (4.4). Printed components are optional.
+**Transition to Project 4:** introduce the parametric façade before the full review, combining one curve
+and one or two point attractors. Continue refining its elevation and isometric for the November deadline.
+After the review, begin the generative project with supplied tools: site analysis (4.1), volume exploration
+(4.2), contouring (4.3), and laser-cut assembly (4.4). Printed components are optional.
 
 Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
 
-| Project | Assignments | Weight |
-| --- | --- | --- |
-| P1 — GSM | Graphic Standards Manual | 5% |
-| P2 — CSG | CSG process and instructions → CSG 3D printed object | 15% |
-| P3 — Paneling | Descriptive geometry module — material and three-point lighting → Arrays → Attractor-driven panel façade | 30% |
-| P4 — Integrated Spatial Project | Site analysis using attractors → SDF volumetric exploration → Discretizing the SDF → Laser-cut model and documentation | 35% |
+| Project | Approach | Assignments | Weight |
+| --- | --- | --- | --- |
+| P1 — GSM | Graphic standards | Graphic Standards Manual | 5% |
+| P2 — CSG | Procedural | CSG process and instructions → CSG 3D printed object | 15% |
+| P3 — Paneling | Parametric | Descriptive geometry module — material and three-point lighting → Arrays → Attractor-driven panel façade | 30% |
+| P4 — Integrated Spatial Project | Generative | Site analysis using attractors → SDF volumetric exploration → Discretizing the SDF → Laser-cut model and documentation | 35% |
 
 **Proposed deadlines for instructor review:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so the print deadline skips October 6.
 
 The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
 
-Start the façade attractor assignment November 3, due November 17. Start project site analysis November 10, due November 24. Introduce generative volume exploration November 17 and contouring/laser-cut fabrication November 24. The remaining Project 4 stages and booklet are due at the final review, December 10–16; the exact slot remains to be confirmed. Select a volume by the November 24 ungraded production check and test assembly by December 1, so production begins before the final review.
+Teach Arrays in two classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, paired with the loop tutorial; October 13 explains if/Switch and mathematical functions. October 6 remains supported practice during studio reviews. Teach façade attractors on October 20. October 27 reviews everything taught so far, including graphic standards, CSG/printing, panel construction, arrays, conditionals, math and the first façade response; the manual and arrays are submitted that day. Project 4 follows this review.
+
+Introduce the façade assignment October 20, due November 17. The second application of attractors is site analysis in Project 4 on November 3, due November 24. Introduce generative volume exploration November 10 and contouring November 17. Use November 24 for assembly tests and laser-cut production planning; December 1 remains supported production during studio reviews. Select the volume at the November 17 ungraded check and test assembly by November 24. The remaining Project 4 stages and booklet are due at the final review, December 10–16; the exact slot remains to be confirmed.
 
 This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions. The proposed schedule and lab capacity must be reviewed before publication.
 
@@ -71,9 +85,11 @@ The weekly move is one edit — add the week number, the unit ids and any newly 
 ```text
 release:
   classes: [1, 2, 3, 4, 5, 6]
-  tutorials: [U01, U02, U03, U04, U05]
+  tutorials: [U01, U02, U03, U04]
   assignments: [P1, P2, P3, BOOK]
 ```
+
+The current release covers classes through September 29 (Week 6). Review and update assignments, tutorials and class materials each week, and update `release.note` when advancing the release.
 
 Assignments take the project id — listing `P1` posts GSM; `P2` posts both CSG briefs; `P3` posts all three Paneling briefs. The assignment overview page is always posted.
 

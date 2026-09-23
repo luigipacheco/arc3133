@@ -18,7 +18,9 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/) · Class 07 — *not yet released* · Class 08 — *not yet released* · Class 09 — *not yet released* · Class 10 — *not yet released*. Introduce 1D/2D/3D arrays, then use supported practice and critique to complete the module, array comparisons and manual by midterm. Other array families are optional later practice; a recording is not yet posted.
+**Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes, paired with the loop tutorial. Use loops and nested loops to build a row, grid and layered array; explain counts, spacing and indices.
+
+**Taught in:** Class 08 — *not yet released*. Second of two Arrays classes. Explain if/Switch selection through façade patterns, then use mathematical functions of X and Y to shape a cube volume. Hexagonal and radial arrays remain optional.
 
 1. 1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.
 2. 2D: nest repetition into a grid. Identify rows and columns; predict the total count.
@@ -36,6 +38,23 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
 ```python
+# Arrays class 1 / loop tutorial: row -> grid -> layers.
+row = []
+for i in range(nx):
+    row.append(place_module(i * dx, 0, 0))
+
+grid = []
+for j in range(ny):
+    for i in range(nx):
+        grid.append(place_module(i * dx, j * dy, 0))
+
+spatial_array = []
+for k in range(nz):
+    for j in range(ny):
+        for i in range(nx):
+            spatial_array.append(place_module(i * dx, j * dy, k * dz))
+
+# Arrays class 2: if / Switch and mathematical functions.
 # Sheet 2: one possible facade pattern
 for j in range(rows):
     for i in range(cols):
@@ -53,7 +72,7 @@ for k in range(layers):
                 place_cube(x, y, z)
 ```
 
-**Teaching note:** Both files form one lesson. Show explicit iteration before comparing field-based construction; a field is not a Repeat Zone. The Sine curve scene in Arrays Part 2 uses cubes, repetition in three dimensions and sine relationships along X and Y to shape a volume. Use it as the starting reference for Sheet 3; students develop their own mathematical pattern. Distinguish Grasshopper data trees from Blender fields.
+**Teaching note:** Teach this unit in two classes. Class 1 and its loop tutorial cover explicit repetition, nested loops, indices and counts in 1D, 2D and 3D. The loop pseudocode above is the written tutorial; its recording is not yet linked. Class 2 covers if/Switch and mathematical functions. The Sine curve scene in Arrays Part 2 is the reference for the cube volume; students develop their own pattern. Distinguish explicit iteration from Blender fields and Grasshopper data trees. A field is not a Repeat Zone.
 
 ### Blender files for this lesson
 
@@ -68,8 +87,6 @@ Build your own file. Use these examples to check a step when you are stuck, then
 Scenes in this file: Linear loop, Nested grid. Open them in the order listed.
 
 **S04 — [Arrays — Part 2: arrangements and rules]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend)**
-
-[Open the class that teaches this file]({{ site.baseurl }}/modules/classes/class-06/)
 
 Scenes in this file: 3D array, Hexagonal array, Radial array, If and range, Sine curve. Open them in the order listed.
 

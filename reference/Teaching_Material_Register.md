@@ -2,7 +2,7 @@
 
 # Teaching material register
 
-Posted lessons link their Blender examples and screenshots. Use the examples as references while building your own work; the designated Project 4 node groups are supplied tools that students may reuse directly. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
+Posted lessons link their Blender examples and screenshots. Use the examples as references while building your own work; the designated Project 4 node groups are supplied tools that students may reuse directly. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper, and for Arrays in Blender; other topics will follow.
 
 **Project 4 tools:** instructors provide a prepared point-cloud dataset and analysis groups for 4.1, SDF/volume groups for 4.2, and contouring groups for 4.3. Students may use an approved alternative dataset. The teaching packages and usage notes will be linked before each assignment begins; students are not required to build these tools internally.
 

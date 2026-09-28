@@ -14,7 +14,11 @@ Describe geometry through points, lines, edges and faces, then build a parametri
 
 **Vocabulary:** point, vector, parameter, vertex, line, edge, face, mesh, solid, normal.
 
-**Video tutorials:** [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg)
+**Video tutorials**
+
+{% include youtube.html id="JQN7IjVIW4A" title="Descriptive Geometry — Blender" %}
+
+{% include youtube.html id="g-iOvUYX6Yg" title="Descriptive Geometry — Rhino + Grasshopper" %}
 
 **Taught in:** [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/).
 

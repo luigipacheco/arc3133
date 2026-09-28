@@ -18,6 +18,7 @@ Each topic has lesson notes — the steps, vocabulary and pseudocode — and, wh
 | --- | --- |
 | Constructive Solid Geometry | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | Descriptive Geometry | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
+| Arrays | [Blender](https://youtu.be/q1z8YI7ExtY) |
 
 More videos will be added as they are recorded.
 

@@ -14,7 +14,9 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 
 **Vocabulary:** list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase.
 
-**Video tutorial:** not yet posted. Use the lesson notes and the class slides.
+**Video tutorials**
+
+{% include youtube.html id="q1z8YI7ExtY" title="Arrays — Blender" %}
 
 **Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction.
 

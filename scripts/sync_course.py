@@ -336,7 +336,7 @@ class Course:
         if u.get('optional'):
             out += '**Possible intermediate class — optional.** This topic is outside the required teaching sequence.\n\n'
         out += "**Vocabulary:** " + ", ".join(u["vocabulary"]) + ".\n\n"
-        out += self.video_list(u)
+        out += self.video_list(u, web)
         for block in self.sequence:
             if u['id'] in block['units']:
                 classes = ' · '.join(self.link(f'Class {n:02d}', self.class_url(n)) for n in block['weeks'])
@@ -357,11 +357,29 @@ class Course:
             out += '{% include blender_screenshots.html unit="' + u["id"] + '" %}\n\n'
         return out
 
-    def video_list(self, u):
+    def video_list(self, u, web=False):
         vids = u.get('videos', [])
         if not vids:
             return '**Video tutorial:** not yet posted. Use the lesson notes and the class slides.\n\n'
+        if web:
+            return '**Video tutorials**\n\n' + self.video_embeds(u)
         return '**Video tutorials:** ' + ' · '.join(f'[{label}]({link})' for label, link in vids) + '\n\n'
+
+    @staticmethod
+    def youtube_id(link):
+        """The video id from a youtu.be or youtube.com link, or None for anything else."""
+        m = re.search(r'(?:youtu\.be/|youtube\.com/(?:watch\?v=|embed/|shorts/))([A-Za-z0-9_-]{11})', link)
+        return m.group(1) if m else None
+
+    def video_embeds(self, u):
+        """Embedded players on web pages; anything that is not YouTube stays a link."""
+        out = ''
+        for label, link in u.get('videos', []):
+            vid = self.youtube_id(link)
+            title = f"{u['title']} — {label}"
+            out += (f'{{% include youtube.html id="{vid}" title="{title}" %}}\n\n' if vid
+                    else f'- Video tutorial — [{label}]({link})\n\n')
+        return out
 
     def asset(self, path, web):
         """A repo-relative asset path as a URL for the site or for the repo tree."""
@@ -620,11 +638,11 @@ class Course:
                 for u in w["units"]:
                     unit = self.units[u]
                     out += "- " + self.link(unit["title"] + " — lesson notes", self.unit_url(unit)) + "\n"
-                    for label, link in unit.get('videos', []):
-                        out += f"- Video tutorial — [{label}]({link})\n"
                     if not unit.get('videos'):
                         out += "- Video tutorial — not yet posted\n"
                 out += "\n"
+                for u in w["units"]:
+                    out += self.video_embeds(self.units[u])
             out += session_pages.files_section(self, w['week'])
             due = [a for a in self.assessments if a["due"] == w["week"]]
             out += "## Due this week\n\n" + (bullets([self.link(self.label(a), self.assignment_url(a)) + f" ({a['weight']}%)" + (f" — {self.due_time(a)}" if self.due_time(a) else "") for a in due]) if due else "No graded submission is scheduled.\n") + "\n"

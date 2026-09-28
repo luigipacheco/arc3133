@@ -399,3 +399,28 @@ table {
   h1 { font-size: 1.9em; }
   table { font-size: 0.85em; }
 }
+
+// ---------- embedded video tutorials ----------
+.video-embed {
+  margin: 1.2em 0 2em;
+  max-width: 960px;
+  .video-frame {
+    @include nb-block($nb-ink);
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  figcaption {
+    margin-top: 0.7em;
+    font-family: $nb-mono;
+    font-size: 0.85em;
+    color: $nb-grey;
+  }
+}

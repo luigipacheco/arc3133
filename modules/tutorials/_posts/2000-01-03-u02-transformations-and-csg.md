@@ -14,7 +14,11 @@ Build editable solids with transformations and Boolean operations.
 
 **Vocabulary:** parameter, vector, translation, rotation, scale, union, difference, intersection.
 
-**Video tutorials:** [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g)
+**Video tutorials**
+
+{% include youtube.html id="HO50aaKbfHY" title="Constructive Solid Geometry — Blender" %}
+
+{% include youtube.html id="z0UFlXQnk3g" title="Constructive Solid Geometry — Rhino + Grasshopper" %}
 
 **Taught in:** [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/).
 

@@ -78,8 +78,8 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 1 | Graphic Standards Manual | Class 01 | — |
 | 2–3 | Constructive Solid Geometry | Class 02 · Class 03 | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | Class 04 · Class 05 | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
-| 6 | Arrays 1 — line, grid, cube, curve | Class 06 | — |
-| 7 | Arrays 2 — if/Switch and math functions | Class 07 | — |
+| 6 | Arrays 1 — line, grid, cube, curve | Class 06 | [Blender](https://youtu.be/q1z8YI7ExtY) |
+| 7 | Arrays 2 — if/Switch and math functions | Class 07 | [Blender](https://youtu.be/q1z8YI7ExtY) |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 | — |
 | 9 | Façade attractors — Project 3 | Class 09 | — |
 | 10 | Attractor-based site analysis — Project 4 | Class 10 | — |
@@ -603,7 +603,7 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 
 **Vocabulary:** list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase.
 
-**Video tutorial:** not yet posted. Use the lesson notes and the class slides.
+**Video tutorials:** [Blender](https://youtu.be/q1z8YI7ExtY)
 
 **Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction.
 
@@ -677,7 +677,7 @@ for k in range(layers):
                 place_cube(x, y, z)
 ```
 
-**Teaching note:** Teach this unit in two classes. Class 1 and its loop tutorial cover explicit repetition, nested loops, indices and counts in 1D, 2D and 3D, then bend the row onto a curve (Part 1 scene 04) — repetition only. Class 2's brick wall (Part 2 scene 08) is the first pattern, where k modulo 2 shifts every other course. The loop pseudocode above is the written tutorial; its recording is not yet linked. Class 2 covers if/Switch and mathematical functions. The Sine curve scene in Arrays Part 2 is the reference for the cube volume; students develop their own pattern. Distinguish explicit iteration from Blender fields and Grasshopper data trees. A field is not a Repeat Zone.
+**Teaching note:** Teach this unit in two classes. Class 1 and its loop tutorial cover explicit repetition, nested loops, indices and counts in 1D, 2D and 3D, then bend the row onto a curve (Part 1 scene 04) — repetition only. Class 2's brick wall (Part 2 scene 08) is the first pattern, where k modulo 2 shifts every other course. The loop pseudocode above is the written tutorial; its Blender recording is linked on the lesson page. Class 2 covers if/Switch and mathematical functions. The Sine curve scene in Arrays Part 2 is the reference for the cube volume; students develop their own pattern. Distinguish explicit iteration from Blender fields and Grasshopper data trees. A field is not a Repeat Zone.
 
 ### Blender files for this lesson
 
@@ -979,7 +979,7 @@ Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a 
 
 ## Material availability
 
-Posted lessons link their Blender examples and screenshots. Use the examples as references while building your own work; the designated Project 4 node groups are supplied tools that students may reuse directly. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
+Posted lessons link their Blender examples and screenshots. Use the examples as references while building your own work; the designated Project 4 node groups are supplied tools that students may reuse directly. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper, and for Arrays in Blender; other topics will follow.
 
 **Project 4 tools:** instructors provide a prepared point-cloud dataset and analysis groups for 4.1, SDF/volume groups for 4.2, and contouring groups for 4.3. Students may use an approved alternative dataset. The teaching packages and usage notes will be linked before each assignment begins; students are not required to build these tools internally.
 

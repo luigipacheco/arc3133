@@ -1,0 +1,16 @@
+{%- comment -%}
+  A YouTube video embedded in the page.
+  Usage: {% include youtube.html id="q1z8YI7ExtY" title="Arrays — Blender" %}
+  Uses youtube-nocookie.com so nothing is set until the viewer presses play.
+{%- endcomment -%}
+<figure class="video-embed">
+  <div class="video-frame">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ include.id }}?rel=0"
+            title="{{ include.title | escape }}"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+  </div>
+  <figcaption>{{ include.title | escape }} · <a href="https://youtu.be/{{ include.id }}">Open on YouTube</a></figcaption>
+</figure>

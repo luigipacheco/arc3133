@@ -364,6 +364,9 @@ units:
   - frequency
   - phase
   goal: Arrange your panel using lists, if statements and for loops, then explore a cube volume shaped by math.
+  videos:
+  - - Blender
+    - https://youtu.be/q1z8YI7ExtY
   steps:
   - '1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.'
   - '2D: nest repetition into a grid. Identify rows and columns; predict the total count.'
@@ -434,7 +437,7 @@ units:
   teaching_note: Teach this unit in two classes. Class 1 and its loop tutorial cover explicit repetition,
     nested loops, indices and counts in 1D, 2D and 3D, then bend the row onto a curve (Part 1 scene 04) —
     repetition only. Class 2's brick wall (Part 2 scene 08) is the first pattern, where k modulo 2 shifts every other course. The loop pseudocode above is the written tutorial;
-    its recording is not yet linked. Class 2 covers if/Switch and mathematical functions. The Sine curve
+    its Blender recording is linked on the lesson page. Class 2 covers if/Switch and mathematical functions. The Sine curve
     scene in Arrays Part 2 is the reference for the cube volume; students develop their own pattern.
     Distinguish explicit iteration from Blender fields and Grasshopper data trees. A field is not a Repeat Zone.
 - id: U05
@@ -1348,7 +1351,7 @@ vocabulary:
   - [signed distance field, 'A scalar field storing signed distance to a boundary, using a stated inside/outside convention.', 'The zero level defines the boundary; arbitrary density or noise is not automatically distance.']
   - [discretization, 'Representing a continuous form or function with a finite collection of samples or parts.', 'Turning a volume into ordered contour sections with material thickness.']
 materials_status: |
-  Posted lessons link their Blender examples and screenshots. Use the examples as references while building your own work; the designated Project 4 node groups are supplied tools that students may reuse directly. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper; other topics will follow.
+  Posted lessons link their Blender examples and screenshots. Use the examples as references while building your own work; the designated Project 4 node groups are supplied tools that students may reuse directly. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper, and for Arrays in Blender; other topics will follow.
 
   **Project 4 tools:** instructors provide a prepared point-cloud dataset and analysis groups for 4.1, SDF/volume groups for 4.2, and contouring groups for 4.3. Students may use an approved alternative dataset. The teaching packages and usage notes will be linked before each assignment begins; students are not required to build these tools internally.
 

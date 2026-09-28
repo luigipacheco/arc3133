@@ -104,7 +104,7 @@ pacing: |
 
   The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
 
-  Arrays is taught in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, then a row bent onto a curve and stacked into a brick wall; October 6 covers if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice on both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Façade attractors are taught on October 20. Project 4 begins on October 27, when the manual and arrays are also submitted; there is no separate full-course review class.
+  Arrays is taught in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, then a row bent onto a curve; October 6 covers patterns — a brick wall with every other course shifted — if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice on both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Façade attractors are taught on October 20. Project 4 begins on October 27, when the manual and arrays are also submitted; there is no separate full-course review class.
 
   The façade assignment is introduced October 20 and due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: the supplied contouring group, cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
 
@@ -368,8 +368,8 @@ units:
   - '1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.'
   - '2D: nest repetition into a grid. Identify rows and columns; predict the total count.'
   - '3D: repeat the grid in Z for a cube array. Predict Count cubed; distinguish instances from a sampled volume.'
-  - "Curve: bend the row. Sample a curve at even spacing and place a brick at each point, turned to follow the curve's direction. The count comes from curve length ÷ brick length."
-  - "Wall: repeat the curved row upward, one course per pass. Lift course k by k × brick height and slide odd courses half a brick along the curve (k modulo 2). Swap the curve for a circle."
+  - "Curve: bend the row. Sample a curve at even spacing and place your module at each point, turned to follow the curve's direction. The count comes from curve length ÷ spacing."
+  - "Pattern example · Brick wall: repeat a curved row of bricks upward, one course per pass, and slide every other course half a brick (k modulo 2). Swap the curve for a circle."
   - Use Compare and Switch for if conditions; make four different façade patterns by modifying selected panel instances.
   - Use cubes for a volumetric array. Drive vertical variation with a function of X and Y, such as sine or
     cosine, while retaining layers in Z. Optionally use Switch conditions to create voids.
@@ -383,7 +383,7 @@ units:
     Use cubes on Sheet 3. Supplied library or student-authored materials are permitted. In 3.3 a sampled
     attractor field changes one panel geometry parameter across a façade.
   pseudocode: |
-    # Arrays class 1: line -> grid -> cube -> curve -> wall.
+    # Arrays class 1: line -> grid -> cube -> curve.
     row = []
     for i in range(nx):
         row.append(place_module(i * dx, 0, 0))
@@ -400,21 +400,12 @@ units:
                 spatial_array.append(place_module(i * dx, j * dy, k * dz))
 
     # the row, bent onto a curve: the curve supplies each position
-    count = int(curve_length(curve) / brick) + 1
+    count = int(curve_length(curve) / spacing) + 1
     curved_row = []
     for i in range(count):
         t = i / (count - 1)                     # 0 at the start, 1 at the end
         p, d = point_on(curve, t), direction_on(curve, t)
-        curved_row.append(place_brick(p, facing=d))
-
-    # a wall: the curved row repeated upward, odd courses shifted half a brick
-    wall = []
-    for k in range(courses):
-        shift = (k % 2) * brick / 2
-        for i in range(count):
-            t = i / (count - 1)
-            p, d = point_on(curve, t), direction_on(curve, t)
-            wall.append(place_brick(p + d * shift + (0, 0, k * height), facing=d))
+        curved_row.append(place_module(p, facing=d))
 
     # Arrays class 2: if / Switch and mathematical functions.
     # Sheet 2: one possible facade pattern
@@ -422,6 +413,14 @@ units:
         for i in range(cols):
             angle = turn if (i + j) % 2 else 0   # if / Switch
             place_panel(i * dx, j * dy, angle)
+
+    # Pattern example: a brick wall, every other course shifted half a brick
+    for k in range(courses):
+        shift = (k % 2) * brick / 2               # 0, 1, 0, 1 ... a rule on the index
+        for i in range(count):
+            t = i / (count - 1)
+            p, d = point_on(curve, t), direction_on(curve, t)
+            place_brick(p + d * shift + (0, 0, k * height), facing=d)
 
     # Sheet 3: cubes in layers, displaced by a function of X and Y
     for k in range(layers):
@@ -433,8 +432,8 @@ units:
                 if keep_cube(i, j, k):          # optional void rule; otherwise True
                     place_cube(x, y, z)
   teaching_note: Teach this unit in two classes. Class 1 and its loop tutorial cover explicit repetition,
-    nested loops, indices and counts in 1D, 2D and 3D, then bend the row onto a curve and stack it into a
-    brick wall (Part 1 scenes 04–05; k modulo 2 previews Class 2's conditionals). The loop pseudocode above is the written tutorial;
+    nested loops, indices and counts in 1D, 2D and 3D, then bend the row onto a curve (Part 1 scene 04) —
+    repetition only. Class 2's brick wall (Part 2 scene 08) is the first pattern, where k modulo 2 shifts every other course. The loop pseudocode above is the written tutorial;
     its recording is not yet linked. Class 2 covers if/Switch and mathematical functions. The Sine curve
     scene in Arrays Part 2 is the reference for the cube volume; students develop their own pattern.
     Distinguish explicit iteration from Blender fields and Grasshopper data trees. A field is not a Repeat Zone.
@@ -1291,10 +1290,10 @@ weeks:
     and a deliberate lighting setup for the P3a sheet.
 - week: 6
   date: '2026-09-29'
-  focus: "Submit 2.1 by 11:59 PM. Build a loop and a nested loop — a 1D row, a 2D grid, then 3D layers — then bend the row onto a curve and stack it into a brick wall, on a curve or a circle. Name the count, spacing and index in each direction. Check your CSG print file before queueing it."
+  focus: "Submit 2.1 by 11:59 PM. Build a loop and a nested loop — a 1D row, a 2D grid, then 3D layers — then bend the row onto a curve. Name the count, spacing and index in each direction. Check your CSG print file before queueing it."
 - week: 7
   date: '2026-10-06'
-  focus: "Use Compare and Switch to select between façade patterns, then shape a cube volume with functions of X and Y. Start from small examples; hexagonal and radial arrays are optional. No graded submission this week (studio reviews)."
+  focus: "Use Compare and Switch to select between façade patterns — a brick wall with every other course shifted is the first example — then shape a cube volume with functions of X and Y. Start from small examples; hexagonal and radial arrays are optional. No graded submission this week (studio reviews)."
   no_due: true
 - week: 8
   date: '2026-10-13'
@@ -1463,7 +1462,7 @@ teaching_sequence:
   - U04
   sessions:
   - S03
-  delivery: "First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve and repeat it upward into a brick wall. Name the count, spacing and index in each direction."
+  delivery: "First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction."
 - id: B04-second
   weeks:
   - 7
@@ -1472,7 +1471,7 @@ teaching_sequence:
   - U04
   sessions:
   - S04
-  delivery: "Second of two Arrays classes. Use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional."
+  delivery: "Second of two Arrays classes. Patterns begin with a brick wall where every other course shifts; then use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional."
 - id: B04-support
   weeks:
   - 8
@@ -1592,20 +1591,19 @@ blender:
         exposed and the file ends with cube-minus-pyramid. This is a model-units
         lesson, not a fabrication export.
     - id: S03
-      title: 'Arrays — Part 1: line, grid, cube, curve, wall'
+      title: 'Arrays — Part 1: line, grid, cube, curve'
       path: files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend
-      focus: Begin with a linear array, nest it into a grid and a cube, then bend the row onto a curve and stack it into a brick wall.
+      focus: Begin with a linear array, nest it into a grid and a cube, then bend the row onto a curve.
       exercise: Repeat the previous geometry along a line and across a grid, then extend the grid into layers.
-        Bend the row onto a curve, then stack it into a wall with odd courses shifted. Identify count, spacing
-        and index in each direction.
-      scenes: [Linear loop, Nested grid, 3D array, Along a curve, Brick wall]
+        Bend the row onto a curve. Identify count, spacing and index in each direction.
+      scenes: [Linear loop, Nested grid, 3D array, Along a curve]
     - id: S04
       title: 'Arrays — Part 2: arrangements and rules'
       path: files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend
       focus: Begin with the simple 3D cube array, then compare hexagonal and radial arrangements and select index ranges. End with the 3D curve array to show how math can shape a volume.
-      exercise: Briefly review the XYZ array, then use if/Switch to make façade patterns and functions of X
+      exercise: Briefly review the XYZ array, then build the brick wall (every other course shifted), use if/Switch to make façade patterns and functions of X
         and Y to shape a cube volume. Hexagonal and radial arrangements are optional extensions.
-      scenes: [3D array, Hexagonal array, Radial array, If and range, Sine curve]
+      scenes: [3D array, Hexagonal array, Radial array, If and range, Sine curve, Brick wall]
       note: Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
     - id: S05
       title: Attractor
@@ -1690,9 +1688,8 @@ presentation_review:
   note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
     deck, then review before marking current.
 - week: 6
-  status: needs_revision
-  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
-    deck, then review before marking current.
+  status: current
+  note: Rebuilt for the line, grid, cube, curve and wall sequence; renders from Arrays Part 1 scenes 01–05.
 - week: 7
   status: needs_revision
   note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported

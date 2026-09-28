@@ -25,14 +25,13 @@
   {
     "id": "S03",
     "unit": "U04",
-    "title": "Arrays — Part 1: line, grid, cube, curve, wall",
+    "title": "Arrays — Part 1: line, grid, cube, curve",
     "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
     "scenes": [
       "Linear loop",
       "Nested grid",
       "3D array",
-      "Along a curve",
-      "Brick wall"
+      "Along a curve"
     ]
   },
   {
@@ -45,7 +44,8 @@
       "Hexagonal array",
       "Radial array",
       "If and range",
-      "Sine curve"
+      "Sine curve",
+      "Brick wall"
     ]
   },
   {

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Class 06 — Arrays 1: line, grid, cube, curve (U04, Week 6).
+"""Class 06 — Arrays 1: line, grid, cube, curve (U04, Week 6). Plain repetition only; patterns are Class 07.
 2.1 due tonight; 3.2 issued (Sheet 1 today); 2.2 print check.
 
 Loops are explained as readable Python, never as node-editor screenshots.
 Colour that explains a direction follows Blender's axes: X red, Y green, Z blue.
-Images in img/class06/c*.png are renders of Arrays-Lists-Session-1.blend scenes 01–05,
+Images in img/class06/c*.png are renders of Arrays-Lists-Session-1.blend scenes 01–04,
 coloured by position (X→R, Y→G, Z→B) and cropped. Re-render them if the file changes."""
 import os, re
 from nb import *
@@ -96,22 +96,21 @@ s.t(6.9, 2.72, 5.45, 2.5, [
 s.banner(5.75, "Your %s module is the component. On Sheet 1 it does not change — only where it goes." % N31,
          fill=LIME, h=0.72)
 
-# 3 ── TODAY: ONE LOOP, FIVE WAYS
+# 3 ── TODAY: ONE LOOP, FOUR WAYS
 s = d.slide(BLACK)
-s.header("TODAY: ONE LOOP, FIVE WAYS",
-         "Class file Arrays Part 1, scenes 01–05. Colour is position: X red, Y green, Z blue.")
+s.header("TODAY: ONE LOOP, FOUR WAYS",
+         "Class file Arrays Part 1, scenes 01–04. Colour is position: X red, Y green, Z blue.")
 steps = [("LINE", "c01_row.png", "i", AX["X"]), ("GRID", "c02_grid.png", "i, j", AX["Y"]),
-         ("CUBE", "c03_cube_n4.png", "i, j, k", AX["Z"]), ("CURVE", "c04_curve.png", "i along a curve", YELLOW),
-         ("WALL", "c05_wall_curve.png", "i along, k up", PINK)]
-x, wd = L, (W - 0.2 * 4) / 5
+         ("CUBE", "c03_cube_n4.png", "i, j, k", AX["Z"]), ("CURVE", "c04_curve_module.png", "i along a curve", YELLOW)]
+x, wd = L, (W - 0.25 * 3) / 4
 for n, (nm, img, ctr, col) in enumerate(steps, 1):
     s.chip(x, 2.0, wd, 0.48, "%02d  %s" % (n, nm), fill=col, size=12)
     picture(s, img, x, 2.62, wd, wd / 1.6, frame=CREAM)
     s.t(x, 2.72 + wd / 1.6, wd, 0.35, [s.M(ctr, 12, MUTE)], align=PP_ALIGN.CENTER)
-    x += wd + 0.2
-s.t(L, 4.55, W, 0.9, [s.C("Line, grid and cube add one counter at a time. The curve changes where a position "
-                          "comes from. The wall puts both ideas together.", 15)], ls=1.3)
-s.banner(5.75, "EVERY STEP IS THE SAME LOOP. ONLY THE COUNTERS AND THE SOURCE OF POSITION CHANGE.",
+    x += wd + 0.25
+s.t(L, 5.0, W, 0.9, [s.C("Line, grid and cube add one counter at a time. The curve changes where a position "
+                          "comes from. No rules yet: every copy is treated the same. Patterns start next week.", 15)], ls=1.3)
+s.banner(6.1, "EVERY STEP IS THE SAME LOOP. ONLY THE COUNTERS AND THE SOURCE OF POSITION CHANGE.",
          fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
 
 # 4 ── THE LOOP, WRITTEN OUT
@@ -226,64 +225,28 @@ s.banner(6.2, "PREDICT THE TOTAL BEFORE YOU LOOK: 27, 64, 125. X, Y AND Z TOGETH
 
 # 10 ── 04 · CURVE
 s = d.slide(CREAM)
-s.header("04 · CURVE — THE ROW BENDS", "Scene 04 — Along a curve. Edit the curve object; the row follows.")
-picture(s, "c04_curve.png", L, 1.95, 6.6, 4.125, frame=BLACK)
+s.header("04 · CURVE — THE ROW BENDS", "Scene 04 — Along a curve · Spacing 0.8 · the same module as the line. Edit the curve; the row follows.")
+picture(s, "c04_curve_module.png", L, 1.95, 6.6, 4.125, frame=BLACK)
 s.panel(7.55, 1.95, 5.1, 4.125, "WHERE IS COPY i?", headfill=YELLOW, tsize=14.5)
-code(s, 7.8, 2.7, 4.7, ["count = int(length / brick) + 1",
+code(s, 7.8, 2.7, 4.7, ["count = int(length / spacing) + 1",
                         "for i in range(count):",
                         "    t = i / (count - 1)  # 0 → 1",
                         "    p = point_on(curve, t)",
                         "    d = direction_on(curve, t)",
-                        "    place(brick, p, facing=d)"], size=11.5, step=0.33)
+                        "    place(module, p, facing=d)"], size=11.5, step=0.33)
 s.t(7.8, 4.85, 4.6, 1.1, [s.Cb("The line said x = i × spacing. Here the curve answers the same question, "
                                "and also says which way to face.", 12.5)], ls=1.25)
 s.banner(6.4, "SAME LOOP AS THE LINE. THE CURVE GIVES THE POSITION INSTEAD OF i × SPACING.",
          fill=YELLOW, h=0.66, size=12, align=PP_ALIGN.CENTER)
 
-# 11 ── 05 · WALL
-s = d.slide(BLACK)
-s.header("05 · WALL — HORIZONTAL REPETITION, STACKED",
-         "Scene 05 — Brick wall · 8 courses · a curve, or a circle with Use Circle on")
-wd = (W - 0.3) / 2
-for n, (img, tag, col) in enumerate((("c05_wall_curve.png", "ON A CURVE", YELLOW),
-                                     ("c05_wall_circle.png", "ON A CIRCLE", PINK))):
-    x = L + n * (wd + 0.3)
-    picture(s, img, x, 1.95, wd, 3.15, frame=CREAM)
-    s.chip(x, 5.28, wd, 0.46, tag, fill=col, size=12.5)
-s.t(L, 5.9, W, 0.4, [s.C("Each course is the curved row. Z → blue rises with the courses; every other course "
-                          "slides half a brick.", 14, MUTE)])
-s.banner(6.5, "A WALL IS THE CURVED ROW, REPEATED UPWARD.", fill=AX["Z"], h=0.62, size=12.5,
-         align=PP_ALIGN.CENTER)
-
-# 12 ── THE WALL, WRITTEN OUT
-s = d.slide(CREAM)
-s.header("THE WALL, WRITTEN OUT", "The curve loop from 04, inside one more loop.")
-s.card(L, 1.95, 7.85, 3.6, fill=CREAM)
-code(s, L + 0.25, 2.15, 7.45, [
-    "for k in range(courses):             # one pass per course",
-    "    shift = (k % 2) * brick / 2      # odd courses slide",
-    "    for i in range(count):",
-    "        t = i / (count - 1)",
-    "        p = point_on(curve, t)",
-    "        d = direction_on(curve, t)",
-    "        up = (0, 0, k * height)",
-    "        place(brick, p + d * shift + up, facing=d)"], size=12, step=0.4)
-s.panel(8.75, 1.95, 3.9, 3.6, "WHAT IS NEW", headfill=PINK, tsize=14)
-s.t(9.0, 2.7, 3.45, 2.8, [
-    s.Cb("The outer loop is k — the same move that turned the grid into the cube.", 12.5),
-    s.Cb("k % 2 gives 0, 1, 0, 1 … : the first rule in this course that reads the index.", 12.5)],
-    ls=1.3, space=8)
-s.banner(5.85, "k % 2 IS NEXT WEEK'S IF/SWITCH, HIDING INSIDE A WALL.", fill=YELLOW, h=0.7,
-         align=PP_ALIGN.CENTER)
-
 # 13 ── THE EVOLUTION
 s = d.slide(BLACK)
-s.header("THE EVOLUTION", "Line to wall, one change at a time.")
+s.header("THE EVOLUTION", "Line to curve, one change at a time.")
 rows = [("01 LINE", "One counter, i. Position = i × spacing.", AX["X"]),
         ("02 GRID", "i inside j. Total = rows × columns.", AX["Y"]),
         ("03 CUBE", "i inside j inside k. Total = count cubed.", AX["Z"]),
         ("04 CURVE", "One counter again — but the curve gives the position and the direction.", YELLOW),
-        ("05 WALL", "i along the curve, k up the courses, k % 2 shifts every other course.", PINK)]
+        ("NEXT WEEK", "Patterns: a rule that reads the index. First example — a brick wall, every other course shifted.", PINK)]
 y = 1.9
 for lab, body, col in rows:
     s.actionrow(y, lab, body, fill=col, h=0.78)
@@ -292,8 +255,8 @@ s.banner(6.5, "ONE LOOP. EACH STEP ADDS A COUNTER OR CHANGES WHERE THE POSITION 
          fill=YELLOW, h=0.6, size=12, align=PP_ALIGN.CENTER)
 
 # 14 ── STEPS (U04 steps 1–5, verbatim from course.yml)
-unit_steps_slide(d, "U04", title="TODAY, STEP BY STEP", n=(0, 5),
-                 sub="Curve and wall are in-class practice. Sheet 1 stays: your module, then 1D, 2D and 3D.")
+s = unit_steps_slide(d, "U04", title="TODAY, STEP BY STEP", n=(0, 4),
+                 sub="Plain repetition: every copy treated the same. The curve is in-class practice; Sheet 1 is your module, then 1D, 2D, 3D.")
 
 # 15 ── 2.2 PRINT CHECK
 s = d.slide(CREAM)
@@ -332,18 +295,18 @@ for i, (tag, ttl, body) in enumerate(cards):
 requirements_slide(d, "P3b", title="REQUIREMENTS — %s" % N32, sub=weights("P3b"))
 
 # 18 ── NOW
-now_slide(d, "NOW — SHEET 1, THEN THE WALL",
+now_slide(d, "NOW — SHEET 1",
           "Predict every total before you look.",
           ["A row: Count and Spacing exposed, spreadsheet open, the last X said out loud",
            "The row nested into a grid: rows × columns predicted first",
            "The grid repeated in Z — 3, 4 and 5 per axis compared",
-           "The row bent onto a curve, then stacked into a wall — odd courses shifted; try the circle",
+           "Your row bent onto a curve: edit the curve and watch the row follow",
            "%s uploaded by 11:59 PM tonight; %s print checked before you queue it" % (N21, N22)],
           closer="A COUNT YOU CAN COUNT. NOT A THOUSAND OF ANYTHING, YET.", bg=CYAN)
 
 # 19 ── BEFORE NEXT CLASS
 before_next_slide(d, [
-    ("NEXT", "%s: if/Switch façade patterns and a cube volume from functions of X and Y — Sheets 2 and 3. "
+    ("NEXT", "%s: patterns — a brick wall with every other course shifted, if/Switch façade patterns, and a cube volume from X and Y (Sheets 2 and 3). "
              "Bring Sheet 1's graph working; we build on it." % C.date_long(7).title()),
     ("DUE", "Nothing graded next week (studio reviews). %s print in class %s. %s, all three sheets: %s."
             % (N22, C.date_long(8).split(" — ")[1], N32, C.date_long(A32["due"]).split(" — ")[1])),

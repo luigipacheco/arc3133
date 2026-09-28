@@ -16,15 +16,15 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve and repeat it upward into a brick wall. Name the count, spacing and index in each direction.
+**Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction.
 
-**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional.
+**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Patterns begin with a brick wall where every other course shifts; then use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional.
 
 1. 1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.
 2. 2D: nest repetition into a grid. Identify rows and columns; predict the total count.
 3. 3D: repeat the grid in Z for a cube array. Predict Count cubed; distinguish instances from a sampled volume.
-4. Curve: bend the row. Sample a curve at even spacing and place a brick at each point, turned to follow the curve's direction. The count comes from curve length ÷ brick length.
-5. Wall: repeat the curved row upward, one course per pass. Lift course k by k × brick height and slide odd courses half a brick along the curve (k modulo 2). Swap the curve for a circle.
+4. Curve: bend the row. Sample a curve at even spacing and place your module at each point, turned to follow the curve's direction. The count comes from curve length ÷ spacing.
+5. Pattern example · Brick wall: repeat a curved row of bricks upward, one course per pass, and slide every other course half a brick (k modulo 2). Swap the curve for a circle.
 6. Use Compare and Switch for if conditions; make four different façade patterns by modifying selected panel instances.
 7. Use cubes for a volumetric array. Drive vertical variation with a function of X and Y, such as sine or cosine, while retaining layers in Z. Optionally use Switch conditions to create voids.
 8. Optional later practice · Hexagonal: stagger alternate rows; explain the odd/even test and row spacing.
@@ -38,7 +38,7 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
 ```python
-# Arrays class 1: line -> grid -> cube -> curve -> wall.
+# Arrays class 1: line -> grid -> cube -> curve.
 row = []
 for i in range(nx):
     row.append(place_module(i * dx, 0, 0))
@@ -55,21 +55,12 @@ for k in range(nz):
             spatial_array.append(place_module(i * dx, j * dy, k * dz))
 
 # the row, bent onto a curve: the curve supplies each position
-count = int(curve_length(curve) / brick) + 1
+count = int(curve_length(curve) / spacing) + 1
 curved_row = []
 for i in range(count):
     t = i / (count - 1)                     # 0 at the start, 1 at the end
     p, d = point_on(curve, t), direction_on(curve, t)
-    curved_row.append(place_brick(p, facing=d))
-
-# a wall: the curved row repeated upward, odd courses shifted half a brick
-wall = []
-for k in range(courses):
-    shift = (k % 2) * brick / 2
-    for i in range(count):
-        t = i / (count - 1)
-        p, d = point_on(curve, t), direction_on(curve, t)
-        wall.append(place_brick(p + d * shift + (0, 0, k * height), facing=d))
+    curved_row.append(place_module(p, facing=d))
 
 # Arrays class 2: if / Switch and mathematical functions.
 # Sheet 2: one possible facade pattern
@@ -77,6 +68,14 @@ for j in range(rows):
     for i in range(cols):
         angle = turn if (i + j) % 2 else 0   # if / Switch
         place_panel(i * dx, j * dy, angle)
+
+# Pattern example: a brick wall, every other course shifted half a brick
+for k in range(courses):
+    shift = (k % 2) * brick / 2               # 0, 1, 0, 1 ... a rule on the index
+    for i in range(count):
+        t = i / (count - 1)
+        p, d = point_on(curve, t), direction_on(curve, t)
+        place_brick(p + d * shift + (0, 0, k * height), facing=d)
 
 # Sheet 3: cubes in layers, displaced by a function of X and Y
 for k in range(layers):
@@ -95,15 +94,15 @@ Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may la
 
 Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
 
-**S03 — [Arrays — Part 1: line, grid, cube, curve, wall]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
+**S03 — [Arrays — Part 1: line, grid, cube, curve]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
 
 [Open the class that teaches this file]({{ site.baseurl }}/modules/classes/class-06/)
 
-Scenes in this file: Linear loop, Nested grid, 3D array, Along a curve, Brick wall. Open them in the order listed.
+Scenes in this file: Linear loop, Nested grid, 3D array, Along a curve. Open them in the order listed.
 
 **S04 — [Arrays — Part 2: arrangements and rules]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend)**
 
-Scenes in this file: 3D array, Hexagonal array, Radial array, If and range, Sine curve. Open them in the order listed.
+Scenes in this file: 3D array, Hexagonal array, Radial array, If and range, Sine curve, Brick wall. Open them in the order listed.
 
 Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
 

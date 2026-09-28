@@ -4,9 +4,9 @@
 
 Download example files individually. These are lesson stages, not fixed weeks; continue a file for another class when needed.
 
-First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve and repeat it upward into a brick wall. Name the count, spacing and index in each direction.
+First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction.
 
-Second of two Arrays classes. Use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional.
+Second of two Arrays classes. Patterns begin with a brick wall where every other course shifts; then use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional.
 
 Supported practice, no new topic. Bring all three array sheets for feedback on repetition, indices, counts and spacing, conditional façade patterns and the mathematical cube volume. Hand in the CSG print.
 
@@ -30,8 +30,8 @@ Build your own file. Use these examples to check a step when you are stuck, then
 | --- | --- | --- | --- | --- |
 | S01 | 2–3 | [Constructive Solid Geometry](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | 01 - CSG example | U02 Constructive Solid Geometry |
 | S02 | 4–5 | [Descriptive Geometry](02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Descriptive Geometry |
-| S03 | 6 | [Arrays — Part 1: line, grid, cube, curve, wall](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid, 3D array, Along a curve, Brick wall | U04 Arrays |
-| S04 | 7 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays |
+| S03 | 6 | [Arrays — Part 1: line, grid, cube, curve](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid, 3D array, Along a curve | U04 Arrays |
+| S04 | 7 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve, Brick wall | U04 Arrays |
 | S05 | 9 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractor |
 | S07 | 10 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Volumetric Data and Fields |
 | S08 | 11 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Volumetric Data and Fields |

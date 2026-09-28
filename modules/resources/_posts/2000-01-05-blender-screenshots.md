@@ -22,7 +22,7 @@ Geometry Nodes setups and matching 3D viewport screenshots from the separate cla
 | --- | --- |
 | S01 | [Constructive Solid Geometry](#capture-s01) |
 | S02 | [Descriptive Geometry](#capture-s02) |
-| S03 | [Arrays — Part 1: line, grid, cube, curve, wall](#capture-s03) |
+| S03 | [Arrays — Part 1: line, grid, cube, curve](#capture-s03) |
 | S04 | [Arrays — Part 2: arrangements and rules](#capture-s04) |
 
 {% include blender_screenshots.html released_only=true %}

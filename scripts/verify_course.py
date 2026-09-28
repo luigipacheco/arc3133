@@ -13,6 +13,9 @@ from sync_course import Course, ROOT
 import session_pages
 
 
+SMART_QUOTES = str.maketrans({'\u2018': "'", '\u2019': "'", '\u201c': '"', '\u201d': '"'})
+
+
 class Links(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -41,6 +44,8 @@ class Links(HTMLParser):
                 self.links.append(attrs[attr])
 
     def handle_data(self, data):
+        # Jekyll/kramdown turns straight quotes into typographic ones; compare the plain form.
+        data = data.translate(SMART_QUOTES)
         self.text.append(data)
         if self._cell is not None:
             self._cell.append(data)

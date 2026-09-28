@@ -349,7 +349,7 @@ class Course:
         if "pseudocode" in u:
             out += "**Read the pseudocode.** Match each step to your nodes; you do not need to type it.\n\n"
             out += "```python\n" + u["pseudocode"].rstrip() + "\n```\n\n"
-        if "teaching_note" in u:
+        if "teaching_note" in u and not web:  # instructor syllabus only
             out += "**Teaching note:** " + u["teaching_note"] + "\n\n"
         out += self.blender_files(u, web)
         if web and any(i["unit"] == u["id"] for i in self.blender_images):
@@ -481,7 +481,7 @@ class Course:
         out += "## How this site works\n\n"
         out += table(["Tab", "What you will find"], [[self.link(name, url), text] for name, url, text in h["tabs"]]) + "\n"
         out += "## The semester\n\n"
-        out += ("The proposed calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and introduces façade attractors in Week 9. Project 4 starts in Week 10; all new content ends by Week 12, leaving Weeks 13–15 for production and feedback. Everything through Arrays is due by "
+        out += ("The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and introduces façade attractors in Week 9. Project 4 starts in Week 10; all new content ends by Week 12, leaving Weeks 13–15 for production and feedback. Everything through Arrays is due by "
                 + self.when(self.meta['midterm_week']) + ", the mid-semester deadline.\n\n")
         out += self.sequence_table() + "\n"
         out += "## Four projects\n\n" + self.project_spine() + "\n"
@@ -592,7 +592,8 @@ class Course:
             out += "## Vocabulary\n\n" + table(["Term", "Meaning", "Example / distinction"], self.data["vocabulary"]) + "\n"
         out += "## Reading and documentation\n\n" + self.references() + "\n"
         out += "## Material availability\n\n" + self.data["materials_status"] + "\n"
-        out += "## Decisions before issue\n\n" + self.decisions() + "\n"
+        if full:
+            out += "## Decisions before issue\n\n" + self.decisions() + "\n"
         out += "# Standing course and university policies\n\n" + self.policy + "\n\n"
         if full:
             out += "# Instructor planning notes\n\n" + self.data["instructor_notes"] + "\n"

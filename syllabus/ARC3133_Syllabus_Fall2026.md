@@ -55,15 +55,15 @@ Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight
 
 ## Learning pace and class format
 
-**Proposed deadlines for instructor review:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so the print deadline skips October 6.
+**Deadlines:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so the print deadline skips October 6.
 
 The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
 
-Teach Arrays in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, paired with the loop tutorial; October 6 explains if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice checking both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Teach façade attractors on October 20. Begin Project 4 on October 27, when the manual and arrays are also submitted; no separate full-course review class is scheduled.
+Arrays is taught in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, then a row bent onto a curve and stacked into a brick wall; October 6 covers if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice on both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Façade attractors are taught on October 20. Project 4 begins on October 27, when the manual and arrays are also submitted; there is no separate full-course review class.
 
-Introduce the façade assignment October 20, due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: use the supplied contouring group and demonstrate cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
+The façade assignment is introduced October 20 and due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: the supplied contouring group, cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
 
-This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions. The proposed schedule and lab capacity must be reviewed before publication.
+This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions.
 
 Each class combines a short demonstration, guided practice and critique. Start with a small example, check how it works, then increase its complexity. Watch the video tutorial for the topic where one is posted.
 
@@ -78,7 +78,7 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 1 | Graphic Standards Manual | Class 01 | — |
 | 2–3 | Constructive Solid Geometry | Class 02 · Class 03 | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | Class 04 · Class 05 | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
-| 6 | Arrays 1 — loops in 1D, 2D and 3D | Class 06 | — |
+| 6 | Arrays 1 — line, grid, cube, curve | Class 06 | — |
 | 7 | Arrays 2 — if/Switch and math functions | Class 07 | — |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 | — |
 | 9 | Façade attractors — Project 3 | Class 09 | — |
@@ -105,7 +105,7 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 3 | Sep 8 | Constructive Solid Geometry | — |
 | 4 | Sep 15 | Descriptive Geometry | — |
 | 5 | Sep 22 | Descriptive Geometry | — |
-| 6 | Sep 29 | Arrays 1 — loops in 1D, 2D and 3D | 2.1 — CSG process and instructions (11:59 PM Eastern Time) |
+| 6 | Sep 29 | Arrays 1 — line, grid, cube, curve | 2.1 — CSG process and instructions (11:59 PM Eastern Time) |
 | 7 | Oct 6 | Arrays 2 — if/Switch and math functions | No graded submission |
 | 8 | Oct 13 | Supported practice — Arrays 1 and 2 | 2.2 — CSG 3D printed object (11:59 PM Eastern Time) |
 | 9 | Oct 20 | Façade attractors — Project 3 | 3.1 — Descriptive geometry module — material and three-point lighting (11:59 PM Eastern Time) |
@@ -397,13 +397,13 @@ Before each submission, open the file from a clean folder, confirm dependencies 
 
 ## Software and data
 
-**Blender Geometry Nodes is the environment for the class files currently being prepared.** The earlier syllabus also allowed Rhino + Grasshopper. Continued support for that route is a discussion item; students should not be required to switch an already approved environment without an announced transition. Python is not a prerequisite for the core sequence.
+**Blender Geometry Nodes is the environment for the class files currently being prepared.** The earlier syllabus also allowed Rhino + Grasshopper; students already working in an approved environment will not be required to switch without an announced transition. Python is not a prerequisite for the core sequence.
 
 Use Illustrator, Photoshop, InDesign, Inkscape, GIMP, Scribus or an equivalent vector/raster/layout editor for visual work. Use the FabLab-specified slicer and cutting preparation workflow for production.
 
 Template-based design tools may not produce the sheets, Graphic Standards Manual or booklet. The grid, typography, hierarchy and composition are student design work. Retain the earlier restriction on Canva, Adobe Express, template-based Figma work, PowerPoint, Google Slides and similar template-driven production.
 
-Import a supplied or properly attributed point-cloud dataset for the point-cloud unit. A paid capture service, personal API key or particular importer is not required by this draft. Record source, permission or license, units and processing. An imported surface sampled into points must be identified as a derived point cloud.
+Import a supplied or properly attributed point-cloud dataset for the point-cloud unit. A paid capture service, personal API key or particular importer is not required. Record source, permission or license, units and processing. An imported surface sampled into points must be identified as a derived point cloud.
 
 ## Fabrication and materials
 
@@ -434,7 +434,7 @@ These are the two required physical submissions: the CSG print and the laser-cut
 
 ## AI use in this course
 
-The core course teaches graphs and geometric reasoning. No required Python or AI tool-building final is assigned in this working draft; that decision remains open.
+The core course teaches graphs and geometric reasoning. No Python or AI tool-building assignment is required.
 
 **Through Week 10:** students produce their own graphs, geometry, layouts and submission material. AI may explain a concept, syntax or an error message, but may not write, complete or repair submitted work.
 
@@ -605,18 +605,20 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes, paired with the loop tutorial. Use loops and nested loops to build a row, grid and layered array; explain counts, spacing and indices.
+**Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve and repeat it upward into a brick wall. Name the count, spacing and index in each direction.
 
-**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Explain if/Switch selection through façade patterns, then use mathematical functions of X and Y to shape a cube volume. Hexagonal and radial arrays remain optional.
+**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional.
 
 1. 1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.
 2. 2D: nest repetition into a grid. Identify rows and columns; predict the total count.
 3. 3D: repeat the grid in Z for a cube array. Predict Count cubed; distinguish instances from a sampled volume.
-4. Use Compare and Switch for if conditions; make four different façade patterns by modifying selected panel instances.
-5. Use cubes for a volumetric array. Drive vertical variation with a function of X and Y, such as sine or cosine, while retaining layers in Z. Optionally use Switch conditions to create voids.
-6. Optional later practice · Hexagonal: stagger alternate rows; explain the odd/even test and row spacing.
-7. Optional later practice · Radial: place copies from radius, count and angular step.
-8. Optional later practice · Curve: resample a curve and place copies along it, aligned to its tangent. Drive a curve with sine; explain amplitude, frequency and phase.
+4. Curve: bend the row. Sample a curve at even spacing and place a brick at each point, turned to follow the curve's direction. The count comes from curve length ÷ brick length.
+5. Wall: repeat the curved row upward, one course per pass. Lift course k by k × brick height and slide odd courses half a brick along the curve (k modulo 2). Swap the curve for a circle.
+6. Use Compare and Switch for if conditions; make four different façade patterns by modifying selected panel instances.
+7. Use cubes for a volumetric array. Drive vertical variation with a function of X and Y, such as sine or cosine, while retaining layers in Z. Optionally use Switch conditions to create voids.
+8. Optional later practice · Hexagonal: stagger alternate rows; explain the odd/even test and row spacing.
+9. Optional later practice · Radial: place copies from radius, count and angular step.
+10. Optional later practice · Drive the curve with sine; explain amplitude, frequency and phase.
 
 **Practice:** 3.2 has three sheets. Sheet 1: four diagrams showing your module alone and in 1D, 2D and 3D arrays. Sheet 2: four façade patterns using your module and if/Switch conditions on a 2D array. Sheet 3: an isometric of an exploratory cube volume with vertical variation driven by X and Y; conditional voids are optional.
 
@@ -625,7 +627,7 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
 ```python
-# Arrays class 1 / loop tutorial: row -> grid -> layers.
+# Arrays class 1: line -> grid -> cube -> curve -> wall.
 row = []
 for i in range(nx):
     row.append(place_module(i * dx, 0, 0))
@@ -640,6 +642,23 @@ for k in range(nz):
     for j in range(ny):
         for i in range(nx):
             spatial_array.append(place_module(i * dx, j * dy, k * dz))
+
+# the row, bent onto a curve: the curve supplies each position
+count = int(curve_length(curve) / brick) + 1
+curved_row = []
+for i in range(count):
+    t = i / (count - 1)                     # 0 at the start, 1 at the end
+    p, d = point_on(curve, t), direction_on(curve, t)
+    curved_row.append(place_brick(p, facing=d))
+
+# a wall: the curved row repeated upward, odd courses shifted half a brick
+wall = []
+for k in range(courses):
+    shift = (k % 2) * brick / 2
+    for i in range(count):
+        t = i / (count - 1)
+        p, d = point_on(curve, t), direction_on(curve, t)
+        wall.append(place_brick(p + d * shift + (0, 0, k * height), facing=d))
 
 # Arrays class 2: if / Switch and mathematical functions.
 # Sheet 2: one possible facade pattern
@@ -659,7 +678,7 @@ for k in range(layers):
                 place_cube(x, y, z)
 ```
 
-**Teaching note:** Teach this unit in two classes. Class 1 and its loop tutorial cover explicit repetition, nested loops, indices and counts in 1D, 2D and 3D. The loop pseudocode above is the written tutorial; its recording is not yet linked. Class 2 covers if/Switch and mathematical functions. The Sine curve scene in Arrays Part 2 is the reference for the cube volume; students develop their own pattern. Distinguish explicit iteration from Blender fields and Grasshopper data trees. A field is not a Repeat Zone.
+**Teaching note:** Teach this unit in two classes. Class 1 and its loop tutorial cover explicit repetition, nested loops, indices and counts in 1D, 2D and 3D, then bend the row onto a curve and stack it into a brick wall (Part 1 scenes 04–05; k modulo 2 previews Class 2's conditionals). The loop pseudocode above is the written tutorial; its recording is not yet linked. Class 2 covers if/Switch and mathematical functions. The Sine curve scene in Arrays Part 2 is the reference for the cube volume; students develop their own pattern. Distinguish explicit iteration from Blender fields and Grasshopper data trees. A field is not a Repeat Zone.
 
 ### Blender files for this lesson
 
@@ -667,9 +686,9 @@ Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may la
 
 Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
 
-**S03 — [Arrays — Part 1: linear and nested grid](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
+**S03 — [Arrays — Part 1: line, grid, cube, curve, wall](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
 
-Scenes in this file: Linear loop, Nested grid. Open them in the order listed.
+Scenes in this file: Linear loop, Nested grid, 3D array, Along a curve, Brick wall. Open them in the order listed.
 
 **S04 — [Arrays — Part 2: arrangements and rules](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend)**
 
@@ -800,7 +819,7 @@ Use contours and sections to translate a volumetric design into parts for fabric
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 12 — *not yet released*. Complete all new required content with a prepared example using the supplied contouring group. Cover spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. Introduce both 4.3 and 4.4; continue their production during Weeks 13–15.
+**Taught in:** Class 12 — *not yet released*. The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced during Weeks 13–15.
 
 1. Use the supplied contouring group to section the selected volume and order the resulting curves.
 2. Choose one direction and interval suited to the form, material thickness and model scale. Demonstrate alternatives in class; there is no fixed minimum slice count or required comparison sheet.
@@ -857,7 +876,7 @@ Assemble and document one laser-cut model, make selected revisions and complete 
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 12 — *not yet released*. Complete all new required content with a prepared example using the supplied contouring group. Cover spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. Introduce both 4.3 and 4.4; continue their production during Weeks 13–15.
+**Taught in:** Class 12 — *not yet released*. The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced during Weeks 13–15.
 
 1. Test material, fit and connections before full production.
 2. Fabricate and assemble the selected parts within the confirmed lab allocation.
@@ -918,7 +937,7 @@ Supporting files: [Fabrication notes and dimensions](../files/blender/09-final-p
 
 ## Reading and documentation
 
-No required textbook is assigned in this draft. These references are retained or aligned from the course repository. Tutorial and file availability is stated separately.
+No textbook is required. The references below support the lessons; lesson files and tutorials are linked from each class page.
 
 ### Reading
 

@@ -1,37 +1,90 @@
 # -*- coding: utf-8 -*-
-"""Class 06 — Arrays 1D / 2D / 3D (U04, Week 6 steps). P3a due; P3b issued (sheet 1 today);
-P2b print checkpoint."""
-import os, math
+"""Class 06 — Arrays 1: line, grid, cube, curve (U04, Week 6).
+2.1 due tonight; 3.2 issued (Sheet 1 today); 2.2 print check.
+
+Loops are explained as readable Python, never as node-editor screenshots.
+Colour that explains a direction follows Blender's axes: X red, Y green, Z blue.
+Images in img/class06/c*.png are renders of Arrays-Lists-Session-1.blend scenes 01–05,
+coloured by position (X→R, Y→G, Z→B) and cropped. Re-render them if the file changes."""
+import os, re
 from nb import *
 from slidekit import *
 import coursedata as C
 C.require_current_deck(6)
-import diagrams as G
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
-from pptx.util import Pt
+from pptx.util import Inches, Pt
+from PIL import Image
 
-OUT = os.environ.get("DECK_OUT", "/home/claude/out")
+HERE = os.path.dirname(os.path.abspath(__file__))
+IMG = os.path.join(HERE, "img", "class06")
+OUT = os.environ.get("DECK_OUT", os.path.join(HERE, ".."))
 d = Deck()
 WK = 6
-VISUAL = ("Visual quality 35% · computational understanding 25% · technical execution 20% "
-          "· experimentation 10% · requirements and identity 10%.")
+
+# Blender's axis colours — fills (black text on top) and a darker set for text on cream
+AX = {"X": "FF3352", "Y": "8BDC00", "Z": "2890FF"}
+AXT = {"i": "D7263D", "j": "3E8E00", "k": "1F6FD1"}
+
+A21, A22, A32 = C.milestone("P2a"), C.milestone("P2b"), C.milestone("P3b")
+N21, N22, N32, N31 = A21["number"], A22["number"], A32["number"], C.milestone("P3a")["number"]
+
+
+def picture(s, name, x, y, w, h, frame=None):
+    """Fit an image inside a box, centred, aspect kept."""
+    path = os.path.join(IMG, name)
+    iw, ih = Image.open(path).size
+    k = min(w / iw, h / ih)
+    pw, ph = iw * k, ih * k
+    px, py = x + (w - pw) / 2, y + (h - ph) / 2
+    if frame:
+        s.rect(px, py, pw, ph, fill=None, line=frame, lw=BORDER)
+    s.s.shapes.add_picture(path, Inches(px), Inches(py), Inches(pw), Inches(ph))
+
+
+TOKEN = re.compile(r"\b(i|j|k)\b")
+
+
+def code(s, x, y, w, lines, size=12, step=0.3):
+    """Readable Python, one line per row. i, j, k take their axis colour."""
+    for ln in lines:
+        runs, pos = [], 0
+        body, _, comment = ln.partition("#")
+        for m in TOKEN.finditer(body):
+            if m.start() > pos:
+                runs.append((body[pos:m.start()], "Courier New", size, None, BLACK))
+            runs.append((m.group(1), "Courier New", size, True, AXT[m.group(1)]))
+            pos = m.end()
+        if pos < len(body):
+            runs.append((body[pos:], "Courier New", size, None, BLACK))
+        if comment:
+            runs.append(("#" + comment, "Courier New", size, None, GREY))
+        s.t(x, y, w, step, [runs or [(" ", "Courier New", size, None, BLACK)]])
+        y += step
+
+
+def weights(mid):
+    out = []
+    for line in C.milestone(mid)["brief"]["evaluation"]:
+        out.append(line.split(":**")[0].strip("* ").replace(" - ", " "))
+    return " · ".join(out) + "."
+
 
 # 1 ── TITLE
-title_slide(d, WK, ["ARRAYS", "1D · 2D · 3D"],
-            "P3b BEGINS — SHEET 1: ONE MODULE, MANY POSITIONS", bg=LIME, lfill=PINK, rfill=CYAN,
-            foot="P3b ISSUED TODAY  /  P2b PRINT CHECKPOINT TODAY")
+title_slide(d, WK, ["ARRAYS 1", "LINE · GRID · CUBE · CURVE"],
+            "ONE MODULE, MANY POSITIONS", bg=LIME, lfill=PINK, rfill=CYAN,
+            right_tag="%s DUE TONIGHT" % N21,
+            foot="%s ISSUED TODAY  /  %s PRINT CHECK TODAY" % (N32, N22))
 
 # 2 ── AN ARRAY IS A LIST OF POSITIONS
 s = d.slide(CREAM)
 s.header("AN ARRAY IS A LIST OF POSITIONS",
          "Not a command that duplicates things. A list you compute, then place your module at.")
 s.panel(L, 1.95, 5.6, 3.5, "INDEX  →  POSITION", headfill=CYAN)
-s.t(L + 0.35, 2.75, 5.0, 2.4, [
-    s.Mb("i = 0   →   p = start", 13.5),
-    s.Mb("i = 1   →   p = start + step", 13.5),
-    s.Mb("i = 2   →   p = start + 2 × step", 13.5),
-    s.Mb(" ", 8),
-    s.Mb("p[i] = start + i × step", 13.5, bold=True)], ls=1.35)
+code(s, L + 0.35, 2.75, 5.0, ["i = 0   →   p = start",
+                              "i = 1   →   p = start + step",
+                              "i = 2   →   p = start + 2 × step",
+                              "",
+                              "p[i] = start + i × step"], size=13.5, step=0.36)
 s.panel(6.6, 1.95, 6.05, 3.5, "THREE THINGS TO READ", headfill=PINK)
 s.t(6.9, 2.72, 5.45, 2.5, [
     s.Cb("THE LIST — what is in the collection.", 14),
@@ -40,108 +93,211 @@ s.t(6.9, 2.72, 5.45, 2.5, [
     s.Cb(" ", 7),
     s.Cb("The index is the only new idea. It is a counter that tells each copy how far along "
          "it is — and therefore where it goes.", 13.5)], ls=1.35)
-s.banner(5.75, "Your P3a module is the component. It does not change in P3b — only where it goes.",
+s.banner(5.75, "Your %s module is the component. On Sheet 1 it does not change — only where it goes." % N31,
          fill=LIME, h=0.72)
 
-# 3 ── THE REPEAT ZONE
+# 3 ── TODAY: ONE LOOP, FIVE WAYS
 s = d.slide(BLACK)
-s.header("THE REPEAT ZONE", "The loop, made visible. Repeat Input, a body, Repeat Output.")
-s.panel(L, 2.05, 6.2, 3.3, "WHAT IT IS", headfill=LIME)
-s.t(L + 0.35, 2.8, 5.5, 2.3, [
-    s.Mb("Repeat Input   →  body  →  Repeat Output", 12.5, bold=True),
-    s.Mb(" ", 8),
-    s.Cb("Everything between the two runs once per iteration. Whatever you hand to Repeat Input "
-         "comes back changed, once for every step of the count.", 13.5)], ls=1.3)
-s.panel(7.15, 2.05, 5.5, 3.3, "READ IT SMALL FIRST", headfill=CYAN)
-s.t(7.45, 2.8, 4.9, 2.3, [
-    s.Cb("Set the count to 3 and look at the spreadsheet.", 13.5),
-    s.Cb(" ", 6),
-    s.Cb("Then 4. Then 5.", 13.5),
-    s.Cb(" ", 6),
-    s.Cb("A collection you cannot inspect is a collection you cannot debug. There is no minimum "
-         "count and no prize for a large one.", 13.5)], ls=1.3)
-s.banner(5.7, "BUILD IT AT A COUNT YOU CAN COUNT. SCALE UP ONLY ONCE IT IS RIGHT.",
+s.header("TODAY: ONE LOOP, FIVE WAYS",
+         "Class file Arrays Part 1, scenes 01–05. Colour is position: X red, Y green, Z blue.")
+steps = [("LINE", "c01_row.png", "i", AX["X"]), ("GRID", "c02_grid.png", "i, j", AX["Y"]),
+         ("CUBE", "c03_cube_n4.png", "i, j, k", AX["Z"]), ("CURVE", "c04_curve.png", "i along a curve", YELLOW),
+         ("WALL", "c05_wall_curve.png", "i along, k up", PINK)]
+x, wd = L, (W - 0.2 * 4) / 5
+for n, (nm, img, ctr, col) in enumerate(steps, 1):
+    s.chip(x, 2.0, wd, 0.48, "%02d  %s" % (n, nm), fill=col, size=12)
+    picture(s, img, x, 2.62, wd, wd / 1.6, frame=CREAM)
+    s.t(x, 2.72 + wd / 1.6, wd, 0.35, [s.M(ctr, 12, MUTE)], align=PP_ALIGN.CENTER)
+    x += wd + 0.2
+s.t(L, 4.55, W, 0.9, [s.C("Line, grid and cube add one counter at a time. The curve changes where a position "
+                          "comes from. The wall puts both ideas together.", 15)], ls=1.3)
+s.banner(5.75, "EVERY STEP IS THE SAME LOOP. ONLY THE COUNTERS AND THE SOURCE OF POSITION CHANGE.",
          fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
 
-# 4 ── 1D → 2D → 3D
+# 4 ── THE LOOP, WRITTEN OUT
 s = d.slide(CREAM)
-s.header("ONE COUNTER, TWO, THREE",
-         "Linear, nested grid, XYZ cube. Each one is the last one, repeated along a new axis.")
-x = L
-panels = [("1D — LINEAR", CYAN, "count = n", "n = 5  →  5"),
-          ("2D — NESTED GRID", LIME, "count = n × n", "n = 5  →  25"),
-          ("3D — XYZ CUBE", PINK, "count = n³", "n = 3  →  27")]
-for nm, col, f, ex in panels:
-    s.panel(x, 1.95, 3.85, 3.6, nm, headfill=col, tsize=14.5)
-    s.t(x + 0.28, 4.55, 3.3, 0.3, [s.Mb(f, 12.5, bold=True)], align=PP_ALIGN.CENTER)
-    s.t(x + 0.28, 4.9, 3.3, 0.3, [s.Mb(ex, 11.5)], align=PP_ALIGN.CENTER)
-    x += 4.08
-G.cartesian(s, L + 0.95, 3.35, cols=5, rows=1, p=0.48, d=0.16)
-G.cartesian(s, L + 4.08 + 0.95, 2.72, cols=5, rows=5, p=0.38, d=0.14)
-# the cube as three stacked layers, k = 0, 1, 2
-cx, cy = L + 8.16 + 0.58, 3.0
-for k in range(3):
-    lx = cx + k * 1.05
-    G.cartesian(s, lx, cy, cols=3, rows=3, p=0.3, d=0.13)
-    s.t(lx - 0.2, cy + 0.85, 1.0, 0.3, [s.Mb("k = %d" % k, 10.5)], align=PP_ALIGN.CENTER)
-s.banner(5.85, "PREDICT THE TOTAL BEFORE YOU LOOK. COMPARE 3, 4 AND 5 PER AXIS: 27, 64, 125.",
+s.header("THE LOOP, WRITTEN OUT", "Scene 01 — Linear loop, as a script you can read aloud.")
+s.card(L, 1.95, 7.1, 3.55, fill=CREAM)
+code(s, L + 0.3, 2.15, 6.7, [
+    "count   = 8",
+    "spacing = 0.8",
+    "points  = []                  # the list starts empty",
+    "",
+    "for i in range(count):        # i = 0, 1, 2 … 7",
+    "    x = i * spacing           # position from the index",
+    "    points.append((x, 0, 0))  # one more item",
+    "",
+    "place(module, points)         # a copy at every point"], size=12.5, step=0.36)
+s.panel(8.0, 1.95, 4.65, 3.55, "READ IT AS A SENTENCE", headfill=AX["X"], tsize=14)
+s.t(8.3, 2.7, 4.1, 2.7, [
+    s.Cb("Start with an empty list.", 13),
+    s.Cb("Count times: work out x from i, and add that point to the list. Each pass, i is one bigger.", 13),
+    s.Cb("Then put the module at every point.", 13)], ls=1.3, space=6)
+s.t(L, 5.65, W, 0.4, [s.Cb("In the class file:  for → Repeat Zone   ·   i → Iteration   ·   append → Join Geometry"
+                           "   ·   place → Instance on Points", 13, GREY)], align=PP_ALIGN.CENTER)
+s.banner(6.25, "i IS THE INDEX. EVERYTHING ELSE IN THE LOOP IS ARITHMETIC ON IT.",
+         fill=YELLOW, h=0.66, align=PP_ALIGN.CENTER)
+
+# 5 ── READ IT SMALL FIRST
+s = d.slide(BLACK)
+s.header("READ IT SMALL FIRST", "The loop, and a spreadsheet open beside it.")
+s.panel(L, 1.95, 6.0, 3.4, "WHAT THE LOOP DOES", headfill=LIME)
+s.t(L + 0.35, 2.7, 5.3, 2.5, [
+    s.Cb("Everything inside the loop runs once per pass. Whatever goes in comes back with one more "
+         "item, once for every step of the count.", 13.5)], ls=1.3)
+s.panel(7.0, 1.95, 5.65, 3.4, "HOW TO CHECK IT", headfill=CYAN)
+s.t(7.3, 2.7, 5.05, 2.5, [
+    s.Cb("Set Count to 3 and read the spreadsheet: three rows, three positions.", 13.5),
+    s.Cb(" ", 6),
+    s.Cb("Then 4. Then 5. Say the last X before you look.", 13.5),
+    s.Cb(" ", 6),
+    s.Cb("A list you cannot inspect is a list you cannot debug. There is no minimum count.", 13.5)], ls=1.3)
+s.banner(5.65, "BUILD IT AT A COUNT YOU CAN COUNT. SCALE UP ONLY ONCE IT IS RIGHT.",
          fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
 
-# 5 ── INDEX ORDER
+# 6 ── 01 · LINE
 s = d.slide(BLACK)
-s.header("INDEX ORDER",
-         "Which counter runs inside decides the order. Label it on the sheet.")
+s.header("01 · LINE", "Scene 01 — Linear loop · Count 8 · Spacing 0.8")
+picture(s, "c01_row.png", L, 1.95, 7.0, 4.375, frame=CREAM)
+s.panel(8.0, 1.95, 4.65, 4.375, "READ THE ROW", headfill=AX["X"], tsize=14.5)
+code(s, 8.3, 2.7, 4.1, ["i   0    1    2   …   7",
+                        "x   0.0  0.8  1.6 …   5.6",
+                        "",
+                        "count = 8",
+                        "last  = 7 × 0.8 = 5.6"], size=13, step=0.36)
+s.t(8.3, 4.65, 4.1, 1.5, [s.Cb("Colour is position: X → red. The darkest copy is i = 0, the brightest i = 7.", 13)],
+    ls=1.3)
+s.banner(6.6, "THE LAST COPY IS AT 7 × SPACING, NOT 8. COUNTING STARTS AT ZERO.",
+         fill=CYAN, h=0.58, size=12, align=PP_ALIGN.CENTER)
+
+# 7 ── 02 · GRID
+s = d.slide(CREAM)
+s.header("02 · GRID — A LOOP INSIDE A LOOP", "Scene 02 — Nested grid · Rows 5 · Columns 5 · Spacing 0.8")
+picture(s, "c02_grid.png", L, 1.95, 7.0, 4.375, frame=BLACK)
+s.panel(8.0, 1.95, 4.65, 4.375, "TWO COUNTERS", headfill=AX["Y"], tsize=14.5)
+code(s, 8.3, 2.7, 4.1, ["for j in range(rows):",
+                        "    for i in range(columns):",
+                        "        place(i*dx, j*dy, 0)",
+                        "",
+                        "5 × 5 = 25"], size=12.5, step=0.36)
+s.t(8.3, 4.65, 4.1, 1.5, [s.Cb("i runs along the row; j picks which row. Red grows with X, green with Y.", 13)],
+    ls=1.3)
+s.banner(6.6, "THE INNER LOOP MAKES A ROW. THE OUTER LOOP COLLECTS THE ROWS.",
+         fill=LIME, h=0.58, size=12, align=PP_ALIGN.CENTER)
+
+# 8 ── INDEX ORDER
+s = d.slide(BLACK)
+s.header("INDEX ORDER", "Which counter runs inside decides the order. Label it on the sheet.")
 s.panel(L, 2.05, 6.2, 3.65, "A 4 × 3 GRID, i INSIDE j", headfill=LIME)
 gx, gy, c = L + 0.9, 2.9, 0.72
 for j in range(3):
     for i in range(4):
-        idx = i + j * 4
-        s.rect(gx + i * c, gy + (2 - j) * c, c, c, fill=[CYAN, LIME, YELLOW][j], line=BLACK, lw=HAIR)
-        s.t(gx + i * c, gy + (2 - j) * c, c, c, [s.Mb(str(idx), 13, bold=True)],
+        s.rect(gx + i * c, gy + (2 - j) * c, c, c, fill=CREAM, line=BLACK, lw=HAIR)
+        s.t(gx + i * c, gy + (2 - j) * c, c, c, [s.Mb(str(i + j * 4), 13, bold=True)],
             align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-s.t(gx + 4 * c + 0.2, gy + 0.1, 1.4, 2.0, [s.Mb("j = 2", 11), s.Mb(" ", 11), s.Mb("j = 1", 11),
-                                           s.Mb(" ", 11), s.Mb("j = 0", 11)], ls=1.55)
-s.t(gx, gy + 3 * c + 0.1, 4 * c, 0.3, [s.Mb("i →  0 · 1 · 2 · 3", 11)], align=PP_ALIGN.CENTER)
+for j in range(3):
+    s.t(gx + 4 * c + 0.2, gy + (2 - j) * c, 1.2, c, [s.Mb("j = %d" % j, 11.5, AXT["j"], bold=True)],
+        anchor=MSO_ANCHOR.MIDDLE)
+s.t(gx, gy + 3 * c + 0.1, 4 * c, 0.3, [s.Mb("i →  0 · 1 · 2 · 3", 11.5, AXT["i"], bold=True)],
+    align=PP_ALIGN.CENTER)
 s.panel(7.15, 2.05, 5.5, 3.65, "THE FLAT INDEX", headfill=YELLOW)
-s.t(7.45, 2.8, 4.9, 2.8, [
-    s.Mb("2D:  index = i + j × cols", 13, bold=True),
-    s.Mb("3D:  index = i + j × n + k × n²", 13, bold=True),
-    s.Mb(" ", 8),
-    s.Cb("Swap the loops and the same positions get different numbers. The picture looks the "
-         "same; any rule that reads the index does not.", 13.5)], ls=1.35)
+code(s, 7.45, 2.8, 4.9, ["2D:  index = i + j × nx",
+                         "3D:  index = i + j × nx + k × nx × ny"], size=12, step=0.34)
+s.t(7.45, 3.6, 4.9, 2.0, [s.Cb("Swap the loops and the same positions get different numbers. The picture looks the "
+                               "same; any rule that reads the index — next week's if/Switch — does not.", 13.5)],
+    ls=1.35)
 s.banner(6.0, "SAY IT OUT LOUD: WHICH WAY DOES i RUN, AND WHAT HAPPENS IF YOU SWAP THE LOOPS?",
          fill=PINK, h=0.68, align=PP_ALIGN.CENTER)
 
-# 6 ── COMPARE + SWITCH IS AN IF
-s = d.slide(CREAM)
-s.header("COMPARE + SWITCH IS AN IF STATEMENT",
-         "Test the index, then act on the answer. P3b requires one conditional selection: rule stated, before and after shown.")
-s.panel(L, 1.95, 6.0, 3.4, "THE PATTERN", headfill=PINK)
-s.t(L + 0.35, 2.7, 5.3, 2.3, [
-    s.Mb("Compare   3 <= i <= 5    →  True / False", 12),
-    s.Mb("Switch    False → stay", 12),
-    s.Mb("          True  → lift", 12),
-    s.Mb(" ", 8),
-    s.Cb("Compare asks the question. Switch chooses between two answers. Everything conditional "
-         "in this course is those two nodes.", 13.5)], ls=1.3)
-s.panel(7.0, 1.95, 5.65, 3.4, "AN INDEX RANGE, LIFTED", headfill=LIME, tsize=14.5)
-for i in range(9):
-    for j in range(3):
-        sel = 3 <= i <= 5
-        s.dot(7.45 + i * 0.52, 3.05 + j * 0.46 - (0.3 if sel else 0), d=0.16,
-              fill=PINK if sel else BLACK)
-s.t(7.3, 4.55, 5.05, 0.6, [s.Cb("Indices 3 to 5 moved. The module is the same; only its "
-                                "placement changed.", 13)], ls=1.25)
-s.banner(5.65, "CHECK THE RESULT AT TWO DIFFERENT COUNTS. IF IT ONLY WORKS AT ONE, IT IS NOT A RULE.",
-         fill=CYAN, h=0.72, align=PP_ALIGN.CENTER)
+# 9 ── 03 · CUBE
+s = d.slide(BLACK)
+s.header("03 · CUBE — THE GRID, REPEATED IN Z",
+         "Scene 03 — 3D array · Spacing 1.25 · Cube Size 0.75 · one camera for all three")
+x, wd = L, (W - 0.23 * 2) / 3
+for n in (3, 4, 5):
+    picture(s, "c03_cube_n%d.png" % n, x, 1.95, wd, wd / 1.6, frame=CREAM)
+    s.chip(x, 4.55, wd, 0.5, "COUNT %d  →  %d × %d × %d = %d" % (n, n, n, n, n ** 3), fill=YELLOW, size=12.5)
+    x += wd + 0.23
+s.card(L, 5.3, W, 0.62, fill=CREAM, shadow=False)
+code(s, L + 0.3, 5.43, W - 0.6, ["for k in range(n):  for j in range(n):  for i in range(n):   place(i*dx, j*dy, k*dz)"],
+     size=12.5, step=0.36)
+s.banner(6.2, "PREDICT THE TOTAL BEFORE YOU LOOK: 27, 64, 125. X, Y AND Z TOGETHER MAKE THE RGB CUBE.",
+         fill=AX["Z"], h=0.66, size=12, align=PP_ALIGN.CENTER)
 
-# 7 ── THE SEQUENCE
-unit_steps_slide(d, "U04", title="SHEET 1, STEP BY STEP", n=(0, 4),
-                 sub="What we build together today: 1D, 2D, 3D, then one conditional.")
-
-# 8 ── P2b CHECKPOINT
+# 10 ── 04 · CURVE
 s = d.slide(CREAM)
-s.header("P2b CHECKPOINT — PRINT GEOMETRY", C.checkpoints("P2b")[0][1])
+s.header("04 · CURVE — THE ROW BENDS", "Scene 04 — Along a curve. Edit the curve object; the row follows.")
+picture(s, "c04_curve.png", L, 1.95, 6.6, 4.125, frame=BLACK)
+s.panel(7.55, 1.95, 5.1, 4.125, "WHERE IS COPY i?", headfill=YELLOW, tsize=14.5)
+code(s, 7.8, 2.7, 4.7, ["count = int(length / brick) + 1",
+                        "for i in range(count):",
+                        "    t = i / (count - 1)  # 0 → 1",
+                        "    p = point_on(curve, t)",
+                        "    d = direction_on(curve, t)",
+                        "    place(brick, p, facing=d)"], size=11.5, step=0.33)
+s.t(7.8, 4.85, 4.6, 1.1, [s.Cb("The line said x = i × spacing. Here the curve answers the same question, "
+                               "and also says which way to face.", 12.5)], ls=1.25)
+s.banner(6.4, "SAME LOOP AS THE LINE. THE CURVE GIVES THE POSITION INSTEAD OF i × SPACING.",
+         fill=YELLOW, h=0.66, size=12, align=PP_ALIGN.CENTER)
+
+# 11 ── 05 · WALL
+s = d.slide(BLACK)
+s.header("05 · WALL — HORIZONTAL REPETITION, STACKED",
+         "Scene 05 — Brick wall · 8 courses · a curve, or a circle with Use Circle on")
+wd = (W - 0.3) / 2
+for n, (img, tag, col) in enumerate((("c05_wall_curve.png", "ON A CURVE", YELLOW),
+                                     ("c05_wall_circle.png", "ON A CIRCLE", PINK))):
+    x = L + n * (wd + 0.3)
+    picture(s, img, x, 1.95, wd, 3.15, frame=CREAM)
+    s.chip(x, 5.28, wd, 0.46, tag, fill=col, size=12.5)
+s.t(L, 5.9, W, 0.4, [s.C("Each course is the curved row. Z → blue rises with the courses; every other course "
+                          "slides half a brick.", 14, MUTE)])
+s.banner(6.5, "A WALL IS THE CURVED ROW, REPEATED UPWARD.", fill=AX["Z"], h=0.62, size=12.5,
+         align=PP_ALIGN.CENTER)
+
+# 12 ── THE WALL, WRITTEN OUT
+s = d.slide(CREAM)
+s.header("THE WALL, WRITTEN OUT", "The curve loop from 04, inside one more loop.")
+s.card(L, 1.95, 7.85, 3.6, fill=CREAM)
+code(s, L + 0.25, 2.15, 7.45, [
+    "for k in range(courses):             # one pass per course",
+    "    shift = (k % 2) * brick / 2      # odd courses slide",
+    "    for i in range(count):",
+    "        t = i / (count - 1)",
+    "        p = point_on(curve, t)",
+    "        d = direction_on(curve, t)",
+    "        up = (0, 0, k * height)",
+    "        place(brick, p + d * shift + up, facing=d)"], size=12, step=0.4)
+s.panel(8.75, 1.95, 3.9, 3.6, "WHAT IS NEW", headfill=PINK, tsize=14)
+s.t(9.0, 2.7, 3.45, 2.8, [
+    s.Cb("The outer loop is k — the same move that turned the grid into the cube.", 12.5),
+    s.Cb("k % 2 gives 0, 1, 0, 1 … : the first rule in this course that reads the index.", 12.5)],
+    ls=1.3, space=8)
+s.banner(5.85, "k % 2 IS NEXT WEEK'S IF/SWITCH, HIDING INSIDE A WALL.", fill=YELLOW, h=0.7,
+         align=PP_ALIGN.CENTER)
+
+# 13 ── THE EVOLUTION
+s = d.slide(BLACK)
+s.header("THE EVOLUTION", "Line to wall, one change at a time.")
+rows = [("01 LINE", "One counter, i. Position = i × spacing.", AX["X"]),
+        ("02 GRID", "i inside j. Total = rows × columns.", AX["Y"]),
+        ("03 CUBE", "i inside j inside k. Total = count cubed.", AX["Z"]),
+        ("04 CURVE", "One counter again — but the curve gives the position and the direction.", YELLOW),
+        ("05 WALL", "i along the curve, k up the courses, k % 2 shifts every other course.", PINK)]
+y = 1.9
+for lab, body, col in rows:
+    s.actionrow(y, lab, body, fill=col, h=0.78)
+    y += 0.9
+s.banner(6.5, "ONE LOOP. EACH STEP ADDS A COUNTER OR CHANGES WHERE THE POSITION COMES FROM.",
+         fill=YELLOW, h=0.6, size=12, align=PP_ALIGN.CENTER)
+
+# 14 ── STEPS (U04 steps 1–5, verbatim from course.yml)
+unit_steps_slide(d, "U04", title="TODAY, STEP BY STEP", n=(0, 5),
+                 sub="Curve and wall are in-class practice. Sheet 1 stays: your module, then 1D, 2D and 3D.")
+
+# 15 ── 2.2 PRINT CHECK
+s = d.slide(CREAM)
+s.header("%s PRINT CHECK — BEFORE YOU QUEUE" % N22, C.checkpoints("P2b")[0][1])
 checks = [("GEOMETRY", CYAN, "Closed and solid. Every edge shared by two faces, no stray pieces."),
           ("UNITS", LIME, "Real millimetres. Within 60 mm on each axis."),
           ("ORIENTATION", YELLOW, "No supports. Orientation is your lever; change the geometry if you must."),
@@ -152,45 +308,49 @@ for nm, col, body in checks:
     s.card(L + 2.9, y, W - 2.9, 0.72, fill=CREAM)
     s.t(L + 3.2, y, W - 3.5, 0.72, [s.Cb(body, 14)], anchor=MSO_ANCHOR.MIDDLE)
     y += 0.92
-s.banner(5.85, "P2b IS DUE AT THE MID-SEMESTER DEADLINE, " + C.date_long(10).upper() + ". HAND IN THE PRINT AND ITS PROCESS SHEET.",
-         fill=BLACK, color=LIME, h=0.7, align=PP_ALIGN.CENTER)
+s.banner(5.85, "%s: HAND IN THE PRINT IN CLASS, %s. DIGITAL FILES AND NOTES BY 11:59 PM THAT NIGHT."
+         % (N22, C.date_long(A22["due"]).upper()), fill=BLACK, color=LIME, h=0.7, size=12, align=PP_ALIGN.CENTER)
 
-# 9 ── ISSUED — P3b
-issued_slide(d, "P3b",
-             blurb="One assignment, exactly two 17 × 11 sheets, submitted together. Array your P3a "
-                   "module without changing it: sheet 1 today, sheet 2 next week.",
-             cards=[("SHEET 1 · TODAY", "1D · 2D · 3D", "Linear, nested grid, XYZ cube. Count, spacing, "
-                                                          "index order and predicted totals labelled."),
-                    ("SHEET 2 · WEEK 7", "HEX · RADIAL · CURVE", "Staggered grid, radial array, and an "
-                                                                  "array along a sine-driven curve."),
-                    ("THE RULE", "THE MODULE STAYS", "Vary only its placement. Expose count and spacing "
-                                                     "or radius in the graph.")])
+# 16 ── ISSUED — 3.2
+s = d.slide(BLACK)
+s.issued("ISSUED TODAY", "%s — %s" % (N32, A32["title"].upper()), C.due_line("P3b"),
+         "Three 17 × 11 sheets, submitted together as one assignment. Sheet 1 is today; "
+         "Sheets 2 and 3 are next week's class.", badgefill=YELLOW)
+nxt = C.date_long(7).split(" — ")[0]
+cards = [("SHEET 1 · TODAY", "MODULE, 1D, 2D, 3D", "Your %s module alone, then in a row, a grid and layers. Label counts, spacing, axes and totals." % N31),
+         ("SHEET 2 · " + nxt, "FOUR FAÇADE PATTERNS", "Your module in a 2D array, changed by if/Switch conditions. Each rule and its outcome captioned."),
+         ("SHEET 3 · " + nxt, "MATH SHAPES A VOLUME", "Layered cubes, height driven by a function of X and Y. One isometric, formula and settings stated.")]
+x, wd = L, (W - 0.23 * 2) / 3
+for i, (tag, ttl, body) in enumerate(cards):
+    s.chip(x, 3.95, wd, 0.45, tag, fill=[CYAN, LIME, PINK][i], size=11)
+    s.card(x, 4.5, wd, 1.75, fill=CREAM)
+    s.t(x + 0.28, 4.66, wd - 0.56, 0.35, [s.Ab(ttl, 13.5)])
+    s.t(x + 0.28, 5.06, wd - 0.56, 1.1, [s.Cb(body, 12)], ls=1.22)
+    x += wd + 0.23
 
-# 10 ── REQUIREMENTS P3b
-requirements_slide(d, "P3b", sub=VISUAL)
+# 17 ── REQUIREMENTS — 3.2 (verbatim from course.yml)
+requirements_slide(d, "P3b", title="REQUIREMENTS — %s" % N32, sub=weights("P3b"))
 
-# 11 ── NOW
-now_slide(d, "NOW — SHEET 1",
-          "Rest of the class: three arrays you can predict, and one conditional.",
-          ["Your module on a linear array, count and spacing exposed, spreadsheet open",
-           "The array nested into a grid, total predicted before you looked",
-           "The grid repeated in Z: 3, 4 and 5 per axis compared",
-           "Index order labelled, and one index range moved with Compare and Switch",
-           "P3a submitted, and your P2b print geometry checked"],
-          closer="A COUNT YOU CAN COUNT. NOT A THOUSAND OF ANYTHING, YET.",
-          bg=CYAN)
+# 18 ── NOW
+now_slide(d, "NOW — SHEET 1, THEN THE WALL",
+          "Predict every total before you look.",
+          ["A row: Count and Spacing exposed, spreadsheet open, the last X said out loud",
+           "The row nested into a grid: rows × columns predicted first",
+           "The grid repeated in Z — 3, 4 and 5 per axis compared",
+           "The row bent onto a curve, then stacked into a wall — odd courses shifted; try the circle",
+           "%s uploaded by 11:59 PM tonight; %s print checked before you queue it" % (N21, N22)],
+          closer="A COUNT YOU CAN COUNT. NOT A THOUSAND OF ANYTHING, YET.", bg=CYAN)
 
-# 12 ── BEFORE NEXT CLASS
+# 19 ── BEFORE NEXT CLASS
 before_next_slide(d, [
-    ("NEXT", "Week 7: hexagonal, radial and curve arrays — sheet 2 of P3b. Bring sheet 1's "
-             "graph working; we build on it."),
-    ("DUE", "Nothing is due next week; it is a studio-review week. P3b, both sheets together, is "
-            + C.due_line("P3b") + "."),
-    ("BUILD", "Finish sheet 1: linear, nested grid and XYZ cube, with count, spacing, index "
-              "order and predicted totals labelled — and one conditional selection, rule stated."),
-    ("PRINT", "P2b: fix anything flagged at today's checkpoint, then queue it. It is due at the "
-              "mid-semester deadline, " + C.date_long(10) + ", with its process sheet."),
+    ("NEXT", "%s: if/Switch façade patterns and a cube volume from functions of X and Y — Sheets 2 and 3. "
+             "Bring Sheet 1's graph working; we build on it." % C.date_long(7).title()),
+    ("DUE", "Nothing graded next week (studio reviews). %s print in class %s. %s, all three sheets: %s."
+            % (N22, C.date_long(8).split(" — ")[1], N32, C.date_long(A32["due"]).split(" — ")[1])),
+    ("BUILD", "Finish Sheet 1: module alone, then 1D, 2D and 3D — counts, spacing, axes and totals labelled."),
+    ("PRINT", "Fix anything today's check flagged, then queue %s." % N22),
 ])
 
-d.save(os.path.join(OUT, "ARC3133_Class06.pptx"))
-print("class06 ok — %d slides" % len(d.prs.slides._sldIdLst))
+path = os.path.join(OUT, "ARC3133_Class06.pptx")
+d.save(path)
+print("class06 ok — %d slides -> %s" % (len(d.prs.slides._sldIdLst), os.path.abspath(path)))

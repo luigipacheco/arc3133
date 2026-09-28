@@ -4,8 +4,7 @@
 revision: '2026-09-23'
 status: Instructor review draft — revised assignment sequence
 
-student_notice: 'Instructor review draft: assignment sequence and grading updated; proposed dates await final
-  review before publication.'
+student_notice: ''
 
 course:
   code: ARC 3133-001
@@ -101,15 +100,15 @@ description: |
   Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
 
 pacing: |
-  **Proposed deadlines for instructor review:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so the print deadline skips October 6.
+  **Deadlines:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so the print deadline skips October 6.
 
   The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
 
-  Teach Arrays in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, paired with the loop tutorial; October 6 explains if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice checking both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Teach façade attractors on October 20. Begin Project 4 on October 27, when the manual and arrays are also submitted; no separate full-course review class is scheduled.
+  Arrays is taught in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, then a row bent onto a curve and stacked into a brick wall; October 6 covers if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice on both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Façade attractors are taught on October 20. Project 4 begins on October 27, when the manual and arrays are also submitted; there is no separate full-course review class.
 
-  Introduce the façade assignment October 20, due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: use the supplied contouring group and demonstrate cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
+  The façade assignment is introduced October 20 and due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: the supplied contouring group, cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
 
-  This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions. The proposed schedule and lab capacity must be reviewed before publication.
+  This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions.
 
 format: |
   Each class combines a short demonstration, guided practice and critique. Start with a small example, check how it works, then increase its complexity. Watch the video tutorial for the topic where one is posted.
@@ -129,13 +128,13 @@ outcomes:
   - Prepare and assemble fabricated parts while accounting for units, material, thickness, tolerance, orientation and machine constraints.
   - Explain and revise a computational process through editable files, diagrams, controlled comparisons and physical tests.
 software: |
-  **Blender Geometry Nodes is the environment for the class files currently being prepared.** The earlier syllabus also allowed Rhino + Grasshopper. Continued support for that route is a discussion item; students should not be required to switch an already approved environment without an announced transition. Python is not a prerequisite for the core sequence.
+  **Blender Geometry Nodes is the environment for the class files currently being prepared.** The earlier syllabus also allowed Rhino + Grasshopper; students already working in an approved environment will not be required to switch without an announced transition. Python is not a prerequisite for the core sequence.
 
   Use Illustrator, Photoshop, InDesign, Inkscape, GIMP, Scribus or an equivalent vector/raster/layout editor for visual work. Use the FabLab-specified slicer and cutting preparation workflow for production.
 
   Template-based design tools may not produce the sheets, Graphic Standards Manual or booklet. The grid, typography, hierarchy and composition are student design work. Retain the earlier restriction on Canva, Adobe Express, template-based Figma work, PowerPoint, Google Slides and similar template-driven production.
 
-  Import a supplied or properly attributed point-cloud dataset for the point-cloud unit. A paid capture service, personal API key or particular importer is not required by this draft. Record source, permission or license, units and processing. An imported surface sampled into points must be identified as a derived point cloud.
+  Import a supplied or properly attributed point-cloud dataset for the point-cloud unit. A paid capture service, personal API key or particular importer is not required. Record source, permission or license, units and processing. An imported surface sampled into points must be identified as a derived point cloud.
 presentation: |
   Use **17 × 11 inch** sheets and booklet pages, following the Graphic Standards Manual. Submit a PDF and the editable computational file for each visual milestone. Include the results and process evidence specified in the brief, relevant parameter values and a concise explanation of the design decision. Source attribution belongs on the sheet or its documentation page. Stages 4.3 and 4.4 share one fabrication sheet.
 
@@ -152,7 +151,7 @@ fabrication: |
   These are the two required physical submissions: the CSG print and the laser-cut model. Pen plotting is not required. Material availability and machine time require FabLab confirmation; keep backups and account for replacement material beyond the allocation.
 
 ai: |
-  The core course teaches graphs and geometric reasoning. No required Python or AI tool-building final is assigned in this working draft; that decision remains open.
+  The core course teaches graphs and geometric reasoning. No Python or AI tool-building assignment is required.
 
   **Through Week 10:** students produce their own graphs, geometry, layouts and submission material. AI may explain a concept, syntax or an error message, but may not write, complete or repair submitted work.
 
@@ -369,13 +368,14 @@ units:
   - '1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.'
   - '2D: nest repetition into a grid. Identify rows and columns; predict the total count.'
   - '3D: repeat the grid in Z for a cube array. Predict Count cubed; distinguish instances from a sampled volume.'
+  - "Curve: bend the row. Sample a curve at even spacing and place a brick at each point, turned to follow the curve's direction. The count comes from curve length ÷ brick length."
+  - "Wall: repeat the curved row upward, one course per pass. Lift course k by k × brick height and slide odd courses half a brick along the curve (k modulo 2). Swap the curve for a circle."
   - Use Compare and Switch for if conditions; make four different façade patterns by modifying selected panel instances.
   - Use cubes for a volumetric array. Drive vertical variation with a function of X and Y, such as sine or
     cosine, while retaining layers in Z. Optionally use Switch conditions to create voids.
   - 'Optional later practice · Hexagonal: stagger alternate rows; explain the odd/even test and row spacing.'
   - 'Optional later practice · Radial: place copies from radius, count and angular step.'
-  - 'Optional later practice · Curve: resample a curve and place copies along it, aligned to its tangent. Drive
-    a curve with sine; explain amplitude, frequency and phase.'
+  - 'Optional later practice · Drive the curve with sine; explain amplitude, frequency and phase.'
   exercise: '3.2 has three sheets. Sheet 1: four diagrams showing your module alone and in 1D, 2D and 3D arrays.
     Sheet 2: four façade patterns using your module and if/Switch conditions on a 2D array. Sheet 3: an isometric
     of an exploratory cube volume with vertical variation driven by X and Y; conditional voids are optional.'
@@ -383,7 +383,7 @@ units:
     Use cubes on Sheet 3. Supplied library or student-authored materials are permitted. In 3.3 a sampled
     attractor field changes one panel geometry parameter across a façade.
   pseudocode: |
-    # Arrays class 1 / loop tutorial: row -> grid -> layers.
+    # Arrays class 1: line -> grid -> cube -> curve -> wall.
     row = []
     for i in range(nx):
         row.append(place_module(i * dx, 0, 0))
@@ -398,6 +398,23 @@ units:
         for j in range(ny):
             for i in range(nx):
                 spatial_array.append(place_module(i * dx, j * dy, k * dz))
+
+    # the row, bent onto a curve: the curve supplies each position
+    count = int(curve_length(curve) / brick) + 1
+    curved_row = []
+    for i in range(count):
+        t = i / (count - 1)                     # 0 at the start, 1 at the end
+        p, d = point_on(curve, t), direction_on(curve, t)
+        curved_row.append(place_brick(p, facing=d))
+
+    # a wall: the curved row repeated upward, odd courses shifted half a brick
+    wall = []
+    for k in range(courses):
+        shift = (k % 2) * brick / 2
+        for i in range(count):
+            t = i / (count - 1)
+            p, d = point_on(curve, t), direction_on(curve, t)
+            wall.append(place_brick(p + d * shift + (0, 0, k * height), facing=d))
 
     # Arrays class 2: if / Switch and mathematical functions.
     # Sheet 2: one possible facade pattern
@@ -416,7 +433,8 @@ units:
                 if keep_cube(i, j, k):          # optional void rule; otherwise True
                     place_cube(x, y, z)
   teaching_note: Teach this unit in two classes. Class 1 and its loop tutorial cover explicit repetition,
-    nested loops, indices and counts in 1D, 2D and 3D. The loop pseudocode above is the written tutorial;
+    nested loops, indices and counts in 1D, 2D and 3D, then bend the row onto a curve and stack it into a
+    brick wall (Part 1 scenes 04–05; k modulo 2 previews Class 2's conditionals). The loop pseudocode above is the written tutorial;
     its recording is not yet linked. Class 2 covers if/Switch and mathematical functions. The Sine curve
     scene in Arrays Part 2 is the reference for the cube volume; students develop their own pattern.
     Distinguish explicit iteration from Blender fields and Grasshopper data trees. A field is not a Repeat Zone.
@@ -1272,60 +1290,40 @@ weeks:
   focus: Build your own module from points and faces, test its parameter ranges, then render it with one material
     and a deliberate lighting setup for the P3a sheet.
 - week: 6
-  label: Arrays 1 — loops in 1D, 2D and 3D; CSG sheet
   date: '2026-09-29'
-  focus: Submit 2.1 by 11:59 PM. Teach loops and nested loops through a 1D row, 2D grid and 3D layers,
-    following the loop tutorial. Explain indices, counts and spacing. Check the CSG print before queueing.
+  focus: "Submit 2.1 by 11:59 PM. Build a loop and a nested loop — a 1D row, a 2D grid, then 3D layers — then bend the row onto a curve and stack it into a brick wall, on a curve or a circle. Name the count, spacing and index in each direction. Check your CSG print file before queueing it."
 - week: 7
-  label: Arrays 2 — if/Switch and math functions
   date: '2026-10-06'
-  focus: Teach if/Switch façade patterns and a cube volume driven by functions of X and Y. Use small
-    examples; hexagonal and radial arrays remain optional. No graded submission during studio reviews.
+  focus: "Use Compare and Switch to select between façade patterns, then shape a cube volume with functions of X and Y. Start from small examples; hexagonal and radial arrays are optional. No graded submission this week (studio reviews)."
   no_due: true
 - week: 8
-  label: Supported practice — Arrays 1 and 2; CSG print
   date: '2026-10-13'
-  focus: Hand in 2.2 in class, with digital documentation by 11:59 PM. Check loops, counts and spacing in
-    1D/2D/3D arrays, then if/Switch patterns and the mathematical cube volume. Give feedback on all three
-    array sheets and resolve problems before the façade class. No new required topic.
+  focus: "Hand in 2.2 in class, with digital documentation by 11:59 PM. Bring all three array sheets: check the loops, counts and spacing in your 1D/2D/3D arrays, your if/Switch patterns and the mathematical cube volume, and resolve problems before the façade class. No new topic."
 - week: 9
-  label: Façade attractors — Project 3; module deadline
   date: '2026-10-20'
-  focus: Submit 3.1. Teach the single façade-attractor class for 3.3, combining one curve and one or two
-    points to drive a panel parameter. Begin the elevation and isometric composition.
+  focus: "Submit 3.1. Façade attractors for 3.3: combine one curve and one or two points to drive a panel parameter, then begin the elevation and isometric composition."
 - week: 10
-  label: Project 4 — site analysis; manual and arrays due
   date: '2026-10-27'
-  focus: Submit the manual and 3.2. Begin 4.1 using the prepared point cloud and supplied analysis groups.
-    Apply attractor measurements to make two analytical layers and one design observation. Outline the
-    complete Project 4 path from analysis to a laser-cut model; give brief individual façade feedback.
+  focus: "Submit the manual and 3.2. Begin 4.1 with the prepared point cloud and supplied analysis groups: apply attractor measurements to make two analytical layers and one design observation. The class outlines the full Project 4 path, from analysis to a laser-cut model, with brief individual façade feedback."
 - week: 11
-  label: Generative volumes — Project 4
   date: '2026-11-03'
-  focus: Introduce 4.2 using supplied volume groups; explore three settings of one generative strategy and
-    select an isometric result. Check the two site-analysis layers and their connection to the volume.
+  focus: "4.2 is introduced with supplied volume groups: explore three settings of one generative strategy and select an isometric result. Bring your two site-analysis layers — the check is how they connect to the volume."
 - week: 12
-  label: Contouring, laser-cut preparation and assembly — final new content
+  label: "Last new topic"
   date: '2026-11-10'
-  focus: Check the selected volume and introduce 4.3 and 4.4. Demonstrate the supplied contouring group,
-    spacing, numbered cutting layouts, material/kerf tests, registration, simple assembly and documentation.
-    Use a prepared example to cover the complete fabrication workflow; students refine their own work during
-    Weeks 13–15. This is the last class introducing required content.
+  focus: "Bring your selected volume. 4.3 and 4.4 are introduced through a prepared example of the full fabrication workflow: the supplied contouring group, spacing, numbered cutting layouts, material/kerf tests, registration, simple assembly and documentation. You refine your own work in Weeks 13–15. This is the last class with new required content."
 - week: 13
-  label: Production and feedback — contours and assembly tests; façade deadline
+  label: "Contours and assembly tests"
   date: '2026-11-17'
-  focus: Submit 3.3. Review numbered contours, the cutting layout, assembly diagram and a small material or
-    registration test. Refine files and begin production with individual feedback. No new required topic.
+  focus: "Submit 3.3. Bring numbered contours, the cutting layout, an assembly diagram and a small material or registration test. Refine files and begin production with individual feedback. No new topic."
 - week: 14
-  label: Production and feedback — laser-cut assembly; site deadline
+  label: "Laser-cut assembly"
   date: '2026-11-24'
-  focus: Submit 4.1. Check tested samples, cutting progress, assembly and the remaining-work plan. Review a
-    booklet spread and provide individual fabrication and presentation feedback. No new required topic.
+  focus: "Submit 4.1. Bring tested samples, cutting progress, your assembly and a plan for the remaining work, plus one booklet spread for individual fabrication and presentation feedback. No new topic."
 - week: 15
-  label: Connection tests, production and documentation
+  label: "Connections and final documentation"
   date: '2026-12-01'
-  focus: No graded submission during studio reviews. Use ungraded support to check connections, part files,
-    fabrication progress and final documentation.
+  focus: "No graded submission during studio reviews. Ungraded support for connections, part files, fabrication progress and final documentation."
   no_due: true
 
 vocabulary:
@@ -1383,7 +1381,7 @@ references:
     - ['Blender Field to Grid', 'https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/field_to_grid.html', 'Sampling fields on a voxel-grid topology.']
     - ['Blender SDF Grid Offset', 'https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/sdf_grid_offset.html', 'Distance-based offset of an SDF surface.']
     - ['Blender 5.2 manual', 'https://docs.blender.org/manual/en/5.2/index.html', 'Check exact node behavior against the version used to prepare the lesson.']
-  note: No required textbook is assigned in this draft. These references are retained or aligned from the course repository. Tutorial and file availability is stated separately.
+  note: No textbook is required. The references below support the lessons; lesson files and tutorials are linked from each class page.
 instructor_notes: |
   Preserve the project numbering and teaching progression: P1 establishes the Graphic Standards Manual;
   P2 emphasizes procedural design; P3 emphasizes parametric design; P4 emphasizes generative design.
@@ -1460,13 +1458,12 @@ teaching_sequence:
 - id: B04
   weeks:
   - 6
-  focus: Arrays 1 — loops in 1D, 2D and 3D
+  focus: Arrays 1 — line, grid, cube, curve
   units:
   - U04
   sessions:
   - S03
-  delivery: First of two Arrays classes, paired with the loop tutorial. Use loops and nested loops to build
-    a row, grid and layered array; explain counts, spacing and indices.
+  delivery: "First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve and repeat it upward into a brick wall. Name the count, spacing and index in each direction."
 - id: B04-second
   weeks:
   - 7
@@ -1475,16 +1472,14 @@ teaching_sequence:
   - U04
   sessions:
   - S04
-  delivery: Second of two Arrays classes. Explain if/Switch selection through façade patterns, then use
-    mathematical functions of X and Y to shape a cube volume. Hexagonal and radial arrays remain optional.
+  delivery: "Second of two Arrays classes. Use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional."
 - id: B04-support
   weeks:
   - 8
   focus: Supported practice — Arrays 1 and 2
   units: []
   sessions: []
-  delivery: Check 1D/2D/3D repetition, indices, counts and spacing, conditional façade patterns and the
-    mathematical cube volume. Give feedback on the three array sheets. Hand in the CSG print; no new topic.
+  delivery: "Supported practice, no new topic. Bring all three array sheets for feedback on repetition, indices, counts and spacing, conditional façade patterns and the mathematical cube volume. Hand in the CSG print."
 - id: B05
   weeks:
   - 9
@@ -1526,9 +1521,7 @@ teaching_sequence:
   - S10
   - S11
   - S12
-  delivery: Complete all new required content with a prepared example using the supplied contouring group.
-    Cover spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly
-    and final documentation. Introduce both 4.3 and 4.4; continue their production during Weeks 13–15.
+  delivery: "The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced during Weeks 13–15."
 - id: B08
   weeks:
   - 13
@@ -1599,12 +1592,13 @@ blender:
         exposed and the file ends with cube-minus-pyramid. This is a model-units
         lesson, not a fabrication export.
     - id: S03
-      title: 'Arrays — Part 1: linear and nested grid'
+      title: 'Arrays — Part 1: line, grid, cube, curve, wall'
       path: files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend
-      focus: Begin with a linear array, then nest a loop to build a grid.
+      focus: Begin with a linear array, nest it into a grid and a cube, then bend the row onto a curve and stack it into a brick wall.
       exercise: Repeat the previous geometry along a line and across a grid, then extend the grid into layers.
-        Identify count, spacing and index in each direction.
-      scenes: [Linear loop, Nested grid]
+        Bend the row onto a curve, then stack it into a wall with odd courses shifted. Identify count, spacing
+        and index in each direction.
+      scenes: [Linear loop, Nested grid, 3D array, Along a curve, Brick wall]
     - id: S04
       title: 'Arrays — Part 2: arrangements and rules'
       path: files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend

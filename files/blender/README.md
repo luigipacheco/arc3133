@@ -4,11 +4,11 @@
 
 Download example files individually. These are lesson stages, not fixed weeks; continue a file for another class when needed.
 
-First of two Arrays classes, paired with the loop tutorial. Use loops and nested loops to build a row, grid and layered array; explain counts, spacing and indices.
+First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve and repeat it upward into a brick wall. Name the count, spacing and index in each direction.
 
-Second of two Arrays classes. Explain if/Switch selection through façade patterns, then use mathematical functions of X and Y to shape a cube volume. Hexagonal and radial arrays remain optional.
+Second of two Arrays classes. Use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional.
 
-Check 1D/2D/3D repetition, indices, counts and spacing, conditional façade patterns and the mathematical cube volume. Give feedback on the three array sheets. Hand in the CSG print; no new topic.
+Supported practice, no new topic. Bring all three array sheets for feedback on repetition, indices, counts and spacing, conditional façade patterns and the mathematical cube volume. Hand in the CSG print.
 
 One façade-attractor class. Combine one curve and one or two point attractors to drive a panel parameter. The next application of attractors is site analysis in Project 4.
 
@@ -16,7 +16,7 @@ Apply attractor measurements to the prepared point cloud using supplied groups. 
 
 Use supplied volume groups to explore three settings of one strategy and select a form for contouring.
 
-Complete all new required content with a prepared example using the supplied contouring group. Cover spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. Introduce both 4.3 and 4.4; continue their production during Weeks 13–15.
+The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced during Weeks 13–15.
 
 No new required content. Week 13 checks contours and assembly tests; Week 14 checks fabrication progress and a booklet spread. Week 15 supports production, revisions and final documentation during studio reviews, with no graded submission that day.
 
@@ -30,7 +30,7 @@ Build your own file. Use these examples to check a step when you are stuck, then
 | --- | --- | --- | --- | --- |
 | S01 | 2–3 | [Constructive Solid Geometry](01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) | 01 - CSG example | U02 Constructive Solid Geometry |
 | S02 | 4–5 | [Descriptive Geometry](02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Descriptive Geometry |
-| S03 | 6 | [Arrays — Part 1: linear and nested grid](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid | U04 Arrays |
+| S03 | 6 | [Arrays — Part 1: line, grid, cube, curve, wall](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid, 3D array, Along a curve, Brick wall | U04 Arrays |
 | S04 | 7 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve | U04 Arrays |
 | S05 | 9 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractor |
 | S07 | 10 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Volumetric Data and Fields |

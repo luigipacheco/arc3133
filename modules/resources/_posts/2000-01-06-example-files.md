@@ -19,7 +19,7 @@ Download only the example for the class you are working on. Arrays uses two exam
 | --- | --- |
 | Constructive Solid Geometry | [Download .blend]({{ site.baseurl }}/files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend) |
 | Descriptive Geometry | [Download .blend]({{ site.baseurl }}/files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend) |
-| Arrays — Part 1: linear and nested grid | [Download .blend]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend) |
+| Arrays — Part 1: line, grid, cube, curve, wall | [Download .blend]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend) |
 | Arrays — Part 2: arrangements and rules | [Download .blend]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend) |
 | Attractor | [Download .blend]({{ site.baseurl }}/files/blender/04-attractors/Attractors.blend) |
 | Volumetric Data and Fields — point clouds | [Download .blend]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)<br>[Teaching point cloud]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.ply)<br>[Dataset source and units]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.json) |

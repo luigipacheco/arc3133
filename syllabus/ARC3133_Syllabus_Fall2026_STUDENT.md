@@ -19,8 +19,6 @@
 
 **Prerequisites:** ARC 1301, ARC 1302, ARC 2303 and ARC 2304, each with a minimum grade of C
 
-> Instructor review draft: assignment sequence and grading updated; proposed dates await final review before publication.
-
 ## Course description
 
 Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain design decisions through clear visual work.
@@ -55,15 +53,15 @@ Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight
 
 ## Learning pace and class format
 
-**Proposed deadlines for instructor review:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so the print deadline skips October 6.
+**Deadlines:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so the print deadline skips October 6.
 
 The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
 
-Teach Arrays in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, paired with the loop tutorial; October 6 explains if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice checking both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Teach façade attractors on October 20. Begin Project 4 on October 27, when the manual and arrays are also submitted; no separate full-course review class is scheduled.
+Arrays is taught in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, then a row bent onto a curve and stacked into a brick wall; October 6 covers if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice on both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Façade attractors are taught on October 20. Project 4 begins on October 27, when the manual and arrays are also submitted; there is no separate full-course review class.
 
-Introduce the façade assignment October 20, due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: use the supplied contouring group and demonstrate cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
+The façade assignment is introduced October 20 and due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: the supplied contouring group, cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
 
-This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions. The proposed schedule and lab capacity must be reviewed before publication.
+This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions.
 
 Each class combines a short demonstration, guided practice and critique. Start with a small example, check how it works, then increase its complexity. Watch the video tutorial for the topic where one is posted.
 
@@ -78,7 +76,7 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 1 | Graphic Standards Manual | Class 01 | — |
 | 2–3 | Constructive Solid Geometry | Class 02 · Class 03 | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | Class 04 · Class 05 | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
-| 6 | Arrays 1 — loops in 1D, 2D and 3D | Class 06 | — |
+| 6 | Arrays 1 — line, grid, cube, curve | Class 06 | — |
 | 7 | Arrays 2 — if/Switch and math functions | Class 07 | — |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 | — |
 | 9 | Façade attractors — Project 3 | Class 09 | — |
@@ -105,7 +103,7 @@ Plan for at least six hours outside class each week, including fabrication prepa
 | 3 | Sep 8 | Constructive Solid Geometry | — |
 | 4 | Sep 15 | Descriptive Geometry | — |
 | 5 | Sep 22 | Descriptive Geometry | — |
-| 6 | Sep 29 | Arrays 1 — loops in 1D, 2D and 3D | 2.1 — CSG process and instructions (11:59 PM Eastern Time) |
+| 6 | Sep 29 | Arrays 1 — line, grid, cube, curve | 2.1 — CSG process and instructions (11:59 PM Eastern Time) |
 | 7 | Oct 6 | Arrays 2 — if/Switch and math functions | No graded submission |
 | 8 | Oct 13 | Supported practice — Arrays 1 and 2 | 2.2 — CSG 3D printed object (11:59 PM Eastern Time) |
 | 9 | Oct 20 | Façade attractors — Project 3 | 3.1 — Descriptive geometry module — material and three-point lighting (11:59 PM Eastern Time) |
@@ -397,13 +395,13 @@ Before each submission, open the file from a clean folder, confirm dependencies 
 
 ## Software and data
 
-**Blender Geometry Nodes is the environment for the class files currently being prepared.** The earlier syllabus also allowed Rhino + Grasshopper. Continued support for that route is a discussion item; students should not be required to switch an already approved environment without an announced transition. Python is not a prerequisite for the core sequence.
+**Blender Geometry Nodes is the environment for the class files currently being prepared.** The earlier syllabus also allowed Rhino + Grasshopper; students already working in an approved environment will not be required to switch without an announced transition. Python is not a prerequisite for the core sequence.
 
 Use Illustrator, Photoshop, InDesign, Inkscape, GIMP, Scribus or an equivalent vector/raster/layout editor for visual work. Use the FabLab-specified slicer and cutting preparation workflow for production.
 
 Template-based design tools may not produce the sheets, Graphic Standards Manual or booklet. The grid, typography, hierarchy and composition are student design work. Retain the earlier restriction on Canva, Adobe Express, template-based Figma work, PowerPoint, Google Slides and similar template-driven production.
 
-Import a supplied or properly attributed point-cloud dataset for the point-cloud unit. A paid capture service, personal API key or particular importer is not required by this draft. Record source, permission or license, units and processing. An imported surface sampled into points must be identified as a derived point cloud.
+Import a supplied or properly attributed point-cloud dataset for the point-cloud unit. A paid capture service, personal API key or particular importer is not required. Record source, permission or license, units and processing. An imported surface sampled into points must be identified as a derived point cloud.
 
 ## Fabrication and materials
 
@@ -434,7 +432,7 @@ These are the two required physical submissions: the CSG print and the laser-cut
 
 ## AI use in this course
 
-The core course teaches graphs and geometric reasoning. No required Python or AI tool-building final is assigned in this working draft; that decision remains open.
+The core course teaches graphs and geometric reasoning. No Python or AI tool-building assignment is required.
 
 **Through Week 10:** students produce their own graphs, geometry, layouts and submission material. AI may explain a concept, syntax or an error message, but may not write, complete or repair submitted work.
 
@@ -444,7 +442,7 @@ Generative image production, generative fill, AI upscaling, and AI generation of
 
 ## Reading and documentation
 
-No required textbook is assigned in this draft. These references are retained or aligned from the course repository. Tutorial and file availability is stated separately.
+No textbook is required. The references below support the lessons; lesson files and tutorials are linked from each class page.
 
 ### Reading
 
@@ -492,38 +490,6 @@ Posted lessons link their Blender examples and screenshots. Use the examples as 
 **Project 4 tools:** instructors provide a prepared point-cloud dataset and analysis groups for 4.1, SDF/volume groups for 4.2, and contouring groups for 4.3. Students may use an approved alternative dataset. The teaching packages and usage notes will be linked before each assignment begins; students are not required to build these tools internally.
 
 The 3.2 material library is planned and has not yet been linked. Students may create their own materials. Final-project laser-cut stock and machine slots remain to be confirmed; optional printing requires a separate allocation if used. Revised slide decks are not yet posted; use the current briefs and lesson notes.
-
-## Decisions before issue
-
-### Confirmed direction
-
-- Follow the instructor's sequence from graphic standards through geometry, repetition, attractors, point clouds, volumes and sections.
-- The sequence is a guide. A topic may take more than one class; understanding and working files determine the pace.
-- Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
-- Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
-- Align visual assignments and fabrication with the same developing geometry.
-- Establish one source of curriculum information before preparing the remaining Blender class files.
-- Organize ten assignments into four projects: Graphic Standards Manual, CSG, Paneling, and Integrated Spatial Project.
-- 3.1 requires one student-authored module material, a ground plane and three-point lighting (key, fill, rim/back). 3.2 permits supplied library materials or student-authored materials.
-- 3.3 combines one curve attractor with one or two point attractors to drive one geometric parameter of the existing panel, documented in façade elevation and isometric.
-- 4.1 site analysis → 4.2 generative volume → 4.3 contouring → 4.4 laser-cut assembly develop one project using supplied node groups. Printed components are optional.
-- Use the instructor-approved grading allocation: 5%, 15%, 30%, 35% across the four projects, 10% booklet and 5% participation. Midterm accumulates the first five submissions (40% of the course).
-
-### Working proposals
-
-- Review the proposed September 29–October 27 staged deadlines and the October 20 façade-attractor class. Keep October 6 and December 1 free of graded submissions.
-- Façade 3.3 due November 17 and site analysis 4.1 due November 24; 4.2–4.4 due at the final review with earlier ungraded production checks.
-- Keep the final project focused enough to test assembly by December 1 and complete laser cutting and documentation before the confirmed final review.
-- The previous Python/AI final and extra-credit scheme remain outside the required core assignments.
-
-### Administrative items to confirm
-
-- Confirm the room, final review slot and School review blackout dates before issuing the student syllabus.
-- Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
-- Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
-- Confirm the attendance sign-in method and the accreditation criteria used by the School.
-- Post and test the material library before 3.2 is due. Supply a prepared point cloud and analysis groups before 4.1, volume groups before 4.2, and contouring groups before 4.3, with usage notes.
-- Confirm laser-cut stock and machine capacity for the final model; approve any optional printing separately.
 
 # Standing course and university policies
 

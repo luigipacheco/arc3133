@@ -25,11 +25,14 @@
   {
     "id": "S03",
     "unit": "U04",
-    "title": "Arrays — Part 1: linear and nested grid",
+    "title": "Arrays — Part 1: line, grid, cube, curve, wall",
     "file": "files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend",
     "scenes": [
       "Linear loop",
-      "Nested grid"
+      "Nested grid",
+      "3D array",
+      "Along a curve",
+      "Brick wall"
     ]
   },
   {

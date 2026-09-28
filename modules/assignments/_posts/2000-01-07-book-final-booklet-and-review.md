@@ -14,11 +14,11 @@ categories:
 
 **Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
-- Compile all four projects and ten assignments using the 17 x 11 inch sheets and graphic system developed throughout the semester. Include the shared 4.3–4.4 fabrication sheet once, labeled for both stages.
-- Select substantive revisions in response to critique and identify what changed. Reuse successful existing sheets; redesigning every assignment is not required. Keep the booklet assembled as the semester progresses.
+- Put all four projects and ten assignments together, using the 17 x 11 inch sheets and graphic system you developed during the semester. Include the shared 4.3–4.4 fabrication sheet once, labeled for both stages.
+- Choose meaningful revisions in response to critique, and show what changed. Reuse the sheets that already work — you don't have to redesign every assignment. Keep building the booklet as the semester goes.
 - Include process diagrams, photographs and captions for the CSG print and laser-cut model.
-- Submit the booklet PDF, a separate revised GSM PDF, editable project files and dependencies, and required fabrication files.
-- Present the laser-cut assembly and the CSG print or its review documentation as directed. The exact final review slot remains to be confirmed.
+- Submit the booklet PDF, a separate revised GSM PDF, your editable project files with everything they need, and the required fabrication files.
+- Present the laser-cut model and the CSG print (or its documentation), as directed. The exact final review slot is still to be confirmed.
 
 **Ungraded checkpoints:**
 

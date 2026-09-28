@@ -10,7 +10,7 @@ categories:
 
 ## U04 — Arrays
 
-Arrange your panel using lists, if statements and for loops, then explore a cube volume shaped by math.
+Arrange your panel with lists, loops and if statements, then explore a volume of cubes shaped by math.
 
 **Vocabulary:** list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase.
 
@@ -20,22 +20,22 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 
 **Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction.
 
-**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Patterns begin with a brick wall where every other course shifts; then use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional.
+**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Patterns start with a brick wall where every other course shifts; then if/Switch rules make façade patterns, and math functions of X and Y shape a volume of cubes. Hexagonal and radial arrays are optional.
 
-1. 1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.
-2. 2D: nest repetition into a grid. Identify rows and columns; predict the total count.
-3. 3D: repeat the grid in Z for a cube array. Predict Count cubed; distinguish instances from a sampled volume.
-4. Curve: bend the row. Sample a curve at even spacing and place your module at each point, turned to follow the curve's direction. The count comes from curve length ÷ spacing.
-5. Pattern example · Brick wall: repeat a curved row of bricks upward, one course per pass, and slide every other course half a brick (k modulo 2). Swap the curve for a circle.
-6. Use Compare and Switch for if conditions; make four different façade patterns by modifying selected panel instances.
-7. Use cubes for a volumetric array. Drive vertical variation with a function of X and Y, such as sine or cosine, while retaining layers in Z. Optionally use Switch conditions to create voids.
-8. Optional later practice · Hexagonal: stagger alternate rows; explain the odd/even test and row spacing.
-9. Optional later practice · Radial: place copies from radius, count and angular step.
-10. Optional later practice · Drive the curve with sine; explain amplitude, frequency and phase.
+1. 1D: build a small row with Repeat Input and Repeat Output. Find the list, the count and the index.
+2. 2D: put the row inside a second loop to make a grid. Name the rows and columns, and predict the total count.
+3. 3D: stack the grid in layers to make a cube of copies. Before you look, predict how many there are (Count × Count × Count). These are separate copies of one object, not a solid block.
+4. Curve: bend the row. Place your module at evenly spaced points along a curve, each turned to follow the curve's direction. The count is the curve's length ÷ the spacing.
+5. Pattern example · Brick wall: stack rows of bricks along a curve, one course at a time, and shift every other course by half a brick (k modulo 2). Then swap the curve for a circle.
+6. Use Compare and Switch to write if rules; make four different façade patterns by changing selected copies of your panel.
+7. Make an array of cubes in layers. Change their height with a function of X and Y, such as sine or cosine, while keeping the layers in Z. Optionally, use Switch to leave some cubes out and make voids.
+8. Optional practice · Hexagonal: shift every other row; explain the odd/even test and the row spacing.
+9. Optional practice · Radial: place copies around a circle from a radius, a count and an angle step.
+10. Optional practice · Drive the curve with a sine wave; explain amplitude (how high), frequency (how often it repeats) and phase (where it starts).
 
-**Practice:** 3.2 has three sheets. Sheet 1: four diagrams showing your module alone and in 1D, 2D and 3D arrays. Sheet 2: four façade patterns using your module and if/Switch conditions on a 2D array. Sheet 3: an isometric of an exploratory cube volume with vertical variation driven by X and Y; conditional voids are optional.
+**Practice:** 3.2 has three sheets. Sheet 1: four diagrams — your module alone, then in 1D, 2D and 3D arrays. Sheet 2: four façade patterns, made by applying if/Switch rules to a 2D array of your module. Sheet 3: an isometric of a volume of cubes whose height changes with X and Y; voids made by a rule are optional.
 
-**Use it next:** Reuse the panel definition on Sheets 1–2 of 3.2; conditionals may transform or omit instances. Use cubes on Sheet 3. Supplied library or student-authored materials are permitted. In 3.3 a sampled attractor field changes one panel geometry parameter across a façade.
+**Use it next:** Sheets 1–2 of 3.2 reuse your panel, and your rules may change or remove some of the copies. Sheet 3 uses cubes. You may use the supplied material library or your own materials. In 3.3 you'll use the distance to a point or a curve to change one dimension of your panel across a façade.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
@@ -92,9 +92,9 @@ for k in range(layers):
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S03 — [Arrays — Part 1: line, grid, cube, curve]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
 
@@ -106,7 +106,7 @@ Scenes in this file: Linear loop, Nested grid, 3D array, Along a curve. Open the
 
 Scenes in this file: 3D array, Hexagonal array, Radial array, If and range, Sine curve, Brick wall. Open them in the order listed.
 
-Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
+The simple 3D array comes first: a row repeated into a grid, and the grid into layers, with Count, Spacing and Cube Size exposed. The last scene, Sine curve, uses math on X and Y and repetition in three directions to shape a volume of cubes. It points ahead to the density and signed-distance lessons while still using cubes.
 
 ## Examples from the class files
 

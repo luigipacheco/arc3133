@@ -49,9 +49,9 @@ The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and in
 | Project | What you do | Weight |
 | --- | --- | --- |
 | [P1 — GSM]({{ site.baseurl }}/modules/assignments/p1-gsm/) | Create your own Graphic Standards Manual and apply it to every course presentation | 5% |
-| [P2 — CSG]({{ site.baseurl }}/modules/assignments/p2-csg/) | Procedural design: construct a CSG object through a clear sequence of operations. Explain the procedure with a BIG-style diagram and pseudocode, then 3D print the result | 15% |
-| [P3 — Paneling]({{ site.baseurl }}/modules/assignments/p3-paneling/) | Parametric design: build a panel from points and faces, control repetition with loops, if/Switch and mathematical functions, then combine one curve and one or two point attractors to drive a panel parameter and compose a façade | 30% |
-| P4 — Integrated Spatial Project — *not yet released* | Generative design: use supplied analysis, volume and contouring node groups to explore alternatives informed by a site observation. Select a spatial result and develop it into a laser-cut assembly | 35% |
+| [P2 — CSG]({{ site.baseurl }}/modules/assignments/p2-csg/) | Procedural design: build a CSG object through a clear sequence of operations. Explain the steps with a BIG-style diagram and pseudocode, then 3D print the result | 15% |
+| [P3 — Paneling]({{ site.baseurl }}/modules/assignments/p3-paneling/) | Parametric design: build a panel from points and faces; repeat it with loops, if/Switch rules and math functions; then use one curve and one or two point attractors to vary a panel dimension across a façade | 30% |
+| P4 — Integrated Spatial Project — *not yet released* | Generative design: use supplied analysis, volume and contouring tools to explore options based on something you observe on a site. Choose one spatial result and develop it into a laser-cut model | 35% |
 
 The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 40% of the final course grade. Report the accumulated result as a percentage of those 40 possible course points. The midterm adds no separate assessment weight. [Midterm grade calculation]({{ site.baseurl }}/modules/assignments/overview/#midterm-grade)
 

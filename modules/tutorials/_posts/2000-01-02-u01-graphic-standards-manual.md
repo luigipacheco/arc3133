@@ -10,7 +10,7 @@ categories:
 
 ## U01 — Graphic Standards Manual
 
-Establish the graphic system used to communicate all later work.
+Set up the graphic system you will use to present all your later work.
 
 **Vocabulary:** composition, grid, hierarchy, typography, line weight, palette.
 
@@ -19,13 +19,13 @@ Establish the graphic system used to communicate all later work.
 **Taught in:** [Class 01]({{ site.baseurl }}/modules/classes/class-01/).
 
 1. Compare architectural drawings and identify how hierarchy makes them readable.
-2. Study the three manuals below. Identify a rule, its dimensioned drawing and its application in each.
-3. Set page size, margins, columns, type hierarchy, line weights and a restrained palette.
+2. Study the three manuals below. In each, find one rule, the drawing that shows it at size, and a place where it is applied.
+3. Set the page size, margins, columns, type hierarchy, line weights and a restrained color palette.
 4. Test the system on a diagram and render, then assemble the four-page manual.
 
 **Practice:** Make a sample 17 × 11 inch sheet and explain one decision about visual hierarchy.
 
-**Use it next:** Apply and revise this identity in every project and in the final booklet.
+**Use it next:** Apply this system — and keep revising it — in every project and in the final booklet.
 
 **Examples to study:**
 

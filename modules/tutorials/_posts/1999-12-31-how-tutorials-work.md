@@ -24,7 +24,7 @@ More videos will be added as they are recorded.
 
 ## Lesson notes
 
-Course materials are released through September 29 (Week 6). Assignments, tutorials and class materials will be reviewed and updated each week. Project briefs include their full sequence of submissions; later class and tutorial pages will be released as those topics are introduced.
+Course materials are posted through September 29 (Week 6), and assignments, tutorials and class materials are reviewed each week. Project briefs already list every submission; later class and tutorial pages are posted as each topic begins.
 
 Open the posted lessons below; later lessons will be added as the course progresses.
 

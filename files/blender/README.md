@@ -6,25 +6,25 @@ Download example files individually. These are lesson stages, not fixed weeks; c
 
 First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction.
 
-Second of two Arrays classes. Patterns begin with a brick wall where every other course shifts; then use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional.
+Second of two Arrays classes. Patterns start with a brick wall where every other course shifts; then if/Switch rules make façade patterns, and math functions of X and Y shape a volume of cubes. Hexagonal and radial arrays are optional.
 
-Supported practice, no new topic. Bring all three array sheets for feedback on repetition, indices, counts and spacing, conditional façade patterns and the mathematical cube volume. Hand in the CSG print.
+Supported practice, no new topic. Bring all three array sheets for feedback on repetition, index, counts and spacing, your if/Switch façade patterns and the cube volume. Hand in the CSG print.
 
-One façade-attractor class. Combine one curve and one or two point attractors to drive a panel parameter. The next application of attractors is site analysis in Project 4.
+One class on façade attractors. Combine one curve and one or two point attractors to drive one panel dimension. You use attractors again for site analysis in Project 4.
 
-Apply attractor measurements to the prepared point cloud using supplied groups. Produce two analytical layers and one design observation for the final project; this is distinct from the façade class.
+Apply attractor measurements to the prepared point cloud with the supplied groups. Make two analysis layers and one design observation for the final project. This class is separate from the façade class.
 
-Use supplied volume groups to explore three settings of one strategy and select a form for contouring.
+Use the supplied volume groups to explore three settings of one strategy, and choose a form for contouring.
 
-The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced during Weeks 13–15.
+The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, preparing cutting files, material and kerf tests, registration (how the parts line up), simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced in Weeks 13–15.
 
-No new required content. Week 13 checks contours and assembly tests; Week 14 checks fabrication progress and a booklet spread. Week 15 supports production, revisions and final documentation during studio reviews, with no graded submission that day.
+No new required content. Week 13 checks contours and assembly tests; Week 14 checks fabrication progress and one booklet spread. Week 15 supports production, revisions and final documentation during studio reviews; nothing is graded that day.
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes.
 
-Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 | Session | Target weeks | Open file | Scenes in this file | Lesson |
 | --- | --- | --- | --- | --- |
@@ -40,14 +40,14 @@ Build your own file. Use these examples to check a step when you are stuck, then
 | S11 | 12 | [Discretizing Geometry — section parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Discretizing Geometry, U10 Final |
 | S12 | 12 | [Final — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U09 Discretizing Geometry, U10 Final |
 
-**S01 — Constructive Solid Geometry.** The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the native nodes; these controls are not in the modifier.
+**S01 — Constructive Solid Geometry.** The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the nodes themselves; these controls are not in the modifier.
 
-**S02 — Descriptive Geometry.** Follow the six main teaching scenes. Original reference scenes remain in the file. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
+**S02 — Descriptive Geometry.** Follow the six main teaching scenes; the original reference scenes are still in the file. The pyramid keeps Width, Depth and Height exposed, and the file ends with the cube minus the pyramid. This lesson works in model units; nothing is exported for fabrication.
 
-**S04 — Arrays — Part 2: arrangements and rules.** Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
+**S04 — Arrays — Part 2: arrangements and rules.** The simple 3D array comes first: a row repeated into a grid, and the grid into layers, with Count, Spacing and Cube Size exposed. The last scene, Sine curve, uses math on X and Y and repetition in three directions to shape a volume of cubes. It points ahead to the density and signed-distance lessons while still using cubes.
 
-**S07 — Volumetric Data and Fields — point clouds.** Keep the data folder together — the file reads teaching-courtyard.ply from beside it. It is a synthetic teaching cloud, not a survey. Supporting files: [Teaching point cloud](06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json).
+**S07 — Volumetric Data and Fields — point clouds.** Keep the data folder together: the file reads teaching-courtyard.ply from the same folder. It is a made-up point cloud for teaching, not a site survey. Supporting files: [Teaching point cloud](06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json).
 
-**S12 — Final — fabrication and assembly.** The exported files are default-parameter snapshots in millimetres. Regenerate them after edits and test physical fit before production. Modular parts are an optional reference. The required physical outputs are the CSG print (P2b) and laser-cut volume (P4b). Supporting files: [Fabrication notes and dimensions](09-final-project/FABRICATION-NOTES.md), [Small print STL](09-final-project/small-print-mm.stl), [Fit coupon STL](09-final-project/fit-coupon-mm.stl), [Modular parts STL](09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](09-final-project/section-parts-and-spacers-mm.svg).
+**S12 — Final — fabrication and assembly.** The exported files are snapshots of the default settings, in millimetres. Export them again after any edit, and test the physical fit before production. The modular parts are an optional reference. The required physical outputs are the CSG print (P2b) and the laser-cut volume (P4b). Supporting files: [Fabrication notes and dimensions](09-final-project/FABRICATION-NOTES.md), [Small print STL](09-final-project/small-print-mm.stl), [Fit coupon STL](09-final-project/fit-coupon-mm.stl), [Modular parts STL](09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](09-final-project/section-parts-and-spacers-mm.svg).
 
 The Graphic Standards Manual and the final booklet use graphic and layout files rather than Blender scenes. Assignment requirements and the flexible teaching calendar are in the [current syllabus](../../syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md).

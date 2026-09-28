@@ -10,7 +10,7 @@ categories:
 
 ## U02 — Constructive Solid Geometry
 
-Build editable solids with transformations and Boolean operations.
+Build solids you can keep editing, using move, rotate, scale and Boolean operations.
 
 **Vocabulary:** parameter, vector, translation, rotation, scale, union, difference, intersection.
 
@@ -22,15 +22,15 @@ Build editable solids with transformations and Boolean operations.
 
 **Taught in:** [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/).
 
-1. Start with one primitive; identify node inputs, outputs and parameters.
-2. Translate, rotate and scale. Change the order and compare results.
+1. Start with one primitive. Find the node's inputs, outputs and parameters.
+2. Move, rotate and scale it. Change the order and compare the results.
 3. Compare union, intersection and difference. Reverse a subtraction and explain what changes.
-4. Expose useful inputs and build a short massing sequence.
-5. In Week 3, check the CSG object's closure and physical dimensions; export a mesh and inspect orientation, supports, material use and the layer preview in the FabLab slicer.
+4. Expose the useful inputs and build a short massing sequence.
+5. In Week 3, check that the CSG object is closed and the right physical size. Export a mesh and, in the FabLab slicer, check the orientation, supports, material use and layer preview.
 
-**Practice:** Diagram the CSG graph as a BIG-style process diagram — one operation per frame, read left to right — and change one parameter to show its effect.
+**Practice:** Draw your CSG steps as a BIG-style process diagram — one operation per frame, read left to right — and change one parameter to show what it does.
 
-**Use it next:** Descriptive Geometry replaces a primitive cutter with geometry built from points and faces. Week 3 introduces 3D printing; apply units, orientation and slicing to prepare the CSG object for the first print.
+**Use it next:** Next, Descriptive Geometry replaces a primitive cutter with a shape you build from points and faces. Week 3 introduces 3D printing: you use units, orientation and slicing to prepare your CSG object for its first print.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
@@ -57,9 +57,9 @@ result  = difference(solid, cutters) # 9  difference
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S01 — [Constructive Solid Geometry]({{ site.baseurl }}/files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend)**
 
@@ -67,7 +67,7 @@ Build your own file. Use these examples to check a step when you are stuck, then
 
 Scenes in this file: 01 - CSG example. Open them in the order listed.
 
-The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the native nodes; these controls are not in the modifier.
+The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the nodes themselves; these controls are not in the modifier.
 
 ## Examples from the class files
 

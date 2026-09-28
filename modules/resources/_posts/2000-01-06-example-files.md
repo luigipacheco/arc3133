@@ -11,7 +11,7 @@ permalink: /resources/example-files/
 
 # Example files
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 Download only the example for the class you are working on. Arrays uses two example files across the practice block.
 
@@ -31,6 +31,6 @@ Download only the example for the class you are working on. Arrays uses two exam
 
 For Point Clouds and Volumes, also download the teaching point cloud and keep the PLY beside its Blender file. The dataset note records its source and units.
 
-Prepared in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes.
+Prepared in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes.
 
 [Find the class that uses each file]({{ site.baseurl }}/modules/classes/overview/)

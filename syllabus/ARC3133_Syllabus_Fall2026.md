@@ -23,53 +23,46 @@
 
 ## Course description
 
-Use computational methods to make architectural drawings, models and physical parts. Build editable geometry, organize it with rules and explain design decisions through clear visual work.
+In this course you use computational methods to make architectural drawings, models and physical parts. You build geometry you can keep editing, organize it with rules, and explain your design decisions through clear visual work.
 
-**Course progression:** P1 establishes graphic standards. P2 is procedural: describe and follow a sequence
-of operations. P3 is parametric: define relationships and control their variation with parameters, loops,
-conditions and attractors. P4 is generative: use supplied analysis, volume and contouring tools to explore,
-select and fabricate a spatial result. These are the teaching emphases; the methods build on one another.
+**How the course builds:** P1 sets your graphic standards. P2 is procedural: you describe a sequence of operations and follow it. P3 is parametric: you set up relationships and vary them with parameters, loops, conditions and attractors. P4 is generative: you use supplied analysis, volume and contouring tools to explore options, choose one and fabricate it. Each project builds on the one before.
 
-**Through midterm:** Graphic Standards Manual → CSG sheet and print → descriptive geometry module → 1D, 2D and 3D arrays. Create a module material and three-point lighting setup, then use supplied or student-authored materials for the array compositions.
+**Up to the midterm:** Graphic Standards Manual → CSG sheet and print → your module from descriptive geometry → 1D, 2D and 3D arrays. You make one material and a three-point lighting setup for your module, then use supplied materials or your own for the array compositions.
 
-**Transition to Project 4:** introduce the parametric façade in Week 9, combining one curve
-and one or two point attractors. Continue refining its elevation and isometric for the November deadline.
-Begin the generative project in Week 10 with supplied tools: site analysis (4.1), volume exploration
-(4.2), contouring (4.3), and laser-cut assembly (4.4). Finish all new instruction by Week 12;
-Weeks 13–15 are for production, feedback and documentation. Printed components are optional.
+**Into Project 4:** the parametric façade starts in Week 9, using one curve and one or two point attractors; you keep refining its elevation and isometric for the November deadline. The generative project starts in Week 10 with supplied tools: site analysis (4.1), volume exploration (4.2), contouring (4.3) and laser-cut assembly (4.4). All new topics end by Week 12; Weeks 13–15 are for production, feedback and documentation. Printed parts are optional.
 
-Use the Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and its process readable.
+Use your Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and the process easy to read.
 
 ## Learning outcomes
 
-- Produce coherent architectural drawings, renders and documentation using a personal visual identity.
-- Explain a parameter, vector, point, vertex, edge, face and closed solid, and construct a simple mesh from its parts.
-- Build a non-destructive graph using translation, rotation, scale and Boolean operations, with useful inputs exposed.
-- Use lists, indices, repetition, nested repetition and conditional selection to organize geometry.
-- Measure and remap distances to single-point, multiple-point and curve attractors, and explain the resulting variation.
-- Extend a row into a grid and a 3D array, explain Count cubed, and connect discrete XYZ locations to later volume sampling.
-- Import and document a point cloud, analyze its samples and explain the choices involved in converting them into a volume.
-- Distinguish a mesh, sampled density and a signed distance field; control an implicit volume and extract a surface or sections.
-- Prepare and assemble fabricated parts while accounting for units, material, thickness, tolerance, orientation and machine constraints.
-- Explain and revise a computational process through editable files, diagrams, controlled comparisons and physical tests.
+- Produce clear architectural drawings, renders and documentation that follow your own graphic standards.
+- Explain what a parameter, vector, point, vertex, edge, face and closed solid are, and build a simple mesh from its parts.
+- Build a model from move, rotate, scale and Boolean operations that stays editable at every step, with useful inputs exposed.
+- Use lists, indices, repetition, nested repetition and conditions to organize geometry.
+- Measure distances to one point, several points or a curve (attractors), rescale them, and explain the variation they create.
+- Extend a row into a grid and a 3D array, explain why the count is cubed, and see how a 3D grid of positions leads to the volumes later in the course.
+- Import and document a point cloud, analyze it, and explain the choices you make when turning it into a volume.
+- Tell apart a mesh, a density volume and a signed distance field (SDF); shape a volume defined by a formula and cut a surface or sections from it.
+- Prepare and assemble fabricated parts, accounting for units, material, thickness, tolerance, orientation and machine limits.
+- Explain and revise your process through editable files, diagrams, side-by-side comparisons and physical tests.
 
 ## Learning pace and class format
 
-**Deadlines:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so the print deadline skips October 6.
+**Deadlines:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time. Bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so nothing is due on October 6.
 
-The midterm grade accumulates the manual, CSG sheet and print, module and arrays. It adds no separate assignment or review grade. Apply the manual to earlier submissions while refining it for October 27.
+Your midterm grade is the total of the manual, the CSG sheet and print, the module and the arrays. There is no separate midterm assignment or review. Keep applying your manual to earlier work as you refine it for October 27.
 
-Arrays is taught in two consecutive classes: September 29 covers loops and nested loops for 1D/2D/3D arrays, then a row bent onto a curve; October 6 covers patterns — a brick wall with every other course shifted — if/Switch and mathematical functions, with no graded submission that day. October 13 is supported practice on both Arrays lessons and the three-sheet assignment, alongside the CSG print hand-in. Façade attractors are taught on October 20. Project 4 begins on October 27, when the manual and arrays are also submitted; there is no separate full-course review class.
+Arrays takes two classes in a row. September 29: loops and nested loops for 1D, 2D and 3D arrays, then a row bent onto a curve. October 6: patterns — a brick wall with every other course shifted — plus if/Switch and math functions; nothing is due that day. October 13 is supported practice on both Arrays lessons and the three array sheets, and the day you hand in the CSG print. Façade attractors are taught on October 20. Project 4 starts on October 27, the day the manual and arrays are due; there is no separate review class for the whole course.
 
-The façade assignment is introduced October 20 and due November 17. Project 4 begins with attractor-based site analysis October 27, followed by generative volume exploration November 3. November 10 completes the new content: the supplied contouring group, cutting-file preparation, material/kerf tests, registration, assembly and final documentation. Select a volume at the November 10 ungraded check, test contours and assembly by November 17, and check fabrication progress November 24. Weeks 13–15 provide production, individual feedback and documentation support, with no new required topics. The site-analysis sheet remains due November 24; the remaining Project 4 stages and booklet are due at the final review, December 10–16, with the exact slot to be confirmed.
+The façade assignment starts October 20 and is due November 17. Project 4 starts with attractor-based site analysis on October 27, then volume exploration on November 3. November 10 is the last class with new content: the supplied contouring group, preparing cutting files, material and kerf tests, registration (how the parts line up), assembly and final documentation. Choose your volume at the ungraded check on November 10, test contours and assembly by November 17, and show fabrication progress on November 24. Weeks 13–15 are for production, individual feedback and documentation, with no new topics. The site-analysis sheet is due November 24; the rest of Project 4 and the booklet are due at the final review, December 10–16 (exact slot to be confirmed).
 
-This is a compressed, continuing final project rather than four unrelated design starts. Keep the volume and connection strategy focused. October 5–9 and December 1–4 have no graded submissions.
+Project 4 is one short, continuing project, not four separate design starts, so keep your volume and connection strategy focused. Nothing is graded October 5–9 or December 1–4.
 
-Each class combines a short demonstration, guided practice and critique. Start with a small example, check how it works, then increase its complexity. Watch the video tutorial for the topic where one is posted.
+Each class is a short demonstration, then guided practice and critique. Start from a small example, check that it works, then make it more complex. Watch the video tutorial for the topic when one is posted.
 
-Bring your editable file to every class. Be ready to change an input, predict the result and explain the relevant nodes. Reviews assess both the visual work and your understanding of the process.
+Bring your editable file to every class. Be ready to change an input, predict what will happen and explain the nodes involved. Reviews look at both your visual work and your understanding of the process.
 
-Plan for at least six hours outside class each week, including fabrication preparation, tests and documentation. Classes and scheduled FabLab work meet in person.
+Plan for at least six hours of work outside class each week, including fabrication preparation, tests and documentation. Classes and scheduled FabLab work are in person.
 
 ## Teaching sequence
 
@@ -119,21 +112,21 @@ Plan for at least six hours outside class each week, including fabrication prepa
 
 ## Assignments and grading
 
-The course has four projects made of ten assignments. Each assignment is graded once; a project is the set of its assignments, not an extra grade.
+The course has four projects made of ten assignments. Each assignment is graded once; a project is its assignments added together, not an extra grade.
 
-Digital assignments: computational understanding 30%, visual communication 30%, technical execution 25%, exploration 15%. Students must be able to explain and modify their system. Visual communication includes composition, diagrams, renders and application of the Graphic Standards Manual. Technical execution includes valid geometry, working files and required outputs. Exploration assesses purposeful variations and the choices made from them.
+**Digital assignments:** computational understanding 30%, visual communication 30%, technical execution 25%, exploration 15%. You must be able to explain your system and change it. Visual communication covers composition, diagrams, renders and how you apply your Graphic Standards Manual. Technical execution covers valid geometry, working files and the required outputs. Exploration looks at purposeful variations and the choices you make from them.
 
-In Project 4, computational understanding means explaining the supplied groups' inputs, outputs and purpose, predicting changes to settings and interpreting the results. Students are not graded on reconstructing the internal analysis, SDF or contouring algorithms.
+In Project 4, computational understanding means explaining what the supplied groups take in, what they produce and what they are for, predicting what a change of setting will do, and interpreting the results. You are not graded on rebuilding the analysis, volume (SDF) or contouring methods inside them.
 
-Fabrication assignments: preparation and fabrication strategy 30%, fabrication quality 30%, visual documentation 25%, testing and revision 15%. Assess understanding of the source geometry, orientation or part division, machine-ready files, fit and finish, clear documentation using the Graphic Standards Manual, and what students learned from tests.
+**Fabrication assignments:** preparation and fabrication strategy 30%, fabrication quality 30%, visual documentation 25%, testing and revision 15%. This looks at how well you understand the source geometry, your orientation or how you split the parts, files ready for the machine, fit and finish, clear documentation in your Graphic Standards Manual, and what you learned from your tests.
 
-GSM: visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%. The manual does not require a computational graph.
+**GSM:** visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%. The manual does not need a node graph.
 
-Final booklet: substantive revision 40%, documentation 35%, visual identity 25%. The booklet does not replace earlier assignment grades. Standing late-work and revision policies apply.
+**Final booklet:** substantive revision 40%, documentation 35%, visual identity 25%. The booklet does not replace earlier grades. The standing late-work and revision policies apply.
 
-Assess a distinct achievement at each stage of Project 4: site analysis establishes a supported design observation; generative exploration develops spatial form; contouring translates the volume into buildable parts; the laser-cut model demonstrates the resulting fabrication and assembly. Stages 4.3 and 4.4 share one evolving fabrication sheet; do not grade its layout twice. The booklet assesses selected substantive revisions and communication, not a second grade for the original submissions.
+Each stage of Project 4 is graded for something different: site analysis for a well-supported design observation; generative exploration for spatial form; contouring for turning the volume into parts you can build; the laser-cut model for the fabrication and assembly. Stages 4.3 and 4.4 share one fabrication sheet, and its layout is graded only once. The booklet grades the revisions you choose and how you communicate them — not your original submissions a second time.
 
-Approved grading allocation: manual 5%; CSG 15% (diagram/pseudocode 10%, print 5%); Paneling 30% (module, arrays and façade 10% each); Integrated Spatial Project 35% (site analysis 5%, SDF/volume exploration 10%, contouring 10%, laser-cut model 10%); final booklet 10%; participation 5%. Total 100%. The five assignments through midterm account for 40%.
+**Grade breakdown:** manual 5%; CSG 15% (diagram/pseudocode 10%, print 5%); Paneling 30% (module, arrays and façade 10% each); Integrated Spatial Project 35% (site analysis 5%, SDF/volume exploration 10%, contouring 10%, laser-cut model 10%); final booklet 10%; participation 5%. Total 100%. The five assignments up to the midterm are worth 40%.
 
 | Assignment | Introduced | Due | Weight |
 | --- | --- | --- | --- |
@@ -192,7 +185,7 @@ Create your own Graphic Standards Manual and apply it to every course presentati
 
 ## P2 — CSG
 
-Procedural design: construct a CSG object through a clear sequence of operations. Explain the procedure with a BIG-style diagram and pseudocode, then 3D print the result.
+Procedural design: build a CSG object through a clear sequence of operations. Explain the steps with a BIG-style diagram and pseudocode, then 3D print the result.
 
 <a id="p2a"></a>
 
@@ -202,13 +195,13 @@ Procedural design: construct a CSG object through a clear sequence of operations
 
 **Present:** One 17 x 11 inch diagram sheet with matching instructions (pseudocode); PDF and editable graph.
 
-- One 17 × 11 inch sheet laid out as a BIG-style process diagram (in the manner of Bjarke Ingels Group's step-by-step massing diagrams): six to nine numbered frames, according to the actual operation sequence, with one clear operation or operation type per frame.
+- One 17 × 11 inch sheet laid out as a BIG-style process diagram (like Bjarke Ingels Group's step-by-step massing diagrams): six to nine numbered frames that follow your actual sequence, with one clear operation or type of operation per frame.
 - Use white building masses, color to identify operations or changes, clear outlines and a simple line-weight hierarchy. Use lighter or dashed lines for hidden edges where needed. Keep the viewpoint consistent; introduce context and vegetation in the final frame. Follow your Graphic Standards Manual.
-- Use at least three primitives; include translation, rotation and scale, plus union and difference. Intersection is demonstrated in class and optional in the assignment. Label the kept solid and cutter in each subtraction.
+- Use at least three primitives. Include translation (move), rotation and scale, plus union and difference. Intersection is shown in class and optional here. In each subtraction, label the solid you keep and the cutter.
 - Draw the final solid at building scale with a 1.75 m figure, vegetation, ground and shadow.
-- Add clear instructions and matching pseudocode beside the diagrams, one step per operation, with the exposed parameters.
-- Refer to Di Mari and Yoo's Operative Design and Di Mari's Conditional Design; name the spatial operation your sequence explores.
-- Submit an editable graph with exposed inputs and all source operations intact.
+- Beside the diagrams, add clear instructions and matching pseudocode — one step per operation, with the exposed parameters.
+- Refer to Di Mari and Yoo's Operative Design and Di Mari's Conditional Design, and name the spatial operation your sequence explores.
+- Submit your editable graph with its exposed inputs and every operation still in place.
 
 <a id="p2b"></a>
 
@@ -220,16 +213,16 @@ Procedural design: construct a CSG object through a clear sequence of operations
 
 - Print a variant of your CSG object from P2a, within 60 mm on each axis and the 200 g allocation, without supports.
 - Hand in the physical print during class on the listed due date; submit digital files and brief fabrication notes by 11:59 PM Eastern Time that night. No additional presentation sheet is required.
-- Plan how to avoid support material through orientation, separating the object into parts for assembly, or adjusting overhangs. Bridging is allowed when it prints successfully on the selected printer.
-- Submit the editable source, exported mesh and slicer project. Explain any geometry changes made for printability.
+- Plan how to avoid supports: change the orientation, split the object into parts to assemble, or adjust overhangs. Bridging is allowed if it prints well on the printer you use.
+- Submit the editable source, the exported mesh and the slicer project. Explain any changes you made to the geometry so it would print.
 
 **Ungraded checkpoints:**
 
-- Week 6 — Sep 29: Check geometry, units, orientation and the sliced preview before queueing.
+- Week 6 — Sep 29: Before you queue the print, check the geometry, units, orientation and sliced preview.
 
 ## P3 — Paneling
 
-Parametric design: build a panel from points and faces, control repetition with loops, if/Switch and mathematical functions, then combine one curve and one or two point attractors to drive a panel parameter and compose a façade.
+Parametric design: build a panel from points and faces; repeat it with loops, if/Switch rules and math functions; then use one curve and one or two point attractors to vary a panel dimension across a façade.
 
 <a id="p3a"></a>
 
@@ -240,13 +233,13 @@ Parametric design: build a panel from points and faces, control repetition with 
 **Present:** One 17 x 11 inch sheet with three panel variations, point and face lists, and a parameter table; PDF and editable graph.
 
 - Choose a simple panel from a built precedent that tiles edge to edge in a 2 × 2 grid. Credit the building, architect and source.
-- Define parameters first and explain each. Include a shape control such as aperture, fold depth or corner offset, beyond overall dimensions.
-- Build an editable, closed mesh from explicit point and face lists. Calculate point positions from the parameters.
-- For a panel with 24 or more points, a Boolean operator is allowed if at least 16 explicit points are used to generate geometry. Review this approach with your professor.
-- State the ranges where the module closes and tiles. Diagram low, middle and high values of a shape parameter.
-- Use one 17 x 11 inch sheet showing three rendered panel variations with different parameter values. Apply one student-authored module material and one consistent lighting strategy across all three. Use three-point lighting (key, fill and rim/back), a neutral ground plane and no entourage.
-- Beside the renders, show the point list, face list referencing those points and a parameter table with the values used for each variation. No separate face-winding explanation or lighting diagram is required.
-- Study the [three-point lighting tutorial](https://www.youtube.com/watch?v=RDbrOpnIY7Q), also listed in Resources. Three-point lighting describes lighting roles; it does not require Point-type lights.
+- Define the parameters first and explain each one. Beyond overall size, include one control that changes the shape, such as an opening (aperture), a fold depth or a corner offset.
+- Build an editable, closed mesh from lists of points and faces that you write out yourself. Calculate the point positions from the parameters.
+- For a panel with 24 or more points, you may use a Boolean if at least 16 points that you write out yourself generate the geometry. Check this approach with your professor.
+- State the ranges in which the module stays closed and tiles. Show low, middle and high values of one shape parameter.
+- Use one 17 x 11 inch sheet showing three rendered versions of the panel with different parameter values. Use one material you make and the same lighting for all three: three-point lighting (key, fill and rim/back), a neutral ground plane and no entourage.
+- Beside the renders, show the point list, the face list (which points each face uses) and a table of the parameter values for each version. You don't need a separate explanation of face order or a lighting diagram.
+- Watch the [three-point lighting tutorial](https://www.youtube.com/watch?v=RDbrOpnIY7Q), also listed in Resources. Three-point lighting is about three roles the lights play; it doesn't require Blender's Point-type lights.
 
 <a id="p3b"></a>
 
@@ -257,13 +250,13 @@ Parametric design: build a panel from points and faces, control repetition with 
 **Present:** Three sheets — module and basic arrays, four conditional façade patterns, and a mathematical cube volume; one PDF and editable graph.
 
 - Submit exactly three 17 x 11 inch landscape sheets together as one assignment.
-- Sheet 1 — four diagrams: your 3.1 module alone, your module in a 1D array, your module in a 2D array, and your module in a 3D array. Use the same module and label counts, spacing and axes.
-- Sheet 2 — four façade-pattern diagrams: use your module in a 2D array and if/Switch conditions to generate four different patterns. Each diagram must identify its condition and resulting modification.
-- Sheet 3 — volumetric exploration: use cubes in a 3D array and present an isometric view. Drive vertical variation with a mathematical function of both X and Y, such as sine or cosine. Explore the resulting spatial form; optionally combine it with Switch conditions to generate voids.
-- Reuse the 3.1 panel definition on Sheets 1–2. Sheet 2 may transform or omit selected instances to make a pattern. Use cubes, rather than the panel, for the volumetric exercise on Sheet 3.
-- Present simple diagrams using one consistent view and material for comparable studies. Keep lighting consistent; separate polished render setups for the four façade patterns are not required. Choose an appropriate view for each dimensional array and use isometric for the cube volume.
-- Build repetition from basic nodes and begin with a count you can inspect; there is no minimum element count.
-- Use materials from the instructor-provided library or create your own. Record which materials you used and any edits; package required textures. Material choice must keep array spacing, depth and repetition readable. The library will be posted before this assignment is due; creating your own remains an equally valid route.
+- Sheet 1 — four diagrams: your 3.1 module alone, then in a 1D, a 2D and a 3D array. Use the same module throughout, and label the counts, spacing and axes.
+- Sheet 2 — four façade-pattern diagrams: apply if/Switch rules to a 2D array of your module to make four different patterns. Each diagram names its rule and what it changes.
+- Sheet 3 — a volume of cubes: make a 3D array of cubes and show it in isometric. Change the height of the cubes with a math function of both X and Y, such as sine or cosine, and explore the form it creates. Optionally, use Switch rules to make voids.
+- Reuse the 3.1 panel on Sheets 1–2. On Sheet 2 you may change or remove selected copies to make a pattern. Use cubes, not the panel, on Sheet 3.
+- Keep the diagrams simple, with the same view and material wherever studies are compared. Keep the lighting consistent; the four façade patterns don't need separate polished renders. Choose a suitable view for each array, and use isometric for the cube volume.
+- Build the repetition from basic nodes, starting with a count small enough to check by eye; there is no minimum number of copies.
+- Use materials from the library the instructors provide, or make your own. Note which materials you used and any changes; pack any textures. Materials must keep the spacing, depth and repetition of the array readable. The library will be posted before this assignment is due; making your own is equally fine.
 
 <a id="p3c"></a>
 
@@ -273,20 +266,20 @@ Parametric design: build a panel from points and faces, control repetition with 
 
 **Present:** One façade composition: elevation, isometric, attractor/parameter diagram and controlled comparisons; PDF and editable graph.
 
-- Use your 3.1 panel and the 2D array logic from 3.2 to build a façade. Use one curve attractor together with one or two point attractors. At each panel location, measure the shortest distance to the curve and the distance to each point.
-- Use the attractor data to drive exactly one geometric parameter of the panel, such as aperture, fold depth or corner offset. Recompute panel geometry from that parameter. Color alone or moving unchanged panels does not satisfy this requirement.
-- Remap the curve and point distances to influence values and combine them using a stated rule, such as an average or weighted blend. Both the curve and the point attractor(s) must contribute. Diagram the combination and clamping into the valid parameter range tested in 3.1; keep other panel inputs fixed.
-- Compare a uniform baseline with the combined-attractor façade. Show one additional configuration by moving one point or editing the curve, while keeping the remaining attractors and mapping settings fixed.
-- Present one 17 x 11 inch composition with an orthographic façade elevation and a matching isometric view of the same final façade. Show the curve, every point attractor and the combined influence in an overlay or accompanying field diagram with a legend.
-- Submit a print-ready PDF and the editable graph. These are views of a 3D panel system; a standalone 2D line-field drawing is no longer the assignment. Pen plotting is not required.
+- Use your 3.1 panel and the 2D array from 3.2 to build a façade. Use one curve attractor with one or two point attractors. For each panel, measure the shortest distance to the curve and the distance to each point.
+- Use the attractors to drive exactly one dimension of the panel, such as its opening (aperture), fold depth or corner offset, and rebuild the panel geometry from it. Changing only color, or only moving unchanged panels, does not count.
+- Rescale (remap) the curve and point distances into influence values and combine them with a rule you state, such as an average or a weighted mix. The curve and the point attractor(s) must both contribute. Diagram how you combine them and limit (clamp) the result to the parameter range you tested in 3.1; keep the panel's other inputs fixed.
+- Compare a uniform façade (no attractors) with the combined-attractor façade. Show one more version by moving one point or editing the curve, keeping everything else the same.
+- Present one 17 x 11 inch composition with a façade elevation and an isometric of the same final façade. Show the curve, every point attractor and their combined influence — as an overlay or a separate diagram — with a legend.
+- Submit a print-ready PDF and the editable graph. These are views of a 3D panel system, not a flat 2D line drawing. Pen plotting is not required.
 
 **Ungraded checkpoints:**
 
-- Week 10 — Oct 27: Bring a uniform façade and a first test combining one curve and one or two point attractors to drive one panel parameter.
+- Week 10 — Oct 27: Bring a uniform façade and a first test in which one curve and one or two point attractors change one panel dimension.
 
 ## P4 — Integrated Spatial Project
 
-Generative design: use supplied analysis, volume and contouring node groups to explore alternatives informed by a site observation. Select a spatial result and develop it into a laser-cut assembly.
+Generative design: use supplied analysis, volume and contouring tools to explore options based on something you observe on a site. Choose one spatial result and develop it into a laser-cut model.
 
 <a id="p4a"></a>
 
@@ -296,10 +289,10 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Present:** One 17 x 11 inch site-analysis sheet with two analytical layers and one design observation; PDF, working file and source record.
 
-- Use the instructor-prepared point-cloud dataset and supplied analysis groups. An approved student-sourced dataset is also welcome. Record source, units, scale and orientation.
-- Make two meaningful analytical layers, such as distance to a point or curve and height bands. Select inputs and ranges that reveal a spatial relationship; explain what each layer measures.
+- Use the point cloud the instructors prepared and the supplied analysis groups — or your own dataset, if approved. Record its source, units, scale and orientation.
+- Make two meaningful analysis layers, such as distance to a point or curve, and height bands. Choose inputs and ranges that reveal a spatial relationship, and explain what each layer measures.
 - Submit one 17 x 11 inch sheet showing both layers with legends and one design observation that will inform 4.2–4.4. A separate combined visualization is optional.
-- Save the working file and identify the supplied groups, their inputs, outputs and role. You are assessed on your interpretation and use of the tools, not on rebuilding their internal algorithms.
+- Save the working file and name the supplied groups: what goes in, what comes out, and what each is for. You are graded on how you read and use the tools, not on rebuilding how they work inside.
 
 **Ungraded checkpoints:**
 
@@ -313,15 +306,15 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Present:** One 17 x 11 inch sheet with three generative variations, the selected isometric and key parameters; PDF and editable volume source.
 
-- Use the supplied SDF/volume groups to explore one generative strategy informed by the observation from 4.1. For example, use a noise texture to drive a volume and vary its scale or threshold.
-- Show three settings of the same strategy, with key parameter values. Select one of these results and explain the spatial qualities that make it worth fabricating. Boolean comparisons are optional.
-- Submit one 17 x 11 inch sheet with the three variations, a larger isometric of the selected result, key parameters and a short explanation connecting the site observation to your choices. No elevation or abstract floor plan is required.
-- Communicate solid/void, depth and spatial relationships using the Graphic Standards Manual. The Resources visual precedents may guide composition; credit any references used.
-- Retain the editable file and selected volume for contouring and fabrication. Explain the supplied groups' inputs, outputs and purpose; rebuilding their internal SDF algorithms is not required. A noise-driven volume is not necessarily an exact signed distance field.
+- Use the supplied volume (SDF) groups to explore one generative strategy based on your observation from 4.1 — for example, use a noise texture to shape a volume and vary its scale or threshold.
+- Show three settings of the same strategy, with the key parameter values. Choose one and explain the spatial qualities that make it worth building. Boolean comparisons are optional.
+- Submit one 17 x 11 inch sheet with the three versions, a larger isometric of the one you chose, its key parameters, and a short explanation linking your site observation to your choices. No elevation or abstract floor plan is required.
+- Show solid and void, depth and spatial relationships using your Graphic Standards Manual. The visual precedents in Resources can guide the composition; credit any references you use.
+- Keep the editable file and the chosen volume for contouring and fabrication. Explain what the supplied groups take in, produce and are for — you don't rebuild the SDF methods inside them. Note that a volume shaped by noise is not always an exact signed distance field.
 
 **Ungraded checkpoints:**
 
-- Week 12 — Nov 10: Ungraded production check: bring three generative settings, a selected volume in isometric and its intended model scale before contouring.
+- Week 12 — Nov 10: Ungraded production check: before contouring, bring three generative settings, your chosen volume in isometric and the scale you plan for the model.
 
 <a id="p4c"></a>
 
@@ -331,15 +324,15 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Present:** One 17 x 11 inch fabrication sheet, continued in 4.4; PDF, editable source and full-size numbered cutting file.
 
-- Use the supplied contouring group on the selected 4.2 volume. Choose one slicing direction and spacing; explain how these translate the form into buildable parts.
-- Let model scale, material thickness and intended spacing determine the number of slices. There is no fixed minimum slice count. Keep parts ordered and numbered.
-- Use a simple assembly strategy such as glued layers, rods or registration guides. Printed connectors are optional. Test a representative part or connection before cutting the full set.
-- Prepare one 17 x 11 inch fabrication sheet with the chosen direction/spacing, a numbered cutting layout, an assembly diagram and brief test notes. A reduced layout belongs on the sheet; submit the full-size cutting file separately. Reserve space for the final photographs added in 4.4.
-- Check units, scale, material thickness, kerf and lab-confirmed stock. Export clean cutting curves and retain the editable file. Explain the supplied group's inputs and outputs; rebuilding it is not required.
+- Use the supplied contouring group on the volume you chose in 4.2. Choose one slicing direction and spacing, and explain how they turn the form into parts you can build.
+- Let the model scale, material thickness and spacing decide how many slices you need; there is no minimum. Keep the parts in order and numbered.
+- Use a simple way to assemble it, such as glued layers, rods or alignment guides. Printed connectors are optional. Test a typical part or connection before cutting the full set.
+- Prepare one 17 x 11 inch fabrication sheet with the chosen direction and spacing, a numbered cutting layout, an assembly diagram and short test notes. Put a reduced layout on the sheet and submit the full-size cutting file separately. Leave space for the final photographs you add in 4.4.
+- Check the units, scale, material thickness, kerf and the stock the lab has confirmed. Export clean cutting lines and keep the editable file. Explain what the supplied group takes in and produces; you don't need to rebuild it.
 
 **Ungraded checkpoints:**
 
-- Week 13 — Nov 17: Ungraded production check: bring numbered contours, a cutting layout, an assembly diagram and a small material/registration test.
+- Week 13 — Nov 17: Ungraded production check: bring numbered contours, a cutting layout, an assembly diagram and a small test of the material and how the parts line up.
 
 <a id="p4d"></a>
 
@@ -349,12 +342,12 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Present:** One assembled laser-cut model and the completed 4.3 fabrication sheet with photographs; source, cutting file and material/part list. Print files only if used.
 
-- Fabricate and assemble the contoured project from 4.1–4.3 on the laser cutter. A laser-cut assembly is sufficient; printed connectors or other printed components are optional.
-- Use the numbered parts and simple assembly strategy from 4.3. Test material, kerf and registration before the full batch; revise files as needed. Glue, rods or registration guides are acceptable.
-- Keep the assembled model within 300 mm on each axis and the laser-cut parts within one confirmed sheet. Confirm stock, sheet dimensions and machine access with the instructors/FabLab. Confirm any optional printing allocation separately before printing.
-- Submit the physical model and add an overall photograph, an assembly detail and brief observations to the same 17 x 11 inch fabrication sheet begun in 4.3. No additional presentation sheet is required.
-- Include the editable source, final cutting file, a material/part list and photographs; include printable meshes and slicer files only if you chose to print components. Credit supplied assets.
-- Assessment focuses on fabrication and assembly quality, fidelity to the selected form and learning from tests. The cutting strategy is assessed in 4.3; the shared sheet is not graded twice for its layout.
+- Cut and assemble your contoured project from 4.1–4.3 on the laser cutter. A laser-cut assembly is enough; printed connectors or other printed parts are optional.
+- Use the numbered parts and simple assembly method from 4.3. Test the material, the kerf and how the parts line up before cutting everything, and adjust your files as needed. Glue, rods or alignment guides are all fine.
+- Keep the assembled model within 300 mm on each axis, and all laser-cut parts on one confirmed sheet. Confirm stock, sheet size and machine access with the instructors or the FabLab. If you want to print any parts, confirm that allocation separately first.
+- Submit the physical model, and add an overall photograph, an assembly detail and short observations to the same 17 x 11 inch fabrication sheet you started in 4.3. No other presentation sheet is needed.
+- Include the editable file, the final cutting file, a list of materials and parts, and photographs; include printable meshes and slicer files only if you printed parts. Credit supplied files and tools.
+- Grading focuses on the quality of the fabrication and assembly, how faithful it is to the chosen form, and what you learned from tests. The cutting strategy is graded in 4.3, so the shared sheet's layout is not graded twice.
 
 **Ungraded checkpoints:**
 
@@ -368,11 +361,11 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
-- Compile all four projects and ten assignments using the 17 x 11 inch sheets and graphic system developed throughout the semester. Include the shared 4.3–4.4 fabrication sheet once, labeled for both stages.
-- Select substantive revisions in response to critique and identify what changed. Reuse successful existing sheets; redesigning every assignment is not required. Keep the booklet assembled as the semester progresses.
+- Put all four projects and ten assignments together, using the 17 x 11 inch sheets and graphic system you developed during the semester. Include the shared 4.3–4.4 fabrication sheet once, labeled for both stages.
+- Choose meaningful revisions in response to critique, and show what changed. Reuse the sheets that already work — you don't have to redesign every assignment. Keep building the booklet as the semester goes.
 - Include process diagrams, photographs and captions for the CSG print and laser-cut model.
-- Submit the booklet PDF, a separate revised GSM PDF, editable project files and dependencies, and required fabrication files.
-- Present the laser-cut assembly and the CSG print or its review documentation as directed. The exact final review slot remains to be confirmed.
+- Submit the booklet PDF, a separate revised GSM PDF, your editable project files with everything they need, and the required fabrication files.
+- Present the laser-cut model and the CSG print (or its documentation), as directed. The exact final review slot is still to be confirmed.
 
 **Ungraded checkpoints:**
 
@@ -384,36 +377,36 @@ Generative design: use supplied analysis, volume and contouring node groups to e
 
 **Introduced:** Week 1 — Aug 25 · **Due:** Throughout the semester · **Weight:** 5%
 
-- Participate in demonstrations, working sessions and critique and bring the current editable file.
+- Take part in demonstrations, working sessions and critique, and bring your current editable file.
 - Attendance and absence terms are stated in the retained course policies.
 
 ## Submission and presentation standards
 
-Use **17 × 11 inch** sheets and booklet pages, following the Graphic Standards Manual. Submit a PDF and the editable computational file for each visual milestone. Include the results and process evidence specified in the brief, relevant parameter values and a concise explanation of the design decision. Source attribution belongs on the sheet or its documentation page. Stages 4.3 and 4.4 share one fabrication sheet.
+Use **17 × 11 inch** sheets and booklet pages, following your Graphic Standards Manual. For each visual assignment, submit a PDF and your editable file. Include the results and process the brief asks for, the parameter values that matter and a short explanation of your design decision. Credit sources on the sheet or its documentation page. Stages 4.3 and 4.4 share one fabrication sheet.
 
-Keep native node names visible. Use Frames for short explanations and name exposed input parameters clearly. Students may name their own reusable groups, but custom labels must not conceal which native node is being taught. Small readable graphs are preferred to unnecessary complexity.
+Keep Blender's own node names visible, so anyone can see which node is which. Use Frames for short explanations and give your exposed inputs clear names. You can name your own node groups, but a label must never hide which built-in node is being used. A small, readable graph is better than a complicated one.
 
-Before each submission, open the file from a clean folder, confirm dependencies and units, and check that changing the exposed inputs produces the claimed alternatives. Students build the geometry, repetition, conditionals and façade-attractor relationships in the early exercises. For Project 4, instructors provide point-cloud analysis, SDF/volume and contouring node groups. Students explain their inputs, outputs and role, test settings and interpret results; rebuilding the internal algorithms is not required. Credit supplied groups and retain the editable file with the chosen settings.
+Before you submit, copy your file into an empty folder and open it there. Check that nothing is missing, the units are right, and changing your inputs still gives the options you show on your sheet. In the early exercises you build the geometry, repetition, conditions and façade attractors yourself. In Project 4 the instructors provide the point-cloud analysis, volume (SDF) and contouring node groups: you explain what goes in, what comes out and what each group is for, test settings and interpret the results — you don't rebuild how they work inside. Credit the supplied groups and keep the editable file with your chosen settings.
 
 ## Software and data
 
-**Blender Geometry Nodes is the environment for the class files currently being prepared.** The earlier syllabus also allowed Rhino + Grasshopper; students already working in an approved environment will not be required to switch without an announced transition. Python is not a prerequisite for the core sequence.
+**The class files are made in Blender Geometry Nodes.** The earlier syllabus also allowed Rhino + Grasshopper; if you already work in an approved environment, you won't have to switch without notice. You don't need to know Python.
 
-Use Illustrator, Photoshop, InDesign, Inkscape, GIMP, Scribus or an equivalent vector/raster/layout editor for visual work. Use the FabLab-specified slicer and cutting preparation workflow for production.
+For visual work, use Illustrator, Photoshop, InDesign, Inkscape, GIMP, Scribus or a similar vector, raster or layout program. For production, use the slicer and cutting-file workflow the FabLab specifies.
 
-Template-based design tools may not produce the sheets, Graphic Standards Manual or booklet. The grid, typography, hierarchy and composition are student design work. Retain the earlier restriction on Canva, Adobe Express, template-based Figma work, PowerPoint, Google Slides and similar template-driven production.
+Don't use template-based design tools to make your sheets, Graphic Standards Manual or booklet — the grid, typography, hierarchy and composition are your design work. That rules out Canva, Adobe Express, template-based Figma work, PowerPoint, Google Slides and similar tools.
 
-Import a supplied or properly attributed point-cloud dataset for the point-cloud unit. A paid capture service, personal API key or particular importer is not required. Record source, permission or license, units and processing. An imported surface sampled into points must be identified as a derived point cloud.
+For the point-cloud unit, import a supplied point cloud or one you have permission to use, and credit it. You don't need a paid scanning service, a personal API key or a particular importer. Record the source, permission or license, units and any processing. If you turn an imported surface into points, label it as a derived point cloud.
 
 ## Fabrication and materials
 
-Complete FabLab Safety Orientation before machine use. Confirm enrollment, equipment and production arrangements with the lab.
+Complete the FabLab Safety Orientation before you use any machine. Confirm enrollment, equipment and production times with the lab.
 
-**CSG print (2.2):** print the CSG object from 2.1. Maximum 60 mm on each axis and 200 g of filament including failed attempts. Use a draft layer height and an orientation that prints without supports.
+**CSG print (2.2):** print the CSG object from 2.1. It must fit within 60 mm on each axis and use no more than 200 g of filament, failed attempts included. Use a draft layer height and choose an orientation that prints without supports.
 
-**Laser-cut project model (4.4):** contour the selected generative volume and assemble laser-cut parts using glue, rods or a simple registration system. Maximum 300 mm on each assembled axis and one confirmed sheet of laser-cut material. Confirm stock, sheet dimensions and machine access before production. Test material, kerf and registration; label and nest the parts. Printed components are optional and require a separately confirmed allocation if used. Tests and failed parts count toward confirmed allocations.
+**Laser-cut model (4.4):** slice your chosen generative volume into contours and assemble the laser-cut parts with glue, rods or a simple alignment system. The assembled model must fit within 300 mm on each axis and use one confirmed sheet of material. Confirm stock, sheet size and machine access before you start. Test the material, the kerf (the width the laser burns away) and how the parts line up; label the parts and nest them on the sheet. Printed parts are optional and need their own confirmed allocation. Tests and failed parts count toward your allocation.
 
-These are the two required physical submissions: the CSG print and the laser-cut model. Pen plotting is not required. Material availability and machine time require FabLab confirmation; keep backups and account for replacement material beyond the allocation.
+The two required physical submissions are the CSG print and the laser-cut model. Pen plotting is not required. Material and machine time depend on the FabLab, so keep backups and plan for replacement material beyond your allocation.
 
 ## Course grading scale
 
@@ -434,19 +427,19 @@ These are the two required physical submissions: the CSG print and the laser-cut
 
 ## AI use in this course
 
-The core course teaches graphs and geometric reasoning. No Python or AI tool-building assignment is required.
+This course teaches node graphs and geometric reasoning. No Python or AI tool-building assignment is required.
 
-**Through Week 10:** students produce their own graphs, geometry, layouts and submission material. AI may explain a concept, syntax or an error message, but may not write, complete or repair submitted work.
+**Through Week 10:** you make your own graphs, geometry, layouts and submissions. AI may explain a concept, a piece of syntax or an error message, but it may not write, finish or fix work you submit.
 
-**After Week 10:** code assistance may be used only where an assignment explicitly permits it. Students write their own procedure or pseudocode first, disclose the tool/version and prompts, record what was kept or changed, and verify the result. This permission does not replace the required node-based exercises or authorize AI production of the visual work.
+**After Week 10:** you may use AI for code only where an assignment says so. Write your own steps or pseudocode first; then disclose the tool, its version and your prompts, note what you kept or changed, and check the result. This does not replace the required node exercises, and it never allows AI to produce your visual work.
 
-Generative image production, generative fill, AI upscaling, and AI generation of a visual identity, palette or layout remain prohibited for submitted coursework. Students remain responsible for every submitted result and must be able to explain and modify it. Citation follows the University's AI policy retained below.
+AI image generation, generative fill, AI upscaling, and AI-generated visual identities, palettes or layouts are not allowed in submitted work. You are responsible for everything you submit and must be able to explain and change it. Cite AI use following the University AI policy below.
 
 # Teaching unit outlines
 
 ## U01 — Graphic Standards Manual
 
-Establish the graphic system used to communicate all later work.
+Set up the graphic system you will use to present all your later work.
 
 **Vocabulary:** composition, grid, hierarchy, typography, line weight, palette.
 
@@ -455,13 +448,13 @@ Establish the graphic system used to communicate all later work.
 **Taught in:** [Class 01]({{ site.baseurl }}/modules/classes/class-01/).
 
 1. Compare architectural drawings and identify how hierarchy makes them readable.
-2. Study the three manuals below. Identify a rule, its dimensioned drawing and its application in each.
-3. Set page size, margins, columns, type hierarchy, line weights and a restrained palette.
+2. Study the three manuals below. In each, find one rule, the drawing that shows it at size, and a place where it is applied.
+3. Set the page size, margins, columns, type hierarchy, line weights and a restrained color palette.
 4. Test the system on a diagram and render, then assemble the four-page manual.
 
 **Practice:** Make a sample 17 × 11 inch sheet and explain one decision about visual hierarchy.
 
-**Use it next:** Apply and revise this identity in every project and in the final booklet.
+**Use it next:** Apply this system — and keep revising it — in every project and in the final booklet.
 
 **Examples to study:**
 
@@ -491,7 +484,7 @@ PALETTE   = ["#2455A4", "#E58B32"]  # complementary blue/orange
 
 ## U02 — Constructive Solid Geometry
 
-Build editable solids with transformations and Boolean operations.
+Build solids you can keep editing, using move, rotate, scale and Boolean operations.
 
 **Vocabulary:** parameter, vector, translation, rotation, scale, union, difference, intersection.
 
@@ -499,15 +492,15 @@ Build editable solids with transformations and Boolean operations.
 
 **Taught in:** [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/).
 
-1. Start with one primitive; identify node inputs, outputs and parameters.
-2. Translate, rotate and scale. Change the order and compare results.
+1. Start with one primitive. Find the node's inputs, outputs and parameters.
+2. Move, rotate and scale it. Change the order and compare the results.
 3. Compare union, intersection and difference. Reverse a subtraction and explain what changes.
-4. Expose useful inputs and build a short massing sequence.
-5. In Week 3, check the CSG object's closure and physical dimensions; export a mesh and inspect orientation, supports, material use and the layer preview in the FabLab slicer.
+4. Expose the useful inputs and build a short massing sequence.
+5. In Week 3, check that the CSG object is closed and the right physical size. Export a mesh and, in the FabLab slicer, check the orientation, supports, material use and layer preview.
 
-**Practice:** Diagram the CSG graph as a BIG-style process diagram — one operation per frame, read left to right — and change one parameter to show its effect.
+**Practice:** Draw your CSG steps as a BIG-style process diagram — one operation per frame, read left to right — and change one parameter to show what it does.
 
-**Use it next:** Descriptive Geometry replaces a primitive cutter with geometry built from points and faces. Week 3 introduces 3D printing; apply units, orientation and slicing to prepare the CSG object for the first print.
+**Use it next:** Next, Descriptive Geometry replaces a primitive cutter with a shape you build from points and faces. Week 3 introduces 3D printing: you use units, orientation and slicing to prepare your CSG object for its first print.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
@@ -536,19 +529,19 @@ result  = difference(solid, cutters) # 9  difference
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S01 — [Constructive Solid Geometry](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend)**
 
 Scenes in this file: 01 - CSG example. Open them in the order listed.
 
-The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the native nodes; these controls are not in the modifier.
+The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the nodes themselves; these controls are not in the modifier.
 
 ## U03 — Descriptive Geometry
 
-Describe geometry through points, lines, edges and faces, then build a parametric solid.
+Describe geometry as points, lines, edges and faces, then build a solid you control with parameters.
 
 **Vocabulary:** point, vector, parameter, vertex, line, edge, face, mesh, solid, normal.
 
@@ -556,17 +549,17 @@ Describe geometry through points, lines, edges and faces, then build a parametri
 
 **Taught in:** [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/).
 
-1. Point — locate a point with XYZ values; distinguish position from displacement.
+1. Point — place a point with X, Y and Z values; tell a position (where something is) from a displacement (how far it moves).
 2. Line — connect two positions with a curve.
 3. Edge — connect two mesh vertices.
-4. Face — order its corners and explain the normal.
-5. Solid — build a pyramid from four base corners and an apex. Add four side faces and a base; check closure.
+4. Face — put its corners in order and explain which way its normal (its front side) points.
+5. Solid — build a pyramid from four base corners and a top point (the apex). Add four side faces and a base, and check that it is closed.
 6. Boolean — subtract the pyramid from a cube, revisiting CSG.
-7. Panel — define parameters, calculate corner points and order faces. Check closure and tiling across each parameter's range.
+7. Panel — define its parameters, calculate the corner points and put the faces in order. Check that it stays closed and tiles across the full range of each parameter.
 
-**Practice:** Keep Width, Depth and Height exposed. Show the five pyramid vertices, eight edges and five faces, demonstrate cube-minus-pyramid, then build your own module and present it with one student-authored material on a ground plane with key/fill/rim three-point lighting.
+**Practice:** Keep Width, Depth and Height as exposed inputs. Show the pyramid's five vertices, eight edges and five faces, and subtract it from a cube. Then build your own module and render it with one material you make, on a ground plane, with three-point lighting (key, fill and rim).
 
-**Use it next:** Use this module for the panel arrays on Sheets 1–2 of 3.2, then drive one geometric parameter using an attractor in 3.3. The CSG object remains the separate earlier print.
+**Use it next:** You will use this module for the panel arrays on Sheets 1–2 of 3.2, then vary one of its dimensions with an attractor in 3.3. The CSG object stays a separate, earlier print.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
@@ -587,19 +580,19 @@ result  = difference(cube, pyramid)
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S02 — [Descriptive Geometry](../files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend)**
 
 Scenes in this file: Point, Line, Edge, Face, Solid, Boolean. Open them in the order listed.
 
-Follow the six main teaching scenes. Original reference scenes remain in the file. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
+Follow the six main teaching scenes; the original reference scenes are still in the file. The pyramid keeps Width, Depth and Height exposed, and the file ends with the cube minus the pyramid. This lesson works in model units; nothing is exported for fabrication.
 
 ## U04 — Arrays
 
-Arrange your panel using lists, if statements and for loops, then explore a cube volume shaped by math.
+Arrange your panel with lists, loops and if statements, then explore a volume of cubes shaped by math.
 
 **Vocabulary:** list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase.
 
@@ -607,22 +600,22 @@ Arrange your panel using lists, if statements and for loops, then explore a cube
 
 **Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction.
 
-**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Patterns begin with a brick wall where every other course shifts; then use if/Switch to select between façade patterns, then shape a cube volume with mathematical functions of X and Y. Hexagonal and radial arrays are optional.
+**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Patterns start with a brick wall where every other course shifts; then if/Switch rules make façade patterns, and math functions of X and Y shape a volume of cubes. Hexagonal and radial arrays are optional.
 
-1. 1D: build a small linear array with Repeat Input and Repeat Output. Identify list, count and index.
-2. 2D: nest repetition into a grid. Identify rows and columns; predict the total count.
-3. 3D: repeat the grid in Z for a cube array. Predict Count cubed; distinguish instances from a sampled volume.
-4. Curve: bend the row. Sample a curve at even spacing and place your module at each point, turned to follow the curve's direction. The count comes from curve length ÷ spacing.
-5. Pattern example · Brick wall: repeat a curved row of bricks upward, one course per pass, and slide every other course half a brick (k modulo 2). Swap the curve for a circle.
-6. Use Compare and Switch for if conditions; make four different façade patterns by modifying selected panel instances.
-7. Use cubes for a volumetric array. Drive vertical variation with a function of X and Y, such as sine or cosine, while retaining layers in Z. Optionally use Switch conditions to create voids.
-8. Optional later practice · Hexagonal: stagger alternate rows; explain the odd/even test and row spacing.
-9. Optional later practice · Radial: place copies from radius, count and angular step.
-10. Optional later practice · Drive the curve with sine; explain amplitude, frequency and phase.
+1. 1D: build a small row with Repeat Input and Repeat Output. Find the list, the count and the index.
+2. 2D: put the row inside a second loop to make a grid. Name the rows and columns, and predict the total count.
+3. 3D: stack the grid in layers to make a cube of copies. Before you look, predict how many there are (Count × Count × Count). These are separate copies of one object, not a solid block.
+4. Curve: bend the row. Place your module at evenly spaced points along a curve, each turned to follow the curve's direction. The count is the curve's length ÷ the spacing.
+5. Pattern example · Brick wall: stack rows of bricks along a curve, one course at a time, and shift every other course by half a brick (k modulo 2). Then swap the curve for a circle.
+6. Use Compare and Switch to write if rules; make four different façade patterns by changing selected copies of your panel.
+7. Make an array of cubes in layers. Change their height with a function of X and Y, such as sine or cosine, while keeping the layers in Z. Optionally, use Switch to leave some cubes out and make voids.
+8. Optional practice · Hexagonal: shift every other row; explain the odd/even test and the row spacing.
+9. Optional practice · Radial: place copies around a circle from a radius, a count and an angle step.
+10. Optional practice · Drive the curve with a sine wave; explain amplitude (how high), frequency (how often it repeats) and phase (where it starts).
 
-**Practice:** 3.2 has three sheets. Sheet 1: four diagrams showing your module alone and in 1D, 2D and 3D arrays. Sheet 2: four façade patterns using your module and if/Switch conditions on a 2D array. Sheet 3: an isometric of an exploratory cube volume with vertical variation driven by X and Y; conditional voids are optional.
+**Practice:** 3.2 has three sheets. Sheet 1: four diagrams — your module alone, then in 1D, 2D and 3D arrays. Sheet 2: four façade patterns, made by applying if/Switch rules to a 2D array of your module. Sheet 3: an isometric of a volume of cubes whose height changes with X and Y; voids made by a rule are optional.
 
-**Use it next:** Reuse the panel definition on Sheets 1–2 of 3.2; conditionals may transform or omit instances. Use cubes on Sheet 3. Supplied library or student-authored materials are permitted. In 3.3 a sampled attractor field changes one panel geometry parameter across a façade.
+**Use it next:** Sheets 1–2 of 3.2 reuse your panel, and your rules may change or remove some of the copies. Sheet 3 uses cubes. You may use the supplied material library or your own materials. In 3.3 you'll use the distance to a point or a curve to change one dimension of your panel across a façade.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
@@ -681,9 +674,9 @@ for k in range(layers):
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S03 — [Arrays — Part 1: line, grid, cube, curve](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
 
@@ -693,26 +686,26 @@ Scenes in this file: Linear loop, Nested grid, 3D array, Along a curve. Open the
 
 Scenes in this file: 3D array, Hexagonal array, Radial array, If and range, Sine curve, Brick wall. Open them in the order listed.
 
-Before hexagonal arrays, the simple 3D array repeats a row into a grid and a grid into layers; Count, Spacing and Cube Size remain exposed. The last scene, Sine curve, uses math along X and Y and repetition in three dimensions to shape a volume of cubes. It introduces the later density and signed-distance lessons while retaining cube instances.
+The simple 3D array comes first: a row repeated into a grid, and the grid into layers, with Count, Spacing and Cube Size exposed. The last scene, Sine curve, uses math on X and Y and repetition in three directions to shape a volume of cubes. It points ahead to the density and signed-distance lessons while still using cubes.
 
 ## U05 — Attractor
 
-Use distance fields from points and curves to control geometric variation.
+Measure the distance to points and curves, see it as a grey field, and use it to vary geometry.
 
 **Vocabulary:** distance, external condition, field, remap, clamp, falloff, nearest.
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 09 — *not yet released*. One façade-attractor class. Combine one curve and one or two point attractors to drive a panel parameter. The next application of attractors is site analysis in Project 4.
+**Taught in:** Class 09 — *not yet released*. One class on façade attractors. Combine one curve and one or two point attractors to drive one panel dimension. You use attractors again for site analysis in Project 4.
 
-1. Measure distance to one point. Display a grayscale field before changing geometry.
-2. Set input and output ranges; remap, clamp and choose a falloff.
+1. Measure the distance to one point. Show it as a grey image before you change any geometry.
+2. Set input and output ranges; rescale the distance (remap), limit it (clamp) and choose how quickly its effect fades (falloff).
 3. Compare distance to one point, the nearest of several points and the nearest location on a curve.
-4. For the façade, measure distance to one curve and to one or two points at each panel location. Remap their influences and combine them to drive one geometric panel parameter. Compare a uniform baseline and two attractor configurations; present elevation and isometric views of the same final façade.
+4. For the façade, measure the distance from each panel to one curve and to one or two points. Rescale each influence, combine them, and use the result to drive one panel dimension. Compare a uniform façade with two attractor setups, and show an elevation and an isometric of the same final façade.
 
-**Practice:** 3.3: measure curve and point distances → remap and combine influences → drive one panel parameter. Use one curve and one or two point attractors together. Show elevation and isometric with the combined field and a legend. 4.1: carry the measurement logic into layered site analysis for the integrated project.
+**Practice:** 3.3: measure the distance to a curve and to points → rescale and combine their influence → use the result to drive one panel parameter. Use one curve and one or two point attractors together. Show an elevation and an isometric with the combined field and a legend. In 4.1 you carry the same measuring into layered site analysis for the final project.
 
-**Use it next:** The façade completes Project 3. Site analysis begins Project 4 and informs the SDF exploration, contouring and laser-cut model. Its separate analysis class applies attractor measurements to the prepared point cloud using supplied groups; it is taught under U07.
+**Use it next:** The façade completes Project 3. Site analysis starts Project 4 and feeds the volume exploration, contouring and laser-cut model. That analysis has its own class, where you apply attractor measurements to the prepared point cloud with supplied groups; it is taught with U07.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
@@ -733,9 +726,9 @@ for p in panel_locations:
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S05 — [Attractor](../files/blender/04-attractors/Attractors.blend)**
 
@@ -743,24 +736,24 @@ Scenes in this file: Read the field, One point, Multiple points, Curve attractor
 
 ## U07 — Volumetric Data and Fields
 
-Use supplied groups to interpret spatial samples and explore generative volumes controlled by fields.
+Use supplied groups to read spatial data and explore generative volumes.
 
 **Vocabulary:** sample, point cloud, origin, units, decimation, density, voxel, radius, scalar field, implicit surface, signed distance field, isosurface, threshold, noise, resolution.
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 10 — *not yet released*. Apply attractor measurements to the prepared point cloud using supplied groups. Produce two analytical layers and one design observation for the final project; this is distinct from the façade class.
+**Taught in:** Class 10 — *not yet released*. Apply attractor measurements to the prepared point cloud with the supplied groups. Make two analysis layers and one design observation for the final project. This class is separate from the façade class.
 
-**Taught in:** Class 11 — *not yet released*. Use supplied volume groups to explore three settings of one strategy and select a form for contouring.
+**Taught in:** Class 11 — *not yet released*. Use the supplied volume groups to explore three settings of one strategy, and choose a form for contouring.
 
-1. Open the prepared point cloud and identify its source, units and orientation. Use the supplied analysis groups to create two meaningful layers and state one design observation.
-2. Demonstrate how point samples, density, signed distance and an extracted boundary differ. Students need to explain the supplied groups' inputs and outputs; they do not rebuild the internal algorithms.
-3. Use supplied volume groups to explore one strategy, such as noise-driven form. Change scale, threshold or another meaningful control and save three settings.
-4. Select one result for contouring and fabrication. Demonstrate resolution and field Boolean operations as useful tools; a separate resolution or Boolean comparison is not a required submission.
+1. Open the prepared point cloud and note its source, units and orientation. Use the supplied analysis groups to make two meaningful layers and state one design observation.
+2. See how points, density, signed distance and an extracted boundary differ. You need to explain what the supplied groups take in and produce — not rebuild how they work inside.
+3. Use the supplied volume groups to explore one strategy, such as noise-driven form. Change the scale, the threshold or another meaningful control, and save three settings.
+4. Choose one result for contouring and fabrication. Resolution and Boolean operations on volumes are shown as useful tools; you don't submit a separate comparison of them.
 
-**Practice:** 4.1: two analytical layers and one design observation on one sheet. 4.2: three generative settings, a selected isometric and key parameters on one sheet. Use supplied groups and explain your design choices.
+**Practice:** 4.1: two analysis layers and one design observation on one sheet. 4.2: three settings of a generative volume, one chosen isometric and its key parameters on one sheet. Use the supplied groups and explain your design choices.
 
-**Use it next:** Discretizing Geometry translates the chosen volume into ordered contours and physical parts.
+**Use it next:** Next, Discretizing Geometry turns your chosen volume into ordered contours and physical parts.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
@@ -790,15 +783,15 @@ surface = extract(grid, iso=0.0)           # where the field is zero
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S07 — [Volumetric Data and Fields — point clouds](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)**
 
 Scenes in this file: Import points, Analyze points, Points to volume. Open them in the order listed.
 
-Keep the data folder together — the file reads teaching-courtyard.ply from beside it. It is a synthetic teaching cloud, not a survey.
+Keep the data folder together: the file reads teaching-courtyard.ply from the same folder. It is a made-up point cloud for teaching, not a site survey.
 
 Supporting files: [Teaching point cloud](../files/blender/06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](../files/blender/06-point-clouds-volumes/teaching-courtyard.json).
 
@@ -812,22 +805,22 @@ Scenes in this file: Noise field. Open them in the order listed.
 
 ## U09 — Discretizing Geometry
 
-Use contours and sections to translate a volumetric design into parts for fabrication.
+Use contours and sections to turn a volume into parts you can fabricate.
 
 **Vocabulary:** section plane, contour, interval, discretization, thickness, registration, kerf, nesting.
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 12 — *not yet released*. The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced during Weeks 13–15.
+**Taught in:** Class 12 — *not yet released*. The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, preparing cutting files, material and kerf tests, registration (how the parts line up), simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced in Weeks 13–15.
 
-1. Use the supplied contouring group to section the selected volume and order the resulting curves.
-2. Choose one direction and interval suited to the form, material thickness and model scale. Demonstrate alternatives in class; there is no fixed minimum slice count or required comparison sheet.
-3. Close and clean the intended profiles; turn them into parts with material thickness and a clear registration system.
-4. Test fit and kerf, then number, nest and fabricate the parts and document the assembly.
+1. Use the supplied contouring group to slice your volume and put the resulting curves in order.
+2. Choose one slicing direction and spacing that suit the form, the material thickness and the model scale. Alternatives are shown in class; there is no minimum number of slices and no comparison sheet to submit.
+3. Close and clean the profiles you want; turn them into parts with the material's thickness and a clear way to line them up (registration).
+4. Test the fit and the kerf, then number, nest and cut the parts, and document the assembly.
 
-**Practice:** Compare the continuous volume, its ordered contours and the discrete assembly. Explain what is lost and gained in the translation.
+**Practice:** Compare the continuous volume, its ordered contours and the assembled parts. Explain what is lost and gained along the way.
 
-**Use it next:** The selected 4.2 volume becomes the ordered parts of 4.3 and the laser-cut assembly of 4.4. Develop one fabrication sheet across both stages; printed components are optional.
+**Use it next:** The volume you choose in 4.2 becomes the ordered parts of 4.3 and the laser-cut model of 4.4. Build one fabrication sheet across both stages; printed parts are optional.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
@@ -847,9 +840,9 @@ for i, s in enumerate(sections):
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S10 — [Discretizing Geometry — contours](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend)**
 
@@ -863,24 +856,24 @@ Scenes in this file: Section parts, Laid out parts. Open them in the order liste
 
 Scenes in this file: Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings. Open them in the order listed.
 
-The exported files are default-parameter snapshots in millimetres. Regenerate them after edits and test physical fit before production. Modular parts are an optional reference. The required physical outputs are the CSG print (P2b) and laser-cut volume (P4b).
+The exported files are snapshots of the default settings, in millimetres. Export them again after any edit, and test the physical fit before production. The modular parts are an optional reference. The required physical outputs are the CSG print (P2b) and the laser-cut volume (P4b).
 
 Supporting files: [Fabrication notes and dimensions](../files/blender/09-final-project/FABRICATION-NOTES.md), [Small print STL](../files/blender/09-final-project/small-print-mm.stl), [Fit coupon STL](../files/blender/09-final-project/fit-coupon-mm.stl), [Modular parts STL](../files/blender/09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](../files/blender/09-final-project/section-parts-and-spacers-mm.svg).
 
 ## U10 — Final
 
-Assemble and document one laser-cut model, make selected revisions and complete the final booklet.
+Assemble and document one laser-cut model, make your chosen revisions and complete the final booklet.
 
 **Vocabulary:** fabrication, fit, assembly, documentation, revision.
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** Class 12 — *not yet released*. The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, cutting-file preparation, material/kerf tests, registration, simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced during Weeks 13–15.
+**Taught in:** Class 12 — *not yet released*. The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, preparing cutting files, material and kerf tests, registration (how the parts line up), simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced in Weeks 13–15.
 
 1. Test material, fit and connections before full production.
-2. Fabricate and assemble the selected parts within the confirmed lab allocation.
-3. Add photographs and observations to the fabrication sheet begun in 4.3; no separate model sheet is required.
-4. Make selected substantive revisions after critique. Reuse successful sheets and the Graphic Standards Manual; complete the booklet assembled during the semester and check all files.
+2. Fabricate and assemble the selected parts within your confirmed lab allocation.
+3. Add photographs and observations to the fabrication sheet you started in 4.3; you don't need a separate model sheet.
+4. After critique, make your chosen revisions. Reuse the sheets that worked and your Graphic Standards Manual; finish the booklet you have built through the semester and check all files.
 
 **Practice:** Bring a fabrication test, a documented revision and a booklet spread for review.
 
@@ -888,9 +881,9 @@ Assemble and document one laser-cut model, make selected revisions and complete 
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S10 — [Discretizing Geometry — contours](../files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend)**
 
@@ -904,7 +897,7 @@ Scenes in this file: Section parts, Laid out parts. Open them in the order liste
 
 Scenes in this file: Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings. Open them in the order listed.
 
-The exported files are default-parameter snapshots in millimetres. Regenerate them after edits and test physical fit before production. Modular parts are an optional reference. The required physical outputs are the CSG print (P2b) and laser-cut volume (P4b).
+The exported files are snapshots of the default settings, in millimetres. Export them again after any edit, and test the physical fit before production. The modular parts are an optional reference. The required physical outputs are the CSG print (P2b) and the laser-cut volume (P4b).
 
 Supporting files: [Fabrication notes and dimensions](../files/blender/09-final-project/FABRICATION-NOTES.md), [Small print STL](../files/blender/09-final-project/small-print-mm.stl), [Fit coupon STL](../files/blender/09-final-project/fit-coupon-mm.stl), [Modular parts STL](../files/blender/09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](../files/blender/09-final-project/section-parts-and-spacers-mm.svg).
 
@@ -912,27 +905,27 @@ Supporting files: [Fabrication notes and dimensions](../files/blender/09-final-p
 
 | Term | Meaning | Example / distinction |
 | --- | --- | --- |
-| parameter | An input you can change that controls a relationship or result. | Width, Depth and Height on the pyramid. |
-| vector | An ordered set of components representing direction and magnitude; XYZ values can also specify a position relative to an origin. | A displacement of (0, 0, 1) moves a point upward one model unit. |
+| parameter | An input you can change that controls a relationship or a result. | Width, Depth and Height on the pyramid. |
+| vector | A set of X, Y and Z values that gives a direction and a length (magnitude). The same values can also give a position measured from the origin. | A displacement of (0, 0, 1) moves a point upward one model unit. |
 | point | A location in space. | One XYZ position. |
-| vertex | A mesh element with a position that edges and faces can reference. | A corner of the pyramid. The plural is vertices. |
-| line or curve | A one-dimensional path; the example line connects two positions. | A curve is a different geometry component from a mesh edge. |
-| edge | A connection between two mesh vertices. | One side of a face boundary. |
-| face | A mesh surface bounded by an ordered cycle of vertices and edges. | One triangular side of the pyramid. |
-| mesh | Vertices, edges and faces together; a mesh can be open or closed. | Four triangular sides plus a base make the pyramid mesh. |
-| solid | A shape enclosing a volume; its mesh boundary must be closed and consistently oriented for the solid exercises. | The capped pyramid before Boolean subtraction. |
-| Boolean | Union combines regions, intersection keeps their overlap, and difference removes one from another. | Cube minus pyramid. |
-| list and index | An ordered collection and the position of an item in that collection. | Array points indexed from zero. A Blender field evaluates over geometry elements rather than exposing a general list socket. |
-| loop | An operation repeated a specified number of times, potentially carrying a result into the next iteration. | Repeat Input and Repeat Output define a Repeat Zone. |
-| nested loop | A repetition performed inside another repetition. | Columns generated for every row of a grid. |
-| conditional | A test that chooses a value or selects which elements change. | Compare plus Switch; Boolean Math combines range tests. |
-| field | A value evaluated at locations or elements in a stated domain. | Distance evaluated at every array point; later a scalar value sampled in a volume. |
-| attractor | An external point, collection or curve used to measure a condition that drives a parameter. | Distance remapped into component height. |
-| tessellation and lattice | A tessellation covers a surface with cells; a lattice organizes a connected network in space. | A panel surface and a node-and-strut system. |
-| point cloud | A collection of spatial samples, possibly carrying attributes such as color. | Imported site data; preserve its source and scale. |
-| voxel | A cell of a sampled three-dimensional grid. | Smaller cells can capture finer features at greater storage and computation cost. |
-| signed distance field | A scalar field storing signed distance to a boundary, using a stated inside/outside convention. | The zero level defines the boundary; arbitrary density or noise is not automatically distance. |
-| discretization | Representing a continuous form or function with a finite collection of samples or parts. | Turning a volume into ordered contour sections with material thickness. |
+| vertex | A corner point of a mesh; edges and faces are built from these points. | A corner of the pyramid. The plural is vertices. |
+| line or curve | A one-dimensional path; the example line joins two positions. | A curve is a different kind of geometry from a mesh edge. |
+| edge | A straight connection between two mesh vertices. | One side of a face boundary. |
+| face | A mesh surface bounded by vertices and edges, taken in order around its outline. | One triangular side of the pyramid. |
+| mesh | Vertices, edges and faces together. A mesh can be open or closed. | Four triangular sides plus a base make the pyramid mesh. |
+| solid | A shape that encloses a volume. For the solid exercises its mesh must be closed, with all faces pointing outward. | The capped pyramid before Boolean subtraction. |
+| Boolean | Union joins shapes, intersection keeps only where they overlap, and difference cuts one shape out of another. | Cube minus pyramid. |
+| list and index | A list is a set of items in order; the index is an item's position in that list. | Array points are numbered from zero. In Blender, a node works on every point at once rather than taking a list as an input. |
+| loop | An operation repeated a set number of times; each round can pass its result to the next. | Repeat Input and Repeat Output define a Repeat Zone. |
+| nested loop | A repetition inside another repetition. | For every row of a grid, the loop makes all its columns. |
+| conditional | A test that chooses a value, or chooses which copies change. | Compare plus Switch; Boolean Math combines tests such as "between two values". |
+| field | A value calculated for every point or element — for example, one value per copy in an array. | Distance calculated at every array point; later, a single value measured throughout a volume. |
+| attractor | A point, group of points or curve you place in the model; its distance from each element drives a parameter. | Distance rescaled (remapped) into the height of each piece. |
+| tessellation and lattice | A tessellation covers a surface with cells; a lattice is a connected network of members in space. | A paneled surface, and a system of nodes and struts. |
+| point cloud | A collection of points measured in space, which may also carry data such as color. | Imported site data; keep a record of its source and scale. |
+| voxel | One cell of a three-dimensional grid — a 3D pixel. | Smaller cells capture finer detail but take more memory and time to compute. |
+| signed distance field | A volume in which every cell stores its distance to the surface, with one sign for inside and the other for outside. | The surface is where the distance is zero. Density or noise values are not automatically distances. |
+| discretization | Describing a continuous form with a limited number of samples or parts. | Turning a volume into contour sections, in order, with material thickness. |
 
 ## Reading and documentation
 
@@ -979,11 +972,11 @@ Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a 
 
 ## Material availability
 
-Posted lessons link their Blender examples and screenshots. Use the examples as references while building your own work; the designated Project 4 node groups are supplied tools that students may reuse directly. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper, and for Arrays in Blender; other topics will follow.
+Each posted lesson links its Blender example files and screenshots. Use the examples as references while you build your own work; the Project 4 node groups are supplied tools you may reuse directly. Each class page links its slides once they are posted. Video tutorials are posted for CSG and Descriptive Geometry (Blender and Rhino + Grasshopper) and for Arrays (Blender); more will follow.
 
-**Project 4 tools:** instructors provide a prepared point-cloud dataset and analysis groups for 4.1, SDF/volume groups for 4.2, and contouring groups for 4.3. Students may use an approved alternative dataset. The teaching packages and usage notes will be linked before each assignment begins; students are not required to build these tools internally.
+**Project 4 tools:** instructors provide a prepared point cloud and analysis groups for 4.1, volume (SDF) groups for 4.2 and contouring groups for 4.3. You may use another point cloud if it is approved. The tools and instructions are posted before each assignment starts; you don't have to build them yourself.
 
-The 3.2 material library is planned and has not yet been linked. Students may create their own materials. Final-project laser-cut stock and machine slots remain to be confirmed; optional printing requires a separate allocation if used. Revised slide decks are not yet posted; use the current briefs and lesson notes.
+The 3.2 material library is planned but not posted yet, and you can always make your own materials. Laser-cut stock and machine times for the final project are still to be confirmed; optional printing needs a separate allocation. Where a class has no revised slides yet, use the current briefs and lesson notes.
 
 ## Decisions before issue
 

@@ -10,7 +10,7 @@ categories:
 
 ## U03 — Descriptive Geometry
 
-Describe geometry through points, lines, edges and faces, then build a parametric solid.
+Describe geometry as points, lines, edges and faces, then build a solid you control with parameters.
 
 **Vocabulary:** point, vector, parameter, vertex, line, edge, face, mesh, solid, normal.
 
@@ -22,17 +22,17 @@ Describe geometry through points, lines, edges and faces, then build a parametri
 
 **Taught in:** [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/).
 
-1. Point — locate a point with XYZ values; distinguish position from displacement.
+1. Point — place a point with X, Y and Z values; tell a position (where something is) from a displacement (how far it moves).
 2. Line — connect two positions with a curve.
 3. Edge — connect two mesh vertices.
-4. Face — order its corners and explain the normal.
-5. Solid — build a pyramid from four base corners and an apex. Add four side faces and a base; check closure.
+4. Face — put its corners in order and explain which way its normal (its front side) points.
+5. Solid — build a pyramid from four base corners and a top point (the apex). Add four side faces and a base, and check that it is closed.
 6. Boolean — subtract the pyramid from a cube, revisiting CSG.
-7. Panel — define parameters, calculate corner points and order faces. Check closure and tiling across each parameter's range.
+7. Panel — define its parameters, calculate the corner points and put the faces in order. Check that it stays closed and tiles across the full range of each parameter.
 
-**Practice:** Keep Width, Depth and Height exposed. Show the five pyramid vertices, eight edges and five faces, demonstrate cube-minus-pyramid, then build your own module and present it with one student-authored material on a ground plane with key/fill/rim three-point lighting.
+**Practice:** Keep Width, Depth and Height as exposed inputs. Show the pyramid's five vertices, eight edges and five faces, and subtract it from a cube. Then build your own module and render it with one material you make, on a ground plane, with three-point lighting (key, fill and rim).
 
-**Use it next:** Use this module for the panel arrays on Sheets 1–2 of 3.2, then drive one geometric parameter using an attractor in 3.3. The CSG object remains the separate earlier print.
+**Use it next:** You will use this module for the panel arrays on Sheets 1–2 of 3.2, then vary one of its dimensions with an attractor in 3.3. The CSG object stays a separate, earlier print.
 
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
@@ -53,9 +53,9 @@ result  = difference(cube, pyramid)
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Earlier Blender versions may lack the volume nodes used in the later classes. Select the lesson object; press Home over the node editor to see the graph. Follow the Frames in order. Change inputs on the nodes or, where provided, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then return to your work. Do not submit the example files unchanged. Designated Project 4 analysis, volume and contouring groups may be reused directly in your own project.
+Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
 
 **S02 — [Descriptive Geometry]({{ site.baseurl }}/files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend)**
 
@@ -63,7 +63,7 @@ Build your own file. Use these examples to check a step when you are stuck, then
 
 Scenes in this file: Point, Line, Edge, Face, Solid, Boolean. Open them in the order listed.
 
-Follow the six main teaching scenes. Original reference scenes remain in the file. The pyramid keeps Width, Depth and Height exposed and the file ends with cube-minus-pyramid. This is a model-units lesson, not a fabrication export.
+Follow the six main teaching scenes; the original reference scenes are still in the file. The pyramid keeps Width, Depth and Height exposed, and the file ends with the cube minus the pyramid. This lesson works in model units; nothing is exported for fabrication.
 
 ## Examples from the class files
 

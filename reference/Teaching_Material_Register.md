@@ -2,11 +2,11 @@
 
 # Teaching material register
 
-Posted lessons link their Blender examples and screenshots. Use the examples as references while building your own work; the designated Project 4 node groups are supplied tools that students may reuse directly. Each class page links its slides. Video tutorials are posted for CSG and Descriptive Geometry, in Blender and in Rhino + Grasshopper, and for Arrays in Blender; other topics will follow.
+Each posted lesson links its Blender example files and screenshots. Use the examples as references while you build your own work; the Project 4 node groups are supplied tools you may reuse directly. Each class page links its slides once they are posted. Video tutorials are posted for CSG and Descriptive Geometry (Blender and Rhino + Grasshopper) and for Arrays (Blender); more will follow.
 
-**Project 4 tools:** instructors provide a prepared point-cloud dataset and analysis groups for 4.1, SDF/volume groups for 4.2, and contouring groups for 4.3. Students may use an approved alternative dataset. The teaching packages and usage notes will be linked before each assignment begins; students are not required to build these tools internally.
+**Project 4 tools:** instructors provide a prepared point cloud and analysis groups for 4.1, volume (SDF) groups for 4.2 and contouring groups for 4.3. You may use another point cloud if it is approved. The tools and instructions are posted before each assignment starts; you don't have to build them yourself.
 
-The 3.2 material library is planned and has not yet been linked. Students may create their own materials. Final-project laser-cut stock and machine slots remain to be confirmed; optional printing requires a separate allocation if used. Revised slide decks are not yet posted; use the current briefs and lesson notes.
+The 3.2 material library is planned but not posted yet, and you can always make your own materials. Laser-cut stock and machine times for the final project are still to be confirmed; optional printing needs a separate allocation. Where a class has no revised slides yet, use the current briefs and lesson notes.
 
 | Unit | Topic | Blender session | Released | Recording / revised slides |
 | --- | --- | --- | --- | --- |

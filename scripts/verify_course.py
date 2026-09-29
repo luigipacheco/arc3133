@@ -85,8 +85,10 @@ def verify_sequence(course, site, documents, baseurl):
         stem = f'/slides/ARC3133_Class{number:02d}'
         review = next(r for r in course.data['presentation_review'] if r['week'] == number)
         slide_links = [baseurl + stem + suffix for suffix in ('.pdf', '.pptx')]
-        if review['status'] == 'current':
+        if review['status'] == 'current' or review.get('publish'):
             assert all(link in page.links for link in slide_links), f'Class slides missing: {number}'
+            if review['status'] == 'needs_revision':
+                assert 'Earlier slide deck' in ''.join(page.text), f'Missing revision notice: {number}'
         else:
             assert not any(link in page.links for link in slide_links), f'Unreviewed slides linked: {number}'
             assert 'Revised slides are not yet posted' in ''.join(page.text), f'Missing slide-status notice: {number}'

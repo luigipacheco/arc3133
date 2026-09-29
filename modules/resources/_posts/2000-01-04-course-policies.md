@@ -263,6 +263,7 @@ Parametric design: build a panel from points and faces; repeat it with loops, if
 - Reuse the 3.1 panel on Sheets 1–2. On Sheet 2 you may change or remove selected copies to make a pattern. Use cubes, not the panel, on Sheet 3.
 - Keep the diagrams simple, with the same view and material wherever studies are compared. Keep the lighting consistent; the four façade patterns don't need separate polished renders. Choose a suitable view for each array, and use isometric for the cube volume.
 - Build the repetition from basic nodes, starting with a count small enough to check by eye; there is no minimum number of copies.
+- Make every array fully parametric: expose row, column and layer counts and spacing in each used direction. Changing those inputs must rebuild the array and resize the panel or cube to fit its new cell without manual remodeling or repositioning. Preserve the intended gaps or edge contact.
 - Use materials from the library the instructors provide, or make your own. Note which materials you used and any changes; pack any textures. Materials must keep the spacing, depth and repetition of the array readable. The library will be posted before this assignment is due; making your own is equally fine.
 
 <a id="p3c"></a>

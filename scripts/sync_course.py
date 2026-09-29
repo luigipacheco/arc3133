@@ -211,8 +211,11 @@ class Course:
         assert [r['week'] for r in reviewed] == list(self.weeks), 'Review presentation coverage for every week'
         for r in reviewed:
             assert r['status'] in {'current', 'needs_revision', 'missing'} and r['note']
-            if r['status'] == 'current':
-                assert all((ROOT / 'slides' / f"ARC3133_Class{r['week']:02d}.{ext}").is_file() for ext in ('pptx', 'pdf')), 'Current slides need both formats'
+            assert r.get('publish', False) in (True, False), 'presentation_review.publish must be a boolean'
+            if r.get('publish'):
+                assert r['status'] != 'missing', 'Missing slides cannot be published'
+            if r['status'] == 'current' or r.get('publish'):
+                assert all((ROOT / 'slides' / f"ARC3133_Class{r['week']:02d}.{ext}").is_file() for ext in ('pptx', 'pdf')), 'Published slides need both formats'
 
     def emit(self, path, content):
         self.outputs[path] = content.rstrip() + "\n"
@@ -419,9 +422,9 @@ class Course:
         return out
 
     def slides(self, week):
-        """Only reviewed, current decks belong on weekly student pages."""
+        """Link current decks and explicitly released older decks on weekly pages."""
         review = next((r for r in self.data['presentation_review'] if r['week'] == week), None)
-        if review is None or review['status'] != 'current':
+        if review is None or (review['status'] != 'current' and not review.get('publish')):
             return 'Revised slides are not yet posted. Use the lesson notes and current assignment briefs.'
         stem = f"ARC3133_Class{week:02d}"
         found = [(label, f"/slides/{stem}{ext}")
@@ -429,7 +432,11 @@ class Course:
                  if (ROOT / "slides" / (stem + ext)).is_file()]
         if not found:
             return ""
-        return " · ".join(self.link(label, url) for label, url in found)
+        links = " · ".join(self.link(label, url) for label, url in found)
+        if review['status'] == 'needs_revision':
+            return ("**Earlier slide deck — revision pending.** Follow this class page and the current assignment "
+                    "briefs for requirements, deadlines and grading.\n\n" + links)
+        return links
 
     def project_spine(self):
         """The four projects as the course's spine: what you do, what it ends in."""

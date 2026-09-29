@@ -1125,6 +1125,10 @@ projects:
       each array, and use isometric for the cube volume."
     - "Build the repetition from basic nodes, starting with a count small enough
       to check by eye; there is no minimum number of copies."
+    - "Make every array fully parametric: expose row, column and layer counts
+      and spacing in each used direction. Changing those inputs must rebuild
+      the array and resize the panel or cube to fit its new cell without manual
+      remodeling or repositioning. Preserve the intended gaps or edge contact."
     - "Use materials from the library the instructors provide, or make your own.
       Note which materials you used and any changes; pack any textures.
       Materials must keep the spacing, depth and repetition of the array
@@ -1137,8 +1141,9 @@ projects:
         sheets using your Graphic Standards Manual."
       parameters:
       - "Whole-number counts Nx, Ny, Nz; positive spacings dx, dy, dz, measured
-        between module origins; a base point and array axes. Use one module
-        orientation on Sheet 1."
+        between module origins; a base point and array axes. Link module width,
+        depth and any relevant height to the cell dimensions so the geometry
+        adapts when spacing changes. Use one module orientation on Sheet 1."
       - "For each façade rule: what happens when it is true and when it is
         false, and its controls — for example, which rows, a rotation, a move,
         or keep/remove."
@@ -1165,6 +1170,9 @@ projects:
       workflow:
       - "Bring in your 3.1 module. Build a row, then a 2D and a 3D array from
         basic nodes, and check their counts."
+      - "Test at least two count and spacing settings for each array. The
+        module or cube must adapt to its cell dimensions, and copies must keep
+        their intended fit or gap without manually editing their geometry."
       - "Make four façade patterns from the 2D array. Check that each rule
         changes the copies you intended."
       - "Build a separate array of cubes in layers. Explore functions of X and
@@ -1185,24 +1193,30 @@ projects:
         whose height changes with a function of X and Y. Include the formula and
         final settings, and describe any optional rule for voids."
       - "**Editable graph** in `Lastname_Firstname_P3b/`, with labeled inputs,
-        saved settings and outputs for all three sheets. Pack the files it needs
-        and the textures, and add a note on where the materials come from. No
-        print is required."
+        saved settings and outputs for all three sheets. An instructor must be
+        able to change counts and spacing and see the arrays and modules update
+        without manual edits. Pack the files it needs and the textures, and add
+        a note on where the materials come from. No print is required."
       evaluation:
       - "**Computational understanding - 30%:** explain repetition in 1D, 2D and
-        3D, your if/Switch rules and your function of X and Y; show how their
-        controls change the results."
+        3D, your if/Switch rules and your function of X and Y; show how row,
+        column and layer counts and spacing control both array size and module
+        dimensions."
       - '**Visual communication - 30%:** the three sheets reveal repetition, façade patterns and the cube
         volume; captions and diagrams follow the Graphic Standards Manual.'
-      - "**Technical execution - 25%:** the array totals are correct, each rule
-        changes the copies it should, and the saved inputs reproduce every
-        output; Sheets 1–2 use the panel and Sheet 3 uses layered cubes."
+      - "**Technical execution - 25%:** changing counts and spacing in each
+        array rebuilds the copies and adapts each panel or cube to its new cell
+        without manual remodeling or repositioning. The intended fit or gap is
+        preserved, totals are correct, rules affect the intended copies, and
+        saved inputs reproduce every output. Sheets 1–2 use the panel and Sheet
+        3 uses layered cubes."
       - "**Exploration - 15%:** four distinct façade patterns and purposeful
         tests of the function support the result you choose. Voids remain
         optional."
       checklist:
       - Sheet 1 has exactly four diagrams showing the 3.1 module alone and in 1D, 2D and 3D arrays.
       - Axes, counts, spacing and totals are labeled for the basic arrays.
+      - Changing row, column and layer counts and spacing in the reopened graph updates every array and the module or cube dimensions without manual edits.
       - "Sheet 2 has four different façade patterns of your module, each with
         its if/Switch rule and what it does."
       - "Sheet 3 shows the cube volume in isometric, with several layers and
@@ -1963,27 +1977,33 @@ blender:
 presentation_review:
 - week: 1
   status: needs_revision
+  publish: true
   note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
     deck, then review before marking current.
 - week: 2
   status: needs_revision
+  publish: true
   note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
     deck, then review before marking current.
 - week: 3
   status: needs_revision
+  publish: true
   note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
     deck, then review before marking current.
 - week: 4
   status: needs_revision
+  publish: true
   note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
     deck, then review before marking current.
 - week: 5
   status: needs_revision
+  publish: true
   note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
     deck, then review before marking current.
 - week: 6
-  status: current
-  note: Rebuilt for the line, grid, cube, curve and wall sequence; renders from Arrays Part 1 scenes 01–05.
+  status: needs_revision
+  publish: true
+  note: The deck predates the fully parametric module-sizing requirement for Arrays 3.2. Use the current assignment brief for evaluation criteria.
 - week: 7
   status: needs_revision
   note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported

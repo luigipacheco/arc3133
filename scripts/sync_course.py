@@ -237,6 +237,9 @@ class Course:
     def midterm_note(self):
         return course_deadlines.note(self)
 
+    def midterm_deadline(self):
+        return course_deadlines.midterm_deadline(self)
+
     def midterm_summary(self, web=False):
         return course_deadlines.summary(self, web)
 
@@ -286,10 +289,11 @@ class Course:
             labels = [self.label(a) for a in due]
             if web:
                 labels = [self.link(label, self.assignment_url(a)) for label, a in zip(labels, due)]
-            labels = [label + (f" ({self.due_time(a)})" if self.due_time(a) else "") for label, a in zip(labels, due)]
+            labels = [label + (f" ({course_deadlines.short(self, a)})" if course_deadlines.short(self, a) else "") for label, a in zip(labels, due)]
             focus = w["title"]
             if w["week"] == self.meta.get("midterm_week"):
-                focus = "Midterm deadline and accumulated grade; " + focus[0].lower() + focus[1:]
+                early = any(course_deadlines.due_day(a) for a in due)
+                focus = ("Midterm grade; " if early else "Midterm deadline and accumulated grade; ") + focus[0].lower() + focus[1:]
             rows.append([w["week"], self.when(w["week"]).split(" — ")[1], focus, "; ".join(labels) or ("No graded submission" if w.get("no_due") else "—")])
         final = [a for a in self.assessments if a["due"] == "final"]
         rows.append(["Final", self.meta["final_window"], "Final review", "; ".join(self.label(a) for a in final) + "; revised GSM"])
@@ -507,7 +511,7 @@ class Course:
         out += table(["Tab", "What you will find"], [[self.link(name, url), text] for name, url, text in h["tabs"]]) + "\n"
         out += "## The semester\n\n"
         out += ("The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8, collects and grades everything through Arrays in Week 9 and introduces façade attractors in Week 10. Project 4 starts in Week 11; all new content ends by Week 13, leaving Weeks 14–15 for production and feedback. Everything through Arrays is due by "
-                + self.when(self.meta['midterm_week']) + ", the mid-semester deadline.\n\n")
+                + self.midterm_deadline() + ", the mid-semester deadline.\n\n")
         out += self.sequence_table() + "\n"
         out += "## Four projects\n\n" + self.project_spine() + "\n"
         out += self.midterm_note() + " " + self.link("Midterm grade calculation", "/assignments/overview/#midterm-grade") + "\n\n"

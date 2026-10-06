@@ -1,17 +1,17 @@
 {
   "P1": {
     "file": "files/assignments/P1-Graphic-Standards-Manual.pdf",
-    "source_sha256": "8253d957e814addb015e2ab91eb38506a769ac6c3c2add8c2102c7e760f25e0e",
-    "pdf_sha256": "ff716d60c980793c6e878184e542f04989aba7ab140b4214edef8e0906d848ca"
+    "source_sha256": "6538a1c3370bd98cce9518e2dff3e4cc5da65d521747b04afcdd13d42aeff648",
+    "pdf_sha256": "3cb27cfe2eebc1b022157a8b48e3e9005fe265fca91a8c6ab8206ca10c3d3fee"
   },
   "P2": {
     "file": "files/assignments/P2-CSG-Sheet-and-Print.pdf",
-    "source_sha256": "9eb3fa0ac6bd92777dbc0aff28f27a7669b9a910c2dae3f268aace94eb40c4e6",
-    "pdf_sha256": "1327ff79674f247f39da07e7699de225f1c81b22290cf6fd2fe8e59723474c1c"
+    "source_sha256": "5fb545550d597bd38bbe73d592a3065834572934214bfc79de68f87f8a282e04",
+    "pdf_sha256": "857414e727e713153688a10a77345e2914e820a727e2af3755f70e545f69658f"
   },
   "P3": {
     "file": "files/assignments/P3-Paneling-and-Arrays.pdf",
-    "source_sha256": "4afe63c7d853fc59074516b1103c96a888d74f3116edcdceb294780f04dc5864",
-    "pdf_sha256": "cf7febc8fc4436a600ffc056d67331f5c1a9d1d832974ea12e0061cae5121ce6"
+    "source_sha256": "bbcd2e04c2b408e90e54969e2facbb01732848259a9ee38dbc455987f15279dd",
+    "pdf_sha256": "a669eae98beac16bca957984eb7d0a9d066d6a8985a7b6ef1c12917fe6e31b20"
   }
 }

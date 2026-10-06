@@ -28,7 +28,7 @@ We work mainly in Blender Geometry Nodes, and the video tutorials also cover Rhi
 
 ## The semester
 
-The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8, collects and grades everything through Arrays in Week 9 and introduces façade attractors in Week 10. Project 4 starts in Week 11; all new content ends by Week 13, leaving Weeks 14–15 for production and feedback. Everything through Arrays is due by Week 9 — Oct 20, the mid-semester deadline.
+The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8, collects and grades everything through Arrays in Week 9 and introduces façade attractors in Week 10. Project 4 starts in Week 11; all new content ends by Week 13, leaving Weeks 14–15 for production and feedback. Everything through Arrays is due by Sun Oct 18, 11:59 PM Eastern Time, the mid-semester deadline.
 
 | Weeks | Topic | Classes | Video tutorials |
 |---|---|---|---|

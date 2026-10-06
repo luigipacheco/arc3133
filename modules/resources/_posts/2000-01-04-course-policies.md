@@ -55,11 +55,11 @@ Use your Graphic Standards Manual throughout. Composition, hierarchy, line weigh
 
 ## Learning pace and class format
 
-**Deadlines:** Everything through Arrays — the Graphic Standards Manual (1), the CSG sheet (2.1) and print (2.2), the module (3.1) and arrays (3.2) — is due on October 20 and graded together that week. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 20. October 5–9 is reserved for studio reviews, so nothing is due on October 6.
+**Deadlines:** Everything through Arrays — the Graphic Standards Manual (1), the CSG sheet (2.1) and print (2.2), the module (3.1) and arrays (3.2) — is due on Sunday, October 18 at 11:59 PM Eastern Time, and graded together that week. Bring the physical CSG print to the pin-up class on October 20. October 5–9 is reserved for studio reviews, so nothing is due on October 6.
 
-Your midterm grade is the total of the manual, the CSG sheet and print, the module and the arrays. There is no separate midterm assignment or review. Keep applying your manual to earlier work as you refine it for October 20.
+Your midterm grade is the total of the manual, the CSG sheet and print, the module and the arrays. There is no separate midterm assignment or review. Keep applying your manual to earlier work as you refine it for October 18.
 
-Arrays takes two classes in a row. September 29: loops and nested loops for 1D, 2D and 3D arrays, then a row bent onto a curve. October 6: patterns — a brick wall with every other course shifted — then if/Switch rules in 2D and the same rules in 3D; nothing is due that day. October 13 is supported practice on both Arrays lessons, the three array sheets and anything still open from earlier assignments; nothing is due. October 20 is the deadline for everything through Arrays, with a pin-up of that work and no new topic. Façade attractors are taught on October 27, and Project 4 starts on November 3; there is no separate review class for the whole course.
+Arrays takes two classes in a row. September 29: loops and nested loops for 1D, 2D and 3D arrays, then a row bent onto a curve. October 6: patterns — a brick wall with every other course shifted — then if/Switch rules in 2D and the same rules in 3D; nothing is due that day. October 13 is supported practice on both Arrays lessons, the three array sheets and anything still open from earlier assignments; nothing is due. Everything through Arrays is due Sunday, October 18; October 20 is a pin-up of that work with no new topic. Façade attractors are taught on October 27, and Project 4 starts on November 3; there is no separate review class for the whole course.
 
 The façade assignment starts October 27 and is due November 17. Project 4 starts with attractor-based site analysis on November 3, then volume exploration on November 10. November 17 is the last class with new content: the supplied contouring group, preparing cutting files, material and kerf tests, registration (how the parts line up), assembly and final documentation. Choose your volume at the ungraded check on November 17, test contours and assembly by November 24, and show fabrication progress on December 1. Weeks 14–15 are for production, individual feedback and documentation, with no new topics. The site-analysis sheet is due November 24; the rest of Project 4 and the booklet are due at the final review, December 10–16 (exact slot to be confirmed).
 
@@ -109,7 +109,7 @@ Plan for at least six hours of work outside class each week, including fabricati
 | 6 | Sep 29 | Arrays 1 — line, grid, cube, curve | — |
 | 7 | Oct 6 | Arrays 2 — if/Switch in 2D and 3D | No graded submission |
 | 8 | Oct 13 | Supported practice — Arrays 1 and 2 | No graded submission |
-| 9 | Oct 20 | Midterm deadline and accumulated grade; pin-up and grading — everything through Arrays | 1 — Graphic Standards Manual (11:59 PM Eastern Time); 2.1 — CSG process and instructions (11:59 PM Eastern Time); 2.2 — CSG 3D printed object (11:59 PM Eastern Time); 3.1 — Descriptive geometry module — material and three-point lighting (11:59 PM Eastern Time); 3.2 — Arrays (11:59 PM Eastern Time) |
+| 9 | Oct 20 | Midterm grade; pin-up and grading — everything through Arrays | 1 — Graphic Standards Manual (Sun Oct 18, 11:59 PM Eastern Time); 2.1 — CSG process and instructions (Sun Oct 18, 11:59 PM Eastern Time); 2.2 — CSG 3D printed object (Sun Oct 18, 11:59 PM Eastern Time); 3.1 — Descriptive geometry module — material and three-point lighting (Sun Oct 18, 11:59 PM Eastern Time); 3.2 — Arrays (Sun Oct 18, 11:59 PM Eastern Time) |
 | 10 | Oct 27 | Façade attractors — Project 3 | — |
 | 11 | Nov 3 | Attractor-based site analysis — Project 4 | — |
 | 12 | Nov 10 | Generative volume exploration — Project 4 | — |
@@ -138,11 +138,11 @@ Each stage of Project 4 is graded for something different: site analysis for a w
 
 | Assignment | Introduced | Due | Weight |
 | --- | --- | --- | --- |
-| 1 — Graphic Standards Manual | Week 1 — Aug 25 | Week 9 — Oct 20, 11:59 PM Eastern Time | 5% |
-| 2.1 — CSG process and instructions | Week 2 — Sep 1 | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
-| 2.2 — CSG 3D printed object | Week 3 — Sep 8 | Week 9 — Oct 20, 11:59 PM Eastern Time | 5% |
-| 3.1 — Descriptive geometry module — material and three-point lighting | Week 4 — Sep 15 | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
-| 3.2 — Arrays | Week 6 — Sep 29 | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
+| 1 — Graphic Standards Manual | Week 1 — Aug 25 | Sun Oct 18, 11:59 PM Eastern Time | 5% |
+| 2.1 — CSG process and instructions | Week 2 — Sep 1 | Sun Oct 18, 11:59 PM Eastern Time | 10% |
+| 2.2 — CSG 3D printed object | Week 3 — Sep 8 | Sun Oct 18, 11:59 PM Eastern Time | 5% |
+| 3.1 — Descriptive geometry module — material and three-point lighting | Week 4 — Sep 15 | Sun Oct 18, 11:59 PM Eastern Time | 10% |
+| 3.2 — Arrays | Week 6 — Sep 29 | Sun Oct 18, 11:59 PM Eastern Time | 10% |
 | 3.3 — Attractor-driven panel façade | Week 10 — Oct 27 | Week 13 — Nov 17, 11:59 PM Eastern Time | 10% |
 | 4.1 — Site analysis using attractors | Week 11 — Nov 3 | Week 14 — Nov 24, 11:59 PM Eastern Time | 5% |
 | 4.2 — SDF volumetric exploration | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
@@ -154,17 +154,17 @@ Each stage of Project 4 is graded for something different: site analysis for a w
 
 ## Midterm grade
 
-**Midterm deadline:** Week 9 — Oct 20.
+**Midterm deadline:** Sun Oct 18, 11:59 PM Eastern Time.
 
 The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 40% of the final course grade. Report the accumulated result as a percentage of those 40 possible course points. The midterm adds no separate assessment weight.
 
 | Included work | Due | Course weight |
 | --- | --- | --- |
-| [1 — Graphic Standards Manual]({{ site.baseurl }}/modules/assignments/p1-gsm/#gsm) | Week 9 — Oct 20, 11:59 PM Eastern Time | 5% |
-| [2.1 — CSG process and instructions]({{ site.baseurl }}/modules/assignments/p2-csg/#p2a) | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
-| [2.2 — CSG 3D printed object]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b) | Week 9 — Oct 20, 11:59 PM Eastern Time | 5% |
-| [3.1 — Descriptive geometry module — material and three-point lighting]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a) | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
-| [3.2 — Arrays]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3b) | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
+| [1 — Graphic Standards Manual]({{ site.baseurl }}/modules/assignments/p1-gsm/#gsm) | Sun Oct 18, 11:59 PM Eastern Time | 5% |
+| [2.1 — CSG process and instructions]({{ site.baseurl }}/modules/assignments/p2-csg/#p2a) | Sun Oct 18, 11:59 PM Eastern Time | 10% |
+| [2.2 — CSG 3D printed object]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b) | Sun Oct 18, 11:59 PM Eastern Time | 5% |
+| [3.1 — Descriptive geometry module — material and three-point lighting]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a) | Sun Oct 18, 11:59 PM Eastern Time | 10% |
+| [3.2 — Arrays]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3b) | Sun Oct 18, 11:59 PM Eastern Time | 10% |
 
 **Calculation:** add each assignment's earned course points (assignment percentage / 100 x its course weight), then divide the total by 40 and multiply by 100. Use the course's existing submission and late-work policies.
 
@@ -176,7 +176,7 @@ Create your own Graphic Standards Manual and apply it to every course presentati
 
 ### 1 — Graphic Standards Manual
 
-**Introduced:** Week 1 — Aug 25 · **Due:** Week 9 — Oct 20, 11:59 PM Eastern Time · **Weight:** 5%
+**Introduced:** Week 1 — Aug 25 · **Due:** Sun Oct 18, 11:59 PM Eastern Time · **Weight:** 5%
 
 **Present:** Four-page Graphic Standards Manual; PDF and editable layout.
 
@@ -199,7 +199,7 @@ Procedural design: build a CSG object through a clear sequence of operations. Ex
 
 ### 2.1 — CSG process and instructions
 
-**Introduced:** Week 2 — Sep 1 · **Due:** Week 9 — Oct 20, 11:59 PM Eastern Time · **Weight:** 10%
+**Introduced:** Week 2 — Sep 1 · **Due:** Sun Oct 18, 11:59 PM Eastern Time · **Weight:** 10%
 
 **Present:** One 17 x 11 inch diagram sheet with matching instructions (pseudocode); PDF and editable graph.
 
@@ -215,12 +215,12 @@ Procedural design: build a CSG object through a clear sequence of operations. Ex
 
 ### 2.2 — CSG 3D printed object
 
-**Introduced:** Week 3 — Sep 8 · **Due:** Week 9 — Oct 20, 11:59 PM Eastern Time · **Weight:** 5%
+**Introduced:** Week 3 — Sep 8 · **Due:** Sun Oct 18, 11:59 PM Eastern Time · **Weight:** 5%
 
 **Present:** One 3D printed CSG object, assembled if printed in parts; source, mesh, slicer files and brief fabrication notes.
 
 - Print a variant of your CSG object from P2a, within 60 mm on each axis and the 200 g allocation, without supports.
-- Hand in the physical print during class on the listed due date; submit digital files and brief fabrication notes by 11:59 PM Eastern Time that night. No additional presentation sheet is required.
+- Submit digital files and brief fabrication notes by the listed deadline, and hand in the physical print at the pin-up class on October 20. No additional presentation sheet is required.
 - Plan how to avoid supports: change the orientation, split the object into parts to assemble, or adjust overhangs. Bridging is allowed if it prints well on the printer you use.
 - Submit the editable source, the exported mesh and the slicer project. Explain any changes you made to the geometry so it would print.
 
@@ -236,7 +236,7 @@ Parametric design: build a panel from points and faces; repeat it with loops and
 
 ### 3.1 — Descriptive geometry module — material and three-point lighting
 
-**Introduced:** Week 4 — Sep 15 · **Due:** Week 9 — Oct 20, 11:59 PM Eastern Time · **Weight:** 10%
+**Introduced:** Week 4 — Sep 15 · **Due:** Sun Oct 18, 11:59 PM Eastern Time · **Weight:** 10%
 
 **Present:** One 17 x 11 inch sheet with three panel variations, point and face lists, and a parameter table; PDF and editable graph.
 
@@ -253,7 +253,7 @@ Parametric design: build a panel from points and faces; repeat it with loops and
 
 ### 3.2 — Arrays
 
-**Introduced:** Week 6 — Sep 29 · **Due:** Week 9 — Oct 20, 11:59 PM Eastern Time · **Weight:** 10%
+**Introduced:** Week 6 — Sep 29 · **Due:** Sun Oct 18, 11:59 PM Eastern Time · **Weight:** 10%
 
 **Present:** Three sheets — module and basic arrays, four conditional façade patterns, and two conditional 3D patterns; one PDF and editable graph.
 

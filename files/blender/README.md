@@ -8,9 +8,9 @@ First of two Arrays classes. Build a row, a grid and a layered array with loops 
 
 Second of two Arrays classes. Patterns start with a brick wall where every other course shifts; then if/Switch rules make façade patterns, and the same rules, reading the layer index, make 3D patterns in an array of cubes. Hexagonal and radial arrays and math-shaped volumes are optional.
 
-Supported practice, no new topic. Bring all three array sheets for feedback on repetition, index, counts and spacing, your if/Switch patterns in 2D and 3D, and anything still open before everything through Arrays is due on October 20.
+Supported practice, no new topic. Bring all three array sheets for feedback on repetition, index, counts and spacing, your if/Switch patterns in 2D and 3D, and anything still open before everything through Arrays is due on Sunday, October 18 at 11:59 PM.
 
-Everything through Arrays is due and pinned up: the manual, 2.1, 2.2 with the physical print, 3.1 and 3.2. No new topic; façade attractors start the following week.
+Everything through Arrays, submitted by Sunday, October 18 at 11:59 PM, is pinned up: the manual, 2.1, 2.2 with the physical print, 3.1 and 3.2. No new topic; façade attractors start the following week.
 
 One class on façade attractors. Combine one curve and one or two point attractors to drive one panel dimension. You use attractors again for site analysis in Project 4.
 

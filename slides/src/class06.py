@@ -72,7 +72,7 @@ def weights(mid):
 # 1 ── TITLE
 title_slide(d, WK, ["ARRAYS 1", "LINE · GRID · CUBE · CURVE"],
             "ONE MODULE, MANY POSITIONS", bg=LIME, lfill=PINK, rfill=CYAN,
-            right_tag="%s DUE %s" % (N21, C.date_long(A21["due"]).split(" — ")[1].upper()),
+            right_tag="%s DUE %s" % (N21, C.due_label("P2a").split(",")[0].upper()),
             foot="%s ISSUED TODAY  /  %s PRINT CHECK TODAY" % (N32, N22))
 
 # 2 ── AN ARRAY IS A LIST OF POSITIONS
@@ -271,8 +271,8 @@ for nm, col, body in checks:
     s.card(L + 2.9, y, W - 2.9, 0.72, fill=CREAM)
     s.t(L + 3.2, y, W - 3.5, 0.72, [s.Cb(body, 14)], anchor=MSO_ANCHOR.MIDDLE)
     y += 0.92
-s.banner(5.85, "%s: HAND IN THE PRINT IN CLASS, %s. DIGITAL FILES AND NOTES BY 11:59 PM THAT NIGHT."
-         % (N22, C.date_long(A22["due"]).upper()), fill=BLACK, color=LIME, h=0.7, size=12, align=PP_ALIGN.CENTER)
+s.banner(5.85, "%s: DIGITAL FILES AND NOTES BY %s. HAND IN THE PRINT AT THE PIN-UP, %s."
+         % (N22, C.due_label("P2b").upper(), C.date_long(A22["due"]).upper()), fill=BLACK, color=LIME, h=0.7, size=12, align=PP_ALIGN.CENTER)
 
 # 16 ── ISSUED — 3.2
 s = d.slide(BLACK)
@@ -301,7 +301,7 @@ now_slide(d, "NOW — SHEET 1",
            "The row nested into a grid: rows × columns predicted first",
            "The grid repeated in Z — 3, 4 and 5 per axis compared",
            "Your row bent onto a curve: edit the curve and watch the row follow",
-           "%s print checked before you queue it; everything through Arrays is due %s" % (N22, C.date_long(A32["due"]).split(" — ")[1])],
+           "%s print checked before you queue it; everything through Arrays is due %s" % (N22, C.due_label("P3b"))],
           closer="A COUNT YOU CAN COUNT. NOT A THOUSAND OF ANYTHING, YET.", bg=CYAN)
 
 # 19 ── BEFORE NEXT CLASS
@@ -309,7 +309,7 @@ before_next_slide(d, [
     ("NEXT", "%s: patterns — a brick wall with every other course shifted, if/Switch façade patterns, and the same rules in a 3D array of cubes (Sheets 2 and 3). "
              "Bring Sheet 1's graph working; we build on it." % C.date_long(7).title()),
     ("DUE", "Nothing graded next week (studio reviews) or the week after. Everything through Arrays — the manual, %s, the %s print, %s and %s, all three sheets — is due %s."
-            % (N21, N22, N31, N32, C.date_long(A32["due"]).split(" — ")[1])),
+            % (N21, N22, N31, N32, C.due_label("P3b"))),
     ("BUILD", "Finish Sheet 1: module alone, then 1D, 2D and 3D — counts, spacing, axes and totals labelled."),
     ("PRINT", "Fix anything today's check flagged, then queue %s." % N22),
 ])

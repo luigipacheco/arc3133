@@ -1,5 +1,16 @@
 """Assignment deadline display and cumulative midterm grading from course data."""
+from datetime import date
 import re
+
+
+def due_day(assignment):
+    """Optional due_date: a deadline on a non-class day, before the class (week) it belongs to."""
+    value = assignment.get("due_date")
+    return date.fromisoformat(str(value)) if value else None
+
+
+def day_label(d):
+    return f"{d.strftime('%a')} {d.strftime('%b')} {d.day}"
 
 
 def time_label(course, assignment):
@@ -12,13 +23,37 @@ def time_label(course, assignment):
 
 
 def deadline(course, assignment):
-    result = course.when(assignment["due"])
+    day = due_day(assignment)
+    result = day_label(day) if day else course.when(assignment["due"])
     time = time_label(course, assignment)
     return result + (", " + time if time else "")
 
 
+def short(course, assignment):
+    """Calendar-cell form: the time, plus the day when it is not the class day."""
+    day = due_day(assignment)
+    time = time_label(course, assignment)
+    if day:
+        return day_label(day) + (", " + time if time else "")
+    return time
+
+
+def midterm_deadline(course):
+    """The shared deadline of the work due at the midterm, or the midterm week itself."""
+    shared = {deadline(course, course.by_id[aid]) for aid in course.data["midterm_grade"]["due_at_midterm"]}
+    return shared.pop() if len(shared) == 1 else course.when(course.meta["midterm_week"])
+
+
 def validate(course):
     for assignment in course.assessments:
+        day = due_day(assignment)
+        if day:
+            week = assignment["due"]
+            assert isinstance(week, int), assignment["id"]
+            this = date.fromisoformat(str(course.weeks[week]["date"]))
+            before = [date.fromisoformat(str(w["date"])) for n, w in course.weeks.items() if n < week]
+            assert day <= this and (not before or day > max(before)), \
+                f"{assignment['id']}: due_date {day} must fall after the previous class and on or before Week {week}"
         if assignment.get("due_time"):
             assert re.fullmatch(r"(?:[01]\d|2[0-3]):[0-5]\d", assignment["due_time"])
             assert isinstance(assignment["due"], int) and course.meta["deadline_timezone"]
@@ -50,7 +85,7 @@ def summary(course, web=False):
     selected = members(course)
     total = sum(a["weight"] for a in selected)
     out = "## Midterm grade\n\n"
-    out += f"**Midterm deadline:** {course.when(course.meta['midterm_week'])}.\n\n" + note(course) + "\n\n"
+    out += f"**Midterm deadline:** {midterm_deadline(course)}.\n\n" + note(course) + "\n\n"
     out += "| Included work | Due | Course weight |\n| --- | --- | --- |\n"
     for a in selected:
         name = course.label(a)

@@ -65,7 +65,7 @@ decisions:
     using supplied node groups. Printed components are optional.
   - 'Use the instructor-approved grading allocation: 5%, 15%, 30%, 35% across the four projects, 10% booklet
     and 5% participation. Midterm accumulates the first five submissions (40% of the course).'
-  - 'All work through Arrays — 1, 2.1, 2.2, 3.1 and 3.2 — is due and graded on October 20 in a pin-up class with no new topic. Façade attractors move to October 27 and every Project 4 topic one week later; the 3.3 and 4.1 due dates are unchanged. The university midterm is October 13; the course is running a week behind, so grading follows on the 20th. Keep October 6 and December 1 free of graded submissions.'
+  - 'All work through Arrays — 1, 2.1, 2.2, 3.1 and 3.2 — is due Sunday, October 18 at 11:59 PM, which leaves two days to review it before grades go on Canvas; it is pinned up and graded on October 20 in a class with no new topic. Façade attractors move to October 27 and every Project 4 topic one week later; the 3.3 and 4.1 due dates are unchanged. The university midterm is October 13; the course is running a week behind, so grading follows on the 20th. Keep October 6 and December 1 free of graded submissions.'
   proposed:
   - Façade 3.3 due November 17 and site analysis 4.1 due November 24; 4.2–4.4 due at the final review with
     earlier ungraded production checks.
@@ -95,11 +95,11 @@ description: |
   Use your Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and the process easy to read.
 
 pacing: |
-  **Deadlines:** Everything through Arrays — the Graphic Standards Manual (1), the CSG sheet (2.1) and print (2.2), the module (3.1) and arrays (3.2) — is due on October 20 and graded together that week. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 20. October 5–9 is reserved for studio reviews, so nothing is due on October 6.
+  **Deadlines:** Everything through Arrays — the Graphic Standards Manual (1), the CSG sheet (2.1) and print (2.2), the module (3.1) and arrays (3.2) — is due on Sunday, October 18 at 11:59 PM Eastern Time, and graded together that week. Bring the physical CSG print to the pin-up class on October 20. October 5–9 is reserved for studio reviews, so nothing is due on October 6.
 
-  Your midterm grade is the total of the manual, the CSG sheet and print, the module and the arrays. There is no separate midterm assignment or review. Keep applying your manual to earlier work as you refine it for October 20.
+  Your midterm grade is the total of the manual, the CSG sheet and print, the module and the arrays. There is no separate midterm assignment or review. Keep applying your manual to earlier work as you refine it for October 18.
 
-  Arrays takes two classes in a row. September 29: loops and nested loops for 1D, 2D and 3D arrays, then a row bent onto a curve. October 6: patterns — a brick wall with every other course shifted — then if/Switch rules in 2D and the same rules in 3D; nothing is due that day. October 13 is supported practice on both Arrays lessons, the three array sheets and anything still open from earlier assignments; nothing is due. October 20 is the deadline for everything through Arrays, with a pin-up of that work and no new topic. Façade attractors are taught on October 27, and Project 4 starts on November 3; there is no separate review class for the whole course.
+  Arrays takes two classes in a row. September 29: loops and nested loops for 1D, 2D and 3D arrays, then a row bent onto a curve. October 6: patterns — a brick wall with every other course shifted — then if/Switch rules in 2D and the same rules in 3D; nothing is due that day. October 13 is supported practice on both Arrays lessons, the three array sheets and anything still open from earlier assignments; nothing is due. Everything through Arrays is due Sunday, October 18; October 20 is a pin-up of that work with no new topic. Façade attractors are taught on October 27, and Project 4 starts on November 3; there is no separate review class for the whole course.
 
   The façade assignment starts October 27 and is due November 17. Project 4 starts with attractor-based site analysis on November 3, then volume exploration on November 10. November 17 is the last class with new content: the supplied contouring group, preparing cutting files, material and kerf tests, registration (how the parts line up), assembly and final documentation. Choose your volume at the ungraded check on November 17, test contours and assembly by November 24, and show fabrication progress on December 1. Weeks 14–15 are for production, individual feedback and documentation, with no new topics. The site-analysis sheet is due November 24; the rest of Project 4 and the booklet are due at the final review, December 10–16 (exact slot to be confirmed).
 
@@ -661,6 +661,7 @@ projects:
     url_slug: graphic-standards-manual
     release: 1
     due: 9
+    due_date: '2026-10-18'
     weight: 5
     checkpoints:
     - week: 2
@@ -765,6 +766,7 @@ projects:
     kind: visual
     release: 2
     due: 9
+    due_date: '2026-10-18'
     weight: 10
     requirements:
     - "One 17 × 11 inch sheet laid out as a BIG-style process diagram (like
@@ -871,6 +873,7 @@ projects:
     kind: fabrication
     release: 3
     due: 9
+    due_date: '2026-10-18'
     checkpoints:
     - week: 6
       text: "Before you queue the print, check the geometry, units, orientation
@@ -879,8 +882,7 @@ projects:
     requirements:
     - Print a variant of your CSG object from P2a, within 60 mm on each axis and the 200 g allocation, without
       supports.
-    - Hand in the physical print during class on the listed due date; submit digital files and brief fabrication
-      notes by 11:59 PM Eastern Time that night. No additional presentation sheet is required.
+    - Submit digital files and brief fabrication notes by the listed deadline, and hand in the physical print at the pin-up class on October 20. No additional presentation sheet is required.
     - "Plan how to avoid supports: change the orientation, split the object into
       parts to assemble, or adjust overhangs. Bridging is allowed if it prints
       well on the printer you use."
@@ -985,6 +987,7 @@ projects:
     kind: visual
     release: 4
     due: 9
+    due_date: '2026-10-18'
     weight: 10
     requirements:
     - Choose a simple panel from a built precedent that tiles edge to edge in a 2 × 2 grid. Credit the building,
@@ -1099,6 +1102,7 @@ projects:
     kind: visual
     release: 6
     due: 9
+    due_date: '2026-10-18'
     weight: 10
     requirements:
     - Submit exactly three 17 x 11 inch landscape sheets together as one assignment.
@@ -1510,11 +1514,11 @@ weeks:
   no_due: true
 - week: 8
   date: '2026-10-13'
-  focus: "Supported practice; nothing is due. Bring all three array sheets and anything still open from 1, 2.1, 2.2 and 3.1: check the loops, counts and spacing of your 1D/2D/3D arrays and your if/Switch patterns in 2D and 3D, and fix problems before everything is due next week. No new topic."
+  focus: "Supported practice; nothing is due. Bring all three array sheets and anything still open from 1, 2.1, 2.2 and 3.1: check the loops, counts and spacing of your 1D/2D/3D arrays and your if/Switch patterns in 2D and 3D, and fix problems before everything is due on Sunday, October 18 at 11:59 PM. No new topic."
   no_due: true
 - week: 9
   date: '2026-10-20'
-  focus: "Everything through Arrays is due today: the manual (1), 2.1, 2.2 (bring the print), 3.1 and 3.2. The class is a pin-up and grading session for that work; no new topic. Façade attractors start next week."
+  focus: "Pin-up and grading of everything through Arrays — the manual (1), 2.1, 2.2, 3.1 and 3.2 — submitted by Sunday, October 18 at 11:59 PM. Bring the physical 2.2 print. No new topic. Façade attractors start next week."
 - week: 10
   date: '2026-10-27'
   focus: "Façade attractors for 3.3: combine one curve and one or two points to drive a panel parameter, then begin the elevation and isometric composition."
@@ -1647,7 +1651,7 @@ instructor_notes: |
 
   Project 4 follows analyze → generate → contour → laser-cut → assemble using supplied groups. Provide the analysis dataset/groups, volume tools and contouring tools before the respective assignments. Require two analytical layers and one observation in 4.1; three settings of one strategy and a selected isometric on one sheet in 4.2; and one chosen slicing direction/spacing with numbered parts and an assembly diagram in 4.3. Add final model photographs to that same fabrication sheet in 4.4. No mandatory Boolean comparison, floor plan, fixed slice minimum or final-project 3D print remains. Assess students' inputs, outputs, interpretation and design decisions, not reconstruction of the supplied algorithms.
 
-  The instructor approved the revised grading allocation: GSM, CSG print and site analysis are 5% each; the seven major design exercises are 10% each; booklet is 10% and participation is 5%. Midterm accumulates 40%. Project 4 remains 35%, with distinct assessment of spatial exploration, buildable parts and physical assembly. All work through Arrays is due in Week 9 (October 20) and graded together. Arrays has two taught classes (Weeks 6 and 7), followed by supported practice checking both in Week 8. Week 9 is pin-up and grading; Week 10 teaches façade attractors; Week 11 begins Project 4 site analysis. Week 12 teaches generative volumes. Week 13 completes contouring, cutting-file preparation, assembly and documentation using a prepared demonstration. Weeks 14–15 are production and feedback only. Use ungraded checks for volume selection November 17, contours/assembly tests November 24 and fabrication progress December 1. Confirm laser-cut stock and lab capacity before issuing the full Project 4 brief.
+  The instructor approved the revised grading allocation: GSM, CSG print and site analysis are 5% each; the seven major design exercises are 10% each; booklet is 10% and participation is 5%. Midterm accumulates 40%. Project 4 remains 35%, with distinct assessment of spatial exploration, buildable parts and physical assembly. All work through Arrays is due Sunday, October 18 at 11:59 PM and graded together in Week 9 (October 20). Arrays has two taught classes (Weeks 6 and 7), followed by supported practice checking both in Week 8. Week 9 is pin-up and grading; Week 10 teaches façade attractors; Week 11 begins Project 4 site analysis. Week 12 teaches generative volumes. Week 13 completes contouring, cutting-file preparation, assembly and documentation using a prepared demonstration. Weeks 14–15 are production and feedback only. Use ungraded checks for volume selection November 17, contours/assembly tests November 24 and fabrication progress December 1. Confirm laser-cut stock and lab capacity before issuing the full Project 4 brief.
 
   Detailed PDFs currently cover Projects 1–3. Project 4 has a simplified coordinated outline; prepare its detailed handout after verifying the supplied teaching packages and fabrication allocation. Existing slide decks and their generators need revision for the new sequence and numbering before reuse. Keep institutional policies and historical assets unchanged.
 
@@ -1732,14 +1736,14 @@ teaching_sequence:
   units: []
   sessions: []
   delivery: "Supported practice, no new topic. Bring all three array sheets for
-    feedback on repetition, index, counts and spacing, your if/Switch patterns in 2D and 3D, and anything still open before everything through Arrays is due on October 20."
+    feedback on repetition, index, counts and spacing, your if/Switch patterns in 2D and 3D, and anything still open before everything through Arrays is due on Sunday, October 18 at 11:59 PM."
 - id: B04-review
   weeks:
   - 9
   focus: Pin-up and grading — everything through Arrays
   units: []
   sessions: []
-  delivery: "Everything through Arrays is due and pinned up: the manual, 2.1, 2.2 with the physical print, 3.1 and 3.2. No new topic; façade attractors start the following week."
+  delivery: "Everything through Arrays, submitted by Sunday, October 18 at 11:59 PM, is pinned up: the manual, 2.1, 2.2 with the physical print, 3.1 and 3.2. No new topic; façade attractors start the following week."
 - id: B05
   weeks:
   - 10

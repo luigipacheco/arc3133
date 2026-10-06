@@ -80,12 +80,26 @@ def due_line(mid):
     """'DUE WEEK 8 — OCT 13   /   7%' for the ISSUED slide."""
     m = MILESTONES[mid]
     due = m.get("due")
-    if isinstance(due, int):
+    if m.get("due_date"):
+        d = "DUE " + due_label(mid).upper()
+    elif isinstance(due, int):
         d = "DUE " + date_long(due)
     else:
         d = "DUE " + str(due).upper()
     w = m.get("weight")
     return d + ("   /   %d%%" % w if w else "")
+
+def due_label(mid):
+    """'Sun Oct 18, 11:59 PM' when a deadline falls between classes; otherwise 'Week 9 — Oct 20'."""
+    m = MILESTONES[mid]
+    if m.get("due_date"):
+        d = datetime.date.fromisoformat(str(m["due_date"]))
+        out = "%s %s %d" % (d.strftime("%a"), d.strftime("%b"), d.day)
+        if m.get("due_time"):
+            h, mi = map(int, m["due_time"].split(":"))
+            out += ", %d:%02d %s" % (h % 12 or 12, mi, "PM" if h >= 12 else "AM")
+        return out
+    return date_long(m["due"]).title() if isinstance(m.get("due"), int) else str(m.get("due"))
 
 def requirements(mid):
     return list(MILESTONES[mid].get("requirements", []))

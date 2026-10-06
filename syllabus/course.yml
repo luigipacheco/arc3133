@@ -385,8 +385,14 @@ units:
   - phase
   goal: "Arrange your panel with lists, loops and if statements, then carry the same rules into a 3D array."
   videos:
-  - - Blender
+  - - Blender · Arrays part 1
     - https://youtu.be/q1z8YI7ExtY
+  - - Rhino + Grasshopper · GH list
+    - https://www.youtube.com/watch?v=ylHphXclA9w
+  - - Rhino + Grasshopper · Arrays part 1
+    - https://www.youtube.com/watch?v=ctf8qUgi_ZI
+  - - Rhino + Grasshopper · Arrays part 2
+    - https://www.youtube.com/watch?v=ymUSyCUqTL4
   steps:
   - "1D: build a small row with Repeat Input and Repeat Output. Find the list,
     the count and the index."
@@ -1510,7 +1516,7 @@ weeks:
   focus: "Build a loop and a nested loop — a 1D row, a 2D grid, then 3D layers — then bend the row onto a curve. Name the count, spacing and index in each direction. Check your CSG print file before queueing it."
 - week: 7
   date: '2026-10-06'
-  focus: "Use Compare and Switch to select between façade patterns — a brick wall with every other course shifted is the first example — then apply the same rules in 3D, using the layer index as well as rows and columns. Start from small examples; hexagonal and radial arrays and math-shaped volumes are optional. No graded submission this week (studio reviews)."
+  focus: "Use Compare and Switch to select between façade patterns — a brick wall with every other course shifted is the first example — then apply the same rules in 3D, using the layer index as well as rows and columns. Start from small examples; hexagonal and radial arrays and math-shaped volumes are optional. The Rhino + Grasshopper videos are posted; the Blender Arrays part 2 video is not out yet. No graded submission this week (studio reviews)."
   no_due: true
 - week: 8
   date: '2026-10-13'
@@ -1804,7 +1810,7 @@ teaching_sequence:
 
 release:
   note: |-
-    Course materials are posted through September 29 (Week 6), and assignments, tutorials and class materials are reviewed each week. Project briefs already list every submission; later class and tutorial pages are posted as each topic begins.
+    Course materials are posted through October 6 (Week 7), and assignments, tutorials and class materials are reviewed each week. Project briefs already list every submission; later class and tutorial pages are posted as each topic begins.
   classes:
     - 1
     - 2
@@ -1812,6 +1818,7 @@ release:
     - 4
     - 5
     - 6
+    - 7
   tutorials:
     - U01
     - U02
@@ -1976,8 +1983,9 @@ presentation_review:
   publish: true
   note: The deck predates the fully parametric module-sizing requirement for Arrays 3.2. Use the current assignment brief for evaluation criteria.
 - week: 7
-  status: needs_revision
-  note: Revised assignment structure and draft deadlines supersede this deck. Update both its source and exported
+  status: current
+  publish: true
+  note: Arrays Part 2 (conditionals) — brick wall, Sheet 2 façade rules and Sheet 3 rules that switch a parameter in 3D; matches the October 18 deadline.
     deck, then review before marking current.
 - week: 8
   status: needs_revision

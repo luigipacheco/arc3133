@@ -48,31 +48,45 @@ def issued_slide(d, mid, blurb=None, badge="ISSUED TODAY", badgefill=YELLOW, car
     return s
 
 
-def requirements_slide(d, mid, sub="Counting these earns a C. The rest is judgement.",
-                       extra=None, title=None):
-    """One numbered row per requirement, wrapped. Text is verbatim from course.yml."""
-    reqs = C.requirements(mid)
-    if extra:
-        reqs = reqs + list(extra)
-    s = d.slide(CREAM)
-    s.header(title or ("REQUIREMENTS — %s" % mid), sub)
+def _requirement_type(reqs):
+    """Row height and type size for a list of requirements, and whether the longest fits."""
     n = len(reqs)
     top, gap = 1.95, 0.16
     h = min(1.05, (6.55 - top - gap * (n - 1)) / n)
     # keep long requirements inside their row: ~95 characters per line at 13pt,
     # and a row fits h / 0.22 lines. Shrink the type rather than clip the text.
     longest = max((len(r) for r in reqs), default=0)
+    fits = lambda sz: (longest / (95 * 13.0 / sz)) <= int(h / (0.225 * sz / 13.0))
     size = 13.0
-    while size > 9.5 and (longest / (95 * 13.0 / size)) > int(h / (0.225 * size / 13.0)):
+    while size > 9.5 and not fits(size):
         size -= 0.5
-    y = top
+    return h, size, fits(size)
+
+
+def requirements_slide(d, mid, sub="Counting these earns a C. The rest is judgement.",
+                       extra=None, title=None, _reqs=None, _start=0, _last=True):
+    """One numbered row per requirement, wrapped. Text is verbatim from course.yml.
+    When the list cannot fit on one slide even at the smallest type, it continues on a second."""
+    reqs = _reqs if _reqs is not None else C.requirements(mid) + list(extra or [])
+    h, size, ok = _requirement_type(reqs)
+    if not ok and _reqs is None and len(reqs) > 3:
+        half = (len(reqs) + 1) // 2
+        base = title or ("REQUIREMENTS — %s" % mid)
+        requirements_slide(d, mid, sub, title=base + "  ·  1/2", _reqs=reqs[:half], _start=0, _last=False)
+        return requirements_slide(d, mid, sub, title=base + "  ·  2/2", _reqs=reqs[half:], _start=half)
+    s = d.slide(CREAM)
+    s.header(title or ("REQUIREMENTS — %s" % mid), sub)
+    gap = 0.16
+    y = 1.95
     for i, r in enumerate(reqs):
-        col = ACCENTS[i % len(ACCENTS)]
-        s.chip(L, y, 0.85, h, "%02d" % (i + 1), fill=col, size=15)
+        col = ACCENTS[(i + _start) % len(ACCENTS)]
+        s.chip(L, y, 0.85, h, "%02d" % (i + 1 + _start), fill=col, size=15)
         s.card(L + 1.15, y, W - 1.15, h, fill=CREAM)
         s.t(L + 1.45, y + 0.1, W - 1.75, h - 0.2, [s.Cb(r, size)], ls=1.25,
             anchor=MSO_ANCHOR.MIDDLE)
         y += h + gap
+    if not _last:
+        return s
     cps = C.checkpoints(mid)
     if cps:
         wk, txt = cps[0]

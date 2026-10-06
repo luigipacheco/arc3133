@@ -16,11 +16,17 @@ Arrange your panel with lists, loops and if statements, then carry the same rule
 
 **Video tutorials**
 
-{% include youtube.html id="q1z8YI7ExtY" title="Arrays — Blender" %}
+{% include youtube.html id="q1z8YI7ExtY" title="Arrays — Blender · Arrays part 1" %}
+
+{% include youtube.html id="ylHphXclA9w" title="Arrays — Rhino + Grasshopper · GH list" %}
+
+{% include youtube.html id="ctf8qUgi_ZI" title="Arrays — Rhino + Grasshopper · Arrays part 1" %}
+
+{% include youtube.html id="ymUSyCUqTL4" title="Arrays — Rhino + Grasshopper · Arrays part 2" %}
 
 **Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction.
 
-**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Patterns start with a brick wall where every other course shifts; then if/Switch rules make façade patterns, and the same rules, reading the layer index, make 3D patterns in an array of cubes. Hexagonal and radial arrays and math-shaped volumes are optional.
+**Taught in:** [Class 07]({{ site.baseurl }}/modules/classes/class-07/). Second of two Arrays classes. Patterns start with a brick wall where every other course shifts; then if/Switch rules make façade patterns, and the same rules, reading the layer index, make 3D patterns in an array of cubes. Hexagonal and radial arrays and math-shaped volumes are optional.
 
 1. 1D: build a small row with Repeat Input and Repeat Output. Find the list, the count and the index.
 2. 2D: put the row inside a second loop to make a grid. Name the rows and columns, and predict the total count.
@@ -103,6 +109,8 @@ Build your own file. Use these examples to check a step when you are stuck, then
 Scenes in this file: Linear loop, Nested grid, 3D array, Along a curve. Open them in the order listed.
 
 **S04 — [Arrays — Part 2: arrangements and rules]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend)**
+
+[Open the class that teaches this file]({{ site.baseurl }}/modules/classes/class-07/)
 
 Scenes in this file: 3D array, Hexagonal array, Radial array, If and range, Sine curve, Brick wall. Open them in the order listed.
 

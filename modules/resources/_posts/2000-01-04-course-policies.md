@@ -78,8 +78,8 @@ Plan for at least six hours of work outside class each week, including fabricati
 | 1 | Graphic Standards Manual | [Class 01]({{ site.baseurl }}/modules/classes/class-01/) | — |
 | 2–3 | Constructive Solid Geometry | [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/) | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/) | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
-| 6 | Arrays 1 — line, grid, cube, curve | [Class 06]({{ site.baseurl }}/modules/classes/class-06/) | [Blender](https://youtu.be/q1z8YI7ExtY) |
-| 7 | Arrays 2 — if/Switch in 2D and 3D | Class 07 — *not yet released* | [Blender](https://youtu.be/q1z8YI7ExtY) |
+| 6 | Arrays 1 — line, grid, cube, curve | [Class 06]({{ site.baseurl }}/modules/classes/class-06/) | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
+| 7 | Arrays 2 — if/Switch in 2D and 3D | [Class 07]({{ site.baseurl }}/modules/classes/class-07/) | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 — *not yet released* | — |
 | 9 | Façade attractors — Project 3 | Class 09 — *not yet released* | — |
 | 10 | Attractor-based site analysis — Project 4 | Class 10 — *not yet released* | — |

@@ -18,13 +18,13 @@ Each topic has lesson notes — the steps, vocabulary and pseudocode — and, wh
 | --- | --- |
 | Constructive Solid Geometry | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | Descriptive Geometry | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
-| Arrays | [Blender](https://youtu.be/q1z8YI7ExtY) |
+| Arrays | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
 
 More videos will be added as they are recorded.
 
 ## Lesson notes
 
-Course materials are posted through September 29 (Week 6), and assignments, tutorials and class materials are reviewed each week. Project briefs already list every submission; later class and tutorial pages are posted as each topic begins.
+Course materials are posted through October 6 (Week 7), and assignments, tutorials and class materials are reviewed each week. Project briefs already list every submission; later class and tutorial pages are posted as each topic begins.
 
 Open the posted lessons below; later lessons will be added as the course progresses.
 

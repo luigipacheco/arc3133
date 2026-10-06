@@ -28,7 +28,7 @@ We work mainly in Blender Geometry Nodes, and the video tutorials also cover Rhi
 
 ## The semester
 
-The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8, collects and grades everything through Arrays in Week 9 and introduces façade attractors in Week 10. Project 4 starts in Week 11; all new content ends by Week 13, leaving Weeks 14–15 for production and feedback. Everything through Arrays is due by Sun Oct 18, 11:59 PM Eastern Time, the mid-semester deadline.
+The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and introduces façade attractors in Week 9. Project 4 starts in Week 10; all new content ends by Week 12, leaving Weeks 13–15 for production and feedback. Everything through Arrays is due by Sun Oct 18, 11:59 PM Eastern Time, the mid-semester deadline.
 
 | Weeks | Topic | Classes | Video tutorials |
 |---|---|---|---|
@@ -38,12 +38,11 @@ The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8, colle
 | 6 | Arrays 1 — line, grid, cube, curve | [Class 06]({{ site.baseurl }}/modules/classes/class-06/) | [Blender](https://youtu.be/q1z8YI7ExtY) |
 | 7 | Arrays 2 — if/Switch in 2D and 3D | Class 07 — *not yet released* | [Blender](https://youtu.be/q1z8YI7ExtY) |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 — *not yet released* | — |
-| 9 | Pin-up and grading — everything through Arrays | Class 09 — *not yet released* | — |
-| 10 | Façade attractors — Project 3 | Class 10 — *not yet released* | — |
-| 11 | Attractor-based site analysis — Project 4 | Class 11 — *not yet released* | — |
-| 12 | Generative volume exploration — Project 4 | Class 12 — *not yet released* | — |
-| 13 | Contouring, laser-cut preparation and assembly | Class 13 — *not yet released* | — |
-| 14–15 | Production, feedback and documentation | Class 14 — *not yet released* · Class 15 — *not yet released* | — |
+| 9 | Façade attractors — Project 3 | Class 09 — *not yet released* | — |
+| 10 | Attractor-based site analysis — Project 4 | Class 10 — *not yet released* | — |
+| 11 | Generative volume exploration — Project 4 | Class 11 — *not yet released* | — |
+| 12 | Contouring, laser-cut preparation and assembly | Class 12 — *not yet released* | — |
+| 13–15 | Production, feedback and documentation | Class 13 — *not yet released* · Class 14 — *not yet released* · Class 15 — *not yet released* | — |
 
 ## Four projects
 

@@ -271,8 +271,8 @@ for nm, col, body in checks:
     s.card(L + 2.9, y, W - 2.9, 0.72, fill=CREAM)
     s.t(L + 3.2, y, W - 3.5, 0.72, [s.Cb(body, 14)], anchor=MSO_ANCHOR.MIDDLE)
     y += 0.92
-s.banner(5.85, "%s: DIGITAL FILES AND NOTES BY %s. HAND IN THE PRINT AT THE PIN-UP, %s."
-         % (N22, C.due_label("P2b").upper(), C.date_long(A22["due"]).upper()), fill=BLACK, color=LIME, h=0.7, size=12, align=PP_ALIGN.CENTER)
+s.banner(5.85, "%s: FILES, NOTES AND A PHOTO OF YOUR PRINT ON TEAMS BY %s."
+         % (N22, C.due_label("P2b").upper()), fill=BLACK, color=LIME, h=0.7, size=12, align=PP_ALIGN.CENTER)
 
 # 16 ── ISSUED — 3.2
 s = d.slide(BLACK)

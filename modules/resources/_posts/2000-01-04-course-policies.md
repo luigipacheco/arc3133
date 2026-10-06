@@ -36,7 +36,7 @@ In this course you use computational methods to make architectural drawings, mod
 
 **Up to the midterm:** Graphic Standards Manual → CSG sheet and print → your module from descriptive geometry → 1D, 2D and 3D arrays. You make one material and a three-point lighting setup for your module, then use supplied materials or your own for the array compositions.
 
-**Into Project 4:** the parametric façade starts in Week 10, using one curve and one or two point attractors; you keep refining its elevation and isometric for the November deadline. The generative project starts in Week 11 with supplied tools: site analysis (4.1), volume exploration (4.2), contouring (4.3) and laser-cut assembly (4.4). All new topics end by Week 13; Weeks 14–15 are for production, feedback and documentation. Printed parts are optional.
+**Into Project 4:** the parametric façade starts in Week 9, using one curve and one or two point attractors; you keep refining its elevation and isometric for the November deadline. The generative project starts in Week 10 with supplied tools: site analysis (4.1), volume exploration (4.2), contouring (4.3) and laser-cut assembly (4.4). All new topics end by Week 12; Weeks 13–15 are for production, feedback and documentation. Printed parts are optional.
 
 Use your Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and the process easy to read.
 
@@ -55,13 +55,13 @@ Use your Graphic Standards Manual throughout. Composition, hierarchy, line weigh
 
 ## Learning pace and class format
 
-**Deadlines:** Everything through Arrays — the Graphic Standards Manual (1), the CSG sheet (2.1) and print (2.2), the module (3.1) and arrays (3.2) — is due on Sunday, October 18 at 11:59 PM Eastern Time, and graded together that week. Bring the physical CSG print to the pin-up class on October 20. October 5–9 is reserved for studio reviews, so nothing is due on October 6.
+**Deadlines:** Everything through Arrays — the Graphic Standards Manual (1), the CSG sheet (2.1) and print (2.2), the module (3.1) and arrays (3.2) — is due on Sunday, October 18 at 11:59 PM Eastern Time. Upload every file to Teams, including a photograph of your printed CSG object; there is no pin-up and no physical hand-in. October 5–9 is reserved for studio reviews, so nothing is due on October 6.
 
 Your midterm grade is the total of the manual, the CSG sheet and print, the module and the arrays. There is no separate midterm assignment or review. Keep applying your manual to earlier work as you refine it for October 18.
 
-Arrays takes two classes in a row. September 29: loops and nested loops for 1D, 2D and 3D arrays, then a row bent onto a curve. October 6: patterns — a brick wall with every other course shifted — then if/Switch rules in 2D and the same rules in 3D; nothing is due that day. October 13 is supported practice on both Arrays lessons, the three array sheets and anything still open from earlier assignments; nothing is due. Everything through Arrays is due Sunday, October 18; October 20 is a pin-up of that work with no new topic. Façade attractors are taught on October 27, and Project 4 starts on November 3; there is no separate review class for the whole course.
+Arrays takes two classes in a row. September 29: loops and nested loops for 1D, 2D and 3D arrays, then a row bent onto a curve. October 6: patterns — a brick wall with every other course shifted — then if/Switch rules in 2D and the same rules in 3D; nothing is due that day. October 13 is supported practice on both Arrays lessons, the three array sheets and anything still open from earlier assignments; nothing is due. Everything through Arrays is due on Teams by Sunday, October 18, and façade attractors are taught on October 20. Project 4 starts on October 27; there is no separate review class for the whole course.
 
-The façade assignment starts October 27 and is due November 17. Project 4 starts with attractor-based site analysis on November 3, then volume exploration on November 10. November 17 is the last class with new content: the supplied contouring group, preparing cutting files, material and kerf tests, registration (how the parts line up), assembly and final documentation. Choose your volume at the ungraded check on November 17, test contours and assembly by November 24, and show fabrication progress on December 1. Weeks 14–15 are for production, individual feedback and documentation, with no new topics. The site-analysis sheet is due November 24; the rest of Project 4 and the booklet are due at the final review, December 10–16 (exact slot to be confirmed).
+The façade assignment starts October 20 and is due November 17. Project 4 starts with attractor-based site analysis on October 27, then volume exploration on November 3. November 10 is the last class with new content: the supplied contouring group, preparing cutting files, material and kerf tests, registration (how the parts line up), assembly and final documentation. Choose your volume at the ungraded check on November 10, test contours and assembly by November 17, and show fabrication progress on November 24. Weeks 13–15 are for production, individual feedback and documentation, with no new topics. The site-analysis sheet is due November 24; the rest of Project 4 and the booklet are due at the final review, December 10–16 (exact slot to be confirmed).
 
 Project 4 is one short, continuing project, not four separate design starts, so keep your volume and connection strategy focused. Nothing is graded October 5–9 or December 1–4.
 
@@ -81,12 +81,11 @@ Plan for at least six hours of work outside class each week, including fabricati
 | 6 | Arrays 1 — line, grid, cube, curve | [Class 06]({{ site.baseurl }}/modules/classes/class-06/) | [Blender](https://youtu.be/q1z8YI7ExtY) |
 | 7 | Arrays 2 — if/Switch in 2D and 3D | Class 07 — *not yet released* | [Blender](https://youtu.be/q1z8YI7ExtY) |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 — *not yet released* | — |
-| 9 | Pin-up and grading — everything through Arrays | Class 09 — *not yet released* | — |
-| 10 | Façade attractors — Project 3 | Class 10 — *not yet released* | — |
-| 11 | Attractor-based site analysis — Project 4 | Class 11 — *not yet released* | — |
-| 12 | Generative volume exploration — Project 4 | Class 12 — *not yet released* | — |
-| 13 | Contouring, laser-cut preparation and assembly | Class 13 — *not yet released* | — |
-| 14–15 | Production, feedback and documentation | Class 14 — *not yet released* · Class 15 — *not yet released* | — |
+| 9 | Façade attractors — Project 3 | Class 09 — *not yet released* | — |
+| 10 | Attractor-based site analysis — Project 4 | Class 10 — *not yet released* | — |
+| 11 | Generative volume exploration — Project 4 | Class 11 — *not yet released* | — |
+| 12 | Contouring, laser-cut preparation and assembly | Class 12 — *not yet released* | — |
+| 13–15 | Production, feedback and documentation | Class 13 — *not yet released* · Class 14 — *not yet released* · Class 15 — *not yet released* | — |
 
 ## Four projects built through short assignments
 
@@ -109,11 +108,11 @@ Plan for at least six hours of work outside class each week, including fabricati
 | 6 | Sep 29 | Arrays 1 — line, grid, cube, curve | — |
 | 7 | Oct 6 | Arrays 2 — if/Switch in 2D and 3D | No graded submission |
 | 8 | Oct 13 | Supported practice — Arrays 1 and 2 | No graded submission |
-| 9 | Oct 20 | Midterm grade; pin-up and grading — everything through Arrays | 1 — Graphic Standards Manual (Sun Oct 18, 11:59 PM Eastern Time); 2.1 — CSG process and instructions (Sun Oct 18, 11:59 PM Eastern Time); 2.2 — CSG 3D printed object (Sun Oct 18, 11:59 PM Eastern Time); 3.1 — Descriptive geometry module — material and three-point lighting (Sun Oct 18, 11:59 PM Eastern Time); 3.2 — Arrays (Sun Oct 18, 11:59 PM Eastern Time) |
-| 10 | Oct 27 | Façade attractors — Project 3 | — |
-| 11 | Nov 3 | Attractor-based site analysis — Project 4 | — |
-| 12 | Nov 10 | Generative volume exploration — Project 4 | — |
-| 13 | Nov 17 | Contouring, laser-cut preparation and assembly | 3.3 — Attractor-driven panel façade (11:59 PM Eastern Time) |
+| 9 | Oct 20 | Midterm grade; façade attractors — Project 3 | 1 — Graphic Standards Manual (Sun Oct 18, 11:59 PM Eastern Time); 2.1 — CSG process and instructions (Sun Oct 18, 11:59 PM Eastern Time); 2.2 — CSG 3D printed object (Sun Oct 18, 11:59 PM Eastern Time); 3.1 — Descriptive geometry module — material and three-point lighting (Sun Oct 18, 11:59 PM Eastern Time); 3.2 — Arrays (Sun Oct 18, 11:59 PM Eastern Time) |
+| 10 | Oct 27 | Attractor-based site analysis — Project 4 | — |
+| 11 | Nov 3 | Generative volume exploration — Project 4 | — |
+| 12 | Nov 10 | Contouring, laser-cut preparation and assembly | — |
+| 13 | Nov 17 | Production, feedback and documentation | 3.3 — Attractor-driven panel façade (11:59 PM Eastern Time) |
 | 14 | Nov 24 | Production, feedback and documentation | 4.1 — Site analysis using attractors (11:59 PM Eastern Time) |
 | 15 | Dec 1 | Production, feedback and documentation | No graded submission |
 | Final | December 10–16, 2026; exact review slot to be confirmed | Final review | 4.2 — SDF volumetric exploration; 4.3 — Discretizing the SDF; 4.4 — Laser-cut model and documentation; BOOK — Final booklet and review; revised GSM |
@@ -143,11 +142,11 @@ Each stage of Project 4 is graded for something different: site analysis for a w
 | 2.2 — CSG 3D printed object | Week 3 — Sep 8 | Sun Oct 18, 11:59 PM Eastern Time | 5% |
 | 3.1 — Descriptive geometry module — material and three-point lighting | Week 4 — Sep 15 | Sun Oct 18, 11:59 PM Eastern Time | 10% |
 | 3.2 — Arrays | Week 6 — Sep 29 | Sun Oct 18, 11:59 PM Eastern Time | 10% |
-| 3.3 — Attractor-driven panel façade | Week 10 — Oct 27 | Week 13 — Nov 17, 11:59 PM Eastern Time | 10% |
-| 4.1 — Site analysis using attractors | Week 11 — Nov 3 | Week 14 — Nov 24, 11:59 PM Eastern Time | 5% |
-| 4.2 — SDF volumetric exploration | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
-| 4.3 — Discretizing the SDF | Week 13 — Nov 17 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
-| 4.4 — Laser-cut model and documentation | Week 13 — Nov 17 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
+| 3.3 — Attractor-driven panel façade | Week 9 — Oct 20 | Week 13 — Nov 17, 11:59 PM Eastern Time | 10% |
+| 4.1 — Site analysis using attractors | Week 10 — Oct 27 | Week 14 — Nov 24, 11:59 PM Eastern Time | 5% |
+| 4.2 — SDF volumetric exploration | Week 11 — Nov 3 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
+| 4.3 — Discretizing the SDF | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
+| 4.4 — Laser-cut model and documentation | Week 12 — Nov 10 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
 | BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 10–16, 2026; exact review slot to be confirmed | 10% |
 | PART — Attendance and participation | Week 1 — Aug 25 | Throughout the semester | 5% |
 | Total |  |  | 100% |
@@ -220,7 +219,7 @@ Procedural design: build a CSG object through a clear sequence of operations. Ex
 **Present:** One 3D printed CSG object, assembled if printed in parts; source, mesh, slicer files and brief fabrication notes.
 
 - Print a variant of your CSG object from P2a, within 60 mm on each axis and the 200 g allocation, without supports.
-- Submit digital files and brief fabrication notes by the listed deadline, and hand in the physical print at the pin-up class on October 20. No additional presentation sheet is required.
+- Submit digital files and brief fabrication notes by the listed deadline, and upload them to Teams with a photograph of the printed object by the same deadline. The physical print is not handed in. No additional presentation sheet is required.
 - Plan how to avoid supports: change the orientation, split the object into parts to assemble, or adjust overhangs. Bridging is allowed if it prints well on the printer you use.
 - Submit the editable source, the exported mesh and the slicer project. Explain any changes you made to the geometry so it would print.
 
@@ -271,7 +270,7 @@ Parametric design: build a panel from points and faces; repeat it with loops and
 
 ### 3.3 — Attractor-driven panel façade
 
-**Introduced:** Week 10 — Oct 27 · **Due:** Week 13 — Nov 17, 11:59 PM Eastern Time · **Weight:** 10%
+**Introduced:** Week 9 — Oct 20 · **Due:** Week 13 — Nov 17, 11:59 PM Eastern Time · **Weight:** 10%
 
 **Present:** One façade composition: elevation, isometric, attractor/parameter diagram and controlled comparisons; PDF and editable graph.
 
@@ -284,7 +283,7 @@ Parametric design: build a panel from points and faces; repeat it with loops and
 
 **Ungraded checkpoints:**
 
-- Week 11 — Nov 3: Bring a uniform façade and a first test in which one curve and one or two point attractors change one panel dimension.
+- Week 10 — Oct 27: Bring a uniform façade and a first test in which one curve and one or two point attractors change one panel dimension.
 
 ## P4 — Integrated Spatial Project
 
@@ -294,7 +293,7 @@ Generative design: use supplied analysis, volume and contouring tools to explore
 
 ### 4.1 — Site analysis using attractors
 
-**Introduced:** Week 11 — Nov 3 · **Due:** Week 14 — Nov 24, 11:59 PM Eastern Time · **Weight:** 5%
+**Introduced:** Week 10 — Oct 27 · **Due:** Week 14 — Nov 24, 11:59 PM Eastern Time · **Weight:** 5%
 
 **Present:** One 17 x 11 inch site-analysis sheet with two analytical layers and one design observation; PDF, working file and source record.
 
@@ -305,13 +304,13 @@ Generative design: use supplied analysis, volume and contouring tools to explore
 
 **Ungraded checkpoints:**
 
-- Week 12 — Nov 10: Bring the prepared dataset or an approved alternative, source/units, and two analytical layers with legends.
+- Week 11 — Nov 3: Bring the prepared dataset or an approved alternative, source/units, and two analytical layers with legends.
 
 <a id="p4b"></a>
 
 ### 4.2 — SDF volumetric exploration
 
-**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
+**Introduced:** Week 11 — Nov 3 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
 **Present:** One 17 x 11 inch sheet with three generative variations, the selected isometric and key parameters; PDF and editable volume source.
 
@@ -323,13 +322,13 @@ Generative design: use supplied analysis, volume and contouring tools to explore
 
 **Ungraded checkpoints:**
 
-- Week 13 — Nov 17: Ungraded production check: before contouring, bring three generative settings, your chosen volume in isometric and the scale you plan for the model.
+- Week 12 — Nov 10: Ungraded production check: before contouring, bring three generative settings, your chosen volume in isometric and the scale you plan for the model.
 
 <a id="p4c"></a>
 
 ### 4.3 — Discretizing the SDF
 
-**Introduced:** Week 13 — Nov 17 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
+**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
 **Present:** One 17 x 11 inch fabrication sheet, continued in 4.4; PDF, editable source and full-size numbered cutting file.
 
@@ -341,13 +340,13 @@ Generative design: use supplied analysis, volume and contouring tools to explore
 
 **Ungraded checkpoints:**
 
-- Week 14 — Nov 24: Ungraded production check: bring numbered contours, a cutting layout, an assembly diagram and a small test of the material and how the parts line up.
+- Week 13 — Nov 17: Ungraded production check: bring numbered contours, a cutting layout, an assembly diagram and a small test of the material and how the parts line up.
 
 <a id="p4d"></a>
 
 ### 4.4 — Laser-cut model and documentation
 
-**Introduced:** Week 13 — Nov 17 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
+**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 10–16, 2026; exact review slot to be confirmed · **Weight:** 10%
 
 **Present:** One assembled laser-cut model and the completed 4.3 fabrication sheet with photographs; source, cutting file and material/part list. Print files only if used.
 
@@ -360,7 +359,7 @@ Generative design: use supplied analysis, volume and contouring tools to explore
 
 **Ungraded checkpoints:**
 
-- Week 15 — Dec 1: Ungraded fabrication check: show a tested sample, assembly strategy, cutting progress and a remaining-work plan.
+- Week 14 — Nov 24: Ungraded fabrication check: show a tested sample, assembly strategy, cutting progress and a remaining-work plan.
 
 ## Visual identity and course reviews
 

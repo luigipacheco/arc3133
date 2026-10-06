@@ -6,12 +6,12 @@
   },
   "P2": {
     "file": "files/assignments/P2-CSG-Sheet-and-Print.pdf",
-    "source_sha256": "5fb545550d597bd38bbe73d592a3065834572934214bfc79de68f87f8a282e04",
-    "pdf_sha256": "857414e727e713153688a10a77345e2914e820a727e2af3755f70e545f69658f"
+    "source_sha256": "ac61389b47508117c084adaab533d485e8ff61d4ac3d439b71527bf7f0639187",
+    "pdf_sha256": "d5e05acbc061061e1a2924462176962f88883ede40a026f9cb33437c37add254"
   },
   "P3": {
     "file": "files/assignments/P3-Paneling-and-Arrays.pdf",
-    "source_sha256": "bbcd2e04c2b408e90e54969e2facbb01732848259a9ee38dbc455987f15279dd",
-    "pdf_sha256": "a669eae98beac16bca957984eb7d0a9d066d6a8985a7b6ef1c12917fe6e31b20"
+    "source_sha256": "33890e60ba8ca40c173e709e3132d3b3bf580a7d6a6ecc35a88ad25cd601fbf0",
+    "pdf_sha256": "3653e824319fbdf29bba0a53a22e0f01d882ad09033b525211de4ef987ced4f5"
   }
 }

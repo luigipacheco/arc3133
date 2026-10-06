@@ -10,7 +10,7 @@ categories:
 
 ## U04 — Arrays
 
-Arrange your panel with lists, loops and if statements, then explore a volume of cubes shaped by math.
+Arrange your panel with lists, loops and if statements, then carry the same rules into a 3D array.
 
 **Vocabulary:** list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase.
 
@@ -20,7 +20,7 @@ Arrange your panel with lists, loops and if statements, then explore a volume of
 
 **Taught in:** [Class 06]({{ site.baseurl }}/modules/classes/class-06/). First of two Arrays classes. Build a row, a grid and a layered array with loops and nested loops, then bend the row onto a curve. Name the count, spacing and index in each direction.
 
-**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Patterns start with a brick wall where every other course shifts; then if/Switch rules make façade patterns, and math functions of X and Y shape a volume of cubes. Hexagonal and radial arrays are optional.
+**Taught in:** Class 07 — *not yet released*. Second of two Arrays classes. Patterns start with a brick wall where every other course shifts; then if/Switch rules make façade patterns, and the same rules, reading the layer index, make 3D patterns in an array of cubes. Hexagonal and radial arrays and math-shaped volumes are optional.
 
 1. 1D: build a small row with Repeat Input and Repeat Output. Find the list, the count and the index.
 2. 2D: put the row inside a second loop to make a grid. Name the rows and columns, and predict the total count.
@@ -28,12 +28,13 @@ Arrange your panel with lists, loops and if statements, then explore a volume of
 4. Curve: bend the row. Place your module at evenly spaced points along a curve, each turned to follow the curve's direction. The count is the curve's length ÷ the spacing.
 5. Pattern example · Brick wall: stack rows of bricks along a curve, one course at a time, and shift every other course by half a brick (k modulo 2). Then swap the curve for a circle.
 6. Use Compare and Switch to write if rules; make four different façade patterns by changing selected copies of your panel.
-7. Make an array of cubes in layers. Change their height with a function of X and Y, such as sine or cosine, while keeping the layers in Z. Optionally, use Switch to leave some cubes out and make voids.
-8. Optional practice · Hexagonal: shift every other row; explain the odd/even test and the row spacing.
-9. Optional practice · Radial: place copies around a circle from a radius, a count and an angle step.
-10. Optional practice · Drive the curve with a sine wave; explain amplitude (how high), frequency (how often it repeats) and phase (where it starts).
+7. 3D patterns: build a 3D array of cubes and let if/Switch rules on the row, column and layer index (i, j, k) drive a parameter — the Switch picks one of two values for size, rotation or height, or keeps or removes the cube. Use the layer index in at least one rule, so the pattern changes from layer to layer as well as across it.
+8. Optional practice · Change the cubes' height with a function of X and Y, such as sine or cosine, while keeping the layers in Z (the Sine curve scene).
+9. Optional practice · Hexagonal: shift every other row; explain the odd/even test and the row spacing.
+10. Optional practice · Radial: place copies around a circle from a radius, a count and an angle step.
+11. Optional practice · Drive the curve with a sine wave; explain amplitude (how high), frequency (how often it repeats) and phase (where it starts).
 
-**Practice:** 3.2 has three sheets. Sheet 1: four diagrams — your module alone, then in 1D, 2D and 3D arrays. Sheet 2: four façade patterns, made by applying if/Switch rules to a 2D array of your module. Sheet 3: an isometric of a volume of cubes whose height changes with X and Y; voids made by a rule are optional.
+**Practice:** 3.2 has three sheets. Sheet 1: four diagrams — your module alone, then in 1D, 2D and 3D arrays. Sheet 2: four façade patterns, made by applying if/Switch rules to a 2D array of your module. Sheet 3: two isometrics of a 3D array of cubes in which if/Switch rules on the row, column and layer index switch a parameter between two values; at least one rule uses the layer.
 
 **Use it next:** Sheets 1–2 of 3.2 reuse your panel, and your rules may change or remove some of the copies. Sheet 3 uses cubes. You may use the supplied material library or your own materials. In 3.3 you'll use the distance to a point or a curve to change one dimension of your panel across a façade.
 
@@ -64,7 +65,7 @@ for i in range(count):
     p, d = point_on(curve, t), direction_on(curve, t)
     curved_row.append(place_module(p, facing=d))
 
-# Arrays class 2: if / Switch and mathematical functions.
+# Arrays class 2: if / Switch in 2D, then in 3D.
 # Sheet 2: one possible facade pattern
 for j in range(rows):
     for i in range(cols):
@@ -79,15 +80,14 @@ for k in range(courses):
         p, d = point_on(curve, t), direction_on(curve, t)
         place_brick(p + d * shift + (0, 0, k * height), facing=d)
 
-# Sheet 3: cubes in layers, displaced by a function of X and Y
+# Sheet 3: the same rules in 3D. A rule picks one of two values for a parameter
 for k in range(layers):
     for j in range(rows):
         for i in range(cols):
-            x, y = i * dx, j * dy
-            height = A * sin(fx * x + px) + B * cos(fy * y + py)
-            z = k * dz + height
-            if keep_cube(i, j, k):          # optional void rule; otherwise True
-                place_cube(x, y, z)
+            checker = (i + j + k) % 2 == 0          # a 3D checkerboard
+            size = big if checker else small        # Switch: two options, one parameter
+            turn = 45 if k % 2 else 0               # the layer index drives rotation
+            place_cube(i * dx, j * dy, k * dz, size, turn)
 ```
 
 ### Blender files for this lesson

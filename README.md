@@ -8,7 +8,7 @@
 
 Edit [syllabus/course.yml](syllabus/course.yml) for the teaching sequence, short assignments, project connections, calendar and grading. Standing policy wording is maintained only in [syllabus/policies.md](syllabus/policies.md). The readable syllabi and current course pages are generated from those sources.
 
-The `teaching_sequence` block is authoritative: its blocks determine the required order, target weeks, lesson membership and session placement. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise. All new required content ends by Week 12; Weeks 13–15 are for production and feedback.
+The `teaching_sequence` block is authoritative: its blocks determine the required order, target weeks, lesson membership and session placement. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise. All new required content ends by Week 13; Weeks 14–15 are for production and feedback.
 
 - [Student syllabus](syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md)
 - [Full syllabus and instructor notes](syllabus/ARC3133_Syllabus_Fall2026.md)
@@ -23,13 +23,14 @@ The `teaching_sequence` block is authoritative: its blocks determine the require
 | 2–3 | Constructive Solid Geometry | Class 02 · Class 03 | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | Class 04 · Class 05 | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
 | 6 | Arrays 1 — line, grid, cube, curve | Class 06 | [Blender](https://youtu.be/q1z8YI7ExtY) |
-| 7 | Arrays 2 — if/Switch and math functions | Class 07 | [Blender](https://youtu.be/q1z8YI7ExtY) |
+| 7 | Arrays 2 — if/Switch in 2D and 3D | Class 07 | [Blender](https://youtu.be/q1z8YI7ExtY) |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 | — |
-| 9 | Façade attractors — Project 3 | Class 09 | — |
-| 10 | Attractor-based site analysis — Project 4 | Class 10 | — |
-| 11 | Generative volume exploration — Project 4 | Class 11 | — |
-| 12 | Contouring, laser-cut preparation and assembly | Class 12 | — |
-| 13–15 | Production, feedback and documentation | Class 13 · Class 14 · Class 15 | — |
+| 9 | Pin-up and grading — everything through Arrays | Class 09 | — |
+| 10 | Façade attractors — Project 3 | Class 10 | — |
+| 11 | Attractor-based site analysis — Project 4 | Class 11 | — |
+| 12 | Generative volume exploration — Project 4 | Class 12 | — |
+| 13 | Contouring, laser-cut preparation and assembly | Class 13 | — |
+| 14–15 | Production, feedback and documentation | Class 14 · Class 15 | — |
 
 In this course you use computational methods to make architectural drawings, models and physical parts. You build geometry you can keep editing, organize it with rules, and explain your design decisions through clear visual work.
 
@@ -37,7 +38,7 @@ In this course you use computational methods to make architectural drawings, mod
 
 **Up to the midterm:** Graphic Standards Manual → CSG sheet and print → your module from descriptive geometry → 1D, 2D and 3D arrays. You make one material and a three-point lighting setup for your module, then use supplied materials or your own for the array compositions.
 
-**Into Project 4:** the parametric façade starts in Week 9, using one curve and one or two point attractors; you keep refining its elevation and isometric for the November deadline. The generative project starts in Week 10 with supplied tools: site analysis (4.1), volume exploration (4.2), contouring (4.3) and laser-cut assembly (4.4). All new topics end by Week 12; Weeks 13–15 are for production, feedback and documentation. Printed parts are optional.
+**Into Project 4:** the parametric façade starts in Week 10, using one curve and one or two point attractors; you keep refining its elevation and isometric for the November deadline. The generative project starts in Week 11 with supplied tools: site analysis (4.1), volume exploration (4.2), contouring (4.3) and laser-cut assembly (4.4). All new topics end by Week 13; Weeks 14–15 are for production, feedback and documentation. Printed parts are optional.
 
 Use your Graphic Standards Manual throughout. Composition, hierarchy, line weight, color, rendering and photography should make both the result and the process easy to read.
 
@@ -48,13 +49,13 @@ Use your Graphic Standards Manual throughout. Composition, hierarchy, line weigh
 | P3 — Paneling | Parametric | Descriptive geometry module — material and three-point lighting → Arrays → Attractor-driven panel façade | 30% |
 | P4 — Integrated Spatial Project | Generative | Site analysis using attractors → SDF volumetric exploration → Discretizing the SDF → Laser-cut model and documentation | 35% |
 
-**Deadlines:** CSG sheet September 29; CSG print October 13; module (3.1) October 20; arrays (3.2) and Graphic Standards Manual October 27. Digital files are due at 11:59 PM Eastern Time. Bring the physical CSG print to class on October 13. October 5–9 is reserved for studio reviews, so nothing is due on October 6.
+**Deadlines:** Everything through Arrays — the Graphic Standards Manual (1), the CSG sheet (2.1) and print (2.2), the module (3.1) and arrays (3.2) — is due on October 20 and graded together that week. Digital files are due at 11:59 PM Eastern Time; bring the physical CSG print to class on October 20. October 5–9 is reserved for studio reviews, so nothing is due on October 6.
 
-Your midterm grade is the total of the manual, the CSG sheet and print, the module and the arrays. There is no separate midterm assignment or review. Keep applying your manual to earlier work as you refine it for October 27.
+Your midterm grade is the total of the manual, the CSG sheet and print, the module and the arrays. There is no separate midterm assignment or review. Keep applying your manual to earlier work as you refine it for October 20.
 
-Arrays takes two classes in a row. September 29: loops and nested loops for 1D, 2D and 3D arrays, then a row bent onto a curve. October 6: patterns — a brick wall with every other course shifted — plus if/Switch and math functions; nothing is due that day. October 13 is supported practice on both Arrays lessons and the three array sheets, and the day you hand in the CSG print. Façade attractors are taught on October 20. Project 4 starts on October 27, the day the manual and arrays are due; there is no separate review class for the whole course.
+Arrays takes two classes in a row. September 29: loops and nested loops for 1D, 2D and 3D arrays, then a row bent onto a curve. October 6: patterns — a brick wall with every other course shifted — then if/Switch rules in 2D and the same rules in 3D; nothing is due that day. October 13 is supported practice on both Arrays lessons, the three array sheets and anything still open from earlier assignments; nothing is due. October 20 is the deadline for everything through Arrays, with a pin-up of that work and no new topic. Façade attractors are taught on October 27, and Project 4 starts on November 3; there is no separate review class for the whole course.
 
-The façade assignment starts October 20 and is due November 17. Project 4 starts with attractor-based site analysis on October 27, then volume exploration on November 3. November 10 is the last class with new content: the supplied contouring group, preparing cutting files, material and kerf tests, registration (how the parts line up), assembly and final documentation. Choose your volume at the ungraded check on November 10, test contours and assembly by November 17, and show fabrication progress on November 24. Weeks 13–15 are for production, individual feedback and documentation, with no new topics. The site-analysis sheet is due November 24; the rest of Project 4 and the booklet are due at the final review, December 10–16 (exact slot to be confirmed).
+The façade assignment starts October 27 and is due November 17. Project 4 starts with attractor-based site analysis on November 3, then volume exploration on November 10. November 17 is the last class with new content: the supplied contouring group, preparing cutting files, material and kerf tests, registration (how the parts line up), assembly and final documentation. Choose your volume at the ungraded check on November 17, test contours and assembly by November 24, and show fabrication progress on December 1. Weeks 14–15 are for production, individual feedback and documentation, with no new topics. The site-analysis sheet is due November 24; the rest of Project 4 and the booklet are due at the final review, December 10–16 (exact slot to be confirmed).
 
 Project 4 is one short, continuing project, not four separate design starts, so keep your volume and connection strategy focused. Nothing is graded October 5–9 or December 1–4.
 
@@ -133,17 +134,17 @@ Run python scripts/sync_course.py to regenerate pages, README and PDFs together.
 
 ## Midterm grade
 
-**Midterm deadline:** Week 10 — Oct 27.
+**Midterm deadline:** Week 9 — Oct 20.
 
 The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 40% of the final course grade. Report the accumulated result as a percentage of those 40 possible course points. The midterm adds no separate assessment weight.
 
 | Included work | Due | Course weight |
 | --- | --- | --- |
-| 1 — Graphic Standards Manual | Week 10 — Oct 27, 11:59 PM Eastern Time | 5% |
-| 2.1 — CSG process and instructions | Week 6 — Sep 29, 11:59 PM Eastern Time | 10% |
-| 2.2 — CSG 3D printed object | Week 8 — Oct 13, 11:59 PM Eastern Time | 5% |
+| 1 — Graphic Standards Manual | Week 9 — Oct 20, 11:59 PM Eastern Time | 5% |
+| 2.1 — CSG process and instructions | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
+| 2.2 — CSG 3D printed object | Week 9 — Oct 20, 11:59 PM Eastern Time | 5% |
 | 3.1 — Descriptive geometry module — material and three-point lighting | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
-| 3.2 — Arrays | Week 10 — Oct 27, 11:59 PM Eastern Time | 10% |
+| 3.2 — Arrays | Week 9 — Oct 20, 11:59 PM Eastern Time | 10% |
 
 **Calculation:** add each assignment's earned course points (assignment percentage / 100 x its course weight), then divide the total by 40 and multiply by 100. Use the course's existing submission and late-work policies.
 
@@ -156,7 +157,7 @@ The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print,
 | 2.1 — CSG process and instructions | One 17 x 11 inch diagram sheet with matching instructions (pseudocode); PDF and editable graph. |
 | 2.2 — CSG 3D printed object | One 3D printed CSG object, assembled if printed in parts; source, mesh, slicer files and brief fabrication notes. |
 | 3.1 — Descriptive geometry module — material and three-point lighting | One 17 x 11 inch sheet with three panel variations, point and face lists, and a parameter table; PDF and editable graph. |
-| 3.2 — Arrays | Three sheets — module and basic arrays, four conditional façade patterns, and a mathematical cube volume; one PDF and editable graph. |
+| 3.2 — Arrays | Three sheets — module and basic arrays, four conditional façade patterns, and two conditional 3D patterns; one PDF and editable graph. |
 | 3.3 — Attractor-driven panel façade | One façade composition: elevation, isometric, attractor/parameter diagram and controlled comparisons; PDF and editable graph. |
 | 4.1 — Site analysis using attractors | One 17 x 11 inch site-analysis sheet with two analytical layers and one design observation; PDF, working file and source record. |
 | 4.2 — SDF volumetric exploration | One 17 x 11 inch sheet with three generative variations, the selected isometric and key parameters; PDF and editable volume source. |

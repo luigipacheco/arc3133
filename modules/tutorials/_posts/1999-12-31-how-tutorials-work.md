@@ -34,7 +34,7 @@ Open the posted lessons below; later lessons will be added as the course progres
 | [U02 — Constructive Solid Geometry]({{ site.baseurl }}/modules/tutorials/u02-transformations-and-csg/) | Weeks 2, 3 | Posted |
 | [U03 — Descriptive Geometry]({{ site.baseurl }}/modules/tutorials/u03-geometry-from-scratch/) | Weeks 4, 5 | Posted |
 | [U04 — Arrays]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 6, 7 | Posted |
-| U05 — Attractor | Week 9 | Posted after the class |
-| U07 — Volumetric Data and Fields | Weeks 10, 11 | Posted after the class |
-| U09 — Discretizing Geometry | Week 12 | Posted after the class |
-| U10 — Final | Week 12 | Posted after the class |
+| U05 — Attractor | Week 10 | Posted after the class |
+| U07 — Volumetric Data and Fields | Weeks 11, 12 | Posted after the class |
+| U09 — Discretizing Geometry | Week 13 | Posted after the class |
+| U10 — Final | Week 13 | Posted after the class |

@@ -72,7 +72,7 @@ def weights(mid):
 # 1 ── TITLE
 title_slide(d, WK, ["ARRAYS 1", "LINE · GRID · CUBE · CURVE"],
             "ONE MODULE, MANY POSITIONS", bg=LIME, lfill=PINK, rfill=CYAN,
-            right_tag="%s DUE TONIGHT" % N21,
+            right_tag="%s DUE %s" % (N21, C.date_long(A21["due"]).split(" — ")[1].upper()),
             foot="%s ISSUED TODAY  /  %s PRINT CHECK TODAY" % (N32, N22))
 
 # 2 ── AN ARRAY IS A LIST OF POSITIONS
@@ -282,7 +282,7 @@ s.issued("ISSUED TODAY", "%s — %s" % (N32, A32["title"].upper()), C.due_line("
 nxt = C.date_long(7).split(" — ")[0]
 cards = [("SHEET 1 · TODAY", "MODULE, 1D, 2D, 3D", "Your %s module alone, then in a row, a grid and layers. Label counts, spacing, axes and totals." % N31),
          ("SHEET 2 · " + nxt, "FOUR FAÇADE PATTERNS", "Your module in a 2D array, changed by if/Switch conditions. Each rule and its outcome captioned."),
-         ("SHEET 3 · " + nxt, "MATH SHAPES A VOLUME", "Layered cubes, height driven by a function of X and Y. One isometric, formula and settings stated.")]
+         ("SHEET 3 · " + nxt, "RULES IN 3D", "Rules on row, column and layer switch a cube parameter between two values. Two isometrics, each rule captioned.")]
 x, wd = L, (W - 0.23 * 2) / 3
 for i, (tag, ttl, body) in enumerate(cards):
     s.chip(x, 3.95, wd, 0.45, tag, fill=[CYAN, LIME, PINK][i], size=11)
@@ -301,15 +301,15 @@ now_slide(d, "NOW — SHEET 1",
            "The row nested into a grid: rows × columns predicted first",
            "The grid repeated in Z — 3, 4 and 5 per axis compared",
            "Your row bent onto a curve: edit the curve and watch the row follow",
-           "%s uploaded by 11:59 PM tonight; %s print checked before you queue it" % (N21, N22)],
+           "%s print checked before you queue it; everything through Arrays is due %s" % (N22, C.date_long(A32["due"]).split(" — ")[1])],
           closer="A COUNT YOU CAN COUNT. NOT A THOUSAND OF ANYTHING, YET.", bg=CYAN)
 
 # 19 ── BEFORE NEXT CLASS
 before_next_slide(d, [
-    ("NEXT", "%s: patterns — a brick wall with every other course shifted, if/Switch façade patterns, and a cube volume from X and Y (Sheets 2 and 3). "
+    ("NEXT", "%s: patterns — a brick wall with every other course shifted, if/Switch façade patterns, and the same rules in a 3D array of cubes (Sheets 2 and 3). "
              "Bring Sheet 1's graph working; we build on it." % C.date_long(7).title()),
-    ("DUE", "Nothing graded next week (studio reviews). %s print in class %s. %s, all three sheets: %s."
-            % (N22, C.date_long(8).split(" — ")[1], N32, C.date_long(A32["due"]).split(" — ")[1])),
+    ("DUE", "Nothing graded next week (studio reviews) or the week after. Everything through Arrays — the manual, %s, the %s print, %s and %s, all three sheets — is due %s."
+            % (N21, N22, N31, N32, C.date_long(A32["due"]).split(" — ")[1])),
     ("BUILD", "Finish Sheet 1: module alone, then 1D, 2D and 3D — counts, spacing, axes and totals labelled."),
     ("PRINT", "Fix anything today's check flagged, then queue %s." % N22),
 ])

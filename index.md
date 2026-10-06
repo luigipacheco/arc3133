@@ -28,7 +28,7 @@ We work mainly in Blender Geometry Nodes, and the video tutorials also cover Rhi
 
 ## The semester
 
-The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and introduces façade attractors in Week 9. Project 4 starts in Week 10; all new content ends by Week 12, leaving Weeks 13–15 for production and feedback. Everything through Arrays is due by Week 10 — Oct 27, the mid-semester deadline.
+The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8, collects and grades everything through Arrays in Week 9 and introduces façade attractors in Week 10. Project 4 starts in Week 11; all new content ends by Week 13, leaving Weeks 14–15 for production and feedback. Everything through Arrays is due by Week 9 — Oct 20, the mid-semester deadline.
 
 | Weeks | Topic | Classes | Video tutorials |
 |---|---|---|---|
@@ -36,13 +36,14 @@ The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and in
 | 2–3 | Constructive Solid Geometry | [Class 02]({{ site.baseurl }}/modules/classes/class-02/) · [Class 03]({{ site.baseurl }}/modules/classes/class-03/) | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | 4–5 | Descriptive Geometry | [Class 04]({{ site.baseurl }}/modules/classes/class-04/) · [Class 05]({{ site.baseurl }}/modules/classes/class-05/) | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
 | 6 | Arrays 1 — line, grid, cube, curve | [Class 06]({{ site.baseurl }}/modules/classes/class-06/) | [Blender](https://youtu.be/q1z8YI7ExtY) |
-| 7 | Arrays 2 — if/Switch and math functions | Class 07 — *not yet released* | [Blender](https://youtu.be/q1z8YI7ExtY) |
+| 7 | Arrays 2 — if/Switch in 2D and 3D | Class 07 — *not yet released* | [Blender](https://youtu.be/q1z8YI7ExtY) |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 — *not yet released* | — |
-| 9 | Façade attractors — Project 3 | Class 09 — *not yet released* | — |
-| 10 | Attractor-based site analysis — Project 4 | Class 10 — *not yet released* | — |
-| 11 | Generative volume exploration — Project 4 | Class 11 — *not yet released* | — |
-| 12 | Contouring, laser-cut preparation and assembly | Class 12 — *not yet released* | — |
-| 13–15 | Production, feedback and documentation | Class 13 — *not yet released* · Class 14 — *not yet released* · Class 15 — *not yet released* | — |
+| 9 | Pin-up and grading — everything through Arrays | Class 09 — *not yet released* | — |
+| 10 | Façade attractors — Project 3 | Class 10 — *not yet released* | — |
+| 11 | Attractor-based site analysis — Project 4 | Class 11 — *not yet released* | — |
+| 12 | Generative volume exploration — Project 4 | Class 12 — *not yet released* | — |
+| 13 | Contouring, laser-cut preparation and assembly | Class 13 — *not yet released* | — |
+| 14–15 | Production, feedback and documentation | Class 14 — *not yet released* · Class 15 — *not yet released* | — |
 
 ## Four projects
 
@@ -50,7 +51,7 @@ The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and in
 | --- | --- | --- |
 | [P1 — GSM]({{ site.baseurl }}/modules/assignments/p1-gsm/) | Create your own Graphic Standards Manual and apply it to every course presentation | 5% |
 | [P2 — CSG]({{ site.baseurl }}/modules/assignments/p2-csg/) | Procedural design: build a CSG object through a clear sequence of operations. Explain the steps with a BIG-style diagram and pseudocode, then 3D print the result | 15% |
-| [P3 — Paneling]({{ site.baseurl }}/modules/assignments/p3-paneling/) | Parametric design: build a panel from points and faces; repeat it with loops, if/Switch rules and math functions; then use one curve and one or two point attractors to vary a panel dimension across a façade | 30% |
+| [P3 — Paneling]({{ site.baseurl }}/modules/assignments/p3-paneling/) | Parametric design: build a panel from points and faces; repeat it with loops and if/Switch rules in 2D and 3D; then use one curve and one or two point attractors to vary a panel dimension across a façade | 30% |
 | P4 — Integrated Spatial Project — *not yet released* | Generative design: use supplied analysis, volume and contouring tools to explore options based on something you observe on a site. Choose one spatial result and develop it into a laser-cut model | 35% |
 
 The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 40% of the final course grade. Report the accumulated result as a percentage of those 40 possible course points. The midterm adds no separate assessment weight. [Midterm grade calculation]({{ site.baseurl }}/modules/assignments/overview/#midterm-grade)

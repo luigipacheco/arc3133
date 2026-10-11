@@ -387,6 +387,8 @@ units:
   videos:
   - - Blender · Arrays part 1
     - https://youtu.be/q1z8YI7ExtY
+  - - Blender · Arrays part 2
+    - https://youtu.be/B7yYA9HCBdM
   - - Rhino + Grasshopper · GH list
     - https://www.youtube.com/watch?v=ylHphXclA9w
   - - Rhino + Grasshopper · Arrays part 1
@@ -1516,7 +1518,7 @@ weeks:
   focus: "Build a loop and a nested loop — a 1D row, a 2D grid, then 3D layers — then bend the row onto a curve. Name the count, spacing and index in each direction. Check your CSG print file before queueing it."
 - week: 7
   date: '2026-10-06'
-  focus: "Use Compare and Switch to select between façade patterns — a brick wall with every other course shifted is the first example — then apply the same rules in 3D, using the layer index as well as rows and columns. Start from small examples; hexagonal and radial arrays and math-shaped volumes are optional. The Rhino + Grasshopper videos are posted; the Blender Arrays part 2 video is not out yet. No graded submission this week (studio reviews)."
+  focus: "Use Compare and Switch to select between façade patterns — a brick wall with every other course shifted is the first example — then apply the same rules in 3D, using the layer index as well as rows and columns. Start from small examples; hexagonal and radial arrays and math-shaped volumes are optional. The Blender and Rhino + Grasshopper Arrays part 2 videos are posted. No graded submission this week (studio reviews)."
   no_due: true
 - week: 8
   date: '2026-10-13'

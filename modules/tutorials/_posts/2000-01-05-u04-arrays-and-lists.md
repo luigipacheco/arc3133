@@ -18,6 +18,8 @@ Arrange your panel with lists, loops and if statements, then carry the same rule
 
 {% include youtube.html id="q1z8YI7ExtY" title="Arrays — Blender · Arrays part 1" %}
 
+{% include youtube.html id="B7yYA9HCBdM" title="Arrays — Blender · Arrays part 2" %}
+
 {% include youtube.html id="ylHphXclA9w" title="Arrays — Rhino + Grasshopper · GH list" %}
 
 {% include youtube.html id="ctf8qUgi_ZI" title="Arrays — Rhino + Grasshopper · Arrays part 1" %}

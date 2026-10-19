@@ -14,12 +14,12 @@ The four projects are now GSM, CSG, Paneling and Integrated Spatial Project. Ope
 
 <a id="p1a"></a>
 
-[P2a — CSG process and instructions]({{ site.baseurl }}/modules/assignments/p2-csg/#p2a)
+[P2a — CSG - an architectural object as instructions]({{ site.baseurl }}/modules/assignments/p2-csg/#p2a)
 
 <a id="p1b"></a>
 
-[P3a — Descriptive geometry module — material and three-point lighting]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a)
+[P3a — Descriptive geometry - build a reusable module]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a)
 
 <a id="p1c"></a>
 
-[P2b — CSG 3D printed object]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b)
+[P2b — 3D printing - from model to layers]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b)

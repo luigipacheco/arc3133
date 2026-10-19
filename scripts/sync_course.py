@@ -249,9 +249,9 @@ class Course:
 
     def banner(self):
         """The instructor-facing notice. Syllabus and reference documents only."""
-        return (f"> **{self.data['status']} · {self.data['revision']}.** The teaching sequence is "
-                "flexible. Dates and weights below are a coordinated draft; outstanding instructor "
-                "and administrative decisions are listed in the syllabus.\n\n")
+        return (f"> **{self.data['status']} · {self.data['revision']}.** "
+                "The requirements, weights and assignment deadlines below are current. "
+                "Remaining administrative details are identified separately.\n\n")
 
     def notice(self):
         """What students see. A different audience deserves a different sentence."""
@@ -510,7 +510,7 @@ class Course:
         out += "## How this site works\n\n"
         out += table(["Tab", "What you will find"], [[self.link(name, url), text] for name, url, text in h["tabs"]]) + "\n"
         out += "## The semester\n\n"
-        out += ("The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and introduces façade attractors in Week 9. Project 4 starts in Week 10; all new content ends by Week 12, leaving Weeks 13–15 for production and feedback. Everything through Arrays is due by "
+        out += ("The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and introduces façade attractors in Week 9. Project 4 starts in Week 10, with each assignment due one week after introduction. New content ends in Week 12; the contour model is due in Week 13, followed by revisions and booklet preparation. Everything through Arrays is due by "
                 + self.midterm_deadline() + ", the mid-semester deadline.\n\n")
         out += self.sequence_table() + "\n"
         out += "## Four projects\n\n" + self.project_spine() + "\n"
@@ -529,7 +529,7 @@ class Course:
                  for a in ("BOOK",) if a not in self.open_work]
         if not held:
             return prefix
-        return prefix + ("Briefs are posted as topics are introduced. Dates after Week 10 are provisional. Still to be posted: "
+        return prefix + ("Briefs are posted as topics are introduced. Still to be posted: "
                 + "; ".join(held) + ".\n\n")
 
     def roster(self):
@@ -566,7 +566,7 @@ class Course:
 
     def decisions(self):
         labels = {"confirmed": "Confirmed direction", "proposed": "Working proposals", "administrative": "Administrative items to confirm"}
-        return "\n".join(f"### {labels[key]}\n\n{bullets(items)}" for key, items in self.data["decisions"].items())
+        return "\n".join(f"### {labels[key]}\n\n{bullets(items)}" for key, items in self.data["decisions"].items() if items)
 
     def metadata(self):
         m = self.meta
@@ -680,11 +680,13 @@ class Course:
             if p.get("brief_pdf"):
                 out += f"**[Download the {p['id']} assignment brief (PDF)]({BASE}/{p['brief_pdf']})**\n\n"
                 if p["id"] == "P3":
-                    out += "The PDF covers 3.1 module construction/material/three-point lighting, 3.2 arrays, and 3.3 the attractor-driven façade.\n\n"
+                    out += "The PDF covers 3.1 module construction, the three parts of 3.2, the 3.4 attractor studies and the 3.5 architectural application. The study sheet supports 3.5 and has no separate grade.\n\n"
                 out += "Jump to: " + " / ".join(f"[{a.get('number', a['id'])}](#{a['id'].lower()})" for a in p["milestones"]) + "\n\n"
             out += "".join(self.assignment(a, "##", detailed=True) for a in p["milestones"])
             if p["id"] == "P3":
-                out += '<a id="p3d"></a>\n\nSite analysis is now Assignment 4.1 in the integrated project. ' + self.link("Open 4.1", self.assignment_url(self.by_id["P4a"])) + "\n\n"
+                out += '<a id="p3d"></a>\n\nThe former site-analysis assignment is no longer required. Project 4 begins with a two-parameter generative matrix. ' + self.link("Open 4.1", self.assignment_url(self.by_id["P4a"])) + "\n\n"
+            if p["id"] == "P4":
+                out += '<a id="p4d"></a>\n\nThe former separate assembly stage is included in 4.3, the contour model.\n\n'
 
             out += "## Related lessons\n\n" + bullets([self.link(u + " — " + self.units[u]["title"], self.unit_url(self.units[u])) for u in p["units"]])
             out += "\n" + self.link("Shared submission standards and grading", "/assignments/overview/") + "\n"
@@ -760,7 +762,7 @@ class Course:
                   "Edit [syllabus/course.yml](syllabus/course.yml) for the teaching sequence, short assignments, project connections, calendar and grading. "
                   "Standing policy wording is maintained only in [syllabus/policies.md](syllabus/policies.md). "
                   "The readable syllabi and current course pages are generated from those sources.\n\n"
-                  "The `teaching_sequence` block is authoritative: its blocks determine the required order, target weeks, lesson membership and session placement. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise. All new required content ends by Week 12; Weeks 13–15 are for production and feedback.\n\n"
+                  "The `teaching_sequence` block is authoritative: its blocks determine the required order, target weeks, lesson membership and session placement. `weeks` adds dates and class notes; `blender.sessions` adds each file, scene order and short exercise. All new required content ends by Week 12; the model is due in Week 13, followed by revisions and booklet preparation.\n\n"
                   "- [Student syllabus](syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md)\n"
                   "- [Full syllabus and instructor notes](syllabus/ARC3133_Syllabus_Fall2026.md)\n"
                   "- [Decisions for discussion](reference/Curriculum_Decisions.md)\n"
@@ -776,8 +778,8 @@ class Course:
                   "and every link to it becomes plain text marked *not yet released*. The calendar, the lesson list and the assignment table still show every row with its date, so nothing looks missing.\n\n"
                   "The weekly move is one edit — add the week number, the unit ids and any newly briefed assignment, then regenerate:\n\n"
                   "```text\nrelease:\n  classes: [1, 2, 3, 4, 5, 6]\n  tutorials: [U01, U02, U03, U04]\n  assignments: [P1, P2, P3, BOOK]\n```\n\n"
-                  "The current release covers classes through September 29 (Week 6). Review and update assignments, tutorials and class materials each week, and update `release.note` when advancing the release.\n\n"
-                  "Assignments take the project id — listing `P1` posts GSM; `P2` posts both CSG briefs; `P3` posts all three Paneling briefs. The assignment overview page is always posted.\n\n"
+                  "The current class and tutorial release is recorded in `release.note`. Review and update materials each week and update that note when advancing the release. Current assignment briefs for all four projects are available.\n\n"
+                  "Assignments take the project id — listing `P1` posts GSM; `P2` posts both CSG briefs; `P3` posts the module, arrays and attractor briefs; `P4` posts the three final-project stages. The assignment overview page is always posted.\n\n"
                   "Use `all` on either line to publish everything. To preview the finished site locally without editing the source, "
                   "run `SYNC_RELEASE=all python scripts/sync_course.py` — then run it again without the variable before committing, "
                   "or the held-back pages go live.\n\n"
@@ -803,8 +805,8 @@ class Course:
                   "Sources, archives, maintenance scripts and `slides/src` are excluded from the published course.\n\n"
                   "## License\n\nCourse content CC BY-SA 4.0 unless noted. Template © P2PU.\n")
         readme += "\n## Assignment brief structure and PDFs\n\n"
-        readme += "Each detailed brief follows Description, Rules & Constraints, Parameters, Required Studies, Workflow, Deliverables, Evaluation, and Before You Submit. State numerical limits, visible evidence, exact sheet contents, native files and naming so students can check their submission.\n\n"
-        readme += "Edit the milestone requirements and brief fields in syllabus/course.yml. The same text generates the website and the project PDFs; never edit either output separately. Stable milestone IDs own dates and grading; number fields provide student-facing labels. P1 covers 1 (GSM); P2 covers 2.1/2.2; P3 covers 3.1 module, 3.2 arrays and 3.3 attractor façade. Project 4 uses supplied analysis, volume and contouring groups through 4.1 site analysis, 4.2 generative exploration, 4.3 contouring and 4.4 a laser-cut model. Stages 4.3–4.4 share one fabrication sheet; printed components are optional. Its detailed PDF follows after teaching-package and fabrication allocation review.\n\n"
+        readme += "Each brief follows Purpose, What you will learn, What to do, What to submit and What we assess. Keep useful dimensions and parameter values, but explain rules in ordinary language. The presentations may retain their explained mathematics.\n\n"
+        readme += "Edit milestone requirements and brief fields in syllabus/course.yml. The same text generates the website and all four project PDFs. P1 covers GSM; P2 covers 2.1 CSG and 2.2 slicing/printing; P3 covers 3.1 module, 3.2.1–3.2.3 as one Arrays assignment, 3.4 formative attractor studies and 3.5 architectural application. P4 covers 4.1 student-built 5 x 5 matrix, 4.2 pavilion/shop envelope within 12 x 12 x 12 m and 4.3 registered contour model. The matrix uses instructor-supplied field tools; students construct the comparison themselves. Existing midterm records are retained. The weekly deadlines and 10/15/10 Project 4 allocation are current.\n\n"
         readme += "Run python scripts/sync_course.py to regenerate pages, README and PDFs together. The check mode also verifies source and PDF hashes in files/assignments/manifest.json. Commit the source, renderer, generated pages, PDFs, manifest and any retired-page deletions together after instructor review.\n\n"
         readme += "| Project | Download |\n| --- | --- |\n"
         for project in self.projects.values():
@@ -812,7 +814,7 @@ class Course:
                 readme += f"| {project['id']} | [{project['brief_title']}]({project['brief_pdf']}) |\n"
         readme += "\n" + self.midterm_summary()
         readme += "\n## Assignment sequence\n\n" + self.submission_table() + "\n"
-        readme += "Projects 1–3 have detailed PDF handouts. The 3.2 material library is planned, not yet linked. Existing slide decks and their authoring sources need revision before reuse. Grading is approved; dates remain a local review draft.\n"
+        readme += "All four projects have concise PDF handouts. Existing presentations retain their explained mathematics; the revised briefs govern deliverables. The recorded midterm weights and deadline are unchanged; the weekly deadlines and revised Project 4 weight split are current.\n"
         self.emit("README.md", readme)
         self.emit("reference/Curriculum_Decisions.md", MARKER + "\n\n# Curriculum decisions\n\n" + self.banner() + self.decisions() + "\n## Why the sequence changed\n\n" + self.data["instructor_notes"])
         rows = []

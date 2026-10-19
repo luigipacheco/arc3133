@@ -26,4 +26,4 @@
 | signed distance field | A volume in which every cell stores its distance to the surface, with one sign for inside and the other for outside. | The surface is where the distance is zero. Density or noise values are not automatically distances. |
 | discretization | Describing a continuous form with a limited number of samples or parts. | Turning a volume into contour sections, in order, with material thickness. |
 
-Keep Blender's own node names visible, so anyone can see which node is which. Use Frames for short explanations and give your exposed inputs clear names. You can name your own node groups, but a label must never hide which built-in node is being used. A small, readable graph is better than a complicated one.
+Assignment sheets should explain what the system does, which controls matter and why you chose the result. Use ordinary language, diagrams and relevant values; formal equations and mathematical derivations are not required. Teaching presentations may retain their explained mathematics.

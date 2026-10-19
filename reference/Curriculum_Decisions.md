@@ -2,7 +2,7 @@
 
 # Curriculum decisions
 
-> **Instructor review draft — revised assignment sequence · 2026-09-23.** The teaching sequence is flexible. Dates and weights below are a coordinated draft; outstanding instructor and administrative decisions are listed in the syllabus.
+> **Current course requirements and weekly deadlines · 2026-10-19.** The requirements, weights and assignment deadlines below are current. Remaining administrative details are identified separately.
 
 ### Confirmed direction
 
@@ -12,43 +12,31 @@
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
 - Align visual assignments and fabrication with the same developing geometry.
 - Establish one source of curriculum information before preparing the remaining Blender class files.
-- Organize ten assignments into four projects: Graphic Standards Manual, CSG, Paneling, and Integrated Spatial Project.
-- 3.1 requires one student-authored module material, a ground plane and three-point lighting (key, fill, rim/back). 3.2 permits supplied library materials or student-authored materials.
-- 3.3 combines one curve attractor with one or two point attractors to drive one geometric parameter of the existing panel, documented in façade elevation and isometric.
-- 4.1 site analysis → 4.2 generative volume → 4.3 contouring → 4.4 laser-cut assembly develop one project using supplied node groups. Printed components are optional.
 - Use the instructor-approved grading allocation: 5%, 15%, 30%, 35% across the four projects, 10% booklet and 5% participation. Midterm accumulates the first five submissions (40% of the course).
 - All work through Arrays — 1, 2.1, 2.2, 3.1 and 3.2 — is due Sunday, October 18 at 11:59 PM, uploaded to Teams, which leaves two days to review it before grades go on Canvas. The midterm grade is the accumulated grade of those five assignments. There is no pin-up; façade attractors are taught on October 20 as planned. The university midterm is October 13; the course is running a week behind, so the deadline moved to the 18th. Keep October 6 and December 1 free of graded submissions.
-
-### Working proposals
-
-- Façade 3.3 due November 17 and site analysis 4.1 due November 24; 4.2–4.4 due at the final review with earlier ungraded production checks.
-- Keep the final project focused enough to test assembly by December 1 and complete laser cutting and documentation before the confirmed final review.
-- The previous Python/AI final and extra-credit scheme remain outside the required core assignments.
+- Keep the recorded October 18 midterm submission and the first-five weights; review existing evidence without retrospective deliverables.
+- Learning-focused briefs: GSM; CSG and slicing; descriptive module; repetition, conditions and architectural application; attractor studies and architectural application.
+- Three-stage final: student-built 5 x 5 matrix, a pavilion or small-shop envelope within 12 x 12 x 12 m, and a registered contour model.
+- Finish new content by Week 12, submit the contour model in Week 13 and use the remaining classes for feedback, revisions and the booklet.
+- Current Project 4 weights are 10% matrix, 15% architectural development and 10% fabrication. After the October 20 attractor class, each assignment is due the following week: 3.4-3.5 October 27; 4.1 November 3; 4.2 November 10; 4.3 November 17.
 
 ### Administrative items to confirm
 
-- Confirm the room, final review slot and School review blackout dates before issuing the student syllabus.
+- Confirm the room, final review slot and School review blackout dates for the remaining semester.
 - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
 - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
 - Confirm the attendance sign-in method and the accreditation criteria used by the School.
-- Post and test the material library before 3.2 is due. Supply a prepared point cloud and analysis groups before 4.1, volume groups before 4.2, and contouring groups before 4.3, with usage notes.
+- Post and test the material library. Supply generative texture/SDF/volume tools before 4.1 and contouring tools before 4.3, with usage notes.
 - Confirm laser-cut stock and machine capacity for the final model; approve any optional printing separately.
 
 ## Why the sequence changed
 
-Preserve the project numbering and teaching progression: P1 establishes the Graphic Standards Manual;
-P2 emphasizes procedural design; P3 emphasizes parametric design; P4 emphasizes generative design.
-Arrays has one class on loops in 1D/2D/3D and one on if/Switch and mathematical functions. Retain the
-supported practice class after both Arrays lessons and the façade-attractor class in Week 9. Begin
-Project 4 in Week 10 with attractor-based site analysis. Complete all new content by Week 12 and
-reserve Weeks 13–15 for production, feedback and documentation.
+October 19 confirmed assignment revision: simplify student instructions around observable learning and architectural application. Preserve P1 graphic standards, P2 procedural, P3 parametric and P4 generative. Keep explained mathematics in teaching presentations; remove formula-heavy presentation requirements from assignment briefs.
 
-The revised sequence contains ten assignments in four projects: 1 Manual; 2.1 CSG sheet; 2.2 CSG print; 3.1 Module; 3.2 Arrays; 3.3 Attractor façade; 4.1 Site analysis; 4.2 SDF exploration; 4.3 Discretization; 4.4 Laser-cut model. The three array sheets remain one assignment: four module/basic-array diagrams, four conditional façade patterns, and two isometric 3D patterns made with if/Switch rules on the row, column and layer index. The standalone 2D attractor drawing has been replaced by a façade elevation and isometric showing an actual panel parameter response.
+Keep the instructor's requested numbering: 3.2.1, 3.2.2 and 3.2.3 are parts of one Arrays assignment; 3.4 is the three-attractor study; 3.5 is an architectural application. There is no separate 3.3 assignment. The study is formative, not a new weighted submission. Reuse the module, architecture and study sheet rather than requiring separate design starts.
 
-For 3.1 students create one module material, place the module on a ground plane and set up key/fill/rim three-point lighting. This describes three lighting roles, not the software's Point light type. For 3.2 students may use the supplied material library or create their own; post and verify the library before the deadline.
+Review completed midterm work as submitted. New architectural evidence, intersection demonstrations or revised sheet arrangements are not retrospective requirements. Keep the October 18 Teams deadline and recorded first-five weights. Use 10/15/10 across the three Project 4 stages, retaining its 35% total. Weekly deadlines are October 27 for 3.4-3.5, November 3 for 4.1, November 10 for 4.2 and November 17 for the physical and digital 4.3 submission.
 
-Project 4 follows analyze → generate → contour → laser-cut → assemble using supplied groups. Provide the analysis dataset/groups, volume tools and contouring tools before the respective assignments. Require two analytical layers and one observation in 4.1; three settings of one strategy and a selected isometric on one sheet in 4.2; and one chosen slicing direction/spacing with numbered parts and an assembly diagram in 4.3. Add final model photographs to that same fabrication sheet in 4.4. No mandatory Boolean comparison, floor plan, fixed slice minimum or final-project 3D print remains. Assess students' inputs, outputs, interpretation and design decisions, not reconstruction of the supplied algorithms.
+4.1 is a student-built matrix with two parameters at five values each. Provide only the field tools and guidance. 4.2 refines one result using field controls and optional instructor-provided SDF Boolean operators into a pavilion or small-shop envelope within 12 m in each direction; require plan, section and isometric of the same proposal. 4.3 fabricates that proposal through contours and registration. Point-cloud analysis and the former 4.4 stage are removed from required assignments.
 
-The instructor approved the revised grading allocation: GSM, CSG print and site analysis are 5% each; the seven major design exercises are 10% each; booklet is 10% and participation is 5%. Midterm accumulates 40%. Project 4 remains 35%, with distinct assessment of spatial exploration, buildable parts and physical assembly. All work through Arrays is due Sunday, October 18 at 11:59 PM and graded together. Arrays has two taught classes (Weeks 6 and 7), followed by supported practice checking both in Week 8. Week 9 teaches façade attractors; Week 10 begins Project 4 site analysis. Week 11 teaches generative volumes. Week 12 completes contouring, cutting-file preparation, assembly and documentation using a prepared demonstration. Weeks 13–15 are production and feedback only. Use ungraded checks for volume selection November 10, contours/assembly tests November 17 and fabrication progress November 24. Confirm laser-cut stock and lab capacity before issuing the full Project 4 brief.
-
-Detailed PDFs currently cover Projects 1–3. Project 4 has a simplified coordinated outline; prepare its detailed handout after verifying the supplied teaching packages and fabrication allocation. Existing slide decks and their generators need revision for the new sequence and numbering before reuse. Keep institutional policies and historical assets unchanged.
+Teach 3.4 and introduce 3.5 in Week 9, matrix construction in Week 10, architectural refinement in Week 11 and fabrication preparation in Week 12. Week 13 receives the completed contour model; Weeks 13-15 provide feedback, revisions and booklet preparation. Existing examples may remain as supplementary teaching references; they are not additional assignments. All four projects now have concise synchronized PDF briefs. Keep standing policies unchanged.

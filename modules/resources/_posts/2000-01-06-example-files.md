@@ -11,7 +11,7 @@ permalink: /resources/example-files/
 
 # Example files
 
-Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
+Build your own file and use examples to check individual operations. Project 4 field and contouring groups may be reused with credit; students still build their own matrix and develop their own envelope. The point-cloud file is a supplementary example, not a required assignment.
 
 Download only the example for the class you are working on. Arrays uses two example files across the practice block.
 

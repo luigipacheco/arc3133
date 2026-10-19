@@ -10,4 +10,4 @@ sitemap: false
 
 ## Attractor
 
-This page has moved: sessions and classes are now the same thing. Open the class that uses this file — *not yet released*.
+This page has moved: sessions and classes are now the same thing. [Open the class that uses this file]({{ site.baseurl }}/modules/classes/class-09/).

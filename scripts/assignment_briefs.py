@@ -1,4 +1,4 @@
-"""Shared assignment text and reproducible PDF downloads for the first three projects."""
+"""Shared learning-focused assignment text and reproducible project PDFs."""
 from __future__ import annotations
 
 from hashlib import sha256
@@ -8,14 +8,11 @@ from pathlib import Path
 import re
 
 SECTIONS = [
-    ("Description", "description"),
-    ("Rules & Constraints", "requirements"),
-    ("Parameters", "parameters"),
-    ("Required Studies", "studies"),
-    ("Workflow", "workflow"),
-    ("Deliverables", "deliverables"),
-    ("Evaluation", "evaluation"),
-    ("Before You Submit", "checklist"),
+    ("Purpose", "description"),
+    ("What you will learn", "learn"),
+    ("What to do", "requirements"),
+    ("What to submit", "deliverables"),
+    ("What we assess", "evaluation"),
 ]
 MANIFEST = "files/assignments/manifest.json"
 
@@ -34,7 +31,9 @@ def validate(course):
             brief = course.by_id[aid]["brief"]
             assert set(brief) == {key for _, key in SECTIONS if key != "requirements"}, aid
             assert isinstance(brief["description"], str) and brief["description"].strip(), aid
-            for _, key in SECTIONS[2:]:
+            for _, key in SECTIONS[1:]:
+                if key == "requirements":
+                    continue
                 assert isinstance(brief[key], list) and brief[key], (aid, key)
                 assert all(isinstance(x, str) and x.strip() for x in brief[key]), (aid, key)
 
@@ -62,9 +61,7 @@ def project_markdown(course, project):
     out = f"# {project['id']} - {title}\n\n"
     out += f"{course.meta['code']} / {course.meta['title']} / {course.meta['term']}\n\n"
     out += f"**Approach:** {project['approach']}\n\n"
-    out += f"Revision: {course.data['revision']}. Instructor review draft. Grading allocation approved; dates remain proposed for review before publication.\n\n"
-    if project["id"] == "P3":
-        out += "3.1: module, authored material, ground plane and three-point lighting. 3.2: arrays with library or student-authored materials. 3.3: attractor-driven panel façade, shown in elevation and isometric.\n\n"
+    out += f"Revision: {course.data['revision']}. {course.data['assignment_revision_note']}\n\n"
     for aid in project["brief_milestones"]:
         a = course.by_id[aid]
         out += f"## {a.get('number', aid)} - {a['title']}\n\n"
@@ -74,8 +71,13 @@ def project_markdown(course, project):
                 course.when(c["week"]) + ": " + c["text"] for c in a["checkpoints"]
             ) + "\n\n"
         out += body(a)
-    out += "**Shared standards:** Course software, fabrication, attribution and AI policies apply. Submit through the channel announced in class/Canvas. Test the packaged source from a clean folder. Percentages follow the instructor review draft. This handout uses US Letter; student sheets are 17 x 11 inches.\n"
-    out += "\n**Midterm grade:** " + course.midterm_note() + "\n"
+    if project["id"] == "P4":
+        book = course.by_id["BOOK"]
+        out += "## Final booklet - submission checklist\n\n"
+        out += f"**Due:** {course.deadline(book)} / **Weight:** {book['weight']}%\n\n"
+        out += "Reuse the assignment sheets and document selected revisions.\n\n"
+        out += "\n".join("- " + item for item in book["requirements"]) + "\n\n"
+    out += "**Shared standards:** Apply the GSM and credit sources. Package linked assets; check PDFs and editable files before uploading. Explain rules plainly and follow the course submission policies.\n"
     return out
 
 
@@ -134,8 +136,6 @@ def render_pdf(path, markdown, course, project):
                 active_aid = next((a["id"] for a in project["milestones"] if a.get("number", a["id"]) == label), label)
                 story.append(Paragraph(inline(block[3:]), styles["milestone"]))
         elif block.startswith("### "):
-            if (active_aid, block[4:]) == ("P2b", "Deliverables"):
-                story.append(PageBreak())
             story.append(Paragraph(inline(block[4:]), styles["heading"]))
         elif block.startswith("- "):
             items = [Paragraph(inline(line), styles["list"]) for line in block.splitlines()]

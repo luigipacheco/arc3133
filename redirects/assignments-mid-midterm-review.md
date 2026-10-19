@@ -17,10 +17,10 @@ The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print,
 | Included work | Due | Course weight |
 | --- | --- | --- |
 | [1 — Graphic Standards Manual]({{ site.baseurl }}/modules/assignments/p1-gsm/#gsm) | Sun Oct 18, 11:59 PM Eastern Time | 5% |
-| [2.1 — CSG process and instructions]({{ site.baseurl }}/modules/assignments/p2-csg/#p2a) | Sun Oct 18, 11:59 PM Eastern Time | 10% |
-| [2.2 — CSG 3D printed object]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b) | Sun Oct 18, 11:59 PM Eastern Time | 5% |
-| [3.1 — Descriptive geometry module — material and three-point lighting]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a) | Sun Oct 18, 11:59 PM Eastern Time | 10% |
-| [3.2 — Arrays]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3b) | Sun Oct 18, 11:59 PM Eastern Time | 10% |
+| [2.1 — CSG - an architectural object as instructions]({{ site.baseurl }}/modules/assignments/p2-csg/#p2a) | Sun Oct 18, 11:59 PM Eastern Time | 10% |
+| [2.2 — 3D printing - from model to layers]({{ site.baseurl }}/modules/assignments/p2-csg/#p2b) | Sun Oct 18, 11:59 PM Eastern Time | 5% |
+| [3.1 — Descriptive geometry - build a reusable module]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3a) | Sun Oct 18, 11:59 PM Eastern Time | 10% |
+| [3.2 — Arrays - repetition, patterns and architecture]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3b) | Sun Oct 18, 11:59 PM Eastern Time | 10% |
 
 **Calculation:** add each assignment's earned course points (assignment percentage / 100 x its course weight), then divide the total by 40 and multiply by 100. Use the course's existing submission and late-work policies.
 

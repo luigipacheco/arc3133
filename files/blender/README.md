@@ -10,21 +10,21 @@ Second of two Arrays classes. Patterns start with a brick wall where every other
 
 Supported practice, no new topic. Bring all three array sheets for feedback on repetition, index, counts and spacing, your if/Switch patterns in 2D and 3D, and anything still open before everything through Arrays is due on Sunday, October 18 at 11:59 PM.
 
-One class on façade attractors. Combine one curve and one or two point attractors to drive one panel dimension. You use attractors again for site analysis in Project 4.
+October 20: teach the three attractor methods in 3.4 and their architectural application using the existing panel in 3.5. Both sheets are due together October 27.
 
-Apply attractor measurements to the prepared point cloud with the supplied groups. Make two analysis layers and one design observation for the final project. This class is separate from the façade class.
+October 27: submit the attractor assignment and begin 4.1. Students build the 5 x 5 matrix using supplied field tools, due November 3. Point-cloud examples are supplementary.
 
-Use the supplied volume groups to explore three settings of one strategy, and choose a form for contouring.
+November 3: submit 4.1 and develop the 4.2 pavilion or shop envelope using field controls and optional supplied SDF Boolean operators. Plan, section, isometric and source are due November 10.
 
-The last class with new required content, taught through a prepared example with the supplied contouring group: spacing, numbered parts, preparing cutting files, material and kerf tests, registration (how the parts line up), simple assembly and final documentation. 4.3 and 4.4 are introduced here and produced in Weeks 13–15.
+November 10: submit 4.2 and introduce 4.3 contour fabrication, registration and assembly. Test before the full cut. Bring the completed model November 17 and upload documentation that night. This is the last new required content.
 
-No new required content. Week 13 checks contours and assembly tests; Week 14 checks fabrication progress and one booklet spread. Week 15 supports production, revisions and final documentation during studio reviews; nothing is graded that day.
+Week 13: submit the contour model and fabrication documentation, and receive feedback. Weeks 14-15: revise projects, document results and prepare the booklet. No new required topic; no separate December 1 submission.
 
 Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes.
 
 Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file. Use these examples to check a step when you are stuck, then go back to your own work. Don't submit an example file unchanged. The Project 4 analysis, volume and contouring groups are the exception: you may reuse them directly.
+Build your own file and use examples to check individual operations. Project 4 field and contouring groups may be reused with credit; students still build their own matrix and develop their own envelope. The point-cloud file is a supplementary example, not a required assignment.
 
 | Session | Target weeks | Open file | Scenes in this file | Lesson |
 | --- | --- | --- | --- | --- |
@@ -34,8 +34,8 @@ Build your own file. Use these examples to check a step when you are stuck, then
 | S04 | 7 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve, Brick wall | U04 Arrays |
 | S05 | 9 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractor |
 | S07 | 10 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Volumetric Data and Fields |
-| S08 | 11 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Volumetric Data and Fields |
-| S09 | 11 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Volumetric Data and Fields |
+| S08 | 10 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Volumetric Data and Fields |
+| S09 | 10 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Volumetric Data and Fields |
 | S10 | 12 | [Discretizing Geometry — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Discretizing Geometry, U10 Final |
 | S11 | 12 | [Discretizing Geometry — section parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Discretizing Geometry, U10 Final |
 | S12 | 12 | [Final — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U09 Discretizing Geometry, U10 Final |

@@ -14,12 +14,12 @@ The four projects are now GSM, CSG, Paneling and Integrated Spatial Project. Ope
 
 <a id="p2a"></a>
 
-[P3b — Arrays]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3b)
+[P3b — Arrays - repetition, patterns and architecture]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3b)
 
 <a id="p2b"></a>
 
-[P3c — Attractor-driven panel façade]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3c)
+[P3c — Attractor-based architectural application]({{ site.baseurl }}/modules/assignments/p3-paneling/#p3c)
 
 <a id="site-analysis"></a>
 
-P4a — Site analysis using attractors — *not yet released*
+[P4a — Generative fields - a two-parameter matrix]({{ site.baseurl }}/modules/assignments/p4-volumetric-data/#p4a)

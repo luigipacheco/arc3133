@@ -24,7 +24,7 @@ More videos will be added as they are recorded.
 
 ## Lesson notes
 
-Course materials are posted through October 6 (Week 7), and assignments, tutorials and class materials are reviewed each week. Project briefs already list every submission; later class and tutorial pages are posted as each topic begins.
+Class and tutorial pages are posted through October 20 (Week 9), including attractors. All four project briefs contain current requirements, weights and weekly deadlines. Later class and tutorial pages will be posted as their topics begin.
 
 Open the posted lessons below; later lessons will be added as the course progresses.
 
@@ -34,7 +34,7 @@ Open the posted lessons below; later lessons will be added as the course progres
 | [U02 — Constructive Solid Geometry]({{ site.baseurl }}/modules/tutorials/u02-transformations-and-csg/) | Weeks 2, 3 | Posted |
 | [U03 — Descriptive Geometry]({{ site.baseurl }}/modules/tutorials/u03-geometry-from-scratch/) | Weeks 4, 5 | Posted |
 | [U04 — Arrays]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 6, 7 | Posted |
-| U05 — Attractor | Week 9 | Posted after the class |
+| [U05 — Attractor]({{ site.baseurl }}/modules/tutorials/u05-attractors/) | Week 9 | Posted |
 | U07 — Volumetric Data and Fields | Weeks 10, 11 | Posted after the class |
 | U09 — Discretizing Geometry | Week 12 | Posted after the class |
 | U10 — Final | Week 12 | Posted after the class |

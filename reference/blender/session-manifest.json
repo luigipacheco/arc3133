@@ -57,7 +57,11 @@
       "Read the field",
       "One point",
       "Multiple points",
-      "Curve attractor"
+      "Curve attractor",
+      "Panel prefab",
+      "One point opening",
+      "Multiple point openings",
+      "Curve openings"
     ]
   },
   {

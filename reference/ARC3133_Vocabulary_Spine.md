@@ -751,9 +751,9 @@ Bounds identifies the input limits; ReMap translates the values 1–8 into the r
 
 **Find it in Geometry Nodes:** Map Range · Clamp option. Enable Clamp to limit the remapped result to the target interval. With limits 0.2 and 0.8, values below 0.2 become 0.2 and values above 0.8 become 0.8; values inside stay unchanged. GN also has a separate Clamp node.
 
-[![Geometry Nodes: Map Range in the curve-attractor example has Clamp enabled. The target limits arrive through the To Min and To Max sockets.](../images/blender/s05-curve-attractor-geonodes.png)](../images/blender/s05-curve-attractor-geonodes.png)
+[![Geometry Nodes: Map Range in the curve-attractor example has Clamp enabled. To Min is 1 and To Max is 0.25: nearby copies are larger, and distance beyond 4 keeps the far scale.](../images/blender/s05-curve-attractor-geonodes.png)](../images/blender/s05-curve-attractor-geonodes.png)
 
-Map Range in the curve-attractor example has Clamp enabled. The target limits arrive through the To Min and To Max sockets. [Source: ARC 3133 course capture · Blender 5.2.1 LTS](<../files/blender/04-attractors/Attractors.blend>)
+Map Range in the curve-attractor example has Clamp enabled. To Min is 1 and To Max is 0.25: nearby copies are larger, and distance beyond 4 keeps the far scale. [Source: ARC 3133 course capture · Blender 5.2.1 LTS](<../files/blender/04-attractors/Attractors.blend>)
 
 ### Debugging and inspection
 

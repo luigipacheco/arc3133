@@ -274,52 +274,65 @@
     "file": "files/blender/04-attractors/Attractors.blend",
     "scenes": {
       "01 - Read the field": {
-        "points": 0,
-        "instances": 0,
-        "curves": 0,
-        "vertices": 1681,
-        "edges": 3280,
-        "faces": 1600,
-        "nonmanifold_edges": 160,
-        "closed": false,
-        "volume": 0.0
+        "vertices": 504,
+        "faces": 378,
+        "closed": true,
+        "volume": 1.7149742215908081,
+        "components": 63
       },
       "02 - One point": {
-        "points": 0,
-        "instances": 0,
-        "curves": 0,
-        "vertices": 1445,
-        "edges": 2312,
-        "faces": 1445,
-        "nonmanifold_edges": 0,
+        "vertices": 504,
+        "faces": 378,
         "closed": true,
-        "volume": 4.829407612605742
+        "volume": 1.10939027643462,
+        "components": 63
       },
       "03 - Multiple points": {
-        "points": 0,
-        "instances": 0,
-        "curves": 0,
-        "vertices": 1445,
-        "edges": 2312,
-        "faces": 1445,
-        "nonmanifold_edges": 0,
+        "vertices": 504,
+        "faces": 378,
         "closed": true,
-        "volume": 8.25129851781805
+        "volume": 1.9598175971711604,
+        "components": 63
       },
       "04 - Curve attractor": {
-        "points": 0,
-        "instances": 0,
-        "curves": 0,
-        "vertices": 1445,
-        "edges": 2312,
-        "faces": 1445,
-        "nonmanifold_edges": 0,
+        "vertices": 504,
+        "faces": 378,
         "closed": true,
-        "volume": 9.504713574637575
+        "volume": 4.395883377521865,
+        "components": 63
+      },
+      "05 - Panel prefab": {
+        "vertices": 16,
+        "faces": 12,
+        "closed": true,
+        "volume": 0.08370001102834829,
+        "components": 1
+      },
+      "06 - One point opening": {
+        "vertices": 1008,
+        "faces": 756,
+        "closed": true,
+        "volume": 6.638023453128833,
+        "components": 63
+      },
+      "07 - Multiple point openings": {
+        "vertices": 1008,
+        "faces": 756,
+        "closed": true,
+        "volume": 6.002840881274068,
+        "components": 63
+      },
+      "08 - Curve openings": {
+        "vertices": 1008,
+        "faces": 756,
+        "closed": true,
+        "volume": 4.498460637040783,
+        "components": 63
       }
     },
-    "sha256": "595f8ad57572fadc1023ec1a89aea0715c566410c5cf5f63fca9562e309c368a",
-    "fresh_open_verified": true
+    "sha256": "8f5c2f2c58d210190031fdf717f0d3ba47de99ed2c793f7372d6aa2da8b408b8",
+    "fresh_open_verified": true,
+    "behavior_checks": "reference/blender/attractors/verification.json"
   },
   {
     "session": "S06",

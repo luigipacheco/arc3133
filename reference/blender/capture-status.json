@@ -4,27 +4,27 @@
   "total": 1,
   "results": [
     {
-      "session": "S04",
-      "unit": "U04",
-      "title": "Arrays and Lists \u2014 Part 2: arrangements and rules",
-      "source_file": "files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend",
-      "source_sha256": "abbb67293cfc20c13a992f4117bf4fba84770e5b2d101a55352e17f7450fd836",
-      "scene": "07 - Sine curve",
-      "node_group": "06 - Sine curve",
-      "object": "06 - Sine curve",
+      "session": "S05",
+      "unit": "U05",
+      "title": "Attractor",
+      "source_file": "files/blender/04-attractors/Attractors.blend",
+      "source_sha256": "8f5c2f2c58d210190031fdf717f0d3ba47de99ed2c793f7372d6aa2da8b408b8",
+      "scene": "04 - Curve attractor",
+      "node_group": "04 - Curve attractor",
+      "object": "04 - Curve attractor",
       "capture": "Blender native editor screenshots",
       "blender_version": "5.2.1 LTS",
       "geonodes": {
-        "file": "images/blender/s04-math-volume-array-geonodes.png",
-        "width": 3726,
-        "height": 1061,
-        "sha256": "da8f259bf6c5b6653f031949eed1c4226ac3c9d988adb9e97855c355e36c26e8"
+        "file": "images/blender/s05-curve-attractor-geonodes.png",
+        "width": 1920,
+        "height": 1001,
+        "sha256": "3cf80de4fbaffe8da0ad44710089cdd8e9e7f51d76f10754840380bd8b065043"
       },
       "viewport": {
-        "file": "images/blender/s04-math-volume-array-viewport.png",
-        "width": 1904,
-        "height": 1041,
-        "sha256": "080ba7f0b63f54a80be38484f0ae09da5cbbd1205e2a55cd65f3f7e50a13976c"
+        "file": "images/blender/s05-curve-attractor-viewport.png",
+        "width": 1920,
+        "height": 1001,
+        "sha256": "805bfe4c62a34d8a129c20e54622e79741621c4c9c3810d4f8183ff02aa83581"
       }
     }
   ],

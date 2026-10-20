@@ -32,7 +32,7 @@ Build your own file and use examples to check individual operations. Project 4 f
 | S02 | 4–5 | [Descriptive Geometry](02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Point, Line, Edge, Face, Solid, Boolean | U03 Descriptive Geometry |
 | S03 | 6 | [Arrays — Part 1: line, grid, cube, curve](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid, 3D array, Along a curve | U04 Arrays |
 | S04 | 7 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve, Brick wall | U04 Arrays |
-| S05 | 9 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor | U05 Attractor |
+| S05 | 9 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor, Panel prefab, One point opening, Multiple point openings, Curve openings | U05 Attractor |
 | S07 | 10 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Volumetric Data and Fields |
 | S08 | 10 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Volumetric Data and Fields |
 | S09 | 10 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Volumetric Data and Fields |
@@ -45,6 +45,8 @@ Build your own file and use examples to check individual operations. Project 4 f
 **S02 — Descriptive Geometry.** Follow the six main teaching scenes; the original reference scenes are still in the file. The pyramid keeps Width, Depth and Height exposed, and the file ends with the cube minus the pyramid. This lesson works in model units; nothing is exported for fabrication.
 
 **S04 — Arrays — Part 2: arrangements and rules.** The simple 3D array comes first: a row repeated into a grid, and the grid into layers, with Count, Spacing and Cube Size exposed. The last scene, Sine curve, uses math on X and Y and repetition in three directions to shape a volume of cubes. It points ahead to the density and signed-distance lessons while still using cubes.
+
+**S05 — Attractor.** Eight prepared checkpoints teach one lesson. First read distance and scale; then feed the same values into a reusable panel's Opening input. The three opening studies keep outer dimensions and thickness fixed. Built-in node names are unchanged; Frames explain the steps. Students replace the supplied demonstration panel with their own module. The full node-by-node guide is on the Attractor tutorial page and inside the file as START HERE - Attractors.
 
 **S07 — Volumetric Data and Fields — point clouds.** Keep the data folder together: the file reads teaching-courtyard.ply from the same folder. It is a made-up point cloud for teaching, not a site survey. Supporting files: [Teaching point cloud](06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json).
 

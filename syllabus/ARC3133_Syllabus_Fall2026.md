@@ -663,10 +663,12 @@ Understand fields through one point, multiple points and a curve, then apply the
 
 **Taught in:** [Class 09]({{ site.baseurl }}/modules/classes/class-09/). October 20: teach the three attractor methods in 3.4 and their architectural application using the existing panel in 3.5. Both sheets are due together October 27.
 
-1. Measure distance from each module position to one point and map it to a geometric parameter.
-2. Repeat with multiple points and explain how the influences combine.
-3. Repeat with a curve and compare the three methods on the same facade.
-4. Choose an attractor method and use the existing panel to design a facade, wall or small architectural project.
+1. An attractor is a reference in the model. Measure distance from each panel location with Position, Object Info and Vector Math set to Distance.
+2. Use Map Range with Clamp to turn distance into scale. Identify the near value, far value and distance limit.
+3. For two points, use two Distance nodes and Math set to Minimum; the nearer point controls the response.
+4. For a curve, use Object Info, Curve to Mesh without a profile and Geometry Proximity set to Edges. Keep the same Map Range.
+5. Test the reusable panel alone, then use For Each Geometry Element to send a different Opening value into its group at each location. Keep the outside dimensions fixed.
+6. Replace the sample prefab with the existing student panel, choose a safe parameter range and develop a facade, wall or small architectural project.
 
 **Practice:** Make the three comparable diagrams for 3.4, then use the method of your choice in 3.5.
 
@@ -675,21 +677,19 @@ Understand fields through one point, multiple points and a curve, then apply the
 **Read the pseudocode.** Match each step to your nodes; you do not need to type it.
 
 ```python
-# One curve and a list containing one or two point attractors.
-# remap maps the stated distance range to an influence from 1 to 0.
+# Pseudocode: choose ONE of the three distance methods.
 for p in panel_locations:
-    d_curve = distance(p, closest_point(curve, p))
-    influences = [clamp(remap(d_curve, curve_range, (1, 0)), 0, 1)]
-    for attractor in point_attractors:
-        d_point = distance(p, attractor)
-        influences.append(clamp(remap(d_point, point_range, (1, 0)), 0, 1))
-    combined = clamp(mean(influences), 0, 1)  # one possible combination
-    value = panel_min + combined * (panel_max - panel_min)
-    panel = build_panel(shape_parameter=value)
+    d = distance(p, point_a)                         # one point
+    # d = min(distance(p, point_a), distance(p, point_b))
+    # d = distance(p, closest_point(curve, p))
+
+    opening = remap_clamped(d, from_range=(0, 4),
+                           to_range=(0.85, 0.15))
+    panel = build_panel(opening=opening)  # same prefab, new input
     place(panel, p)
 ```
 
-**Teaching note:** Keep mathematical explanations and graph examples available as teaching references. The assignment asks for a visible field response and a plain-language explanation, not a prescribed formula.
+**Teaching note:** Start with distance and Map Range; change only the distance source for multiple points and curves. Native node names are retained; explanations belong on Frames. Instance transforms and prefab construction inputs are different responses. Use the small For Each Geometry Element zone only when rebuilding each prefab with its own parameter. Scenes 07-08 repeat the already explained method; they are checkpoints, not additional assignments.
 
 ### Blender files for this lesson
 
@@ -699,7 +699,9 @@ Build your own file and use examples to check individual operations. Project 4 f
 
 **S05 — [Attractor](../files/blender/04-attractors/Attractors.blend)**
 
-Scenes in this file: Read the field, One point, Multiple points, Curve attractor. Open them in the order listed.
+Scenes in this file: Read the field, One point, Multiple points, Curve attractor, Panel prefab, One point opening, Multiple point openings, Curve openings. Open them in the order listed.
+
+Eight prepared checkpoints teach one lesson. First read distance and scale; then feed the same values into a reusable panel's Opening input. The three opening studies keep outer dimensions and thickness fixed. Built-in node names are unchanged; Frames explain the steps. Students replace the supplied demonstration panel with their own module. The full node-by-node guide is on the Attractor tutorial page and inside the file as START HERE - Attractors.
 
 ## U07 — Volumetric Data and Fields
 

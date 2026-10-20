@@ -1,0 +1,122 @@
+{
+  "file": "files\\blender\\04-attractors\\Attractors.blend",
+  "sha256": "8f5c2f2c58d210190031fdf717f0d3ba47de99ed2c793f7372d6aa2da8b408b8",
+  "blender": "5.2.1 LTS",
+  "scenes": {
+    "01 - Read the field": {
+      "vertices": 504,
+      "faces": 378,
+      "components": 63,
+      "volume": 1.7149742215908081,
+      "closed": true,
+      "native_node_names": true,
+      "moving_attractors_changes_geometry": true,
+      "reverse_remap_changes_geometry": true
+    },
+    "02 - One point": {
+      "vertices": 504,
+      "faces": 378,
+      "components": 63,
+      "volume": 1.10939027643462,
+      "closed": true,
+      "native_node_names": true,
+      "moving_attractors_changes_geometry": true,
+      "reverse_remap_changes_geometry": true
+    },
+    "03 - Multiple points": {
+      "vertices": 504,
+      "faces": 378,
+      "components": 63,
+      "volume": 1.9598175971711604,
+      "closed": true,
+      "native_node_names": true,
+      "moving_attractors_changes_geometry": true,
+      "reverse_remap_changes_geometry": true
+    },
+    "04 - Curve attractor": {
+      "vertices": 504,
+      "faces": 378,
+      "components": 63,
+      "volume": 4.395883377521865,
+      "closed": true,
+      "native_node_names": true,
+      "moving_attractors_changes_geometry": true,
+      "reverse_remap_changes_geometry": true
+    },
+    "05 - Panel prefab": {
+      "vertices": 16,
+      "faces": 12,
+      "components": 1,
+      "volume": 0.08370001102834829,
+      "closed": true,
+      "native_node_names": true,
+      "opening_range": [
+        0.550000011920929,
+        0.550000011920929
+      ],
+      "outer_size_fixed": [
+        1,
+        0.12,
+        1
+      ],
+      "prefab_input_changes_geometry": true
+    },
+    "06 - One point opening": {
+      "vertices": 1008,
+      "faces": 756,
+      "components": 63,
+      "volume": 6.638023453128833,
+      "closed": true,
+      "native_node_names": true,
+      "opening_range": [
+        0.14999961853027344,
+        0.815000057220459
+      ],
+      "outer_size_fixed": [
+        1,
+        0.12,
+        1
+      ],
+      "moving_attractors_changes_geometry": true,
+      "reverse_remap_changes_geometry": true
+    },
+    "07 - Multiple point openings": {
+      "vertices": 1008,
+      "faces": 756,
+      "components": 63,
+      "volume": 6.002840881274068,
+      "closed": true,
+      "native_node_names": true,
+      "opening_range": [
+        0.14999961853027344,
+        0.815000057220459
+      ],
+      "outer_size_fixed": [
+        1,
+        0.12,
+        1
+      ],
+      "moving_attractors_changes_geometry": true,
+      "reverse_remap_changes_geometry": true
+    },
+    "08 - Curve openings": {
+      "vertices": 1008,
+      "faces": 756,
+      "components": 63,
+      "volume": 4.498460637040783,
+      "closed": true,
+      "native_node_names": true,
+      "opening_range": [
+        0.3109912872314453,
+        0.8498711585998535
+      ],
+      "outer_size_fixed": [
+        1,
+        0.12,
+        1
+      ],
+      "moving_attractors_changes_geometry": true,
+      "reverse_remap_changes_geometry": true
+    }
+  }
+}

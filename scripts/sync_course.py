@@ -365,6 +365,20 @@ class Course:
         if "teaching_note" in u and not web:  # instructor syllabus only
             out += "**Teaching note:** " + u["teaching_note"] + "\n\n"
         out += self.blender_files(u, web)
+        if web and u.get("lesson_guide"):
+            source = ROOT / u["lesson_guide"]
+            guide = source.read_text(encoding="utf-8")
+            # Reuse the file's teaching guide; README files are excluded from Jekyll.
+            guide = guide.split("\n[Course file index]")[0]
+            guide = re.sub(r"^(#{1,5}) ", r"\1# ", guide, flags=re.MULTILINE)
+            def guide_link(match):
+                target = match.group(2)
+                if target.startswith(("https://", "http://", "#")):
+                    return match.group(0)
+                path = (source.parent / target).resolve().relative_to(ROOT.resolve()).as_posix()
+                return "[" + match.group(1) + "](" + self.asset(path, True) + ")"
+            guide = re.sub(r"\[([^\]]*)\]\(([^)]+)\)", guide_link, guide)
+            out += guide.rstrip() + "\n\n"
         if web and any(i["unit"] == u["id"] for i in self.blender_images):
             out += '## Examples from the class files\n\nSelect an image to inspect the original screenshot at full resolution.\n\n'
             out += '{% include blender_screenshots.html unit="' + u["id"] + '" %}\n\n'

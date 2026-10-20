@@ -116,7 +116,7 @@
     "unit": "U05",
     "title": "Attractor",
     "source_file": "files/blender/04-attractors/Attractors.blend",
-    "source_sha256": "595f8ad57572fadc1023ec1a89aea0715c566410c5cf5f63fca9562e309c368a",
+    "source_sha256": "8f5c2f2c58d210190031fdf717f0d3ba47de99ed2c793f7372d6aa2da8b408b8",
     "scene": "04 - Curve attractor",
     "node_group": "04 - Curve attractor",
     "object": "04 - Curve attractor",
@@ -124,20 +124,20 @@
     "blender_version": "5.2.1 LTS",
     "geonodes": {
       "file": "images/blender/s05-curve-attractor-geonodes.png",
-      "width": 2684,
-      "height": 1041,
-      "sha256": "0b30d2e584ab80f414bf57b2eb485687fd84a1a2005f47ae6aa0b26c80b2fa6d"
+      "width": 1920,
+      "height": 1001,
+      "sha256": "3cf80de4fbaffe8da0ad44710089cdd8e9e7f51d76f10754840380bd8b065043"
     },
     "viewport": {
       "file": "images/blender/s05-curve-attractor-viewport.png",
-      "width": 1904,
-      "height": 1041,
-      "sha256": "dd402e332c90f138339ce01d00891649723d1bbf851b3a7a0ec7cce0e290c497"
+      "width": 1920,
+      "height": 1001,
+      "sha256": "805bfe4c62a34d8a129c20e54622e79741621c4c9c3810d4f8183ff02aa83581"
     },
     "example": "Curve attractor",
-    "caption": "Distance to an external curve is remapped into pyramid height.",
-    "viewport_alt": "pyramid heights forming a ridge along the attractor curve",
-    "nodes_alt": "Geometry Proximity measures distance to the curve and Map Range controls Z scale."
+    "caption": "Distance to a curve controls the scale of repeated facade blocks. Scenes 06-08 use the same distance logic to change prefab openings.",
+    "viewport_alt": "a facade of blocks scaled by distance from an orange attractor curve",
+    "nodes_alt": "Object Info, Curve to Mesh, Geometry Proximity set to Edges and Map Range feed Instance on Points Scale."
   },
   {
     "session": "S07",

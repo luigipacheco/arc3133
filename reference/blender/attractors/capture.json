@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "sha256": "8f5c2f2c58d210190031fdf717f0d3ba47de99ed2c793f7372d6aa2da8b408b8",
+  "index": 7,
+  "stage": "select",
+  "captures": [
+    {
+      "scene": "02 - One point",
+      "file": "images\\blender\\attractors\\02-nodes.png",
+      "sha256": "f87e7c7e0b518ed6db0a20793c0ea69c7e980d74bac3c4f0f4bcf2be3f35313d"
+    },
+    {
+      "scene": "03 - Multiple points",
+      "file": "images\\blender\\attractors\\03-nodes.png",
+      "sha256": "080c4d3c10ee4ff97d3ee4156c724fedf989629d815fd54616ad210e7672b424"
+    },
+    {
+      "scene": "04 - Curve attractor",
+      "file": "images\\blender\\attractors\\04-nodes.png",
+      "sha256": "3cf80de4fbaffe8da0ad44710089cdd8e9e7f51d76f10754840380bd8b065043"
+    },
+    {
+      "scene": "05 - Panel prefab",
+      "file": "images\\blender\\attractors\\05-nodes.png",
+      "sha256": "d390d7de272f6f9b4ed4bb11883995c4718b690c7bf976c489659899edf68a04"
+    },
+    {
+      "scene": "06 - One point opening",
+      "file": "images\\blender\\attractors\\06-nodes.png",
+      "sha256": "0e36988c0011858f842f8ddb4931f4677bed03a230207a1bb70f3979a5fe0515"
+    },
+    {
+      "scene": "07 - Multiple point openings",
+      "file": "images\\blender\\attractors\\07-nodes.png",
+      "sha256": "52bf8c9a87e80e4168ac8212923b9c66eb72784ff2e1972052a31a0d3810695b"
+    },
+    {
+      "scene": "08 - Curve openings",
+      "file": "images\\blender\\attractors\\08-nodes.png",
+      "sha256": "e68118a151755ea6729d13c2a5c4a44b49eff5cfa85d869c550b2a48ea452a83"
+    }
+  ]
+}

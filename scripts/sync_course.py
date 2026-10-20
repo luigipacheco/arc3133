@@ -17,6 +17,7 @@ import yaml
 import session_pages
 import assignment_briefs
 import course_deadlines
+import course_vocabulary
 from output_files import write_text
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -58,6 +59,7 @@ class Course:
                 self.assignments.append(a)
         self.assessments = self.assignments + self.data["assessments"]
         self.by_id = {x["id"]: x for x in self.assessments}
+        self.glossary = course_vocabulary.load(ROOT, self.by_id)
         self.policy = (ROOT / "syllabus/policies.md").read_text(encoding="utf-8").strip()
         self.blender = self.data.get("blender", {})
         self.blender_images = json.loads((ROOT / "_data/blender_images.json").read_text(encoding="utf-8"))
@@ -323,6 +325,8 @@ class Course:
         body += f"**Introduced:** {self.when(a['release'])} · **Due:** {self.deadline(a)} · **Weight:** {a['weight']}%\n\n"
         if a.get('deliverable'):
             body += '**Present:** ' + a['deliverable'] + '\n\n'
+        if detailed:
+            body += '**Vocabulary for this assignment:** ' + course_vocabulary.assignment_links(self, a['id']) + '\n\n'
         body += assignment_briefs.body(a, heading + "#") if detailed and a.get("brief") else bullets(a["requirements"])
         if a.get("checkpoints"):
             body += "\n**Ungraded checkpoints:**\n\n"
@@ -343,6 +347,8 @@ class Course:
         if u.get('optional'):
             out += '**Possible intermediate class — optional.** This topic is outside the required teaching sequence.\n\n'
         out += "**Vocabulary:** " + ", ".join(u["vocabulary"]) + ".\n\n"
+        if web:
+            out += self.link('Plain-language vocabulary by assignment', course_vocabulary.URL) + '\n\n'
         out += self.video_list(u, web)
         for block in self.sequence:
             if u['id'] in block['units']:
@@ -562,6 +568,7 @@ class Course:
         for u in self.units.values():
             if u.get('optional'):
                 out += self.link('Optional lesson notes — ' + u['title'], self.unit_url(u)) + '\n\n'
+        out += '\n## Vocabulary\n\n' + self.link('Vocabulary by assignment', course_vocabulary.URL) + ' — simple definitions, examples from your work and links to fuller explanations.\n'
         return out
 
     def decisions(self):
@@ -673,6 +680,7 @@ class Course:
         assessment_intro, rubrics = self.data['assessment_notes'].split('\n\n', 1)
         overview = front("Assignments · overview", categories=["assignments"]) + self.notice() + assessment_intro + "\n\n" + self.release_note() + self.project_table(True) + "\n## What to present\n\n" + self.submission_table(True) + "\n## Dates and weights\n\n" + self.assessment_table(True) + "\n## How work is assessed\n\n" + rubrics + "\n## Shared standards\n\n" + self.data["presentation"] + "\n" + self.link("Fabrication, AI and standing policies", "/resources/course-policies/")
         overview += "\n\n" + self.midterm_summary(web=True)
+        overview += '\n## Vocabulary\n\n' + self.link('Vocabulary by assignment', course_vocabulary.URL) + ' — what each concept means, how we use it and where to read more.\n'
         self.emit("modules/assignments/_posts/1999-12-31-overview.md", overview)
         for i,p in enumerate(self.projects.values(), 2):
             out = front(p["id"] + " · " + p["title"], categories=["assignments"]) + self.notice() + p["description"] + "\n\n"
@@ -695,9 +703,9 @@ class Course:
         for a, i in [(self.by_id["BOOK"],7)]:
             if a["id"] not in self.open_work:
                 continue
-            self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{a['id'].lower()}-{a.get('url_slug', slug(a['title']))}.md", front(a["id"] + " · " + a["title"], categories=["assignments"]) + self.notice() + self.assignment(a, "##") + "\n" + self.link("Shared submission standards and grading", "/assignments/overview/"))
+            self.emit(f"modules/assignments/_posts/2000-01-{i:02d}-{a['id'].lower()}-{a.get('url_slug', slug(a['title']))}.md", front(a["id"] + " · " + a["title"], categories=["assignments"]) + self.notice() + self.assignment(a, "##") + "\n**Vocabulary for this assignment:** " + course_vocabulary.assignment_links(self, a['id']) + "\n\n" + self.link("Shared submission standards and grading", "/assignments/overview/"))
         self.emit("modules/tutorials/_posts/1999-12-31-how-tutorials-work.md", front("Tutorials · overview", categories=["tutorials"]) + self.roster())
-        self.emit("modules/tutorials/_posts/2000-01-01-the-notation.md", front("Vocabulary · what the operations mean", categories=["tutorials"]) + self.notice() + self.data["presentation"].split("\n\n")[1] + "\n\n" + table(["Term", "Meaning", "Example / distinction"], self.data["vocabulary"]))
+        self.emit("modules/tutorials/_posts/2000-01-01-the-notation.md", front("Vocabulary · by assignment", categories=["tutorials"]).replace(MARKER, course_vocabulary.MARKER) + course_vocabulary.render(self))
         for i,u in enumerate(self.units.values(), 2):
             if u["id"] not in self.open_units:
                 continue
@@ -715,6 +723,7 @@ class Course:
         for name, url, text in pages:
             href = url if url.startswith("/resources/") else "/modules/resources" + url
             rows.append([f"[{name}]({BASE}{href})", text])
+        rows.insert(1, [self.link('Vocabulary by assignment', course_vocabulary.URL), 'Plain-language definitions, course examples and links to fuller explanations.'])
         self.emit("modules/resources/_posts/1999-12-31-overview.md",
                   front("Resources · overview", categories=["resources"], permalink="/resources/overview/")
                   + "# Resources\n\nReference material for the whole semester. For this week's slides and files, go to "
@@ -834,7 +843,7 @@ class Course:
         register += '\n[Detailed project and materials audit](ARC3133_Project_and_Materials_Audit_2026-09-16.md)\n\n' + self.data['instructor_notes']
         self.emit('reference/Teaching_Material_Register.md', register)
         self.emit("files/blender/README.md", self.blender_index())
-        self.emit("reference/ARC3133_Vocabulary_Spine.md", MARKER + "\n\n# ARC 3133 — vocabulary\n\n" + table(["Term", "Meaning", "Example / distinction"], self.data["vocabulary"]) + "\n" + self.data["presentation"].split("\n\n")[1] + "\n")
+        self.emit("reference/ARC3133_Vocabulary_Spine.md", course_vocabulary.MARKER + "\n\n" + course_vocabulary.render(self, web=False))
         for name in ["ARC3133_Module_Structure_v2.md", "ARC3133_Course_Materials_Brief.md", "ATLV_Audit_vs_ARC3133.md", "ARC3133_Course_Review_2026-09-12.md"]:
             self.emit("reference/" + name, MARKER + f"\n\n# Historical planning document\n\nThis plan has been superseded. Use the [current syllabus](../syllabus/ARC3133_Syllabus_Fall2026.md) and [curriculum source](../syllabus/course.yml).\n\nThe [original document](archive/2026-09-12-before-sequence/reference/{name}) is preserved for historical reference.\n")
         self.emit("slides/README.md", MARKER + "\n\n# Class decks\n\nOne deck per class, `ARC3133_ClassNN.pptx` and `.pdf`. Each is generated by `src/classNN.py` with the course slide kit (`src/nb.py`, `src/slidekit.py`); dates, due lines and requirements are read from `syllabus/course.yml`, so rebuild the decks after changing the source:\n\n```text\ncd slides/src\nDECK_OUT=.. python classNN.py\ncd .. && soffice --headless --convert-to pdf ARC3133_ClassNN.pptx\n```\n\nThe `*_CKS` files are Christine Khouri Sader's section variants and are not generated. Readiness is tracked under `presentation_review` in the curriculum source and in the [teaching material register](../reference/Teaching_Material_Register.md).\n")

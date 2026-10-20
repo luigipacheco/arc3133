@@ -2,6 +2,12 @@
 
 `syllabus/course.yml` is the source for session paths, teaching content and release settings. Generated course pages, the session index and `reference/blender/session-manifest.json` follow that source.
 
+The assignment glossary is authored in `syllabus/vocabulary.yml`. Each entry contains a term, a plain-language explanation, a course example and a reference URL. `course_vocabulary.py` generates the public Vocabulary page and the reference copy; `sync_course.py` adds links from assignments, tutorials and Resources. Keep the existing `the-notation` page URL so earlier links continue to work.
+
+Optional `node_examples` in the vocabulary source identify actual GH components or GN nodes. Screenshots require a source and credit; `focus: [x, y, width, height]` displays a detail of an unchanged course screenshot while linking to its full image. Keep external screenshot provenance in `images/vocabulary/README.md`. GH tree operations must not be presented as direct equivalents of GN geometry operations.
+
+Each vocabulary section can include `programming` examples with `title`, standalone Python `code`, exact expected `output`, a `nodes` explanation, a `try` prompt and an optional `reference`. The glossary renderer checks Python syntax and generates a programming quick index. Execute revised examples to check their expected output. The attractor section's `debugging` list generates the checklist for all assignments. These examples support the existing work; assignment deliverables remain defined in `course.yml`.
+
 Edit `teaching_sequence` for the approved teaching blocks, their target weeks and session placement. The dated `weeks` entries add dates and class notes, and `blender.sessions` adds the file, scene order and exercise. A teaching block with `combine_sessions: true` groups its example files on one session page; arrays uses this with one planned video. Do not duplicate topic titles or session membership in those lists.
 
 | Tool | Use |

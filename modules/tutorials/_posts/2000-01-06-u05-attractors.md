@@ -16,6 +16,8 @@ Understand fields through one point, multiple points and a curve, then apply the
 
 **Vocabulary:** distance, external condition, field, remap, clamp, falloff, nearest.
 
+[Plain-language vocabulary by assignment]({{ site.baseurl }}/modules/tutorials/the-notation/)
+
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
 **Taught in:** [Class 09]({{ site.baseurl }}/modules/classes/class-09/). October 20: teach the three attractor methods in 3.4 and their architectural application using the existing panel in 3.5. Both sheets are due together October 27.

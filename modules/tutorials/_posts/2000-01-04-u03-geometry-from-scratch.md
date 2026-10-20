@@ -16,6 +16,8 @@ Describe geometry as points, lines, edges and faces, then build a solid you cont
 
 **Vocabulary:** point, vector, parameter, vertex, line, edge, face, mesh, solid, normal.
 
+[Plain-language vocabulary by assignment]({{ site.baseurl }}/modules/tutorials/the-notation/)
+
 **Video tutorials**
 
 {% include youtube.html id="JQN7IjVIW4A" title="Descriptive Geometry — Blender" %}

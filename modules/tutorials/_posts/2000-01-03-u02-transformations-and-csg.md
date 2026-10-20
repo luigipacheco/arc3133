@@ -16,6 +16,8 @@ Build solids you can keep editing, using move, rotate, scale and Boolean operati
 
 **Vocabulary:** parameter, vector, translation, rotation, scale, union, difference, intersection.
 
+[Plain-language vocabulary by assignment]({{ site.baseurl }}/modules/tutorials/the-notation/)
+
 **Video tutorials**
 
 {% include youtube.html id="HO50aaKbfHY" title="Constructive Solid Geometry — Blender" %}

@@ -29,4 +29,6 @@ categories:
 - Week 14 — Nov 24: Bring a booklet spread and contents list for an ungraded progress check.
 
 
+**Vocabulary for this assignment:** [Final booklet]({{ site.baseurl }}/modules/tutorials/the-notation/#booklet)
+
 [Shared submission standards and grading]({{ site.baseurl }}/modules/assignments/overview/)

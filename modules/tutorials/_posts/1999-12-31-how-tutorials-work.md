@@ -38,3 +38,8 @@ Open the posted lessons below; later lessons will be added as the course progres
 | U07 — Volumetric Data and Fields | Weeks 10, 11 | Posted after the class |
 | U09 — Discretizing Geometry | Week 12 | Posted after the class |
 | U10 — Final | Week 12 | Posted after the class |
+
+
+## Vocabulary
+
+[Vocabulary by assignment]({{ site.baseurl }}/modules/tutorials/the-notation/) — simple definitions, examples from your work and links to fuller explanations.

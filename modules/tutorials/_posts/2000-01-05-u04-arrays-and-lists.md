@@ -16,6 +16,8 @@ Arrange your panel with lists, loops and if statements, then carry the same rule
 
 **Vocabulary:** list, index, count, loop, nested loop, conditional, modulo, sine, amplitude, frequency, phase.
 
+[Plain-language vocabulary by assignment]({{ site.baseurl }}/modules/tutorials/the-notation/)
+
 **Video tutorials**
 
 {% include youtube.html id="q1z8YI7ExtY" title="Arrays — Blender · Arrays part 1" %}

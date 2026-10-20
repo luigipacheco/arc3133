@@ -1,0 +1,334 @@
+# Plain-language course glossary. Each term has: name, meaning, use, reference URL.
+# References explain the underlying concept; assignment briefs set the requirements.
+sections:
+  - id: gsm
+    assignment: GSM
+    title: "1 · Graphic Standards Manual"
+    focus: Make a set of graphic rules you can reuse throughout the course.
+    terms:
+      - ["Design system / graphic standards", "A shared set of rules that makes different pages look like they belong together.", "Choose consistent colors, type, spacing and line styles, then apply them to every assignment.", "https://en.wikipedia.org/wiki/Style_guide"]
+      - ["Color palette and color theory", "A palette is your chosen set of colors. Color theory helps explain their relationships, such as complementary colors opposite each other on a color wheel.", "Choose up to two colors plus a white or dark background. Explain their relationship; a full triad has three colors, so identify a two-color selection if using that strategy.", "https://en.wikipedia.org/wiki/Color_theory"]
+      - ["HEX / RGB", "Two ways of recording a screen color. RGB gives its red, green and blue amounts; HEX writes those amounts as a six-character code.", "Record either HEX or RGB so you can reproduce the same palette on every sheet.", "https://en.wikipedia.org/wiki/Web_colors"]
+      - ["Typography", "The choice and arrangement of letters so text is readable and has a consistent character.", "Choose typefaces and sizes for titles, subtitles, body text and captions.", "https://en.wikipedia.org/wiki/Typography"]
+      - ["Visual hierarchy", "A clear order of attention: what someone notices first, second and third.", "Make the project title easy to find, then guide the reader to the main image and its explanation.", "https://en.wikipedia.org/wiki/Visual_hierarchy"]
+      - ["Composition and white space", "Composition is how you arrange a page. White space is the space left between elements, even on a dark background.", "Balance images and text, leave room around them and make the reading order clear.", "https://en.wikipedia.org/wiki/Page_layout"]
+      - ["Grid and template", "A grid is an invisible alignment guide. A template is a reusable page setup built around that guide.", "Keep margins, title positions, image areas and page numbers consistent across your 17 × 11 inch sheets.", "https://en.wikipedia.org/wiki/Grid_(graphic_design)"]
+      - ["Line weight and line style", "Line weight means thickness; line style means solid, dashed or another pattern. Together they distinguish different kinds of information.", "Use heavier outlines for emphasis and lighter or dashed lines for secondary or hidden geometry. Keep the system consistent.", "https://en.wikipedia.org/wiki/Architectural_drawing"]
+
+  - id: csg
+    assignment: P2a
+    title: "2.1 · CSG architectural object"
+    focus: Describe a real architectural object as a repeatable sequence of simple operations.
+    terms:
+      - ["Precedent", "An existing project you study to understand a design idea or method.", "Document a real building, identify its main shapes and explain how your model interprets them.", "https://guides.library.illinois.edu/architecture/Researching_Buildings"]
+      - ["Node graph / visual programming", "A program built by connecting blocks. Inputs enter a block, the block performs an operation and outputs pass results onward.", "Connect geometry and controls in Geometry Nodes or Grasshopper, and follow the connections to explain what happens.", "https://en.wikipedia.org/wiki/Visual_programming_language"]
+      - ["Inputs, outputs and dependencies", "Inputs are what an operation receives; outputs are what it produces. A dependency means one result needs another value or result first.", "Follow a cutting solid through Transform and Boolean. Changing its size affects the later cut. In a Python script, dependent calculations must run again after an input changes.", "https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/algorithms-data/#12-algorithms-parts"]
+      - ["Naming and comments", "Names identify values or steps. Comments explain intent without running an operation.", "Use opening_width instead of an unexplained x. A Python comment starts with #; node labels and frames explain the same intent in a graph.", "https://docs.python.org/3/tutorial/introduction.html"]
+      - ["Primitive and solid", "A primitive is a simple starting shape, such as a box or cylinder. A solid encloses a volume.", "Start the architectural massing with a few simple solids before cutting or combining them.", "https://en.wikipedia.org/wiki/Constructive_solid_geometry"]
+      - ["Transformation", "A change to a shape's position, size or orientation. Translate means move; scale means resize; rotate means turn.", "Move a box into place, stretch it to the right proportions and rotate a cutting shape.", "https://en.wikipedia.org/wiki/Transformation_(geometry)"]
+      - ["CSG and Boolean operations", "Constructive Solid Geometry builds forms by combining solids. Union joins them, difference subtracts one from another, and intersection keeps only their overlap.", "Join building masses, cut out a courtyard or retain the shared volume of two shapes.", "https://en.wikipedia.org/wiki/Constructive_solid_geometry"]
+      - ["Procedure / pseudocode", "A procedure is an ordered set of instructions. Pseudocode describes those instructions in readable steps without requiring a working programming language.", "Write steps such as 'make a box, move the cylinder, subtract it' and match them to your process diagrams.", "https://en.wikipedia.org/wiki/Algorithm"]
+      - ["Process diagram", "A drawing that explains how a design changes from one step to the next.", "Use white building masses, color to show changes, clear outlines and a final view with context.", "https://en.wikipedia.org/wiki/Architectural_drawing"]
+    programming:
+      - title: Follow a dependency
+        code: |
+          width = 2
+          height = 3
+          area = width * height
+          width = 4
+          print(area)  # The earlier result is still 6.
+          area = width * height
+          print(area)
+        output: |
+          6
+          12
+        nodes: "GN Math → Multiply and GH Multiplication calculate the area. Connected graphs normally recalculate affected outputs when inputs change. Python assignments run in sequence: changing width does not automatically rerun the earlier area calculation."
+        try: "Before running it, predict both results. Change height, then identify which calculation needs to run again."
+
+  - id: printing
+    assignment: P2b
+    title: "2.2 · Slicing and 3D printing"
+    focus: Understand how a digital object becomes a physical print and anticipate common problems.
+    terms:
+      - ["Slicer and toolpath", "A slicer turns a model into printable layers. A toolpath tells the printer where to move and deposit material.", "Inspect the layer preview before printing and check the planned walls, infill, supports and travel moves.", "https://en.wikipedia.org/wiki/Slicer_(3D_printing)"]
+      - ["Layer height and walls / perimeters", "Layer height is the thickness of each printed step. Walls, also called perimeters, form the shell around the object.", "Balance surface quality, print time and a shell strong enough to handle.", "https://help.prusa3d.com/article/layers-and-perimeters_1748"]
+      - ["Infill", "The pattern of material inside the printed shell.", "Use enough internal support for a successful object without unnecessarily filling the entire volume.", "https://help.prusa3d.com/article/infill_42"]
+      - ["Orientation, overhang and supports", "Orientation is how a model sits on the bed. An overhang extends beyond the layer below; supports provide temporary material underneath where needed.", "Rotate or split the model to reduce supports, then check whether remaining supports can be removed.", "https://help.prusa3d.com/article/support-material_1698"]
+      - ["Bridging", "Printing across a gap with support at both ends.", "A short opening may bridge successfully without supports; check the preview and test what the printer can handle.", "https://help.prusa3d.com/article/poor-bridging_1802"]
+      - ["Bed adhesion / first layer", "How well the first printed layer sticks to the build surface.", "Check the first layer and contact area so the object stays in place during printing.", "https://help.prusa3d.com/article/first-layer-issues_1804"]
+
+  - id: module
+    assignment: P3a
+    title: "3.1 · Descriptive geometry and the parametric module"
+    focus: Build a documented panel from points and faces, then change it through a few clear controls.
+    terms:
+      - ["Point and coordinates", "A point is a location. Its X, Y and Z coordinates describe where it is relative to the model's origin.", "Write the positions needed to construct the panel and show them in an indexed point list.", "https://en.wikipedia.org/wiki/Cartesian_coordinate_system"]
+      - ["Vector", "A direction and an amount of movement, usually expressed as X, Y and Z components.", "Move a point upward with a vector such as (0, 0, 1), meaning one model unit in Z.", "https://en.wikipedia.org/wiki/Euclidean_vector"]
+      - ["Line and curve", "A line is a straight path; a curve can bend. Both describe a path rather than a filled surface.", "Join positions to describe a panel boundary. Later, use a curve as a reference for an attractor pattern.", "https://en.wikipedia.org/wiki/Curve"]
+      - ["Vertex, edge and face", "A vertex is a mesh corner, an edge connects two vertices, and a face is a surface bounded by edges. Vertices is the plural of vertex.", "Build a face by listing its point indices in order around the boundary, then combine faces into the panel.", "https://en.wikipedia.org/wiki/Polygon_mesh"]
+      - ["Mesh", "A collection of vertices, edges and faces that describes a surface. It can be open or enclose a volume.", "Assemble the panel from the explicit points and face lists you provide.", "https://en.wikipedia.org/wiki/Polygon_mesh"]
+      - ["Variable", "A name that refers to a value you can use in a calculation or instruction.", "Name a value 'width' and use it to position the panel's corners.", "https://en.wikipedia.org/wiki/Variable_(computer_science)"]
+      - ["Data types — integer, float, string and Boolean", "A type describes what kind of information a value holds: whole number (int), decimal number (float), text (str), or true/false (bool).", "Use 6 for a panel count, 0.25 for depth, 'Panel A' for a name and True for a selection. The text '6' is different from the number 6; check what a socket or input expects.", "https://docs.python.org/3/tutorial/introduction.html"]
+      - ["Assignment versus comparison", "Assignment gives a name a value. Comparison asks a question and returns true or false.", "In Python, height = 3 sets height; height == 3 tests it. Other tests include !=, <, >, <= and >=. In nodes, supply a value to an input, then use a comparison to test it.", "https://docs.python.org/3/tutorial/introduction.html"]
+      - ["Expression and operator", "An expression calculates a value. Operators perform actions such as adding, multiplying or comparing.", "index * spacing calculates a position. Parentheses group operations: (width + gap) * count differs from width + gap * count. Python % finds a remainder; ** raises a number to a power.", "https://docs.python.org/3/tutorial/introduction.html"]
+      - ["List", "A collection of items in a particular order.", "Keep point coordinates in one list and describe each face using the indices of its points. Different software may represent these collections differently.", "https://en.wikipedia.org/wiki/List_(abstract_data_type)"]
+      - ["Index", "An item's numbered position in a collection. In our node examples, numbering starts at zero.", "In a four-point list, indices 0, 1, 2 and 3 identify the points you can reference when making faces.", "https://en.wikipedia.org/wiki/Array_data_type"]
+      - ["Range / domain", "An interval between two limits, such as 0 to 10. Grasshopper's Range component also generates evenly spaced numbers within an interval.", "Generate five study values from 0 to 1: 0, 0.25, 0.5, 0.75 and 1. In GH Range, use four steps to get those five values, including both ends.", "https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/data-structures/#22-generating-lists"]
+      - ["Parameter", "An input you deliberately expose so a design can change in a controlled way.", "Change width, depth or opening size to produce three variations of the same panel.", "https://en.wikipedia.org/wiki/Parametric_design"]
+      - ["Module / function", "A module is a reusable piece. A function takes inputs and produces a result; your panel can work this way when its controls produce geometry.", "Build the panel once, then reuse it with different input values instead of rebuilding each variation.", "https://en.wikipedia.org/wiki/Subroutine"]
+      - ["Function parameters, arguments and return values", "Parameters name a function's inputs; arguments are the actual values supplied when using it. A return value is the result it sends back.", "Define a panel with width and height inputs, then supply 2 and 3 to make one version. A node group's input and output sockets express a similar reusable relationship.", "https://docs.python.org/3/tutorial/controlflow.html#defining-functions"]
+      - ["Material, rendering and three-point lighting", "A material controls surface appearance; rendering makes an image. Three-point lighting uses a main light, a fill light and a back or rim light.", "Use one material and a consistent lighting setup so differences between panel variations are easy to compare.", "https://en.wikipedia.org/wiki/Three-point_lighting"]
+    programming:
+      - title: Reuse a function to make panel corners
+        code: |
+          def panel_corners(width, height):
+              return [[0, 0, 0], [width, 0, 0],
+                      [width, height, 0], [0, height, 0]]
+
+          points = panel_corners(2, 3)
+          print(points[2])
+        output: |
+          [2, 3, 0]
+        nodes: "A GN node group or GH cluster can package the same reusable construction. This Python function returns four coordinate lists; creating a mesh from them is a separate operation in your modeling software. The indented return belongs to the function."
+        try: "Predict the third point after changing the arguments to 4 and 5. Identify the input names, supplied values and returned result."
+
+  - id: arrays
+    assignment: P3b
+    title: "3.2.1 · Arrays and repetition"
+    focus: Repeat the same module in one, two and three directions.
+    terms:
+      - ["Spatial array — 1D, 2D and 3D", "An organized arrangement of repeated objects: a row, a grid or a stack of grids. Here, 'array' describes geometry; a programming array is a collection of data.", "Arrange your module along one direction, then across a surface, then through a volume.", "https://en.wikipedia.org/wiki/Array_data_structure"]
+      - ["Loop / for loop", "A way to repeat instructions for a sequence of items or a chosen number of steps.", "Place one module at each step. A Repeat Zone, a series of positions or operations on a collection can produce repetition in node systems.", "https://en.wikipedia.org/wiki/For_loop"]
+      - ["Nested repetition", "Repetition inside another repetition.", "For each row, create all its columns; repeat the complete grid at different heights to make a 3D array.", "https://en.wikipedia.org/wiki/For_loop"]
+      - ["Data tree and branch — GH", "A data tree groups items into separate lists called branches. Each branch has an address, called its path.", "Keep each facade row in its own branch so an operation can work on one row at a time.", "https://developer.rhino3d.com/guides/grasshopper/the-why-and-how-of-data-trees/"]
+      - ["Graft — GH", "Put each item into its own new branch while keeping it within its original branch's structure.", "A list [A, B, C] becomes three one-item branches: [A], [B], [C]. Use this to separate panels before matching them with other inputs.", "https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/advanced-data-structures/#353-grafting-from-lists-to-a-trees"]
+      - ["Flatten — GH", "Collect items from all branches into one list, removing the branch grouping.", "Branches [A, B] and [C, D] become [A, B, C, D]. Use this when you want one combined collection; the original row groups are lost. This does not flatten the geometry into a plane.", "https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/advanced-data-structures/#354-flattening-from-trees-to-lists"]
+      - ["Count, spacing and index", "Count is how many items you make; spacing is the distance between them; index identifies each item in the sequence.", "With spacing 2, indices 0, 1 and 2 give positions 0, 2 and 4. Change count or spacing without changing the module.", "https://en.wikipedia.org/wiki/Arithmetic_progression"]
+      - ["List operations", "Actions that count, select, add or filter items in an ordered collection.", "len(points) counts points; points[0] selects the first; append adds an item. Filtering keeps items that pass a test. Use these ideas to choose panels or assemble placement points.", "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists"]
+      - ["List matching / pairing", "A rule for deciding which item in one collection goes with which item in another.", "Pair each panel position with an opening size. Check both counts: Python zip stops at the shorter collection by default; GH's usual longest-list matching repeats the last item of the shorter list.", "https://docs.python.org/3/library/functions.html#zip"]
+    programming:
+      - title: Build a small grid with nested loops
+        code: |
+          points = []
+          for row in range(2):
+              for column in range(3):
+                  points.append([column * 2, row * 2, 0])
+          print(len(points))
+          print(points[5])
+        output: |
+          6
+          [4, 2, 0]
+        nodes: "Grid or nested repetition creates the arrangement; Instance on Points (GN) or placing copies at points (GH) uses it. Indentation shows the loop inside the loop. Each pass appends one coordinate list."
+        try: "Predict the point count for three rows and four columns. Change the spacing from 2 to 3 and identify which coordinates change."
+      - title: Check counts before pairing lists
+        code: |
+          panels = ["A", "B", "C"]
+          openings = [0.2, 0.8]
+          print(len(panels), len(openings))
+          print(list(zip(panels, openings)))
+        output: |
+          3 2
+          [('A', 0.2), ('B', 0.8)]
+        nodes: "The third panel has no pair here. GH's usual longest-list matching would reuse 0.8 for it. GN evaluates fields on geometry elements; it does not use GH's list-matching rule. Decide what you want to happen before combining data."
+        try: "Add a third opening value and predict the pairs. Inspect collection lengths before choosing a matching rule."
+        reference: https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/data-structures/#24-list-matching
+
+  - id: patterns
+    assignment: P3b
+    title: "3.2.2 · Conditionals and patterns"
+    focus: Use simple rules to decide which modules change and by how much.
+    terms:
+      - ["Condition and Boolean value", "A condition is a test with a true or false answer. A Boolean value stores that answer; this differs from a Boolean operation on solids.", "Test whether an index is even or whether a module is above a chosen height.", "https://en.wikipedia.org/wiki/Boolean_data_type"]
+      - ["If / switch", "A way to choose a result based on a condition or selector.", "If the test is true, use an open panel; otherwise use a closed one. A switch can choose between values or geometry.", "https://en.wikipedia.org/wiki/Conditional_(computer_programming)"]
+      - ["Boolean logic — AND, OR, NOT", "AND requires both tests to pass; OR requires at least one; NOT reverses a true/false result.", "Select panels that are near an attractor AND above the ground floor. Use OR to include either zone, or NOT to select the opposite group. In Python these words are lowercase.", "https://docs.python.org/3/tutorial/datastructures.html#more-on-conditions"]
+      - ["Modulo", "The remainder after division. With nonnegative indices, it creates a repeating count.", "Index modulo 3 gives 0, 1, 2, 0, 1, 2… Use those results to repeat a three-panel pattern.", "https://en.wikipedia.org/wiki/Modulo"]
+      - ["Index-driven variation / math function", "A rule that turns an item's index into a changing value.", "Multiply the index to increase panel depth gradually, or use sine or cosine to make a repeating wave. Explain the rule in ordinary language.", "https://en.wikipedia.org/wiki/Function_(mathematics)"]
+    programming:
+      - title: Combine a repeating pattern with a height test
+        code: |
+          heights = [0, 3, 6, 9]
+          for i in range(len(heights)):
+              if i % 2 == 0 and heights[i] > 0:
+                  print(i)
+        output: |
+          2
+        nodes: "Modulo makes the repeating test, comparisons produce true/false values, and AND combines them. GN uses Math, Compare and Boolean Math; GH has corresponding arithmetic, comparison and Boolean components. The indented print runs only when both tests pass."
+        try: "Explain why index 0 is excluded. Replace and with or and predict which indices will print."
+
+  - id: application
+    assignment: P3b
+    title: "3.2.3 · Architectural application"
+    focus: Turn the module, repetition and pattern rules into an architectural object.
+    terms:
+      - ["Modular system", "A larger design assembled from repeatable parts that follow shared rules.", "Use your existing panel and array logic to make a facade, wall, canopy or similar object.", "https://en.wikipedia.org/wiki/Modular_design"]
+      - ["Human scale", "The relationship between a design's dimensions and the people who use it.", "Add a person and key dimensions to judge panel size, openings and the overall object.", "https://en.wikipedia.org/wiki/Human_scale"]
+
+  - id: attractors
+    assignment: P3study
+    title: "3.4 · Attractor studies"
+    focus: Use distance from points and curves to vary a facade's panels.
+    terms:
+      - ["Field", "A rule that can return a value at different locations or elements, rather than one fixed value for everything.", "Calculate a different distance at every panel position, then use those values to control the panels.", "https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/fields.html"]
+      - ["Attribute", "Information attached to geometry elements, such as a point's position or a face's color.", "Use each panel point's position to evaluate a distance field. A field describes how to calculate values; an attribute holds data on geometry.", "https://developer.blender.org/docs/features/objects/attributes/"]
+      - ["Point, multiple-point and curve attractors", "In this course, an attractor is reference geometry whose distance influences a design. It does not have to physically pull or move anything.", "Compare one point, multiple points and a curve on the same facade. For multiple points, state how distances combine, such as using the nearest point.", "https://docs.blender.org/manual/en/4.1/modeling/geometry_nodes/geometry/sample/geometry_proximity.html"]
+      - ["Distance and falloff", "Distance measures how far apart things are. Falloff describes how an effect weakens as that distance increases.", "Make panels more open near the attractor and less open farther away, or reverse the relationship.", "https://docs.blender.org/manual/en/4.1/modeling/geometry_nodes/geometry/sample/geometry_proximity.html"]
+      - ["Remap / map range", "Translate values from one range into another.", "Map distances from 0–10 meters into panel openings from 0.8–0.2 meters, making nearby panels more open.", "https://docs.blender.org/manual/en/5.0/compositing/types/utilities/math/map_range.html"]
+      - ["Clamp", "Stop a value from going below a minimum or above a maximum.", "Keep openings between 0.2 and 0.8 meters even when some panels fall outside the chosen distance range.", "https://docs.blender.org/manual/en/5.0/compositing/types/utilities/math/map_range.html"]
+      - ["Debugging and inspection", "Debugging means finding and fixing the cause of an unexpected result. Inspection means looking at intermediate values along the way.", "Check distances before Remap and opening sizes after it. Use Python print, a GH Panel, or GN's Viewer and Spreadsheet to find the first unexpected value.", "https://docs.python.org/3/tutorial/errors.html"]
+      - ["Syntax, runtime and logic errors", "A syntax error means the instructions cannot be read. A runtime error happens while they run. A logic error lets them run but produces the wrong result.", "A missing colon after if is a syntax error; selecting points[5] from a three-item list raises IndexError at runtime; multiplying spacing twice can make a valid but incorrect array.", "https://docs.python.org/3/tutorial/errors.html"]
+    debugging:
+      - "Predict one result: choose one panel and say what its opening or position should be."
+      - "Inspect the inputs: check values, data types, units, list lengths and the geometry being evaluated."
+      - "Follow one step at a time: compare the distance, remapped value and final geometry with your prediction."
+      - "Find the first mismatch: read the error or warning, and inspect that operation's inputs. A later bad result may originate earlier."
+      - "Make a small test: use three panels, one attractor and known values. Change one thing at a time."
+      - "Check the boundaries: test the minimum, maximum and a value outside the range. Confirm that the chosen index exists and that Clamp behaves as intended."
+    programming:
+      - title: Inspect a value before and after clamping
+        code: |
+          opening = 1.4
+          print("before", opening)
+          opening = max(0.2, min(0.8, opening))
+          print("after", opening)
+        output: |
+          before 1.4
+          after 0.8
+        nodes: "This matches limiting a value with Clamp: first keep it at or below 0.8, then at or above 0.2. Inspect both sides of the node. Remapping changes a value's scale; clamping only enforces limits."
+        try: "Predict the results for -0.1, 0.5 and 1.4. If a panel stays too large, inspect the value before changing the geometry."
+
+  - id: facade
+    assignment: P3c
+    title: "3.5 · Architectural facade or small project"
+    focus: Reuse the existing panel and give its attractor-driven variation an architectural purpose.
+    terms:
+      - ["Facade and architectural purpose", "A facade is an exterior face of a building. Its design can shape light, privacy, views and the appearance of an entrance.", "Reuse your 3.1 panel for a simple architectural proposal and explain what the changing pattern is intended to do.", "https://en.wikipedia.org/wiki/Facade"]
+      - ["Parametric relationship", "A connection that lets one change update other parts of a design automatically.", "Move the point or curve attractor and let the same rule update panel openings or depth across the facade.", "https://en.wikipedia.org/wiki/Parametric_design"]
+      - ["Elevation and before / after comparison", "An elevation is a straight-on drawing of one side. A before/after pair shows what a design operation changes.", "Show the facade clearly and compare its regular arrangement with the attractor-driven result, using matching views.", "https://en.wikipedia.org/wiki/Architectural_drawing"]
+
+  - id: fields
+    assignment: P4a
+    title: "4.1 · Volumetric field matrix"
+    focus: Build a 5 × 5 comparison to study two controls in the provided generative tools.
+    terms:
+      - ["Generative rule and procedural texture / noise", "A generative rule produces form from instructions. A procedural texture generates a pattern computationally; noise gives irregular but controllable variation.", "Use the supplied texture and volume tools to drive form, then study how changing two controls changes the results.", "https://en.wikipedia.org/wiki/Procedural_texture"]
+      - ["Scalar / volumetric field", "A scalar field gives one number at each location. A volumetric field extends through three-dimensional space.", "Use changing values throughout a volume to decide where material or empty space appears.", "https://en.wikipedia.org/wiki/Scalar_field"]
+      - ["SDF — signed distance field", "A field that gives distance to the nearest surface, with opposite signs for inside and outside. The surface is at zero; ordinary noise values are not automatically distances.", "Use the instructor's SDF groups to create and adjust forms without rebuilding their internal logic.", "https://en.wikipedia.org/wiki/Signed_distance_function"]
+      - ["Voxel and resolution", "A voxel is one cell of a 3D grid. Resolution describes how finely that grid samples the volume.", "Use a workable resolution for exploration; smaller cells can show finer detail but require more memory and processing.", "https://en.wikipedia.org/wiki/Voxel"]
+      - ["Threshold / isosurface", "A threshold is a chosen value. An isosurface joins locations that have that value, creating a surface inside a field.", "Extract a surface from the field with the supplied tools. Changing the threshold can change the form; an SDF's original boundary is its zero surface.", "https://en.wikipedia.org/wiki/Isosurface"]
+      - ["Parameter matrix / controlled comparison", "A matrix here is a comparison grid. A controlled comparison changes chosen inputs while keeping other settings consistent.", "Choose two parameters with five values each. Vary one across columns and one down rows to make 25 results, keeping other controls and presentation consistent.", "https://en.wikipedia.org/wiki/Design_of_experiments"]
+      - ["Random seed and repeatability", "A seed initializes a repeatable sequence of random values. Reusing it with the same setup lets you revisit a result.", "Hold the seed fixed during a parameter comparison so unrelated randomness does not change every cell. Use a Seed input where the tool provides one; a Noise Texture may instead be controlled through its coordinates or W input.", "https://docs.python.org/3/library/random.html#random.seed"]
+    programming:
+      - title: Repeat a random sequence
+        code: |
+          import random
+          random.seed(7)
+          first = random.random()
+          random.seed(7)
+          repeated = random.random()
+          print(first == repeated)
+        output: |
+          True
+        nodes: "import makes Python's random tools available. A seed initializes the sequence; successive draws still vary. GN Random Value and GH Random expose seeds. Equal seed numbers across different programs do not guarantee the same pattern."
+        try: "Change only the second seed and compare again. For the 5 × 5 study, identify two controls to vary and the other settings to hold fixed."
+
+  - id: envelope
+    assignment: P4b
+    title: "4.2 · Architectural envelope"
+    focus: Refine a field study into a small shop or pavilion within a 12 × 12 × 12 meter maximum envelope.
+    terms:
+      - ["Building envelope", "The parts that separate an interior from its surroundings, including the roof, walls and openings.", "Shape a small architectural proposal with an entrance, usable interior space, ground connection and clear openings.", "https://en.wikipedia.org/wiki/Building_envelope"]
+      - ["SDF Boolean operators", "Tools that combine or cut forms represented by distance fields: union joins, subtraction removes and intersection keeps overlap.", "Use the provided groups to refine the envelope, cut entrances or openings and make space for occupation.", "https://en.wikipedia.org/wiki/Constructive_solid_geometry"]
+      - ["Plan, section and isometric", "A plan looks down at a horizontal cut; a section shows a vertical cut; an isometric shows three directions together without perspective convergence.", "Show the same proposal in all three views. Mark the section cut and include dimensions and people to explain scale and usable space.", "https://en.wikipedia.org/wiki/Architectural_drawing"]
+      - ["Architectural visualization", "An image that communicates the form, space, material and atmosphere of a proposed design.", "Make a compelling image while keeping the entrance, occupied space and overall dimensions understandable and consistent with the drawings.", "https://en.wikipedia.org/wiki/Architectural_rendering"]
+
+  - id: fabrication
+    assignment: P4c
+    title: "4.3 · Contour fabrication"
+    focus: Turn the same envelope into an aligned, assembled physical model.
+    terms:
+      - ["Contour / section curve", "A curve made where a cutting plane meets a form's surface.", "Use the provided contour tools to extract ordered slices of your architectural envelope.", "https://en.wikipedia.org/wiki/Cross_section_(geometry)"]
+      - ["Slicing direction and spacing", "Direction determines which way the cuts pass through the form; spacing is the distance between successive cuts.", "Choose a direction that shows the design clearly. Match spacing to the material thickness and any planned spacers at model scale.", "https://en.wikipedia.org/wiki/Cross_section_(geometry)"]
+      - ["Model scale", "The relationship between a model's size and the full-size design.", "At 1:50, a 12-meter building dimension becomes 24 centimeters. Scale the design first and prepare the cutting file at the physical size to be fabricated.", "https://en.wikipedia.org/wiki/Scale_model"]
+      - ["Registration mark / alignment feature", "A shared reference that helps separate pieces line up in the correct position.", "Add a consistent mark, hole or notch to the slices. Number parts and plan how rods, tabs, glue, spacers or a jig will hold them.", "https://en.wikipedia.org/wiki/Fiducial_marker"]
+      - ["Kerf and tolerance", "Kerf is the width of material removed by a cut. Tolerance is the acceptable variation in a dimension; clearance is the gap left so parts can fit.", "Test holes, slots and joints in the actual material before cutting the complete set, then adjust their fit.", "https://en.wikipedia.org/wiki/Laser_cutting"]
+      - ["Cutting layout", "The arrangement of parts on the material sheet for fabrication.", "Place the slices at their physical cutting size, keep them within the available stock and distinguish cutting lines from engraving or labels.", "https://en.wikipedia.org/wiki/Laser_cutting"]
+
+  - id: booklet
+    assignment: BOOK
+    title: "Final booklet · Communicating the work"
+    focus: Assemble the work into a readable record using the graphic standards developed in Assignment 1.
+    terms:
+      - ["Caption and annotation", "A caption explains an image; an annotation points out something specific within it.", "Explain what changed, which controls mattered and why you chose a result, rather than only naming the image.", "https://en.wikipedia.org/wiki/Caption_(text)"]
+      - ["Attribution / source credit", "A clear statement of where someone else's image, idea or reference came from.", "Credit precedents and borrowed material beside the relevant work and collect references in the booklet.", "https://en.wikipedia.org/wiki/Attribution_(copyright)"]
+      - ["Consistency and template reuse", "Using the same graphic rules across different content so the document reads as one collection.", "Reuse the GSM layout, typography, colors and captions while assembling the assignment sheets and selected revisions.", "https://en.wikipedia.org/wiki/Style_guide"]
+
+# Screenshots remain unaltered. Optional focus rectangles are display-only zooms
+# into a course capture; clicking opens the complete original image.
+node_examples:
+  Variable:
+    software: Geometry Nodes
+    node: Group Input
+    note: "The named Width, Depth and Height inputs carry values into this example. A variable is a concept, not a node named Variable. In GH, a Number Slider or Number parameter can supply a value."
+    image: images/blender/s02-parametric-pyramid-geonodes.png
+    focus: [695, 392, 155, 104]
+    caption: "Group Input exposes three named values that feed the panel construction."
+    credit: ARC 3133 course capture · Blender 5.2.1 LTS
+    source: files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend
+  Index:
+    software: Geometry Nodes
+    node: Index
+    note: "Index supplies the element number in the current geometry context. In GH, List Item uses an index to retrieve an item from each branch; it is not the same operation as generating indices."
+    image: images/vocabulary/gn-index-range.png
+    focus: [704, 624, 150, 65]
+    caption: "The Index node feeds the two comparisons in the course's range-selection example."
+    credit: ARC 3133 course capture · Blender 5.2.1 LTS
+    source: files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend
+  Range / domain:
+    software: Grasshopper
+    node: Range
+    note: "D is the domain, N is the number of steps and R is the resulting list. In GN, Index plus Math can generate evenly spaced values over an existing set of elements; Map Range rescales values rather than creating a list. **Python is different:** range(5) produces the integers 0, 1, 2, 3, 4; its stop value is excluded. GH Range divides a domain and includes both ends. [Python range reference](https://docs.python.org/3/tutorial/controlflow.html#the-range-function)."
+    image: images/vocabulary/gh-range.png
+    caption: "This example uses seven steps between 1.1 and 12.5, producing eight values."
+    credit: Rajaa Issa / Robert McNeel & Associates · Figure 36
+    source: https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/data-structures/#22-generating-lists
+    original: https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/data-structures/ads-105.png
+  Graft — GH:
+    software: Grasshopper
+    node: Graft Tree
+    note: "Graft is also available as an input/output option. GN does not use GH data-tree branches, so it has no direct Graft equivalent."
+    image: images/vocabulary/gh-graft.png
+    caption: "Five values in one branch become five branches containing one value each."
+    credit: Rajaa Issa / Robert McNeel & Associates · Figure 67
+    source: https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/advanced-data-structures/#353-grafting-from-lists-to-a-trees
+    original: https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/advanced-data-structures/ads-235.png
+  Flatten — GH:
+    software: Grasshopper
+    node: Flatten Tree
+    note: "Flatten is also available as an input/output option. GN's Join Geometry combines geometry and Realize Instances converts instances; neither is a direct substitute for flattening a GH data tree."
+    image: images/vocabulary/gh-flatten.png
+    caption: "The five one-item branches are collected into one five-item list."
+    credit: Rajaa Issa / Robert McNeel & Associates · Figure 69
+    source: https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/advanced-data-structures/#354-flattening-from-trees-to-lists
+    original: https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/advanced-data-structures/ads-237.png
+  Modulo:
+    software: Geometry Nodes / Grasshopper
+    node: Math → Floored Modulo (GN); Modulus (GH)
+    note: "Connect the index as the first value and 3 as the divisor. For indices 0–5, the result is 0, 1, 2, 0, 1, 2. Compare the result with 0 to select every third module."
+  Remap / map range:
+    software: Grasshopper
+    node: Remap Numbers
+    note: "V is the input value, S is the source domain and T is the target domain. The GN equivalent is Map Range, with From Min/Max and To Min/Max."
+    image: images/vocabulary/gh-remap.png
+    caption: "Bounds identifies the input limits; ReMap translates the values 1–8 into the range 0–1."
+    credit: Rajaa Issa / Robert McNeel & Associates · Figure 23
+    source: https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/algorithms-data/#176-mapping
+    original: https://developer.rhino3d.com/guides/grasshopper/gh-algorithms-and-data-structures/algorithms-data/ads-045.png
+  Clamp:
+    software: Geometry Nodes
+    node: Map Range · Clamp option
+    note: "Enable Clamp to limit the remapped result to the target interval. With limits 0.2 and 0.8, values below 0.2 become 0.2 and values above 0.8 become 0.8; values inside stay unchanged. GN also has a separate Clamp node."
+    image: images/blender/s05-curve-attractor-geonodes.png
+    focus: [1216, 640, 150, 175]
+    caption: "Map Range in the curve-attractor example has Clamp enabled. The target limits arrive through the To Min and To Max sockets."
+    credit: ARC 3133 course capture · Blender 5.2.1 LTS
+    source: files/blender/04-attractors/Attractors.blend

@@ -16,6 +16,8 @@ Set up the graphic system you will use to present all your later work.
 
 **Vocabulary:** composition, grid, hierarchy, typography, line weight, palette.
 
+[Plain-language vocabulary by assignment]({{ site.baseurl }}/modules/tutorials/the-notation/)
+
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
 **Taught in:** [Class 01]({{ site.baseurl }}/modules/classes/class-01/).

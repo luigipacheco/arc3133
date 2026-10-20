@@ -2,6 +2,14 @@
     max-width: 100%;
 }
 
+.vocab-node { margin: 1rem 0 2rem; }
+.content .vocab-node > a { display: block; border: 0; background: transparent; }
+.content .vocab-node img { display: block; height: auto; margin: 0; }
+.vocab-node-focus { display: block; position: relative; overflow: hidden; max-width: 100%; }
+.content .vocab-node-focus img { position: absolute; max-width: none; }
+.vocab-node figcaption { margin-top: .75rem; font-size: .9em; line-height: 1.5; }
+.vocab-node a:focus-visible { outline: 3px solid #67811f; outline-offset: 4px; }
+
 .blender-capture {
     margin: 2rem 0 3rem;
     padding-top: 1rem;

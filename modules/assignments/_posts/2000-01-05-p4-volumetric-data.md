@@ -26,6 +26,8 @@ Jump to: [4.1](#p4a) / [4.2](#p4b) / [4.3](#p4c)
 
 **Present:** One 17 x 11 inch sheet: labeled 5 x 5 matrix, selected result and observations; editable matrix and supplied groups.
 
+**Vocabulary for this assignment:** [4.1]({{ site.baseurl }}/modules/tutorials/the-notation/#fields)
+
 ### Purpose
 
 Use the instructor-provided generative texture and SDF/volume groups to explore how two controls change a volume. Build the comparison matrix yourself.
@@ -65,6 +67,8 @@ Use the instructor-provided generative texture and SDF/volume groups to explore 
 **Introduced:** Week 11 — Nov 3 · **Due:** Week 12 — Nov 10, 11:59 PM Eastern Time · **Weight:** 15%
 
 **Present:** One 17 x 11 inch sheet: plan, section, isometric, use/scale and design explanation; editable envelope.
+
+**Vocabulary for this assignment:** [4.2]({{ site.baseurl }}/modules/tutorials/the-notation/#envelope)
 
 ### Purpose
 
@@ -107,6 +111,8 @@ Select a result from 4.1 and fine-tune its field into a compelling architectural
 **Introduced:** Week 12 — Nov 10 · **Due:** Week 13 — Nov 17, 11:59 PM Eastern Time · **Weight:** 10%
 
 **Present:** One assembled contour model; one 17 x 11 inch fabrication sheet; separate full-size cutting file, editable source, part list and photographs.
+
+**Vocabulary for this assignment:** [4.3]({{ site.baseurl }}/modules/tutorials/the-notation/#fabrication)
 
 ### Purpose
 

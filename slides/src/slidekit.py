@@ -26,12 +26,13 @@ def title_slide(d, week_n, big_lines, left_tag, bg=LIME, lfill=PINK, rfill=CYAN,
     return s
 
 
-def issued_slide(d, mid, blurb=None, badge="ISSUED TODAY", badgefill=YELLOW, cards=None):
-    """1.x brief header, straight from the milestone record."""
+def issued_slide(d, mid, blurb=None, badge="ISSUED TODAY", badgefill=YELLOW, cards=None, title=None):
+    """1.x brief header, straight from the milestone record.
+    title: optional shorter heading when the milestone title wraps into the due line."""
     m = C.milestone(mid)
     s = d.slide(BLACK)
     s.issued(badge,
-             "%s — %s" % (mid, m["title"].upper()),
+             "%s — %s" % (mid, (title or m["title"]).upper()),
              C.due_line(mid),
              blurb or m.get("project_title", ""),
              badgefill=badgefill)

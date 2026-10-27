@@ -22,4 +22,4 @@ The four projects are now GSM, CSG, Paneling and Integrated Spatial Project. Ope
 
 <a id="site-analysis"></a>
 
-[P4a — Generative fields - a two-parameter matrix]({{ site.baseurl }}/modules/assignments/p4-volumetric-data/#p4a)
+P4a — Generative fields - a two-parameter matrix — *not yet released*

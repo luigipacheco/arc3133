@@ -53,7 +53,7 @@ The calendar teaches Arrays in Weeks 6–7, checks both lessons in Week 8 and in
 | [P1 — GSM]({{ site.baseurl }}/modules/assignments/p1-gsm/) | Build a standardized graphic system through color theory, typography, composition and your own reusable template | 5% |
 | [P2 — CSG]({{ site.baseurl }}/modules/assignments/p2-csg/) | Interpret real architecture through transformations and Boolean operations, explain it as instructions, then learn slicing and 3D printing | 15% |
 | [P3 — Paneling]({{ site.baseurl }}/modules/assignments/p3-paneling/) | Build a reusable module from a documented panel system. Use lists, repetition, conditions and attractors to develop architectural studies | 30% |
-| [P4 — Generative Architectural Envelope]({{ site.baseurl }}/modules/assignments/p4-volumetric-data/) | Build a two-parameter field matrix, refine one result into a pavilion or small shop within 12 x 12 x 12 m, then fabricate a contour model | 35% |
+| P4 — Generative Architectural Envelope — *not yet released* | Build a two-parameter field matrix, refine one result into a pavilion or small shop within 12 x 12 x 12 m, then fabricate a contour model | 35% |
 
 The midterm grade accumulates the Graphic Standards Manual, CSG sheet and print, module (3.1) and arrays (3.2). These assignments account for 40% of the final course grade. Report the accumulated result as a percentage of those 40 possible course points. The midterm adds no separate assessment weight. [Midterm grade calculation]({{ site.baseurl }}/modules/assignments/overview/#midterm-grade)
 

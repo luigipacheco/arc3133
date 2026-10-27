@@ -24,7 +24,7 @@ More videos will be added as they are recorded.
 
 ## Lesson notes
 
-Class and tutorial pages are posted through October 20 (Week 9), including attractors. All four project briefs contain current requirements, weights and weekly deadlines. Later class and tutorial pages will be posted as their topics begin.
+Class and tutorial pages are posted through October 20 (Week 9), including attractors. Projects 1 to 3 are posted with current requirements, weights and deadlines; Project 4 is posted when it begins. Later class and tutorial pages are posted as their topics begin.
 
 Open the posted lessons below; later lessons will be added as the course progresses.
 

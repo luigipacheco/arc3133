@@ -879,7 +879,7 @@ Reuse the existing panel and give its attractor-driven variation an architectura
 
 Build a 5 × 5 comparison to study two controls in the provided generative tools.
 
-[Open the assignment]({{ site.baseurl }}/modules/assignments/p4-volumetric-data/#p4a)
+Open the assignment — *not yet released*
 
 ### Generative rule and procedural texture / noise
 
@@ -970,7 +970,7 @@ True
 
 Refine a field study into a small shop or pavilion within a 12 × 12 × 12 meter maximum envelope.
 
-[Open the assignment]({{ site.baseurl }}/modules/assignments/p4-volumetric-data/#p4b)
+Open the assignment — *not yet released*
 
 ### Building envelope
 
@@ -1012,7 +1012,7 @@ Refine a field study into a small shop or pavilion within a 12 × 12 × 12 meter
 
 Turn the same envelope into an aligned, assembled physical model.
 
-[Open the assignment]({{ site.baseurl }}/modules/assignments/p4-volumetric-data/#p4c)
+Open the assignment — *not yet released*
 
 ### Contour / section curve
 

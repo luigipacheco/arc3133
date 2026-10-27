@@ -1460,9 +1460,9 @@ teaching_sequence:
     revise projects, document results and prepare the booklet. No new required topic; no separate December 1 submission.'
 
 release:
-  note: Class and tutorial pages are posted through October 20 (Week 9), including attractors. All four project
-    briefs contain current requirements, weights and weekly deadlines. Later class and tutorial pages will be posted
-    as their topics begin.
+  note: Class and tutorial pages are posted through October 20 (Week 9), including attractors.
+    Projects 1 to 3 are posted with current requirements, weights and deadlines; Project 4 is posted
+    when it begins. Later class and tutorial pages are posted as their topics begin.
   classes:
   - 1
   - 2
@@ -1484,7 +1484,6 @@ release:
   - P2
   - P3
   - BOOK
-  - P4
 
 blender:
   version: Blender 5.2.1 LTS
@@ -1687,15 +1686,14 @@ presentation_review:
   note: Arrays Part 2 (conditionals) — brick wall, Sheet 2 façade rules and Sheet 3 rules that switch a parameter
     in 3D; matches the October 18 deadline. deck, then review before marking current.
 - week: 8
-  status: needs_revision
+  status: current
   publish: true
-  note: Revised assignment structure and current deadlines supersede this deck. Update both its source and exported
-    deck, then review before marking current.
+  note: Supported practice for Arrays 1 and 2 with the mid-semester upload checklist; rebuilt from this file.
 - week: 9
-  status: needs_revision
+  status: current
   publish: true
-  note: Revised assignment structure and current deadlines supersede this deck. Update both its source and exported
-    deck, then review before marking current.
+  note: Attractors, the three field studies (3.4) and the architectural application (3.5); rebuilt from this file.
+    The earlier layered site-analysis deck is retired as slides/src/class09_site_analysis.py.
 - week: 10
   status: needs_revision
   note: Revised assignment structure and current deadlines supersede this deck. Update both its source and exported

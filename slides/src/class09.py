@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Class 09 — Attractors continued (U05): layered site analysis. P3d issued; P3c checkpoint;
-checklist for the Week 10 mid-semester deadline."""
+"""Class 09 — Attractors (U05). Three field studies (3.4) and the architectural application (3.5) issued.
+The midterm upload closed on Sunday; nothing is due today."""
 import os, math
 from nb import *
 from slidekit import *
@@ -13,268 +13,185 @@ from pptx.util import Pt
 OUT = os.environ.get("DECK_OUT", "/home/claude/out")
 d = Deck()
 WK = 9
-DL = C.COURSE["midterm_week"]          # the mid-semester deadline week
 
 VISUAL = ("Visual quality 35% · computational understanding 25% · technical execution 20% "
           "· experimentation 10% · requirements and identity 10%.")
 
-DUE_DL = sorted(m["id"] for m in C.milestones_due(DL))
-DUE_DL_TXT = ", ".join(DUE_DL[:-1]) + " and " + DUE_DL[-1]
-P3D_DUE = C.milestone("P3d")["due"]
-
 # 1 ── TITLE
-title_slide(d, WK, ["LAYERED", "SITE ANALYSIS"],
-            "P3d BEGINS — ONE SITE, MEASURED IN LAYERS",
-            bg=YELLOW, lfill=PINK, rfill=CYAN,
-            foot="P3d ISSUED TODAY  /  P3c CHECKPOINT TODAY  /  MID-SEMESTER DEADLINE NEXT CLASS — %s"
-                 % C.date_long(DL).upper())
+title_slide(d, WK, ["ATTRACTORS"],
+            "P3 CONTINUES: THE RULE STOPS COMING FROM THE INDEX",
+            bg=CYAN, lfill=PINK, rfill=LIME, right_tag="MIDTERM UPLOAD CLOSED")
 
-# 2 ── A SITE ANALYSIS IS A FIELD
+# 2 ── AN ATTRACTOR IS A NUMBER
 s = d.slide(BLACK)
-s.header("A SITE ANALYSIS IS A FIELD",
-         "Last class you built a field from distance. A site analysis reads the same way.")
-X1, X2, CW = L + 1.95, 7.75, 4.9
-s.chip(X1, 1.95, CW, 0.45, "ATTRACTOR FIELD — P3c", fill=CYAN, size=12)
-s.chip(X2, 1.95, CW, 0.45, "SITE LAYER — P3d", fill=LIME, size=12)
-rows = [("MEASURE", YELLOW, "Distance to the attractor, at every point of the grid.",
-         "A value at every point of the site's point cloud."),
-        ("REMAP", PINK, "Distance range pushed into grey or a line property.",
-         "The value range pushed into grey or colour."),
-        ("LEGEND", CYAN, "Near → far, with input and output ranges.",
-         "What the value means, with its range and units."),
-        ("USE", LIME, "The value drives a line in the drawing.",
-         "Layers combine into one reading of the site.")]
-y = 2.6
-for lab, col, a, b in rows:
-    s.chip(L, y, 1.7, 0.7, lab, fill=col, size=12.5)
-    for xx, body in ((X1, a), (X2, b)):
-        s.card(xx, y, CW, 0.7, fill=CREAM)
-        s.t(xx + 0.25, y, CW - 0.5, 0.7, [s.Cb(body, 13)], anchor=MSO_ANCHOR.MIDDLE)
-    y += 0.85
-s.banner(6.1, "MEASURE → REMAP → LEGEND. THE SAME THREE STEPS, REPEATED FOR EVERY LAYER.",
-         fill=YELLOW, h=0.62, align=PP_ALIGN.CENTER)
+s.header("AN ATTRACTOR IS A NUMBER",
+         "For every panel: how far is it from something? Use that number to drive a parameter.")
+s.panel(L, 2.05, 6.2, 3.3, "THE WHOLE IDEA", headfill=LIME)
+s.t(L + 0.4, 2.85, 5.4, 2.2, [
+    s.Mb("for each panel p:", 15),
+    s.Mb("    d = distance(p, a)", 15),
+    s.Mb("    value = f(d)", 15),
+    s.Mb(" ", 8),
+    s.Mb("Everything else this week", 13.5),
+    s.Mb("is a choice of f.", 13.5)], ls=1.35)
+s.panel(7.15, 2.05, 5.5, 3.3, "MEASURE IT FIRST", headfill=CYAN)
+s.t(7.45, 2.85, 4.9, 2.2, [
+    s.Mb("d = √((px − ax)² + (py − ay)²)", 13),
+    s.Cb(" ", 6),
+    s.Cb("Pythagoras, once per panel. The answer is in model units.", 14),
+    s.Cb(" ", 6),
+    s.Cb("Index told you where in the sequence. Distance tells you how far from something "
+         "outside the collection.", 14)], ls=1.3)
+s.banner(5.7, "IN ARRAYS YOU BUILT THE POSITIONS. NOW YOU MEASURE THEM.",
+         fill=YELLOW, h=0.7, align=PP_ALIGN.CENTER)
 
-# 3 ── LAYERS
-s = d.slide(CREAM)
-s.header("THREE KINDS OF LAYER",
-         "Each layer is a field: one value per point, its own range, its own legend.")
-PW, PY, PH = 3.85, 1.95, 3.65
-GX0, GY0, COLS, ROWS, P, Q = 0.55, 2.8, 9, 5, 0.34, 0.27
-layers = [("DISTANCE TO POINTS OR CURVES", CYAN, "Near → far from a feature you choose: a path, "
-           "a tree line, an entrance.", "LEGEND · NEAR → FAR · m"),
-          ("HEIGHT BANDS", LIME, "Every point sorted by its height into bands you set.",
-           "LEGEND · BAND EDGES · m"),
-          ("RECORDED ATTRIBUTE", PINK, "A value the scan already holds, such as colour or "
-           "classification.", "LEGEND · CLASS OR VALUE")]
-BAND = ["E8E8E0", "969690", "323230"]
-CLASS = [CYAN, LIME, PINK]
+# 3 ── READ THE FIELD FIRST
+s = d.slide(BLACK)
+s.header("READ THE FIELD BEFORE YOU CHANGE ANYTHING",
+         "Distance is a value at every location. Look at it as grey before it becomes geometry.")
+seq = [("01", "MEASURE", "Every location on the facade grid gets a number: how far to the attractor.", CYAN),
+       ("02", "DISPLAY", "Show those numbers as grey. This is a diagram already.", LIME),
+       ("03", "REMAP", "Push that range into the range your parameter needs.", YELLOW),
+       ("04", "DRIVE", "Only now does the panel change. The field was finished first.", PINK)]
 x = L
-for k, (nm, col, body, leg) in enumerate(layers):
-    s.panel(x, PY, PW, PH, nm, headfill=col, headh=0.5, tsize=12.5)
-    gx = x + GX0
-    if k == 0:
-        G.field_point(s, gx, GY0, gx + 0.9, GY0 + 0.55, cols=COLS, rows=ROWS, p=P, q=Q,
-                      k=0.2, base=0.2)
-    else:
-        for i in range(COLS):
-            for j in range(ROWS):
-                px, py = gx + i * P, GY0 + j * Q
-                if k == 1:
-                    h = math.exp(-((i - 5.5) ** 2) / 8.0 - ((j - 1.5) ** 2) / 5.0)
-                    fill = BAND[0 if h < 0.3 else (1 if h < 0.7 else 2)]
-                    s.dot(px, py, d=0.17, fill=fill)
-                    s.dot(px, py, d=0.05, fill=BLACK)
-                else:
-                    c = 0 if j <= 1 and i < 5 else (1 if i + j < 9 else 2)
-                    s.dot(px, py, d=0.17, fill=CLASS[c])
-    # legend
-    s.t(x + 0.25, 4.2, PW - 0.5, 0.25, [s.A(leg, 9.5, GREY)])
-    if k == 0:
-        G.gray_ramp(s, x + 0.25, 4.47, PW - 0.5, 0.18)
-    else:
-        sw = (PW - 0.5) / 3
-        for i in range(3):
-            s.rect(x + 0.25 + i * sw, 4.47, sw, 0.18,
-                   fill=(BAND if k == 1 else CLASS)[i], line=BLACK, lw=Pt(1.5))
-    s.t(x + 0.25, 4.8, PW - 0.5, 0.75, [s.Cb(body, 12.5)], ls=1.2)
+for n, ttl, body, col in seq:
+    s.chip(x, 2.0, 2.85, 0.5, n + "   " + ttl, fill=col, size=12)
+    s.card(x, 2.6, 2.85, 1.5, fill=CREAM)
+    s.t(x + 0.25, 2.6, 2.35, 1.5, [s.Cb(body, 13)], ls=1.3, anchor=MSO_ANCHOR.MIDDLE)
+    x += 3.05
+s.t(L, 4.45, W, 0.3, [s.A("THE FIELD, READ AS A GREY VALUE ACROSS THE FACADE   ·   NEAR → FAR", 11, MUTE)])
+G.gray_ramp(s, L, 4.78, W, 0.5)
+s.banner(5.62, "IF THE GREY IMAGE IS NOT ALREADY A GOOD DIAGRAM, THE PANEL WILL NOT SAVE IT.",
+         fill=CYAN, h=0.68, align=PP_ALIGN.CENTER)
+s.t(L, 6.55, W, 0.4, [s.C("3.4 shows the attractors and the resulting variation side by side, "
+                          "with the parameter labelled. That order is the assignment.", 13.5, MUTE)])
+
+# 4 ── REMAP AND CLAMP
+s = d.slide(CREAM)
+s.header("REMAP, AND SAY WHERE YOU CLAMPED",
+         "Distance comes out in model units. Your parameter needs a specific range.")
+s.panel(L, 1.95, 6.0, 3.4, "THE OPERATION", headfill=CYAN)
+s.t(L + 0.35, 2.7, 5.3, 2.3, [
+    s.Mb("t   = (d − dmin) / (dmax − dmin)", 13),
+    s.Mb("t   = clamp(t, 0, 1)", 13),
+    s.Mb("out = outmin + t × (outmax − outmin)", 13),
+    s.Mb(" ", 8),
+    s.Mb("d    0 … 4 units        ← input", 13),
+    s.Mb("out  0.85 … 0.15 opening ← output", 13)], ls=1.4)
+s.panel(7.0, 1.95, 5.65, 3.4, "SUBTRACT. DIVIDE. MULTIPLY. ADD.", headfill=LIME, tsize=14)
+s.t(7.3, 2.7, 5.05, 2.3, [
+    s.Cb("Nothing here is new. It is the arithmetic of a transformation, applied to a distance "
+         "instead of a coordinate.", 14),
+    s.Cb(" ", 7),
+    s.Cb("Clamping is a decision, not a safety net. Decide what happens past the end of your "
+         "range and say so. Swap the two output values and the pattern inverts.", 14)], ls=1.3)
+s.banner(5.65, "3.4 LABELS THE PARAMETER AND SAYS, IN PLAIN WORDS, HOW DISTANCE CHANGES IT.",
+         fill=YELLOW, h=0.72, align=PP_ALIGN.CENTER)
+
+# 5 ── FALLOFF + THREE KINDS
+s = d.slide(CREAM)
+s.header("FALLOFF, AND WHAT YOU MEASURE TO",
+         "f shapes the result. The attractor type changes only what the distance is measured to.")
+fall = [("LINEAR", CYAN, "v = 1 − t", lambda t: 1 - t),
+        ("INVERSE", PINK, "v = 1 / (1 + k·t)", lambda t: 1 / (1 + 6 * t)),
+        ("SMOOTH", LIME, "eased at both ends", lambda t: 1 - (3 * t * t - 2 * t ** 3)),
+        ("STEP", YELLOW, "on / off at a cut", lambda t: 1.0 if t < 0.45 else 0.0)]
+x = L
+for nm, col, eq, fn in fall:
+    s.panel(x, 1.9, 2.85, 1.95, nm, headfill=col, headh=0.45, tsize=13)
+    s.t(x + 0.22, 2.45, 2.4, 0.3, [s.Mb(eq, 11)])
+    G.falloff(s, x + 0.32, 3.45, fn, h=0.6)
+    s.rule(x + 0.28, 3.57, 2.3, lw=Pt(1.0), color=MUTE)
+    x += 3.05
+kinds = [("ONE POINT", CYAN, "d = distance(p, a)"),
+         ("NEAREST OF SEVERAL", PINK, "d = min(distance(p, ai))"),
+         ("NEAREST ON A CURVE", LIME, "d = distance(p, closest(c, p))")]
+x = L
+for nm, col, fm in kinds:
+    s.panel(x, 4.05, 3.85, 2.2, nm, headfill=col, headh=0.45, tsize=13)
+    s.t(x + 0.2, 5.72, 3.45, 0.4, [s.Mb(fm, 10.5)], anchor=MSO_ANCHOR.MIDDLE,
+        align=PP_ALIGN.CENTER)
     x += 4.08
-s.banner(5.8, "THREE LAYERS AT LEAST. EACH ONE ANSWERS A DIFFERENT QUESTION ABOUT THE SAME SITE.",
+P, Q, GY = 0.3, 0.16, 4.72
+G.field_point(s, L + 0.72, GY, L + 1.9, GY + 0.35, p=P, q=Q, rows=6, k=0.2, base=0.17)
+G.field_multi(s, L + 4.8, GY, [(L + 5.3, GY + 0.1), (L + 6.8, GY + 0.7)],
+              p=P, q=Q, rows=6, k=0.2, base=0.17)
+G.field_curve(s, L + 8.88, GY, L + 8.88, 2.4, lambda t: GY + 0.72 - 0.55 * math.sin(t * math.pi),
+              p=P, q=Q, rows=6, k=0.25, base=0.17)
+s.banner(6.45, "SAME FACADE, SAME PANEL, SAME PARAMETER, THREE ATTRACTORS: 3.4 SHOWS WHAT THE ATTRACTOR ALONE CHANGES.",
          fill=BLACK, color=YELLOW, h=0.6, size=12, align=PP_ALIGN.CENTER)
-s.t(L, 6.68, W, 0.4, [s.C("Mixtli, the Blender add-on the instructor provides, does these operations. "
-                         "An equivalent tool is fine.", 13, GREY)])
 
-# 4 ── RECORD THE SITE FIRST
+# 6 ── THE SAME THING, WRITTEN OUT
+pseudocode_slide(d, "U05",
+                 sub="Measure, remap, clamp, shape the falloff, then drive one parameter. In that order.",
+                 note="LINE 2 IS THE ONLY LINE THAT CHANGES BETWEEN THE THREE ATTRACTOR TYPES.")
+
+# 7 ── THE NUMBER DRIVES YOUR PANEL
 s = d.slide(BLACK)
-s.header("RECORD THE SITE FIRST",
-         "Before any layer, record the point cloud: where it came from and how it sits.")
-rec = [("SOURCE", "Where the point cloud came from. Name it on the sheet.", CYAN),
-       ("UNITS", "What one unit is. Check it against one known dimension.", LIME),
-       ("SCALE", "The scale of each view, with a bar.", YELLOW),
-       ("ORIENTATION", "North, and how the cloud is placed relative to it.", PINK)]
+s.header("THE NUMBER DRIVES YOUR 3.1 PANEL",
+         "Not a sphere, not a cube. The panel you already built, rebuilt at every location with a different input.")
+cards = [("MEASURE", CYAN, "Distance from each facade location to the attractor. Object Info, set to Relative, "
+                           "so the attractor and the facade share one coordinate system."),
+         ("REMAP", LIME, "One Map Range, Float, Linear, Clamp on. Input 0 to the reach of the attractor. "
+                         "Output: the safe range of your parameter, in its own units."),
+         ("DRIVE", PINK, "Instance on Points repeats a thing that is already built. To rebuild the panel "
+                         "per location with its own Opening, Depth or Height, the value goes into "
+                         "a For Each Element zone and reaches the panel's input inside it.")]
 x = L
-for ttl, body, col in rec:
-    s.chip(x, 2.0, 2.85, 0.5, ttl, fill=col, size=12)
-    s.card(x, 2.6, 2.85, 1.55, fill=CREAM)
-    s.t(x + 0.25, 2.6, 2.35, 1.55, [s.Cb(body, 13)], ls=1.3, anchor=MSO_ANCHOR.MIDDLE)
-    x += 3.05
-s.panel(L, 4.5, W, 1.35, "AND ONE SENTENCE: WHY THIS SITE", headfill=LIME, tsize=13.5)
-s.t(L + 0.3, 5.1, W - 0.6, 0.7, [s.Cb("A site you can document, and a reason you chose it. The reason "
-                                       "tells you which layers to map.", 13.5)],
-    ls=1.25, anchor=MSO_ANCHOR.MIDDLE)
-cp_wk, cp_txt = C.checkpoints("P3d")[0]
-s.banner(6.2, "P3d CHECKPOINT NEXT CLASS: " + cp_txt.upper(),
-         fill=YELLOW, h=0.62, size=12, align=PP_ALIGN.CENTER)
-
-# 5 ── COMBINING LAYERS
-s = d.slide(CREAM)
-s.header("COMBINE THE LAYERS INTO ONE READING",
-         "The tool computes each layer. How they combine, and what that shows, is your decision.")
-flow = [("01", "NORMALIZE", CYAN, "Remap each layer to 0–1 so the layers can be compared. Keep the "
-                                  "original range and units on its legend."),
-        ("02", "WEIGHT", LIME, "Decide how much each layer counts. Write the weights down."),
-        ("03", "COMBINE", YELLOW, "Add, multiply, or keep the lowest or highest value. Say which, "
-                                 "and why."),
-        ("04", "READ", PINK, "Say what the combined view shows about the site that no single layer "
-                            "shows.")]
-x = L
-for n, ttl, col, body in flow:
-    s.panel(x, 1.95, 2.85, 2.45, n + "   " + ttl, headfill=col, tsize=13.5)
-    s.t(x + 0.22, 2.7, 2.4, 1.9, [s.Cb(body, 13)], ls=1.3)
-    x += 3.05
-s.card(L, 4.7, W, 0.75, fill=BLACK)
-s.t(L + 0.35, 4.7, W - 0.7, 0.75, [
-    s.Mb("combined = w1 × distance + w2 × height + w3 × attribute      # w1 + w2 + w3 = 1", 12.5, YELLOW)],
-    anchor=MSO_ANCHOR.MIDDLE)
-s.banner(5.75, "SAME LOGIC AS P3c: A MEASURED VALUE, A STATED RANGE, A LEGEND. NOW THREE OF THEM.",
-         fill=CYAN, h=0.62, align=PP_ALIGN.CENTER)
-s.t(L, 6.55, W, 0.35, [s.C("A combined view with no layers beside it cannot be checked. A colourful "
-                           "image with no legend is not an analysis.", 12.5, GREY)])
-
-# 6 ── P3d SHEET LAYOUT
-s = d.slide(CREAM)
-s.header("THE P3d SHEET — ONE 17 × 11",
-         "Small views of each layer beside one larger combined view. Every view has a legend.")
-SX, SY, SW, SH = L, 1.95, 7.0, 7.0 * 11 / 17
-s.card(SX, SY, SW, SH, fill="FFFFFF")
-SMW, SMH, SMG = 2.2, 0.98, 0.1
-for i, lab in enumerate(["LAYER A", "LAYER B", "LAYER C"]):
-    zy = SY + 0.15 + i * (SMH + SMG)
-    s.rect(SX + 0.15, zy, SMW, SMH, fill=PAPER, line=BLACK, lw=Pt(1.5))
-    s.chip(SX + 0.25, zy + 0.1, 0.45, 0.3, "01", fill=CYAN, size=9.5, shadow=False)
-    s.t(SX + 0.78, zy + 0.07, 1.5, 0.3, [s.Ab(lab, 10)])
-    G.gray_ramp(s, SX + 0.3, zy + SMH - 0.3, SMW - 0.3, 0.12)
-BX, BY, BW, BH = SX + 2.5, SY + 0.15, 4.35, 3.14
-s.rect(BX, BY, BW, BH, fill=PAPER, line=BLACK, lw=Pt(1.5))
-s.chip(BX + 0.12, BY + 0.12, 0.45, 0.3, "02", fill=LIME, size=9.5, shadow=False)
-s.t(BX + 0.7, BY + 0.08, 3.5, 0.3, [s.Ab("COMBINED VIEW — LARGE", 11)])
-s.t(BX + 0.15, BY + BH - 0.72, 4.0, 0.25, [s.A("N ↑     SCALE BAR     LEGEND + UNITS", 9, GREY)])
-G.gray_ramp(s, BX + 0.15, BY + BH - 0.4, 2.6, 0.18)
-s.rect(BX + 2.95, BY + BH - 0.36, 1.2, 0.09, fill=BLACK, line=None)
-s.rect(BX + 3.55, BY + BH - 0.36, 0.6, 0.09, fill="FFFFFF", line=BLACK, lw=Pt(1.0))
-IY = SY + 3.4
-s.rect(SX + 0.15, IY, SW - 0.3, SH - 3.55, fill=PAPER, line=BLACK, lw=Pt(1.5))
-s.chip(SX + 0.27, IY + 0.12, 0.45, 0.3, "03", fill=PINK, size=9.5, shadow=False)
-s.t(SX + 0.85, IY + 0.08, 5.8, 0.6, [s.Ab("INTERPRETATION  ·  SITE RECORD  ·  TOOL, INPUTS, RANGES", 10.5)])
-s.panel(7.95, 1.95, 4.7, 3.7, " ", headfill=BLACK, tsize=13.5)
-s.t(7.95 + 0.25, 1.95, 4.2, 0.55, [s.Ab("EACH ZONE MUST SAY", 13.5, CREAM)],
-    anchor=MSO_ANCHOR.MIDDLE)
-s.t(8.2, 2.7, 4.2, 2.85, [
-    s.Cb("01  Each layer: what it measures, its legend and units.", 13.5),
-    s.Cb(" ", 8),
-    s.Cb("02  The combination: which layers, which weights, which operation.", 13.5),
-    s.Cb(" ", 8),
-    s.Cb("03  What the combined view shows about the site — plus source, units, scale, north, "
-         "and the tool you used.", 13.5)],
-    ls=1.2)
-s.banner(5.85, "SAME SCALE AND NORTH IN EVERY VIEW.", x=7.95, w=4.7,
-         fill=PINK, h=0.63, size=12.5, align=PP_ALIGN.CENTER)
-
-# 7 ── ISSUED — P3d
-issued_slide(d, "P3d",
-             blurb="Pick a site you can document and map its point cloud in at least three layers "
-                   "with attractor logic. Show each layer small, with its legend, beside one larger "
-                   "combined view, and say what the combination shows.",
-             cards=[("LAYERS", "THREE AT LEAST", "Distance to points or curves, height bands, a "
-                                                  "recorded attribute."),
-                    ("SHEET", "ONE 17 × 11", "Small views of each layer beside one larger combined "
-                                            "view."),
-                    ("TOOL", "MIXTLI OR EQUIVALENT", "The Blender add-on the instructor provides. "
-                                                    "Record inputs and ranges.")])
-
-# 8 ── REQUIREMENTS — P3d
-requirements_slide(d, "P3d", sub=VISUAL)
-
-# 9 ── P3c CHECKPOINT
-s = d.slide(BLACK)
-s.header("P3c CHECKPOINT — FIELD + FIRST LINES",
-         C.checkpoints("P3c")[0][1] + " Read them side by side.")
-chk = [("FIELD", CYAN, "Grayscale field with its legend: near → far, input range written.",
-        "Wrong? Fix the remap before the lines."),
-       ("LINES", LIME, "First line drawing from the same field, with one mapping.",
-        "Wrong? Change one mapping value."),
-       ("DENSITY", YELLOW, "Darkest area still separate lines? Lightest area still visible?",
-        "Wrong? Change the output range."),
-       ("SVG", PINK, "17 × 11 at 100%. Clean curves: no fills, no duplicate lines.",
-        "Wrong? Fix the export.")]
-x = L
-for nm, col, q, fix in chk:
-    s.panel(x, 1.95, 2.85, 3.55, nm, headfill=col, tsize=13.5)
-    s.t(x + 0.22, 2.7, 2.4, 1.7, [s.Cb(q, 13)], ls=1.3)
-    s.rule(x + 0.22, 4.5, 2.4, lw=Pt(1.5), color=MUTE)
-    s.t(x + 0.22, 4.62, 2.4, 0.75, [s.Cb(fix, 12.5, bold=True)], ls=1.2)
-    x += 3.05
-s.banner(5.85, "PLOTTING IS OPTIONAL. IF YOU PLOT, TEST A SMALL CROP FIRST AND KEEP THE TEST FOR THE SHEET.",
+wd = (W - 0.46) / 3
+for i, (tag, col, body) in enumerate(cards):
+    s.chip(x, 2.0, wd, 0.5, "%02d   %s" % (i + 1, tag), fill=col, size=12)
+    s.card(x, 2.6, wd, 2.55, fill=CREAM)
+    s.t(x + 0.28, 2.75, wd - 0.56, 2.3, [s.Cb(body, 13)], ls=1.3)
+    x += wd + 0.23
+s.banner(5.55, "IF ALL PANELS LOOK THE SAME: THE VALUE ENTERED THE ZONE OUTSIDE, BUT NEVER REACHED THE INPUT INSIDE.",
          fill=YELLOW, h=0.68, size=12, align=PP_ALIGN.CENTER)
+s.t(L, 6.45, W, 0.4, [s.C("Attractors.blend, scenes 05 to 08: the supplied panel, then one point, several points "
+                          "and a curve driving its Opening.", 13, MUTE)])
 
-# 10 ── WEEK 10 DEADLINE CHECKLIST
-MUST = {"GSM": "Four pages. Each rule beside a tested application.",
-        "P2a": "The BIG-style process sheet, with instructions and pseudocode.",
-        "P2b": "The print, its process sheet, and the source, mesh and slicer files.",
-        "P3a": "One module sheet: studio render, one material, deliberate lighting.",
-        "P3b": "Two sheets of arrays, with one conditional selection and its rule.",
-        "P3c": "One sheet: line drawing, grayscale field and legend. SVG and graph."}
-items = sorted((m for m in C.MILESTONES.values()
-                if isinstance(m.get("due"), int) and m["due"] <= DL),
-               key=lambda m: (m.get("project") or "", m["id"]))
-s = d.slide(CREAM)
-s.header("WEEK %d DEADLINE CHECKLIST" % DL,
-         "Next class. Everything through Arrays must be in. Tick every line.")
-y, h = 1.9, 0.6
-for i, m in enumerate(items):
-    col = ACCENTS[i % 4]
-    s.chip(L, y, 0.95, h, m["id"], fill=col, size=13)
-    s.card(L + 1.2, y, W - 1.2, h, fill=CREAM)
-    s.t(L + 1.45, y, 3.6, h, [s.Ab(m["title"].split(" — ")[0].upper(), 10.5)], anchor=MSO_ANCHOR.MIDDLE)
-    s.t(L + 5.1, y, 5.1, h, [s.Cb(MUST.get(m["id"], ""), 12)], anchor=MSO_ANCHOR.MIDDLE)
-    tag = "DUE NEXT CLASS" if m["due"] == DL else "DUE W%d · IN?" % m["due"]
-    s.t(W - 1.15, y, 1.7, h, [s.Ab(tag, 10, PINK if m["due"] == DL else GREY)],
-        align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    y += h + 0.12
-s.banner(min(y + 0.05, 6.5), "%s — MID-SEMESTER DEADLINE. %s ARE DUE. NOTHING THROUGH ARRAYS "
-                             "IS LEFT OUT." % (C.date_long(DL).upper(), DUE_DL_TXT.replace(" and ", " AND ")),
-         fill=BLACK, color=YELLOW, h=0.58, size=12, align=PP_ALIGN.CENTER)
+# 8 ── ISSUED — 3.4
+issued_slide(d, "P3study",
+             badge="ISSUED TODAY",
+             blurb="One facade, one panel, one controlled parameter, three attractors. Each diagram shows "
+                   "the attractor and the variation it produces, with the parameter labelled. No separate "
+                   "upload and no separate grade: it is page 1 of the 3.5 package.",
+             cards=[("DIAGRAM 1", "ONE POINT", "Distance to a single point drives the parameter."),
+                    ("DIAGRAM 2", "SEVERAL POINTS", "Say how they combine: nearest point, or an average."),
+                    ("DIAGRAM 3", "ONE CURVE", "Distance to the nearest location along a curve.")])
+
+# 9 ── ISSUED — 3.5
+issued_slide(d, "P3c", title="Architectural application",
+             blurb="Reuse your 3.1 panel to design a simple facade, wall, canopy, pavilion or similar. Give it "
+                   "a purpose and a scale, choose the attractor that serves that purpose, and show why the "
+                   "variation matters architecturally.",
+             cards=[("PURPOSE", "WHAT IT DOES", "What the panel system encloses, screens, shades or defines."),
+                    ("COMPARE", "ONE CONTROLLED TEST", "The attractor, the parameter it drives, and the difference it makes."),
+                    ("RESOLVE", "ELEVATION + ISOMETRIC", "Two sheets with 3.4: studies first, then the application.")])
+
+# 10 ── REQUIREMENTS — 3.5
+requirements_slide(d, "P3c", sub=VISUAL)
 
 # 11 ── NOW
-now_slide(d, "NOW — CHECKPOINT, THEN LAYERS",
-          "Rest of the class: P3c review one table at a time, then start the site.",
-          ["P3c: field and first line drawing reviewed; one change written down",
-           "P3d: site picked — source, units, scale and orientation recorded",
-           "P3d: first layer mapped, with its legend and units",
-           "P3d: the next two layers chosen, and what each will measure written down",
-           "Deadline: every item on the checklist located and ready to submit"],
-          closer="TWO LAYERS WITH LEGENDS BY NEXT CLASS.",
-          bg=CYAN, closer_color=YELLOW)
+now_slide(d, "NOW — YOUR FIRST FIELD",
+          "Rest of the class: measure, look, remap, and only then attach your panel.",
+          ["Distance to one point, measured across the facade grid you already have",
+           "The field shown as grey on its own, before any panel changes",
+           "Input and output ranges written down, in your parameter's units, with the clamp",
+           "One parameter of your 3.1 panel driven: Opening, Depth, Height or similar. Just one",
+           "The attractor moved, and the change predicted before you look"],
+          closer="MOVE THE ATTRACTOR. IF YOU CANNOT PREDICT WHAT HAPPENS, STOP AND READ THE FIELD.",
+          bg=LIME)
 
 # 12 ── BEFORE NEXT CLASS
 before_next_slide(d, [
-    ("DEADLINE", "Next class, %s, is the mid-semester deadline. %s are due; everything "
-                 "through Arrays must be in." % (C.date_long(DL).title(), DUE_DL_TXT)),
-    ("NEXT", "%s is a regular class: Volumetric Data — signed distance fields (SDF). P4a is issued."
-             % C.date_long(DL).title()),
-    ("P3d", "Checkpoint next class. %s P3d is due %s."
-            % (cp_txt, C.date_long(P3D_DUE).title())),
-    ("P3c", "Finish the sheet: line drawing, grayscale field and legend. Submit the SVG, the sheet "
-            "PDF and the editable graph. Plotting is optional."),
+    ("NEXT", "%s: 3.4 and 3.5 are submitted together at the start of class. Then 4.1 is introduced: "
+             "the supplied field groups and a two-parameter matrix." % C.date_long(10).title()),
+    ("3.4", "All three attractor types running on the same facade, same panel, same parameter. "
+            "The comparison is what is being graded."),
+    ("3.5", "Pick the purpose first, then the attractor that serves it. One controlled comparison, "
+            "one elevation, one isometric."),
+    ("PANEL", "Your 3.1 panel as a node group with the driven parameter exposed. Test two values by hand "
+              "before you connect an attractor."),
 ])
 
 d.save(os.path.join(OUT, "ARC3133_Class09.pptx"))

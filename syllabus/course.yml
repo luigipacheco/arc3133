@@ -1688,10 +1688,12 @@ presentation_review:
     in 3D; matches the October 18 deadline. deck, then review before marking current.
 - week: 8
   status: needs_revision
+  publish: true
   note: Revised assignment structure and current deadlines supersede this deck. Update both its source and exported
     deck, then review before marking current.
 - week: 9
   status: needs_revision
+  publish: true
   note: Revised assignment structure and current deadlines supersede this deck. Update both its source and exported
     deck, then review before marking current.
 - week: 10

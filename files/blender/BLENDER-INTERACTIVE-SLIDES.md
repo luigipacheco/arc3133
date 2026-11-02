@@ -4,6 +4,7 @@ How we build a lecture as a Blender file where every slide is live geometry that
 
 Reference build: `files/blender/Introduction-to-Parametric-Design.blend` (see its handover doc, `Introduction-to-Parametric-Design.md`, next to it).
 Second build: `files/blender/Introduction-to-Procedural-Design.blend` (handover `Introduction-to-Procedural-Design.md`), built entirely by script: `_tools/procedural_slidekit.py` + `_tools/procedural_build.py`.
+Third build: `files/blender/Introduction-to-Generative-Design.blend` (handover `Introduction-to-Generative-Design.md`), by script: `_tools/generative_slidekit.py` + `_tools/generative_build.py`.
 Helper code: `files/blender/_tools/blender_slidekit.py`.
 
 ---

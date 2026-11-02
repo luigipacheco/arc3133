@@ -21,3 +21,13 @@ __pycache__/
 /reference/course-audit/ARC3133_Class*/
 /reference/course-audit/*-contact-*.jpg
 /reference/course-audit/before-project-restructure.yml
+
+# Slide-building test renders and backup copies (local only).
+/files/blender/_check/
+
+# Backup copies of lesson files.
+*_backup_*.blend
+
+# Office / LibreOffice lock files.
+.~lock.*#
+~$*

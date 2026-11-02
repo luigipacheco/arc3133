@@ -105,7 +105,7 @@ for ttl, col, body in mf:
     s.panel(x, 2.05, 3.85, 3.0, ttl, headfill=col, tsize=14)
     s.t(x + 0.28, 2.85, 3.3, 2.0, [s.Cb(body, 14.5)], ls=1.3)
     x += 4.08
-s.banner(5.45, "CHECK BEFORE YOU SLICE. A BOOLEAN THAT LEFT AN OPEN EDGE IS THE MOST COMMON CAUSE "
+s.banner(5.45, "CHECK BEFORE YOU SLICE. A BOOLEAN OPERATION THAT LEFT AN OPEN EDGE IS THE MOST COMMON CAUSE "
               "OF A FAILED FILE.", fill=YELLOW, h=0.72, align=PP_ALIGN.CENTER)
 s.t(L, 6.5, W, 0.4, [s.C("This is the closure check from the CSG slide, seen from the machine's side.",
                          13, MUTE)])
@@ -291,7 +291,7 @@ now_slide(d, "NOW — PREPARE YOUR PRINT",
 p2a, p2b = C.milestone("P2a"), C.milestone("P2b")
 cp_wk, cp_txt = C.checkpoints("P2b")[0]
 before_next_slide(d, [
-    ("NEXT", "%s. %s: point, line, edge, face, solid, Boolean. P3a is issued."
+    ("NEXT", "%s. %s: point, line, edge, face, solid, Boolean operation. P3a is issued."
              % (C.date_long(4), C.week(4)["title"])),
     ("DUE", "P2a, the CSG process sheet, is due next class, %s." % C.date_long(p2a["due"])),
     ("PRINT", "P2b print checkpoint %s: %s P2b is due at the mid-semester deadline, %s."

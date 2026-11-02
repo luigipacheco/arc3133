@@ -22,8 +22,8 @@ title_slide(d, WK, ["DESCRIPTIVE", "GEOMETRY"],
 
 # 2 ── THE LADDER
 s = d.slide(BLACK)
-s.header("POINT → LINE → EDGE → FACE → SOLID → BOOLEAN",
-         "Six steps. Each one is built from the step before it.", tsize=30)
+s.header("POINT → LINE → EDGE → FACE → SOLID → BOOLEAN OPERATION",
+         "Six steps. Each one is built from the step before it.", tsize=24)
 rungs = [("POINT", CYAN, "three numbers", "[x, y, z]"),
          ("LINE", LIME, "two positions", "[p1, p2]"),
          ("EDGE", YELLOW, "two vertices", "[v1, v2]"),
@@ -64,7 +64,7 @@ s.panel(7.0, 1.95, 5.65, 3.4, "WHY IT MATTERS LATER", headfill=PINK, tsize=14.5)
 s.t(7.3, 2.72, 5.05, 2.4, [
     s.Cb("A flipped face tells a renderer the inside is the outside.", 14),
     s.Cb(" ", 7),
-    s.Cb("It tells a Boolean it cannot decide what to keep.", 14),
+    s.Cb("It tells a Boolean operation it cannot decide what to keep.", 14),
     s.Cb(" ", 7),
     s.Cb("Most broken renders and failed cuts this semester will start here.", 14)], ls=1.3)
 s.banner(5.65, "CLOSED MEANS EVERY EDGE IS SHARED BY EXACTLY TWO FACES. CHECK IT BEFORE YOU BELIEVE IT.",
@@ -93,7 +93,7 @@ s.banner(5.7, "DO NOT FORGET THE BASE FACE. A PYRAMID WITH FOUR SIDES AND NO BOT
 
 # 5 ── THE BOOLEAN
 s = d.slide(CREAM)
-s.header("THEN IT GOES INTO A BOOLEAN",
+s.header("THEN IT GOES INTO A BOOLEAN OPERATION",
          "Cube minus pyramid. The same subtraction as in P2, with a solid you built point by point.")
 flow = [("01", "BUILD IT", CYAN, "Five vertices, five faces, closed, with Width / Depth / Height exposed."),
         ("02", "SUBTRACT IT", LIME, "Cube minus pyramid. Name which solid is kept and which is removed."),
@@ -106,7 +106,7 @@ for n, ttl, col, body in flow:
     s.card(x, 2.55, wd, 2.2, fill=CREAM)
     s.t(x + 0.25, 2.55, wd - 0.5, 2.2, [s.Cb(body, 13)], ls=1.3, anchor=MSO_ANCHOR.MIDDLE)
     x += wd + 0.23
-s.banner(5.05, "AN OPEN MESH HAS NO INSIDE. A BOOLEAN NEEDS ONE.",
+s.banner(5.05, "AN OPEN MESH HAS NO INSIDE. A BOOLEAN OPERATION NEEDS ONE.",
          fill=BLACK, color=CYAN, h=0.68, align=PP_ALIGN.CENTER)
 s.t(L, 5.95, W, 0.8, [s.C("The pyramid is the warm-up. Next week the same two lists describe your own "
                           "module — the one you light and render for P3a, and array for P3b.",

@@ -31,7 +31,7 @@ Describe geometry as points, lines, edges and faces, then build a solid you cont
 3. Edge — connect two mesh vertices.
 4. Face — put its corners in order and explain which way its normal (its front side) points.
 5. Solid — build a pyramid from four base corners and a top point (the apex). Add four side faces and a base, and check that it is closed.
-6. Boolean — subtract the pyramid from a cube, revisiting CSG.
+6. Boolean operation, subtract the pyramid from a cube, revisiting CSG.
 7. Panel — define its parameters, calculate the corner points and put the faces in order. Check that it stays closed and tiles across the full range of each parameter.
 
 **Practice:** Keep Width, Depth and Height as exposed inputs. Show the pyramid's five vertices, eight edges and five faces, and subtract it from a cube. Then build your own module and render it with one material you make, on a ground plane, with three-point lighting (key, fill and rim).

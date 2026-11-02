@@ -325,7 +325,7 @@ units:
   - Face — put its corners in order and explain which way its normal (its front side) points.
   - Solid — build a pyramid from four base corners and a top point (the apex). Add four side faces and a base, and
     check that it is closed.
-  - Boolean — subtract the pyramid from a cube, revisiting CSG.
+  - Boolean operation, subtract the pyramid from a cube, revisiting CSG.
   - Panel — define its parameters, calculate the corner points and put the faces in order. Check that it stays closed
     and tiles across the full range of each parameter.
   exercise: Keep Width, Depth and Height as exposed inputs. Show the pyramid's five vertices, eight edges and five
@@ -1239,7 +1239,7 @@ vocabulary:
   - [mesh, "Vertices, edges and faces together. A mesh can be open or closed.", 'Four triangular sides plus a base make the pyramid mesh.']
   - [solid, "A shape that encloses a volume. For the solid exercises its mesh
     must be closed, with all faces pointing outward.", 'The capped pyramid before Boolean subtraction.']
-  - [Boolean, "Union joins shapes, intersection keeps only where they overlap,
+  - [Boolean operation, "Union joins shapes, intersection keeps only where they overlap,
     and difference cuts one shape out of another.", 'Cube minus pyramid.']
   - [list and index, "A list is a set of items in order; the index is an item's
     position in that list.", "Array
@@ -1251,6 +1251,9 @@ vocabulary:
     every row of a grid, the loop makes all its columns."]
   - [conditional, "A test that chooses a value, or chooses which copies change.", "Compare
     plus Switch; Boolean Math combines tests such as \"between two values\"."]
+  - [Boolean value, "True or False: the answer to a yes/no test. Boolean logic
+    (and, or, not) combines these answers. Not the same as a Boolean operation on
+    solids.", 'i % 3 == 0 is True for items 0, 3 and 6.']
   - [field, "A value calculated for every point or element — for example, one
     value per copy in an array.", "Distance
     calculated at every array point; later, a single value measured throughout a

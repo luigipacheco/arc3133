@@ -75,7 +75,7 @@ s.banner(5.75, "Start with two primitives you can name and move. Expose center a
 
 # 4 ── BOOLEANS ON FIELDS
 s = d.slide(CREAM)
-s.header("THE P2 BOOLEANS, WRITTEN ON NUMBERS",
+s.header("THE P2 BOOLEAN OPERATIONS, ON NUMBERS",
          "Same operands, same order rules. The operation is now a comparison of two values.")
 ops = [("UNION", CYAN, "min(a, b)", "Keep the nearer surface. Inside either field counts as inside."),
        ("INTERSECTION", LIME, "max(a, b)", "Keep the farther surface. Inside only where both are negative."),
@@ -95,7 +95,7 @@ s.t(L, 6.35, W, 0.7, [s.C("P4a asks for all three from the same source fields. C
 # 5 ── SMOOTH BLEND AND NOISE
 s = d.slide(BLACK)
 s.header("SMOOTH BLEND, AND WHAT NOISE DOES",
-         "Two ways to move past hard Booleans. Only one of them keeps the field an exact distance.")
+         "Two ways to move past hard Boolean operations. Only one of them keeps the field an exact distance.")
 s.panel(L, 2.05, 5.85, 3.5, "SMOOTH MIN", headfill=LIME)
 s.t(L + 0.3, 2.8, 5.25, 2.6, [
     s.Mb("d = smooth_min(a, b, k)", 14),
@@ -139,7 +139,7 @@ s.t(L, 6.7, W, 0.4, [s.C("P4a requires the sampling resolution stated on the she
 s = d.slide(BLACK)
 s.header("SURFACE EXTRACTION",
          "The mesh is the last step, not the design. Everything upstream is still a number per sample.")
-seq = [("01", "DEFINE", "Write the field: primitives, Booleans, blend.", CYAN),
+seq = [("01", "DEFINE", "Write the field: primitives, Boolean operations, blend.", CYAN),
        ("02", "SAMPLE", "Evaluate it on a grid inside stated bounds.", LIME),
        ("03", "EXTRACT", "Build the surface where the value crosses the threshold.", YELLOW),
        ("04", "COMPARE", "Extract at two resolutions. Keep both.", PINK)]

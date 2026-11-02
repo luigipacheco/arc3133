@@ -519,7 +519,7 @@ Describe geometry as points, lines, edges and faces, then build a solid you cont
 3. Edge — connect two mesh vertices.
 4. Face — put its corners in order and explain which way its normal (its front side) points.
 5. Solid — build a pyramid from four base corners and a top point (the apex). Add four side faces and a base, and check that it is closed.
-6. Boolean — subtract the pyramid from a cube, revisiting CSG.
+6. Boolean operation, subtract the pyramid from a cube, revisiting CSG.
 7. Panel — define its parameters, calculate the corner points and put the faces in order. Check that it stays closed and tiles across the full range of each parameter.
 
 **Practice:** Keep Width, Depth and Height as exposed inputs. Show the pyramid's five vertices, eight edges and five faces, and subtract it from a cube. Then build your own module and render it with one material you make, on a ground plane, with three-point lighting (key, fill and rim).
@@ -883,11 +883,12 @@ Supporting files: [Fabrication notes and dimensions](../files/blender/09-final-p
 | face | A mesh surface bounded by vertices and edges, taken in order around its outline. | One triangular side of the pyramid. |
 | mesh | Vertices, edges and faces together. A mesh can be open or closed. | Four triangular sides plus a base make the pyramid mesh. |
 | solid | A shape that encloses a volume. For the solid exercises its mesh must be closed, with all faces pointing outward. | The capped pyramid before Boolean subtraction. |
-| Boolean | Union joins shapes, intersection keeps only where they overlap, and difference cuts one shape out of another. | Cube minus pyramid. |
+| Boolean operation | Union joins shapes, intersection keeps only where they overlap, and difference cuts one shape out of another. | Cube minus pyramid. |
 | list and index | A list is a set of items in order; the index is an item's position in that list. | Array points are numbered from zero. In Blender, a node works on every point at once rather than taking a list as an input. |
 | loop | An operation repeated a set number of times; each round can pass its result to the next. | Repeat Input and Repeat Output define a Repeat Zone. |
 | nested loop | A repetition inside another repetition. | For every row of a grid, the loop makes all its columns. |
 | conditional | A test that chooses a value, or chooses which copies change. | Compare plus Switch; Boolean Math combines tests such as "between two values". |
+| Boolean value | True or False: the answer to a yes/no test. Boolean logic (and, or, not) combines these answers. Not the same as a Boolean operation on solids. | i % 3 == 0 is True for items 0, 3 and 6. |
 | field | A value calculated for every point or element — for example, one value per copy in an array. | Distance calculated at every array point; later, a single value measured throughout a volume. |
 | attractor | A point, group of points or curve you place in the model; its distance from each element drives a parameter. | Distance rescaled (remapped) into the height of each piece. |
 | tessellation and lattice | A tessellation covers a surface with cells; a lattice is a connected network of members in space. | A paneled surface, and a system of nodes and struts. |

@@ -56,7 +56,7 @@ s.banner(5.65, "Translation and scale treat each coordinate on its own. Rotation
 
 # 4 ── THREE BOOLEANS
 s = d.slide(CREAM)
-s.header("THREE BOOLEANS", "Everything in P2a is built from these, applied in order.")
+s.header("THREE BOOLEAN OPERATIONS", "Everything in P2a is built from these, applied in order.")
 bl = [("UNION", CYAN, "A + B", "Everything either solid occupies."),
       ("DIFFERENCE", PINK, "A − B", "A, with B carved out of it."),
       ("INTERSECTION", LIME, "A ∩ B", "Only where both solids overlap.")]
@@ -177,7 +177,7 @@ s.t(L, 6.45, W, 0.6, [s.C("Legend above: cyan is the move in this frame, grey is
 # 9 ── ISSUED TODAY
 issued_slide(d, "P2a", blurb=C.PROJECTS["P2"]["description"] +
              "  This first assignment is the process sheet: an ordered sequence of primitives, "
-             "transformations and Booleans, drawn so another person could rebuild it.",
+             "transformations and Boolean operations, drawn so another person could rebuild it.",
              cards=[("STAGE 1", "THE SEQUENCE", "Three primitives. Translate, rotate, scale. Union, difference, intersection."),
                     ("STAGE 2", "THE FRAMES", "Eight or nine, numbered. One operation each, read in sequence."),
                     ("STAGE 3", "THE LAST ONE", "At building scale: a 1.75 m figure, vegetation, ground, shadow.")])
@@ -192,7 +192,7 @@ now_slide(d, "NOW — BUILD THE SEQUENCE",
           "Rest of the class: a working graph with something you can change in front of me.",
           ["Object chosen — simple massing, eight or nine clear moves, no complex curves",
            "First three primitives placed, each born at the origin and moved from there",
-           "At least one Boolean working, with the kept and removed solids named",
+           "At least one Boolean operation working, with the kept and removed solids named",
            "Two useful inputs exposed, so a variant is one number away",
            "Operation history intact — nothing collapsed or applied"],
           closer="LEAVE WITH A GRAPH YOU CAN CHANGE, NOT A MESH YOU CANNOT.",

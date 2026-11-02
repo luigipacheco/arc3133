@@ -86,14 +86,14 @@ s.t(L + 0.3, 2.7, 5.25, 2.6, [
     s.Cb(" ", 6),
     s.Cb("Stores only the surface. Inside and outside are implied by the faces.", 14),
     s.Cb(" ", 6),
-    s.Cb("A Boolean has to cut and rebuild faces, and can fail.", 14)], ls=1.3)
+    s.Cb("A Boolean operation has to cut and rebuild faces, and can fail.", 14)], ls=1.3)
 s.panel(6.8, 1.95, 5.85, 3.5, "FIELD — A VALUE EVERYWHERE", headfill=LIME)
 s.t(7.1, 2.7, 5.25, 2.6, [
     s.Mb("value = f(x, y, z)", 13),
     s.Cb(" ", 6),
     s.Cb("Every point in space has a number. The surface is where the number crosses a threshold.", 14),
     s.Cb(" ", 6),
-    s.Cb("A Boolean is arithmetic on two numbers. It cannot fail.", 14)], ls=1.3)
+    s.Cb("A Boolean operation is arithmetic on two numbers. It cannot fail.", 14)], ls=1.3)
 s.banner(5.75, "YOU HAVE ALREADY DRAWN A FIELD: THE P3c GRAYSCALE. THIS IS THE SAME IDEA, IN 3D.",
          fill=YELLOW, h=0.72, align=PP_ALIGN.CENTER)
 
@@ -152,7 +152,7 @@ s.banner(5.95, "CHANGE r OR b AND THE WHOLE FIELD CHANGES. THE PARAMETER IS STIL
 
 # 7 ── CSG AS MIN AND MAX
 s = d.slide(CREAM)
-s.header("THE BOOLEANS AGAIN — AS MIN AND MAX",
+s.header("BOOLEAN OPERATIONS AGAIN, AS MIN AND MAX",
          "The same three operations from P2. On fields, each is one line.")
 a = circle(0.78, 0.78, 0.6)
 b = circle(1.42, 0.78, 0.6)
@@ -174,7 +174,7 @@ s = d.slide(BLACK)
 s.header("BLEND, SAMPLE, EXTRACT",
          "Three steps turn a function into something you can see, slice and cut.")
 steps = [("SMOOTH BLEND", CYAN, "smooth_min(a, b, k)",
-          "k = 0 is a hard union. Larger k fills the joint with a soft fillet. A mesh Boolean "
+          "k = 0 is a hard union. Larger k fills the joint with a soft fillet. A mesh Boolean operation "
           "cannot do this."),
          ("RESOLUTION", LIME, "sample(field, bounds, n)",
           "The field is read on a grid. Coarse is fast and faceted. Fine is smooth and slow. State "
@@ -210,7 +210,7 @@ requirements_slide(d, "P4a", sub=VISUAL)
 
 # 11 ── NOW
 now_slide(d, "NOW — YOUR FIRST FIELD VOLUME",
-          "Rest of the class: two primitives, three Booleans, one surface.",
+          "Rest of the class: two primitives, three Boolean operations, one surface.",
           ["A sphere field sampled on a grid and extracted at zero",
            "A box field beside it, each with its size exposed",
            "Union as min, then swapped for max, then for max(a, −b)",
@@ -222,7 +222,7 @@ now_slide(d, "NOW — YOUR FIRST FIELD VOLUME",
 # 12 ── BEFORE NEXT CLASS
 cp = C.checkpoints("P4a")[0]
 before_next_slide(d, [
-    ("NEXT", "%s: SDF volume studio work — primitives, the three Booleans, smooth blend, noise and "
+    ("NEXT", "%s: SDF volume studio work — primitives, the three Boolean operations, smooth blend, noise and "
              "surface extraction." % C.date_long(11).title()),
     ("P3d", "Due next class, %s: one sheet with each layer small, with its legend, beside the "
             "combined view, and the working file." % C.date_long(C.milestone("P3d")["due"]).title()),

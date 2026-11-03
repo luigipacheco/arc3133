@@ -68,7 +68,7 @@ Plan for at least six hours of work outside class each week, including tests and
 | 6 | Arrays 1 — line, grid, cube, curve | Class 06 | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Blender · Arrays part 2](https://youtu.be/B7yYA9HCBdM) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
 | 7 | Arrays 2 — if/Switch in 2D and 3D | Class 07 | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Blender · Arrays part 2](https://youtu.be/B7yYA9HCBdM) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 | — |
-| 9 | Attractor studies and architectural application | Class 09 | — |
+| 9 | Attractor studies and architectural application | Class 09 | [Blender](https://youtu.be/YMK7BRxjx74) · [Rhino + Grasshopper · recap part 1](https://www.youtube.com/watch?v=zQ4UUCp9uLI) · [Grasshopper + Blender + Python · part 2](https://www.youtube.com/watch?v=WrbAanNMYks) |
 | 10 | Noise and the two-parameter matrix | Class 10 | — |
 | 11 | Introduction to generative design | Class 11 | — |
 | 12 | Strategy and brand approval, the system sheet | Class 12 | — |
@@ -682,7 +682,7 @@ Understand fields through one point, multiple points and a curve, then apply the
 
 **Vocabulary:** distance, external condition, field, remap, clamp, falloff, nearest.
 
-**Video tutorial:** not yet posted. Use the lesson notes and the class slides.
+**Video tutorials:** [Blender](https://youtu.be/YMK7BRxjx74) · [Rhino + Grasshopper · recap part 1](https://www.youtube.com/watch?v=zQ4UUCp9uLI) · [Grasshopper + Blender + Python · part 2](https://www.youtube.com/watch?v=WrbAanNMYks)
 
 **Taught in:** [Class 09]({{ site.baseurl }}/modules/classes/class-09/). October 20: teach the three attractor methods in 3.4 and their architectural application using the existing panel in 3.5. Both sheets are due together October 27.
 

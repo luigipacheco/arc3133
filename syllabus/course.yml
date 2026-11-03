@@ -463,6 +463,13 @@ units:
   title: Attractor
   url_slug: attractors
   lesson_guide: files/blender/04-attractors/README.md
+  videos:
+  - - Blender
+    - https://youtu.be/YMK7BRxjx74
+  - - Rhino + Grasshopper · recap part 1
+    - https://www.youtube.com/watch?v=zQ4UUCp9uLI
+  - - Grasshopper + Blender + Python · part 2
+    - https://www.youtube.com/watch?v=WrbAanNMYks
   vocabulary:
   - distance
   - external condition

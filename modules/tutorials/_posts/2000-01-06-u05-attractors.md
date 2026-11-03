@@ -18,7 +18,13 @@ Understand fields through one point, multiple points and a curve, then apply the
 
 [Plain-language vocabulary by assignment]({{ site.baseurl }}/modules/tutorials/the-notation/)
 
-**Video tutorial:** not yet posted. Use the lesson notes and the class slides.
+**Video tutorials**
+
+{% include youtube.html id="YMK7BRxjx74" title="Attractor — Blender" %}
+
+{% include youtube.html id="zQ4UUCp9uLI" title="Attractor — Rhino + Grasshopper · recap part 1" %}
+
+{% include youtube.html id="WrbAanNMYks" title="Attractor — Grasshopper + Blender + Python · part 2" %}
 
 **Taught in:** [Class 09]({{ site.baseurl }}/modules/classes/class-09/). October 20: teach the three attractor methods in 3.4 and their architectural application using the existing panel in 3.5. Both sheets are due together October 27.
 

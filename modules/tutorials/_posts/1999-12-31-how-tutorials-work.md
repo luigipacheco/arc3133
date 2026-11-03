@@ -19,6 +19,7 @@ Each topic has lesson notes — the steps, vocabulary and pseudocode — and, wh
 | Constructive Solid Geometry | [Blender](https://www.youtube.com/watch?v=HO50aaKbfHY) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=z0UFlXQnk3g) |
 | Descriptive Geometry | [Blender](https://youtu.be/JQN7IjVIW4A) · [Rhino + Grasshopper](https://www.youtube.com/watch?v=g-iOvUYX6Yg) |
 | Arrays | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Blender · Arrays part 2](https://youtu.be/B7yYA9HCBdM) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
+| Attractor | [Blender](https://youtu.be/YMK7BRxjx74) · [Rhino + Grasshopper · recap part 1](https://www.youtube.com/watch?v=zQ4UUCp9uLI) · [Grasshopper + Blender + Python · part 2](https://www.youtube.com/watch?v=WrbAanNMYks) |
 
 More videos will be added as they are recorded.
 

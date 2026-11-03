@@ -26,7 +26,7 @@ The `teaching_sequence` block is authoritative: its blocks determine the require
 | 7 | Arrays 2 — if/Switch in 2D and 3D | Class 07 | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Blender · Arrays part 2](https://youtu.be/B7yYA9HCBdM) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 | — |
 | 9 | Attractor studies and architectural application | Class 09 | — |
-| 10 | Generative fields and the two-parameter matrix | Class 10 | — |
+| 10 | Noise and the two-parameter matrix | Class 10 | — |
 | 11 | Introduction to generative design | Class 11 | — |
 | 12 | Strategy and brand approval, the system sheet | Class 12 | — |
 | 13–15 | Working sessions - the three sheets and the booklet | Class 13 · Class 14 · Class 15 | — |

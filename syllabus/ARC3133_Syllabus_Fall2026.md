@@ -69,7 +69,7 @@ Plan for at least six hours of work outside class each week, including tests and
 | 7 | Arrays 2 — if/Switch in 2D and 3D | Class 07 | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Blender · Arrays part 2](https://youtu.be/B7yYA9HCBdM) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
 | 8 | Supported practice — Arrays 1 and 2 | Class 08 | — |
 | 9 | Attractor studies and architectural application | Class 09 | — |
-| 10 | Generative fields and the two-parameter matrix | Class 10 | — |
+| 10 | Noise and the two-parameter matrix | Class 10 | — |
 | 11 | Introduction to generative design | Class 11 | — |
 | 12 | Strategy and brand approval, the system sheet | Class 12 | — |
 | 13–15 | Working sessions - the three sheets and the booklet | Class 13 · Class 14 · Class 15 | — |
@@ -96,7 +96,7 @@ Plan for at least six hours of work outside class each week, including tests and
 | 7 | Oct 6 | Arrays 2 — if/Switch in 2D and 3D | No graded submission |
 | 8 | Oct 13 | Supported practice — Arrays 1 and 2 | No graded submission |
 | 9 | Oct 20 | Midterm grade; attractor studies and architectural application | 1 — Graphic Standards Manual (Sun Oct 18, 11:59 PM Eastern Time); 2.1 — CSG - an architectural object as instructions (Sun Oct 18, 11:59 PM Eastern Time); 2.2 — 3D printing - from model to layers (Sun Oct 18, 11:59 PM Eastern Time); 3.1 — Descriptive geometry - build a reusable module (Sun Oct 18, 11:59 PM Eastern Time); 3.2 — Arrays - repetition, patterns and architecture (Sun Oct 18, 11:59 PM Eastern Time) |
-| 10 | Oct 27 | Generative fields and the two-parameter matrix | 3.4 — Attractors - three field studies (11:59 PM Eastern Time); 3.5 — Attractor-based architectural application (11:59 PM Eastern Time) |
+| 10 | Oct 27 | Noise and the two-parameter matrix | 3.4 — Attractors - three field studies (11:59 PM Eastern Time); 3.5 — Attractor-based architectural application (11:59 PM Eastern Time) |
 | 11 | Nov 3 | Introduction to generative design | — |
 | 12 | Nov 10 | Strategy and brand approval, the system sheet | — |
 | 13 | Nov 17 | Working sessions - the three sheets and the booklet | — |
@@ -355,7 +355,7 @@ Use 17 x 11 inch sheets and the Graphic Standards Manual for every assignment. S
 
 Assignment sheets should explain what the system does, which controls matter and why you chose the result. Use ordinary language, diagrams and relevant values; formal equations and mathematical derivations are not required. Teaching presentations may retain their explained mathematics.
 
-Build your own geometry, repetition, conditions, attractor logic and generative system. The instructor supplies example files for the generative strategies (the interactive Blender decks) and the supplied field, SDF and volume groups; understand and credit their inputs and outputs rather than rebuilding their internals. Plugins (Rabbit, Culebra, Anemone, Kangaroo in Grasshopper; the Repeat zone, simulation zone, Cloth and Soft Body in Blender) are allowed and must be credited.
+Build your own geometry, repetition, conditions, attractor logic and generative system. The instructor supplies example files for the generative strategies (the interactive Blender decks); understand and credit any supplied group or plugin rather than rebuilding its internals. Plugins (Rabbit, Culebra, Anemone, Kangaroo in Grasshopper; the Repeat zone, simulation zone, Cloth and Soft Body in Blender) are allowed and must be credited.
 
 Open your submission from a clean folder and check the geometry, units and controls. Include the 3.4 study sheet with 3.5. Project 4 has three sheets: the system, the design space and the proposal.
 
@@ -507,9 +507,9 @@ result  = difference(solid, cutters) # 9  difference
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Use this version or newer. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
+Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit.
 
 **S01 — [Constructive Solid Geometry](../files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend)**
 
@@ -563,9 +563,9 @@ result  = difference(cube, pyramid)
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Use this version or newer. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
+Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit.
 
 **S02 — [Descriptive Geometry](../files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend)**
 
@@ -662,9 +662,9 @@ for k in range(layers):
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Use this version or newer. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
+Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit.
 
 **S03 — [Arrays — Part 1: line, grid, cube, curve](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend)**
 
@@ -721,9 +721,9 @@ for p in panel_locations:
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Use this version or newer. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
+Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit.
 
 **S05 — [Attractor](../files/blender/04-attractors/Attractors.blend)**
 
@@ -739,7 +739,7 @@ Choose a generative strategy, explain it as a step-by-step rule, and use it to e
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** [Class 10]({{ site.baseurl }}/modules/classes/class-10/). October 27: submit the attractor assignment. Supplied field tools and a first matrix; the matrix work can feed 4.2. Point-cloud examples are supplementary.
+**Taught in:** [Class 10]({{ site.baseurl }}/modules/classes/class-10/). October 27: submit the attractor assignment. Noise, thresholds and a first two-parameter matrix; the matrix work can feed 4.2.
 
 **Taught in:** [Class 11]({{ site.baseurl }}/modules/classes/class-11/). November 3: generative design with the interactive deck: start, rule, repeat; noise and thresholds; cellular automata; agents and stigmergy; reaction-diffusion; growth; physics solvers; reading, design space and selection. Project 4: pick a strategy and a brand by November 10.
 
@@ -784,27 +784,9 @@ children = [run(parent, mutate(0.03)) for _ in range(8)]
 
 **Teaching note:** Teach with the interactive deck Introduction-to-Generative-Design.blend (one scene per slide). Keep the system simple; the sheets are judged on how clearly the algorithm is explained and how well one result is developed, not on how exotic the rule is.
 
-### Blender files for this lesson
+### Interactive deck
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
-
-Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
-
-**S07 — [Volumetric Data and Fields — point clouds](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)**
-
-Scenes in this file: Import points, Analyze points, Points to volume. Open them in the order listed.
-
-Keep the data folder together: the file reads teaching-courtyard.ply from the same folder. It is a made-up point cloud for teaching, not a site survey.
-
-Supporting files: [Teaching point cloud](../files/blender/06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](../files/blender/06-point-clouds-volumes/teaching-courtyard.json).
-
-**S08 — [Volumetric Data and Fields — signed distance and Booleans](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend)**
-
-Scenes in this file: Mesh to SDF, Signed distance, SDF Boolean. Open them in the order listed.
-
-**S09 — [Volumetric Data and Fields — noise and surface extraction](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend)**
-
-Scenes in this file: Noise field. Open them in the order listed.
+**Interactive deck:** [Introduction to Generative Design]({{ site.baseurl }}/files/blender/Introduction-to-Generative-Design.blend) — download .blend, open it in Blender 5.2.1 LTS; each scene is a slide.
 
 ## U10 — Final
 
@@ -824,7 +806,9 @@ Finish the three Project 4 sheets, make your chosen revisions and complete the f
 
 **Use it next:** Present the booklet, the revised manual and the three Project 4 sheets at the final review on December 11. Follow the BOOK and Project 4 briefs.
 
-**Lesson file:** To be prepared and verified.
+### Interactive deck
+
+**Interactive deck:** [Introduction to Generative Design]({{ site.baseurl }}/files/blender/Introduction-to-Generative-Design.blend) — download .blend, open it in Blender 5.2.1 LTS; each scene is a slide.
 
 ## Vocabulary
 
@@ -845,13 +829,8 @@ Finish the three Project 4 sheets, make your chosen revisions and complete the f
 | nested loop | A repetition inside another repetition. | For every row of a grid, the loop makes all its columns. |
 | conditional | A test that chooses a value, or chooses which copies change. | Compare plus Switch; Boolean Math combines tests such as "between two values". |
 | Boolean value | True or False: the answer to a yes/no test. Boolean logic (and, or, not) combines these answers. Not the same as a Boolean operation on solids. | i % 3 == 0 is True for items 0, 3 and 6. |
-| field | A value calculated for every point or element — for example, one value per copy in an array. | Distance calculated at every array point; later, a single value measured throughout a volume. |
+| field | A value calculated for every point or element — for example, one value per copy in an array. | Distance calculated at every array point; later, a noise value at every cell that a threshold reads. |
 | attractor | A point, group of points or curve you place in the model; its distance from each element drives a parameter. | Distance rescaled (remapped) into the height of each piece. |
-| tessellation and lattice | A tessellation covers a surface with cells; a lattice is a connected network of members in space. | A paneled surface, and a system of nodes and struts. |
-| point cloud | A collection of points measured in space, which may also carry data such as color. | Imported site data; keep a record of its source and scale. |
-| voxel | One cell of a three-dimensional grid — a 3D pixel. | Smaller cells capture finer detail but take more memory and time to compute. |
-| signed distance field | A volume in which every cell stores its distance to the surface, with one sign for inside and the other for outside. | The surface is where the distance is zero. Density or noise values are not automatically distances. |
-| discretization | Describing a continuous form with a limited number of samples or parts. | Turning a volume into contour sections, in order, with material thickness. |
 
 ## Reading and documentation
 
@@ -903,15 +882,13 @@ Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a 
 - [BIG-style process diagram tutorial](https://www.youtube.com/watch?v=8Y5Rn3bDL5s) — CSG 2.1: reference for the operation sequence and graphic presentation.
 - [Three-point lighting tutorial](https://www.youtube.com/watch?v=RDbrOpnIY7Q) — Module 3.1: reference for one consistent key, fill and rim/back lighting strategy across three panel variations.
 - [Blender Repeat Zone](https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/utilities/repeat_zone.html) — Explicit iteration with Repeat Input and Repeat Output.
-- [Blender Field to Grid](https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/field_to_grid.html) — Sampling fields on a voxel-grid topology.
-- [Blender SDF Grid Offset](https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/sdf_grid_offset.html) — Distance-based offset of an SDF surface.
 - [Blender 5.2 manual](https://docs.blender.org/manual/en/5.2/index.html) — Check exact node behavior against the version used to prepare the lesson.
 
 ## Material availability
 
 Use the posted lessons, presentations and example files as learning references. Explained mathematics can remain in the teaching material; the revised briefs define the simpler submission requirements.
 
-For Project 4, instructors provide the interactive Blender decks (procedural, parametric, generative), the supplied field, SDF and volume groups, and a list of Grasshopper plugins. Students build their own generative system from one of the strategies taught; supplied groups and plugins are credited.
+For Project 4, instructors provide the interactive Blender decks (procedural, parametric, generative) and a list of Grasshopper plugins. Students build their own generative system from one of the strategies taught; supplied groups and plugins are credited.
 
 The current briefs take precedence over old assignment instructions inside presentation decks; the explanatory mathematics in the decks remains teaching material.
 
@@ -1101,6 +1078,6 @@ Review completed midterm work as submitted. New architectural evidence, intersec
 
 Project 4: 4.1 is the system sheet (the generative algorithm as a step-by-step diagram), 4.2 the design-space sheet (matrix, readings, selection and breeding) and 4.3 the competition sheet (post-processed elevation, section, isometric and perspective of a store of 40 to 64 m2 for a brand). The strategy and the brand are approved in class on November 10. All three sheets are presented at the final review on December 11 with the booklet and the GSM. Judge 4.3 and the booklet with the competition-sheet rubric: linework, quality of drawings, balance of color, layout, hierarchy, annotation, clarity of story, clarity of diagrams, quality of overall presentation.
 
-Teach 3.4 and introduce 3.5 in Week 9, the supplied field tools in Week 10, generative design in Week 11 (Introduction-to-Generative-Design.blend) and approvals in Week 12. Weeks 13 to 15 are working sessions on the three sheets and the booklet. The contour lessons remain posted as an optional reference; they are not additional assignments.
+Teach 3.4 and introduce 3.5 in Week 9, noise and the first matrix in Week 10, generative design in Week 11 (Introduction-to-Generative-Design.blend) and approvals in Week 12. Weeks 13 to 15 are working sessions on the three sheets and the booklet. The contour lessons remain posted as an optional reference; they are not additional assignments.
 
 *Syllabus subject to revision. Changes will be announced in class and Canvas and synchronized from the curriculum source.*

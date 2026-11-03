@@ -12,7 +12,7 @@ Supported practice, no new topic. Bring all three array sheets for feedback on r
 
 October 20: teach the three attractor methods in 3.4 and their architectural application using the existing panel in 3.5. Both sheets are due together October 27.
 
-October 27: submit the attractor assignment. Supplied field tools and a first matrix; the matrix work can feed 4.2. Point-cloud examples are supplementary.
+October 27: submit the attractor assignment. Noise, thresholds and a first two-parameter matrix; the matrix work can feed 4.2.
 
 November 3: generative design with the interactive deck: start, rule, repeat; noise and thresholds; cellular automata; agents and stigmergy; reaction-diffusion; growth; physics solvers; reading, design space and selection. Project 4: pick a strategy and a brand by November 10.
 
@@ -20,11 +20,11 @@ November 10: every strategy and brand is approved in class with a first test. Th
 
 Weeks 13 to 15: the system sheet, the design-space sheet and the competition sheet reviewed in progress, one per week, plus a booklet spread. No graded submission before the final review on December 11.
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Use this version or newer.
 
 Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
+Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit.
 
 | Session | Target weeks | Open file | Scenes in this file | Lesson |
 | --- | --- | --- | --- | --- |
@@ -33,9 +33,6 @@ Build your own file and use the examples to check individual operations. Supplie
 | S03 | 6 | [Arrays — Part 1: line, grid, cube, curve](03-arrays-lists/Arrays-Lists-Session-1.blend) | Linear loop, Nested grid, 3D array, Along a curve | U04 Arrays |
 | S04 | 7 | [Arrays — Part 2: arrangements and rules](03-arrays-lists/Arrays-Lists-Session-2.blend) | 3D array, Hexagonal array, Radial array, If and range, Sine curve, Brick wall | U04 Arrays |
 | S05 | 9 | [Attractor](04-attractors/Attractors.blend) | Read the field, One point, Multiple points, Curve attractor, Panel prefab, One point opening, Multiple point openings, Curve openings | U05 Attractor |
-| S07 | 10 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Generative Systems |
-| S08 | 10 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Generative Systems |
-| S09 | 10 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Generative Systems |
 
 **S01 — Constructive Solid Geometry.** The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the nodes themselves; these controls are not in the modifier.
 
@@ -44,7 +41,5 @@ Build your own file and use the examples to check individual operations. Supplie
 **S04 — Arrays — Part 2: arrangements and rules.** The simple 3D array comes first: a row repeated into a grid, and the grid into layers, with Count, Spacing and Cube Size exposed. The last scene, Sine curve, uses math on X and Y and repetition in three directions to shape a volume of cubes. It points ahead to the density and signed-distance lessons while still using cubes.
 
 **S05 — Attractor.** Eight prepared checkpoints teach one lesson. First read distance and scale; then feed the same values into a reusable panel's Opening input. The three opening studies keep outer dimensions and thickness fixed. Built-in node names are unchanged; Frames explain the steps. Students replace the supplied demonstration panel with their own module. The full node-by-node guide is on the Attractor tutorial page and inside the file as START HERE - Attractors.
-
-**S07 — Volumetric Data and Fields — point clouds.** Keep the data folder together: the file reads teaching-courtyard.ply from the same folder. It is a made-up point cloud for teaching, not a site survey. Supporting files: [Teaching point cloud](06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json).
 
 The Graphic Standards Manual and the final booklet use graphic and layout files rather than Blender scenes. Assignment requirements and the flexible teaching calendar are in the [current syllabus](../../syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md).

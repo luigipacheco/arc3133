@@ -29,8 +29,5 @@ Geometry Nodes setups and matching 3D viewport screenshots from the separate cla
 | S03 | [Arrays — Part 1: line, grid, cube, curve](#capture-s03) |
 | S04 | [Arrays — Part 2: arrangements and rules](#capture-s04) |
 | S05 | [Attractor](#capture-s05) |
-| S07 | [Volumetric Data and Fields — point clouds](#capture-s07) |
-| S08 | [Volumetric Data and Fields — signed distance and Booleans](#capture-s08) |
-| S09 | [Volumetric Data and Fields — noise and surface extraction](#capture-s09) |
 
 {% include blender_screenshots.html released_only=true %}

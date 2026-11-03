@@ -129,7 +129,7 @@ presentation: |
 
   Assignment sheets should explain what the system does, which controls matter and why you chose the result. Use ordinary language, diagrams and relevant values; formal equations and mathematical derivations are not required. Teaching presentations may retain their explained mathematics.
 
-  Build your own geometry, repetition, conditions, attractor logic and generative system. The instructor supplies example files for the generative strategies (the interactive Blender decks) and the supplied field, SDF and volume groups; understand and credit their inputs and outputs rather than rebuilding their internals. Plugins (Rabbit, Culebra, Anemone, Kangaroo in Grasshopper; the Repeat zone, simulation zone, Cloth and Soft Body in Blender) are allowed and must be credited.
+  Build your own geometry, repetition, conditions, attractor logic and generative system. The instructor supplies example files for the generative strategies (the interactive Blender decks); understand and credit any supplied group or plugin rather than rebuilding its internals. Plugins (Rabbit, Culebra, Anemone, Kangaroo in Grasshopper; the Repeat zone, simulation zone, Cloth and Soft Body in Blender) are allowed and must be credited.
 
   Open your submission from a clean folder and check the geometry, units and controls. Include the 3.4 study sheet with 3.5. Project 4 has three sheets: the system, the design space and the proposal.
 
@@ -1169,7 +1169,7 @@ weeks:
     upload remains the record for assignments 1 through 3.2.'
 - week: 10
   date: '2026-10-27'
-  focus: 'Submit 3.4 and 3.5 together. Supplied field tools and a first two-parameter matrix; this matrix work
+  focus: 'Submit 3.4 and 3.5 together. Noise and thresholds, and a first two-parameter matrix; this matrix work
     can feed the design-space sheet (4.2).'
 - week: 11
   date: '2026-11-03'
@@ -1234,30 +1234,15 @@ vocabulary:
     solids.", 'i % 3 == 0 is True for items 0, 3 and 6.']
   - [field, "A value calculated for every point or element — for example, one
     value per copy in an array.", "Distance
-    calculated at every array point; later, a single value measured throughout a
-    volume."]
+    calculated at every array point; later, a noise value at every cell that a threshold reads."]
   - [attractor, "A point, group of points or curve you place in the model; its
     distance from each element drives a parameter.", "Distance
     rescaled (remapped) into the height of each piece."]
-  - [tessellation and lattice, "A tessellation covers a surface with cells; a
-    lattice is a connected network of members in space.", "A
-    paneled surface, and a system of nodes and struts."]
-  - [point cloud, "A collection of points measured in space, which may also
-    carry data such as color.", "Imported
-    site data; keep a record of its source and scale."]
-  - [voxel, "One cell of a three-dimensional grid — a 3D pixel.", "Smaller cells
-    capture finer detail but take more memory and time to compute."]
-  - [signed distance field, "A volume in which every cell stores its distance to
-    the surface, with one sign for inside and the other for outside.", "The
-    surface is where the distance is zero. Density or noise values are not
-    automatically distances."]
-  - [discretization, "Describing a continuous form with a limited number of
-    samples or parts.", "Turning
-    a volume into contour sections, in order, with material thickness."]
+
 materials_status: |
   Use the posted lessons, presentations and example files as learning references. Explained mathematics can remain in the teaching material; the revised briefs define the simpler submission requirements.
 
-  For Project 4, instructors provide the interactive Blender decks (procedural, parametric, generative), the supplied field, SDF and volume groups, and a list of Grasshopper plugins. Students build their own generative system from one of the strategies taught; supplied groups and plugins are credited.
+  For Project 4, instructors provide the interactive Blender decks (procedural, parametric, generative) and a list of Grasshopper plugins. Students build their own generative system from one of the strategies taught; supplied groups and plugins are credited.
 
   The current briefs take precedence over old assignment instructions inside presentation decks; the explanatory mathematics in the decks remains teaching material.
 
@@ -1291,8 +1276,6 @@ references:
     - ['BIG-style process diagram tutorial', 'https://www.youtube.com/watch?v=8Y5Rn3bDL5s', 'CSG 2.1: reference for the operation sequence and graphic presentation.']
     - ['Three-point lighting tutorial', 'https://www.youtube.com/watch?v=RDbrOpnIY7Q', 'Module 3.1: reference for one consistent key, fill and rim/back lighting strategy across three panel variations.']
     - ['Blender Repeat Zone', 'https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/utilities/repeat_zone.html', 'Explicit iteration with Repeat Input and Repeat Output.']
-    - ['Blender Field to Grid', 'https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/field_to_grid.html', 'Sampling fields on a voxel-grid topology.']
-    - ['Blender SDF Grid Offset', 'https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/sdf_grid_offset.html', 'Distance-based offset of an SDF surface.']
     - ['Blender 5.2 manual', 'https://docs.blender.org/manual/en/5.2/index.html', 'Check exact node behavior against the version used to prepare the lesson.']
   note: "No textbook is required. The references below support the lessons;
     lesson files and tutorials are linked from each class page."
@@ -1305,7 +1288,7 @@ instructor_notes: |
 
   Project 4: 4.1 is the system sheet (the generative algorithm as a step-by-step diagram), 4.2 the design-space sheet (matrix, readings, selection and breeding) and 4.3 the competition sheet (post-processed elevation, section, isometric and perspective of a store of 40 to 64 m2 for a brand). The strategy and the brand are approved in class on November 10. All three sheets are presented at the final review on December 11 with the booklet and the GSM. Judge 4.3 and the booklet with the competition-sheet rubric: linework, quality of drawings, balance of color, layout, hierarchy, annotation, clarity of story, clarity of diagrams, quality of overall presentation.
 
-  Teach 3.4 and introduce 3.5 in Week 9, the supplied field tools in Week 10, generative design in Week 11 (Introduction-to-Generative-Design.blend) and approvals in Week 12. Weeks 13 to 15 are working sessions on the three sheets and the booklet. The contour lessons remain posted as an optional reference; they are not additional assignments.
+  Teach 3.4 and introduce 3.5 in Week 9, noise and the first matrix in Week 10, generative design in Week 11 (Introduction-to-Generative-Design.blend) and approvals in Week 12. Weeks 13 to 15 are working sessions on the three sheets and the booklet. The contour lessons remain posted as an optional reference; they are not additional assignments.
 
 home:
   tagline: Build geometry with rules, vary it with data and communicate it through drawings, models and physical
@@ -1404,15 +1387,12 @@ teaching_sequence:
 - id: B06
   weeks:
   - 10
-  focus: Generative fields and the two-parameter matrix
+  focus: Noise and the two-parameter matrix
   units:
   - U07
-  sessions:
-  - S07
-  - S08
-  - S09
-  delivery: 'October 27: submit the attractor assignment. Supplied field tools and a first matrix; the matrix work
-    can feed 4.2. Point-cloud examples are supplementary.'
+  sessions: []
+  delivery: 'October 27: submit the attractor assignment. Noise, thresholds and a first two-parameter matrix;
+    the matrix work can feed 4.2.'
 - id: B06-volume
   weeks:
   - 11
@@ -1486,14 +1466,14 @@ decks:
   project: P3
 - title: Introduction to Generative Design
   path: files/blender/Introduction-to-Generative-Design.blend
-  weeks: [11]
+  weeks: [10, 11]
   project: P4
 
 blender:
   version: Blender 5.2.1 LTS
-  version_note: Older Blender versions may not have the volume nodes used in later classes.
+  version_note: Use this version or newer.
   reference_note: Build your own file and use the examples to check individual operations. Supplied groups may
-    be reused with credit. The point-cloud file is a supplementary example.
+    be reused with credit.
   how_to_use: Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames
     in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
   sessions:
@@ -1573,40 +1553,7 @@ blender:
       Built-in node names are unchanged; Frames explain the steps. Students replace the supplied demonstration
       panel with their own module. The full node-by-node guide is on the Attractor tutorial page and inside the file
       as START HERE - Attractors.
-  - id: S07
-    title: Volumetric Data and Fields — point clouds
-    path: files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend
-    focus: Import points, measure how they relate to an attractor, and turn the samples into a volume.
-    exercise: Show the imported samples, an analysis based on an attractor and the resulting volume at two resolutions.
-    scenes:
-    - Import points
-    - Analyze points
-    - Points to volume
-    extras:
-    - - Teaching point cloud
-      - files/blender/06-point-clouds-volumes/teaching-courtyard.ply
-    - - Dataset source and units
-      - files/blender/06-point-clouds-volumes/teaching-courtyard.json
-    note: 'Keep the data folder together: the file reads teaching-courtyard.ply from the same folder. It is a made-up
-      point cloud for teaching, not a site survey.'
-  - id: S08
-    title: Volumetric Data and Fields — signed distance and Booleans
-    path: files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend
-    focus: Read signed distance values and compare Boolean combinations of volumes.
-    exercise: Compare the union, intersection and difference of the same two volumes, and explain where the surface
-      sits (the zero boundary).
-    scenes:
-    - Mesh to SDF
-    - Signed distance
-    - SDF Boolean
-  - id: S09
-    title: Volumetric Data and Fields — noise and surface extraction
-    path: files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend
-    focus: Use noise to shape a volume and extract its surface.
-    exercise: Make two controlled noise variations and compare two resolutions. Noise above a threshold is the
-      starting state of the generative systems in Project 4.
-    scenes:
-    - Noise field
+
 
 presentation_review:
 - week: 1

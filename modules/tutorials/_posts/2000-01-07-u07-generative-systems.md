@@ -20,7 +20,7 @@ Choose a generative strategy, explain it as a step-by-step rule, and use it to e
 
 **Video tutorial:** not yet posted. Use the lesson notes and the class slides.
 
-**Taught in:** [Class 10]({{ site.baseurl }}/modules/classes/class-10/). October 27: submit the attractor assignment. Supplied field tools and a first matrix; the matrix work can feed 4.2. Point-cloud examples are supplementary.
+**Taught in:** [Class 10]({{ site.baseurl }}/modules/classes/class-10/). October 27: submit the attractor assignment. Noise, thresholds and a first two-parameter matrix; the matrix work can feed 4.2.
 
 **Taught in:** [Class 11]({{ site.baseurl }}/modules/classes/class-11/). November 3: generative design with the interactive deck: start, rule, repeat; noise and thresholds; cellular automata; agents and stigmergy; reaction-diffusion; growth; physics solvers; reading, design space and selection. Project 4: pick a strategy and a brand by November 10.
 
@@ -63,36 +63,6 @@ parent = pick(matrix)                      # you select, the rule proposes
 children = [run(parent, mutate(0.03)) for _ in range(8)]
 ```
 
-### Blender files for this lesson
+### Interactive deck
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
-
-Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
-
-**S07 — [Volumetric Data and Fields — point clouds]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)**
-
-[Open the class that teaches this file]({{ site.baseurl }}/modules/classes/class-10/)
-
-Scenes in this file: Import points, Analyze points, Points to volume. Open them in the order listed.
-
-Keep the data folder together: the file reads teaching-courtyard.ply from the same folder. It is a made-up point cloud for teaching, not a site survey.
-
-Supporting files: [Teaching point cloud]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.json).
-
-**S08 — [Volumetric Data and Fields — signed distance and Booleans]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend)**
-
-[Open the class that teaches this file]({{ site.baseurl }}/modules/classes/class-10/)
-
-Scenes in this file: Mesh to SDF, Signed distance, SDF Boolean. Open them in the order listed.
-
-**S09 — [Volumetric Data and Fields — noise and surface extraction]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend)**
-
-[Open the class that teaches this file]({{ site.baseurl }}/modules/classes/class-10/)
-
-Scenes in this file: Noise field. Open them in the order listed.
-
-## Examples from the class files
-
-Select an image to inspect the original screenshot at full resolution.
-
-{% include blender_screenshots.html unit="U07" %}
+**Interactive deck:** [Introduction to Generative Design]({{ site.baseurl }}/files/blender/Introduction-to-Generative-Design.blend) — download .blend, open it in Blender 5.2.1 LTS; each scene is a slide.

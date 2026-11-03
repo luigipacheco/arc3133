@@ -9,3 +9,7 @@ Removed from the site in the cleanup after Project 4 dropped laser cutting.
 
 The U09 unit, the S10 to S12 sessions and the B-contour optional block were removed from `syllabus/course.yml`;
 the previous version is in git history (commit 45dea3a).
+
+Second pass, same day: the point-cloud and volume files (S07 to S09: `06-point-clouds-volumes/`, `07-advanced-volumes/`)
+and their screenshots, from the earlier volumetric-field version of Project 4. Class 10 now covers noise, thresholds
+and a first two-parameter matrix; the generative deck replaces these files.

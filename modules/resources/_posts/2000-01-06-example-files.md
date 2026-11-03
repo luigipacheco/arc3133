@@ -11,7 +11,7 @@ permalink: /resources/example-files/
 
 # Example files
 
-Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
+Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit.
 
 Download only the example for the class you are working on. Arrays uses two example files across the practice block.
 
@@ -34,12 +34,7 @@ The concept slides, as Blender files: one scene per slide, with controls you can
 | Arrays — Part 1: line, grid, cube, curve | [Download .blend]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend) |
 | Arrays — Part 2: arrangements and rules | [Download .blend]({{ site.baseurl }}/files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend) |
 | Attractor | [Download .blend]({{ site.baseurl }}/files/blender/04-attractors/Attractors.blend) |
-| Volumetric Data and Fields — point clouds | [Download .blend]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)<br>[Teaching point cloud]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.ply)<br>[Dataset source and units]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.json) |
-| Volumetric Data and Fields — signed distance and Booleans | [Download .blend]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend) |
-| Volumetric Data and Fields — noise and surface extraction | [Download .blend]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend) |
 
-For Point Clouds and Volumes, also download the teaching point cloud and keep the PLY beside its Blender file. The dataset note records its source and units.
-
-Prepared in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes.
+Prepared in **Blender 5.2.1 LTS**. Use this version or newer.
 
 [Find the class that uses each file]({{ site.baseurl }}/modules/classes/overview/)

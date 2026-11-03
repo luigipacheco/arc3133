@@ -419,7 +419,8 @@ class Course:
         """List the Blender sessions this unit uses. Only files actually on disk."""
         found = [s for s in self.unit_sessions.get(u["id"], []) if (ROOT / s["path"]).is_file()]
         if not found:
-            return "**Lesson file:** To be prepared and verified.\n\n"
+            decks = [d for d in self.decks if u["id"] in self.projects[d["project"]]["units"]]
+            return ("### Interactive deck\n\n" + self.deck_lines(decks)) if decks else "**Lesson file:** To be prepared and verified.\n\n"
         out = "### Blender files for this lesson\n\n"
         out += (f"Prepared and evaluated in **{self.blender['version']}**. "
                 f"{self.blender['version_note']} " + self.blender["how_to_use"] + "\n\n")
@@ -801,7 +802,6 @@ class Course:
         if optional_rows:
             examples += '## Possible intermediate class\n\nOptional reference files; these are outside the required sequence.\n\n'
             examples += table(['Optional example', 'Individual downloads'], optional_rows) + '\n'
-        examples += 'For Point Clouds and Volumes, also download the teaching point cloud and keep the PLY beside its Blender file. The dataset note records its source and units.\n\n'
         examples += f"Prepared in **{self.blender['version']}**. {self.blender['version_note']}\n\n"
         examples += self.link('Find the class that uses each file', session_pages.OVERVIEW) + '\n'
         self.emit('modules/resources/_posts/2000-01-06-example-files.md', examples)

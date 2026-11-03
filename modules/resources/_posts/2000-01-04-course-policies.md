@@ -78,7 +78,7 @@ Plan for at least six hours of work outside class each week, including tests and
 | 7 | Arrays 2 — if/Switch in 2D and 3D | [Class 07]({{ site.baseurl }}/modules/classes/class-07/) | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Blender · Arrays part 2](https://youtu.be/B7yYA9HCBdM) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
 | 8 | Supported practice — Arrays 1 and 2 | [Class 08]({{ site.baseurl }}/modules/classes/class-08/) | — |
 | 9 | Attractor studies and architectural application | [Class 09]({{ site.baseurl }}/modules/classes/class-09/) | — |
-| 10 | Generative fields and the two-parameter matrix | [Class 10]({{ site.baseurl }}/modules/classes/class-10/) | — |
+| 10 | Noise and the two-parameter matrix | [Class 10]({{ site.baseurl }}/modules/classes/class-10/) | — |
 | 11 | Introduction to generative design | [Class 11]({{ site.baseurl }}/modules/classes/class-11/) | — |
 | 12 | Strategy and brand approval, the system sheet | Class 12 — *not yet released* | — |
 | 13–15 | Working sessions - the three sheets and the booklet | Class 13 — *not yet released* · Class 14 — *not yet released* · Class 15 — *not yet released* | — |
@@ -105,7 +105,7 @@ Plan for at least six hours of work outside class each week, including tests and
 | 7 | Oct 6 | Arrays 2 — if/Switch in 2D and 3D | No graded submission |
 | 8 | Oct 13 | Supported practice — Arrays 1 and 2 | No graded submission |
 | 9 | Oct 20 | Midterm grade; attractor studies and architectural application | 1 — Graphic Standards Manual (Sun Oct 18, 11:59 PM Eastern Time); 2.1 — CSG - an architectural object as instructions (Sun Oct 18, 11:59 PM Eastern Time); 2.2 — 3D printing - from model to layers (Sun Oct 18, 11:59 PM Eastern Time); 3.1 — Descriptive geometry - build a reusable module (Sun Oct 18, 11:59 PM Eastern Time); 3.2 — Arrays - repetition, patterns and architecture (Sun Oct 18, 11:59 PM Eastern Time) |
-| 10 | Oct 27 | Generative fields and the two-parameter matrix | 3.4 — Attractors - three field studies (11:59 PM Eastern Time); 3.5 — Attractor-based architectural application (11:59 PM Eastern Time) |
+| 10 | Oct 27 | Noise and the two-parameter matrix | 3.4 — Attractors - three field studies (11:59 PM Eastern Time); 3.5 — Attractor-based architectural application (11:59 PM Eastern Time) |
 | 11 | Nov 3 | Introduction to generative design | — |
 | 12 | Nov 10 | Strategy and brand approval, the system sheet | — |
 | 13 | Nov 17 | Working sessions - the three sheets and the booklet | — |
@@ -364,7 +364,7 @@ Use 17 x 11 inch sheets and the Graphic Standards Manual for every assignment. S
 
 Assignment sheets should explain what the system does, which controls matter and why you chose the result. Use ordinary language, diagrams and relevant values; formal equations and mathematical derivations are not required. Teaching presentations may retain their explained mathematics.
 
-Build your own geometry, repetition, conditions, attractor logic and generative system. The instructor supplies example files for the generative strategies (the interactive Blender decks) and the supplied field, SDF and volume groups; understand and credit their inputs and outputs rather than rebuilding their internals. Plugins (Rabbit, Culebra, Anemone, Kangaroo in Grasshopper; the Repeat zone, simulation zone, Cloth and Soft Body in Blender) are allowed and must be credited.
+Build your own geometry, repetition, conditions, attractor logic and generative system. The instructor supplies example files for the generative strategies (the interactive Blender decks); understand and credit any supplied group or plugin rather than rebuilding its internals. Plugins (Rabbit, Culebra, Anemone, Kangaroo in Grasshopper; the Repeat zone, simulation zone, Cloth and Soft Body in Blender) are allowed and must be credited.
 
 Open your submission from a clean folder and check the geometry, units and controls. Include the 3.4 study sheet with 3.5. Project 4 has three sheets: the system, the design space and the proposal.
 
@@ -467,15 +467,13 @@ Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a 
 - [BIG-style process diagram tutorial](https://www.youtube.com/watch?v=8Y5Rn3bDL5s) — CSG 2.1: reference for the operation sequence and graphic presentation.
 - [Three-point lighting tutorial](https://www.youtube.com/watch?v=RDbrOpnIY7Q) — Module 3.1: reference for one consistent key, fill and rim/back lighting strategy across three panel variations.
 - [Blender Repeat Zone](https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/utilities/repeat_zone.html) — Explicit iteration with Repeat Input and Repeat Output.
-- [Blender Field to Grid](https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/field_to_grid.html) — Sampling fields on a voxel-grid topology.
-- [Blender SDF Grid Offset](https://docs.blender.org/manual/en/5.2/modeling/geometry_nodes/volume/operations/sdf_grid_offset.html) — Distance-based offset of an SDF surface.
 - [Blender 5.2 manual](https://docs.blender.org/manual/en/5.2/index.html) — Check exact node behavior against the version used to prepare the lesson.
 
 ## Material availability
 
 Use the posted lessons, presentations and example files as learning references. Explained mathematics can remain in the teaching material; the revised briefs define the simpler submission requirements.
 
-For Project 4, instructors provide the interactive Blender decks (procedural, parametric, generative), the supplied field, SDF and volume groups, and a list of Grasshopper plugins. Students build their own generative system from one of the strategies taught; supplied groups and plugins are credited.
+For Project 4, instructors provide the interactive Blender decks (procedural, parametric, generative) and a list of Grasshopper plugins. Students build their own generative system from one of the strategies taught; supplied groups and plugins are credited.
 
 The current briefs take precedence over old assignment instructions inside presentation decks; the explanatory mathematics in the decks remains teaching material.
 

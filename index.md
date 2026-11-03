@@ -41,7 +41,7 @@ Arrays are taught in Weeks 6–7 with supported practice in Week 8, attractors i
 | 7 | Arrays 2 — if/Switch in 2D and 3D | [Class 07]({{ site.baseurl }}/modules/classes/class-07/) | [Blender · Arrays part 1](https://youtu.be/q1z8YI7ExtY) · [Blender · Arrays part 2](https://youtu.be/B7yYA9HCBdM) · [Rhino + Grasshopper · GH list](https://www.youtube.com/watch?v=ylHphXclA9w) · [Rhino + Grasshopper · Arrays part 1](https://www.youtube.com/watch?v=ctf8qUgi_ZI) · [Rhino + Grasshopper · Arrays part 2](https://www.youtube.com/watch?v=ymUSyCUqTL4) |
 | 8 | Supported practice — Arrays 1 and 2 | [Class 08]({{ site.baseurl }}/modules/classes/class-08/) | — |
 | 9 | Attractor studies and architectural application | [Class 09]({{ site.baseurl }}/modules/classes/class-09/) | — |
-| 10 | Generative fields and the two-parameter matrix | [Class 10]({{ site.baseurl }}/modules/classes/class-10/) | — |
+| 10 | Noise and the two-parameter matrix | [Class 10]({{ site.baseurl }}/modules/classes/class-10/) | — |
 | 11 | Introduction to generative design | [Class 11]({{ site.baseurl }}/modules/classes/class-11/) | — |
 | 12 | Strategy and brand approval, the system sheet | Class 12 — *not yet released* | — |
 | 13–15 | Working sessions - the three sheets and the booklet | Class 13 — *not yet released* · Class 14 — *not yet released* · Class 15 — *not yet released* | — |

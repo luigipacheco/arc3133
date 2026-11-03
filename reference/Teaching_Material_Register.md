@@ -4,7 +4,7 @@
 
 Use the posted lessons, presentations and example files as learning references. Explained mathematics can remain in the teaching material; the revised briefs define the simpler submission requirements.
 
-For Project 4, instructors provide the interactive Blender decks (procedural, parametric, generative), the supplied field, SDF and volume groups, and a list of Grasshopper plugins. Students build their own generative system from one of the strategies taught; supplied groups and plugins are credited.
+For Project 4, instructors provide the interactive Blender decks (procedural, parametric, generative) and a list of Grasshopper plugins. Students build their own generative system from one of the strategies taught; supplied groups and plugins are credited.
 
 The current briefs take precedence over old assignment instructions inside presentation decks; the explanatory mathematics in the decks remains teaching material.
 
@@ -15,7 +15,7 @@ The current briefs take precedence over old assignment instructions inside prese
 | U03 | Descriptive Geometry | [S02](../files/blender/02-geometry-fundamentals/GEOMETRY101-class-ready.blend) | Posted | Not linked / to prepare |
 | U04 | Arrays | [S03](../files/blender/03-arrays-lists/Arrays-Lists-Session-1.blend), [S04](../files/blender/03-arrays-lists/Arrays-Lists-Session-2.blend) | Posted | Not linked / to prepare |
 | U05 | Attractor | [S05](../files/blender/04-attractors/Attractors.blend) | Posted | Not linked / to prepare |
-| U07 | Generative Systems | [S07](../files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend), [S08](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend), [S09](../files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Posted | Not linked / to prepare |
+| U07 | Generative Systems | To prepare | Posted | Not linked / to prepare |
 | U10 | Final | To prepare | Held until the class | Not linked / to prepare |
 
 ## Teaching presentations
@@ -33,7 +33,7 @@ Every class has one deck, built with the course slide kit from `slides/src` and 
 | 7 | Arrays 2 — if/Switch in 2D and 3D | [PPTX](../slides/ARC3133_Class07.pptx) / [PDF](../slides/ARC3133_Class07.pdf) | Current | Arrays Part 2 (conditionals) — brick wall, Sheet 2 façade rules and Sheet 3 rules that switch a parameter in 3D; matches the October 18 deadline. deck, then review before marking current. |
 | 8 | Supported practice — Arrays 1 and 2 | [PPTX](../slides/ARC3133_Class08.pptx) / [PDF](../slides/ARC3133_Class08.pdf) | Current | Supported practice for Arrays 1 and 2 with the mid-semester upload checklist; rebuilt from this file. |
 | 9 | Attractor studies and architectural application | [PPTX](../slides/ARC3133_Class09.pptx) / [PDF](../slides/ARC3133_Class09.pdf) | Current | Attractors, the three field studies (3.4) and the architectural application (3.5); rebuilt from this file. The earlier layered site-analysis deck is retired as slides/src/class09_site_analysis.py. |
-| 10 | Generative fields and the two-parameter matrix | [PPTX](../slides/ARC3133_Class10.pptx) / [PDF](../slides/ARC3133_Class10.pdf) | Needs revision | Revised assignment structure and current deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
+| 10 | Noise and the two-parameter matrix | [PPTX](../slides/ARC3133_Class10.pptx) / [PDF](../slides/ARC3133_Class10.pdf) | Needs revision | Revised assignment structure and current deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
 | 11 | Introduction to generative design | [PPTX](../slides/ARC3133_Class11.pptx) / [PDF](../slides/ARC3133_Class11.pdf) | Needs revision | Revised assignment structure and current deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
 | 12 | Strategy and brand approval, the system sheet | [PPTX](../slides/ARC3133_Class12.pptx) / [PDF](../slides/ARC3133_Class12.pdf) | Needs revision | Revised assignment structure and current deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
 | 13 | Working sessions - the three sheets and the booklet | [PPTX](../slides/ARC3133_Class13.pptx) / [PDF](../slides/ARC3133_Class13.pdf) | Needs revision | Revised assignment structure and current deadlines supersede this deck. Update both its source and exported deck, then review before marking current. |
@@ -50,4 +50,4 @@ Review completed midterm work as submitted. New architectural evidence, intersec
 
 Project 4: 4.1 is the system sheet (the generative algorithm as a step-by-step diagram), 4.2 the design-space sheet (matrix, readings, selection and breeding) and 4.3 the competition sheet (post-processed elevation, section, isometric and perspective of a store of 40 to 64 m2 for a brand). The strategy and the brand are approved in class on November 10. All three sheets are presented at the final review on December 11 with the booklet and the GSM. Judge 4.3 and the booklet with the competition-sheet rubric: linework, quality of drawings, balance of color, layout, hierarchy, annotation, clarity of story, clarity of diagrams, quality of overall presentation.
 
-Teach 3.4 and introduce 3.5 in Week 9, the supplied field tools in Week 10, generative design in Week 11 (Introduction-to-Generative-Design.blend) and approvals in Week 12. Weeks 13 to 15 are working sessions on the three sheets and the booklet. The contour lessons remain posted as an optional reference; they are not additional assignments.
+Teach 3.4 and introduce 3.5 in Week 9, noise and the first matrix in Week 10, generative design in Week 11 (Introduction-to-Generative-Design.blend) and approvals in Week 12. Weeks 13 to 15 are working sessions on the three sheets and the booklet. The contour lessons remain posted as an optional reference; they are not additional assignments.

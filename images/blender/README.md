@@ -1,6 +1,6 @@
 # Blender screenshots — ARC 3133
 
-24 original PNG screenshots: one Geometry Nodes setup and one matching 3D viewport from each of the 12 session files. Captured through Blender MCP in Blender 5.2.1 LTS. Native node names are retained. S01 shows the instructor’s annotated CSG example.
+10 original PNG screenshots: one Geometry Nodes setup and one matching 3D viewport from each of the five lesson files. Captured through Blender MCP in Blender 5.2.1 LTS. Native node names are retained. S01 shows the instructor’s annotated CSG example.
 
 Names follow `sXX-example-geonodes.png` and `sXX-example-viewport.png`. Use the original PNGs in slides. The manifest records the source file, scene, node group, dimensions and checksums.
 
@@ -11,9 +11,5 @@ Names follow `sXX-example-geonodes.png` and `sXX-example-viewport.png`. Use the 
 | S03 | Nested grid | [s03-nested-grid-geonodes.png](s03-nested-grid-geonodes.png) | [s03-nested-grid-viewport.png](s03-nested-grid-viewport.png) |
 | S04 | Sine curve | [s04-math-volume-array-geonodes.png](s04-math-volume-array-geonodes.png) | [s04-math-volume-array-viewport.png](s04-math-volume-array-viewport.png) |
 | S05 | Curve attractor | [s05-curve-attractor-geonodes.png](s05-curve-attractor-geonodes.png) | [s05-curve-attractor-viewport.png](s05-curve-attractor-viewport.png) |
-| S06 | Attractor lattice | [s06-attractor-lattice-geonodes.png](s06-attractor-lattice-geonodes.png) | [s06-attractor-lattice-viewport.png](s06-attractor-lattice-viewport.png) |
-| S07 | Points to volume | [s07-points-to-volume-geonodes.png](s07-points-to-volume-geonodes.png) | [s07-points-to-volume-viewport.png](s07-points-to-volume-viewport.png) |
-| S08 | SDF Boolean | [s08-sdf-boolean-geonodes.png](s08-sdf-boolean-geonodes.png) | [s08-sdf-boolean-viewport.png](s08-sdf-boolean-viewport.png) |
-| S09 | Noise field | [s09-noise-field-geonodes.png](s09-noise-field-geonodes.png) | [s09-noise-field-viewport.png](s09-noise-field-viewport.png) |
 
-The website shows screenshots for released lessons. All 24 originals remain available here for slide preparation.
+The website shows screenshots for released lessons.

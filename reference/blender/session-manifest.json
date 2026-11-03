@@ -63,36 +63,5 @@
       "Multiple point openings",
       "Curve openings"
     ]
-  },
-  {
-    "id": "S07",
-    "unit": "U07",
-    "title": "Volumetric Data and Fields — point clouds",
-    "file": "files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend",
-    "scenes": [
-      "Import points",
-      "Analyze points",
-      "Points to volume"
-    ]
-  },
-  {
-    "id": "S08",
-    "unit": "U07",
-    "title": "Volumetric Data and Fields — signed distance and Booleans",
-    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend",
-    "scenes": [
-      "Mesh to SDF",
-      "Signed distance",
-      "SDF Boolean"
-    ]
-  },
-  {
-    "id": "S09",
-    "unit": "U07",
-    "title": "Volumetric Data and Fields — noise and surface extraction",
-    "file": "files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend",
-    "scenes": [
-      "Noise field"
-    ]
   }
 ]

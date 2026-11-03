@@ -66,9 +66,9 @@ result  = difference(solid, cutters) # 9  difference
 
 ### Blender files for this lesson
 
-Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not have the volume nodes used in later classes. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
+Prepared and evaluated in **Blender 5.2.1 LTS**. Use this version or newer. Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
+Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit.
 
 **S01 — [Constructive Solid Geometry]({{ site.baseurl }}/files/blender/01-intro-geometry-nodes/Intro-Geometry-Nodes.blend)**
 

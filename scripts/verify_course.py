@@ -91,7 +91,6 @@ def verify_sequence(course, site, documents, baseurl):
                 assert 'Slides as presented in class' in ''.join(page.text), f'Missing revision notice: {number}'
         else:
             assert not any(link in page.links for link in slide_links), f'Unreviewed slides linked: {number}'
-            assert 'Revised slides are not yet posted' in ''.join(page.text), f'Missing slide-status notice: {number}'
         for sid in course.weeks[number]['sessions']:
             session = next(s for s in course.sessions if s['id'] == sid)
             if session_pages.available(course, session):

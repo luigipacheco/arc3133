@@ -275,7 +275,7 @@ Design a system, not an output. Pick a generative strategy and a brand, build a 
 
 **Present:** One 17 x 11 inch sheet: the generative algorithm as a step-by-step diagram, with the start, the rule, the environment and the readings; editable system.
 
-- Pick one generative strategy from the table on the Project 4 page (cellular automata, agents and stigmergy, reaction-diffusion, growth, physics solvers) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved in class on November 10.
+- Pick one generative strategy from the table on the Project 4 page (cellular automata, agents and stigmergy, reaction-diffusion, growth, physics solvers, noise fields) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved in class on November 10.
 - Name the start, the rule and the repetitions. State what the rule reads (neighbours, a field, a trail, forces) and what the environment is (site, boundary, attractor, brand constraints).
 - Draw the algorithm step by step, BIG-diagram style: one frame per step, in order, showing how the system produces spaces. Caption each frame in plain words; no code is required.
 - Show two or three generations or iterations from the same run so the reader sees the rule acting on its own result.

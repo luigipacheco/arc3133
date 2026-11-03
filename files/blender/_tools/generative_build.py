@@ -731,7 +731,7 @@ PATTERNS = ["Spots", "Maze", "Coral", "Worms"]
 
 def s11():
     key = "11 Reaction Diffusion"
-    sc, cam, hud = GK['make_slide'](key, 10, "REACTION AND\nDIFFUSION",
+    sc, cam, hud = GK['make_slide'](key, 11, "REACTION AND\nDIFFUSION",
         "Two substances spread and react (Alan Turing, 1952). Small changes in feed and removal give spots, stripes or mazes.",
         "Switch Pattern. Lower Steps to watch the pattern form.", scale=17)
     GK['aim'](cam, (0, 0, 0), TOP, shift=2.9)
@@ -795,7 +795,7 @@ def s11():
 # ================================================================ 11 Growth
 def s12():
     key = "12 Growth"
-    sc, cam, hud = GK['make_slide'](key, 11, "GROWTH",
+    sc, cam, hud = GK['make_slide'](key, 12, "GROWTH",
         "Growth rules add material at the edge of what already exists. A cell joins only when exactly one of its four "
         "sides touches a grown cell, so the tips keep growing: branches, like coral or frost.",
         "Change Chance and Seed. Turn on Height: time becomes height again.", scale=26)
@@ -847,9 +847,9 @@ def s12():
 
 
 # ================================================================ 12 Reading a layer
-def s15():
-    key = "15 Reading"
-    sc, cam, hud = GK['make_slide'](key, 12, "READING\nA LAYER",
+def s16():
+    key = "16 Reading"
+    sc, cam, hud = GK['make_slide'](key, 16, "READING\nA LAYER",
         "Generative results have to be read. Slice a layer and ask architectural questions: is there a floor to stand on, "
         "room to move, room above your head?",
         "Move Layer up and down. Change Clearance and Headroom.", scale=32)
@@ -935,10 +935,10 @@ def foreach_automata(t, pts, items, loc, gens, extra_store=()):
 TOWARD = (0.57735 * 40, 0.57735 * 40, 0.57735 * 40)   # pulls labels toward the camera so volumes never hide them
 
 
-def s16():
-    key = "16 Design Space"
+def s17():
+    key = "17 Design Space"
     S_ = 18.0; SR = 28.0
-    sc, cam, hud = GK['make_slide'](key, 13, "DESIGN SPACE",
+    sc, cam, hud = GK['make_slide'](key, 17, "DESIGN SPACE",
         "One run is one answer. A matrix runs the rule 25 times while two inputs change, so you can compare and choose.\n\n"
         "It maps part of a space you have not mapped.",
         "Change the threshold range and Seed. Pick a column and a row.", scale=175)
@@ -983,10 +983,10 @@ def s16():
     return done(key, sc, t, u, [(n, n) for n in ("Threshold From", "Threshold To", "Seed", "Pick Column", "Pick Row")])
 
 
-def s17():
-    key = "17 Breed"
+def s18():
+    key = "18 Breed"
     S_ = 18.0; SR = 28.0
-    sc, cam, hud = GK['make_slide'](key, 14, "SELECT\nAND BREED",
+    sc, cam, hud = GK['make_slide'](key, 18, "SELECT\nAND BREED",
         "Selection makes it evolve: keep the best result, make small variations of it, choose again. The rule proposes, "
         "you select (John Frazer, An Evolutionary Architecture, 1995).",
         "Copy your picked seed and threshold into Parent. Change Mutation, then Pick a child.", scale=115)
@@ -1264,6 +1264,80 @@ def s14():
     return done(key, sc, t, u, [("Gravity", "Gravity"), ("Iterations", "Iterations"), ("Flip", "Flip")])
 
 
+# ================================================================ 15 Noise as a generator
+def s15():
+    key = "15 Noise Field"
+    sc, cam, hud = GK['make_slide'](key, 15, "NOISE AS A\nGENERATOR",
+        "Noise can be the generator itself. A 3D noise (here Voronoi cells) gives every point in space a number; keep "
+        "the points close to a cell edge and you get a solid of thin walls whose empty cells read as rooms. Shapes "
+        "stored as fields combine like solids: union, subtract and intersect are just min and max.",
+        "Change Cell Size, Wall and Seed. Switch Combine: keep the store, cut it out, add a floor.", scale=27)
+    GK['aim'](cam, (0, 0, 1.5), ISO, shift=3.3)
+    t = Tree(key)
+    t.inp("Cell Size", "Float", 2.2, 0.6, 5.0, "How wide the cells are (m)")
+    t.inp("Wall", "Float", 0.12, 0.03, 0.8, "Wall thickness: how close to a cell edge counts as solid (m)")
+    t.inp("Seed", "Int", 0, 0, 999, "Another arrangement of cells")
+    t.inp("Combine", "Menu", desc="How the noise field meets the store box (8 x 6 x 3.5 m)")
+    t.inp("Blend", "Float", 0.0, 0.0, 1.0, "Smooth the joins (m)")
+    t.inp("Voxel", "Float", 0.12, 0.06, 0.4, "Detail: voxel size (m); smaller is finer and slower")
+    pp = position(t, (-1500, 0))
+    # NOISE: distance to the nearest cell edge, in metres; negative inside the walls
+    vor = t.n('ShaderNodeTexVoronoi', (-1300, 100), voronoi_dimensions='4D', feature='DISTANCE_TO_EDGE')
+    t.L(pp, vor.inputs['Vector']); t.L(t.math('DIVIDE', 1.0, t.g("Cell Size"), (-1500, 200)), vor.inputs['Scale'])
+    t.L(t.math('MULTIPLY', t.g("Seed"), 1.37, (-1500, 300)), vor.inputs['W'])
+    walls = t.math('SUBTRACT', t.math('MULTIPLY', vor.outputs['Distance'], t.g("Cell Size"), (-1100, 100)), t.g("Wall"), (-950, 100))
+
+    def box(center, half, y):
+        q = t.vmath('SUBTRACT', t.vmath('ABSOLUTE', t.vmath('SUBTRACT', pp, center, (-1300, y)), None, (-1150, y)), half, (-1000, y))
+        outside = t.vmath('LENGTH', t.vmath('MAXIMUM', q, (0.0, 0.0, 0.0), (-850, y)), None, (-700, y), out=1)
+        x, yy, z = t.sep(q, (-850, y - 150))[:3]
+        inside = t.math('MINIMUM', t.math('MAXIMUM', x, t.math('MAXIMUM', yy, z, (-700, y - 200)), (-550, y - 200)), 0.0, (-400, y - 200))
+        return t.math('ADD', outside, inside, (-400, y)), [q.node, outside.node, inside.node]
+    store, sn = box((0.0, 2.0, 1.75), (4.0, 3.0, 1.75), -300)
+    floor, fn = box((0.0, 0.0, 0.15), (5.0, 4.0, 0.15), -700)
+    region, rn = box((0.0, 0.0, 2.25), (4.95, 3.95, 2.2), -1100)
+
+    def smooth(op, a, b, loc):
+        n = t.n('ShaderNodeMath', loc, operation=op); t.L(a, n.inputs[0]); t.L(b, n.inputs[1]); t.L(t.g("Blend"), n.inputs[2])
+        return n.outputs[0]
+    keep = smooth('SMOOTH_MAX', walls, store, (-200, 300))
+    cut = smooth('SMOOTH_MAX', walls, t.math('MULTIPLY', store, -1.0, (-250, 100)), (-200, 100))
+    add = smooth('SMOOTH_MIN', walls, floor, (-200, -100))
+    cm = t.menu(["Keep the store (intersect)", "Cut the store out (subtract)", "Add a floor (union)", "Field only"], 'FLOAT', (0, 100))
+    t.L(t.g("Combine"), cm.inputs['Menu'])
+    t.L(keep, cm.inputs['Keep the store (intersect)']); t.L(cut, cm.inputs['Cut the store out (subtract)'])
+    t.L(add, cm.inputs['Add a floor (union)']); t.L(walls, cm.inputs['Field only'])
+    closed = t.math('MAXIMUM', cm.outputs[0], region, (200, 0))
+    # GRID: sample the field in a voxel grid over the site, 10 x 8 x 4.5 m, and mesh the zero surface
+    topo = t.n('GeometryNodeCubeGridTopology', (200, 400))
+    topo.inputs['Bounds Min'].default_value = (-5.0, -4.0, 0.0); topo.inputs['Bounds Max'].default_value = (5.0, 4.0, 4.5)
+    for ax, size in zip("XYZ", (10.0, 8.0, 4.5)):
+        t.L(t.math('CEIL', t.math('DIVIDE', size, t.g("Voxel"), (0, 600 - 80 * "XYZ".index(ax))), None, (100, 600 - 80 * "XYZ".index(ax))), topo.inputs['Resolution ' + ax])
+    f2g = t.n('GeometryNodeFieldToGrid', (400, 200), data_type='FLOAT'); f2g.grid_items.new('FLOAT', 'Field')
+    t.L(topo.outputs[0], f2g.inputs['Topology']); t.L(closed, f2g.inputs['Field'])
+    g2m = t.n('GeometryNodeGridToMesh', (600, 200)); t.L(f2g.outputs['Field'], g2m.inputs['Grid'])
+    t.out(g2m.outputs[0]); t.go.location = (800, 200)
+    t.frame("NOISE  Voronoi cells: the distance to the nearest cell edge, in metres, minus the wall thickness", [vor, walls.node])
+    t.frame("SHAPES AS FIELDS  boxes: negative inside, positive outside (store, floor, site)", sn + fn + rn + [store.node, floor.node, region.node])
+    t.frame("COMBINE  intersect = max(a, b); subtract = max(a, -b); union = min(a, b); Blend smooths the join", [keep.node, cut.node, add.node, cm])
+    t.frame("MESH  sample the field in a voxel grid, keep the surface where it is zero", [closed.node, topo, f2g, g2m])
+    t.tidy()
+    u = UI(key, cam)
+    u.inp("Cell Size", "Float", 2.2); u.inp("Wall", "Float", 0.12); u.inp("Seed", "Int", 0)
+    sm = u.n('GeometryNodeSetShadeSmooth', u.place()); u.L(u.g("Geometry"), sm.inputs['Geometry'])
+    u.add(u.paint(sm.outputs[0], 'WHITE'))
+    cb = u.n('GeometryNodeMeshCube', u.place()); cb.inputs['Size'].default_value = (8.0, 6.0, 3.5)
+    u.ghost(u.transform(cb.outputs[0], (0.0, 2.0, 1.75), loc=u.place()), 'PINK', 0.025)
+    lines = [('k', ["1  noise: Voronoi cells about ", u.fmt(u.g("Cell Size"), 1), " m wide, seed ", u.fmt(u.g("Seed"), 0)]),
+             ('k', ["2  solid where a point is within ", u.fmt(u.g("Wall"), 2), " m of a cell edge"]),
+             ('k', "3  the empty cells read as rooms"),
+             ('p', "4  combine with the store (pink): intersect, subtract, union"),
+             ('k', "5  mesh the surface where the field is zero")] + tools("Voronoi Texture, Field to Grid, Grid to Mesh", "Dendro (volumes)")
+    u.code(lines, y=-0.8)
+    u.finish()
+    return done(key, sc, t, u, [("Cell Size", "Cell Size"), ("Wall", "Wall"), ("Seed", "Seed")])
+
+
 def cint_(u, boolsock):
     s = u.n('GeometryNodeSwitch', u.place(), input_type='INT'); u.L(boolsock, s.inputs['Switch'])
     s.inputs['False'].default_value = 0; s.inputs['True'].default_value = 1
@@ -1271,9 +1345,9 @@ def cint_(u, boolsock):
 
 
 # ================================================================ 18 Plan and section
-def s18():
-    key = "18 Plan Section"
-    sc, cam, hud = GK['make_slide'](key, 18, "PLAN AND\nSECTION",
+def s19():
+    key = "19 Plan Section"
+    sc, cam, hud = GK['make_slide'](key, 19, "PLAN AND\nSECTION",
         "A generated volume is drawn like any building. A horizontal cut at eye height is the plan; a vertical cut is "
         "the section. Cut where the drawing explains the most.",
         "Move Plan Level and Section X. Switch Show to Plan, Section or Both.", scale=24)
@@ -1340,8 +1414,8 @@ def static_slide(key, num, title, body, right, scale=16.0):
     return sc
 
 
-def s19():
-    return static_slide("19 Exercise", 19, "PROJECT 4\nGENERATIVE STORE",
+def s20():
+    return static_slide("20 Exercise", 20, "PROJECT 4\nGENERATIVE STORE",
         "Design a system, not an output.\n\nPick one generative strategy and one brand. Build a system that produces "
         "stores of 40 to 64 m2 for that brand. Map its design space, select one result and present it as a competition entry.\n\n"
         "Strategy and brand are approved in class on November 10. The three sheets are presented at the final review on December 11 "
@@ -1351,7 +1425,8 @@ def s19():
          ('k', "agents, stigmergy      walkers read the field and leave trails", 0.27, 0.42),
          ('k', "reaction-diffusion     two values spread and react", 0.27, 0.42),
          ('k', "growth                 material joins at the edge", 0.27, 0.42),
-         ('k', "physics solver         forces settle into a form", 0.27, 0.65),
+         ('k', "physics solver         forces settle into a form", 0.27, 0.42),
+         ('k', "noise field            cells become walls; combine as fields", 0.27, 0.65),
          ('p', "one strategy  +  one brand  +  one environment", 0.3, 0.75),
          ('k', "THE DATES", 0.42, 0.7),
          ('k', "Nov 10   strategy and brand approved in class", 0.27, 0.42),
@@ -1361,8 +1436,8 @@ def s19():
          ('p', "Dec 11   final review: three sheets, booklet (15%), GSM", 0.27, 0.42)])
 
 
-def s20():
-    return static_slide("20 Three Sheets", 20, "THREE SHEETS",
+def s21():
+    return static_slide("21 Three Sheets", 21, "THREE SHEETS",
         "Each sheet is 17 x 11 inches, in your Graphic Standards Manual.\n\n"
         "Sheet 1 explains the algorithm so someone else could run it. Sheet 2 shows how you explored and chose. "
         "Sheet 3 is the proposal, drawn and post-processed like a competition entry.\n\n"
@@ -1382,8 +1457,8 @@ def s20():
          ('g', "see Museum of Emotions, Last Nuclear Bomb Memorial (Buildner)", 0.26, 0.4)])
 
 
-def s21():
-    return static_slide("21 Rubric", 21, "HOW IT IS\nJUDGED",
+def s22():
+    return static_slide("22 Rubric", 22, "HOW IT IS\nJUDGED",
         "Sheet 3 and the final booklet are read like a competition jury reads an entry.\n\n"
         "Sheets 1 and 2 keep the course rubric: understanding 30%, communication 30%, technical execution 25%, exploration 15%.\n\n"
         "Credit every supplied group and plugin. Keep the system editable.",
@@ -1397,7 +1472,7 @@ def s21():
 
 
 
-GB = {f"s{n:02d}": globals()[f"s{n:02d}"] for n in range(1, 22)}
+GB = {f"s{n:02d}": globals()[f"s{n:02d}"] for n in range(1, 23)}
 GB['groups'] = groups
 bpy.app.driver_namespace['GB'] = GB
 print("generative_build ready")

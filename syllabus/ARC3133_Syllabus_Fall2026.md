@@ -275,7 +275,7 @@ Design a system, not an output. Pick a generative strategy and a brand, build a 
 
 **Present:** One 17 x 11 inch sheet: the generative algorithm as a step-by-step diagram, with the start, the rule, the environment and the readings; editable system.
 
-- Pick one generative strategy from the table on the Project 4 page (cellular automata, agents and stigmergy, reaction-diffusion, growth, physics solvers) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved in class on November 10.
+- Pick one generative strategy from the table on the Project 4 page (cellular automata, agents and stigmergy, reaction-diffusion, growth, physics solvers, noise fields) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved in class on November 10.
 - Name the start, the rule and the repetitions. State what the rule reads (neighbours, a field, a trail, forces) and what the environment is (site, boundary, attractor, brand constraints).
 - Draw the algorithm step by step, BIG-diagram style: one frame per step, in order, showing how the system produces spaces. Caption each frame in plain words; no code is required.
 - Show two or three generations or iterations from the same run so the reader sees the rule acting on its own result.
@@ -746,7 +746,7 @@ Choose a generative strategy, explain it as a step-by-step rule, and use it to e
 **Taught in:** Class 12 — *not yet released*. November 10: every strategy and brand is approved in class with a first test. Then the system sheet: the algorithm as a step-by-step diagram. This is the last new required content.
 
 1. Start, rule, repeat: every generative system is a starting state, a rule that reads its own result, and a number of repetitions. Name all three for the strategy you pick.
-2. Pick one family and learn its rule: cellular automata (a cell reads its neighbours), agents (a walker reads the field and leaves a trail), reaction-diffusion (two values spread and react), growth (material joins at the edge) or a physics solver (forces settle into a form).
+2. Pick one family and learn its rule: cellular automata (a cell reads its neighbours), agents (a walker reads the field and leaves a trail), reaction-diffusion (two values spread and react), growth (material joins at the edge), a physics solver (forces settle into a form) or a noise field (cells become walls, combined as fields with union, subtract and intersect).
 3. Give the rule an environment: a site, a brand constraint, an attractor or a boundary that changes where the rule may act.
 4. Read the results with architectural questions: is there a floor, room to move, headroom, an entrance, a front? Mark where a store of 40 to 64 m2 fits.
 5. Map the design space in a matrix of two parameters, select one result, and breed small variations of it before choosing again.

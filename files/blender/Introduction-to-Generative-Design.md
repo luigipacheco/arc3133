@@ -3,7 +3,7 @@
 Interactive lecture for ARC 3133 Viz 1, Project 4 (generative). One scene per slide, same method as `BLENDER-INTERACTIVE-SLIDES.md` and the sister decks `Introduction-to-Procedural-Design.blend` and `Introduction-to-Parametric-Design.blend`.
 
 - File: `files/blender/Introduction-to-Generative-Design.blend` (Blender 5.2.4)
-- Built by script: `_tools/generative_slidekit.py` (registers `GK`) and `_tools/generative_build.py` (registers `GB`). Run `blender_slidekit.py`, `procedural_slidekit.py`, `generative_slidekit.py`, then `generative_build.py`. `GB['groups']()` rebuilds the shared groups (then rebuild every slide, the groups are replaced), `GB['s07']()` rebuilds one slide and resets its values. Static slides 19 to 21 are text objects only (`static_slide`).
+- Built by script: `_tools/generative_slidekit.py` (registers `GK`) and `_tools/generative_build.py` (registers `GB`). Run `blender_slidekit.py`, `procedural_slidekit.py`, `generative_slidekit.py`, then `generative_build.py`. `GB['groups']()` rebuilds the shared groups (then rebuild every slide, the groups are replaced), `GB['s07']()` rebuilds one slide and resets its values. Static slides 20 to 22 are text objects only (`static_slide`); delete their `· rN` text objects before rebuilding one, or the lines are doubled.
 - Test renders: `_check/GEN_00.png` to `GEN_21.png`
 - Last updated: 3 November 2026
 
@@ -33,13 +33,14 @@ Controls: **L** = `GeometryNodes` modifier (lesson), **U** = `UI` modifier (disp
 | 12 Growth | DLA-like: a cell joins when exactly one of its 4 sides touches a grown cell, with Chance; colour = when it joined | L: Steps, Chance, Seed, Height |
 | 13 Differential Growth | rebuilt on Nov 3 from Luis's working reference (`geonodes/sim/differential_growth_z.blend`): each iteration, Curve to Points then Merge by Distance (Reach) gives one point every Reach m; Geometry Proximity finds the nearest; each point steps away from it (Map Range: Repel x 0.01 at 0 m, 0 at 2 m); Blur Attribute on the step (weight 1) makes neighbours move together; flatten to XY; Resample at Spacing adds points. Stable and fast (300 it about 1.1k points, 1000 it about 7.5k points, about 1 s). Height keeps a layer every Every iterations, Layer Height apart, so the history stacks into a coral-like object; ISO camera. UI-only Solid turns every layer into a wall one layer tall | L: Iterations, Spacing, Reach, Repel, Seed, Height, Layer Height, Every; UI: Solid |
 | 14 Physics | a net relaxes under gravity (Blur Attribute on position + a drop per iteration, pinned points held): hanging form, Flip makes the compression shell (Gaudi, Frei Otto, Kangaroo) | L: Gravity, Iterations, Pins (Edges default), Flip |
-| 15 Reading | slice a layer: floor below, clearance from walls, headroom above; pink = room for a space, area in m² | L: Layer, Clearance, Headroom, Seed, Threshold |
-| 16 Design Space | 5 x 5 matrix of automata: columns Threshold, rows Seed; pick one (pink) | L: Threshold From/To, Seed, Generations, Pick Column/Row |
-| 17 Breed | the parent in the middle, 8 children nudged by Mutation; pick again | L: Parent Seed, Parent Threshold, Mutation, Generations, Pick |
-| 18 Plan Section | the generated volume cut like a building: plan (layers above removed, snapped to a layer) and section (cells beyond Section X removed); the cut faces are painted pink | L: Plan Level, Section X, Show, Seed, Threshold |
-| 19 Exercise | static: Project 4 Generative Store, the five strategies, the dates (Nov 10 approval, Dec 11 final) | none |
-| 20 Three Sheets | static: the system 5%, the design space 5%, the proposal 20%; booklet 15% | none |
-| 21 Rubric | static: the competition-sheet rubric (nine criteria) | none |
+| 15 Noise Field | noise as a generator, from Luis's `sdfexperimetns.blend`: 4D Voronoi distance to edge x Cell Size minus Wall is a signed distance field (negative inside thin walls, the empty cells read as rooms); box SDFs for the store (8 x 6 x 3.5 m at y = 2, open to the +y face), a floor slab and the site; Combine menu: intersect = smooth max(a, b), subtract = smooth max(a, -b), union = smooth min(a, b), Blend = smoothing; always intersected with the site box so the mesh closes; Cube Grid Topology (10 x 8 x 4.5 m, Voxel) + Field to Grid + Grid to Mesh at 0. About 1 s at Voxel 0.12. UI: white smooth mass, store box as a pink ghost | L: Cell Size, Wall, Seed, Combine (Keep the store, Cut the store out, Add a floor, Field only), Blend, Voxel |
+| 16 Reading | slice a layer: floor below, clearance from walls, headroom above; pink = room for a space, area in m² | L: Layer, Clearance, Headroom, Seed, Threshold |
+| 17 Design Space | 5 x 5 matrix of automata: columns Threshold, rows Seed; pick one (pink) | L: Threshold From/To, Seed, Generations, Pick Column/Row |
+| 18 Breed | the parent in the middle, 8 children nudged by Mutation; pick again | L: Parent Seed, Parent Threshold, Mutation, Generations, Pick |
+| 19 Plan Section | the generated volume cut like a building: plan (layers above removed, snapped to a layer) and section (cells beyond Section X removed); the cut faces are painted pink | L: Plan Level, Section X, Show, Seed, Threshold |
+| 20 Exercise | static: Project 4 Generative Store, the six strategies, the dates (Nov 10 approval, Dec 11 final) | none |
+| 21 Three Sheets | static: the system 5%, the design space 5%, the proposal 20%; booklet 15% | none |
+| 22 Rubric | static: the competition-sheet rubric (nine criteria) | none |
 
 ## Shared node groups
 

@@ -27,7 +27,7 @@ Choose a generative strategy, explain it as a step-by-step rule, and use it to e
 **Taught in:** Class 12 — *not yet released*. November 10: every strategy and brand is approved in class with a first test. Then the system sheet: the algorithm as a step-by-step diagram. This is the last new required content.
 
 1. Start, rule, repeat: every generative system is a starting state, a rule that reads its own result, and a number of repetitions. Name all three for the strategy you pick.
-2. Pick one family and learn its rule: cellular automata (a cell reads its neighbours), agents (a walker reads the field and leaves a trail), reaction-diffusion (two values spread and react), growth (material joins at the edge) or a physics solver (forces settle into a form).
+2. Pick one family and learn its rule: cellular automata (a cell reads its neighbours), agents (a walker reads the field and leaves a trail), reaction-diffusion (two values spread and react), growth (material joins at the edge), a physics solver (forces settle into a form) or a noise field (cells become walls, combined as fields with union, subtract and intersect).
 3. Give the rule an environment: a site, a brand constraint, an attractor or a boundary that changes where the rule may act.
 4. Read the results with architectural questions: is there a floor, room to move, headroom, an entrance, a front? Mark where a store of 40 to 64 m2 fits.
 5. Map the design space in a matrix of two parameters, select one result, and breed small variations of it before choosing again.

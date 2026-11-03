@@ -16,7 +16,7 @@ node, gsock, new_tree, comment = SK['node'], SK['gsock'], SK['new_tree'], SK['co
 lit, join, text_obj = SK['lit'], SK['join'], SK['text_obj']
 P = SK['PAL']
 TAG = "ARC 3133  VIZ 1  ·  INTRODUCTION TO GENERATIVE DESIGN"
-TOTAL = 21
+TOTAL = 22
 ISO = (math.degrees(math.atan(math.sqrt(2))), 0.0, 135.0)
 TOP = (0.0, 0.0, 0.0)
 

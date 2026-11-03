@@ -25,6 +25,7 @@ Pick one, or propose another. Slide numbers refer to [Introduction to Generative
 | Reaction-diffusion | slide 11 | [Morphogenesis: reaction-diffusion](https://github.com/jasonwebb/morphogenesis-resources#reaction-diffusion) | Anemone |
 | Growth (DLA, differential growth) | slides 12 and 13 | [Morphogenesis: DLA](https://github.com/jasonwebb/morphogenesis-resources#diffusion-limited-aggregation-dla)<br>[Morphogenesis: differential growth](https://github.com/jasonwebb/morphogenesis-resources#differential-growth) | Anemone or Kangaroo |
 | Physics solvers | slide 14 | [Morphogenesis: Verlet physics](https://github.com/jasonwebb/morphogenesis-resources#verlet-physics)<br>[Nature of Code: Physics Libraries](https://natureofcode.com/physics-libraries/) | Kangaroo |
+| Noise fields (SDF) | slide 15 | [Nature of Code: Randomness and noise](https://natureofcode.com/random/)<br>[Inigo Quilez: distance functions](https://iquilezles.org/articles/distfunctions/) | Dendro |
 
 Complete these assignments in order and assemble their sheets into the booklet as you go. Make selected substantive revisions after critique. The combined project adds no extra grade.
 
@@ -54,7 +55,7 @@ Explain your generative system so that someone else could run it. The sheet is a
 
 ### What to do
 
-- Pick one generative strategy from the table on the Project 4 page (cellular automata, agents and stigmergy, reaction-diffusion, growth, physics solvers) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved in class on November 10.
+- Pick one generative strategy from the table on the Project 4 page (cellular automata, agents and stigmergy, reaction-diffusion, growth, physics solvers, noise fields) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved in class on November 10.
 - Name the start, the rule and the repetitions. State what the rule reads (neighbours, a field, a trail, forces) and what the environment is (site, boundary, attractor, brand constraints).
 - Draw the algorithm step by step, BIG-diagram style: one frame per step, in order, showing how the system produces spaces. Caption each frame in plain words; no code is required.
 - Show two or three generations or iterations from the same run so the reader sees the rule acting on its own result.

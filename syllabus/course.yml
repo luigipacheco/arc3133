@@ -532,7 +532,8 @@ units:
     of repetitions. Name all three for the strategy you pick.'
   - 'Pick one family and learn its rule: cellular automata (a cell reads its neighbours), agents (a walker reads
     the field and leaves a trail), reaction-diffusion (two values spread and react), growth (material joins at the
-    edge) or a physics solver (forces settle into a form).'
+    edge), a physics solver (forces settle into a form) or a noise field (cells become walls, combined as fields
+    with union, subtract and intersect).'
   - 'Give the rule an environment: a site, a brand constraint, an attractor or a boundary that changes where the rule
     may act.'
   - 'Read the results with architectural questions: is there a floor, room to move, headroom, an entrance, a front?
@@ -942,6 +943,7 @@ projects:
   - [Reaction-diffusion, '11', [['Morphogenesis: reaction-diffusion', 'https://github.com/jasonwebb/morphogenesis-resources#reaction-diffusion']], Anemone]
   - ['Growth (DLA, differential growth)', '12 and 13', [['Morphogenesis: DLA', 'https://github.com/jasonwebb/morphogenesis-resources#diffusion-limited-aggregation-dla'], ['Morphogenesis: differential growth', 'https://github.com/jasonwebb/morphogenesis-resources#differential-growth']], Anemone or Kangaroo]
   - [Physics solvers, '14', [['Morphogenesis: Verlet physics', 'https://github.com/jasonwebb/morphogenesis-resources#verlet-physics'], ['Nature of Code: Physics Libraries', 'https://natureofcode.com/physics-libraries/']], Kangaroo]
+  - ['Noise fields (SDF)', '15', [['Nature of Code: Randomness and noise', 'https://natureofcode.com/random/'], ['Inigo Quilez: distance functions', 'https://iquilezles.org/articles/distfunctions/']], Dendro]
   approach: Generative
   units:
   - U07
@@ -966,7 +968,7 @@ projects:
       the environment and the readings; editable system.'
     requirements:
     - 'Pick one generative strategy from the table on the Project 4 page (cellular automata, agents and stigmergy,
-      reaction-diffusion, growth, physics solvers) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved
+      reaction-diffusion, growth, physics solvers, noise fields) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved
       in class on November 10.'
     - 'Name the start, the rule and the repetitions. State what the rule reads (neighbours, a field, a trail, forces)
       and what the environment is (site, boundary, attractor, brand constraints).'

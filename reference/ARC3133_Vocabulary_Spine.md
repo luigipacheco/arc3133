@@ -21,9 +21,9 @@ The references are optional reading from Wikipedia, Python and software document
 - [3.2.3 · Architectural application](#application)
 - [3.4 · Attractor studies](#attractors)
 - [3.5 · Architectural facade or small project](#facade)
-- [4.1 · Volumetric field matrix](#fields)
-- [4.2 · Architectural envelope](#envelope)
-- [4.3 · Contour fabrication](#fabrication)
+- [4.1 · The system](#system)
+- [4.2 · The design space](#design-space)
+- [4.3 · The proposal](#competition-sheet)
 - [Final booklet · Communicating the work](#booklet)
 
 ## Programming essentials
@@ -35,7 +35,7 @@ The aim is to read a small program, predict what changing an input will do, modi
 - [3.2.1: Build a small grid with nested loops](#python-arrays)
 - [3.2.2: Combine a repeating pattern with a height test](#python-patterns)
 - [3.4: Inspect a value before and after clamping](#python-attractors)
-- [4.1: Repeat a random sequence](#python-fields)
+- [4.2: Repeat a random sequence](#python-design-space)
 - [Debugging checklist: find the first unexpected result](#debugging)
 
 <a id="gsm"></a>
@@ -840,69 +840,101 @@ Reuse the existing panel and give its attractor-driven variation an architectura
 
 [Back to assignments](#assignments)
 
-<a id="fields"></a>
+<a id="system"></a>
 
-## 4.1 · Volumetric field matrix
+## 4.1 · The system
 
-Build a 5 × 5 comparison to study two controls in the provided generative tools.
+Explain a generative system as a start, a rule and repetitions, so someone else could run it.
 
-### Generative rule and procedural texture / noise
+### Generative system
 
-**What it is:** A generative rule produces form from instructions. A procedural texture generates a pattern computationally; noise gives irregular but controllable variation.
+**What it is:** A start, a rule that reads its own result, and a number of repetitions. It produces results you did not draw one by one.
 
-**How we use it:** Use the supplied texture and volume tools to drive form, then study how changing two controls changes the results.
+**How we use it:** Name the start, the rule and the repetitions of your strategy, and show two or three generations of the same run.
 
-[Read more: Generative rule and procedural texture / noise — Wikipedia](<https://en.wikipedia.org/wiki/Procedural_texture>)
+[Read more: Generative system — Wikipedia](<https://en.wikipedia.org/wiki/Generative_design>)
 
-### Scalar / volumetric field
+### Rule and neighbourhood
 
-**What it is:** A scalar field gives one number at each location. A volumetric field extends through three-dimensional space.
+**What it is:** A rule says what happens next. The neighbourhood is what the rule reads: the cells around a cell, the trail ahead of an agent, the points near a point.
 
-**How we use it:** Use changing values throughout a volume to decide where material or empty space appears.
+**How we use it:** State in plain words what your rule reads and what it changes, then draw one step of it.
 
-[Read more: Scalar / volumetric field — Wikipedia](<https://en.wikipedia.org/wiki/Scalar_field>)
+[Read more: Rule and neighbourhood — Wikipedia](<https://en.wikipedia.org/wiki/Cellular_automaton>)
 
-### SDF — signed distance field
+### Generation / iteration
 
-**What it is:** A field that gives distance to the nearest surface, with opposite signs for inside and outside. The surface is at zero; ordinary noise values are not automatically distances.
+**What it is:** One pass of the rule over the whole system. The next generation starts from the result of the last one.
 
-**How we use it:** Use the instructor's SDF groups to create and adjust forms without rebuilding their internal logic.
+**How we use it:** Stack generations (time becomes height) or show them side by side so the reader sees the rule acting on its own result.
 
-[Read more: SDF — signed distance field — Wikipedia](<https://en.wikipedia.org/wiki/Signed_distance_function>)
+[Read more: Generation / iteration — University library guide](<https://natureofcode.com/cellular-automata/>)
 
-### Voxel and resolution
+### Agent
 
-**What it is:** A voxel is one cell of a 3D grid. Resolution describes how finely that grid samples the volume.
+**What it is:** A simple actor that senses its surroundings and moves by a rule. Many agents together can make patterns no single one plans.
 
-**How we use it:** Use a workable resolution for exploration; smaller cells can show finer detail but require more memory and processing.
+**How we use it:** If you use agents, say what each one senses, how it turns and what it leaves behind.
 
-[Read more: Voxel and resolution — Wikipedia](<https://en.wikipedia.org/wiki/Voxel>)
+[Read more: Agent — University library guide](<https://natureofcode.com/autonomous-agents/>)
 
-### Threshold / isosurface
+### Environment
 
-**What it is:** A threshold is a chosen value. An isosurface joins locations that have that value, creating a surface inside a field.
+**What it is:** Everything outside the rule that changes where or how it acts: a site, a boundary, an attractor, a brand constraint.
 
-**How we use it:** Extract a surface from the field with the supplied tools. Changing the threshold can change the form; an SDF's original boundary is its zero surface.
+**How we use it:** Give the rule an environment so it has a reason to make space for the store.
 
-[Read more: Threshold / isosurface — Wikipedia](<https://en.wikipedia.org/wiki/Isosurface>)
+[Read more: Environment — University library guide](<https://github.com/jasonwebb/morphogenesis-resources>)
+
+[Back to assignments](#assignments)
+
+<a id="design-space"></a>
+
+## 4.2 · The design space
+
+Run one system many times under controlled variation, read the results and select one.
+
+### Design space
+
+**What it is:** All the results a system can produce as its inputs change. A matrix maps a small part of it.
+
+**How we use it:** Choose two inputs, vary one across the columns and one down the rows, and keep everything else fixed.
+
+[Read more: Design space — Wikipedia](<https://en.wikipedia.org/wiki/Generative_design>)
 
 ### Parameter matrix / controlled comparison
 
-**What it is:** A matrix here is a comparison grid. A controlled comparison changes chosen inputs while keeping other settings consistent.
+**What it is:** A comparison grid. A controlled comparison changes chosen inputs while keeping other settings and the presentation the same.
 
-**How we use it:** Choose two parameters with five values each. Vary one across columns and one down rows to make 25 results, keeping other controls and presentation consistent.
+**How we use it:** Use the same view, scale and display in every cell, and label both axes with their values.
 
 [Read more: Parameter matrix / controlled comparison — Wikipedia](<https://en.wikipedia.org/wiki/Design_of_experiments>)
 
 ### Random seed and repeatability
 
-**What it is:** A seed initializes a repeatable sequence of random values. Reusing it with the same setup lets you revisit a result.
+**What it is:** A seed starts a repeatable sequence of random values. The same seed with the same setup gives the same result.
 
-**How we use it:** Hold the seed fixed during a parameter comparison so unrelated randomness does not change every cell. Use a Seed input where the tool provides one; a Noise Texture may instead be controlled through its coordinates or W input.
+**How we use it:** Record the seed of every cell so you can come back to the result you select.
 
-[Read more: Random seed and repeatability — Python documentation](<https://docs.python.org/3/library/random.html#random.seed>)
+[Read more: Random seed and repeatability — University library guide](<https://natureofcode.com/random/>)
 
-<a id="python-fields"></a>
+### Reading criteria
+
+**What it is:** Architectural questions used to compare results: floor area, room to move, headroom, entrance, a front, light.
+
+**How we use it:** Name your criteria and mark on the matrix which results pass for a store of 40 to 64 m2.
+
+[Read more: Reading criteria — Wikipedia](<https://en.wikipedia.org/wiki/Floor_area>)
+
+### Selection and breeding
+
+**What it is:** Keep the best result, make small variations of it, choose again. The rule proposes; you select.
+
+**How we use it:** Show the parent, its variations and your final choice, with two or three sentences on why.
+
+[Read more: Selection and breeding — University library guide](<https://natureofcode.com/genetic-algorithms/>)
+
+<a id="python-design-space"></a>
 
 ### Read, predict, change, inspect
 
@@ -925,103 +957,47 @@ True
 
 **Connection to node work:** import makes Python's random tools available. A seed initializes the sequence; successive draws still vary. GN Random Value and GH Random expose seeds. Equal seed numbers across different programs do not guarantee the same pattern.
 
-**Try it:** Change only the second seed and compare again. For the 5 × 5 study, identify two controls to vary and the other settings to hold fixed.
+**Try it:** Change only the second seed and compare again. In the matrix, hold the seed fixed when another input is the one you are comparing.
 
 [Back to assignments](#assignments)
 
-<a id="envelope"></a>
+<a id="competition-sheet"></a>
 
-## 4.2 · Architectural envelope
+## 4.3 · The proposal
 
-Refine a field study into a small shop or pavilion within a 12 × 12 × 12 meter maximum envelope.
+Present the selected store as a competition entry, with drawings that keep what the system produced.
 
-### Building envelope
+### Elevation, section, isometric, perspective
 
-**What it is:** The parts that separate an interior from its surroundings, including the roof, walls and openings.
+**What it is:** An elevation is a straight-on view of one side; a section is a vertical cut; an isometric shows three directions without convergence; a perspective shows the space as a person sees it.
 
-**How we use it:** Shape a small architectural proposal with an entrance, usable interior space, ground connection and clear openings.
+**How we use it:** Draw all four from the same model, with a person, key dimensions and the brand.
 
-[Read more: Building envelope — Wikipedia](<https://en.wikipedia.org/wiki/Building_envelope>)
+[Read more: Elevation, section, isometric, perspective — Wikipedia](<https://en.wikipedia.org/wiki/Architectural_drawing>)
 
-### SDF Boolean operators
+### Post-processing
 
-**What it is:** Tools that combine or cut forms represented by distance fields: union joins, subtraction removes and intersection keeps overlap.
+**What it is:** Work done on drawings after they leave the model: linework weights, colour, shadows, people, texture and labels.
 
-**How we use it:** Use the provided groups to refine the envelope, cut entrances or openings and make space for occupation.
+**How we use it:** Post-process, do not redraw: the generated result must stay legible.
 
-[Read more: SDF Boolean operators — Wikipedia](<https://en.wikipedia.org/wiki/Constructive_solid_geometry>)
+[Read more: Post-processing — Wikipedia](<https://en.wikipedia.org/wiki/Architectural_rendering>)
 
-### Plan, section and isometric
+### Hierarchy and story
 
-**What it is:** A plan looks down at a horizontal cut; a section shows a vertical cut; an isometric shows three directions together without perspective convergence.
+**What it is:** Hierarchy tells the reader what to look at first. The story is the one idea the whole sheet explains.
 
-**How we use it:** Show the same proposal in all three views. Mark the section cut and include dimensions and people to explain scale and usable space.
+**How we use it:** Choose one lead drawing, a title and two or three sentences that connect the drawings to the rule.
 
-[Read more: Plan, section and isometric — Wikipedia](<https://en.wikipedia.org/wiki/Architectural_drawing>)
+[Read more: Hierarchy and story — Wikipedia](<https://en.wikipedia.org/wiki/Visual_hierarchy>)
 
-### Architectural visualization
+### Annotation
 
-**What it is:** An image that communicates the form, space, material and atmosphere of a proposed design.
+**What it is:** Short text and marks that point to something specific in a drawing.
 
-**How we use it:** Make a compelling image while keeping the entrance, occupied space and overall dimensions understandable and consistent with the drawings.
+**How we use it:** Use annotations to show where the rule shaped the space: the entrance, the front, the headroom.
 
-[Read more: Architectural visualization — Wikipedia](<https://en.wikipedia.org/wiki/Architectural_rendering>)
-
-[Back to assignments](#assignments)
-
-<a id="fabrication"></a>
-
-## 4.3 · Contour fabrication
-
-Turn the same envelope into an aligned, assembled physical model.
-
-### Contour / section curve
-
-**What it is:** A curve made where a cutting plane meets a form's surface.
-
-**How we use it:** Use the provided contour tools to extract ordered slices of your architectural envelope.
-
-[Read more: Contour / section curve — Wikipedia](<https://en.wikipedia.org/wiki/Cross_section_(geometry)>)
-
-### Slicing direction and spacing
-
-**What it is:** Direction determines which way the cuts pass through the form; spacing is the distance between successive cuts.
-
-**How we use it:** Choose a direction that shows the design clearly. Match spacing to the material thickness and any planned spacers at model scale.
-
-[Read more: Slicing direction and spacing — Wikipedia](<https://en.wikipedia.org/wiki/Cross_section_(geometry)>)
-
-### Model scale
-
-**What it is:** The relationship between a model's size and the full-size design.
-
-**How we use it:** At 1:50, a 12-meter building dimension becomes 24 centimeters. Scale the design first and prepare the cutting file at the physical size to be fabricated.
-
-[Read more: Model scale — Wikipedia](<https://en.wikipedia.org/wiki/Scale_model>)
-
-### Registration mark / alignment feature
-
-**What it is:** A shared reference that helps separate pieces line up in the correct position.
-
-**How we use it:** Add a consistent mark, hole or notch to the slices. Number parts and plan how rods, tabs, glue, spacers or a jig will hold them.
-
-[Read more: Registration mark / alignment feature — Wikipedia](<https://en.wikipedia.org/wiki/Fiducial_marker>)
-
-### Kerf and tolerance
-
-**What it is:** Kerf is the width of material removed by a cut. Tolerance is the acceptable variation in a dimension; clearance is the gap left so parts can fit.
-
-**How we use it:** Test holes, slots and joints in the actual material before cutting the complete set, then adjust their fit.
-
-[Read more: Kerf and tolerance — Wikipedia](<https://en.wikipedia.org/wiki/Laser_cutting>)
-
-### Cutting layout
-
-**What it is:** The arrangement of parts on the material sheet for fabrication.
-
-**How we use it:** Place the slices at their physical cutting size, keep them within the available stock and distinguish cutting lines from engraving or labels.
-
-[Read more: Cutting layout — Wikipedia](<https://en.wikipedia.org/wiki/Laser_cutting>)
+[Read more: Annotation — Wikipedia](<https://en.wikipedia.org/wiki/Caption_(text)>)
 
 [Back to assignments](#assignments)
 

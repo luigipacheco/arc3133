@@ -94,39 +94,5 @@
     "scenes": [
       "Noise field"
     ]
-  },
-  {
-    "id": "S10",
-    "unit": "U09",
-    "title": "Discretizing Geometry — contours",
-    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend",
-    "scenes": [
-      "One contour",
-      "Contour stack"
-    ]
-  },
-  {
-    "id": "S11",
-    "unit": "U09",
-    "title": "Discretizing Geometry — section parts",
-    "file": "files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend",
-    "scenes": [
-      "Section parts",
-      "Laid out parts"
-    ]
-  },
-  {
-    "id": "S12",
-    "unit": "U09",
-    "title": "Final — fabrication and assembly",
-    "file": "files/blender/09-final-project/Final-Project-Fabrication.blend",
-    "scenes": [
-      "Print orientation",
-      "Fit coupon",
-      "Modular print",
-      "Registered sections",
-      "Cutting layout",
-      "Spacer rings"
-    ]
   }
 ]

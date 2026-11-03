@@ -88,7 +88,7 @@ def verify_sequence(course, site, documents, baseurl):
         if review['status'] == 'current' or review.get('publish'):
             assert all(link in page.links for link in slide_links), f'Class slides missing: {number}'
             if review['status'] == 'needs_revision':
-                assert 'Earlier slide deck' in ''.join(page.text), f'Missing revision notice: {number}'
+                assert 'Slides as presented in class' in ''.join(page.text), f'Missing revision notice: {number}'
         else:
             assert not any(link in page.links for link in slide_links), f'Unreviewed slides linked: {number}'
             assert 'Revised slides are not yet posted' in ''.join(page.text), f'Missing slide-status notice: {number}'

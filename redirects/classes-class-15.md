@@ -10,4 +10,4 @@ sitemap: false
 
 ## Course material has moved
 
-This earlier brief was superseded by the revised course sequence. [Open the current classes]({{ site.baseurl }}/modules/tutorials/how-tutorials-work/).
+This earlier brief was superseded by the revised course sequence. [Open the current classes]({{ site.baseurl }}/modules/classes/overview/).

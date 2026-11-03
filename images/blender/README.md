@@ -15,8 +15,5 @@ Names follow `sXX-example-geonodes.png` and `sXX-example-viewport.png`. Use the 
 | S07 | Points to volume | [s07-points-to-volume-geonodes.png](s07-points-to-volume-geonodes.png) | [s07-points-to-volume-viewport.png](s07-points-to-volume-viewport.png) |
 | S08 | SDF Boolean | [s08-sdf-boolean-geonodes.png](s08-sdf-boolean-geonodes.png) | [s08-sdf-boolean-viewport.png](s08-sdf-boolean-viewport.png) |
 | S09 | Noise field | [s09-noise-field-geonodes.png](s09-noise-field-geonodes.png) | [s09-noise-field-viewport.png](s09-noise-field-viewport.png) |
-| S10 | Contour stack | [s10-contour-stack-geonodes.png](s10-contour-stack-geonodes.png) | [s10-contour-stack-viewport.png](s10-contour-stack-viewport.png) |
-| S11 | Laid out parts | [s11-section-parts-layout-geonodes.png](s11-section-parts-layout-geonodes.png) | [s11-section-parts-layout-viewport.png](s11-section-parts-layout-viewport.png) |
-| S12 | Registered sections | [s12-registered-sections-geonodes.png](s12-registered-sections-geonodes.png) | [s12-registered-sections-viewport.png](s12-registered-sections-viewport.png) |
 
 The website shows screenshots for released lessons. All 24 originals remain available here for slide preparation.

@@ -205,18 +205,27 @@ sections:
       - ["Parametric relationship", "A connection that lets one change update other parts of a design automatically.", "Move the point or curve attractor and let the same rule update panel openings or depth across the facade.", "https://en.wikipedia.org/wiki/Parametric_design"]
       - ["Elevation and before / after comparison", "An elevation is a straight-on drawing of one side. A before/after pair shows what a design operation changes.", "Show the facade clearly and compare its regular arrangement with the attractor-driven result, using matching views.", "https://en.wikipedia.org/wiki/Architectural_drawing"]
 
-  - id: fields
+  - id: system
     assignment: P4a
-    title: "4.1 · Volumetric field matrix"
-    focus: Build a 5 × 5 comparison to study two controls in the provided generative tools.
+    title: "4.1 · The system"
+    focus: Explain a generative system as a start, a rule and repetitions, so someone else could run it.
     terms:
-      - ["Generative rule and procedural texture / noise", "A generative rule produces form from instructions. A procedural texture generates a pattern computationally; noise gives irregular but controllable variation.", "Use the supplied texture and volume tools to drive form, then study how changing two controls changes the results.", "https://en.wikipedia.org/wiki/Procedural_texture"]
-      - ["Scalar / volumetric field", "A scalar field gives one number at each location. A volumetric field extends through three-dimensional space.", "Use changing values throughout a volume to decide where material or empty space appears.", "https://en.wikipedia.org/wiki/Scalar_field"]
-      - ["SDF — signed distance field", "A field that gives distance to the nearest surface, with opposite signs for inside and outside. The surface is at zero; ordinary noise values are not automatically distances.", "Use the instructor's SDF groups to create and adjust forms without rebuilding their internal logic.", "https://en.wikipedia.org/wiki/Signed_distance_function"]
-      - ["Voxel and resolution", "A voxel is one cell of a 3D grid. Resolution describes how finely that grid samples the volume.", "Use a workable resolution for exploration; smaller cells can show finer detail but require more memory and processing.", "https://en.wikipedia.org/wiki/Voxel"]
-      - ["Threshold / isosurface", "A threshold is a chosen value. An isosurface joins locations that have that value, creating a surface inside a field.", "Extract a surface from the field with the supplied tools. Changing the threshold can change the form; an SDF's original boundary is its zero surface.", "https://en.wikipedia.org/wiki/Isosurface"]
-      - ["Parameter matrix / controlled comparison", "A matrix here is a comparison grid. A controlled comparison changes chosen inputs while keeping other settings consistent.", "Choose two parameters with five values each. Vary one across columns and one down rows to make 25 results, keeping other controls and presentation consistent.", "https://en.wikipedia.org/wiki/Design_of_experiments"]
-      - ["Random seed and repeatability", "A seed initializes a repeatable sequence of random values. Reusing it with the same setup lets you revisit a result.", "Hold the seed fixed during a parameter comparison so unrelated randomness does not change every cell. Use a Seed input where the tool provides one; a Noise Texture may instead be controlled through its coordinates or W input.", "https://docs.python.org/3/library/random.html#random.seed"]
+      - ["Generative system", "A start, a rule that reads its own result, and a number of repetitions. It produces results you did not draw one by one.", "Name the start, the rule and the repetitions of your strategy, and show two or three generations of the same run.", "https://en.wikipedia.org/wiki/Generative_design"]
+      - ["Rule and neighbourhood", "A rule says what happens next. The neighbourhood is what the rule reads: the cells around a cell, the trail ahead of an agent, the points near a point.", "State in plain words what your rule reads and what it changes, then draw one step of it.", "https://en.wikipedia.org/wiki/Cellular_automaton"]
+      - ["Generation / iteration", "One pass of the rule over the whole system. The next generation starts from the result of the last one.", "Stack generations (time becomes height) or show them side by side so the reader sees the rule acting on its own result.", "https://natureofcode.com/cellular-automata/"]
+      - ["Agent", "A simple actor that senses its surroundings and moves by a rule. Many agents together can make patterns no single one plans.", "If you use agents, say what each one senses, how it turns and what it leaves behind.", "https://natureofcode.com/autonomous-agents/"]
+      - ["Environment", "Everything outside the rule that changes where or how it acts: a site, a boundary, an attractor, a brand constraint.", "Give the rule an environment so it has a reason to make space for the store.", "https://github.com/jasonwebb/morphogenesis-resources"]
+
+  - id: design-space
+    assignment: P4b
+    title: "4.2 · The design space"
+    focus: Run one system many times under controlled variation, read the results and select one.
+    terms:
+      - ["Design space", "All the results a system can produce as its inputs change. A matrix maps a small part of it.", "Choose two inputs, vary one across the columns and one down the rows, and keep everything else fixed.", "https://en.wikipedia.org/wiki/Generative_design"]
+      - ["Parameter matrix / controlled comparison", "A comparison grid. A controlled comparison changes chosen inputs while keeping other settings and the presentation the same.", "Use the same view, scale and display in every cell, and label both axes with their values.", "https://en.wikipedia.org/wiki/Design_of_experiments"]
+      - ["Random seed and repeatability", "A seed starts a repeatable sequence of random values. The same seed with the same setup gives the same result.", "Record the seed of every cell so you can come back to the result you select.", "https://natureofcode.com/random/"]
+      - ["Reading criteria", "Architectural questions used to compare results: floor area, room to move, headroom, entrance, a front, light.", "Name your criteria and mark on the matrix which results pass for a store of 40 to 64 m2.", "https://en.wikipedia.org/wiki/Floor_area"]
+      - ["Selection and breeding", "Keep the best result, make small variations of it, choose again. The rule proposes; you select.", "Show the parent, its variations and your final choice, with two or three sentences on why.", "https://natureofcode.com/genetic-algorithms/"]
     programming:
       - title: Repeat a random sequence
         code: |
@@ -229,29 +238,17 @@ sections:
         output: |
           True
         nodes: "import makes Python's random tools available. A seed initializes the sequence; successive draws still vary. GN Random Value and GH Random expose seeds. Equal seed numbers across different programs do not guarantee the same pattern."
-        try: "Change only the second seed and compare again. For the 5 × 5 study, identify two controls to vary and the other settings to hold fixed."
+        try: "Change only the second seed and compare again. In the matrix, hold the seed fixed when another input is the one you are comparing."
 
-  - id: envelope
-    assignment: P4b
-    title: "4.2 · Architectural envelope"
-    focus: Refine a field study into a small shop or pavilion within a 12 × 12 × 12 meter maximum envelope.
-    terms:
-      - ["Building envelope", "The parts that separate an interior from its surroundings, including the roof, walls and openings.", "Shape a small architectural proposal with an entrance, usable interior space, ground connection and clear openings.", "https://en.wikipedia.org/wiki/Building_envelope"]
-      - ["SDF Boolean operators", "Tools that combine or cut forms represented by distance fields: union joins, subtraction removes and intersection keeps overlap.", "Use the provided groups to refine the envelope, cut entrances or openings and make space for occupation.", "https://en.wikipedia.org/wiki/Constructive_solid_geometry"]
-      - ["Plan, section and isometric", "A plan looks down at a horizontal cut; a section shows a vertical cut; an isometric shows three directions together without perspective convergence.", "Show the same proposal in all three views. Mark the section cut and include dimensions and people to explain scale and usable space.", "https://en.wikipedia.org/wiki/Architectural_drawing"]
-      - ["Architectural visualization", "An image that communicates the form, space, material and atmosphere of a proposed design.", "Make a compelling image while keeping the entrance, occupied space and overall dimensions understandable and consistent with the drawings.", "https://en.wikipedia.org/wiki/Architectural_rendering"]
-
-  - id: fabrication
+  - id: competition-sheet
     assignment: P4c
-    title: "4.3 · Contour fabrication"
-    focus: Turn the same envelope into an aligned, assembled physical model.
+    title: "4.3 · The proposal"
+    focus: Present the selected store as a competition entry, with drawings that keep what the system produced.
     terms:
-      - ["Contour / section curve", "A curve made where a cutting plane meets a form's surface.", "Use the provided contour tools to extract ordered slices of your architectural envelope.", "https://en.wikipedia.org/wiki/Cross_section_(geometry)"]
-      - ["Slicing direction and spacing", "Direction determines which way the cuts pass through the form; spacing is the distance between successive cuts.", "Choose a direction that shows the design clearly. Match spacing to the material thickness and any planned spacers at model scale.", "https://en.wikipedia.org/wiki/Cross_section_(geometry)"]
-      - ["Model scale", "The relationship between a model's size and the full-size design.", "At 1:50, a 12-meter building dimension becomes 24 centimeters. Scale the design first and prepare the cutting file at the physical size to be fabricated.", "https://en.wikipedia.org/wiki/Scale_model"]
-      - ["Registration mark / alignment feature", "A shared reference that helps separate pieces line up in the correct position.", "Add a consistent mark, hole or notch to the slices. Number parts and plan how rods, tabs, glue, spacers or a jig will hold them.", "https://en.wikipedia.org/wiki/Fiducial_marker"]
-      - ["Kerf and tolerance", "Kerf is the width of material removed by a cut. Tolerance is the acceptable variation in a dimension; clearance is the gap left so parts can fit.", "Test holes, slots and joints in the actual material before cutting the complete set, then adjust their fit.", "https://en.wikipedia.org/wiki/Laser_cutting"]
-      - ["Cutting layout", "The arrangement of parts on the material sheet for fabrication.", "Place the slices at their physical cutting size, keep them within the available stock and distinguish cutting lines from engraving or labels.", "https://en.wikipedia.org/wiki/Laser_cutting"]
+      - ["Elevation, section, isometric, perspective", "An elevation is a straight-on view of one side; a section is a vertical cut; an isometric shows three directions without convergence; a perspective shows the space as a person sees it.", "Draw all four from the same model, with a person, key dimensions and the brand.", "https://en.wikipedia.org/wiki/Architectural_drawing"]
+      - ["Post-processing", "Work done on drawings after they leave the model: linework weights, colour, shadows, people, texture and labels.", "Post-process, do not redraw: the generated result must stay legible.", "https://en.wikipedia.org/wiki/Architectural_rendering"]
+      - ["Hierarchy and story", "Hierarchy tells the reader what to look at first. The story is the one idea the whole sheet explains.", "Choose one lead drawing, a title and two or three sentences that connect the drawings to the rule.", "https://en.wikipedia.org/wiki/Visual_hierarchy"]
+      - ["Annotation", "Short text and marks that point to something specific in a drawing.", "Use annotations to show where the rule shaped the space: the entrance, the front, the headroom.", "https://en.wikipedia.org/wiki/Caption_(text)"]
 
   - id: booklet
     assignment: BOOK

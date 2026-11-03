@@ -12,9 +12,9 @@ Supported practice, no new topic. Bring all three array sheets for feedback on r
 
 October 20: teach the three attractor methods in 3.4 and their architectural application using the existing panel in 3.5. Both sheets are due together October 27.
 
-October 27: submit the attractor assignment. Supplied field tools and a first matrix; the matrix work counts toward the revised 4.2. Point-cloud examples are supplementary.
+October 27: submit the attractor assignment. Supplied field tools and a first matrix; the matrix work can feed 4.2. Point-cloud examples are supplementary.
 
-November 3: generative design with the interactive deck: start, rule, repeat; noise and thresholds; cellular automata; agents and stigmergy; reaction-diffusion; growth; physics solvers; reading, design space and selection. Project 4 is reissued: pick a strategy and a brand by November 10.
+November 3: generative design with the interactive deck: start, rule, repeat; noise and thresholds; cellular automata; agents and stigmergy; reaction-diffusion; growth; physics solvers; reading, design space and selection. Project 4: pick a strategy and a brand by November 10.
 
 November 10: every strategy and brand is approved in class with a first test. Then the system sheet: the algorithm as a step-by-step diagram. This is the last new required content.
 
@@ -24,7 +24,7 @@ Prepared and evaluated in **Blender 5.2.1 LTS**. Older Blender versions may not 
 
 Select the lesson object and press Home over the node editor to see the whole graph. Read the Frames in order. Change the inputs on the nodes or, where there are controls, in the GeometryNodes modifier.
 
-Build your own file and use examples to check individual operations. Project 4 field and contouring groups may be reused with credit; students still build their own matrix and develop their own envelope. The point-cloud file is a supplementary example, not a required assignment.
+Build your own file and use the examples to check individual operations. Supplied groups may be reused with credit. The point-cloud file is a supplementary example.
 
 | Session | Target weeks | Open file | Scenes in this file | Lesson |
 | --- | --- | --- | --- | --- |
@@ -36,9 +36,6 @@ Build your own file and use examples to check individual operations. Project 4 f
 | S07 | 10 | [Volumetric Data and Fields — point clouds](06-point-clouds-volumes/Point-Clouds-and-Volumes.blend) | Import points, Analyze points, Points to volume | U07 Generative Systems |
 | S08 | 10 | [Volumetric Data and Fields — signed distance and Booleans](07-advanced-volumes/Advanced-Volumes-Session-1.blend) | Mesh to SDF, Signed distance, SDF Boolean | U07 Generative Systems |
 | S09 | 10 | [Volumetric Data and Fields — noise and surface extraction](07-advanced-volumes/Advanced-Volumes-Session-2.blend) | Noise field | U07 Generative Systems |
-| S10 | Optional | [Discretizing Geometry — contours](08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) | One contour, Contour stack | U09 Discretizing Geometry |
-| S11 | Optional | [Discretizing Geometry — section parts](08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) | Section parts, Laid out parts | U09 Discretizing Geometry |
-| S12 | Optional | [Final — fabrication and assembly](09-final-project/Final-Project-Fabrication.blend) | Print orientation, Fit coupon, Modular print, Registered sections, Cutting layout, Spacer rings | U09 Discretizing Geometry |
 
 **S01 — Constructive Solid Geometry.** The instructor's graph uses Intersection, rotated cylinders, Union and Difference. Read the Frames in order. Change Radius, Size, Translation, Rotation or Scale on the nodes themselves; these controls are not in the modifier.
 
@@ -49,7 +46,5 @@ Build your own file and use examples to check individual operations. Project 4 f
 **S05 — Attractor.** Eight prepared checkpoints teach one lesson. First read distance and scale; then feed the same values into a reusable panel's Opening input. The three opening studies keep outer dimensions and thickness fixed. Built-in node names are unchanged; Frames explain the steps. Students replace the supplied demonstration panel with their own module. The full node-by-node guide is on the Attractor tutorial page and inside the file as START HERE - Attractors.
 
 **S07 — Volumetric Data and Fields — point clouds.** Keep the data folder together: the file reads teaching-courtyard.ply from the same folder. It is a made-up point cloud for teaching, not a site survey. Supporting files: [Teaching point cloud](06-point-clouds-volumes/teaching-courtyard.ply), [Dataset source and units](06-point-clouds-volumes/teaching-courtyard.json).
-
-**S12 — Final — fabrication and assembly.** Optional reference since November 2, 2026. The exported files are snapshots of the default settings, in millimetres. Export them again after any edit, and test the physical fit before production. The only required physical output of the course is the CSG print (P2b). Supporting files: [Fabrication notes and dimensions](09-final-project/FABRICATION-NOTES.md), [Small print STL](09-final-project/small-print-mm.stl), [Fit coupon STL](09-final-project/fit-coupon-mm.stl), [Modular parts STL](09-final-project/modular-parts-mm.stl), [Section parts and spacers SVG](09-final-project/section-parts-and-spacers-mm.svg).
 
 The Graphic Standards Manual and the final booklet use graphic and layout files rather than Blender scenes. Assignment requirements and the flexible teaching calendar are in the [current syllabus](../../syllabus/ARC3133_Syllabus_Fall2026_STUDENT.md).

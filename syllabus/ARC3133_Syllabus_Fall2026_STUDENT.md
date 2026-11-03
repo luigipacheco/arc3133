@@ -19,7 +19,7 @@
 
 **Prerequisites:** ARC 1301, ARC 1302, ARC 2303 and ARC 2304, each with a minimum grade of C
 
-> Project 4 (November 2 revision): three sheets presented at the final review on December 11, no laser-cut model. November 3: generative design class and the new brief. November 10: your generative strategy and your brand must be approved in class. Work already done on the field matrix counts toward the 4.2 sheet.
+> November 10: your generative strategy and your brand are approved in class. December 11: final review of the booklet, the revised GSM and the three Project 4 sheets.
 
 ## Course description
 
@@ -46,9 +46,9 @@ Project 4 designs a system, not an output: a generative strategy that produces s
 
 Attractors are taught October 20. Submit the 3.4 studies and 3.5 architectural application together on October 27. Each subsequent class introduces the next assignment, due one week later.
 
-October 27: submit 3.4-3.5. November 3: generative design, and Project 4 is reissued as three sheets. November 10: your generative strategy and your brand are approved in class. November 17, 24 and December 1 are working sessions: the system sheet, the design-space sheet and the competition sheet are reviewed in progress, in that order.
+October 27: submit 3.4-3.5. November 3: generative design and the Project 4 brief (three sheets). November 10: your generative strategy and your brand are approved in class. November 17, 24 and December 1 are working sessions: the system sheet, the design-space sheet and the competition sheet are reviewed in progress, in that order.
 
-There is no class in December. The three Project 4 sheets, the booklet and the revised GSM are presented at the final review on December 11. No graded submission is due December 1.
+Classes end on December 1. The three Project 4 sheets, the booklet and the revised GSM are presented at the final review on December 11. No graded submission is due December 1.
 
 The recorded midterm deadline remains October 18 at 11:59 PM Eastern Time on Teams for 1, 2.1, 2.2, 3.1 and 3.2. Review that work using the evidence already submitted; this schedule adds no retrospective deliverables or midterm assessment.
 
@@ -73,10 +73,6 @@ Plan for at least six hours of work outside class each week, including tests and
 | 11 | Introduction to generative design | Class 11 | — |
 | 12 | Strategy and brand approval, the system sheet | Class 12 | — |
 | 13–15 | Working sessions - the three sheets and the booklet | Class 13 · Class 14 · Class 15 | — |
-
-## Possible intermediate class
-
-**Contour fabrication.** Contour sections, numbered parts and a laser-cut model. Removed from the required Project 4 on November 2, 2026; the three lessons stay posted for anyone who wants to build a physical model of a selected result.
 
 ## Four projects built through short assignments
 
@@ -106,13 +102,13 @@ Plan for at least six hours of work outside class each week, including tests and
 | 13 | Nov 17 | Working sessions - the three sheets and the booklet | — |
 | 14 | Nov 24 | Working sessions - the three sheets and the booklet | — |
 | 15 | Dec 1 | Working sessions - the three sheets and the booklet | No graded submission |
-| Final | December 11, 2026 (no class in December) | Final review | 4.1 — The system - algorithm and diagram; 4.2 — The design space - matrix and selection; 4.3 — The proposal - competition sheet; BOOK — Final booklet and review; revised GSM |
+| Final | December 11, 2026 | Final review | 4.1 — The system - algorithm and diagram; 4.2 — The design space - matrix and selection; 4.3 — The proposal - competition sheet; BOOK — Final booklet and review; revised GSM |
 
 ## Assignments and grading
 
 Each graded assignment is assessed once. Parts 3.2.1-3.2.3 form one 10% assignment. The 3.4 attractor study is formative and is included with the 3.5 architectural application, which retains the existing 10% allocation.
 
-The first five assignment weights and the 40% accumulated midterm total remain unchanged. Project 4 allocation (November 2 revision): 4.1 the system 5%, 4.2 the design space 5%, 4.3 the proposal 20%. Project 4 is 30%; the booklet is 15% and participation 5%. Recorded midterm grades are unchanged.
+The first five assignment weights and the 40% accumulated midterm total remain unchanged. Project 4: 4.1 the system 5%, 4.2 the design space 5%, 4.3 the proposal 20%. Project 4 is 30%; the booklet is 15% and participation 5%. Recorded midterm grades are unchanged.
 
 Digital assignments through 4.2: understanding 30%, visual communication 30%, technical execution 25%, exploration 15%. Explain your choices, demonstrate working controls, communicate the architecture clearly and make purposeful comparisons. Formal notation is not an assessment criterion. In Project 4, explain and credit any supplied group or plugin; its internal algorithm is not a student construction requirement.
 
@@ -127,10 +123,10 @@ Competition-sheet rubric, used for 4.3 and for the final booklet: linework, qual
 | 3.2 — Arrays - repetition, patterns and architecture | Week 6 — Sep 29 | Sun Oct 18, 11:59 PM Eastern Time | 10% |
 | 3.4 — Attractors - three field studies | Week 9 — Oct 20 | Week 10 — Oct 27, 11:59 PM Eastern Time | 0% |
 | 3.5 — Attractor-based architectural application | Week 9 — Oct 20 | Week 10 — Oct 27, 11:59 PM Eastern Time | 10% |
-| 4.1 — The system - algorithm and diagram | Week 11 — Nov 3 | Final review — December 11, 2026 (no class in December) | 5% |
-| 4.2 — The design space - matrix and selection | Week 12 — Nov 10 | Final review — December 11, 2026 (no class in December) | 5% |
-| 4.3 — The proposal - competition sheet | Week 12 — Nov 10 | Final review — December 11, 2026 (no class in December) | 20% |
-| BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 11, 2026 (no class in December) | 15% |
+| 4.1 — The system - algorithm and diagram | Week 11 — Nov 3 | Final review — December 11, 2026 | 5% |
+| 4.2 — The design space - matrix and selection | Week 12 — Nov 10 | Final review — December 11, 2026 | 5% |
+| 4.3 — The proposal - competition sheet | Week 12 — Nov 10 | Final review — December 11, 2026 | 20% |
+| BOOK — Final booklet and review | Week 1 — Aug 25 | Final review — December 11, 2026 | 15% |
 | PART — Attendance and participation | Week 1 — Aug 25 | Throughout the semester | 5% |
 | Total |  |  | 100% |
 
@@ -171,7 +167,7 @@ Build a standardized graphic system through color theory, typography, compositio
 **Ungraded checkpoints:**
 
 - Week 2 — Sep 1: Bring a sample sheet for an ungraded identity check.
-- Final review — December 11, 2026 (no class in December): Submit the revised manual as a separate PDF alongside the booklet.
+- Final review — December 11, 2026: Submit the revised manual as a separate PDF alongside the booklet.
 
 ## P2 — CSG
 
@@ -275,11 +271,11 @@ Design a system, not an output. Pick a generative strategy and a brand, build a 
 
 ### 4.1 — The system - algorithm and diagram
 
-**Introduced:** Week 11 — Nov 3 · **Due:** Final review — December 11, 2026 (no class in December) · **Weight:** 5%
+**Introduced:** Week 11 — Nov 3 · **Due:** Final review — December 11, 2026 · **Weight:** 5%
 
 **Present:** One 17 x 11 inch sheet: the generative algorithm as a step-by-step diagram, with the start, the rule, the environment and the readings; editable system.
 
-- Pick one generative strategy from the overview (cellular automata, agents and stigmergy, reaction-diffusion, growth, physics solvers) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved in class on November 10.
+- Pick one generative strategy from the table on the Project 4 page (cellular automata, agents and stigmergy, reaction-diffusion, growth, physics solvers) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved in class on November 10.
 - Name the start, the rule and the repetitions. State what the rule reads (neighbours, a field, a trail, forces) and what the environment is (site, boundary, attractor, brand constraints).
 - Draw the algorithm step by step, BIG-diagram style: one frame per step, in order, showing how the system produces spaces. Caption each frame in plain words; no code is required.
 - Show two or three generations or iterations from the same run so the reader sees the rule acting on its own result.
@@ -294,7 +290,7 @@ Design a system, not an output. Pick a generative strategy and a brand, build a 
 
 ### 4.2 — The design space - matrix and selection
 
-**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 11, 2026 (no class in December) · **Weight:** 5%
+**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 11, 2026 · **Weight:** 5%
 
 **Present:** One 17 x 11 inch sheet: a two-parameter matrix of results, the readings used to compare them, the selected result and its variations; editable matrix.
 
@@ -311,7 +307,7 @@ Design a system, not an output. Pick a generative strategy and a brand, build a 
 
 ### 4.3 — The proposal - competition sheet
 
-**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 11, 2026 (no class in December) · **Weight:** 20%
+**Introduced:** Week 12 — Nov 10 · **Due:** Final review — December 11, 2026 · **Weight:** 20%
 
 **Present:** One 17 x 11 inch competition-style sheet: post-processed elevation, section, isometric and perspective of the selected store, with the brand, a person and a scale; editable model.
 
@@ -330,7 +326,7 @@ Design a system, not an output. Pick a generative strategy and a brand, build a 
 
 ### BOOK — Final booklet and review
 
-**Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 11, 2026 (no class in December) · **Weight:** 15%
+**Introduced:** Week 1 — Aug 25 · **Due:** Final review — December 11, 2026 · **Weight:** 15%
 
 **Present:** One 17 x 11 inch landscape booklet PDF, a separate revised GSM PDF, editable booklet layout and organized project sources.
 
@@ -338,7 +334,7 @@ Design a system, not an output. Pick a generative strategy and a brand, build a 
 - Reuse the assignment sheets: 1 GSM; 2.1 process and 2.2 print documentation; 3.1 module; 3.2.1-3.2.3; 3.4 studies and 3.5 application; 4.1 the system, 4.2 the design space and 4.3 the proposal. Include each shared sheet once. Completed midterm evidence remains valid.
 - Include an overall image and useful detail of the CSG print, with short process/testing notes. Keep labels, typography and references consistent. The booklet is read with the competition-sheet rubric (linework, quality of drawings, balance of color, layout, hierarchy, annotation, clarity of story, clarity of diagrams, overall presentation).
 - Submit `Lastname_Firstname_GSM.pdf` separately with the revised four-page manual, plus the editable booklet layout and linked assets. Organize native project models in their assignment folders inside `Lastname_Firstname_BOOK/`.
-- Open the PDF and source from the final package; check page order, missing links, readable images and drawing scales. Present the booklet, the revised GSM and the three Project 4 sheets at the final review on December 11; there is no class in December.
+- Open the PDF and source from the final package; check page order, missing links, readable images and drawing scales. Present the booklet, the revised GSM and the three Project 4 sheets at the final review on December 11.
 
 **Ungraded checkpoints:**
 
@@ -383,7 +379,7 @@ Complete the FabLab Safety Orientation and follow the lab's operating requiremen
 
 2.2: print the CSG object within 60 mm on each axis and the existing 200 g filament allowance, including failed attempts. Use orientation, splitting or geometry adjustments to avoid or reduce supports. Inspect the layer preview; bridging is acceptable when it works. The recorded midterm upload includes photographs of the print.
 
-The CSG print is the one physical outcome of the course. The laser-cut contour model was removed from Project 4 on November 2, 2026; the contour lessons remain posted as an optional reference. Document tests, failures and revisions of the print; include finished-print photographs in the project documentation.
+The CSG print is the one physical outcome of the course. Document tests, failures and revisions of the print; include finished-print photographs in the project documentation.
 
 ## Course grading scale
 
@@ -445,6 +441,17 @@ Shown in Class 01 and the reference for the Graphic Standards Manual. Each is a 
 | [@mantissa.xyz](https://www.instagram.com/mantissa.xyz/) | A second point-cloud/section reference for visual comparison. |
 | [@saul_kim_](https://www.instagram.com/saul_kim_/) | Composition, restraint and spatial legibility. |
 | [@facadepot](https://www.instagram.com/facadepot/) | Components, façades and controlled variation. |
+
+### Generative design (Project 4)
+
+| Reference | Use |
+| --- | --- |
+| [Morphogenesis resources (Jason Webb)](https://github.com/jasonwebb/morphogenesis-resources) | Project 4: one page per strategy (differential growth, DLA, reaction-diffusion, cellular automata, agents, physics), with pictures, papers and code. |
+| [The Nature of Code (Daniel Shiffman)](https://natureofcode.com/) | Project 4: random and noise, forces, agents and steering, cellular automata, fractals and evolution, explained with running examples. |
+| [Museum of Emotions competition results (Buildner)](https://www.archdaily.com/1032328) | Project 4.3: the level of drawing quality, post-processing and storytelling we are looking for on the competition sheet. |
+| [The Last Nuclear Bomb Memorial competition results (Buildner)](https://www.archdaily.com/1041457) | Project 4.3: a second set of competition sheets to study for hierarchy, colour and annotation. |
+| [Parametric Camp (Jose Luis Garcia del Castillo y Lopez)](https://www.youtube.com/@ParametricCamp) | Computational design videos; start with the Introduction to Parametric Modeling with Grasshopper playlist. |
+| [Grasshopper plugins for Project 4](https://www.food4rhino.com/) | Rabbit (cellular automata, L-systems), Culebra (agents), Anemone (loops), Kangaroo (physics). Credit any plugin you use. |
 
 ### Technical documentation
 

@@ -24,7 +24,7 @@ More videos will be added as they are recorded.
 
 ## Lesson notes
 
-Class and tutorial pages are posted through November 3 (Week 11), including generative design. Projects 1 to 4 are posted with current requirements, weights and deadlines. Later class pages are posted as their topics begin.
+Class pages are posted as their topics begin. Projects 1 to 4 are posted with current requirements, weights and deadlines.
 
 Open the posted lessons below; later lessons will be added as the course progresses.
 
@@ -37,12 +37,6 @@ Open the posted lessons below; later lessons will be added as the course progres
 | [U05 — Attractor]({{ site.baseurl }}/modules/tutorials/u05-attractors/) | Week 9 | Posted |
 | [U07 — Generative Systems]({{ site.baseurl }}/modules/tutorials/u07-generative-systems/) | Weeks 10, 11, 12 | Posted |
 | U10 — Final | Weeks 13, 14, 15 | Posted after the class |
-
-## Possible intermediate class
-
-**Contour fabrication.** Contour sections, numbered parts and a laser-cut model. Removed from the required Project 4 on November 2, 2026; the three lessons stay posted for anyone who wants to build a physical model of a selected result.
-
-Optional lesson notes — Discretizing Geometry — *not yet released*
 
 
 ## Vocabulary

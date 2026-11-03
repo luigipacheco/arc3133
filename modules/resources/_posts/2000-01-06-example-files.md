@@ -25,6 +25,13 @@ Download only the example for the class you are working on. Arrays uses two exam
 | Volumetric Data and Fields — point clouds | [Download .blend]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/Point-Clouds-and-Volumes.blend)<br>[Teaching point cloud]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.ply)<br>[Dataset source and units]({{ site.baseurl }}/files/blender/06-point-clouds-volumes/teaching-courtyard.json) |
 | Volumetric Data and Fields — signed distance and Booleans | [Download .blend]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-1.blend) |
 | Volumetric Data and Fields — noise and surface extraction | [Download .blend]({{ site.baseurl }}/files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend) |
+
+## Possible intermediate class
+
+Optional reference files; these are outside the required sequence.
+
+| Optional example | Individual downloads |
+| --- | --- |
 | Discretizing Geometry — contours | [Download .blend]({{ site.baseurl }}/files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-1.blend) |
 | Discretizing Geometry — section parts | [Download .blend]({{ site.baseurl }}/files/blender/08-discretizing-geometry/Discretizing-Geometry-Session-2.blend) |
 | Final — fabrication and assembly | [Download .blend]({{ site.baseurl }}/files/blender/09-final-project/Final-Project-Fabrication.blend)<br>[Fabrication notes and dimensions]({{ site.baseurl }}/files/blender/09-final-project/FABRICATION-NOTES.md)<br>[Small print STL]({{ site.baseurl }}/files/blender/09-final-project/small-print-mm.stl)<br>[Fit coupon STL]({{ site.baseurl }}/files/blender/09-final-project/fit-coupon-mm.stl)<br>[Modular parts STL]({{ site.baseurl }}/files/blender/09-final-project/modular-parts-mm.stl)<br>[Section parts and spacers SVG]({{ site.baseurl }}/files/blender/09-final-project/section-parts-and-spacers-mm.svg) |

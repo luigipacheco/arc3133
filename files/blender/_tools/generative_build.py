@@ -167,7 +167,7 @@ def value_paint(u, geo, attr, c0, c1, gain=1.0):
     u.add(sm.outputs[0])
 
 
-def sel(u, geo, attr, dtype='BOOLEAN'):
+def sel_(u, geo, attr, dtype='BOOLEAN'):
     return u.split(geo, named(u, attr, dtype, u.place()))
 
 
@@ -313,37 +313,62 @@ def s01():
     sc, cam, hud = GK['make_slide'](key, 1, "GENERATIVE",
         "A generative engine explores a solution space you have not mapped, returning answers you did not anticipate.\n\n"
         "Procedural is about steps, parametric about relationships. Generative iterates: a rule works on its own result.",
-        "Change Turn and Shrink. Try Shrink above 1, then a negative Turn.", scale=20)
+        "Set Steps to 500, 3000, 10000, then 12000. The highway starts near step 10,000. Nobody wrote it.", scale=16)
     GK['aim'](cam, (0, 0, 0), TOP, shift=2.9)
     t = Tree(key)
-    t.inp("Size", "Float", 8.0, 1.0, 12.0, "Start: one square this size")
-    t.inp("Turn", "Float", 8.0, -45.0, 45.0, "Rule: turn (degrees)")
-    t.inp("Shrink", "Float", 0.95, 0.5, 1.2, "Rule: scale")
-    t.inp("Iterations", "Int", 30, 0, 150, "How many times the rule runs")
-    q = t.n('GeometryNodeCurvePrimitiveQuadrilateral', (-900, 0), mode='RECTANGLE')
-    t.L(t.g("Size"), q.inputs['Width']); t.L(t.g("Size"), q.inputs['Height'])
-    rin, rout = repeat(t, t.g("Iterations"), q.outputs[0], (-600, 0), ("All",))
-    t.L(q.outputs[0], rin.inputs['All'])
-    nxt = t.transform(rin.outputs['Geometry'], None, rot_z(t, t.g("Turn"), (-500, -240)),
-                      t.xyz(t.g("Shrink"), t.g("Shrink"), 1.0, (-300, -360)), loc=(-100, 0))
-    t.L(nxt, rout.inputs['Geometry']); t.L(t.joing([rin.outputs['All'], nxt], (300, 60)), rout.inputs['All'])
-    t.out(rout.outputs['All']); t.go.location = (1000, 0)
-    t.frame("START  one square", [q]); t.frame("RULE  next = last, turned and scaled.  REPEAT", [rin, rout, nxt.node])
+    t.inp("Steps", "Int", 11000, 0, 20000, "How many times the rule runs"); t.inp("Size", "Int", 90, 10, 200, "Cells per side")
+    N = t.g("Size")
+    grid = grp(t, "Cell Grid", (-1100, 200), {"Columns": N, "Rows": N, "Cell": 0.1})
+    s0 = t.store(grid.outputs[0], "black", False, 'BOOLEAN', loc=(-900, 200))
+    rin, rout = repeat(t, t.g("Steps"), s0, (-700, 200))
+    for nm in ("X", "Y", "H"):
+        rout.repeat_items.new('INT', nm)
+    half = t.math('FLOOR', t.math('DIVIDE', N, 2, (-900, -40)), None, (-900, -140))
+    t.L(half, rin.inputs['X']); t.L(half, rin.inputs['Y']); rin.inputs['H'].default_value = 0
+    st, X, Y, H = rin.outputs['Geometry'], rin.outputs['X'], rin.outputs['Y'], rin.outputs['H']
+    idx = t.math('ADD', t.math('MULTIPLY', X, N, (-500, 0)), Y, (-350, 0))
+    blk = named(t, "black", 'BOOLEAN', (-500, -200))
+    cur = sample(t, st, blk, idx, 'BOOLEAN', (-200, -200))
+    turn = t.n('GeometryNodeSwitch', (0, -200), input_type='INT'); t.L(cur, turn.inputs['Switch'])
+    turn.inputs['False'].default_value = 1; turn.inputs['True'].default_value = -1
+    nh = t.math('FLOORED_MODULO', t.math('ADD', H, turn.outputs[0], (200, -200)), 4, (350, -200))
+    sel = cmp(t, 'EQUAL', index(t, (-200, 420)), idx, (0, 420), 'INT')
+    flip = bmath(t, 'NOT', blk, None, (0, 280))
+    stn = t.n('GeometryNodeStoreNamedAttribute', (200, 420), data_type='BOOLEAN', domain='POINT')
+    t.L(st, stn.inputs['Geometry']); t.L(sel, stn.inputs['Selection']); stn.inputs['Name'].default_value = "black"; t.L(flip, stn.inputs['Value'])
+    t.L(stn.outputs[0], rout.inputs['Geometry'])
+    dx = t.iswitch('INT', 4, (350, -400)); dy = t.iswitch('INT', 4, (350, -560))
+    for sw, vals in ((dx, (0, 1, 0, -1)), (dy, (1, 0, -1, 0))):
+        t.L(nh, sw.inputs['Index'])
+        for k, v in enumerate(vals):
+            sw.inputs[k + 1].default_value = v
+    t.L(t.math('FLOORED_MODULO', t.math('ADD', X, dx.outputs[0], (550, -400)), N, (700, -400)), rout.inputs['X'])
+    t.L(t.math('FLOORED_MODULO', t.math('ADD', Y, dy.outputs[0], (550, -560)), N, (700, -560)), rout.inputs['Y'])
+    t.L(nh, rout.inputs['H'])
+    ant = cmp(t, 'EQUAL', index(t, (900, 0)), t.math('ADD', t.math('MULTIPLY', rout.outputs['X'], N, (900, -120)), rout.outputs['Y'], (1050, -120)), (1200, 0), 'INT')
+    t.out(t.store(rout.outputs['Geometry'], "ant", ant, 'BOOLEAN', loc=(1400, 200))); t.go.location = (1600, 200)
+    t.frame("START  a white grid and one ant in the middle, facing up", [grid, s0.node, half.node])
+    t.frame("RULE  on a white cell turn right, on a black cell turn left; flip the cell; step forward.  REPEAT",
+            [rin, rout, idx.node, blk.node, cur.node, turn, nh.node, sel.node, flip.node, stn, dx, dy])
+    t.note("01 note - langton", "Langton's ant (1986). Two rules, no randomness. About 10,000 steps of apparent chaos, "
+           "then a diagonal highway that repeats forever. Nobody put the highway in the rule.", (-1100, 560), 620, 100)
     t.tidy()
     u = UI(key, cam)
-    u.inp("Size", "Float", 8.0); u.inp("Turn", "Float", 8.0); u.inp("Shrink", "Float", 0.95); u.inp("Iterations", "Int", 30)
-    u.add(u.tube(u.g("Geometry"), 0.02, 'BLACK', 6))
-    sq = u.n('GeometryNodeCurvePrimitiveQuadrilateral', u.place(), mode='RECTANGLE')
-    u.L(u.g("Size"), sq.inputs['Width']); u.L(u.g("Size"), sq.inputs['Height'])
-    u.add(u.tube(sq.outputs[0], 0.045, 'PINK', 6))
-    lines = [('p', ["START   one square, ", u.fmt(u.g("Size")), " x ", u.fmt(u.g("Size"))]),
-             ('k', ["RULE    next = last, turned ", u.fmt(u.g("Turn"), 0), "°"]),
-             ('k', ["        and ", u.fmt(u.g("Shrink"), 2), " x the size"]),
-             ('k', ["REPEAT  ", u.fmt(u.g("Iterations"), 0), " times"]),
-             ('g', "Nobody drew this spiral. The rule did.")] + tools("Repeat zone", "a loop (Anemone)")
+    u.inp("Steps", "Int", 11000)
+    g = u.g("Geometry")
+    antp, rest = sel_(u, g, "ant")
+    black, white = sel_(u, rest, "black")
+    squares(u, black, 0.096, 'BLACK'); squares(u, antp, 0.14, 'PINK', z=0.02)
+    bd = u.n('GeometryNodeMeshGrid', u.place()); u.set(bd, Size_X=9.0, Size_Y=9.0)
+    u.add(u.edges(u.transform(bd.outputs[0], (0, 0, -0.01), loc=u.place()), 0.012, 'MUTE'))
+    lines = [('p', "START   a white grid, one ant"),
+             ('k', "RULE    on white: turn right, paint it black, step"),
+             ('k', "        on black: turn left, paint it white, step"),
+             ('k', ["REPEAT  ", u.fmt(u.g("Steps"), 0), " times"]),
+             ('g', "Two rules, no randomness, a highway nobody wrote.")] + tools("Repeat zone", "a loop (Anemone)")
     u.code(lines)
     u.finish()
-    return done(key, sc, t, u, [(n, n) for n in ("Size", "Turn", "Shrink", "Iterations")])
+    return done(key, sc, t, u, [("Steps", "Steps")])
 
 
 # ================================================================ 02 Noise
@@ -404,7 +429,7 @@ def s03():
     u.inp("Threshold", "Float", 0.5)
     g = u.g("Geometry")
     u.mass(plates(u, g, "solid", 24, 24, 0.5, 0.8, (-2000, -3000)), 'WHITE')
-    solid, empty = sel(u, g, "solid")
+    solid, empty = sel_(u, g, "solid")
     value_paint(u, squares(u, empty, 0.46, None), "value", 'WHITE', 'GREY')
     st = u.n('GeometryNodeAttributeStatistic', u.place()); u.L(g, st.inputs['Geometry'])
     u.L(named(u, "solid", 'FLOAT', u.place()), st.inputs['Attribute'])
@@ -454,7 +479,7 @@ def s04():
     t.tidy()
     u = UI(key, cam)
     u.inp("Rule", "Int", 30)
-    al_, dead = sel(u, u.g("Geometry"), "alive")
+    al_, dead = sel_(u, u.g("Geometry"), "alive")
     squares(u, al_, 0.23, 'BLACK'); squares(u, dead, 0.23, 'LINE')
     # rule table: 8 patterns, three cells each, the answer below
     ip = index(u, u.place())
@@ -469,7 +494,7 @@ def s04():
     y = u.math('SUBTRACT', 1.7, u.math('MULTIPLY', isres, 0.36, u.place()), u.place())
     tp = u.n('GeometryNodePoints', u.place()); tp.inputs['Count'].default_value = 32; u.L(u.xyz(x, y, 0.0, u.place()), tp.inputs['Position'])
     tps = u.store(tp.outputs[0], "bit", cmp(u, 'GREATER_THAN', bit_.outputs[0], 0.5, u.place()), 'BOOLEAN', loc=u.place())
-    on, off = sel(u, tps, "bit")
+    on, off = sel_(u, tps, "bit")
     squares(u, on, 0.26, 'BLACK'); squares(u, off, 0.26, 'WHITE', outline=True)
     lines = [('p', ["RULE ", u.fmt(u.g("Rule"), 0)]), ('k', "1  read a cell and its two neighbours"),
              ('k', "2  find that pattern in the rule table"), ('k', "3  write the answer one row down")] + tools("Repeat zone, Sample Index", "a loop (Anemone)")
@@ -500,7 +525,7 @@ def s05():
     u = UI(key, cam)
     u.inp("Column", "Int", 6); u.inp("Row", "Int", 6)
     g = u.g("Geometry")
-    a, d = sel(u, g, "alive")
+    a, d = sel_(u, g, "alive")
     squares(u, a, 0.54, 'BLACK'); squares(u, d, 0.54, 'LINE')
     ii = u.math('ADD', u.math('MULTIPLY', u.g("Column"), 13, u.place()), u.g("Row"), u.place())
     pos = sample(u, g, position(u, u.place()), ii, 'FLOAT_VECTOR', u.place())
@@ -546,7 +571,7 @@ def s06():
         u.inp(n, "Int", d)
     u.inp("Threshold", "Float", 0.5)
     g = u.g("Geometry")
-    a, d = sel(u, g, "alive")
+    a, d = sel_(u, g, "alive")
     squares(u, a, 0.28, 'BLACK'); squares(u, d, 0.28, 'LINE')
     st = u.n('GeometryNodeAttributeStatistic', u.place()); u.L(g, st.inputs['Geometry']); u.L(named(u, "alive", 'FLOAT', u.place()), st.inputs['Attribute'])
     f = lambda n: u.fmt(u.g(n), 0)
@@ -704,8 +729,8 @@ KILL = (0.065, 0.057, 0.062, 0.06)
 PATTERNS = ["Spots", "Maze", "Coral", "Worms"]
 
 
-def s10():
-    key = "10 Reaction Diffusion"
+def s11():
+    key = "11 Reaction Diffusion"
     sc, cam, hud = GK['make_slide'](key, 10, "REACTION AND\nDIFFUSION",
         "Two substances spread and react (Alan Turing, 1952). Small changes in feed and removal give spots, stripes or mazes.",
         "Switch Pattern. Lower Steps to watch the pattern form.", scale=17)
@@ -749,7 +774,7 @@ def s10():
     t.frame("START  A everywhere, B in a few noise spots", [gr, nv.node, b0, s0.node])
     t.frame("feed and removal rates", [pm, fsw, ksw])
     t.frame("RULE  both spread (blur), B grows where it meets A, A is fed, B is removed.  REPEAT", [rin, rout, s1.node, s2.node, s3.node, r.node, an.node, bn.node, la.node, lb.node] + [n for n in t.nt.nodes if n.bl_idname == 'GeometryNodeBlurAttribute'])
-    t.note("10 note - gray scott", "Gray-Scott model: A' = A + spread(A) - A x B x B + feed x (1 - A);  B' = B + spread(B)/2 + A x B x B - (removal + feed) x B.", (-1400, 700), 640, 100)
+    t.note("11 note - gray scott", "Gray-Scott model: A' = A + spread(A) - A x B x B + feed x (1 - A);  B' = B + spread(B)/2 + A x B x B - (removal + feed) x B.", (-1400, 700), 640, 100)
     t.tidy()
     u = UI(key, cam)
     u.inp("Pattern", "Int", 0); u.inp("Steps", "Int", 2000)
@@ -768,8 +793,8 @@ def s10():
 
 
 # ================================================================ 11 Growth
-def s11():
-    key = "11 Growth"
+def s12():
+    key = "12 Growth"
     sc, cam, hud = GK['make_slide'](key, 11, "GROWTH",
         "Growth rules add material at the edge of what already exists. A cell joins only when exactly one of its four "
         "sides touches a grown cell, so the tips keep growing: branches, like coral or frost.",
@@ -822,8 +847,8 @@ def s11():
 
 
 # ================================================================ 12 Reading a layer
-def s12():
-    key = "12 Reading"
+def s15():
+    key = "15 Reading"
     sc, cam, hud = GK['make_slide'](key, 12, "READING\nA LAYER",
         "Generative results have to be read. Slice a layer and ask architectural questions: is there a floor to stand on, "
         "room to move, room above your head?",
@@ -868,8 +893,8 @@ def s12():
     vol = scp.outputs['Mesh']; pl = scp.outputs['Point Cloud']
     below, above = u.split(vol, cmp(u, 'LESS_THAN', named(u, "generation", 'INT', u.place()), u.g("Layer"), u.place(), 'INT'))
     u.mass(below); u.ghost(above, 'MUTE', 0.01)
-    rm, rest = sel(u, pl, "room")
-    al, emp = sel(u, rest, "alive")
+    rm, rest = sel_(u, pl, "room")
+    al, emp = sel_(u, rest, "alive")
     squares(u, rm, 0.48, 'PINK', z=0.03); squares(u, al, 0.48, 'BLACK', z=0.03); squares(u, emp, 0.48, 'LINE', z=0.03)
     stt = u.n('GeometryNodeAttributeStatistic', u.place()); u.L(pl, stt.inputs['Geometry']); u.L(named(u, "room", 'FLOAT', u.place()), stt.inputs['Attribute'])
     area = u.math('MULTIPLY', stt.outputs['Sum'], 0.25, u.place())
@@ -910,8 +935,8 @@ def foreach_automata(t, pts, items, loc, gens, extra_store=()):
 TOWARD = (0.57735 * 40, 0.57735 * 40, 0.57735 * 40)   # pulls labels toward the camera so volumes never hide them
 
 
-def s13():
-    key = "13 Design Space"
+def s16():
+    key = "16 Design Space"
     S_ = 18.0; SR = 28.0
     sc, cam, hud = GK['make_slide'](key, 13, "DESIGN SPACE",
         "One run is one answer. A matrix runs the rule 25 times while two inputs change, so you can compare and choose.\n\n"
@@ -940,7 +965,7 @@ def s13():
     u = UI(key, cam)
     for n, ty, d in (("Threshold From", "Float", 0.4), ("Threshold To", "Float", 0.6), ("Seed", "Int", 0), ("Pick Column", "Int", 2), ("Pick Row", "Int", 2)):
         u.inp(n, ty, d)
-    pkd, rest = sel(u, u.g("Geometry"), "picked")
+    pkd, rest = sel_(u, u.g("Geometry"), "picked")
     u.mass(rest, 'WHITE', 0.05); u.mass(pkd, 'PINK', 0.05)
     tf, tt = u.g("Threshold From"), u.g("Threshold To")
     for i in range(5):
@@ -958,8 +983,8 @@ def s13():
     return done(key, sc, t, u, [(n, n) for n in ("Threshold From", "Threshold To", "Seed", "Pick Column", "Pick Row")])
 
 
-def s14():
-    key = "14 Breed"
+def s17():
+    key = "17 Breed"
     S_ = 18.0; SR = 28.0
     sc, cam, hud = GK['make_slide'](key, 14, "SELECT\nAND BREED",
         "Selection makes it evolve: keep the best result, make small variations of it, choose again. The rule proposes, "
@@ -990,7 +1015,7 @@ def s14():
     u = UI(key, cam)
     for n, ty, d in (("Parent Seed", "Int", 2), ("Parent Threshold", "Float", 0.5), ("Mutation", "Float", 0.03), ("Pick", "Int", 4)):
         u.inp(n, ty, d)
-    pkd, rest = sel(u, u.g("Geometry"), "picked")
+    pkd, rest = sel_(u, u.g("Geometry"), "picked")
     u.mass(rest, 'WHITE', 0.04); u.mass(pkd, 'PINK', 0.04)
     u.text("parent", tuple(DOWN[a] * 0.42 * SR + TOWARD[a] for a in range(3)), 0.24, 'GREY')
     mu = u.g("Mutation")
@@ -1004,42 +1029,375 @@ def s14():
     return done(key, sc, t, u, [(n, n) for n in ("Parent Seed", "Parent Threshold", "Mutation", "Pick")])
 
 
-# ================================================================ 15 One layer, one sheet
-def s15():
-    key = "15 Layer Sheet"
-    sc, cam, hud = GK['make_slide'](key, 15, "ONE LAYER,\nONE SHEET",
-        "In a stacked automaton the layers are already the contours. Make one generation as thick as one sheet at "
-        "model scale, and the model is built the way it was generated.",
-        "Change Sheet and Scale and watch the count. In the UI panel, raise Explode.", scale=36)
-    GK['aim'](cam, (0, 0, 4.5), ISO, shift=3.0)
+# ================================================================ 10 Stigmergy
+def s10():
+    key = "10 Stigmergy"
+    sc, cam, hud = GK['make_slide'](key, 10, "STIGMERGY",
+        "Agents that read each other's trails. Every walker deposits on the ground; the ground spreads and fades; "
+        "every walker steers toward the strongest trail ahead. Ants and slime moulds find paths this way.",
+        "Raise Decay to keep trails longer. Lower Sense: the paths get thinner. Set Agents to 300.", scale=17)
+    GK['aim'](cam, (0, 0, 0), TOP, shift=3.3)
     t = Tree(key)
-    t.inp("Height", "Float", 8.0, 1.0, 12.0, "Building height (m)"); t.inp("Sheet", "Float", 3.0, 1.0, 10.0, "Sheet thickness (mm)")
-    t.inp("Scale", "Int", 100, 20, 500, "Model scale 1 : Scale"); t.inp("Seed", "Int", 3, 0, 999, "Floor 0 noise seed")
-    t.inp("Threshold", "Float", 0.5, 0.0, 1.0, "Floor 0 threshold")
-    lh = t.math('DIVIDE', t.math('MULTIPLY', t.g("Sheet"), t.g("Scale"), (-900, -100)), 1000, (-740, -100))
-    gens = t.math('CEIL', t.math('DIVIDE', t.g("Height"), lh, (-580, -200)), None, (-420, -200))
-    au = grp(t, "Automaton", (-200, 0), {"Seed": t.g("Seed"), "Threshold": t.g("Threshold"), "Layer Height": lh, "Generations": gens})
-    t.out(au.outputs['Volume']); t.go.location = (100, 0)
-    t.frame("one generation = one sheet: Sheet x Scale, in metres", [lh.node, gens.node])
+    t.inp("Agents", "Int", 150, 1, 600, "How many walkers"); t.inp("Steps", "Int", 250, 0, 800, "How many steps")
+    t.inp("Sense", "Float", 0.5, 0.1, 2.0, "How far ahead a walker smells the trail (m)")
+    t.inp("Decay", "Float", 0.96, 0.5, 0.999, "How much trail is left each step"); t.inp("Seed", "Int", 0, 0, 999, "Randomness")
+    C = 60; CELL = 0.15; W = C * CELL
+    grid = grp(t, "Cell Grid", (-1500, 300), {"Columns": C, "Rows": C, "Cell": CELL})
+    g0 = t.store(grid.outputs[0], "trail", 0.0, 'FLOAT', loc=(-1300, 300))
+    rv = rand(t, 'FLOAT_VECTOR', (-3.5, -3.5, 0.0), (3.5, 3.5, 0.0), t.g("Seed"), (-1500, 0))
+    pts = t.n('GeometryNodePoints', (-1300, 0)); t.L(t.g("Agents"), pts.inputs['Count']); t.L(rv, pts.inputs['Position'])
+    a0 = t.store(pts.outputs[0], "heading", rand(t, 'FLOAT', 0.0, 2 * math.pi, t.math('ADD', t.g("Seed"), 1, (-1300, -200)), (-1120, -160)), 'FLOAT', loc=(-1000, 0))
+    rin, rout = repeat(t, t.g("Steps"), g0, (-800, 300), ("Agents",))
+    t.L(a0, rin.inputs['Agents'])
+    gr, ag = rin.outputs['Geometry'], rin.outputs['Agents']
+    # ground: deposit where a walker stands, then fade and spread
+    px = t.n('GeometryNodeProximity', (-600, 500)); px.target_element = 'POINTS'; t.L(ag, px.inputs['Target'])
+    near = cmp(t, 'LESS_THAN', px.outputs['Distance'], CELL * 0.75, (-400, 500))
+    dep = t.math('ADD', t.math('MULTIPLY', named(t, "trail", 'FLOAT', (-600, 350)), t.g("Decay"), (-400, 350)), near, (-200, 420))
+    g1 = t.store(gr, "trail", dep, 'FLOAT', loc=(0, 500))
+    bl = t.n('GeometryNodeBlurAttribute', (200, 350), data_type='FLOAT'); t.L(named(t, "trail", 'FLOAT', (0, 300)), bl.inputs['Value'])
+    bl.inputs['Iterations'].default_value = 1; bl.inputs['Weight'].default_value = 0.35
+    g2 = t.store(g1, "trail", bl.outputs[0], 'FLOAT', loc=(400, 500))
+    t.L(g2, rout.inputs['Geometry'])
+    # walkers: smell left, ahead, right; turn toward the strongest; step
+    hd = named(t, "heading", 'FLOAT', (-600, -100)); pp = position(t, (-600, -220))
+    half = W / 2
+
+    def smell(angle_off, y):
+        a = t.math('ADD', hd, angle_off, (-400, y))
+        sp = t.vmath('ADD', pp, t.vmath('SCALE', t.xyz(t.math('COSINE', a, None, (-250, y)), t.math('SINE', a, None, (-250, y - 60)), 0.0, (-100, y)), t.g("Sense"), (50, y)), (200, y))
+        sx, sy, _ = t.sep(sp, (350, y))[:3]
+        c = t.math('FLOOR', t.math('DIVIDE', t.math('ADD', sx, half, (500, y)), CELL, (620, y)), None, (740, y))
+        r = t.math('FLOOR', t.math('DIVIDE', t.math('ADD', sy, half, (500, y - 60)), CELL, (620, y - 60)), None, (740, y - 60))
+        cc = t.math('MINIMUM', t.math('MAXIMUM', c, 0.0, (860, y)), C - 1, (980, y)); rr = t.math('MINIMUM', t.math('MAXIMUM', r, 0.0, (860, y - 60)), C - 1, (980, y - 60))
+        idx = t.math('ADD', t.math('MULTIPLY', cc, C, (1100, y)), rr, (1220, y))
+        return sample(t, g2, named(t, "trail", 'FLOAT', (1100, y - 120)), idx, 'FLOAT', (1340, y))
+    L_ = smell(0.6, -100); Cc = smell(0.0, -400); R_ = smell(-0.6, -700)
+    side = t.math('GREATER_THAN', t.math('MAXIMUM', L_, R_, (1500, -400)), Cc, (1650, -400))
+    turn = t.math('MULTIPLY', t.math('MULTIPLY', t.math('SIGN', t.math('SUBTRACT', L_, R_, (1500, -250)), None, (1650, -250)), side, (1800, -300)), 0.6, (1950, -300))
+    jitter = rand(t, 'FLOAT', -0.25, 0.25, t.math('ADD', t.g("Seed"), 2, (1800, -500)), (1950, -500),
+                  ident=t.math('ADD', index(t, (1650, -600)), t.math('MULTIPLY', rin.outputs['Iteration'], 7919, (1650, -700)), (1800, -650)))
+    h1 = t.math('ADD', t.math('ADD', hd, turn, (2100, -300)), jitter, (2250, -300))
+    out_ = cmp(t, 'GREATER_THAN', t.vmath('LENGTH', pp, None, (1500, -850), out=1), half - 0.3, (1650, -850))
+    px_, py_, _ = t.sep(pp, (1500, -1000))[:3]
+    home = t.math('ARCTAN2', t.math('MULTIPLY', py_, -1.0, (1650, -1000)), t.math('MULTIPLY', px_, -1.0, (1650, -1100)), (1800, -1050))
+    hsw = t.n('GeometryNodeSwitch', (2400, -400), input_type='FLOAT'); t.L(out_, hsw.inputs['Switch']); t.L(h1, hsw.inputs['False']); t.L(home, hsw.inputs['True'])
+    a1 = t.store(ag, "heading", hsw.outputs[0], 'FLOAT', loc=(2600, 0))
+    hn = named(t, "heading", 'FLOAT', (2600, -200))
+    mv = t.n('GeometryNodeSetPosition', (2800, 0)); t.L(a1, mv.inputs['Geometry'])
+    t.L(t.xyz(t.math('MULTIPLY', t.math('COSINE', hn, None, (2600, -320)), 0.1, (2700, -320)), t.math('MULTIPLY', t.math('SINE', hn, None, (2600, -440)), 0.1, (2700, -440)), 0.0, (2800, -380)), mv.inputs['Offset'])
+    t.L(mv.outputs[0], rout.inputs['Agents'])
+    walkers = t.store(rout.outputs['Agents'], "agent", True, 'BOOLEAN', loc=(3100, 0))
+    t.out(t.joing([rout.outputs['Geometry'], walkers], (3300, 200))); t.go.location = (3500, 200)
+    t.frame("START  a clean ground and walkers at random", [grid, g0.node, pts, a0.node, rv.node])
+    t.frame("GROUND  deposit under every walker, fade by Decay, spread a little", [px, near.node, dep.node, g1.node, bl, g2.node])
+    t.frame("WALKER  smell left, ahead and right at Sense; turn toward the strongest; step 0.1", [hd.node, pp.node, side.node, turn.node, jitter.node, h1.node, hsw, a1.node, mv, out_.node, home.node])
     t.tidy()
     u = UI(key, cam)
-    u.inp("Height", "Float", 8.0); u.inp("Sheet", "Float", 3.0); u.inp("Scale", "Int", 100)
-    u.inp("Explode", "Float", 0.12, 0.0, 1.0, "Display only: gap between sheets")
-    lh2 = u.math('DIVIDE', u.math('MULTIPLY', u.g("Sheet"), u.g("Scale"), u.place()), 1000, u.place())
-    n2 = u.math('CEIL', u.math('DIVIDE', u.g("Height"), lh2, u.place()), None, u.place())
-    ex = u.n('GeometryNodeSetPosition', u.place()); u.L(u.g("Geometry"), ex.inputs['Geometry'])
-    u.L(u.xyz(0.0, 0.0, u.math('MULTIPLY', named(u, "generation", 'FLOAT', u.place()), u.g("Explode"), u.place()), u.place()), ex.inputs['Offset'])
-    u.mass(ex.outputs[0])
-    lines = [('k', ["1 sheet = ", u.fmt(u.g("Sheet"), 1), " mm at 1:", u.fmt(u.g("Scale"), 0), " = ", u.fmt(lh2, 2), " m"]),
-             ('k', ["height ", u.fmt(u.g("Height"), 1), " m = ", u.fmt(n2, 0), " generations"]),
-             ('p', ["= ", u.fmt(n2, 0), " sheets to cut, ", u.fmt(u.math('DIVIDE', u.math('MULTIPLY', u.g("Height"), 1000, u.place()), u.g("Scale"), u.place()), 0), " mm tall"]),
-             ('k', "number every sheet: one generation, one cut")] + tools("the contour tools", "Contour, then Orient")
+    u.inp("Agents", "Int", 150); u.inp("Steps", "Int", 250); u.inp("Sense", "Float", 0.5); u.inp("Decay", "Float", 0.96)
+    scp = u.n('GeometryNodeSeparateComponents', u.place()); u.L(u.g("Geometry"), scp.inputs[0])
+    # the trail: cells painted by strength (needs a mesh: squares)
+    cells = scp.outputs['Point Cloud']
+    agents_, ground = sel_(u, cells, "agent")
+    sq = squares(u, ground, CELL * 0.98, None)
+    value_paint(u, sq, "trail", 'WHITE', 'BLACK', 0.6)
+    dot = u.n('GeometryNodeMeshCircle', u.place(), fill_type='NGON'); u.set(dot, Vertices=12, Radius=0.07)
+    io = u.n('GeometryNodeInstanceOnPoints', u.place()); u.L(agents_, io.inputs['Points']); u.L(dot.outputs[0], io.inputs['Instance'])
+    rz = u.n('GeometryNodeRealizeInstances', u.place()); u.L(io.outputs[0], rz.inputs[0]); u.add(u.paint(u.transform(rz.outputs[0], (0, 0, 0.02), loc=u.place()), 'PINK'))
+    bd = u.n('GeometryNodeMeshGrid', u.place()); u.set(bd, Size_X=W, Size_Y=W)
+    u.add(u.edges(u.transform(bd.outputs[0], (0, 0, -0.01), loc=u.place()), 0.012, 'MUTE'))
+    lines = [('k', ["1  ", u.fmt(u.g("Agents"), 0), " walkers on a clean ground"]),
+             ('k', "2  each step every walker deposits a trail,"),
+             ('k', ["   smells ", u.fmt(u.g("Sense"), 1), " m ahead and turns to the strongest"]),
+             ('k', ["3  the ground keeps ", u.fmt(u.math('MULTIPLY', u.g("Decay"), 100, u.place()), 0), "% of its trail, and spreads"]),
+             ('p', ["4  repeat ", u.fmt(u.g("Steps"), 0), " steps"]),
+             ('g', "The paths are the memory of the group.")] + tools("Repeat zone, Blur Attribute", "Culebra (agents + trails)")
     u.code(lines, y=-0.8)
     u.finish()
-    return done(key, sc, t, u, [("Height", "Height"), ("Sheet", "Sheet"), ("Scale", "Scale")])
+    return done(key, sc, t, u, [(n, n) for n in ("Agents", "Steps", "Sense", "Decay")])
 
 
-GB = {f"s{n:02d}": globals()[f"s{n:02d}"] for n in range(1, 16)}
+# ================================================================ 13 Differential growth
+def s13():
+    key = "13 Differential Growth"
+    sc, cam, hud = GK['make_slide'](key, 13, "DIFFERENTIAL\nGROWTH",
+        "A closed line that keeps growing in the space it has. Every point steps away from the parts of the line "
+        "near it and moves together with its neighbours. New points are added where the line stretches, so it "
+        "gets longer and folds like coral, a brain or a leaf edge.",
+        "Raise Iterations. Change Reach, Repel and Spacing. Turn on Height, then Layer Height and Every.", scale=12)
+    GK['aim'](cam, (0, 0, 1.2), ISO, shift=3.3)
+    t = Tree(key)
+    t.inp("Iterations", "Int", 300, 0, 1000, "How many times the rule runs")
+    t.inp("Spacing", "Float", 0.05, 0.02, 0.3, "Distance between points (m); new points are added at this spacing")
+    t.inp("Reach", "Float", 0.3, 0.05, 1.0, "How far a point looks: points closer than Reach are merged into their centre")
+    t.inp("Repel", "Float", 1.0, 0.0, 3.0, "How hard points step away")
+    t.inp("Seed", "Int", 0, 0, 999, "A small wobble in the start circle")
+    t.inp("Height", "Bool", False, desc="Time becomes height: one layer every few iterations")
+    t.inp("Layer Height", "Float", 0.05, 0.01, 1.0, "Distance between layers (m)"); t.inp("Every", "Int", 10, 1, 100, "Iterations between two layers")
+    # start: a small circle, resampled at Spacing, with a little wobble
+    ci = t.n('GeometryNodeCurvePrimitiveCircle', (-1300, 200), mode='RADIUS'); ci.inputs['Resolution'].default_value = 64; S(ci, 'Radius').default_value = 0.7
+    rs0 = t.n('GeometryNodeResampleCurve', (-1100, 200)); t.L(ci.outputs['Curve'], rs0.inputs['Curve']); t.L(t.g("Spacing"), rs0.inputs['Length'])
+    rs0.inputs['Mode'].default_value = 'Length'
+    wob = rand(t, 'FLOAT_VECTOR', (-0.02, -0.02, 0.0), (0.02, 0.02, 0.0), t.g("Seed"), (-1100, 0))
+    sp0 = t.n('GeometryNodeSetPosition', (-950, 200)); t.L(rs0.outputs[0], sp0.inputs['Geometry']); t.L(wob, sp0.inputs['Offset'])
+    rin, rout = repeat(t, t.g("Iterations"), sp0.outputs[0], (-800, 200), ("Layers",))
+    k = rin.outputs['Iteration']; st = rin.outputs['Geometry']
+    # look: merge the points within Reach into their centre (Merge by Distance averages them), find the nearest centre
+    ctp = t.n('GeometryNodeCurveToPoints', (-600, -100), mode='EVALUATED'); t.L(st, ctp.inputs['Curve'])
+    md = t.n('GeometryNodeMergeByDistance', (-450, -100)); t.L(ctp.outputs['Points'], md.inputs['Geometry']); t.L(t.g("Reach"), md.inputs['Distance'])
+    pr = t.n('GeometryNodeProximity', (-300, -100), target_element='POINTS'); t.L(md.outputs[0], pr.inputs['Geometry'])
+    pp = position(t, (-450, -300))
+    # step away: the closer it is, the bigger the step (0 at 2 m)
+    away = t.vmath('NORMALIZE', t.vmath('SUBTRACT', pp, pr.outputs['Position'], (-150, -250)), None, (0, -250))
+    mr = t.n('ShaderNodeMapRange', (-150, -450)); t.L(pr.outputs['Distance'], mr.inputs['Value']); mr.inputs['From Max'].default_value = 2.0
+    t.L(t.math('MULTIPLY', t.g("Repel"), 0.01, (-300, -500)), mr.inputs['To Min']); mr.inputs['To Max'].default_value = 0.0
+    step = t.vmath('SCALE', away, mr.outputs[0], (150, -300))
+    # move together: every step becomes the average of its neighbours' steps; stay flat
+    bl = t.n('GeometryNodeBlurAttribute', (300, -300), data_type='FLOAT_VECTOR'); t.L(step, bl.inputs['Value'])
+    bl.inputs['Iterations'].default_value = 1; bl.inputs['Weight'].default_value = 1.0
+    flat = t.vmath('MULTIPLY', bl.outputs[0], (1.0, 1.0, 0.0), (450, -300))
+    sp = t.n('GeometryNodeSetPosition', (600, 100)); t.L(st, sp.inputs['Geometry']); t.L(flat, sp.inputs['Offset'])
+    # grow: resample at Spacing, new points where the line stretched
+    rs = t.n('GeometryNodeResampleCurve', (800, 100)); t.L(sp.outputs[0], rs.inputs['Curve']); t.L(t.g("Spacing"), rs.inputs['Length'])
+    rs.inputs['Mode'].default_value = 'Length'
+    t.L(rs.outputs[0], rout.inputs['Geometry'])
+    # a layer every Every iterations, Layer Height apart (rise per iteration = Layer Height / Every)
+    every = cmp(t, 'EQUAL', t.math('FLOORED_MODULO', k, t.g("Every"), (650, 400)), 0.0, (850, 400))
+    rise = t.math('DIVIDE', t.g("Layer Height"), t.g("Every"), (450, 600))
+    lift = t.n('GeometryNodeSwitch', (650, 550), input_type='FLOAT'); t.L(t.g("Height"), lift.inputs['Switch']); t.L(rise, lift.inputs['True'])
+    lay = t.transform(rs.outputs[0], t.xyz(0.0, 0.0, t.math('MULTIPLY', lift.outputs[0], k, (850, 550)), (1000, 550)), loc=(1050, 400))
+    keep = t.n('GeometryNodeSwitch', (1250, 400), input_type='GEOMETRY'); t.L(every, keep.inputs['Switch']); t.L(lay, keep.inputs['True'])
+    t.L(t.joing([rin.outputs['Layers'], keep.outputs[0]], (1450, 450)), rout.inputs['Layers'])
+    fin = t.n('GeometryNodeSwitch', (1700, 200), input_type='GEOMETRY'); t.L(t.g("Height"), fin.inputs['Switch'])
+    t.L(rout.outputs['Geometry'], fin.inputs['False']); t.L(t.joing([rout.outputs['Layers'], t.transform(rout.outputs['Geometry'], t.xyz(0.0, 0.0, t.math('MULTIPLY', lift.outputs[0], t.g("Iterations"), (1450, 100)), (1550, 100)), loc=(1600, 0))], (1750, 0)), fin.inputs['True'])
+    t.out(fin.outputs[0]); t.go.location = (1950, 200)
+    t.frame("START  a small circle, resampled at Spacing, with a little wobble (Seed)", [ci, rs0, wob.node, sp0])
+    t.frame("LOOK  points closer than Reach merge into their centre; find the nearest centre", [ctp, md, pr])
+    t.frame("STEP AWAY  the closer it is, the bigger the step (Repel)", [pp.node, away.node, mr, step.node])
+    t.frame("MOVE TOGETHER  each step becomes the average of its neighbours' steps", [bl, flat.node, sp])
+    t.frame("GROW  resample at Spacing: new points where the line stretched", [rs])
+    t.frame("layers (Height on): one every Every iterations, Layer Height apart", [every.node, rise.node, lift, lay.node, keep, fin])
+    t.tidy()
+    u = UI(key, cam)
+    u.inp("Iterations", "Int", 300); u.inp("Spacing", "Float", 0.05); u.inp("Reach", "Float", 0.3); u.inp("Repel", "Float", 1.0)
+    u.inp("Height", "Bool", False); u.inp("Layer Height", "Float", 0.05)
+    u.inp("Solid", "Bool", False, desc="Display only: every layer becomes a wall one layer tall")
+    tb = u.tube(u.g("Geometry"), 0.03, 'PINK', 8); u.add(tb)
+    # tube radius: thinner than half a layer so the layers read; thin edges only when Solid is on
+    lr = u.math('MINIMUM', 0.03, u.math('MULTIPLY', u.g("Layer Height"), 0.35, u.place()), u.place())
+    hr = u.n('GeometryNodeSwitch', u.place(), input_type='FLOAT'); u.L(u.g("Height"), hr.inputs['Switch']); hr.inputs['False'].default_value = 0.03; u.L(lr, hr.inputs['True'])
+    tr = u.n('GeometryNodeSwitch', u.place(), input_type='FLOAT'); u.L(u.g("Solid"), tr.inputs['Switch']); u.L(hr.outputs[0], tr.inputs['False']); tr.inputs['True'].default_value = 0.008
+    cm_ = tb.node.inputs[0].links[0].from_node
+    while cm_.bl_idname != 'GeometryNodeCurveToMesh': cm_ = cm_.inputs[0].links[0].from_node
+    u.L(tr.outputs[0], cm_.inputs['Profile Curve'].links[0].from_node.inputs['Radius'])
+    # Solid: every layer becomes a wall one layer tall (curve to edges, extrude the edges up)
+    fc = u.n('GeometryNodeCurveToMesh', u.place()); u.L(u.g("Geometry"), fc.inputs['Curve'])
+    ex = u.n('GeometryNodeExtrudeMesh', u.place(), mode='EDGES'); u.L(fc.outputs[0], ex.inputs['Mesh'])
+    u.L(u.xyz(0.0, 0.0, u.g("Layer Height"), u.place()), ex.inputs['Offset'])
+    sl = u.n('GeometryNodeSwitch', u.place(), input_type='GEOMETRY'); u.L(u.g("Solid"), sl.inputs['Switch'])
+    u.L(u.paint(ex.outputs['Mesh'], 'WHITE'), sl.inputs['True']); u.add(sl.outputs[0])
+    sc_ = u.n('GeometryNodeCurvePrimitiveCircle', u.place(), mode='RADIUS'); S(sc_, 'Radius').default_value = 0.7
+    u.add(u.tube(sc_.outputs['Curve'], 0.012, 'MUTE', 6))
+    lines = [('p', ["1  start: a small circle, then ", u.fmt(u.g("Iterations"), 0), " times:"]),
+             ('k', ["2  look: merge points within ", u.fmt(u.g("Reach"), 2), " m, find the nearest centre"]),
+             ('k', ["3  step away from it, more when closer (", u.fmt(u.math('MULTIPLY', u.g("Repel"), 100, u.place()), 0), "%)"]),
+             ('k', "4  move together: average the steps along the line"),
+             ('k', ["5  resample at ", u.fmt(u.g("Spacing"), 2), " m: new points where it stretched"])] + tools("Repeat zone, Geometry Proximity, Blur Attribute, Resample", "a loop (Anemone) or Kangaroo")
+    u.code(lines, y=-0.8)
+    u.finish()
+    return done(key, sc, t, u, [(n, n) for n in ("Iterations", "Spacing", "Reach", "Repel", "Height", "Layer Height")])
+
+
+# ================================================================ 14 Physics solver
+def s14():
+    key = "14 Physics"
+    sc, cam, hud = GK['make_slide'](key, 14, "A PHYSICS\nSOLVER",
+        "Let forces find the form. A net hangs under gravity until it settles; turn it upside down and every part is "
+        "in compression (Gaudi, Frei Otto). Kangaroo and FEA optimisers work the same way: a rule applied until nothing moves.",
+        "Change Gravity and Pins. Turn on Flip: the hanging net becomes a shell.", scale=20)
+    GK['aim'](cam, (0, 0, 1.0), ISO, shift=3.0)
+    t = Tree(key)
+    t.inp("Gravity", "Float", 0.01, 0.0, 0.1, "Pull per iteration"); t.inp("Iterations", "Int", 200, 0, 1000, "Until nothing moves")
+    t.inp("Pins", "Menu", desc="Which points are held"); t.inp("Flip", "Bool", False, desc="Turn the settled net upside down")
+    gr = t.n('GeometryNodeMeshGrid', (-1300, 200)); t.set(gr, Size_X=8.0, Size_Y=8.0, Vertices_X=25, Vertices_Y=25)
+    pp = position(t, (-1300, -100)); x, y, _ = t.sep(pp, (-1150, -100))[:3]
+    ax = t.math('ABSOLUTE', x, None, (-1000, -60)); ay = t.math('ABSOLUTE', y, None, (-1000, -180))
+    edge = t.math('GREATER_THAN', t.math('MAXIMUM', ax, ay, (-850, -120)), 3.9, (-700, -120))
+    corner = t.math('GREATER_THAN', t.math('MINIMUM', ax, ay, (-850, -300)), 3.9, (-700, -300))
+    mids = t.math('MULTIPLY', edge, t.math('LESS_THAN', t.math('MINIMUM', ax, ay, (-850, -460)), 0.2, (-700, -460)), (-550, -400))
+    pm = t.menu(["Edges", "Corners", "Corners and midpoints"], 'FLOAT', (-400, -200)); t.L(t.g("Pins"), pm.inputs['Menu'])
+    t.L(corner, pm.inputs['Corners']); t.L(edge, pm.inputs['Edges']); t.L(t.math('MAXIMUM', corner, mids, (-550, -520)), pm.inputs['Corners and midpoints'])
+    pinned = cmp(t, 'GREATER_THAN', pm.outputs[0], 0.5, (-200, -200))
+    g0 = t.store(gr.outputs[0], "pinned", pinned, 'BOOLEAN', loc=(-1000, 200))
+    rin, rout = repeat(t, t.g("Iterations"), g0, (-800, 200))
+    st = rin.outputs['Geometry']
+    bl = t.n('GeometryNodeBlurAttribute', (-500, 100), data_type='FLOAT_VECTOR'); t.L(position(t, (-650, 60)), bl.inputs['Value'])
+    bl.inputs['Iterations'].default_value = 1; bl.inputs['Weight'].default_value = 1.0
+    relaxed = t.vmath('SUBTRACT', bl.outputs[0], t.xyz(0.0, 0.0, t.g("Gravity"), (-500, -100)), (-300, 50))
+    sp = t.n('GeometryNodeSetPosition', (-100, 200)); t.L(st, sp.inputs['Geometry'])
+    t.L(bmath(t, 'NOT', named(t, "pinned", 'BOOLEAN', (-500, 300)), None, (-300, 300)), sp.inputs['Selection']); t.L(relaxed, sp.inputs['Position'])
+    t.L(sp.outputs[0], rout.inputs['Geometry'])
+    flip = t.n('GeometryNodeSwitch', (800, 100), input_type='VECTOR'); t.L(t.g("Flip"), flip.inputs['Switch'])
+    flip.inputs['False'].default_value = (1, 1, 1); flip.inputs['True'].default_value = (1, 1, -1)
+    t.out(t.transform(rout.outputs['Geometry'], None, None, flip.outputs[0], loc=(1000, 200))); t.go.location = (1200, 200)
+    t.frame("START  a flat net; the pinned points are held", [gr, g0.node, pm, pinned.node] + [n for n in t.nt.nodes if n.bl_idname == 'ShaderNodeMath' and n.location.x < -500])
+    t.frame("RULE  every free point moves to the average of its neighbours, then drops by Gravity.  REPEAT until it settles", [rin, rout, bl, relaxed.node, sp])
+    t.frame("flip: hanging in tension becomes standing in compression", [flip])
+    t.tidy()
+    u = UI(key, cam)
+    u.inp("Gravity", "Float", 0.01); u.inp("Iterations", "Int", 200); u.inp("Flip", "Bool", False)
+    g = u.g("Geometry")
+    u.add(u.paint(g, 'WHITE'))
+    mc = u.n('GeometryNodeMeshToCurve', u.place()); u.L(g, mc.inputs['Mesh']); u.add(u.tube(mc.outputs[0], 0.012, 'BLACK', 5))
+    pins, free = sel_(u, g, "pinned")
+    sph = u.n('GeometryNodeMeshUVSphere', u.place()); u.set(sph, Segments=12, Rings=6, Radius=0.12)
+    io = u.n('GeometryNodeInstanceOnPoints', u.place()); u.L(pins, io.inputs['Points']); u.L(sph.outputs[0], io.inputs['Instance'])
+    rz = u.n('GeometryNodeRealizeInstances', u.place()); u.L(io.outputs[0], rz.inputs[0]); u.add(u.paint(rz.outputs[0], 'PINK'))
+    st_ = u.n('GeometryNodeAttributeStatistic', u.place(), data_type='FLOAT_VECTOR'); u.L(g, st_.inputs['Geometry']); u.L(position(u, u.place()), st_.inputs['Attribute'])
+    sag = u.vmath('SUBTRACT', st_.outputs['Max'], st_.outputs['Min'], u.place())
+    lines = [('k', "1  a net, 8 x 8 m, pinned at the pink points"),
+             ('k', ["2  every free point: move to the middle of its"]), ('k', ["   neighbours, then drop ", u.fmt(u.g("Gravity"), 2), " m"]),
+             ('p', ["3  repeat ", u.fmt(u.g("Iterations"), 0), " times: sag ", u.fmt(u.sep(sag, u.place())[2], 1), " m"]),
+             ('k', u.sswitch(cint_(u, u.g("Flip")), ["4  (turn on Flip)", "4  flipped: a compression shell"]))] + tools(["Cloth simulation, or a Repeat zone", "with Blur Attribute"], "Kangaroo (physics solver)")
+    u.code(lines, y=-0.8)
+    u.finish()
+    return done(key, sc, t, u, [("Gravity", "Gravity"), ("Iterations", "Iterations"), ("Flip", "Flip")])
+
+
+def cint_(u, boolsock):
+    s = u.n('GeometryNodeSwitch', u.place(), input_type='INT'); u.L(boolsock, s.inputs['Switch'])
+    s.inputs['False'].default_value = 0; s.inputs['True'].default_value = 1
+    return s.outputs[0]
+
+
+# ================================================================ 18 Plan and section
+def s18():
+    key = "18 Plan Section"
+    sc, cam, hud = GK['make_slide'](key, 18, "PLAN AND\nSECTION",
+        "A generated volume is drawn like any building. A horizontal cut at eye height is the plan; a vertical cut is "
+        "the section. Cut where the drawing explains the most.",
+        "Move Plan Level and Section X. Switch Show to Plan, Section or Both.", scale=24)
+    GK['aim'](cam, (0, 0, 3.5), ISO, shift=3.0)
+    t = Tree(key)
+    t.inp("Plan Level", "Float", 1.6, 0.0, 10.0, "Height of the plan cut (m)"); t.inp("Section X", "Float", 0.0, -6.0, 6.0, "Where the section cuts (m)")
+    t.inp("Show", "Menu", desc="Plan, Section or Both"); t.inp("Seed", "Int", 3, 0, 999, "Floor 0 noise seed"); t.inp("Threshold", "Float", 0.5, 0.0, 1.0, "Floor 0 threshold")
+    au = grp(t, "Automaton", (-1300, 200), {"Seed": t.g("Seed"), "Threshold": t.g("Threshold"), "Generations": 16})
+    vol = au.outputs['Volume']
+    # cells are 0.5 m: snap the plan to the top of a layer and the section to a cell boundary
+    K = t.math('FLOOR', t.math('DIVIDE', t.g("Plan Level"), 0.5, (-1300, -200)), None, (-1150, -200))
+    ztop = t.math('MULTIPLY', t.math('ADD', K, 1.0, (-1000, -200)), 0.5, (-850, -200))
+    sx = t.math('MULTIPLY', t.math('ROUND', t.math('DIVIDE', t.g("Section X"), 0.5, (-1300, -400)), None, (-1150, -400)), 0.5, (-1000, -400))
+    gen = named(t, "generation", 'INT', (-1000, 100)); px = t.sep(position(t, (-1000, -40)), (-850, -40))[0]
+    above = cmp(t, 'GREATER_THAN', gen, K, (-700, 100))
+    beyond = cmp(t, 'GREATER_THAN', px, t.math('ADD', sx, 0.01, (-850, -100)), (-700, -40))
+    ms = t.menu(["Plan", "Section", "Both"], 'BOOLEAN', (-500, 0)); t.L(t.g("Show"), ms.inputs['Menu'])
+    t.L(above, ms.inputs['Plan']); t.L(beyond, ms.inputs['Section']); t.L(bmath(t, 'OR', above, beyond, (-700, -200)), ms.inputs['Both'])
+    dl = t.n('GeometryNodeDeleteGeometry', (-300, 200), domain='POINT'); t.L(vol, dl.inputs['Geometry']); t.L(ms.outputs[0], dl.inputs['Selection'])
+    s1 = t.store(t.store(dl.outputs[0], "ztop", ztop, 'FLOAT', loc=(-100, 200)), "sx", sx, 'FLOAT', loc=(100, 200))
+    t.out(s1); t.go.location = (300, 200)
+    t.frame("the volume", [au]); t.frame("plan: remove every layer above Plan Level", [K.node, ztop.node, gen.node, above.node])
+    t.frame("section: remove every cell beyond Section X", [sx.node, px.node, beyond.node])
+    t.frame("show plan, section or both", [ms, dl, s1.node])
+    t.tidy()
+    u = UI(key, cam)
+    u.inp("Plan Level", "Float", 1.6); u.inp("Section X", "Float", 0.0); u.inp("Show", "Int", 0)
+    g = u.g("Geometry")
+    # cut faces: flat faces exactly at the plan level or the section x
+    fpos = u.n('GeometryNodeInputPosition', u.place())
+    nrm = u.n('GeometryNodeInputNormal', u.place())
+    nx_, ny_, nz_ = u.sep(nrm.outputs[0], u.place())[:3]
+    px_, py_, pz_ = u.sep(fpos.outputs[0], u.place())[:3]
+    ztop_ = named(u, "ztop", 'FLOAT', u.place()); sx_ = named(u, "sx", 'FLOAT', u.place())
+    atplan = bmath(u, 'AND', cmp(u, 'GREATER_THAN', nz_, 0.99, u.place()), cmp(u, 'LESS_THAN', u.math('ABSOLUTE', u.math('SUBTRACT', pz_, ztop_, u.place()), None, u.place()), 0.01, u.place()), u.place())
+    atsect = bmath(u, 'AND', cmp(u, 'GREATER_THAN', nx_, 0.99, u.place()), cmp(u, 'LESS_THAN', u.math('ABSOLUTE', u.math('SUBTRACT', px_, sx_, u.place()), None, u.place()), 0.01, u.place()), u.place())
+    cutsel = bmath(u, 'OR', atplan, atsect, u.place())
+    sg = u.n('GeometryNodeSeparateGeometry', u.place(), domain='FACE'); u.L(g, sg.inputs['Geometry']); u.L(cutsel, sg.inputs['Selection'])
+    u.mass(sg.outputs['Inverted'], 'WHITE'); u.add(u.paint(sg.outputs['Selection'], 'PINK'))
+    sh = u.g("Show")
+    lines = [('k', u.sswitch(sh, [u.cat(["PLAN     cut at ", u.fmt(u.g("Plan Level"), 1), " m, look down"]), u.cat(["SECTION  cut at x = ", u.fmt(u.g("Section X"), 1), ", look in"]), "PLAN AND SECTION  both cuts"])),
+             ('p', "pink: the cut faces (poche)"), ('k', "draw the cut heavy, what is beyond light"),
+             ('k', "plus one elevation, one isometric, one perspective")] + tools("Boolean modifier with a big box", "Split Brep, Make2D")
+    u.code(lines, y=-0.8)
+    u.finish()
+    return done(key, sc, t, u, [("Plan Level", "Plan Level"), ("Section X", "Section X"), ("Show", "Show")])
+
+
+# ================================================================ 19 to 21: the exercise (static slides)
+def static_slide(key, num, title, body, right, scale=16.0):
+    sc, cam, hud = GK['make_slide'](key, num, title, body, None, scale=scale)
+    cam.location = (0, 0, 40); cam.rotation_euler = (0, 0, 0)
+    F = bpy.app.driver_namespace['SK']['FONT']; SK = bpy.app.driver_namespace['SK']
+    coll = bpy.data.collections["Slide UI " + key]
+    y = 3.55
+    for color, text, size, gap in right:
+        mat = {'k': SK['INK'], 'p': SK['INKP'], 'g': SK['INKG']}[color]
+        font = F['bold'] if size >= 0.4 else F['mono']
+        name = f"{key} · r{len([o for o in coll.objects if o.name.startswith(key + ' · r')])}"
+        SK['text_obj'](name, text, font, size, (-0.4, y), hud, mat, width=7.9, coll=coll)
+        y -= gap
+    bpy.context.window.scene = sc
+    GK['snap'](sc, "GEN_" + key[:2])
+    return sc
+
+
+def s19():
+    return static_slide("19 Exercise", 19, "PROJECT 4\nGENERATIVE STORE",
+        "Design a system, not an output.\n\nPick one generative strategy and one brand. Build a system that produces "
+        "stores of 40 to 64 m2 for that brand. Map its design space, select one result and present it as a competition entry.\n\n"
+        "Strategy and brand are approved in class on November 10. The three sheets are presented at the final review on December 11 "
+        "with the booklet and the GSM.",
+        [('k', "THE STRATEGIES", 0.42, 0.75),
+         ('k', "cellular automata      a cell reads its neighbours", 0.27, 0.42),
+         ('k', "agents, stigmergy      walkers read the field and leave trails", 0.27, 0.42),
+         ('k', "reaction-diffusion     two values spread and react", 0.27, 0.42),
+         ('k', "growth                 material joins at the edge", 0.27, 0.42),
+         ('k', "physics solver         forces settle into a form", 0.27, 0.65),
+         ('p', "one strategy  +  one brand  +  one environment", 0.3, 0.75),
+         ('k', "THE DATES", 0.42, 0.7),
+         ('k', "Nov 10   strategy and brand approved in class", 0.27, 0.42),
+         ('k', "Nov 17   sheet 1, the system, reviewed", 0.27, 0.42),
+         ('k', "Nov 24   sheet 2, the design space, reviewed", 0.27, 0.42),
+         ('k', "Dec 1    sheet 3, the proposal, reviewed", 0.27, 0.42),
+         ('p', "Dec 11   final review: three sheets, booklet (15%), GSM", 0.27, 0.42)])
+
+
+def s20():
+    return static_slide("20 Three Sheets", 20, "THREE SHEETS",
+        "Each sheet is 17 x 11 inches, in your Graphic Standards Manual.\n\n"
+        "Sheet 1 explains the algorithm so someone else could run it. Sheet 2 shows how you explored and chose. "
+        "Sheet 3 is the proposal, drawn and post-processed like a competition entry.\n\n"
+        "The last sheet carries four times the weight of each of the other two. The booklet is 15%.",
+        [('k', "1  THE SYSTEM   5%", 0.42, 0.6),
+         ('k', "start, rule, environment, repetitions, each named and drawn", 0.26, 0.4),
+         ('k', "one frame per step, BIG-diagram style, captions in plain words", 0.26, 0.4),
+         ('k', "two or three generations of the same run, side by side", 0.26, 0.7),
+         ('k', "2  THE DESIGN SPACE   5%", 0.42, 0.6),
+         ('k', "a matrix: two parameters, same view and scale in every cell", 0.26, 0.4),
+         ('k', "readings: floor, room to move, headroom, entrance, front, light", 0.26, 0.4),
+         ('k', "select, breed small variations, select again, say why", 0.26, 0.7),
+         ('p', "3  THE PROPOSAL   20%", 0.42, 0.6),
+         ('k', "a store of 40 to 64 m2 for your brand, from the selected result", 0.26, 0.4),
+         ('k', "elevation, section, isometric, perspective (at minimum)", 0.26, 0.4),
+         ('k', "post-processed: person, dimensions, brand, annotations, one story", 0.26, 0.4),
+         ('g', "see Museum of Emotions, Last Nuclear Bomb Memorial (Buildner)", 0.26, 0.4)])
+
+
+def s21():
+    return static_slide("21 Rubric", 21, "HOW IT IS\nJUDGED",
+        "Sheet 3 and the final booklet are read like a competition jury reads an entry.\n\n"
+        "Sheets 1 and 2 keep the course rubric: understanding 30%, communication 30%, technical execution 25%, exploration 15%.\n\n"
+        "Credit every supplied group and plugin. Keep the system editable.",
+        [('k', "THE COMPETITION RUBRIC", 0.42, 0.75),
+         ('k', "1  linework", 0.3, 0.46), ('k', "2  quality of drawings", 0.3, 0.46), ('k', "3  balance of color", 0.3, 0.46),
+         ('k', "4  layout", 0.3, 0.46), ('k', "5  hierarchy", 0.3, 0.46), ('k', "6  annotation", 0.3, 0.46),
+         ('k', "7  clarity of story", 0.3, 0.46), ('k', "8  clarity of diagrams", 0.3, 0.46),
+         ('k', "9  quality of overall presentation", 0.3, 0.75),
+         ('p', "also for sheet 3: fidelity to the generated result,", 0.27, 0.42),
+         ('p', "a convincing store at 40 to 64 m2", 0.27, 0.42)])
+
+
+
+GB = {f"s{n:02d}": globals()[f"s{n:02d}"] for n in range(1, 22)}
 GB['groups'] = groups
 bpy.app.driver_namespace['GB'] = GB
 print("generative_build ready")

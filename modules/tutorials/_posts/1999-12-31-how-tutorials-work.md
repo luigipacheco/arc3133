@@ -24,7 +24,7 @@ More videos will be added as they are recorded.
 
 ## Lesson notes
 
-Class and tutorial pages are posted through October 20 (Week 9), including attractors. Projects 1 to 3 are posted with current requirements, weights and deadlines; Project 4 is posted when it begins. Later class and tutorial pages are posted as their topics begin.
+Class and tutorial pages are posted through November 3 (Week 11), including generative design. Projects 1 to 4 are posted with current requirements, weights and deadlines. Later class pages are posted as their topics begin.
 
 Open the posted lessons below; later lessons will be added as the course progresses.
 
@@ -35,9 +35,14 @@ Open the posted lessons below; later lessons will be added as the course progres
 | [U03 — Descriptive Geometry]({{ site.baseurl }}/modules/tutorials/u03-geometry-from-scratch/) | Weeks 4, 5 | Posted |
 | [U04 — Arrays]({{ site.baseurl }}/modules/tutorials/u04-arrays-and-lists/) | Weeks 6, 7 | Posted |
 | [U05 — Attractor]({{ site.baseurl }}/modules/tutorials/u05-attractors/) | Week 9 | Posted |
-| U07 — Volumetric Data and Fields | Weeks 10, 11 | Posted after the class |
-| U09 — Discretizing Geometry | Week 12 | Posted after the class |
-| U10 — Final | Week 12 | Posted after the class |
+| [U07 — Generative Systems]({{ site.baseurl }}/modules/tutorials/u07-generative-systems/) | Weeks 10, 11, 12 | Posted |
+| U10 — Final | Weeks 13, 14, 15 | Posted after the class |
+
+## Possible intermediate class
+
+**Contour fabrication.** Contour sections, numbered parts and a laser-cut model. Removed from the required Project 4 on November 2, 2026; the three lessons stay posted for anyone who wants to build a physical model of a selected result.
+
+Optional lesson notes — Discretizing Geometry — *not yet released*
 
 
 ## Vocabulary

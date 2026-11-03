@@ -1,13 +1,13 @@
 # EDIT THIS FILE for the learning sequence, briefs, dates and grading.
 # Run: python scripts/sync_course.py
 # University and standing course policy wording is in policies.md.
-revision: '2026-10-19'
+revision: '2026-11-02'
 
 status: Current course requirements and weekly deadlines
 
-student_notice: 'Weekly deadlines: attractors (3.4 and 3.5) October 27; field matrix (4.1) November 3; architectural
-  envelope (4.2) November 10; contour model (4.3) November 17. Digital submissions are due at 11:59 PM Eastern Time;
-  bring the contour model to class on November 17.'
+student_notice: 'Project 4 (November 2 revision): three sheets presented at the final review on December 11, no laser-cut
+  model. November 3: generative design class and the new brief. November 10: your generative strategy and your brand
+  must be approved in class. Work already done on the field matrix counts toward the 4.2 sheet.'
 
 course:
   code: ARC 3133-001
@@ -29,7 +29,7 @@ course:
     office_hours: By appointment
   ta: None assigned
   prerequisites: ARC 1301, ARC 1302, ARC 2303 and ARC 2304, each with a minimum grade of C
-  final_window: December 10–16, 2026; exact review slot to be confirmed
+  final_window: December 11, 2026 (no class in December)
   midterm_week: 9
   deadline_timezone: Eastern Time
 
@@ -56,9 +56,9 @@ decisions:
   - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
   - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width,
     Depth and Height.
-  - Align visual assignments and fabrication with the same developing geometry.
+  - Align visual assignments with the same developing geometry.
   - Establish one source of curriculum information before preparing the remaining Blender class files.
-  - 'Use the instructor-approved grading allocation: 5%, 15%, 30%, 35% across the four projects, 10% booklet and
+  - 'Grading allocation (November 2 revision): 5%, 15%, 30%, 30% across the four projects, 15% booklet and
     5% participation. Midterm accumulates the first five submissions (40% of the course).'
   - All work through Arrays — 1, 2.1, 2.2, 3.1 and 3.2 — is due Sunday, October 18 at 11:59 PM, uploaded to Teams,
     which leaves two days to review it before grades go on Canvas. The midterm grade is the accumulated grade of
@@ -69,39 +69,37 @@ decisions:
     retrospective deliverables.
   - 'Learning-focused briefs: GSM; CSG and slicing; descriptive module; repetition, conditions and architectural
     application; attractor studies and architectural application.'
-  - 'Three-stage final: student-built 5 x 5 matrix, a pavilion or small-shop envelope within 12 x 12 x 12 m, and
-    a registered contour model.'
-  - Finish new content by Week 12, submit the contour model in Week 13 and use the remaining classes for feedback,
-    revisions and the booklet.
-  - 'Current Project 4 weights are 10% matrix, 15% architectural development and 10% fabrication. After the October
-    20 attractor class, each assignment is due the following week: 3.4-3.5 October 27; 4.1 November 3; 4.2 November
-    10; 4.3 November 17.'
+  - 'Project 4 (revised November 2): a generative system that produces stores for a brand, 40 to 64 m2. Three sheets
+    presented at the final review on December 11: the system (algorithm diagram), the design space (matrix and selection)
+    and the proposal (competition-style sheet). No laser-cut model.'
+  - Generative design is taught November 3. Strategy and brand are approved in class on November 10. Weeks 13 to 15
+    are working sessions on the three sheets and the booklet.
+  - 'Project 4 weights: 4.1 system 5%, 4.2 design space 5%, 4.3 proposal 20%; the booklet rises to 15%. The three
+    sheets are due with the booklet at the final review.'
   administrative:
   - Confirm the room, final review slot and School review blackout dates for the remaining semester.
-  - Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time
-    limits.
   - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file
     preparation environment; equivalent files and recordings are not yet promised as available.
   - Confirm the attendance sign-in method and the accreditation criteria used by the School.
-  - Post and test the material library. Supply generative texture/SDF/volume tools before 4.1 and contouring tools
-    before 4.3, with usage notes.
-  - Confirm laser-cut stock and machine capacity for the final model; approve any optional printing separately.
+  - Post the generative example files (the interactive Blender decks) and the Grasshopper plugin list (Rabbit, Culebra,
+    Anemone, Kangaroo) with usage notes before November 10.
+  - Confirm the December 11 final review room and schedule.
 
 description: |
   Use computational methods to build, vary and communicate architectural form. Each assignment asks you to explain what your system does and demonstrate it through a clear result.
 
-  P1 establishes graphic standards. P2 is procedural: transformations, Boolean operations and ordered instructions. P3 is parametric: descriptive geometry, lists, reusable modules, repetition, conditions and attractors. P4 is generative: systematic field exploration, an architectural envelope and a fabricated contour model.
+  P1 establishes graphic standards. P2 is procedural: transformations, Boolean operations and ordered instructions. P3 is parametric: descriptive geometry, lists, reusable modules, repetition, conditions and attractors. P4 is generative: a system that explores a design space you have not mapped, read, compared and developed into one proposal.
 
   Use real architectural precedents for CSG and module construction. In 3.5, reuse the existing panel to design an architectural application with attractors. Use your Graphic Standards Manual throughout. Plain-language explanations, readable drawings and useful parameter values matter more than formal mathematical notation on assignment sheets. Explained mathematics remains in the lessons and presentations.
 
-  Project 4 develops one pavilion or small shop within a maximum 12 x 12 x 12 m envelope. All new required instruction ends by Week 12. The contour model is due in Week 13; the remaining classes support feedback, revisions and booklet preparation.
+  Project 4 designs a system, not an output: a generative strategy that produces stores of 40 to 64 m2 for a brand you choose. You explain the algorithm, map its design space, select one result and present it as a competition-style sheet. The three sheets are presented at the final review on December 11 together with the booklet and the revised Graphic Standards Manual.
 
 pacing: |
   Attractors are taught October 20. Submit the 3.4 studies and 3.5 architectural application together on October 27. Each subsequent class introduces the next assignment, due one week later.
 
-  October 27: submit 3.4-3.5 and begin the student-built 5 x 5 matrix (4.1). November 3: submit 4.1 and begin the pavilion or small-shop envelope (4.2). November 10: submit 4.2 and begin contour fabrication (4.3). November 17: bring the physical contour model to class and submit its fabrication sheet and files.
+  October 27: submit 3.4-3.5. November 3: generative design, and Project 4 is reissued as three sheets. November 10: your generative strategy and your brand are approved in class. November 17, 24 and December 1 are working sessions: the system sheet, the design-space sheet and the competition sheet are reviewed in progress, in that order.
 
-  Digital submissions are due at 11:59 PM Eastern Time on each due date. All new required content ends November 10 (Week 12). November 17 begins feedback on the completed project; November 24 and December 1 support revisions, documentation and booklet preparation. No new graded assignment is due December 1. The booklet and revised GSM remain due at the December 10-16 final review; the exact review slot will be announced.
+  There is no class in December. The three Project 4 sheets, the booklet and the revised GSM are presented at the final review on December 11. No graded submission is due December 1.
 
   The recorded midterm deadline remains October 18 at 11:59 PM Eastern Time on Teams for 1, 2.1, 2.2, 3.1 and 3.2. Review that work using the evidence already submitted; this schedule adds no retrospective deliverables or midterm assessment.
 
@@ -110,7 +108,7 @@ format: |
 
   Bring your editable file to every class. Be ready to change an input, predict what will happen and explain the nodes involved. Reviews look at both your visual work and your understanding of the process.
 
-  Plan for at least six hours of work outside class each week, including fabrication preparation, tests and documentation. Classes and scheduled FabLab work are in person.
+  Plan for at least six hours of work outside class each week, including tests and documentation. Classes are in person.
 outcomes:
 - Build a consistent design system through color, type, composition and templating.
 - Interpret documented architecture using transformations, Boolean operations and clear instructions.
@@ -118,14 +116,14 @@ outcomes:
 - Construct a reusable module from points, edges, faces and lists, with meaningful parameter inputs.
 - Use repetition, nesting, indices, modulo and conditions to organize architectural patterns.
 - Use point and curve attractor fields to vary an existing panel and develop an architectural application.
-- Build a two-parameter matrix with supplied generative-field tools, interpret the results and refine a selected
-  architectural envelope.
-- Prepare aligned contour parts, test their assembly and communicate a coherent physical model.
+- Choose a generative strategy, explain it as a step-by-step algorithm and build a system that produces spaces.
+- Map a design space in a matrix, read it with architectural criteria, select a result and present it as a competition-style
+  proposal.
 
 software: |
   **The class files are made in Blender Geometry Nodes.** The earlier syllabus also allowed Rhino + Grasshopper; if you already work in an approved environment, you won't have to switch without notice. You don't need to know Python.
 
-  For visual work, use Illustrator, Photoshop, InDesign, Inkscape, GIMP, Scribus or a similar vector, raster or layout program. For production, use the slicer and cutting-file workflow the FabLab specifies.
+  For visual work, use Illustrator, Photoshop, InDesign, Inkscape, GIMP, Scribus or a similar vector, raster or layout program. For the Project 2 print, use the slicer workflow the FabLab specifies.
 
   Don't use template-based design tools to make your sheets, Graphic Standards Manual or booklet — the grid, typography, hierarchy and composition are your design work. That rules out Canva, Adobe Express, template-based Figma work, PowerPoint, Google Slides and similar tools.
 
@@ -134,13 +132,13 @@ presentation: |
 
   Assignment sheets should explain what the system does, which controls matter and why you chose the result. Use ordinary language, diagrams and relevant values; formal equations and mathematical derivations are not required. Teaching presentations may retain their explained mathematics.
 
-  Build your own geometry, repetition, conditions, attractor logic and 4.1 matrix. The instructor supplies the generative texture/SDF/volume tools, SDF Boolean operators and contouring groups for Project 4; understand and credit their inputs and outputs rather than rebuilding their internals. A noise-driven volume is not automatically an exact signed distance field.
+  Build your own geometry, repetition, conditions, attractor logic and generative system. The instructor supplies example files for the generative strategies (the interactive Blender decks) and the supplied field, SDF and volume groups; understand and credit their inputs and outputs rather than rebuilding their internals. Plugins (Rabbit, Culebra, Anemone, Kangaroo in Grasshopper; the Repeat zone, simulation zone, Cloth and Soft Body in Blender) are allowed and must be credited.
 
-  Open your submission from a clean folder and check the geometry, units and controls. Include the 3.4 study sheet with 3.5. Project 4 has a matrix sheet, an architectural envelope sheet and a fabrication sheet accompanying the physical model.
+  Open your submission from a clean folder and check the geometry, units and controls. Include the 3.4 study sheet with 3.5. Project 4 has three sheets: the system, the design space and the proposal.
 
   Submission packaging: each assignment uses a folder named Lastname_Firstname followed by its code: GSM, P2a, P2b, P3a, P3b, P3c, P4a, P4b or P4c. Use the same base name for the presentation PDF. P3c contains both 3.4 and 3.5; do not upload the study sheet twice. Sheet PDFs use 17 x 11 inch landscape pages and the GSM. The 2.2 documentation can reuse existing project pages and has no prescribed page count.
 
-  Editable source means the working native file, not just an exported mesh: .blend, or .gh with its referenced .3dm in an approved GH workflow. Keep referenced assets with the source and distinguish the finished result from studies. Fabrication exports supplement the editable source. Package the layout source for the GSM and booklet. Use the announced submission channel; the recorded midterm upload remains Teams. Keep clean folder names if a ZIP upload is required.
+  Editable source means the working native file, not just an exported mesh: .blend, or .gh with its referenced .3dm in an approved GH workflow. Keep referenced assets with the source and distinguish the finished result from studies. Package the layout source for the GSM and booklet. Use the announced submission channel; the recorded midterm upload remains Teams. Keep clean folder names if a ZIP upload is required.
 
   Before uploading, open the PDF at actual size, check sheet count and labels, reopen the native file from the submission folder, and confirm that links, units and controls reproduce the work shown. Naming and packaging clarify the current submissions; completed midterm work is not subject to retrospective resubmission.
 
@@ -149,9 +147,7 @@ fabrication: |
 
   2.2: print the CSG object within 60 mm on each axis and the existing 200 g filament allowance, including failed attempts. Use orientation, splitting or geometry adjustments to avoid or reduce supports. Inspect the layer preview; bridging is acceptable when it works. The recorded midterm upload includes photographs of the print.
 
-  4.3: fabricate the 4.2 envelope as numbered contour parts with registration and a tested holding method. The architectural envelope is at most 12 x 12 x 12 m. At 1:50 it is at most 24 cm per axis; the existing physical-model limit remains 30 cm per axis. Use one lab-confirmed material sheet. Test thickness, kerf, alignment and assembly before the full cut. Optional printed components require a separate allocation.
-
-  The two physical outcomes are the CSG print and the final contour model. Document tests, failures and revisions; include finished-model photographs in the project documentation.
+  The CSG print is the one physical outcome of the course. The laser-cut contour model was removed from Project 4 on November 2, 2026; the contour lessons remain posted as an optional reference. Document tests, failures and revisions of the print; include finished-print photographs in the project documentation.
 
 ai: |
   This course teaches node graphs and geometric reasoning. No Python or AI tool-building assignment is required.
@@ -164,11 +160,11 @@ ai: |
 assessment_notes: |
   Each graded assignment is assessed once. Parts 3.2.1-3.2.3 form one 10% assignment. The 3.4 attractor study is formative and is included with the 3.5 architectural application, which retains the existing 10% allocation.
 
-  The first five assignment weights and the 40% accumulated midterm total remain unchanged. Project 4 allocation: 4.1 matrix 10%, 4.2 architectural envelope 15%, 4.3 fabrication 10%. Project 4 remains 35%; the booklet remains 10% and participation 5%. The Project 4 allocation is current; recorded midterm grades are unchanged.
+  The first five assignment weights and the 40% accumulated midterm total remain unchanged. Project 4 allocation (November 2 revision): 4.1 the system 5%, 4.2 the design space 5%, 4.3 the proposal 20%. Project 4 is 30%; the booklet is 15% and participation 5%. Recorded midterm grades are unchanged.
 
-  Digital assignments: understanding 30%, visual communication 30%, technical execution 25%, exploration 15%. Explain your choices, demonstrate working controls, communicate the architecture clearly and make purposeful comparisons. Formal notation is not an assessment criterion. In Project 4, explain and use the supplied groups; their internal algorithms are not a student construction requirement.
+  Digital assignments through 4.2: understanding 30%, visual communication 30%, technical execution 25%, exploration 15%. Explain your choices, demonstrate working controls, communicate the architecture clearly and make purposeful comparisons. Formal notation is not an assessment criterion. In Project 4, explain and credit any supplied group or plugin; its internal algorithm is not a student construction requirement.
 
-  Fabrication: preparation and strategy 30%, fabrication quality 30%, documentation 25%, testing and revision 15%. GSM: visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%. The booklet retains revision 40%, documentation 35% and graphic identity 25%.
+  Competition-sheet rubric, used for 4.3 and for the final booklet: linework, quality of drawings, balance of color, layout, hierarchy, annotation, clarity of story, clarity of diagrams and quality of the overall presentation. GSM: visual quality and hierarchy 40%, consistency and usability 30%, tested applications 20%, completeness 10%. The booklet retains revision 40%, documentation 35% and graphic identity 25%, read through the competition-sheet rubric.
 
 grade_scale: |
   | Grade | Percentage |
@@ -494,60 +490,62 @@ units:
     are different responses. Use the small For Each Geometry Element zone only when rebuilding each prefab with its own
     parameter. Scenes 07-08 repeat the already explained method; they are checkpoints, not additional assignments.
 - id: U07
-  title: Volumetric Data and Fields
-  url_slug: point-clouds-and-the-transition-to-volumes
+  title: Generative Systems
+  url_slug: generative-systems
   vocabulary:
-  - sample
-  - point cloud
-  - origin
-  - units
-  - decimation
-  - density
-  - voxel
-  - radius
-  - scalar field
-  - implicit surface
-  - signed distance field
-  - isosurface
+  - generative
+  - random and noise
+  - seed
   - threshold
-  - noise
-  - resolution
-  goal: Use supplied generative-field tools to explore two parameters systematically and develop a selected architectural
-    envelope.
+  - rule
+  - generation
+  - neighbour
+  - cellular automaton
+  - agent
+  - stigmergy
+  - reaction-diffusion
+  - growth
+  - physics solver
+  - design space
+  - selection
+  goal: Choose a generative strategy, explain it as a step-by-step rule, and use it to explore a design space you
+    have not mapped.
   steps:
-  - Inspect the supplied texture/SDF tools and identify their controls and outputs.
-  - Choose two controls, set five values for each and construct a 5 x 5 matrix.
-  - Read the comparison and choose a promising result.
-  - Refine it into a small pavilion or shop envelope with usable space and intentional openings.
-  exercise: '4.1: a labeled 25-volume isometric matrix. 4.2: plan, section and isometric of the selected architectural
-    envelope.'
-  connection: Continue the selected envelope into contour fabrication in 4.3. Point-cloud examples and their mathematical
-    explanations are supplementary, not a separate submission.
+  - 'Start, rule, repeat: every generative system is a starting state, a rule that reads its own result, and a number
+    of repetitions. Name all three for the strategy you pick.'
+  - 'Pick one family and learn its rule: cellular automata (a cell reads its neighbours), agents (a walker reads
+    the field and leaves a trail), reaction-diffusion (two values spread and react), growth (material joins at the
+    edge) or a physics solver (forces settle into a form).'
+  - 'Give the rule an environment: a site, a brand constraint, an attractor or a boundary that changes where the rule
+    may act.'
+  - 'Read the results with architectural questions: is there a floor, room to move, headroom, an entrance, a front?
+    Mark where a store of 40 to 64 m2 fits.'
+  - Map the design space in a matrix of two parameters, select one result, and breed small variations of it before
+    choosing again.
+  exercise: 'Project 4: the system sheet, the design-space sheet and the competition sheet for a store of 40 to
+    64 m2.'
+  connection: The three sheets go into the final booklet. The procedural and parametric decks are the same method
+    at the earlier stages; the generative deck is the one for this unit.
   pseudocode: |
-    cloud = load("site.ply")
-    print(len(cloud))                          # state this before
+    state = start(seed)                        # noise above a threshold, one cell, a few walkers
 
-    cloud = decimate(cloud, keep=0.05)
-    print(len(cloud))                          # and after
+    for generation in range(count):            # the rule reads its own result
+        state = rule(state, environment)
+        layers.append(state)                   # keep every generation
 
-    for p in cloud:
-        p.density = len(within(cloud, p, radius))
+    for cell in layers[k]:                     # read a result
+        cell.room = floor_below(cell) and clearance(cell) >= 1.5 and headroom(cell) >= 2.5
 
-    volume = voxelize(cloud, size=0.5)
-
-    # A designed field can also define a volume.
-    def field(p):                              # a shape as a function
-        a = sphere_sdf(p, center_a, r_a)
-        b = box_sdf(p, center_b, size_b)
-        return smooth_min(a, b, k)             # the blend comes free
-
-    grid    = sample(field, bounds, resolution)
-    surface = extract(grid, iso=0.0)           # where the field is zero
-  teaching_note: Students build the matrix themselves using earlier repetition skills. Instructors supply the field
-    groups. Keep other settings and display scale fixed while varying the two chosen controls.
+    matrix = [[run(seed, threshold) for threshold in thresholds] for seed in seeds]
+    parent = pick(matrix)                      # you select, the rule proposes
+    children = [run(parent, mutate(0.03)) for _ in range(8)]
+  teaching_note: Teach with the interactive deck Introduction-to-Generative-Design.blend (one scene per slide). Keep
+    the system simple; the sheets are judged on how clearly the algorithm is explained and how well one result is
+    developed, not on how exotic the rule is.
 - id: U09
   title: Discretizing Geometry
   url_slug: contour-sections-and-physical-parts
+  optional: true
   vocabulary:
   - section plane
   - contour
@@ -557,18 +555,18 @@ units:
   - registration
   - kerf
   - nesting
-  goal: Use contours and sections to turn a volume into parts you can fabricate.
+  goal: Use contours and sections to turn a volume into parts you can fabricate. Optional since November 2, 2026;
+    the laser-cut model is no longer part of Project 4.
   steps:
   - Use the supplied contouring group to slice your volume and put the resulting curves in order.
-  - Choose one slicing direction and spacing that suit the form, the material thickness and the model scale. Alternatives
-    are shown in class; there is no minimum number of slices and no comparison sheet to submit.
+  - Choose one slicing direction and spacing that suit the form, the material thickness and the model scale.
   - Close and clean the profiles you want; turn them into parts with the material's thickness and a clear way to
     line them up (registration).
   - Test the fit and the kerf, then number, nest and cut the parts, and document the assembly.
   exercise: Compare the continuous volume, its ordered contours and the assembled parts. Explain what is lost and
     gained along the way.
-  connection: The volume you choose in 4.2 becomes the ordered parts of 4.3 and the laser-cut model of 4.3. Build
-    one fabrication sheet across both stages; printed parts are optional.
+  connection: In a stacked generative system (time becomes height) the generations are already the contours; one
+    generation can be one sheet. A physical model is optional and is not graded.
   pseudocode: |
     sections = []
     for k in range(count):
@@ -585,22 +583,22 @@ units:
   title: Final
   url_slug: final
   vocabulary:
-  - fabrication
-  - fit
-  - assembly
+  - competition sheet
+  - post-processing
+  - hierarchy
+  - annotation
   - documentation
   - revision
-  goal: Assemble and document one laser-cut model, make your chosen revisions and complete the final booklet.
+  goal: Finish the three Project 4 sheets, make your chosen revisions and complete the final booklet.
   steps:
-  - Test material, fit and connections before full production.
-  - Fabricate and assemble the selected parts within your confirmed lab allocation.
-  - Add photographs and observations to the fabrication sheet you started in 4.3; you don't need a separate model
-    sheet.
+  - 'Week 13: the system sheet reviewed in progress. Week 14: the design-space sheet. Week 15: the competition sheet.'
+  - 'Post-process the drawings of the selected result: one elevation, one section, one isometric and one perspective
+    at minimum, with a person, a scale and the brand.'
   - After critique, make your chosen revisions. Reuse the sheets that worked and your Graphic Standards Manual;
     finish the booklet you have built through the semester and check all files.
-  exercise: Bring a fabrication test, a documented revision and a booklet spread for review.
-  connection: Submit the booklet, revised manual, editable files and required fabrication work at the final review.
-    Follow the BOOK and 4.3 briefs.
+  exercise: Bring the sheet in progress and a booklet spread for review every week.
+  connection: Present the booklet, the revised manual and the three Project 4 sheets at the final review on December
+    11. Follow the BOOK and Project 4 briefs.
 
 projects:
 - id: P1
@@ -957,154 +955,147 @@ projects:
       - 'The combined 3.4-3.5 submission carries 10%. Digital rubric: understanding 30%, communication 30%, technical
         execution 25%, exploration 15%.'
 - id: P4
-  title: Generative Architectural Envelope
+  title: Generative Store
   approach: Generative
   units:
   - U07
-  - U09
   - U10
-  description: Build a two-parameter field matrix, refine one result into a pavilion or small shop within 12 x 12
-    x 12 m, then fabricate a contour model.
+  description: Design a system, not an output. Pick a generative strategy and a brand, build a system that produces
+    stores of 40 to 64 m2, map its design space, select one result and present it as a competition-style sheet.
   milestones:
   - id: P4a
-    title: Generative fields - a two-parameter matrix
-    kind: visual
-    release: 10
-    due: 11
-    weight: 10
-    deliverable: 'One 17 x 11 inch sheet: labeled 5 x 5 matrix, selected result and observations; editable matrix
-      and supplied groups.'
-    requirements:
-    - Choose two meaningful parameters, such as texture scale and threshold. Set five distinct values for each.
-    - 'Build a 5 x 5 matrix: one parameter changes across columns, the other down rows. Each of the 25 volumes represents
-      one combination. The instructor supplies field tools, not a completed matrix.'
-    - Use the same isometric view, material, lighting and display scale for all cells. Keep other design settings
-      fixed. Label both axes and their five values.
-    - Mark promising results and briefly explain what each parameter changes and which result you want to develop.
-      Keep the graph editable; do not manually model 25 unrelated objects.
-    - No separate point-cloud or site-analysis submission is required. You do not need to rebuild the internal SDF
-      tools.
-    number: '4.1'
-    brief:
-      description: Use the instructor-provided generative texture and SDF/volume groups to explore how two controls
-        change a volume. Build the comparison matrix yourself.
-      learn:
-      - Explain the supplied groups through their inputs, outputs and visible effects.
-      - Use repetition to organize a systematic two-parameter comparison.
-      - Read the matrix, identify relationships and select promising spatial results.
-      deliverables:
-      - '**Presentation:** one 17 x 11 inch landscape sheet, `Lastname_Firstname_P4a.pdf`, due November 3.'
-      - '**Matrix:** 25 isometric volumes arranged in five rows and five columns. Name the two parameters and label
-        their five values along the corresponding axes; each cell must show the matching pair of settings.'
-      - '**Study notes:** use consistent view, lighting, material and display scale. Mark the result selected for
-        4.2 and add short observations explaining what the two parameters change and why that result is promising.'
-      - '**Editable source:** include your student-built matrix, the instructor-provided field groups with credit,
-        and all texture/data dependencies. The graph must produce the 25 combinations and retain the selected settings.'
-      - '**Package:** `Lastname_Firstname_P4a/`. Match each row/column label to the working controls and check that
-        the selected result can be reopened for 4.2.'
-      evaluation:
-      - A working student-built matrix, controlled variation of two parameters, readable comparison and thoughtful
-        selection.
-      - 'Course weight 10%. Digital rubric: understanding 30%, communication 30%, technical execution 25%, exploration
-        15%.'
-    due_time: '23:59'
-  - id: P4b
-    title: Architectural envelope - pavilion or small shop
+    title: The system - algorithm and diagram
     kind: visual
     release: 11
-    due: 12
-    weight: 15
+    due: final
+    weight: 5
+    number: '4.1'
+    checkpoints:
+    - week: 12
+      text: 'Approval in class: your generative strategy, your brand and a first test. Both strategy and brand must
+        be approved on November 10.'
+    - week: 13
+      text: Bring the system sheet in progress for review.
+    deliverable: 'One 17 x 11 inch sheet: the generative algorithm as a step-by-step diagram, with the start, the rule,
+      the environment and the readings; editable system.'
     requirements:
-    - Choose a pavilion or small shop and state its intended use. Fit the entire envelope within 12 x 12 x 12 meters;
-      these are maximum dimensions, not a required cube.
-    - Develop the selected field through its controls and necessary openings. Provide a clear entrance, usable occupied
-      space, circulation and a deliberate relationship between ground, enclosure and roof.
-    - You may also use instructor-provided SDF Boolean operators - union, subtraction and intersection - to combine
-      volumes, carve openings or refine the envelope. Use the operations that help your design; you do not need
-      to use every operator or build the supplied tools yourself.
-    - Use openings to support access, light or views. Show scale with a person and a few key dimensions.
-    - Produce one plan, one section and one isometric from the same resolved model. Select drawing locations that
-      explain the interior and its connection to the exterior.
-    - Focus on a convincing envelope and architectural visualization. Detailed services, full retail planning and
-      construction documentation are outside this exercise. Keep the form suitable for contour fabrication.
-    deliverable: 'One 17 x 11 inch sheet: plan, section, isometric, use/scale and design explanation; editable envelope.'
-    number: '4.2'
+    - 'Pick one generative strategy from the overview (cellular automata, agents and stigmergy, reaction-diffusion,
+      growth, physics solvers) or propose another. Pick a real brand for a store of 40 to 64 m2. Both are approved
+      in class on November 10.'
+    - 'Name the start, the rule and the repetitions. State what the rule reads (neighbours, a field, a trail, forces)
+      and what the environment is (site, boundary, attractor, brand constraints).'
+    - 'Draw the algorithm step by step, BIG-diagram style: one frame per step, in order, showing how the system
+      produces spaces. Caption each frame in plain words; no code is required.'
+    - Show two or three generations or iterations from the same run so the reader sees the rule acting on its own
+      result.
+    - Keep the system editable and simple. Supplied groups and plugins are allowed; credit them and explain their
+      inputs and outputs.
     brief:
-      description: Select a result from 4.1 and fine-tune its field into a compelling architectural envelope for
-        a small pavilion or shop. Instructor-provided SDF Boolean operators are available to assist design development.
+      description: Explain your generative system so that someone else could run it. The sheet is a diagram of the
+        algorithm, not of a building.
       learn:
-      - Make architectural judgments about scale, enclosure, openings, occupied space and ground connection.
-      - Refine a generative result into one coherent proposal rather than collecting more unrelated variations.
-      - Understand how supplied SDF Boolean operations can combine or carve volumes to support architectural intentions.
-      - Use plan, section and isometric together to explain space and architectural intent.
+      - Define a generative system as a start, a rule and repetitions, and tell it apart from a procedure and from
+        a parametric model.
+      - Explain a rule in plain words and in a diagram, step by step.
+      - Choose an environment and brand constraints that give the rule a reason to produce space.
       deliverables:
-      - '**Presentation:** one 17 x 11 inch landscape sheet, `Lastname_Firstname_P4b.pdf`, due November 10.'
-      - '**Three drawings:** one plan, one section and one isometric of the same pavilion or small-shop envelope.
-        Indicate the section cut on the plan; use clear drawing labels and scale information.'
-      - '**Architectural information:** state the intended use; identify the selected 4.1 result; show entrance/access,
-        usable space, openings and the relationship to the ground. Include a person and key dimensions demonstrating
-        the maximum 12 x 12 x 12 m envelope.'
-      - '**Design explanation:** briefly name the field controls and any supplied SDF Boolean operations used to
-        develop the architecture. No additional Boolean comparison sheet is required.'
-      - '**Editable model:** retain the chosen field settings and any Boolean operations, with supplied groups credited
-        and assets packaged in `Lastname_Firstname_P4b/`. Check that all three drawings come from this model and
-        that it is ready for contouring.'
+      - '**Presentation:** one 17 x 11 inch landscape sheet, `Lastname_Firstname_P4a.pdf`, presented at the final
+        review on December 11 and reviewed in progress on November 17.'
+      - '**The algorithm:** the start, the rule, the environment and the number of repetitions, each named and drawn.
+        One frame per step, read in order, with a short caption in plain words.'
+      - '**Generations:** two or three states of the same run, side by side, with what changed between them marked.'
+      - '**Brand and program:** the brand, the store size (40 to 64 m2) and the constraints you gave the system.'
+      - '**Editable source:** the working system (.blend or .gh with its .3dm) with supplied groups and plugins
+        credited, in `Lastname_Firstname_P4a/`.'
       evaluation:
-      - Architectural clarity, quality of spatial refinement, consistent drawings and an understandable connection
-        between the field controls, any Boolean operations used and design decisions.
-      - 'Course weight 15%. Digital rubric: understanding 30%, communication 30%, technical execution 25%, exploration
+      - A system another person could run from the sheet; a clear start, rule and environment; readable step-by-step
+        diagrams.
+      - 'Course weight 5%. Digital rubric: understanding 30%, communication 30%, technical execution 25%, exploration
         15%.'
-    due_time: '23:59'
-  - id: P4c
-    number: '4.3'
-    title: Contour model - registration and assembly
-    kind: fabrication
+  - id: P4b
+    title: The design space - matrix and selection
+    kind: visual
     release: 12
-    due: 13
-    weight: 10
+    due: final
+    weight: 5
+    number: '4.2'
+    checkpoints:
+    - week: 14
+      text: Bring the design-space sheet in progress for review.
+    deliverable: 'One 17 x 11 inch sheet: a two-parameter matrix of results, the readings used to compare them, the
+      selected result and its variations; editable matrix.'
     requirements:
-    - Use the supplied contouring tools on the 4.2 envelope. Choose one slicing direction and spacing appropriate
-      to the material and form; there is no fixed minimum contour count.
-    - 'Use 1:50 as the starting model scale: a 12 m envelope becomes 24 cm. Keep the completed model within the
-      existing 30 cm limit on each axis; review another scale with your professor.'
-    - Number the parts and include a registration mark or feature that establishes their alignment. Hold the model
-      using glue, rods, tabs, spacers, a jig or another simple tested method.
-    - Test a small group of parts before the full cut. Check material thickness, kerf, alignment and how the assembly
-      preserves openings and spatial qualities.
-    - Prepare clean full-size cutting curves and a layout within one lab-confirmed sheet of material. Confirm stock
-      and machine access; optional printed components need their own allocation.
-    deliverable: One assembled contour model; one 17 x 11 inch fabrication sheet; separate full-size cutting file,
-      editable source, part list and photographs.
+    - 'Build a matrix: one parameter changes across the columns, another down the rows (seed, threshold, rule, reach,
+      steps). Use the same view, scale and display for every cell and label both axes with their values.'
+    - 'Read the matrix with architectural criteria you name: floor area, room to move, headroom, entrance, a front
+      to the street, light. Mark the results that fit a store of 40 to 64 m2.'
+    - 'Select one result and show a second round of small variations of it (breed), then your final choice. Explain
+      why in two or three sentences.'
+    - Work already done on the October field matrix can be reused here when it comes from your system.
     brief:
-      description: Translate the same pavilion or shop envelope into contour parts and assemble a physical model
-        that preserves its important spaces and openings.
+      description: Map part of the design space of your system, read it with architectural questions and select
+        the result you will develop.
       learn:
-      - Relate model scale, material thickness and contour spacing.
-      - Use registration marks or alignment features to place parts accurately.
-      - Test, revise and document a fabrication and assembly strategy.
+      - Use repetition to run one system many times under controlled variation.
+      - Read generative results with architectural criteria rather than by taste alone.
+      - Select, vary and select again, and explain the choice.
       deliverables:
-      - '**Physical submission:** bring one assembled contour model of your 4.2 design to class on November 17.
-        Use 1:50 as the starting scale and stay within 30 cm on each axis.'
-      - '**Presentation:** one 17 x 11 inch landscape fabrication sheet, `Lastname_Firstname_P4c.pdf`, due November
-        17 at 11:59 PM Eastern Time.'
-      - '**On the sheet:** chosen model scale, material/thickness, contour direction and spacing; a reduced numbered
-        cutting layout; a registration/assembly diagram; short test-and-revision notes; one overall model photograph
-        and one assembly/alignment detail.'
-      - '**Cutting file:** supply the full-size cutting curves separately in the FabLab-accepted format, with units
-        and part numbers. The reduced layout on the PDF is not the machine file.'
-      - '**Supporting files:** editable model/contouring source, material and part list, and original photographs
-        in `Lastname_Firstname_P4c/`. Include print/slicer files only if printed components were used.'
-      - '**Check:** part numbers agree across files and model, the registration method aligns the parts, the test
-        informed the final cut, and the assembled model corresponds to the plan, section and isometric in 4.2.'
+      - '**Presentation:** one 17 x 11 inch landscape sheet, `Lastname_Firstname_P4b.pdf`, presented at the final
+        review on December 11 and reviewed in progress on November 24.'
+      - '**Matrix:** at least 3 x 3, ideally 5 x 5, same view and scale in every cell, both parameters and their
+        values labelled.'
+      - '**Readings:** the criteria you used, shown on the matrix (colour, marks or numbers), and the results that
+        pass.'
+      - '**Selection:** the chosen parent, its variations and the final pick, with a short explanation.'
+      - '**Editable source:** the matrix definition that produces the cells, in `Lastname_Firstname_P4b/`.'
       evaluation:
-      - Preparation and fabrication strategy 30%; fabrication quality 30%; visual documentation 25%; testing and
-        revision 15%.
-      - Course weight 10%. Assess the parts, alignment, assembly and what the test improved, as well as fidelity
-        to the architectural proposal.
-    due_time: '23:59'
-  url_slug: volumetric-data
-  brief_title: Generative Architectural Envelope
-  brief_pdf: files/assignments/P4-Generative-Envelope.pdf
+      - A working matrix from your own system, controlled variation, readable comparison, named criteria and a
+        reasoned selection.
+      - 'Course weight 5%. Digital rubric: understanding 30%, communication 30%, technical execution 25%, exploration
+        15%.'
+  - id: P4c
+    title: The proposal - competition sheet
+    kind: visual
+    release: 12
+    due: final
+    weight: 20
+    number: '4.3'
+    checkpoints:
+    - week: 15
+      text: Bring the competition sheet in progress for review.
+    deliverable: 'One 17 x 11 inch competition-style sheet: post-processed elevation, section, isometric and perspective
+      of the selected store, with the brand, a person and a scale; editable model.'
+    requirements:
+    - 'Develop the selected result into a store of 40 to 64 m2 for your brand: entrance, a front, usable floor,
+      headroom, light. Keep what the system produced legible; post-process, do not redraw.'
+    - 'Draw at minimum one elevation, one section, one isometric and one perspective of the same model. Add a person,
+      key dimensions, the brand and short annotations.'
+    - 'Compose the sheet as a competition entry: one story, a clear hierarchy, balanced colour, consistent linework,
+      in your Graphic Standards Manual.'
+    - 'Reference: the winning sheets of the Museum of Emotions and the Last Nuclear Bomb Memorial competitions (see
+      Resources) set the level of drawing quality and post-processing we are looking for.'
+    brief:
+      description: Present the selected result as a competition entry. This sheet carries 20%, four times each of
+        the other two, and is judged on the quality of the drawings and the clarity of the story.
+      learn:
+      - Develop a generative result into an architectural proposal without losing what the system produced.
+      - 'Post-process drawings for a competition audience: linework, colour, hierarchy, annotation.'
+      - Tell one story across several drawings on one sheet.
+      deliverables:
+      - '**Presentation:** one 17 x 11 inch landscape sheet, `Lastname_Firstname_P4c.pdf`, presented at the final
+        review on December 11 and reviewed in progress on December 1.'
+      - '**Drawings:** one elevation, one section, one isometric and one perspective at minimum, all from the same
+        model, post-processed, with a person, dimensions and the brand.'
+      - '**Story:** a title, two or three sentences on the system and the selection, and annotations that connect
+        the drawings to the rule.'
+      - '**Editable model:** the selected result as generated plus the developed model, in `Lastname_Firstname_P4c/`.'
+      evaluation:
+      - 'Competition-sheet rubric: linework, quality of drawings, balance of color, layout, hierarchy, annotation,
+        clarity of story, clarity of diagrams, quality of overall presentation.'
+      - 'Course weight 20%. Also assessed: fidelity to the generated result and a convincing store at 40 to 64 m2.'
+  url_slug: generative-store
+  brief_title: Generative Store
+  brief_pdf: files/assignments/P4-Generative-Store.pdf
   brief_milestones:
   - P4a
   - P4b
@@ -1115,7 +1106,7 @@ assessments:
   title: Final booklet and review
   release: 1
   due: final
-  weight: 10
+  weight: 15
   checkpoints:
   - week: 14
     text: Bring a booklet spread and contents list for an ungraded progress check.
@@ -1124,18 +1115,19 @@ assessments:
     projects in assignment order, references and brief captions identifying substantive revisions. There is no fixed
     total page count.
   - 'Reuse the assignment sheets: 1 GSM; 2.1 process and 2.2 print documentation; 3.1 module; 3.2.1-3.2.3; 3.4 studies
-    and 3.5 application; 4.1 matrix, 4.2 envelope and 4.3 fabrication. Include each shared sheet once. Completed
-    midterm evidence remains valid.'
-  - Include an overall image and useful detail of the CSG print and contour model, with short process/testing notes.
-    Keep labels, typography and references consistent.
+    and 3.5 application; 4.1 the system, 4.2 the design space and 4.3 the proposal. Include each shared sheet once.
+    Completed midterm evidence remains valid.'
+  - Include an overall image and useful detail of the CSG print, with short process/testing notes. Keep labels, typography
+    and references consistent. The booklet is read with the competition-sheet rubric (linework, quality of drawings,
+    balance of color, layout, hierarchy, annotation, clarity of story, clarity of diagrams, overall presentation).
   - Submit `Lastname_Firstname_GSM.pdf` separately with the revised four-page manual, plus the editable booklet
-    layout and linked assets. Organize native project models and fabrication files in their assignment folders inside
+    layout and linked assets. Organize native project models in their assignment folders inside
     `Lastname_Firstname_BOOK/`.
   - Open the PDF and source from the final package; check page order, missing links, readable images and drawing
-    scales. Present the contour model and CSG documentation at the announced final review. The booklet deadline
-    remains the December 10-16 final-review window; the exact slot will be announced.
-  deliverable: One 17 x 11 inch landscape booklet PDF, a separate revised GSM PDF, editable booklet layout, organized
-    project sources and fabrication files.
+    scales. Present the booklet, the revised GSM and the three Project 4 sheets at the final review on December
+    11; there is no class in December.
+  deliverable: One 17 x 11 inch landscape booklet PDF, a separate revised GSM PDF, editable booklet layout and organized
+    project sources.
 - id: PART
   title: Attendance and participation
   release: 1
@@ -1195,30 +1187,30 @@ weeks:
     with two chosen parameters. The matrix sheet and editable source are due November 3.'
 - week: 11
   date: '2026-11-03'
-  focus: Submit 4.1 and begin 4.2. Refine one matrix result into a pavilion or small-shop envelope within 12 x 12
-    x 12 m. Supplied SDF Boolean tools may assist. Submit plan, section and isometric with the editable model on
-    November 10.
+  focus: 'Introduction to generative design: start, rule, repeat; noise and thresholds; cellular automata; agents
+    and stigmergy; reaction-diffusion; growth; physics solvers; reading a result; design space and selection. Project
+    4 is reissued as three sheets presented at the final. Pick a generative strategy and a brand for a store of 40
+    to 64 m2 before next class.'
 - week: 12
-  label: Last new topic - contour fabrication
+  label: Strategy and brand approval
   date: '2026-11-10'
-  focus: Submit 4.2 and begin 4.3. Learn contouring, numbered cutting files, registration, material tests and assembly.
-    Complete a small test before cutting the full model. The physical model and digital fabrication documentation
-    are due November 17.
+  focus: 'Approval in class: present your generative strategy, your brand and a first test. Both must be approved
+    today. Then start the system sheet (4.1): the algorithm, step by step.'
 - week: 13
-  label: Contour model submission and feedback
+  label: Working session - the system
   date: '2026-11-17'
-  focus: Bring the completed 4.3 contour model to class. Submit the fabrication sheet, cutting files and source
-    by 11:59 PM Eastern Time. Review the models and plan revisions and booklet documentation. No new required topic.
+  focus: Bring the system sheet in progress. Review the algorithm diagram, the generations and the environment. Start
+    the matrix (4.2).
 - week: 14
-  label: Project revisions and booklet
+  label: Working session - the design space
   date: '2026-11-24'
-  focus: Use feedback to refine project documentation and any model issues. Review a booklet spread and the revised
-    GSM. No new required topic or separate assignment.
+  focus: Bring the design-space sheet in progress. Review the matrix, the readings and the selection. Review a booklet
+    spread and the revised GSM. Start the competition sheet (4.3).
 - week: 15
-  label: Final documentation and booklet support
+  label: Working session - the proposal
   date: '2026-12-01'
-  focus: Support for project revisions, final photographs, file packaging and booklet preparation during studio
-    reviews. No new graded submission.
+  focus: Bring the competition sheet in progress. Review the drawings, post-processing, hierarchy and story. No graded
+    submission; everything is presented at the final review on December 11.
   no_due: true
 
 vocabulary:
@@ -1279,9 +1271,9 @@ vocabulary:
 materials_status: |
   Use the posted lessons, presentations and example files as learning references. Explained mathematics can remain in the teaching material; the revised briefs define the simpler submission requirements.
 
-  For Project 4, instructors provide generative texture/SDF/volume groups, SDF Boolean operators for 4.2 and contouring tools with usage notes before each stage begins. Students construct their own two-parameter matrix. Existing point-cloud examples are optional references, not a required analysis assignment. No new recording or teaching package is claimed as posted until it is linked and checked.
+  For Project 4, instructors provide the interactive Blender decks (procedural, parametric, generative), the supplied field, SDF and volume groups, and a list of Grasshopper plugins. Students build their own generative system from one of the strategies taught; supplied groups and plugins are credited.
 
-  Confirm final-project material stock and machine slots before production. The current briefs take precedence over old assignment instructions inside presentation decks; the explanatory mathematics in those decks remains useful.
+  The current briefs take precedence over old assignment instructions inside presentation decks; the explanatory mathematics in the decks remains teaching material.
 
 references:
   readings:
@@ -1302,6 +1294,12 @@ references:
     - ['@mantissa.xyz', 'https://www.instagram.com/mantissa.xyz/', 'A second point-cloud/section reference for visual comparison.']
     - ['@saul_kim_', 'https://www.instagram.com/saul_kim_/', 'Composition, restraint and spatial legibility.']
     - ['@facadepot', 'https://www.instagram.com/facadepot/', 'Components, façades and controlled variation.']
+  generative:
+    - ['Morphogenesis resources (Jason Webb)', 'https://github.com/jasonwebb/morphogenesis-resources', 'Project 4: one page per strategy (differential growth, DLA, reaction-diffusion, cellular automata, agents, physics), with pictures, papers and code.']
+    - ['The Nature of Code (Daniel Shiffman)', 'https://natureofcode.com/', 'Project 4: random and noise, forces, agents and steering, cellular automata, fractals and evolution, explained with running examples.']
+    - ['Museum of Emotions competition results (Buildner)', 'https://www.archdaily.com/1032328', 'Project 4.3: the level of drawing quality, post-processing and storytelling we are looking for on the competition sheet.']
+    - ['The Last Nuclear Bomb Memorial competition results (Buildner)', 'https://www.archdaily.com/1041457', 'Project 4.3: a second set of competition sheets to study for hierarchy, colour and annotation.']
+    - ['Grasshopper plugins for Project 4', 'https://www.food4rhino.com/', 'Rabbit (cellular automata, L-systems), Culebra (agents), Anemone (loops), Kangaroo (physics). Credit any plugin you use.']
   documentation:
     - ['BIG-style process diagram tutorial', 'https://www.youtube.com/watch?v=8Y5Rn3bDL5s', 'CSG 2.1: reference for the operation sequence and graphic presentation.']
     - ['Three-point lighting tutorial', 'https://www.youtube.com/watch?v=RDbrOpnIY7Q', 'Module 3.1: reference for one consistent key, fill and rim/back lighting strategy across three panel variations.']
@@ -1316,11 +1314,11 @@ instructor_notes: |
 
   Keep the instructor's requested numbering: 3.2.1, 3.2.2 and 3.2.3 are parts of one Arrays assignment; 3.4 is the three-attractor study; 3.5 is an architectural application. There is no separate 3.3 assignment. The study is formative, not a new weighted submission. Reuse the module, architecture and study sheet rather than requiring separate design starts.
 
-  Review completed midterm work as submitted. New architectural evidence, intersection demonstrations or revised sheet arrangements are not retrospective requirements. Keep the October 18 Teams deadline and recorded first-five weights. Use 10/15/10 across the three Project 4 stages, retaining its 35% total. Weekly deadlines are October 27 for 3.4-3.5, November 3 for 4.1, November 10 for 4.2 and November 17 for the physical and digital 4.3 submission.
+  Review completed midterm work as submitted. New architectural evidence, intersection demonstrations or revised sheet arrangements are not retrospective requirements. Keep the October 18 Teams deadline and recorded first-five weights. Use 5/5/20 across the three Project 4 sheets (November 2 revision); Project 4 is 30% and the booklet 15%. Weekly deadlines are October 27 for 3.4-3.5, November 3 for 4.1, November 10 for 4.2 and November 17 for the physical and digital 4.3 submission.
 
-  4.1 is a student-built matrix with two parameters at five values each. Provide only the field tools and guidance. 4.2 refines one result using field controls and optional instructor-provided SDF Boolean operators into a pavilion or small-shop envelope within 12 m in each direction; require plan, section and isometric of the same proposal. 4.3 fabricates that proposal through contours and registration. Point-cloud analysis and the former 4.4 stage are removed from required assignments.
+  November 2 revision of Project 4: no laser cutting. 4.1 is the system sheet (the generative algorithm as a step-by-step diagram), 4.2 the design-space sheet (matrix, readings, selection and breeding) and 4.3 the competition sheet (post-processed elevation, section, isometric and perspective of a store of 40 to 64 m2 for a brand). The strategy and the brand are approved in class on November 10. All three sheets are presented at the final review on December 11 with the booklet and the GSM. Judge 4.3 and the booklet with the competition-sheet rubric: linework, quality of drawings, balance of color, layout, hierarchy, annotation, clarity of story, clarity of diagrams, quality of overall presentation.
 
-  Teach 3.4 and introduce 3.5 in Week 9, matrix construction in Week 10, architectural refinement in Week 11 and fabrication preparation in Week 12. Week 13 receives the completed contour model; Weeks 13-15 provide feedback, revisions and booklet preparation. Existing examples may remain as supplementary teaching references; they are not additional assignments. All four projects now have concise synchronized PDF briefs. Keep standing policies unchanged.
+  Teach 3.4 and introduce 3.5 in Week 9, the supplied field tools in Week 10, generative design in Week 11 (Introduction-to-Generative-Design.blend) and approvals in Week 12. Weeks 13 to 15 are working sessions on the three sheets and the booklet. The contour lessons remain posted as an optional reference; they are not additional assignments.
 
 home:
   tagline: Build geometry with rules, vary it with data and communicate it through drawings, models and physical
@@ -1348,7 +1346,7 @@ home:
   how_we_work: |
     Each class is a short demonstration, then guided practice and critique. Bring your editable file every week: you should be able to change an input, predict what happens and explain why. Your Graphic Standards Manual sets the look of every sheet you present.
 
-    Fabrication runs through the semester: a 3D print in Project 2 and a laser-cut model in Project 4, with optional printed components. Complete the FabLab Safety Orientation before using any machine.
+    Project 2 ends in a 3D print; Project 4 ends in a competition-style sheet of a store your generative system produced. Complete the FabLab Safety Orientation before using any machine.
 
 teaching_sequence:
 - id: B01
@@ -1426,46 +1424,57 @@ teaching_sequence:
   - S07
   - S08
   - S09
-  delivery: 'October 27: submit the attractor assignment and begin 4.1. Students build the 5 x 5 matrix using supplied
-    field tools, due November 3. Point-cloud examples are supplementary.'
+  delivery: 'October 27: submit the attractor assignment. Supplied field tools and a first matrix; the matrix work
+    counts toward the revised 4.2. Point-cloud examples are supplementary.'
 - id: B06-volume
   weeks:
   - 11
-  focus: Architectural envelope - pavilion or small shop
+  focus: Introduction to generative design
   units:
   - U07
   sessions: []
-  delivery: 'November 3: submit 4.1 and develop the 4.2 pavilion or shop envelope using field controls and optional
-    supplied SDF Boolean operators. Plan, section, isometric and source are due November 10.'
+  delivery: 'November 3: generative design with the interactive deck: start, rule, repeat; noise and thresholds;
+    cellular automata; agents and stigmergy; reaction-diffusion; growth; physics solvers; reading, design space and
+    selection. Project 4 is reissued: pick a strategy and a brand by November 10.'
 - id: B07
   weeks:
   - 12
-  focus: Contouring, laser-cut preparation and assembly
+  focus: Strategy and brand approval, the system sheet
   units:
-  - U09
-  - U10
-  sessions:
-  - S10
-  - S11
-  - S12
-  delivery: 'November 10: submit 4.2 and introduce 4.3 contour fabrication, registration and assembly. Test before
-    the full cut. Bring the completed model November 17 and upload documentation that night. This is the last new
-    required content.'
+  - U07
+  sessions: []
+  delivery: 'November 10: every strategy and brand is approved in class with a first test. Then the system sheet:
+    the algorithm as a step-by-step diagram. This is the last new required content.'
 - id: B08
   weeks:
   - 13
   - 14
   - 15
-  focus: Model submission, revisions and booklet
-  units: []
+  focus: Working sessions - the three sheets and the booklet
+  units:
+  - U10
   sessions: []
-  delivery: 'Week 13: submit the contour model and fabrication documentation, and receive feedback. Weeks 14-15:
-    revise projects, document results and prepare the booklet. No new required topic; no separate December 1 submission.'
+  delivery: 'Weeks 13 to 15: the system sheet, the design-space sheet and the competition sheet reviewed in progress,
+    one per week, plus a booklet spread. No graded submission before the final review on December 11.'
+
+optional_classes:
+- id: B-contour
+  optional: true
+  weeks: []
+  focus: Contour fabrication
+  description: Contour sections, numbered parts and a laser-cut model. Removed from the required Project 4 on November
+    2, 2026; the three lessons stay posted for anyone who wants to build a physical model of a selected result.
+  units:
+  - U09
+  sessions:
+  - S10
+  - S11
+  - S12
 
 release:
-  note: Class and tutorial pages are posted through October 20 (Week 9), including attractors.
-    Projects 1 to 3 are posted with current requirements, weights and deadlines; Project 4 is posted
-    when it begins. Later class and tutorial pages are posted as their topics begin.
+  note: Class and tutorial pages are posted through November 3 (Week 11), including generative design.
+    Projects 1 to 4 are posted with current requirements, weights and deadlines. Later class pages are
+    posted as their topics begin.
   classes:
   - 1
   - 2
@@ -1476,16 +1485,20 @@ release:
   - 7
   - 8
   - 9
+  - 10
+  - 11
   tutorials:
   - U01
   - U02
   - U03
   - U04
   - U05
+  - U07
   assignments:
   - P1
   - P2
   - P3
+  - P4
   - BOOK
 
 blender:
@@ -1603,8 +1616,8 @@ blender:
     title: Volumetric Data and Fields — noise and surface extraction
     path: files/blender/07-advanced-volumes/Advanced-Volumes-Session-2.blend
     focus: Use noise to shape a volume and extract its surface.
-    exercise: Make two controlled noise variations and compare two resolutions. Choose one volume for the contour
-      sessions.
+    exercise: Make two controlled noise variations and compare two resolutions. Noise above a threshold is the
+      starting state of the generative systems in Project 4.
     scenes:
     - Noise field
   - id: S10
@@ -1627,9 +1640,8 @@ blender:
   - id: S12
     title: Final — fabrication and assembly
     path: files/blender/09-final-project/Final-Project-Fabrication.blend
-    focus: Fabricate, test and revise the system you chose, then add its documentation to the booklet.
-    exercise: Make one fabrication test, document the change it calls for, and prepare the digital files, photographs
-      and diagrams for the final booklet.
+    focus: Optional. Fabricate, test and revise a physical model of a selected result.
+    exercise: Make one fabrication test and document the change it calls for.
     scenes:
     - Print orientation
     - Fit coupon
@@ -1648,9 +1660,9 @@ blender:
       - files/blender/09-final-project/modular-parts-mm.stl
     - - Section parts and spacers SVG
       - files/blender/09-final-project/section-parts-and-spacers-mm.svg
-    note: The exported files are snapshots of the default settings, in millimetres. Export them again after any
-      edit, and test the physical fit before production. The modular parts are an optional reference. The required
-      physical outputs are the CSG print (P2b) and the laser-cut volume (P4b).
+    note: Optional reference since November 2, 2026. The exported files are snapshots of the default settings, in
+      millimetres. Export them again after any edit, and test the physical fit before production. The only required
+      physical output of the course is the CSG print (P2b).
 
 presentation_review:
 - week: 1

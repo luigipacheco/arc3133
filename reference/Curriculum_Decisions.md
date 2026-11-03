@@ -2,7 +2,7 @@
 
 # Curriculum decisions
 
-> **Current course requirements and weekly deadlines · 2026-10-19.** The requirements, weights and assignment deadlines below are current. Remaining administrative details are identified separately.
+> **Current course requirements and weekly deadlines · 2026-11-02.** The requirements, weights and assignment deadlines below are current. Remaining administrative details are identified separately.
 
 ### Confirmed direction
 
@@ -10,24 +10,23 @@
 - The sequence is a guide. A topic may take more than one class; understanding and working files determine the pace.
 - Build geometry from scratch in the geometry foundations lesson and connect it to the earlier CSG work.
 - Preserve native node names. Put explanations in Frames and expose useful parameters, including pyramid Width, Depth and Height.
-- Align visual assignments and fabrication with the same developing geometry.
+- Align visual assignments with the same developing geometry.
 - Establish one source of curriculum information before preparing the remaining Blender class files.
-- Use the instructor-approved grading allocation: 5%, 15%, 30%, 35% across the four projects, 10% booklet and 5% participation. Midterm accumulates the first five submissions (40% of the course).
+- Grading allocation (November 2 revision): 5%, 15%, 30%, 30% across the four projects, 15% booklet and 5% participation. Midterm accumulates the first five submissions (40% of the course).
 - All work through Arrays — 1, 2.1, 2.2, 3.1 and 3.2 — is due Sunday, October 18 at 11:59 PM, uploaded to Teams, which leaves two days to review it before grades go on Canvas. The midterm grade is the accumulated grade of those five assignments. There is no pin-up; façade attractors are taught on October 20 as planned. The university midterm is October 13; the course is running a week behind, so the deadline moved to the 18th. Keep October 6 and December 1 free of graded submissions.
 - Keep the recorded October 18 midterm submission and the first-five weights; review existing evidence without retrospective deliverables.
 - Learning-focused briefs: GSM; CSG and slicing; descriptive module; repetition, conditions and architectural application; attractor studies and architectural application.
-- Three-stage final: student-built 5 x 5 matrix, a pavilion or small-shop envelope within 12 x 12 x 12 m, and a registered contour model.
-- Finish new content by Week 12, submit the contour model in Week 13 and use the remaining classes for feedback, revisions and the booklet.
-- Current Project 4 weights are 10% matrix, 15% architectural development and 10% fabrication. After the October 20 attractor class, each assignment is due the following week: 3.4-3.5 October 27; 4.1 November 3; 4.2 November 10; 4.3 November 17.
+- Project 4 (revised November 2): a generative system that produces stores for a brand, 40 to 64 m2. Three sheets presented at the final review on December 11: the system (algorithm diagram), the design space (matrix and selection) and the proposal (competition-style sheet). No laser-cut model.
+- Generative design is taught November 3. Strategy and brand are approved in class on November 10. Weeks 13 to 15 are working sessions on the three sheets and the booklet.
+- Project 4 weights: 4.1 system 5%, 4.2 design space 5%, 4.3 proposal 20%; the booklet rises to 15%. The three sheets are due with the booklet at the final review.
 
 ### Administrative items to confirm
 
 - Confirm the room, final review slot and School review blackout dates for the remaining semester.
-- Confirm the current FabLab orientation link, available machines, material allocation, stock sizes and machine-time limits.
 - Confirm whether Rhino/Grasshopper remains a supported student route. Blender Geometry Nodes is the current class-file preparation environment; equivalent files and recordings are not yet promised as available.
 - Confirm the attendance sign-in method and the accreditation criteria used by the School.
-- Post and test the material library. Supply generative texture/SDF/volume tools before 4.1 and contouring tools before 4.3, with usage notes.
-- Confirm laser-cut stock and machine capacity for the final model; approve any optional printing separately.
+- Post the generative example files (the interactive Blender decks) and the Grasshopper plugin list (Rabbit, Culebra, Anemone, Kangaroo) with usage notes before November 10.
+- Confirm the December 11 final review room and schedule.
 
 ## Why the sequence changed
 
@@ -35,8 +34,8 @@ October 19 confirmed assignment revision: simplify student instructions around o
 
 Keep the instructor's requested numbering: 3.2.1, 3.2.2 and 3.2.3 are parts of one Arrays assignment; 3.4 is the three-attractor study; 3.5 is an architectural application. There is no separate 3.3 assignment. The study is formative, not a new weighted submission. Reuse the module, architecture and study sheet rather than requiring separate design starts.
 
-Review completed midterm work as submitted. New architectural evidence, intersection demonstrations or revised sheet arrangements are not retrospective requirements. Keep the October 18 Teams deadline and recorded first-five weights. Use 10/15/10 across the three Project 4 stages, retaining its 35% total. Weekly deadlines are October 27 for 3.4-3.5, November 3 for 4.1, November 10 for 4.2 and November 17 for the physical and digital 4.3 submission.
+Review completed midterm work as submitted. New architectural evidence, intersection demonstrations or revised sheet arrangements are not retrospective requirements. Keep the October 18 Teams deadline and recorded first-five weights. Use 5/5/20 across the three Project 4 sheets (November 2 revision); Project 4 is 30% and the booklet 15%. Weekly deadlines are October 27 for 3.4-3.5, November 3 for 4.1, November 10 for 4.2 and November 17 for the physical and digital 4.3 submission.
 
-4.1 is a student-built matrix with two parameters at five values each. Provide only the field tools and guidance. 4.2 refines one result using field controls and optional instructor-provided SDF Boolean operators into a pavilion or small-shop envelope within 12 m in each direction; require plan, section and isometric of the same proposal. 4.3 fabricates that proposal through contours and registration. Point-cloud analysis and the former 4.4 stage are removed from required assignments.
+November 2 revision of Project 4: no laser cutting. 4.1 is the system sheet (the generative algorithm as a step-by-step diagram), 4.2 the design-space sheet (matrix, readings, selection and breeding) and 4.3 the competition sheet (post-processed elevation, section, isometric and perspective of a store of 40 to 64 m2 for a brand). The strategy and the brand are approved in class on November 10. All three sheets are presented at the final review on December 11 with the booklet and the GSM. Judge 4.3 and the booklet with the competition-sheet rubric: linework, quality of drawings, balance of color, layout, hierarchy, annotation, clarity of story, clarity of diagrams, quality of overall presentation.
 
-Teach 3.4 and introduce 3.5 in Week 9, matrix construction in Week 10, architectural refinement in Week 11 and fabrication preparation in Week 12. Week 13 receives the completed contour model; Weeks 13-15 provide feedback, revisions and booklet preparation. Existing examples may remain as supplementary teaching references; they are not additional assignments. All four projects now have concise synchronized PDF briefs. Keep standing policies unchanged.
+Teach 3.4 and introduce 3.5 in Week 9, the supplied field tools in Week 10, generative design in Week 11 (Introduction-to-Generative-Design.blend) and approvals in Week 12. Weeks 13 to 15 are working sessions on the three sheets and the booklet. The contour lessons remain posted as an optional reference; they are not additional assignments.
